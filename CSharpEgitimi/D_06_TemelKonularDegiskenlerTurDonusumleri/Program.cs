@@ -126,24 +126,33 @@ namespace D_06_TemelKonularDegiskenlerTurDonusumleri
         #endregion
 
         #region VİDEO 30
+        //static void Main(string[] args)
+        //{
+
+        //    /* bool */
+
+        //    bool kullaniciSonuc = false; /* false okudu false yazdı */
+        //    kullaniciSonuc = true; /* true okudu true yazdı */
+
+        //    Console.WriteLine(kullaniciSonuc);
+
+        //    /* bool */
+
+        //    bool kullaniciDeger; /* bos deger default olarak false okur yazar */
+        //    kullaniciDeger = true;  /* true okudu true yazar */
+
+        //    Console.WriteLine(kullaniciDeger);
+        //    Console.ReadLine();
+
+        //}
+        #endregion
+
+        #region VİDEO 31
         static void Main(string[] args)
         {
-
-            /* bool */
-
-            bool kullaniciSonuc = false; /* false okudu false yazdı */
-            kullaniciSonuc = true; /* true okudu true yazdı */
-
-            Console.WriteLine(kullaniciSonuc);
-
-            /* bool */
-
-            bool kullaniciDeger; /* bos deger default olarak false okur yazar */
-            kullaniciDeger = true;  /* true okudu true yazar */
-
-            Console.WriteLine(kullaniciDeger);
+            DateTime tarihSaat = DateTime.Now;
+            Console.WriteLine(tarihSaat);
             Console.ReadLine();
-
         }
         #endregion
     }

@@ -1,0 +1,42 @@
+﻿
+
+VİDEO 31 Zamansal değişken tip                             DateTime DEĞİŞKENADI = DateTime.Now;
+
+
+uygulama içinde zamanı nasıl saklarız
+neden zaman saklamak istiyoruz
+iş yerine girerken turnike olur kartı okuturuz
+bu işlem id değerini alır girişini kontrol eder
+neye göre kontrol ediyor
+vardiyalı calısan birisi 1-5 ve 5-10 gibi vardiyalı sistemde calısıyor olsun
+günde 5 saatlik vardiyalar
+
+1. kullanıcı vardiyası 13.00 de baslıyor 17.00 e kadar
+2. kullanıcı vardiyası 17-22 arası
+3. kullanıcı 22-02 arası vs vs vs 
+
+1. kullanıcı turnikeye geldi kartı okuttu 
+uygulamanın kartın içinde bulunan id e ulasması gerekiyor
+yani id:1 e ulastı
+database e giderken dogrulama yapması lazım
+kartı okudu zaman dahil izin ver yada verme
+mesela
+1. kullanıcı geldi okuttu saat 14 
+giriş yapabilir mi true
+2. kullanıcı geldi okuttu saat 14
+giriş yapabilir mi false
+
+id nin yanında zaman saklayabileceğimiz değişken tipi
+
+DateTime  değişken tipi oluyor
+değişken adı veirilir
+anlattım zamanın şimdinin zamanını almak istiyorsak
+eşittir karsısına
+DateTime.Now yazılır şimdinin zamanını alır
+
+SONUC
+
+DateTime tarihSaat = DateTime.Now;
+
+SAYI İLE BUGUNUN TARIHINI VE SAAT DAKİKA SANİYESİNİ YAZAR
+6.02.2023 21:22:29
