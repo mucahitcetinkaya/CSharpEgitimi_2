@@ -1,0 +1,40 @@
+﻿ilk baslangıc notları
+
+Merhaba bu eğitimde sıfırdan ileri seviye C# eğitimine başlıyorum
+
+burayı açmak için öncelikle yapılması gerekenler
+Visual Studio 2022 Community
+https://visualstudio.microsoft.com/tr/
+yukarıdaki siteden Community i indirdikten sonra yukleme kısmına geçelim
+yüklemek istediğimiz paketleri soracak
+ASP.NET and web development .NET desktop development i seçelim
+framework kısmında istediklerimizi hangi .net ile calısacaksak onu veya onları yükleyeceğiz
+bu bittikten sonra sql servere geçelim
+
+Microsoft SQL Server Express
+https://www.microsoft.com/en-us/download/details.aspx?id=101064
+yukarıdaki siteden indirip yükleyelim
+basic olarak kuracağız
+bunu kurduktan sonra install ssms seceneği var oraya gidelim onu yukleyelim
+sql server menagement studio
+sql serveri kullanmamızı saglıyor veya asagıdaki siteden indirip yukleyebilirsin
+https://learn.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver16
+
+algoritma calısmak için bu siteyi kullanabilirsin
+https://www.mindmeister.com/
+
+---------------------------------------------------------------------------------------
+
+BİR KODUN ÜSTÜNE TIKLAYIP HEPSİNİ SECMEDEN CTRL+C YAPARSANIZ BÜTÜN SATIRI KOPYALAR
+CTRL X C V KISAYOLLARI CALISIYOR.
+
+YORUM SATIRI YAPMAK İÇİN SEÇİP CTRL+K+C C YANİ COMMENT TEN AKLINA GELSİN 
+İKİ ADET // DE KOYABİLİRSİN SONUNA YİNE // YAZMAN LAZIM
+YORUM SATIRINDAN CIKMAK İÇİN SEÇİP CTRL+K+U U YANİ UNCOMMENT TEN AKLINA GELSİN
+YUKARIDAKİ ARAÇLARDA KISAYOL TUSUDA VAR. STAR TUSUNUN HİZASINDA SAĞA DOGRU
+SIRALI YORUM SATIRI YAPMAK İÇİN /.* NOKTAYI GÖRME *./ ARASINA YAZILIR
+KISAYOLU CTRL+K+Ö
+
+yeni bir proje acmak için solution a sag tık add new project e bas ConsoleApp.netframework ü sec
+hangi projenin calısmasını istiyorsan eger aktif olması için
+projeye sag tık yap Set as Startup Project e bas
