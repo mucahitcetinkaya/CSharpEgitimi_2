@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D_01_04_Giris", "D_01_04_Gi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D_05_NewConsoleWriteLineReadLine", "D_05_NewConsoleWriteLineReadLine\D_05_NewConsoleWriteLineReadLine.csproj", "{E9E4E77E-F20A-479C-92C5-540A2F4B17E1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D_06_TemelKonularDegiskenlerTurDonusumleri", "D_06_TemelKonularDegiskenlerTurDonusumleri\D_06_TemelKonularDegiskenlerTurDonusumleri.csproj", "{272AD155-11EC-47AE-B3B6-608756EBCA5D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{E9E4E77E-F20A-479C-92C5-540A2F4B17E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E9E4E77E-F20A-479C-92C5-540A2F4B17E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E9E4E77E-F20A-479C-92C5-540A2F4B17E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{272AD155-11EC-47AE-B3B6-608756EBCA5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{272AD155-11EC-47AE-B3B6-608756EBCA5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{272AD155-11EC-47AE-B3B6-608756EBCA5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{272AD155-11EC-47AE-B3B6-608756EBCA5D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

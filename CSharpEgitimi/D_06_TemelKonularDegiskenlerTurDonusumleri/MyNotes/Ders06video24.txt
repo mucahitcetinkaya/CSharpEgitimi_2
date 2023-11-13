@@ -1,0 +1,23 @@
+﻿
+Bölüm 6 Temel Konular - Değişkenler & Tür Dönüşümleri
+
+NOT: Console.WriteLine için cw yazıp iki kere tab tusuna basınca otomatik yazar
+
+VİDEO 24 Bilgilendirme
+
+Bu derste ne öğreneceğiz ?
+Değişken nedir ?
+Metinsel değer saklayabilen değişkenler
+Sayısal değer saklayabilen değişkenler
+Mantıksal değer saklayabilen değişkenler
+Zaman değeri saklayabilen değişkenler
+Tür dönüşümü nedir ? Tür dönüşümüne ne zaman ihtiyaç duyarız ?
+Bilinçli tür dönüşümü nedir ?
+Bilinçsiz tür dönüşümü nedir ?
+
+Object tipi hakkında bilgi
+Object tipi özelliği olan---
+--Tür dönüşümünde kutulama (Boxing)
+--Tür dönüşümünde kutudan çıkartma (UnBoxing)
+Alıştırmalar
+Bölüm sonu test
