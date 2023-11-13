@@ -1,0 +1,61 @@
+﻿
+
+VİDEO 28 Byte ve Int değişken tipleri
+
+
+SAYISAL DEĞERLERİ SAKLAYABİLİYORUZ
+ARİTMETİKSEL İŞLEMLER YAPABİLİYORUZ
+
+string ten farkı aritmetiksel işlem yapmak
+
+bunlarla biz tam sayıları saklayabiliyoruz
+tam sayı ise - sonsuzdan + sonsuza kadar değer saklayabiliriz 
+kusuratlı sayıları saklamak için farklı değişen tipi var
+
+byte değişken tipi
+
+byte deger1 = 10;
+
+byte değişken tipi
+deger1 değişken adı
+= değişken atama operatörü
+10 atanan değer
+; kodu kapa bitir
+
+
+int değişken tipi intecır diye okunur
+buda tam sayıları saklıyor
+byte tan farkı daha cok sayı saklayabilmesi
+
+int deger2 = 100;
+
+biz bu değişkenlerimiz içinde aritmetiksel işlemler yapabiliriz.
+
+biz bu rakamları string içinde de saklayabiliriz.
+
+string ornek1 = "10"; şeklinde
+ama string değişken tipinde aritmetiksel işlemler yapamayız.
+
+aritmetiksel işlemler tür dönüşümleri ile yapılır ilerinin konusu göreceğiz
+
+byte ın alabileceği min max değerler
+int ın alabileceği min max değerler
+
+byte byteMinVal = byte.MinValue; 0
+byte byteMaxVal = byte.MaxValue; 255
+
+int intMinVal = int.MinValue; -2147483648
+int intMaxVal = int.MaxValue; 2147483647
+
+yazdığımızda min max değerler gösterilir.
+
+byte 8 bit oldugu için okla üstüne geldiğinde yazıyor
+en fazla 2 üzeri 8 değerini alır
+2 üzeri 256 yapar 0 da dahil olunca 255 e kadar değer alabiliyor
+negatif değer almaz
+
+int 32 bit oldugu için okla üstüne geldiğinde yazıyor
+en fazla 2 üzeri 32 değerini alır
+negatif değer de alır
+
+aritmetik işlemlerde genelde int kullanılır
