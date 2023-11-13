@@ -169,9 +169,136 @@ namespace D_06_TemelKonularDegiskenlerTurDonusumleri
         #endregion
 
         #region VİDEO 33
+        //static void Main(string[] args)
+        //{
+        //    /* alıstırması yok konu özeti notlarda yazıyor ileri konu ön bilgi verildi */
+        //}
+        #endregion
+
+        #region VİDEO 34
         static void Main(string[] args)
         {
-            /* alıstırması yok konu özeti notlarda yazıyor ileri konu ön bilgi verildi */
+            /*
+             kullanıcıdan ad soyad şehir isteyen uygulama yapalım
+             buradaki olay WriteLine ile konsola yazdırıyoruz
+             ReadLine ile imleci bekletip yanıt bekliyoruz
+
+             benim yaptıgım
+            */
+
+            Console.WriteLine("Adınızı Giriniz: ");
+            Console.ReadLine();
+            Console.WriteLine("Soyadınızı Giriniz: ");
+            Console.ReadLine();
+            Console.WriteLine("Şehir Giriniz: ");
+            Console.ReadLine();
+
+            /*
+             hocanın yaptıgı
+             ad soy şehir sorsun cevapları yazdıgımızda ekranı silip
+             kullanıcının girdiği bilgileri gösterelim
+            */
+
+            Console.WriteLine(" Merhaba ");
+
+            Console.WriteLine(" Adınız nedir ? : ");
+            /*
+             bunun cevabını almak için konsolu bekletmem gerek kullanıcı bir değer girişi yapacak
+             girilen değeri bir string değişken üzerinde saklayacağım
+             benim ihtiyacım olan string değişken
+             olusturalım değişkeni değişken adı verelim
+             değerini nerden alacak değerini kullanıcı girecek
+             burada işleme Console.ReadLine komutu giriyor
+            */
+            string ad = Console.ReadLine();
+            /* 
+             string vererek metinsel atamayı kayıt etmesini sağladık
+
+             burada ReadLine kısmına gelirsek diyorki
+             Console.ReadLine komutunu calıstırıyorsun bu komut
+             kullanıcıdan değer okuyor kullanıcının girmiş olduğu değerleri bize getirmeye calısıyor
+             hem imleci bekletiyor hemde kullanıdan bir dönüş bekliyor
+             kullanıcı entere bastıgı zaman
+             ben sana değeri string tipinde dönerim diyor.
+             sen bunu istersen bir string in üzerine alabilirsin diyor
+            */
+
+            Console.WriteLine(" Soyadınız nedir ? : ");
+            string soyAd = Console.ReadLine();
+
+            Console.WriteLine(" Yaşadığınız şehri giriniz : ");
+            string sehir = Console.ReadLine();
+
+            /*
+             buraya kadar istediğim bilgileri aldık
+             bundan sonra 
+             ekranı temizlemem lazım 
+             kullanıcının girmiş oldugu değerler kaybolsun
+             benim girmiş oldugum değerler ekrana yazsın
+             ekranı temizlemek için Console.Clear kullanılır
+            */
+
+            Console.Clear();
+
+            /*
+             bundan sonra yapmamız gereken değişkenin içindeki değerleri ekrana yazdırmamız lazım
+             artı operatörünü görmedik ama örnek olarak yapalım
+             amacımız su isim yazdıktan sonra değişkenin değerini eklemek istiyorum
+             yani iki metni birleştirmek istiyorum
+             çift tırnak içinde isim yazıp + ile devam ederek değişken adını yazıyoruz             
+            */
+
+            Console.WriteLine("Ad : " + ad);
+
+            /*
+             böylece iki metni birleştirecek
+             ad kısmına ne yazarsanız mesela Mücahit bosluklarda cıktıda gözükür.
+             bu kodun cıktısı şöyle olacak Ad : Mücahit
+            */
+
+            Console.WriteLine("Soyad : " + soyAd);
+            Console.WriteLine("Yaşadığı Şehir : " + sehir);
+
+            Console.ReadLine(); /*  bu komut ile konsol kapanmıyor */
+            /*
+             uygulama sırayla
+             ad soracak girilecek
+             soyad soracak girilecek
+             şehir soracak girilecek
+             en son hepsini temizleyip
+             Ad : girilen
+             Soyad : girilen
+             Şehir : girilen
+             olarak gösterecek
+
+             debug motta kontrol ederken
+
+             calıstır uygulamayı merhaba dunya yazdı enter
+             isminiz nedir diye sordu isim girdim enter
+             entere basınca string kısma geldi
+             string in içine yazdıgım metinsel değeri kayıt etti enter
+             soyad sordu soyad girdim enter
+             string kısmına geldi
+             string in içine soyadına yazıdıgım metinsel değeri kayıt etti
+             bu içine dediğim kısım debug modunda bakarken
+             değişken adının üstüne mause ile gelirseniz orada yazar
+             soyadı da kayıt etti enter
+             entere basınca
+             sehir sordu sehir girip enter
+             enter a basınca kayıt etti yine tekrar enter
+             entere basınca boslukta bekliyor
+             tekrar entere basınca
+             clear komutunu calıstırıp konsolda yazan herşeyi silecek
+             tekrar enter
+             ekran temizlendi imlec yanıp sönüyor tekrar enter
+             Console.WriteLine("isim : " + ad); kısmına geldik
+             entere basıp bu kısmı okutunca
+             uygulamada
+             çift tırnak içinde yazdıgımız İsim : ile ad değişkenine verdiğimiz değer
+             yanyana yazılmıs şekilde cıkar
+             artı + operatörü string tipte bu işe yarıyor yanına yazıyor birleştirme yapıyor
+             diğerleri de böyle gider.
+            */
         }
         #endregion
 
