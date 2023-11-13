@@ -67,25 +67,60 @@ namespace D_06_TemelKonularDegiskenlerTurDonusumleri
         //}
         #endregion
 
-
         #region VİDEO 28
+        //static void Main(string[] args)
+        //{
+        //    byte deger1 = 10;
+        //    int deger2 = 100;
+
+
+        //    byte byteMinVal = byte.MinValue;
+        //    byte byteMaxVal = byte.MaxValue;
+
+        //    int intMinVal = int.MinValue;
+        //    int intMaxVal = int.MaxValue;
+
+        //    Console.WriteLine(byteMinVal);
+        //    Console.WriteLine(byteMaxVal);
+        //    Console.WriteLine(intMinVal);
+        //    Console.WriteLine(intMaxVal);
+
+        //    Console.ReadLine();
+        //}
+        #endregion
+
+        #region VİDEO 29
         static void Main(string[] args)
         {
-            byte deger1 = 10;
-            int deger2 = 100;
 
+            double doubleVal1 = 10.2;
+            double doubleVal2 = 10;
+            double doubleVal3 = 10.9d;
 
-            byte byteMinVal = byte.MinValue;
-            byte byteMaxVal = byte.MaxValue;
+            double doubleMinVal = double.MinValue;
+            double doubleMaxVal = double.MaxValue;
 
-            int intMinVal = int.MinValue;
-            int intMaxVal = int.MaxValue;
+            decimal decimalVal1 = 10.2M;
 
-            Console.WriteLine(byteMinVal);
-            Console.WriteLine(byteMaxVal);
-            Console.WriteLine(intMinVal);
-            Console.WriteLine(intMaxVal);
+            decimal decimalMinVal = decimal.MinValue;
+            decimal decimalMaxVal = decimal.MaxValue;
 
+            float floatVal1 = 10.2F;
+
+            float floatMinVal = float.MinValue;
+            float floatMaxVal = float.MaxValue;
+
+            Console.WriteLine(doubleVal1);
+            Console.WriteLine(doubleVal2);
+            Console.WriteLine(doubleVal3);
+            Console.WriteLine(doubleMinVal);
+            Console.WriteLine(doubleMaxVal);
+            Console.WriteLine(decimalVal1);
+            Console.WriteLine(decimalMinVal);
+            Console.WriteLine(decimalMaxVal);
+            Console.WriteLine(floatVal1);
+            Console.WriteLine(floatMinVal);
+            Console.WriteLine(floatMaxVal);
             Console.ReadLine();
         }
         #endregion
