@@ -1,0 +1,56 @@
+﻿
+
+VİDEO 23 Uygulamaları satır , satır inceleme
+
+
+yazılım mühendisliği kısmının en önemli dersi bu bölüm
+mesela kodunuz da hatalarınız var veya satır satır bakmak istiyoruz
+anlamadıgınız bir konu var bu nasıl calısıyor
+daha onceden calısan birinden aldıgınız kodlar nasıl calısıyor
+
+bunları anlamak için debug etme yani
+
+SATIR SATIR CALISTIRMA NASIL OLUYOR ÖĞRENELİM
+
+kod yazmaya geçelim
+
+kod kısmında bizde .... satırda 1. satır yazıyor
+programı calıstırınca uygulamının hepsi calısıyor
+yani bütün satırları görüyoruz
+adım adım hangi kodun calıstıgını o anda görmek istiyorum.
+5. satır birden yazmayacak ben ilerle dediğimde 1. 2. 3. 4. 5. satır diye
+ben kontrol etmek istiyorum
+buna debug etme deniyor
+programın en solunda gri bir alan var
+1. satırın karsısında o gri alana gelip tıkladıgımızda
+kırmızı bir yuvarlak cıkıyor
+bu ben programı calıstırınca kırmızı alana gelince DUR demek oluyor.
+buraya gelince dur ilerleme ben inceleme yapacağım demek
+ben ileri geri yapıp kontrol etmek istiyorum anlamına gelir.
+kayıt edip Debug veya start ile çalıstırınca console paneli acılır 
+imge yanıp sönüyor ama hiç bişey yazmıyor
+daha ilk komut bile calısmadı
+ne yapmak istiyorsun onu soruyor
+yukarıda stop tusunun yanında 
+ok tuslarımız var sen bu kodu bir adım ileriye geriye götür demektir.
+f10 nada basabiliriz.
+basınca console paneline baktıgımızda panelde 1. satır yazıyor.
+her ileriye basınca kodu okudugunda panelde gösteriyor
+bu işleme debug deniyor
+satır satır kontrol etmemize yarıyor
+bütün saatırları okutalım
+
+mesela ben 4. ve 5. satırların yeniden calısmasını istiyorum demek için
+
+program calısırken gri alanda sarı bir ok var
+mause u sarı okun üstüne götürünce
+yukarı asagı okları cıkıyor 
+bu adımı istediğin adıma kaydırabilirsin demektir.
+sarı oka basıp hangi alana gelmek istiyorsak oraya bırakınca
+sarı ok o kısma gelir
+kod ordan calısmaya devam eder.
+mesela 2. satıra gelince tekrar ileriye alınca
+5. satır yazan panelin altına 2. satır tekrar yazıyor.
+bu ne işimize yarayacak 
+biz uygulamamızı satır satır incelerken bir yerde oranın değerini nasıl aldıgını düşünebiliriz.
+oku alıp oraya koyunca ordan devam edip satır satır kontrol edeceğiz.
