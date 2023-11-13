@@ -1,0 +1,50 @@
+﻿
+
+VİDEO 27 Char değişken tipi
+
+
+neden ihtiyac duyarız
+uygulama içinde kullanıcıların bazı noktalarda seçimleri olur 
+neyi sectiğine göre uygulama oraya dogru akısına devam eder.
+kullanıdan gelen seçim tek hane oldugu için
+tek bir karakter oldugu için
+biz bunları string içinde saklamak yerine
+
+TEK KARAKTER SAKLAYABİLECEK 
+
+char değişken tiplerinde saklayabiliriz.
+char değişken tipinde saklayacağımız değer kod ile cağırılacaksa '' tek tırnak arasına yazılır.
+; ile bitirilir.
+
+mesela kullanıcı seçimi A: oldugunu düşünelim
+aslında bu A değerini saklayabilecek elimde string değişken tipi var ama
+string değişken tipi tek bir karaktere göre büyük kalıyor.
+yani bellek yönetiminde ben bunu char olarak saklasam daha mantıklı
+
+string ile saklasak ne olur ? HİÇ BİŞEY OLMAZ
+
+string kullaniciSecimString = "A";
+
+char kullaniciSecimChar = 'A';
+
+gerçek hayatta iki kullanımda mümkündür.
+illa tek karakter char ile kullan calısmaz diye bir şey yoktur
+ama yer kaplama olarak tek karakterleri char ile kullanmak gerekiyor.
+
+calıstırdıgımızda consol da gösterir
+
+SONUC
+
+string kullaniciSecimString = "A";
+Console.WriteLine(kullaniciSecimString);
+char kullaniciSecimChar = 'A';
+Console.WriteLine(kullaniciSecimChar);
+Console.ReadLine();
+
+
+
+değişken adını yazıp noktaya bastıgımızda panel cıkar
+kullaniciSecimChar.
+bu panelde cok fazla komut yok gibi gözükebilir ama
+char değişken tipini yazıp noktaya bastıgımızda panel cıkar
+char. burada daha fazla secenek cıkar ama bu ilerinin konuları
