@@ -1,0 +1,73 @@
+﻿
+
+VİDEO 33 Faaliyet alanları
+
+
+BU DERS EK DERS GİBİ ÇÜNKÜ DAHA FAALİYET ALANLARININ KULLANILDIGI
+üst katmanları metodları class ları görmedik 
+faaliyet alanı nedir kısmı biraz havada kalabilir.
+sadece not alanacak bu bölümde
+metodları class ları anlatırken tekrardan anlatılacak
+
+bir değişken olusturdugumuzda o değişkeni kullanabileceğimiz sınırlar vardır
+mesela 
+
+string S1 = "Mücahit Çetinkaya";
+
+oluşturalım 
+
+biz bu değişkeni main komutundaki süslü parantezler {} arasına yazıyoruz
+biz S1 değişkenini bu süslü parantezler arasında cağırabilir ve tekrardan kullanabiliriz.
+yani bizim S1 değişkeninin sınırları arasına yazılan süslü parantezler arasında geçerlidir.
+
+süslü parantez içinde
+
+S1 = "İkinci İsim"; gibi kullanabiliriz yani 
+
+SONUC
+
+static void Main(string[] args)
+
+{
+         string S1 = "Mücahit Çetinkaya";
+         S1 = "İkinci İsim"; gibi kullanabiliriz yani 
+}
+
+yukarıdaki süslü parantezler arasında tanımlandı
+süslü parantezden cıktıktan sonra bellekten düşüyor
+
+ama farklı bir static void actıgımızda
+acılan S1 burada olmadıgı için aynı S1 değişkenini çağıramaz kullanamayız.
+S1 yazdıgımızda panelde acılır orada S1 gözükmez
+bu arada S1 sadece verilen isim herhangi bişey de olabilir.
+
+peki benim bu değişkene ulaşmak için ne yapmam gerekiyor
+içeride bulunan süslü parantezlerin bir dısına cıkmam gerekiyor
+
+mesela bu örnekte static void main in bir üstü class seviyesi
+class seviyesinde bir string acarsak ne olur ?
+
+
+ internal class Program
+
+{
+   static string S2 = "üçüncü isim";
+   basına gelen static baska konu sonra anlatılacak böyle yazılıyor.
+   bu değişken bir üst blokta oldugu için
+   altında olan her blokta calısır.
+   
+      static void Main(string[] args)
+      {
+         string S1 = "Mücahit Çetinkaya";
+         S1 = "İkinci İsim"; gibi kullanabiliriz yani 
+      }
+      static void Test(string[] args)
+      {
+         burada acılan süslü parantez dısında oldugu için
+         S1 değişkenini calısmaz
+         CALISMASI İÇİN 
+         CLASS SEVİYESİNE CIKMAMIZ LAZIM
+      
+      }
+ 
+ }

@@ -157,14 +157,21 @@ namespace D_06_TemelKonularDegiskenlerTurDonusumleri
         #endregion
 
         #region VİDEO 32
+        //static void Main(string[] args)
+        //{
+
+        //    string degiskenVal1 = "Mücahit Çetinkaya";
+        //    string degiskenVal2 = "Muhammet Mücahit Çetinkaya";
+
+        //    degiskenVal1 = degiskenVal2;
+        //    degiskenVal2 = "Muhammet Çetinkaya";
+        //}
+        #endregion
+
+        #region VİDEO 33
         static void Main(string[] args)
         {
-
-            string degiskenVal1 = "Mücahit Çetinkaya";
-            string degiskenVal2 = "Muhammet Mücahit Çetinkaya";
-
-            degiskenVal1 = degiskenVal2;
-            degiskenVal2 = "Muhammet Çetinkaya";
+            /* alıstırması yok konu özeti notlarda yazıyor ileri konu ön bilgi verildi */
         }
         #endregion
 
