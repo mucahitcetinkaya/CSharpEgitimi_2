@@ -1,0 +1,97 @@
+﻿
+
+VİDEO 26 String değişken tipi
+
+
+metinsel değerleri string değişken tipinde tutarız
+string içinde sayısal değerde olabilir ama matematiksel işlemler yapılmaz.
+mat işlemler yapmak istiyorsak değişken tipi string olmamalı
+sayısal değişken tiplerinden herhangi birisi olmalı
+
+string DEĞİŞKEN TİPİ
+
+string isimSoyisim = "Mücahit Çetinkaya";
+Console.WriteLine(isimSoyisim);
+Console.ReadLine();
+
+daha sonra uygulama içerisinde  değişkenimize ulasıp içerisindeki değeri güncelleyebiliriz.
+zaten değişkenlerin ana kullanım amacları da budur.
+istediğimiz yerde olusturdugumuz değeri
+cağırabilmek okuyabilmek güncelleyebilmek
+
+biz aslında yukarıda yazan kodda
+Console.WriteLine kısmında (isimSoyisim); değişkenine ulaştık
+ve içerindeki değeri okuyabildik.
+
+string isimSoyisim = "Mücahit Çetinkaya";
+Console.WriteLine(isimSoyisim);
+
+bunu yazdığımızdan sonra
+
+isimSoyisim = "Muhammet Çetinkaya";
+Console.WriteLine(isimSoyisim);
+
+yazarsak eğer programı debug ile calıstırdıgımızda 
+gri alandan ilk string kısmına nokta koyalım
+değişkenin üstüne geldiğimizde null yazdıgını görürüz
+kodu ilerlettiğimiz de değişkenin içine Mücahit Çetinkaya yazar ve konsola yazdırır.
+kodu tekrar ilerlettiğimizde bişey olmaz
+alttaki değişkeni okudugu zaman ilk değişkenin içindeki veriyi siler
+yeni veriyi içine yazar. bu sefer okla üstüne geldiğimizde Muhammet Çetinkaya yazdıgını görürüz.
+konsolda yazmaya devam eder.
+
+ne yapmıs olduk
+
+bir değişkeni farklı isimlere atayıp o koda gelince güncellendiğini görmüş olduk
+
+
+string değişkeni içinde kullandıgımız bazı komutlar var.
+bunlarda string in içindeki değerleri değiştirebilmemize
+yada o değerlerin belli indexten farklı index e kadar olan aralığını alabilmemize yarar.
+
+örnek 
+yazdıgımız metinlerin hepsinin 
+BÜYÜK HARF OLMASINI İSTİYORUM                                                 ToUpper
+önce değişken tipi değişken adı atama operatörü değişkeni cağır
+noktaya bas bir panel cıkacak burada yanında yıldız olan komutlar 
+bu değişken tipi için en sık kullanılan komutlardır.
+burdan ToUpper ı cağıyoruz
+parantez ac kapa yapıyoruz. bunun nedeni yanında mor küp var metod
+ToUpper yazılan harflerin hepsini büyük harf yapar
+
+string isimSoyisim = "Mücahit Çetinkaya";
+string buyukKarakter = isimSoyisim.ToUpper();
+Console.WriteLine(buyukKarakter);
+Console.ReadLine();
+
+HEPSİNİ KUCUK KARAKTER YAPMAK İSTİYORUM                                        ToLower
+
+string isimSoyisim = "Mücahit Çetinkaya";
+string buyukKarakter = isimSoyisim.ToUpper();
+string kucukKarakter = isimSoyisim.ToLower();
+Console.WriteLine(buyukKarakter);
+Console.WriteLine(kucukKarakter);
+Console.ReadLine();
+
+SECTİĞİM YERİ BÜYÜK KARAKTER YAPSIN                                           Substring
+Substring de parantez içine hangi karakterden baslayıp değişiklik yapmasını yazmamız gerekiyor
+
+Substring(2, 4); ikinci karakterden başla 4 karakter al
+
+SONUC 
+
+string isimSoyisim = "Mücahit Çetinkaya";
+string buyukKarakter = isimSoyisim.Substring(2, 4);
+Console.WriteLine(belirliBirBolum);
+Console.ReadLine(); console da yazan değer cahi
+M sıfır ü birinci c ikinci karakter olarak sayar
+2 den basla dediğimiz için 2. karakter dahil consola yazdırır
+
+NOT
+
+debug olarak bakarken kod üstüne gelince değişkeni okuyor
+kodu geçtiğinde değişkeni atıyor
+
+mesela console.writeline yani konsola yaz dediğinde
+yaz kodunun üstünde bişey yapmıyor
+yaz kodunu bitirince yazmıs oluyo
