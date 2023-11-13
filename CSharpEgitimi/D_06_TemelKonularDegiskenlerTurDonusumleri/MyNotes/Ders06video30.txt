@@ -1,0 +1,68 @@
+﻿
+
+VİDEO 30 Mantıksal Değerler
+
+
+MANTIKSAL DEĞERLERİ TUTABİLECEĞİMİZ DEĞİŞKEN
+bu değişkeni cok kullanıyoruz
+neden kullanırız ?
+kullanıcı adı şifre kısmına bilgileri girdiğinizde giriş yap butonuna basarsanız
+arkada datebase tarafından girilen değerler doğrulanır
+buradaki doğrulanır kısmı 
+mantıksal değişkenin kullanıldıgı anlamına geliyor
+
+örnek olarak
+siteye girdik kullanıcı adı şifre girdik
+kullanıcı adı: abc@ vs vs
+şifre:            1
+girişe basınca  ne olacak
+
+sistem şunu yapacak
+değerleri kullanıdan al 
+değerleri değişkenlere kayıt et
+değerleri kontrol et kullanıcı adı şifre girilmiş mi 
+değerleri veri tabanından doğrula
+
+biz burda database e benim elimde böyle bir kayıt var sende var mı diyoruz
+burda evet hayır dönüyor
+evet true
+hayır false döner 
+
+işte burada evet hayırın saklandığı veri tipi bool verip tipi oluyor
+
+bool verip tipi olusturalım
+
+bool kullaniciSonuc = true;
+kullaniciSonuc = false;
+
+iki farklı değer alabiliyor true olumlu olan false olumsuz olan
+
+genelde karar yapılarında göreceğimiz olan if else blokların da da kullanabiliriz
+yada değerleri çekip farklı yerlerde kontroller içerisinde de kullanabiliriz.
+
+
+bu örneği calıstırdıgımızda karsısında ne varsa onu okur
+true okudu true yazar false okudu false yazar
+bool kullaniciSonuc = true;
+kullaniciSonuc = false;
+
+atanan değer bossa eğer default değeri false dir
+içine değer true atarsak true yazar
+bu ornekte karsılığı olmadıgı için ilk okuyacağı değer false olur
+diğer örnekte true okudugu için true yazar
+bool kullaniciDeger;
+kullaniciDeger = true ;
+
+
+özet olarak böylede diyebiliriz
+değişken tipi yazıp
+değişken adı verip
+eşittir ile atama yapıyoruz
+atayacağımız değeri eşittirten sonra yazıyoruz
+
+bool
+kullaniciSonuc = true;
+kullaniciSonuc = false;
+
+böyle de yazılabilir.
+ 

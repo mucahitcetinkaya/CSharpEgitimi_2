@@ -90,40 +90,61 @@ namespace D_06_TemelKonularDegiskenlerTurDonusumleri
         #endregion
 
         #region VİDEO 29
+        //static void Main(string[] args)
+        //{
+
+        //    double doubleVal1 = 10.2;
+        //    double doubleVal2 = 10;
+        //    double doubleVal3 = 10.9d;
+
+        //    double doubleMinVal = double.MinValue;
+        //    double doubleMaxVal = double.MaxValue;
+
+        //    decimal decimalVal1 = 10.2M;
+
+        //    decimal decimalMinVal = decimal.MinValue;
+        //    decimal decimalMaxVal = decimal.MaxValue;
+
+        //    float floatVal1 = 10.2F;
+
+        //    float floatMinVal = float.MinValue;
+        //    float floatMaxVal = float.MaxValue;
+
+        //    Console.WriteLine(doubleVal1);
+        //    Console.WriteLine(doubleVal2);
+        //    Console.WriteLine(doubleVal3);
+        //    Console.WriteLine(doubleMinVal);
+        //    Console.WriteLine(doubleMaxVal);
+        //    Console.WriteLine(decimalVal1);
+        //    Console.WriteLine(decimalMinVal);
+        //    Console.WriteLine(decimalMaxVal);
+        //    Console.WriteLine(floatVal1);
+        //    Console.WriteLine(floatMinVal);
+        //    Console.WriteLine(floatMaxVal);
+        //    Console.ReadLine();
+        //}
+        #endregion
+
+        #region VİDEO 30
         static void Main(string[] args)
         {
 
-            double doubleVal1 = 10.2;
-            double doubleVal2 = 10;
-            double doubleVal3 = 10.9d;
+            /* bool */
 
-            double doubleMinVal = double.MinValue;
-            double doubleMaxVal = double.MaxValue;
+            bool kullaniciSonuc = false; /* false okudu false yazdı */
+            kullaniciSonuc = true; /* true okudu true yazdı */
 
-            decimal decimalVal1 = 10.2M;
+            Console.WriteLine(kullaniciSonuc);
 
-            decimal decimalMinVal = decimal.MinValue;
-            decimal decimalMaxVal = decimal.MaxValue;
+            /* bool */
 
-            float floatVal1 = 10.2F;
+            bool kullaniciDeger; /* bos deger default olarak false okur yazar */
+            kullaniciDeger = true;  /* true okudu true yazar */
 
-            float floatMinVal = float.MinValue;
-            float floatMaxVal = float.MaxValue;
-
-            Console.WriteLine(doubleVal1);
-            Console.WriteLine(doubleVal2);
-            Console.WriteLine(doubleVal3);
-            Console.WriteLine(doubleMinVal);
-            Console.WriteLine(doubleMaxVal);
-            Console.WriteLine(decimalVal1);
-            Console.WriteLine(decimalMinVal);
-            Console.WriteLine(decimalMaxVal);
-            Console.WriteLine(floatVal1);
-            Console.WriteLine(floatMinVal);
-            Console.WriteLine(floatMaxVal);
+            Console.WriteLine(kullaniciDeger);
             Console.ReadLine();
+
         }
         #endregion
-
     }
 }
