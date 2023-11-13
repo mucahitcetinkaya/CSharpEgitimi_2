@@ -1,0 +1,64 @@
+﻿
+
+VİDEO 32 Değişkenlerin davranışları
+
+
+iki farklı değişken davranısı var ama bir tanesini anlatacağız burada
+konusu işlemedik daha
+
+uygulamayı yazarken devamlı kullandıgımız nesnedir değişken
+nesnedir deyince bile ortalık biraz karısıyor
+mesela
+string yazıp sağ tık yapıp Go To Definition veya F12 bastıgımızda
+string için orada public sealed class oldugu yazıyor.
+daha oraya gelmediğimiz için anlatmaya gerek yok
+
+C# nesne yönelimli bir program dilidir
+
+biz değişken davranıslarından devam edelim
+
+bir string değişkenleri oluşturup isim verelim
+string metinsel kayıt tipidir 
+"" çift tırnak arasına yazılır
+
+SONUC 
+
+string degiskenVal1 = "Mücahit Çetinkaya";
+string degiskenVal2 = "Muhammet Mücahit Çetinkaya";
+
+burada iki farklı değişken var peki biz böyle bişey yapsak
+
+degiskenVal1 = degiskenVal2 ;
+degiskenVal2 = "Muhammet Çetinkaya";
+
+BURDA DİYORUZ Kİ 
+
+degiskenVal2 DEĞERİNİ degiskenVal1 İN İÇİNE EŞİTTİR OPERATÖRÜ İLE ATA
+
+BÖYLE YAPTIGIMIZDA
+
+degiskenVal2 DE YAZAN DEĞER "Muhammet Mücahit Çetinkaya"
+degiskenVal1 DE YAZAN DEĞER "Mücahit Çetinkaya"
+
+val1 deki değeri de val2 de yazan değer yapıyor
+val1 değeri val2 nin değerini alıyor
+val2 kendi değerini biliyor
+val1 değeri val2 deki değeri KOPYALIYOR BU AYRINTI COK ONEMLİ
+
+ 
+debug ile en asağıya geldiğimizde
+degiskenVal2 içindeki değer "Muhammet Çetinkaya" oluyor
+AMA ORAYA GELDİĞİMİZDE VAL1 DEKİ DEĞER DEĞİŞMEZ
+
+
+BUNUN NEDENİ
+BELLEK YONETİMİNDE
+DEĞİŞKENLER DEĞERLERİ BİRBİRİNİN ÜZERİNDEN KOPYALARAK ALIR
+HANGİ DEĞİŞKENİN ÜZERİNDE İŞLEM YAPIYORSAK
+İLGİLİ DEĞİŞKENİN ÜZERİNDEKİ DEĞER DEĞİŞİR
+
+SINIF YAPISINI ANLATIRKEN BU BIRAZ DAHA DEĞİŞECEK
+BELLEK RESMİ CIZILECEK ORAYA GELDİĞİMİZ ZAMAN ANLATACAĞIM
+
+DEĞİŞKENLER DEĞERLERİ KENDİ İÇLERİNDE SAKLAR
+BİRBİRLERİNE DEĞER ATADIKLARINDA DA BİR KOPYASINI ATARLAR

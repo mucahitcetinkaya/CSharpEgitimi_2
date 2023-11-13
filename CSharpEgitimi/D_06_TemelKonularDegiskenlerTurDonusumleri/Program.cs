@@ -148,12 +148,25 @@ namespace D_06_TemelKonularDegiskenlerTurDonusumleri
         #endregion
 
         #region VİDEO 31
+        //static void Main(string[] args)
+        //{
+        //    DateTime tarihSaat = DateTime.Now;
+        //    Console.WriteLine(tarihSaat);
+        //    Console.ReadLine();
+        //}
+        #endregion
+
+        #region VİDEO 32
         static void Main(string[] args)
         {
-            DateTime tarihSaat = DateTime.Now;
-            Console.WriteLine(tarihSaat);
-            Console.ReadLine();
+
+            string degiskenVal1 = "Mücahit Çetinkaya";
+            string degiskenVal2 = "Muhammet Mücahit Çetinkaya";
+
+            degiskenVal1 = degiskenVal2;
+            degiskenVal2 = "Muhammet Çetinkaya";
         }
         #endregion
+
     }
 }
