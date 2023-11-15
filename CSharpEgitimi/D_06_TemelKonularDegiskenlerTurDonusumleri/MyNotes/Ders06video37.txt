@@ -1,0 +1,45 @@
+﻿
+
+VİDEO 37 Bilinçsiz Tür Dönüşümü
+
+
+buyuk değişken aralıgı olan değişkeni
+kucuk değişken aralıgı olana okuma
+
+bir değişken olusturalım
+
+int sayi1 = 30;
+
+int intMinVal = int.MinValue;
+int intMaxVal = int.MaxValue;
+
+byte sayi2 = sayi1 ; burada hata veriyor
+
+byte içine int atadığın için bunu kaldıramam diyor
+kaldıramam kısmını içindeki değere bakmadan söylüyor
+aralıgına bakarak karar veriyor içindeki değeri göremiyor
+byte aralığı int aralığına göre az oldugu için ben bunu alamam diyor
+Allah bilir içine ne yazdın kardesım diyo
+
+burada diyor ki sorumluluğu sen alıyorsan eğer anca öyle içime kayıt ederim diyor
+bu işlemi de
+
+byte sayi2 = (byte)sayi1 ; böyle yapıyoruz yazılan değer senin aralıkta ben biliyorum
+sen bunu byte a cevir sorumluluk bende demek oluyo
+
+biz bu işleme bilinçsiz tür dönüşümü diyoruz
+uygulama düşünemiyor onun yerine biz düşünüyoruz
+uygulama söze güveniyor
+
+peki burada sayi1 deki değer byte ın aralığı içindeyse direk söze güveniyor
+verilen değer int aralıgı içinde 
+ama
+byte ın aralıgı içinde değilse mesela 256 olsa
+
+int sayi1 = 30;
+byte sayi2 = (byte)sayi1 ; güvendi içine 30 yazdı aralıkta sorun yok
+
+int sayi3 = 256; int 256 kaldırır sorun yok
+byte sayi4 = (byte)sayi3 ; byte 256 kaldırmadıgı için içine 0 atadı
+
+hata burada işte değeri almadı 0 yazdı

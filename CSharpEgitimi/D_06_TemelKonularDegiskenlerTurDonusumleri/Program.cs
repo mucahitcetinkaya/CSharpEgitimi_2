@@ -310,24 +310,46 @@ namespace D_06_TemelKonularDegiskenlerTurDonusumleri
         #endregion
 
         #region VİDEO 36
+        //static void Main(string[] args)
+        //{
+        //    byte sayi1 = 0;
+        //    byte sayi2 = 100;
+        //    byte sayi3 = 255;
+
+        //    int intMinVal = int.MinValue;
+        //    int intMaxVal = int.MaxValue;
+
+        //    byte sayi4 = 256;  /*hata veriyor */
+
+        //    int sayi5 = 256;
+
+        //    int sayi7 = sayi2;
+        //    /*
+        //     bilinçi tür dönüşümü küçük olan sayıyı büyük olan sayıya atıyorsun
+        //     notlarda acıklaması var
+        //    */
+        //}
+        #endregion
+
+        #region VİDEO 37
         static void Main(string[] args)
         {
-            byte sayi1 = 0;
-            byte sayi2 = 100;
-            byte sayi3 = 255;
-
-            int intMinVal = int.MinValue;
-            int intMaxVal = int.MaxValue;
-
-            byte sayi4 = 256;  /*hata veriyor */
-
-            int sayi5 = 256;
-
-            int sayi7 = sayi2;
             /*
-             bilinçi tür dönüşümü küçük olan sayıyı büyük olan sayıya atıyorsun
-             notlarda acıklaması var
+             bilinçsiz tür dönüşümleri
+             buyuk aralıgı olan değişken tipini
+             kucuk aralıgı olan değişken tipine atama
             */
+
+            int sayi1 = 30;
+            byte sayi2 = sayi1; /* hata verdi byte benim aralık az int e göre ben bunu alamam diyor aralıga bakıyor */
+
+            int sayi3 = 30;
+            byte sayi4 = (byte)sayi1;
+            /* hata vermedi bilinçsiz tür dönüşümü ben içindekini biliyorun senin aralık dogru sen yinede byte a döndür demiş olduk */
+
+            /* int aralıgı içinde ama byte aralıgı dısında bir değer verirsek */
+            int sayi5 = 256; /* int 256 aralık içinde */
+            byte sayi6 = (byte)sayi5; /* burada hata vermez ama değeri 0 olarak okur sözü bizden alıyor aralıkta yok diye sıfır verir */
         }
         #endregion
     }
