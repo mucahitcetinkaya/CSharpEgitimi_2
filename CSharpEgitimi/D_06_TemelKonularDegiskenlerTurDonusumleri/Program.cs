@@ -405,77 +405,257 @@ namespace D_06_TemelKonularDegiskenlerTurDonusumleri
         #endregion
 
         #region VİDEO 42
-        static void Main(string[] args)
-        {
-            /* benim yaptığım */
+        //static void Main(string[] args)
+        //{
+        //    /* benim yaptığım */
 
-            Console.WriteLine("Merhaba");
+        //    Console.WriteLine("Merhaba");
 
-            Console.WriteLine("Adınız : ");
-            string ad11 = Console.ReadLine();
+        //    Console.WriteLine("Adınız : ");
+        //    string ad11 = Console.ReadLine();
 
-            Console.WriteLine("Soyadınız : ");
-            string SoyAd11 = Console.ReadLine();
+        //    Console.WriteLine("Soyadınız : ");
+        //    string SoyAd11 = Console.ReadLine();
 
-            Console.WriteLine("Şehir : ");
-            string sehir11 = Console.ReadLine();
+        //    Console.WriteLine("Şehir : ");
+        //    string sehir11 = Console.ReadLine();
 
-            /* (int) olarak dönüşüm olmuyor notlar da yazıyor */
+        //    /* (int) olarak dönüşüm olmuyor notlar da yazıyor */
 
-            Console.WriteLine("Yaşınız1 : ");
-            int yas11 = int.Parse(Console.ReadLine());
+        //    Console.WriteLine("Yaşınız1 : ");
+        //    int yas11 = int.Parse(Console.ReadLine());
 
-            Console.WriteLine("Yaşınız3 : ");
-            int yas21 = Convert.ToInt32(Console.ReadLine());
+        //    Console.WriteLine("Yaşınız3 : ");
+        //    int yas21 = Convert.ToInt32(Console.ReadLine());
 
-            Console.Clear();
+        //    Console.Clear();
 
-            Console.WriteLine(ad11);
-            Console.WriteLine(SoyAd11);
-            Console.WriteLine(sehir11);
-            Console.WriteLine(yas11);
-            Console.WriteLine(yas21);
+        //    Console.WriteLine(ad11);
+        //    Console.WriteLine(SoyAd11);
+        //    Console.WriteLine(sehir11);
+        //    Console.WriteLine(yas11);
+        //    Console.WriteLine(yas21);
 
-            Console.ReadLine();
-
-
-            /* hocanın yaptıgı */
-
-            Console.WriteLine("Merhaba");
-
-            Console.Write("Adınız : ");
-            string ad = Console.ReadLine();
-
-            Console.Write("Soyadınız : ");
-            string SoyAd = Console.ReadLine();
-
-            Console.Write("Şehir : ");
-            string sehir = Console.ReadLine();
-
-            Console.Write("Yaşınız1 : ");
-            string yasString1 = Console.ReadLine();
-            int yasParse = int.Parse(yasString1);
-
-            Console.Write("Yaşınız2 : ");
-            string yasString2 = Console.ReadLine();
-            int yasConvert1 = Convert.ToInt32(yasString2);
+        //    Console.ReadLine();
 
 
-            int yasConvert2 = Convert.ToInt32(Console.ReadLine()); /*  kısa kullanım acıklaması notlarda */
+        //    /* hocanın yaptıgı */
+
+        //    Console.WriteLine("Merhaba");
+
+        //    Console.Write("Adınız : ");
+        //    string ad = Console.ReadLine();
+
+        //    Console.Write("Soyadınız : ");
+        //    string SoyAd = Console.ReadLine();
+
+        //    Console.Write("Şehir : ");
+        //    string sehir = Console.ReadLine();
+
+        //    Console.Write("Yaşınız1 : ");
+        //    string yasString1 = Console.ReadLine();
+        //    int yasParse = int.Parse(yasString1);
+
+        //    Console.Write("Yaşınız2 : ");
+        //    string yasString2 = Console.ReadLine();
+        //    int yasConvert1 = Convert.ToInt32(yasString2);
 
 
-            Console.Clear();
+        //    int yasConvert2 = Convert.ToInt32(Console.ReadLine()); /*  kısa kullanım acıklaması notlarda */
 
-            Console.WriteLine("İsim : " + ad);
-            Console.WriteLine("Soyisim : " + SoyAd);
-            Console.WriteLine("Şehir : " + sehir);
-            Console.WriteLine("Yaş : " + yasConvert1);
 
-            Console.ReadLine();
-        }
+        //    Console.Clear();
+
+        //    Console.WriteLine("İsim : " + ad);
+        //    Console.WriteLine("Soyisim : " + SoyAd);
+        //    Console.WriteLine("Şehir : " + sehir);
+        //    Console.WriteLine("Yaş : " + yasConvert1);
+
+        //    Console.ReadLine();
+        //}
         #endregion
 
+        #region VİDEO 43
+        static void Main(string[] args)
+        {
+            string metin1 = "True";
 
+            bool boolDegisken1 = bool.Parse(metin1);
+            Console.WriteLine(boolDegisken1);
+
+            bool boolDegisken2 = Convert.ToBoolean(metin1);
+            Console.WriteLine(boolDegisken2);
+
+
+            int intDegisken1 = 100;
+
+            /* 100 değeri byte ve int aralıgında vardır böyle olur */
+            byte byteDegisken1 = (byte)intDegisken1;
+            Console.WriteLine(byteDegisken1);
+
+            /*
+             intDegisken1 adında int tipindeki değeri
+             byte a çevir byte tipindeki byteDegisken1 adına ata
+             buyuk aralık int ten kucuk aralık byte yaptıgımız için basına byte tipini yazdık
+             sorumluluk alıyorsun
+             donusumlerde atanan değere bakmaz tipine bakar karar verir
+            */
+
+            intDegisken1 = (byte)intDegisken1;
+            Console.WriteLine(intDegisken1);
+
+
+            /* 
+             bu ikisinin farkı 
+             byte byteDegisken2 = (byte)intDegisken1;
+             intDegisken1 = (byte)intDegisken1;
+            */
+
+            byte byteDegisken2 = (byte)intDegisken1;
+            /*
+             bunda arada değişken adı oldugu için
+             okurken üstüne geldiğinde kod önce 0 sıfır okuyor kodu okudugunda değeri alıyor.
+            */
+
+            intDegisken1 = (byte)intDegisken1;
+            /*
+             bunda farklı değişken adı olmadıgı için
+             direk atanan değeri alıyor.
+            */
+
+            float floatDegisken = intDegisken1;
+
+            /* bunun önüne(byte) yazsakta olur yazmasakta olur */
+
+            float floatDegisken1 = (byte)intDegisken1;
+
+            /*
+             nedeni float ın değer aralığı int ın değer aralıgından fazla
+             bundan dolayı float bakar int görür alırım der dönüştürür.
+            */
+
+            int intDegisken2 = 300;
+            /*
+             300 değeri int aralıgında var ama byte ta yok byte a atama yapalım
+             intDegisken2 i okurken 300 okuyor
+            */
+            intDegisken2 = (byte)intDegisken2; /* yerine gelince 44 olarak cevirdi */
+            Console.WriteLine(intDegisken2); /* konsola 44 yazdı 300 ün 256 a bolumunden kalan 44 */
+
+
+            int intDegisken3 = 5;
+            /* 5 değeri int ve byte aralıgında var convert.tobyte ile dönüştürme */
+            byte byteDegisken3 = Convert.ToByte(intDegisken3);
+            /* intDegisken3 te yazan int değerini byte e dönüştürüp byteDegisken2 byte a atacak */
+            Console.WriteLine(byteDegisken3);
+
+
+            int intDegisken4 = 1000;
+            /* 1000 değeri int aralıgında var ama byte ta yok byte a atama yapalım */
+           
+            
+            byte byteDegisken4 = Convert.ToByte(intDegisken4);
+            Console.WriteLine(byteDegisken4);
+
+            /* 
+             burada izin vermiyor tasma oldugu için convert ile cevirmeye izin vermiyor
+             böyle bir işlem yapacaksak eğer bilinçli dönüşüm yapmamız lazım
+             convert.tobyte değil   (byte)intDegisken4; kullanmalıyız
+            */
+
+            byte byteDegisken44 = (byte)intDegisken4;
+            Console.WriteLine(byteDegisken44);
+            /* 1000 değerini okuyor ama 232 olarak ceviriyor */
+
+            Console.WriteLine(byteDegisken3);
+
+            byte byteDegisken5 = 111; /* 111 i byte olarak okudu konsola yazdı */
+            decimal decimalDegisken1 = Convert.ToDecimal(byteDegisken5);
+            /* byte tipini decimal yaptı */
+            Console.WriteLine(decimalDegisken1); /* decimal tipinde konsola tekrar yazdı */
+
+            byte byteDegisken6 = 111; /* 111 i byte olarak okudu konsola yazdı */
+            decimal decimalDegisken2 = byteDegisken6;
+            Console.WriteLine(decimalDegisken2);
+
+
+
+            Console.ReadLine();
+
+            Console.Clear();
+
+            int a = 1;
+            byte b = (byte)a;
+            Console.WriteLine(b);
+            Console.ReadLine();
+
+            int c = 256;
+            byte d = (byte)c;
+            Console.WriteLine(d);
+            Console.ReadLine(); /* konsola 0 yazdı */
+
+
+            int e = 257;
+            byte f = (byte)e;
+            Console.WriteLine(f);
+            Console.ReadLine(); /* konsola 1 yazdı */
+
+            int g = 10;
+            g = (byte)g;
+            Console.WriteLine(g);
+            Console.ReadLine();
+
+            byte aa = 100;
+            int bb = aa;
+            Console.WriteLine(bb);
+            Console.ReadLine();
+
+            byte aaa = 100;
+            int bbb = (int)aaa;
+            Console.WriteLine(bbb);
+            Console.ReadLine();
+
+            /*
+             hata vermesinin sebebi çift tırnak arasına metinsel işlem yazılır dogru
+             ama int e cevireceksek eğer metinsel olmamalı
+            */
+
+            /*
+             hata veriyor
+            string aa = "abcd";
+            int bb = int.Parse(aa); hata veriyor 
+            Console.WriteLine(aa);
+            Console.ReadLine();
+            */
+
+            /*
+             hata veriyor 
+             string aa = "abcd";
+             int bb = Convert.ToInt32(aa);  hata veriyor 
+             Console.ReadLine();
+            */
+
+            /*
+             string aa = "abcd";
+             bool bb = bool.Parse(aa);
+             bool cc = Convert.ToBoolean(aa);
+            */
+
+            /*
+             string içine rakam yazarsak eğer bilinsiz dönüşüm gibi yazamayız
+             parse veya convert kullanmamız lazım
+            */
+
+            /*
+             string h = "100";
+             int g = (int)h; hata veriyor.
+            */
+
+            string aaaa = "100"; /* çift tırnak arasına aritmetik işlem yazdık */
+            int cccc = int.Parse(aaaa);
+            int bbbb = Convert.ToInt32(aaaa);
+        }
+        #endregion
 
     }
 }
