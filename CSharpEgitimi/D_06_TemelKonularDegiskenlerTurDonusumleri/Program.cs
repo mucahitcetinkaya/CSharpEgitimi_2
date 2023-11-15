@@ -372,27 +372,40 @@ namespace D_06_TemelKonularDegiskenlerTurDonusumleri
         #endregion
 
         #region VİDEO 40
+        //static void Main(string[] args)
+        //{
+        //    string metin1 = "100";
+        //    int s1 = metin1;
+
+        //    int s2 = (int)metin1;
+
+        //    int s3 = int.Parse(metin1);
+        //    int s4 = Convert.ToInt32(metin1);
+
+        //    string metin2 = "True";
+        //    bool b1 = bool.Parse(metin2);
+        //    bool b2 = Convert.ToBoolean(metin2);
+
+        //    string metin3 = null;
+
+        //    decimal d1 = decimal.Parse(metin3);
+        //    decimal d2 = Convert.ToDecimal(metin3);
+
+        //    bool b3 = Convert.ToBoolean(metin3);
+        //}
+        #endregion
+
+        #region VİDEO 41
         static void Main(string[] args)
         {
-            string metin1 = "100";
-            int s1 = metin1;
-
-            int s2 = (int)metin1;
-
-            int s3 = int.Parse(metin1);
-            int s4 = Convert.ToInt32(metin1);
-
-            string metin2 = "True";
-            bool b1 = bool.Parse(metin2);
-            bool b2 = Convert.ToBoolean(metin2);
-
-            string metin3 = null;
-
-            decimal d1 = decimal.Parse(metin3);
-            decimal d2 = Convert.ToDecimal(metin3);
-
-            bool b3 = Convert.ToBoolean(metin3);
+            int s1 = 10;
+            var s2 = "Mücahit";
+            var s3 = 100;
         }
         #endregion
+
+
+
+
     }
 }
