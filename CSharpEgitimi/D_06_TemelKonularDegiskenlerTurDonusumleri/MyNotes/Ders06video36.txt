@@ -1,0 +1,71 @@
+﻿
+
+VİDEO 36 Bilinçli Tür Dönüşümü 
+
+
+sayısal değişkenler arasında olan tür dönüşümü
+kucuk olan değişken tipindeki değeri
+buyuk olan değişken tipine atama işlemi
+
+
+byte sayi1 = 100 ;
+byte değişken tipinde sayi1 adında bir değişken oluşturduk
+ve sayi1 değişken içerisine eşittir operatörü ile 100 sayısını atadık
+
+byte ın sınırı vardı diğer video var min 0 max 255
+byte 8 bit 2 üzeri 8 den geliyor
+byte in üzerinde gelince kaç bit yazıyor
+
+yani byte a 100 değerini girince 0 ile 255 arasında oldugu için
+byte için 100 true dur yani saklamaya başlar
+
+ama 256 girersek ne olur ?
+sayi1 = 256 ;
+kodu yazarken bile hata alıyoruz altında kırmızı işaret cıkıyor
+mause ile üstüne gelince orada bilgisi yazıyor
+
+peki biz 256 değerini nereye gireriz
+
+byte tan sonra int var int 32 bit 2 üzeri 32 den gelir
+negatif değerler de alabilir
+
+int sayi2 = 256;
+int ne değer aldıgını nasıl öğreniyorduk
+
+int intMinVal = int.MinValue;
+int intMaxVal = int.MaxValue;
+
+yazarak öğrenebiliriz
+burada int değişken tipi
+intMinVal intMaxVal değişken adı
+int.MinValue int.MaxValue min max gösterecek değişken değerleri
+
+peki şöyle bir sey yapsak ne olur
+
+sayi1 in içindeki değeri
+olusturacağım herhangi bir int değerinin içine göndermek istesek
+uygulama burada nasıl davranır
+
+int sayi3 = burada uygulama bizden değer bekliyor 
+elimizlede değer yazabiliriz değişken atama da yapabiliriz
+sadece girilen değer int değerleri arasında olması lazım
+
+int sayi3 = sayi1; burada naptık sayi1 i cağırdık
+çağırdığımızda herhangi bir hata vermez
+burada yapılan işlem
+byte değişken tipinde olan bir değişkenin içinde olan değeri
+int değişken tipinde olan farklı bir değişkenin içerisine aktardık
+burada uygulama söyle dusunuyor
+benim karsıma gelen 
+değişken nedir sayi1
+değişken tipi nedir byte
+burada int düşünür
+byte ın alabileceği min max value kaç 0 a 255
+ben byte tan büyüğüm diyor
+yani byte ın içinde ne olursa olsun ben saklarım hata vermem diyor
+
+bu işleme bilinçi tür dönüşümü denir
+
+burada int byte ın değişken değerine bakmıyor
+byte ın değişken aralıgına bakıyor
+byte kucuk int buyuk byte alıyorsa bende alırım diyor
