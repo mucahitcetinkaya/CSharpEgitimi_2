@@ -354,12 +354,20 @@ namespace D_06_TemelKonularDegiskenlerTurDonusumleri
         #endregion
 
         #region VİDEO 38
+        //static void Main(string[] args)
+        //{
+        //    object o1 = 100;
+        //    object o2 = 10.90;
+
+        //    /* hata vermiyor ikisini de alabiliyor */
+        //}
+        #endregion
+
+        #region VİDEO 39
         static void Main(string[] args)
         {
             object o1 = 100;
             object o2 = 10.90;
-
-            /* hata vermiyor ikisini de alabiliyor */
         }
         #endregion
     }
