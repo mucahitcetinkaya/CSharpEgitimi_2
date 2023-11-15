@@ -396,14 +396,84 @@ namespace D_06_TemelKonularDegiskenlerTurDonusumleri
         #endregion
 
         #region VİDEO 41
-        static void Main(string[] args)
-        {
-            int s1 = 10;
-            var s2 = "Mücahit";
-            var s3 = 100;
-        }
+        //static void Main(string[] args)
+        //{
+        //    int s1 = 10;
+        //    var s2 = "Mücahit";
+        //    var s3 = 100;
+        //}
         #endregion
 
+        #region VİDEO 42
+        static void Main(string[] args)
+        {
+            /* benim yaptığım */
+
+            Console.WriteLine("Merhaba");
+
+            Console.WriteLine("Adınız : ");
+            string ad11 = Console.ReadLine();
+
+            Console.WriteLine("Soyadınız : ");
+            string SoyAd11 = Console.ReadLine();
+
+            Console.WriteLine("Şehir : ");
+            string sehir11 = Console.ReadLine();
+
+            /* (int) olarak dönüşüm olmuyor notlar da yazıyor */
+
+            Console.WriteLine("Yaşınız1 : ");
+            int yas11 = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Yaşınız3 : ");
+            int yas21 = Convert.ToInt32(Console.ReadLine());
+
+            Console.Clear();
+
+            Console.WriteLine(ad11);
+            Console.WriteLine(SoyAd11);
+            Console.WriteLine(sehir11);
+            Console.WriteLine(yas11);
+            Console.WriteLine(yas21);
+
+            Console.ReadLine();
+
+
+            /* hocanın yaptıgı */
+
+            Console.WriteLine("Merhaba");
+
+            Console.Write("Adınız : ");
+            string ad = Console.ReadLine();
+
+            Console.Write("Soyadınız : ");
+            string SoyAd = Console.ReadLine();
+
+            Console.Write("Şehir : ");
+            string sehir = Console.ReadLine();
+
+            Console.Write("Yaşınız1 : ");
+            string yasString1 = Console.ReadLine();
+            int yasParse = int.Parse(yasString1);
+
+            Console.Write("Yaşınız2 : ");
+            string yasString2 = Console.ReadLine();
+            int yasConvert1 = Convert.ToInt32(yasString2);
+
+
+            int yasConvert2 = Convert.ToInt32(Console.ReadLine()); /*  kısa kullanım acıklaması notlarda */
+
+
+            Console.Clear();
+
+            Console.WriteLine("İsim : " + ad);
+            Console.WriteLine("Soyisim : " + SoyAd);
+            Console.WriteLine("Şehir : " + sehir);
+            Console.WriteLine("Yaş : " + yasConvert1);
+
+            Console.ReadLine();
+        }
+        #endregion
 
 
 

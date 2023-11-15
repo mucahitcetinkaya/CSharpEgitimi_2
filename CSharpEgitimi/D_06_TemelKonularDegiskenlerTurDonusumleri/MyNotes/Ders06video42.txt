@@ -1,0 +1,126 @@
+﻿
+
+VİDEO 42 Bölüm sonu alıştırma 1
+
+
+HEDEFLER
+
+Merhaba yazacak
+
+bunları isteyecek            bunlar girilenler
+
+Adınız :                      Mücahit
+Soyadınız :                   Çetinkaya
+Şehir :                       İstanbul
+Yaş :                         29
+
+ekranı temizle
+
+girinlen değerleri ekrana yazdır
+
+Adınız :                      Mücahit
+Soyadınız :                   Çetinkaya
+Şehir :                       İstanbul
+Yaş :                         29
+
+not
+ad soyad şehir de hepsi string
+yaş dediğimiz zaman bunu string den int e cevirmemiz gerekiyor
+2 farklı cevirme yöntemi var ikisini de kullanarak bu örneği yapalım
+
+
+benim yaptığım
+
+
+Console.WriteLine("Merhaba");
+Console.WriteLine("Adınız : ");
+string ad = Console.ReadLine();
+
+Console.WriteLine("Soyadınız : ");
+string SoyAd = Console.ReadLine();
+
+Console.WriteLine("Şehir : ");
+string sehir = Console.ReadLine();
+
+Console.WriteLine("Yaşınız1 : ");
+string yas1 = (int)Console.ReadLine();
+
+Console.WriteLine("Yaşınız2 : ");
+string yas2 = int.Parse(Console.ReadLine());
+
+Console.WriteLine("Yaşınız3 : ");
+int yas3 = Convert.ToInt32(Console.ReadLine());
+
+Console.Clear();
+
+Console.WriteLine(ad);
+Console.WriteLine(SoyAd);
+Console.WriteLine(sehir);
+Console.WriteLine(yas1);
+Console.WriteLine(yas2);
+Console.WriteLine(yas3);
+
+Console.ReadLine();
+
+NOT
+Console.WriteLine("Yaşınız1 : ");
+int yas11 = (int)Console.ReadLine();
+Console.ReadLine ın dönüş tipi string dir direk dönerken (int) olarak tip dönüşümü yapılamaz
+parse veya convert kullanmak gerekiyor
+
+
+hocanın yaptıgı
+
+Console.WriteLine("Merhaba");
+
+Console.Write("Adınız : ");
+
+string ad = Console.ReadLine();
+Console.Write("Soyadınız : ");
+
+string SoyAd = Console.ReadLine();
+Console.Write("Şehir : ");
+
+string sehir = Console.ReadLine();
+Console.Write("Yaşınız : ");
+string yasString = Console.ReadLine();
+int yasParse = int.Parse(yasString);
+int yasConvert = Convert.ToInt32(yasString);
+
+kısa kullanım
+
+int yasConvert2 = Convert.ToInt32(Console.ReadLine());
+convert.toint32 değeri benden string değer istiyor
+burada biz string değere console.readline ile ulasıyoruz
+yani içine console.readline yazınca onun sonunu bize string dönüyor
+string döndüğünde convert.toint32 string kabul ettiği için
+birbirlerini tamamlarlar tamamladıklarında
+ben string olarak gelen int değerine ulasıyorum
+onun değerini convert.toint32 ile int üzerine alabiliyoruz
+console.readline kısmı bize ne veriyor string veriyor
+bu kısımda kullanıcıdan değer bekliyor
+kullanıcı değer giriyor console.readline dısarıya string veriyor
+convert.toint32 de parantez içinden string bekliyor ki int e cevirsin
+int e cevirip diğer tarafa atıyor.
+bunu yaparak bizi 1 satır kodtan kurtarıyor
+
+
+Console.Write("Yaşınız1 : ");
+string yasString1 = Console.ReadLine();
+int yasConvert1 =  Convert.ToInt32(yasString1);
+
+Console.Write("Yaşınız1 : ");
+int yasConvert2 = Convert.ToInt32(Console.ReadLine());
+
+
+mantıklı kullanım ama ilerinin konusu su anda uzun olanı tercih edelim
+ben kendi yaptıgımda bilmeden kısa yolu kullanmısım ahahahaha
+
+Console.Clear();
+
+Console.WriteLine("İsim : " + ad);
+Console.WriteLine("Soyisim : " + SoyAd);
+Console.WriteLine("Şehir : " + sehir);
+Console.WriteLine("Yaş : " + yasConvert);
+
+Console.ReadLine();
