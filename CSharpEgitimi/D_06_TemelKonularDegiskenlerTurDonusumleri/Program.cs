@@ -332,24 +332,34 @@ namespace D_06_TemelKonularDegiskenlerTurDonusumleri
         #endregion
 
         #region VİDEO 37
+        //static void Main(string[] args)
+        //{
+        //    /*
+        //     bilinçsiz tür dönüşümleri
+        //     buyuk aralıgı olan değişken tipini
+        //     kucuk aralıgı olan değişken tipine atama
+        //    */
+
+        //    int sayi1 = 30;
+        //    byte sayi2 = sayi1; /* hata verdi byte benim aralık az int e göre ben bunu alamam diyor aralıga bakıyor */
+
+        //    int sayi3 = 30;
+        //    byte sayi4 = (byte)sayi1;
+        //    /* hata vermedi bilinçsiz tür dönüşümü ben içindekini biliyorun senin aralık dogru sen yinede byte a döndür demiş olduk */
+
+        //    /* int aralıgı içinde ama byte aralıgı dısında bir değer verirsek */
+        //    int sayi5 = 256; /* int 256 aralık içinde */
+        //    byte sayi6 = (byte)sayi5; /* burada hata vermez ama değeri 0 olarak okur sözü bizden alıyor aralıkta yok diye sıfır verir */
+        //}
+        #endregion
+
+        #region VİDEO 38
         static void Main(string[] args)
         {
-            /*
-             bilinçsiz tür dönüşümleri
-             buyuk aralıgı olan değişken tipini
-             kucuk aralıgı olan değişken tipine atama
-            */
+            object o1 = 100;
+            object o2 = 10.90;
 
-            int sayi1 = 30;
-            byte sayi2 = sayi1; /* hata verdi byte benim aralık az int e göre ben bunu alamam diyor aralıga bakıyor */
-
-            int sayi3 = 30;
-            byte sayi4 = (byte)sayi1;
-            /* hata vermedi bilinçsiz tür dönüşümü ben içindekini biliyorun senin aralık dogru sen yinede byte a döndür demiş olduk */
-
-            /* int aralıgı içinde ama byte aralıgı dısında bir değer verirsek */
-            int sayi5 = 256; /* int 256 aralık içinde */
-            byte sayi6 = (byte)sayi5; /* burada hata vermez ama değeri 0 olarak okur sözü bizden alıyor aralıkta yok diye sıfır verir */
+            /* hata vermiyor ikisini de alabiliyor */
         }
         #endregion
     }

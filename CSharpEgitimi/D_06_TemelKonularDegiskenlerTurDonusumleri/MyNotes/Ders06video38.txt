@@ -1,0 +1,37 @@
+﻿
+
+VİDEO 38 Object tipi hakkında bilgilendirme
+
+
+class dersinde object tipini daha detaylı anlatacağız
+
+object tipinin içerisine alabileceği bazı tipler
+
+object
+{
+
+int,
+decimal,
+string,
+bool,
+float,
+double,
+sistem class,
+kendi olusturgumuz custom class,
+
+}
+ 
+bütün değişken tiplerin içinde min değerden daha min
+bütün değişken tiplerin içinde max değerden daha max
+değeri taşıyabilir
+
+object tiplerin en büyüğüdür
+
+ornek olarak
+
+object o1 = 100;
+object o2 = 10.90;
+
+hata vermiyor ikisini de alabiliyor
+
+bu işleme boxing işlemi deniyor 39. videoda anlatılacak
