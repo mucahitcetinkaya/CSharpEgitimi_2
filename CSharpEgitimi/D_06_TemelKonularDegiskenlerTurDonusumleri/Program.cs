@@ -476,185 +476,185 @@ namespace D_06_TemelKonularDegiskenlerTurDonusumleri
         #endregion
 
         #region VİDEO 43
-        static void Main(string[] args)
-        {
-            string metin1 = "True";
+        //static void Main(string[] args)
+        //{
+        //    string metin1 = "True";
 
-            bool boolDegisken1 = bool.Parse(metin1);
-            Console.WriteLine(boolDegisken1);
+        //    bool boolDegisken1 = bool.Parse(metin1);
+        //    Console.WriteLine(boolDegisken1);
 
-            bool boolDegisken2 = Convert.ToBoolean(metin1);
-            Console.WriteLine(boolDegisken2);
-
-
-            int intDegisken1 = 100;
-
-            /* 100 değeri byte ve int aralıgında vardır böyle olur */
-            byte byteDegisken1 = (byte)intDegisken1;
-            Console.WriteLine(byteDegisken1);
-
-            /*
-             intDegisken1 adında int tipindeki değeri
-             byte a çevir byte tipindeki byteDegisken1 adına ata
-             buyuk aralık int ten kucuk aralık byte yaptıgımız için basına byte tipini yazdık
-             sorumluluk alıyorsun
-             donusumlerde atanan değere bakmaz tipine bakar karar verir
-            */
-
-            intDegisken1 = (byte)intDegisken1;
-            Console.WriteLine(intDegisken1);
+        //    bool boolDegisken2 = Convert.ToBoolean(metin1);
+        //    Console.WriteLine(boolDegisken2);
 
 
-            /* 
-             bu ikisinin farkı 
-             byte byteDegisken2 = (byte)intDegisken1;
-             intDegisken1 = (byte)intDegisken1;
-            */
+        //    int intDegisken1 = 100;
 
-            byte byteDegisken2 = (byte)intDegisken1;
-            /*
-             bunda arada değişken adı oldugu için
-             okurken üstüne geldiğinde kod önce 0 sıfır okuyor kodu okudugunda değeri alıyor.
-            */
+        //    /* 100 değeri byte ve int aralıgında vardır böyle olur */
+        //    byte byteDegisken1 = (byte)intDegisken1;
+        //    Console.WriteLine(byteDegisken1);
 
-            intDegisken1 = (byte)intDegisken1;
-            /*
-             bunda farklı değişken adı olmadıgı için
-             direk atanan değeri alıyor.
-            */
+        //    /*
+        //     intDegisken1 adında int tipindeki değeri
+        //     byte a çevir byte tipindeki byteDegisken1 adına ata
+        //     buyuk aralık int ten kucuk aralık byte yaptıgımız için basına byte tipini yazdık
+        //     sorumluluk alıyorsun
+        //     donusumlerde atanan değere bakmaz tipine bakar karar verir
+        //    */
 
-            float floatDegisken = intDegisken1;
-
-            /* bunun önüne(byte) yazsakta olur yazmasakta olur */
-
-            float floatDegisken1 = (byte)intDegisken1;
-
-            /*
-             nedeni float ın değer aralığı int ın değer aralıgından fazla
-             bundan dolayı float bakar int görür alırım der dönüştürür.
-            */
-
-            int intDegisken2 = 300;
-            /*
-             300 değeri int aralıgında var ama byte ta yok byte a atama yapalım
-             intDegisken2 i okurken 300 okuyor
-            */
-            intDegisken2 = (byte)intDegisken2; /* yerine gelince 44 olarak cevirdi */
-            Console.WriteLine(intDegisken2); /* konsola 44 yazdı 300 ün 256 a bolumunden kalan 44 */
+        //    intDegisken1 = (byte)intDegisken1;
+        //    Console.WriteLine(intDegisken1);
 
 
-            int intDegisken3 = 5;
-            /* 5 değeri int ve byte aralıgında var convert.tobyte ile dönüştürme */
-            byte byteDegisken3 = Convert.ToByte(intDegisken3);
-            /* intDegisken3 te yazan int değerini byte e dönüştürüp byteDegisken2 byte a atacak */
-            Console.WriteLine(byteDegisken3);
+        //    /* 
+        //     bu ikisinin farkı 
+        //     byte byteDegisken2 = (byte)intDegisken1;
+        //     intDegisken1 = (byte)intDegisken1;
+        //    */
+
+        //    byte byteDegisken2 = (byte)intDegisken1;
+        //    /*
+        //     bunda arada değişken adı oldugu için
+        //     okurken üstüne geldiğinde kod önce 0 sıfır okuyor kodu okudugunda değeri alıyor.
+        //    */
+
+        //    intDegisken1 = (byte)intDegisken1;
+        //    /*
+        //     bunda farklı değişken adı olmadıgı için
+        //     direk atanan değeri alıyor.
+        //    */
+
+        //    float floatDegisken = intDegisken1;
+
+        //    /* bunun önüne(byte) yazsakta olur yazmasakta olur */
+
+        //    float floatDegisken1 = (byte)intDegisken1;
+
+        //    /*
+        //     nedeni float ın değer aralığı int ın değer aralıgından fazla
+        //     bundan dolayı float bakar int görür alırım der dönüştürür.
+        //    */
+
+        //    int intDegisken2 = 300;
+        //    /*
+        //     300 değeri int aralıgında var ama byte ta yok byte a atama yapalım
+        //     intDegisken2 i okurken 300 okuyor
+        //    */
+        //    intDegisken2 = (byte)intDegisken2; /* yerine gelince 44 olarak cevirdi */
+        //    Console.WriteLine(intDegisken2); /* konsola 44 yazdı 300 ün 256 a bolumunden kalan 44 */
 
 
-            int intDegisken4 = 1000;
-            /* 1000 değeri int aralıgında var ama byte ta yok byte a atama yapalım */
+        //    int intDegisken3 = 5;
+        //    /* 5 değeri int ve byte aralıgında var convert.tobyte ile dönüştürme */
+        //    byte byteDegisken3 = Convert.ToByte(intDegisken3);
+        //    /* intDegisken3 te yazan int değerini byte e dönüştürüp byteDegisken2 byte a atacak */
+        //    Console.WriteLine(byteDegisken3);
+
+
+        //    int intDegisken4 = 1000;
+        //    /* 1000 değeri int aralıgında var ama byte ta yok byte a atama yapalım */
            
             
-            byte byteDegisken4 = Convert.ToByte(intDegisken4);
-            Console.WriteLine(byteDegisken4);
+        //    byte byteDegisken4 = Convert.ToByte(intDegisken4);
+        //    Console.WriteLine(byteDegisken4);
 
-            /* 
-             burada izin vermiyor tasma oldugu için convert ile cevirmeye izin vermiyor
-             böyle bir işlem yapacaksak eğer bilinçli dönüşüm yapmamız lazım
-             convert.tobyte değil   (byte)intDegisken4; kullanmalıyız
-            */
+        //    /* 
+        //     burada izin vermiyor tasma oldugu için convert ile cevirmeye izin vermiyor
+        //     böyle bir işlem yapacaksak eğer bilinçli dönüşüm yapmamız lazım
+        //     convert.tobyte değil   (byte)intDegisken4; kullanmalıyız
+        //    */
 
-            byte byteDegisken44 = (byte)intDegisken4;
-            Console.WriteLine(byteDegisken44);
-            /* 1000 değerini okuyor ama 232 olarak ceviriyor */
+        //    byte byteDegisken44 = (byte)intDegisken4;
+        //    Console.WriteLine(byteDegisken44);
+        //    /* 1000 değerini okuyor ama 232 olarak ceviriyor */
 
-            Console.WriteLine(byteDegisken3);
+        //    Console.WriteLine(byteDegisken3);
 
-            byte byteDegisken5 = 111; /* 111 i byte olarak okudu konsola yazdı */
-            decimal decimalDegisken1 = Convert.ToDecimal(byteDegisken5);
-            /* byte tipini decimal yaptı */
-            Console.WriteLine(decimalDegisken1); /* decimal tipinde konsola tekrar yazdı */
+        //    byte byteDegisken5 = 111; /* 111 i byte olarak okudu konsola yazdı */
+        //    decimal decimalDegisken1 = Convert.ToDecimal(byteDegisken5);
+        //    /* byte tipini decimal yaptı */
+        //    Console.WriteLine(decimalDegisken1); /* decimal tipinde konsola tekrar yazdı */
 
-            byte byteDegisken6 = 111; /* 111 i byte olarak okudu konsola yazdı */
-            decimal decimalDegisken2 = byteDegisken6;
-            Console.WriteLine(decimalDegisken2);
-
-
-
-            Console.ReadLine();
-
-            Console.Clear();
-
-            int a = 1;
-            byte b = (byte)a;
-            Console.WriteLine(b);
-            Console.ReadLine();
-
-            int c = 256;
-            byte d = (byte)c;
-            Console.WriteLine(d);
-            Console.ReadLine(); /* konsola 0 yazdı */
+        //    byte byteDegisken6 = 111; /* 111 i byte olarak okudu konsola yazdı */
+        //    decimal decimalDegisken2 = byteDegisken6;
+        //    Console.WriteLine(decimalDegisken2);
 
 
-            int e = 257;
-            byte f = (byte)e;
-            Console.WriteLine(f);
-            Console.ReadLine(); /* konsola 1 yazdı */
 
-            int g = 10;
-            g = (byte)g;
-            Console.WriteLine(g);
-            Console.ReadLine();
+        //    Console.ReadLine();
 
-            byte aa = 100;
-            int bb = aa;
-            Console.WriteLine(bb);
-            Console.ReadLine();
+        //    Console.Clear();
 
-            byte aaa = 100;
-            int bbb = (int)aaa;
-            Console.WriteLine(bbb);
-            Console.ReadLine();
+        //    int a = 1;
+        //    byte b = (byte)a;
+        //    Console.WriteLine(b);
+        //    Console.ReadLine();
 
-            /*
-             hata vermesinin sebebi çift tırnak arasına metinsel işlem yazılır dogru
-             ama int e cevireceksek eğer metinsel olmamalı
-            */
+        //    int c = 256;
+        //    byte d = (byte)c;
+        //    Console.WriteLine(d);
+        //    Console.ReadLine(); /* konsola 0 yazdı */
 
-            /*
-             hata veriyor
-            string aa = "abcd";
-            int bb = int.Parse(aa); hata veriyor 
-            Console.WriteLine(aa);
-            Console.ReadLine();
-            */
 
-            /*
-             hata veriyor 
-             string aa = "abcd";
-             int bb = Convert.ToInt32(aa);  hata veriyor 
-             Console.ReadLine();
-            */
+        //    int e = 257;
+        //    byte f = (byte)e;
+        //    Console.WriteLine(f);
+        //    Console.ReadLine(); /* konsola 1 yazdı */
 
-            /*
-             string aa = "abcd";
-             bool bb = bool.Parse(aa);
-             bool cc = Convert.ToBoolean(aa);
-            */
+        //    int g = 10;
+        //    g = (byte)g;
+        //    Console.WriteLine(g);
+        //    Console.ReadLine();
 
-            /*
-             string içine rakam yazarsak eğer bilinsiz dönüşüm gibi yazamayız
-             parse veya convert kullanmamız lazım
-            */
+        //    byte aa = 100;
+        //    int bb = aa;
+        //    Console.WriteLine(bb);
+        //    Console.ReadLine();
 
-            /*
-             string h = "100";
-             int g = (int)h; hata veriyor.
-            */
+        //    byte aaa = 100;
+        //    int bbb = (int)aaa;
+        //    Console.WriteLine(bbb);
+        //    Console.ReadLine();
 
-            string aaaa = "100"; /* çift tırnak arasına aritmetik işlem yazdık */
-            int cccc = int.Parse(aaaa);
-            int bbbb = Convert.ToInt32(aaaa);
-        }
+        //    /*
+        //     hata vermesinin sebebi çift tırnak arasına metinsel işlem yazılır dogru
+        //     ama int e cevireceksek eğer metinsel olmamalı
+        //    */
+
+        //    /*
+        //     hata veriyor
+        //    string aa = "abcd";
+        //    int bb = int.Parse(aa); hata veriyor 
+        //    Console.WriteLine(aa);
+        //    Console.ReadLine();
+        //    */
+
+        //    /*
+        //     hata veriyor 
+        //     string aa = "abcd";
+        //     int bb = Convert.ToInt32(aa);  hata veriyor 
+        //     Console.ReadLine();
+        //    */
+
+        //    /*
+        //     string aa = "abcd";
+        //     bool bb = bool.Parse(aa);
+        //     bool cc = Convert.ToBoolean(aa);
+        //    */
+
+        //    /*
+        //     string içine rakam yazarsak eğer bilinsiz dönüşüm gibi yazamayız
+        //     parse veya convert kullanmamız lazım
+        //    */
+
+        //    /*
+        //     string h = "100";
+        //     int g = (int)h; hata veriyor.
+        //    */
+
+        //    string aaaa = "100"; /* çift tırnak arasına aritmetik işlem yazdık */
+        //    int cccc = int.Parse(aaaa);
+        //    int bbbb = Convert.ToInt32(aaaa);
+        //}
         #endregion
 
     }
