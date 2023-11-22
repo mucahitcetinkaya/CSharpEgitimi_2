@@ -1,0 +1,70 @@
+﻿
+
+VIDEO 50 Aritmatiksel Operatörler - Alıştırma 
+
+
+İSTENİLEN
+
+Merhaba 
+
+Adınız : 
+Soyadınız : 
+Doğum yılınız : 
+
+Ekranı Temizle
+
+Ekranda
+
+Merhaba Mücahit Çetinkaya ... yaşındasınız.
+
+yazacak
+
+
+            //// BENİM YAPTIGIM 
+            
+
+            //// HOCANIN YAPTIGI
+
+            Console.WriteLine("Merhaba ,");
+
+            Console.Write("Adınız : ");
+            string ad = Console.ReadLine();
+
+            Console.Write("Soyadınız : ");
+            string soyAd = Console.ReadLine();
+
+            Console.Write("Doğum Yılınız : ");
+            string dogumYili = Console.ReadLine();
+
+            Console.Clear();
+
+            int yil = Convert.ToInt32(dogumYili);
+
+            // karar yapılarına geldiğimizde girilen değerin 0 veya x bir değer
+            // olup olmadıgını kontrol edeceğiz
+            // daha oraya gelmedik ekleme yapmıyorum
+
+            //int mevcutYil = 2023; // burada yıla göre hesaplama yaptık
+            //int yas = mevcutYil - yil;
+
+            //// 2023 yılında calısır ama zaman geçiyor
+            //// DateTime.Now.Year; ile yapmamız lazım
+
+            int mevcutYil = DateTime.Now.Year; //// YAPAMADIGIM KISIM BURASI .YEAR YAZMAYI UNUTMUSUM
+            int yas = mevcutYil - yil;
+
+            // BURADA DEDİĞİMİZ OLAY BUGUNUN ZAMANINI VE YILINI GETİR mevcutYil a ata
+
+
+            string mesaj = "Merhaba " + ad + " " + soyAd + " " + yas + " yaşındasınız... ";
+            Console.WriteLine(mesaj);
+            Console.ReadLine();
+
+            // string mesajda parantezlere gerek yok 
+            // çift tırnak arası ifade direk yazılır oldugu gibi
+            // metinsel de yazsan rakamsalda yazsan
+            // simge işaret boslukta koysan çift tırnak içinde oldugu gibi yazar
+            // çift tırnak içindeki bir ifade metinsel oldugu için 
+            // aritmetik işlem yapılmaz.
+            // komut oldugunu belirtmek için ters slash kullanılır \ ALT GR + SİMGE TUŞU
+            // alt satıra geçmek için \n kullanılır

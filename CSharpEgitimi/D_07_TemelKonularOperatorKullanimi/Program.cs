@@ -202,91 +202,191 @@ namespace D_07_TemelKonularOperatorKullanimi
         #endregion
 
         #region VİDEO 49 
+        //static void Main(string[] args)
+        //{
+        //    /* MOD ALMA YÜZDE İŞARETİ % */
+
+        //    int s1 = 10;
+        //    int s2 = 2;
+        //    int sonucMod = s1 % s2;
+
+        //    /*
+        //     s1 in modu s2 ye göre nedir
+        //     10 değerini ben 2 ye bölünmeyene kadar yani kalan değerin 2 den küçük olana kadar
+        //     böldüğünde kalan nedir 
+        //     10 un 2 e bölümünden kalan 0 dır
+        //     sonuc sıfır cıkar tam bölünür
+        //     9 un 2 e modu 1 dir mesela kalan 1 yani
+        //    */
+
+        //    /* ++ OPERATÖRÜ 1 ARTTIRMAK İÇİN KULLANILIR */
+
+        //    /* + nın yerine göre davranısı değişiyor SAGDA MI SOLDA MI */
+
+        //    int s3 = 10;
+        //    /* BURADA s3 DEĞER 10 OKUYOR */
+        //    int operatorSonuc1; s3++;
+
+        //    /*
+        //     s3 ü 10 okudugunda
+        //     S3 Ü OKURKEN operatorSonuc1 DEĞERİ 0 OKUYOR
+        //     S3 Ü OKURKEN s3++ DA 10 OKUYOR
+        //     s3++ yı OKUDUDUNDA
+        //     s3 VE s3++ 11 oldu 1 arttırdı
+        //     operatorSonuc1 10 olarak kaldı
+        //     EĞER ++ SAĞ TARAFTAYSA
+        //     ONCE DEĞERİ OKUYOR operatorSonuc1 üzerine ATAMASINI YAPIYOR
+        //     SONRA 1 ARTTIRIYOR
+        //     operatorSonuc1 in 10 kalma sebebi bu
+        //    */
+
+        //    int operatorSonuc2; ++s3;
+
+        //    /*
+        //     s3 ü 10 okudugunda
+        //     S3 Ü OKURKEN operatorSonuc1 DEĞERİ 0 OKUYOR
+        //     ++s3 10 değeri okuyor
+        //     ++s3 okudugu zaman
+        //     s3 s3++ operatorSonuc2 hepsi 11 oluyor
+        //     EĞER ++ SOL TARAFTAYSA
+        //     ONCE DEĞERİ 1 ARTTIYOR SONRA ARTTILAN DEĞERİ
+        //     operatorSonuc2 üstüne ATAMA YAPIYOR
+        //     operatorSonuc2 nin de 11 olma sebebi bu
+
+        //     NOT : bizim burda yapmak istediğimiz olay nedir
+        //     int tipinde s3 değişken adına 10 değerini atamak
+        //     s3 değerini alıp 
+        //     int tipinde s3++ ile bir arttırıp
+        //     int tipindeki operatorSonuc1 e atamak
+        //     işte burda ++ nın önce sonra olması
+        //     operatorSonuc1 ve 2 nin değerinin değişip değişmemesini sağlıyor
+        //    */
+
+        //    /* peki böyle bir durum da ne olurdu ? */
+        //    int operatorSonuc3 = (s3++);
+
+        //    /*
+        //     operatorSonuc3 10 olur
+        //     s3 ve s3++ 11 olur
+        //     parantezli ve parantezsiz aynı davranış
+
+        //     ++ operatörü özel bir operatör olarak geçer
+        //     mesela ++ yerine +2 yazsak int int oldugu için toplama yapacak
+        //     ++ operatörünün uzun hali nedir
+        //     int operatorSonuc4 = s3 + 1; dir
+        //     kısa hali ++ dır
+        //    */
+
+
+        //    /* -- OPERATÖRÜ 1 EKSİLTMEK İÇİN KULLANILIR */
+
+        //    /* + nın yerine göre davranısı değişiyor SAGDA MI SOLDA MI */
+
+        //    /* -- operatörüde ++ operatörü gibi kurallı aynı */
+
+        //    int s4 = 10;
+        //    int operatorSonuc5 = (s4--);
+        //    int operatorSonuc6 = (--s4);
+
+        //}
+        #endregion
+
+        #region VİDEO 50 
         static void Main(string[] args)
         {
-            /* MOD ALMA YÜZDE İŞARETİ % */
-
-            int s1 = 10;
-            int s2 = 2;
-            int sonucMod = s1 % s2;
-
             /*
-             s1 in modu s2 ye göre nedir
-             10 değerini ben 2 ye bölünmeyene kadar yani kalan değerin 2 den küçük olana kadar
-             böldüğünde kalan nedir 
-             10 un 2 e bölümünden kalan 0 dır
-             sonuc sıfır cıkar tam bölünür
-             9 un 2 e modu 1 dir mesela kalan 1 yani
+            
+            
+             VIDEO 50 Aritmatiksel Operatörler - Alıştırma 
+          
+             İSTENİLEN
+          
+             Merhaba 
+          
+             Adınız : 
+             Soyadınız : 
+             Doğum yılınız : 
+          
+             Ekranı Temizle
+          
+             Ekranda
+          
+             Merhaba Mücahit Çetinkaya ... yaşındasınız.
+          
+             yazacak
+             
             */
 
-            /* ++ OPERATÖRÜ 1 ARTTIRMAK İÇİN KULLANILIR */
+            /* BENİM YAPTIĞIM */
 
-            /* + nın yerine göre davranısı değişiyor SAGDA MI SOLDA MI */
+            Console.WriteLine("Merhaba");
+            Console.Write("Adınız : ");
+            string ad1 = Console.ReadLine();
+            Console.Write("Soyadınız : ");
+            string soyAd1 = Console.ReadLine();
+            Console.Write("Doğum Yılınız : ");
+            int dogumTarihi1 = Convert.ToInt32(Console.ReadLine());
 
-            int s3 = 10;
-            /* BURADA s3 DEĞER 10 OKUYOR */
-            int operatorSonuc1; s3++;
+            int yas1 = DateTime.Now.Year - dogumTarihi1;
 
-            /*
-             s3 ü 10 okudugunda
-             S3 Ü OKURKEN operatorSonuc1 DEĞERİ 0 OKUYOR
-             S3 Ü OKURKEN s3++ DA 10 OKUYOR
-             s3++ yı OKUDUDUNDA
-             s3 VE s3++ 11 oldu 1 arttırdı
-             operatorSonuc1 10 olarak kaldı
-             EĞER ++ SAĞ TARAFTAYSA
-             ONCE DEĞERİ OKUYOR operatorSonuc1 üzerine ATAMASINI YAPIYOR
-             SONRA 1 ARTTIRIYOR
-             operatorSonuc1 in 10 kalma sebebi bu
-            */
+            Console.Clear();
 
-            int operatorSonuc2; ++s3;
+            Console.WriteLine("Merhaba" + " " + ad1 + " " + soyAd1 + " " + yas1 + " " + "yaşındasınız.");
 
-            /*
-             s3 ü 10 okudugunda
-             S3 Ü OKURKEN operatorSonuc1 DEĞERİ 0 OKUYOR
-             ++s3 10 değeri okuyor
-             ++s3 okudugu zaman
-             s3 s3++ operatorSonuc2 hepsi 11 oluyor
-             EĞER ++ SOL TARAFTAYSA
-             ONCE DEĞERİ 1 ARTTIYOR SONRA ARTTILAN DEĞERİ
-             operatorSonuc2 üstüne ATAMA YAPIYOR
-             operatorSonuc2 nin de 11 olma sebebi bu
 
-             NOT : bizim burda yapmak istediğimiz olay nedir
-             int tipinde s3 değişken adına 10 değerini atamak
-             s3 değerini alıp 
-             int tipinde s3++ ile bir arttırıp
-             int tipindeki operatorSonuc1 e atamak
-             işte burda ++ nın önce sonra olması
-             operatorSonuc1 ve 2 nin değerinin değişip değişmemesini sağlıyor
-            */
 
-            /* peki böyle bir durum da ne olurdu ? */
-            int operatorSonuc3 = (s3++);
+
+            /* HOCANIN YAPTIĞI */
+
+            Console.WriteLine("Merhaba ,");
+
+            Console.Write("Adınız : ");
+            string ad = Console.ReadLine();
+
+            Console.Write("Soyadınız : ");
+            string soyAd = Console.ReadLine();
+
+            Console.Write("Doğum Yılınız : ");
+            string dogumYili = Console.ReadLine();
+
+            Console.Clear();
+
+            int yil = Convert.ToInt32(dogumYili);
 
             /*
-             operatorSonuc3 10 olur
-             s3 ve s3++ 11 olur
-             parantezli ve parantezsiz aynı davranış
-
-             ++ operatörü özel bir operatör olarak geçer
-             mesela ++ yerine +2 yazsak int int oldugu için toplama yapacak
-             ++ operatörünün uzun hali nedir
-             int operatorSonuc4 = s3 + 1; dir
-             kısa hali ++ dır
+             karar yapılarına geldiğimizde girilen değerin 0 veya x bir değer
+             olup olmadıgını kontrol edeceğiz
+             daha oraya gelmedik ekleme yapmıyorum
             */
 
+             int mevcutYil2 = 2023; /* burada yıla göre hesaplama yaptık */
+             int yas2 = mevcutYil2 - yil;
 
-            /* -- OPERATÖRÜ 1 EKSİLTMEK İÇİN KULLANILIR */
+            /*
+             2023 yılında calısır ama zaman geçiyor
+             DateTime.Now.Year; ile yapmamız lazım
+            */
 
-            /* + nın yerine göre davranısı değişiyor SAGDA MI SOLDA MI */
+            int mevcutYil3 = DateTime.Now.Year; /* YAPAMADIGIM KISIM BURASI .YEAR YAZMAYI UNUTMUSUM */
+            int yas3 = mevcutYil3 - yil;
 
-            /* -- operatörüde ++ operatörü gibi kurallı aynı */
+            /* BURADA DEDİĞİMİZ OLAY BUGUNUN ZAMANINI VE YILINI GETİR mevcutYil a ata */
 
-            int s4 = 10;
-            int operatorSonuc5 = (s4--);
-            int operatorSonuc6 = (--s4);
+
+            string mesaj = "Merhaba " + ad + " " + soyAd + " " + yas3 + " yaşındasınız... ";
+            Console.WriteLine(mesaj);
+            Console.ReadLine();
+
+            /*
+             string mesajda parantezlere gerek yok 
+             çift tırnak arası ifade direk yazılır oldugu gibi
+             metinsel de yazsan rakamsalda yazsan
+             simge işaret boslukta koysan çift tırnak içinde oldugu gibi yazar
+             çift tırnak içindeki bir ifade metinsel oldugu için 
+             aritmetik işlem yapılmaz.
+             komut oldugunu belirtmek için ters slash kullanılır \ ALT GR + SİMGE TUŞU
+             alt satıra geçmek için \n kullanılır
+            */
 
         }
         #endregion
