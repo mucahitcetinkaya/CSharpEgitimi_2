@@ -1,0 +1,10 @@
+﻿
+
+VİDEO 48 Aritmatiksel Operatörler - Bölme
+
+
+BÖLME OPERATÖRÜ ( / ) DÜR
+
+SAYISAL DEĞİŞKEN TİPLERİNDE İŞLEM YAPAR
+
+byte int float decimal double vs

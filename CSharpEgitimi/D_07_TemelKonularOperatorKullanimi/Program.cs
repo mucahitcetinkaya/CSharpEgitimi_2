@@ -104,78 +104,100 @@ namespace D_07_TemelKonularOperatorKullanimi
         #endregion
 
         #region  VİDEO 47
+        //static void Main(string[] args)
+        //{
+        //    /* double * double(double verir) */
+
+        //    double d1 = 10.4;
+        //    double d2 = 10.6;
+        //    double dCarpma1 = d1 * d2;
+
+
+
+        //    /* double * double sonucunu int e alsak ne olurdu ? */
+
+        //    int intCarpma1 = d1 * d1; /* hata veriyor */
+
+        //    /*
+        //     hata vermesinin sebebi
+        //     double aralıgı int aralıgından büyük oldugu için
+        //     double değeride büyük veya kucuk olabilir
+        //     double değerini int a alamam diyor
+        //     peki
+        //     burada bilinçsiz tür dönüşümü aklımıza gelse
+        //     verilen değerleri ben biliyorum sen cevir demek için
+        //    */
+
+
+
+        //    /* basına(int) yazsak o zaman ne olur ? */
+
+        //    int intCarpma2 = (int)d1 * d1; /* yine hata veriyor */
+
+        //    /*
+        //     peki biz bunu nasıl yapacağız neden hata veriyor
+        //     büyük tip küçük tipe dönüşebilir
+        //     d1* d2 i parantez içine alırsak izin verecek
+        //    */
+
+
+        //    int intCarpma3 = (int)(d1 * d1);
+
+        //    /*
+        //     hata vermiyor
+        //     neden hata vermedi? sebebi
+        //     biz d1 ile d2 i carptıgımızda bize double verecek
+        //     bunu hepimiz biliyoruz
+        //     bizde paranteze alırken parantez içindeki değere bakıyor
+        //     cıkan sonucun ben int oldugunu kabul ediyoruz demiş oluyoruz
+        //     int a cevir demiş oluyoruz
+        //     yani carpmamın sonucunu int e cevir diyoruz
+        //     işlem önceliği gibi carptıktan sonra cevir diyoruz
+        //    */
+
+        //    /* bu işlemin kısa hali sadece kod tarafı */
+
+        //    double d3 = 10.4;
+        //    double d4 = 10.6;
+        //    double dCarpma4 = d3 * d4;
+        //    int intCarpma5 = d3 * d4; /* hata veriyor */
+        //    int intCarpma6 = (int)d3 * d4; /* yine hata veriyor */
+        //    int intCarpma7 = (int)(d3 * d4);
+
+        //    /* bu işlemin uzun hali */
+
+        //    /*
+        //     once işlemi yap double üstüne al sonra
+        //     cıkan sonucu bilinçsiz dönüşüm ile int e cevir
+        //    */
+        //    double d5 = 10.4;
+        //    double d6 = 10.6;
+        //    double sonucDouble = d5 * d6; /* burada sonuc 110.24 olur */
+        //    int sonucInt11 = (int)sonucDouble; /* 110.24 ü int e attıgında sonuc 110 olur */
+
+        //    /* int tam sayıları tutar yuvarlama yapıyor */
+        //}
+        #endregion
+
+        #region VİDEO 48 
         static void Main(string[] args)
         {
-            /* double * double(double verir) */
 
-            double d1 = 10.4;
-            double d2 = 10.6;
-            double dCarpma1 = d1 * d2;
+            /* / simgesi kullanılır */
 
+            int s1 = 10;
+            int s2 = 2;
+            int sonuc = s1 / s2;
 
+            /* peki ben s1 deki 10 değerini 0 a bölmek istesem sonuc ne olur */
 
-            /* double * double sonucunu int e alsak ne olurdu ? */
-
-            int intCarpma1 = d1 * d1; /* hata veriyor */
-
-            /*
-             hata vermesinin sebebi
-             double aralıgı int aralıgından büyük oldugu için
-             double değeride büyük veya kucuk olabilir
-             double değerini int a alamam diyor
-             peki
-             burada bilinçsiz tür dönüşümü aklımıza gelse
-             verilen değerleri ben biliyorum sen cevir demek için
-            */
-
-
-            
-            /* basına(int) yazsak o zaman ne olur ? */
-
-            int intCarpma2 = (int)d1 * d1; /* yine hata veriyor */
+            int s3 = 0;
+            int sonuc1 = s1 / s3;
 
             /*
-             peki biz bunu nasıl yapacağız neden hata veriyor
-             büyük tip küçük tipe dönüşebilir
-             d1* d2 i parantez içine alırsak izin verecek
+             burada System.DivideByZeroException hatası veriyor
+             bölen 0 olamaz diyor
             */
-
-
-            int intCarpma3 = (int)(d1 * d1);
-
-            /*
-             hata vermiyor
-             neden hata vermedi? sebebi
-             biz d1 ile d2 i carptıgımızda bize double verecek
-             bunu hepimiz biliyoruz
-             bizde paranteze alırken parantez içindeki değere bakıyor
-             cıkan sonucun ben int oldugunu kabul ediyoruz demiş oluyoruz
-             int a cevir demiş oluyoruz
-             yani carpmamın sonucunu int e cevir diyoruz
-             işlem önceliği gibi carptıktan sonra cevir diyoruz
-            */
-
-            /* bu işlemin kısa hali sadece kod tarafı */
-
-            double d3 = 10.4;
-            double d4 = 10.6;
-            double dCarpma4 = d3 * d4;
-            int intCarpma5 = d3 * d4; /* hata veriyor */
-            int intCarpma6 = (int)d3 * d4; /* yine hata veriyor */
-            int intCarpma7 = (int)(d3 * d4);
-
-            /* bu işlemin uzun hali */
-
-            /*
-             once işlemi yap double üstüne al sonra
-             cıkan sonucu bilinçsiz dönüşüm ile int e cevir
-            */
-            double d5 = 10.4;
-            double d6 = 10.6;
-            double sonucDouble = d5 * d6; /* burada sonuc 110.24 olur */
-            int sonucInt11 = (int)sonucDouble; /* 110.24 ü int e attıgında sonuc 110 olur */
-
-            /* int tam sayıları tutar yuvarlama yapıyor */
         }
         #endregion
 
