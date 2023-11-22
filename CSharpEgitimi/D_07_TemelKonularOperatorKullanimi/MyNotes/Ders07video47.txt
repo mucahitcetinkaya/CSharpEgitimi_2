@@ -1,0 +1,10 @@
+﻿
+
+VİDEO 47 Aritmatiksel Operatörler - Çarpma
+
+
+ÇARPMA OPERATÖRÜ YILDIZA BASIYORUZ (*) 
+
+SAYISAL DEĞİŞKEN TİPLERİNDE İŞLEM YAPAR
+
+byte int float decimal double vs
