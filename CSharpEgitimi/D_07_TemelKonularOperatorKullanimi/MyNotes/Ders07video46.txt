@@ -1,0 +1,10 @@
+﻿
+
+VİDEO 46 Aritmatiksel Operatörler - Çıkartma
+
+
+ÇIKARMA OPERATÖRÜ (-) İLE KULLANILIR
+
+sayısal değişken tiplerinde kullanılır
+
+byte int double float decimal vs 

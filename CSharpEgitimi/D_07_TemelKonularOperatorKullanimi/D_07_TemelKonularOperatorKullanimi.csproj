@@ -50,6 +50,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="MyNotes\Ders07video46.txt" />
     <Content Include="MyNotes\Ders07video45.txt" />
     <Content Include="MyNotes\Ders07video44.txt" />
   </ItemGroup>
