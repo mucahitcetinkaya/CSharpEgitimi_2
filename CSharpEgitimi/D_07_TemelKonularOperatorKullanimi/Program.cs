@@ -180,24 +180,114 @@ namespace D_07_TemelKonularOperatorKullanimi
         #endregion
 
         #region VİDEO 48 
+        //static void Main(string[] args)
+        //{
+
+        //    /* / simgesi kullanılır */
+
+        //    int s1 = 10;
+        //    int s2 = 2;
+        //    int sonuc = s1 / s2;
+
+        //    /* peki ben s1 deki 10 değerini 0 a bölmek istesem sonuc ne olur */
+
+        //    int s3 = 0;
+        //    int sonuc1 = s1 / s3;
+
+        //    /*
+        //     burada System.DivideByZeroException hatası veriyor
+        //     bölen 0 olamaz diyor
+        //    */
+        //}
+        #endregion
+
+        #region VİDEO 49 
         static void Main(string[] args)
         {
-
-            /* / simgesi kullanılır */
+            /* MOD ALMA YÜZDE İŞARETİ % */
 
             int s1 = 10;
             int s2 = 2;
-            int sonuc = s1 / s2;
-
-            /* peki ben s1 deki 10 değerini 0 a bölmek istesem sonuc ne olur */
-
-            int s3 = 0;
-            int sonuc1 = s1 / s3;
+            int sonucMod = s1 % s2;
 
             /*
-             burada System.DivideByZeroException hatası veriyor
-             bölen 0 olamaz diyor
+             s1 in modu s2 ye göre nedir
+             10 değerini ben 2 ye bölünmeyene kadar yani kalan değerin 2 den küçük olana kadar
+             böldüğünde kalan nedir 
+             10 un 2 e bölümünden kalan 0 dır
+             sonuc sıfır cıkar tam bölünür
+             9 un 2 e modu 1 dir mesela kalan 1 yani
             */
+
+            /* ++ OPERATÖRÜ 1 ARTTIRMAK İÇİN KULLANILIR */
+
+            /* + nın yerine göre davranısı değişiyor SAGDA MI SOLDA MI */
+
+            int s3 = 10;
+            /* BURADA s3 DEĞER 10 OKUYOR */
+            int operatorSonuc1; s3++;
+
+            /*
+             s3 ü 10 okudugunda
+             S3 Ü OKURKEN operatorSonuc1 DEĞERİ 0 OKUYOR
+             S3 Ü OKURKEN s3++ DA 10 OKUYOR
+             s3++ yı OKUDUDUNDA
+             s3 VE s3++ 11 oldu 1 arttırdı
+             operatorSonuc1 10 olarak kaldı
+             EĞER ++ SAĞ TARAFTAYSA
+             ONCE DEĞERİ OKUYOR operatorSonuc1 üzerine ATAMASINI YAPIYOR
+             SONRA 1 ARTTIRIYOR
+             operatorSonuc1 in 10 kalma sebebi bu
+            */
+
+            int operatorSonuc2; ++s3;
+
+            /*
+             s3 ü 10 okudugunda
+             S3 Ü OKURKEN operatorSonuc1 DEĞERİ 0 OKUYOR
+             ++s3 10 değeri okuyor
+             ++s3 okudugu zaman
+             s3 s3++ operatorSonuc2 hepsi 11 oluyor
+             EĞER ++ SOL TARAFTAYSA
+             ONCE DEĞERİ 1 ARTTIYOR SONRA ARTTILAN DEĞERİ
+             operatorSonuc2 üstüne ATAMA YAPIYOR
+             operatorSonuc2 nin de 11 olma sebebi bu
+
+             NOT : bizim burda yapmak istediğimiz olay nedir
+             int tipinde s3 değişken adına 10 değerini atamak
+             s3 değerini alıp 
+             int tipinde s3++ ile bir arttırıp
+             int tipindeki operatorSonuc1 e atamak
+             işte burda ++ nın önce sonra olması
+             operatorSonuc1 ve 2 nin değerinin değişip değişmemesini sağlıyor
+            */
+
+            /* peki böyle bir durum da ne olurdu ? */
+            int operatorSonuc3 = (s3++);
+
+            /*
+             operatorSonuc3 10 olur
+             s3 ve s3++ 11 olur
+             parantezli ve parantezsiz aynı davranış
+
+             ++ operatörü özel bir operatör olarak geçer
+             mesela ++ yerine +2 yazsak int int oldugu için toplama yapacak
+             ++ operatörünün uzun hali nedir
+             int operatorSonuc4 = s3 + 1; dir
+             kısa hali ++ dır
+            */
+
+
+            /* -- OPERATÖRÜ 1 EKSİLTMEK İÇİN KULLANILIR */
+
+            /* + nın yerine göre davranısı değişiyor SAGDA MI SOLDA MI */
+
+            /* -- operatörüde ++ operatörü gibi kurallı aynı */
+
+            int s4 = 10;
+            int operatorSonuc5 = (s4--);
+            int operatorSonuc6 = (--s4);
+
         }
         #endregion
 
