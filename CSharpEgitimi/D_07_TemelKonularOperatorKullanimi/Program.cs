@@ -392,73 +392,187 @@ namespace D_07_TemelKonularOperatorKullanimi
         #endregion
 
         #region VİDEO 51
+        //static void Main(string[] args)
+        //{
+        //    /*
+
+        //     VİDEO 51 Aritmatiksel Operatörler - Alıştırma
+
+
+        //     EKRANA 2 ADET SAYI GİRİLECEK
+
+        //     SAYI DOUBLE VEYA DECİMAL A CEVİRİLECEK
+
+        //     SONRA SAYI 1 İLE SAYI 2 Yİ
+
+        //     TOPLA CIKAR BÖL CARP MODUNU AL 
+
+        //    */
+
+        //    /* BENİM YAPTIĞIM */
+
+
+        //    Console.Write("1. Sayıyı giriniz : ");
+        //    double sayiDouble = Convert.ToDouble(Console.ReadLine());
+
+
+        //    Console.Write("2. Sayıyı giriniz : ");
+        //    decimal sayiDecimal = Convert.ToDecimal(Console.ReadLine());
+
+        //    int topla = (int)sayiDouble + (int)sayiDecimal;
+        //    int cikart = (int)sayiDouble - (int)sayiDecimal;
+        //    int carp = (int)sayiDouble * (int)sayiDecimal;
+        //    int bol = (int)sayiDouble / (int)sayiDecimal;
+        //    int mod = (int)sayiDouble % (int)sayiDecimal;
+
+        //    Console.WriteLine("+ : " + topla);
+        //    Console.WriteLine("- : " + cikart);
+        //    Console.WriteLine("* : " + carp);
+        //    Console.WriteLine("/ : " + bol);
+        //    Console.WriteLine("% : " + mod);
+
+
+
+        //    /* HOCANIN YAPTIGI */
+
+
+        //    Console.Write("Sayı 1 Değerini Giriniz : ");
+        //    string sayi5 = Console.ReadLine();
+
+        //    Console.Write("Sayı 2 Değerini Giriniz : ");
+        //    string sayi6 = Console.ReadLine();
+
+        //    decimal d1 = Convert.ToDecimal(sayi5);
+        //    decimal d2 = Convert.ToDecimal(sayi6);
+
+        //    decimal sonucTopla = d1 + d2;
+        //    decimal sonucCikart = d1 - d2;
+        //    decimal sonucCarp = d1 * d2;
+        //    decimal sonucBol = d1 / d2;
+        //    decimal sonucMod = d1 % d2;
+
+        //    Console.WriteLine("+ : " + sonucTopla);
+        //    Console.WriteLine("- : " + sonucCikart);
+        //    Console.WriteLine("* : " + sonucCarp);
+        //    Console.WriteLine("/ : " + sonucBol);
+        //    Console.WriteLine("% : " + sonucMod);
+
+        //    Console.ReadLine();
+
+        //}
+        #endregion
+
+        #region VİDEO 52 53 54 55 56
         static void Main(string[] args)
         {
+            /* VİDEO 52 Karşılaştırma Operatörleri - Büyüktür */
+
+            
+            /* BÜYÜK MÜ KARSILAŞTIRMASI > İŞARETİ KULLANILIR */
+            
             /*
-             
-             VİDEO 51 Aritmatiksel Operatörler - Alıştırma
+             KARSILAŞTIRMANIN GENEL YAZIMINA BAKARSAK
+             bool tipinden değer döner KARSILASTIRMA OPERATÖRÜ
+             bool tip değişken 2 deger alır true ve false değeri yoksa false döner
 
-
-             EKRANA 2 ADET SAYI GİRİLECEK
-
-             SAYI DOUBLE VEYA DECİMAL A CEVİRİLECEK
-
-             SONRA SAYI 1 İLE SAYI 2 Yİ
-
-             TOPLA CIKAR BÖL CARP MODUNU AL 
-             
+             bool donusDeger = degisken1 > degisken 2;
+             degisken1 ve 2 nin içindeki değere bakıyor
+             mesela degisken1 degisken2 den kucuk olsun
+             bool bize false döner buyukse eger true donuyor
             */
 
-            /* BENİM YAPTIĞIM */
+            int s1 = 100;
+            int s2 = 150;
 
+            bool sonucBuyuk = s1 > s2;
+            Console.WriteLine(sonucBuyuk);
 
-            Console.Write("1. Sayıyı giriniz : ");
-            double sayiDouble = Convert.ToDouble(Console.ReadLine());
-
-
-            Console.Write("2. Sayıyı giriniz : ");
-            decimal sayiDecimal = Convert.ToDecimal(Console.ReadLine());
-
-            int topla = (int)sayiDouble + (int)sayiDecimal;
-            int cikart = (int)sayiDouble - (int)sayiDecimal;
-            int carp = (int)sayiDouble * (int)sayiDecimal;
-            int bol = (int)sayiDouble / (int)sayiDecimal;
-            int mod = (int)sayiDouble % (int)sayiDecimal;
-
-            Console.WriteLine("+ : " + topla);
-            Console.WriteLine("- : " + cikart);
-            Console.WriteLine("* : " + carp);
-            Console.WriteLine("/ : " + bol);
-            Console.WriteLine("% : " + mod);
+            /*
+             burada bool s1 ve s2 nin içindeki değere bakıyor
+             bu durumda false veriyor
+             eğer tam tersi s2>s1 olsa true verirdi
+             eşit olsa yine false verir
+            */
 
 
 
-            /* HOCANIN YAPTIGI */
+            /* VİDEO 53 Karşılaştırma Operatörleri - Küçüktür */
+
+            /* KÜÇÜKTÜR KARŞILAŞTIRMASI < İŞARETİ İLE KULLANILIR */
+
+            int s3 = 150;
+            int s4 = 100;
+            bool sonucKucuk = s3 < s4;
+
+            /*
+             s3 kucuk s4 den diyor
+             bu durumda s3 buyuk s4 oldugundan sonuc false verir
+             eşit olursa eğer yine false verir
+            */
+
+            /*
+             EŞİTTİR TEK BASINA KULLANILDIGINDA ATAMA OPERATÖRÜ OLARAK KULLANILIR 
+             ATAMA OPERATÖRÜ = İLE KULLANILIR
+             degisken = atanacakDeger şeklinde olur
+             örnek decimal d1 = 10.90M; gibi
+            */
 
 
-            Console.Write("Sayı 1 Değerini Giriniz : ");
-            string sayi5 = Console.ReadLine();
 
-            Console.Write("Sayı 2 Değerini Giriniz : ");
-            string sayi6 = Console.ReadLine();
+            /* VİDEO 54 Karşılaştırma Operatörleri - Eşit ve Eşit Değildir */
 
-            decimal d1 = Convert.ToDecimal(sayi5);
-            decimal d2 = Convert.ToDecimal(sayi6);
+            /*
+             EŞİT VEYA EŞİT DEĞİLDİR KARŞILAŞTIRMASI 
+             EŞİT Mİ            ==     İLE GÖSTERİLİR
+             EŞİT DEĞİL Mİ      !=     İLE GÖSTERİLİR
+             bool tipinden değer döner KARSILASTIRMA OPERATÖRÜ
+            */
 
-            decimal sonucTopla = d1 + d2;
-            decimal sonucCikart = d1 - d2;
-            decimal sonucCarp = d1 * d2;
-            decimal sonucBol = d1 / d2;
-            decimal sonucMod = d1 % d2;
+            int s5 = 100;
+            int s6 = 100;
+            bool esitKontrol1 = s5 == s6; /* eşitse eğer true alıyoruz */
+            bool esitKontrol2 = s5 != s6; /* eşitse eğer false alır */
 
-            Console.WriteLine("+ : " + sonucTopla);
-            Console.WriteLine("- : " + sonucCikart);
-            Console.WriteLine("* : " + sonucCarp);
-            Console.WriteLine("/ : " + sonucBol);
-            Console.WriteLine("% : " + sonucMod);
 
-            Console.ReadLine();
 
+            /* VİDEO 55 Karşılaştırma Operatörleri - Büyük Eşittir */
+
+            /* BÜYÜK EŞİT Mİ KARŞILAŞTIRMASI >= İŞARETİ İLE KULLANILIR */
+
+            /*
+             bool tipinden değer döner KARSILASTIRMA OPERATÖRÜ
+             UYGULAMA BURADA İKİ ADET DEĞERE BAKIYOR
+             EŞİT VEYA BUYUK MU
+             DEĞİŞKEN İÇERİSİNDEKİ DEĞERLERE
+             ONCE BUYUK MU DİYE BAKIYOR BUYUKSE TRUE DİYOR
+             SONRA EŞİT Mİ DİYE BAKIYOR EŞİTSE TRUE DİYOR
+             BAKTIGINDA BUYUK AMA EŞİTSE DEĞİLSE TRUE DER
+             BAKTIGINDA BUYUK DEĞİL AMA EŞİTSE TRUE DER 
+             BAKTIGINDA BUYUK VEYA EŞİT DEĞİLSE FALSE DER
+            */
+
+            int s7 = 100;
+            int s8 = 100;
+            bool buyukEsitSonuc = s7 >= s8;
+
+
+
+            /* VİDEO 56 Karşılaştırma Operatörleri - Küçük Eşittir */
+
+            /* KUCUK EŞİT Mİ KARŞILAŞTIRMASI <= İŞARETİ İLE KULLANILIR */
+
+            /*
+             bool tipinden değer döner KARSILASTIRMA OPERATÖRÜ
+             ONCE KUCUK MU DİYE BAKAR KUCUKSE TRUE
+             KUCUK DEĞİLSE EŞİT Mİ EŞİTSE TRUE
+             KUCUK DEĞİL AMA EŞİTSE TRUE
+             KUCUK AMA EŞİT DEĞİLSE TRUE
+             KUCUK VEYA EŞİT DEĞİLSE FALSE
+            */
+
+            int s9 = 100;
+            int s10 = 100;
+            bool kucukEsitSonuc = s9 <= s10;
         }
         #endregion
 
