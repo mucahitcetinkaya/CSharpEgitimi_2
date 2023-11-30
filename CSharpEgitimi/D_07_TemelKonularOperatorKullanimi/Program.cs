@@ -463,118 +463,217 @@ namespace D_07_TemelKonularOperatorKullanimi
         #endregion
 
         #region VİDEO 52 53 54 55 56
+        //static void Main(string[] args)
+        //{
+        //    /* VİDEO 52 Karşılaştırma Operatörleri - Büyüktür */
+
+
+        //    /* BÜYÜK MÜ KARSILAŞTIRMASI > İŞARETİ KULLANILIR */
+
+        //    /*
+        //     KARSILAŞTIRMANIN GENEL YAZIMINA BAKARSAK
+        //     bool tipinden değer döner KARSILASTIRMA OPERATÖRÜ
+        //     bool tip değişken 2 deger alır true ve false değeri yoksa false döner
+
+        //     bool donusDeger = degisken1 > degisken 2;
+        //     degisken1 ve 2 nin içindeki değere bakıyor
+        //     mesela degisken1 degisken2 den kucuk olsun
+        //     bool bize false döner buyukse eger true donuyor
+        //    */
+
+        //    int s1 = 100;
+        //    int s2 = 150;
+
+        //    bool sonucBuyuk = s1 > s2;
+        //    Console.WriteLine(sonucBuyuk);
+
+        //    /*
+        //     burada bool s1 ve s2 nin içindeki değere bakıyor
+        //     bu durumda false veriyor
+        //     eğer tam tersi s2>s1 olsa true verirdi
+        //     eşit olsa yine false verir
+        //    */
+
+
+
+        //    /* VİDEO 53 Karşılaştırma Operatörleri - Küçüktür */
+
+        //    /* KÜÇÜKTÜR KARŞILAŞTIRMASI < İŞARETİ İLE KULLANILIR */
+
+        //    int s3 = 150;
+        //    int s4 = 100;
+        //    bool sonucKucuk = s3 < s4;
+
+        //    /*
+        //     s3 kucuk s4 den diyor
+        //     bu durumda s3 buyuk s4 oldugundan sonuc false verir
+        //     eşit olursa eğer yine false verir
+        //    */
+
+        //    /*
+        //     EŞİTTİR TEK BASINA KULLANILDIGINDA ATAMA OPERATÖRÜ OLARAK KULLANILIR 
+        //     ATAMA OPERATÖRÜ = İLE KULLANILIR
+        //     degisken = atanacakDeger şeklinde olur
+        //     örnek decimal d1 = 10.90M; gibi
+        //    */
+
+
+
+        //    /* VİDEO 54 Karşılaştırma Operatörleri - Eşit ve Eşit Değildir */
+
+        //    /*
+        //     EŞİT VEYA EŞİT DEĞİLDİR KARŞILAŞTIRMASI 
+        //     EŞİT Mİ            ==     İLE GÖSTERİLİR
+        //     EŞİT DEĞİL Mİ      !=     İLE GÖSTERİLİR
+        //     bool tipinden değer döner KARSILASTIRMA OPERATÖRÜ
+        //    */
+
+        //    int s5 = 100;
+        //    int s6 = 100;
+        //    bool esitKontrol1 = s5 == s6; /* eşitse eğer true alıyoruz */
+        //    bool esitKontrol2 = s5 != s6; /* eşitse eğer false alır */
+
+
+
+        //    /* VİDEO 55 Karşılaştırma Operatörleri - Büyük Eşittir */
+
+        //    /* BÜYÜK EŞİT Mİ KARŞILAŞTIRMASI >= İŞARETİ İLE KULLANILIR */
+
+        //    /*
+        //     bool tipinden değer döner KARSILASTIRMA OPERATÖRÜ
+        //     UYGULAMA BURADA İKİ ADET DEĞERE BAKIYOR
+        //     EŞİT VEYA BUYUK MU
+        //     DEĞİŞKEN İÇERİSİNDEKİ DEĞERLERE
+        //     ONCE BUYUK MU DİYE BAKIYOR BUYUKSE TRUE DİYOR
+        //     SONRA EŞİT Mİ DİYE BAKIYOR EŞİTSE TRUE DİYOR
+        //     BAKTIGINDA BUYUK AMA EŞİTSE DEĞİLSE TRUE DER
+        //     BAKTIGINDA BUYUK DEĞİL AMA EŞİTSE TRUE DER 
+        //     BAKTIGINDA BUYUK VEYA EŞİT DEĞİLSE FALSE DER
+        //    */
+
+        //    int s7 = 100;
+        //    int s8 = 100;
+        //    bool buyukEsitSonuc = s7 >= s8;
+
+
+
+        //    /* VİDEO 56 Karşılaştırma Operatörleri - Küçük Eşittir */
+
+        //    /* KUCUK EŞİT Mİ KARŞILAŞTIRMASI <= İŞARETİ İLE KULLANILIR */
+
+        //    /*
+        //     bool tipinden değer döner KARSILASTIRMA OPERATÖRÜ
+        //     ONCE KUCUK MU DİYE BAKAR KUCUKSE TRUE
+        //     KUCUK DEĞİLSE EŞİT Mİ EŞİTSE TRUE
+        //     KUCUK DEĞİL AMA EŞİTSE TRUE
+        //     KUCUK AMA EŞİT DEĞİLSE TRUE
+        //     KUCUK VEYA EŞİT DEĞİLSE FALSE
+        //    */
+
+        //    int s9 = 100;
+        //    int s10 = 100;
+        //    bool kucukEsitSonuc = s9 <= s10;
+        //}
+        #endregion
+
+        #region VİDEO 57 58
         static void Main(string[] args)
         {
-            /* VİDEO 52 Karşılaştırma Operatörleri - Büyüktür */
+
+            /* 57 Is operatörü kullanımı */
+
+            int s1 = 50;
+            int s2 = 100;
+
+            /* object o1 = ..... buraya ne atasam object bunu kabul edecek s1 de bool değişken adını da atasam object kabul edecek */
+
+            object o1 = s1;
+            /*
+             object içindeki değeri ben ekrana yazdırırsam içindeki değeri
+             string olarak görürüm bunun nedeni object içindeki komuttan dolayı oluyor
+             bunu class lar dersinde göreceğiz
+            */
+
+            Console.WriteLine(o1); /* dediğimde ekranda görürüz */
+
+            /*
+             peki ben o1 in içindeki değeri tekrardan nasıl int e dönüştürürüm
+             buyuk tip kucuk tipe dönüşecek
+             bilinçsiz dönüşüm yapılır
+             (int).o1;
+            */
+
+            s1 = (int)o1; /* konsola yazdı int e dönüştürdü */
 
             
-            /* BÜYÜK MÜ KARSILAŞTIRMASI > İŞARETİ KULLANILIR */
+            /* peki burası int değil de byte a cevirseydik nolurdu */
+
+            /*
+             s1 = (byte)o1;
             
-            /*
-             KARSILAŞTIRMANIN GENEL YAZIMINA BAKARSAK
-             bool tipinden değer döner KARSILASTIRMA OPERATÖRÜ
-             bool tip değişken 2 deger alır true ve false değeri yoksa false döner
-
-             bool donusDeger = degisken1 > degisken 2;
-             degisken1 ve 2 nin içindeki değere bakıyor
-             mesela degisken1 degisken2 den kucuk olsun
-             bool bize false döner buyukse eger true donuyor
+             object değeri 50 normalde byte olabilir ama burda hata veriyor
+             sebebi object değerin yanında değerin tipinide kendi içinde barındırıyor
+             object te kutulama demiştik kutudan cıkartırken kutuladıgımız tip olarak cıkar
+             en basta object int olarak işleme aldık değer o1 de int oldu ondan dolayı
+             peki ben uygulamada değerin kutulanırken bunun int mi byte mı
+             hangi tipte kutulandıgını nerden öğreneceğim
             */
 
-            int s1 = 100;
-            int s2 = 150;
+            /* burada is operatörü bize yardımcı olacak */
 
-            bool sonucBuyuk = s1 > s2;
-            Console.WriteLine(sonucBuyuk);
+
 
             /*
-             burada bool s1 ve s2 nin içindeki değere bakıyor
-             bu durumda false veriyor
-             eğer tam tersi s2>s1 olsa true verirdi
-             eşit olsa yine false verir
+             IS OPERATÖRÜ 
+             bool tipinde değer döner
+             bool donenDeger = degisken is degiskenTipi
             */
 
-
-
-            /* VİDEO 53 Karşılaştırma Operatörleri - Küçüktür */
-
-            /* KÜÇÜKTÜR KARŞILAŞTIRMASI < İŞARETİ İLE KULLANILIR */
-
-            int s3 = 150;
-            int s4 = 100;
-            bool sonucKucuk = s3 < s4;
+            bool isKontrol1 = o1 is int;
 
             /*
-             s3 kucuk s4 den diyor
-             bu durumda s3 buyuk s4 oldugundan sonuc false verir
-             eşit olursa eğer yine false verir
+             yani burada bir soru soruyoruz bunun tipi bumu dur
+             uygulama burada değişken değerine bakmaz değişken tipine bakar
+             o1 in değeri nerden geldi s1 den s1 nedir int o zaman o1 de int dir.
+             o1 int a cevrilebilir mi
+             o1 bir onceki gelişinde bize int mi geldi
+             burada is bize true veriyor
             */
 
+            bool isKontrol2 = o1 is byte;
+
             /*
-             EŞİTTİR TEK BASINA KULLANILDIGINDA ATAMA OPERATÖRÜ OLARAK KULLANILIR 
-             ATAMA OPERATÖRÜ = İLE KULLANILIR
-             degisken = atanacakDeger şeklinde olur
-             örnek decimal d1 = 10.90M; gibi
+             o1 bir onceki gelişinde bize byte mi geldi
+             burada is bize false veriyor yani byte dan gelmedi diyor
             */
 
 
 
-            /* VİDEO 54 Karşılaştırma Operatörleri - Eşit ve Eşit Değildir */
+
+            /* 58 As operatörü kullanımı */
+
+            /* !!!!!!!!!!!!!!!!!!!!!! string olarak gönderir !!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+
+            string isimSoyisim = "Mücahit Çetinkaya";
+            object objString = isimSoyisim;
+            string sonucStr = objString as string;
 
             /*
-             EŞİT VEYA EŞİT DEĞİLDİR KARŞILAŞTIRMASI 
-             EŞİT Mİ            ==     İLE GÖSTERİLİR
-             EŞİT DEĞİL Mİ      !=     İLE GÖSTERİLİR
-             bool tipinden değer döner KARSILASTIRMA OPERATÖRÜ
+             burada uygulama davranısı
+             once string tipinde isimSoyisim adında bir değişken oluşturur
+             ve içerisine Mücahit Çetinkaya değerini atayacak
+             atadıktan sonra
+             object tipinde objString adında bir değişken oluşturacak
+             içerisine de isimSoyisim değişkenini tipiyle birlikte aktaracak
+             yani bir kutulama yapıyor
+             daha sonra objString değeri eğer string ise
+             olusturdugumuz farklı bir string tipinde sonucStr adına string olarak atayacak
             */
-
-            int s5 = 100;
-            int s6 = 100;
-            bool esitKontrol1 = s5 == s6; /* eşitse eğer true alıyoruz */
-            bool esitKontrol2 = s5 != s6; /* eşitse eğer false alır */
-
-
-
-            /* VİDEO 55 Karşılaştırma Operatörleri - Büyük Eşittir */
-
-            /* BÜYÜK EŞİT Mİ KARŞILAŞTIRMASI >= İŞARETİ İLE KULLANILIR */
-
-            /*
-             bool tipinden değer döner KARSILASTIRMA OPERATÖRÜ
-             UYGULAMA BURADA İKİ ADET DEĞERE BAKIYOR
-             EŞİT VEYA BUYUK MU
-             DEĞİŞKEN İÇERİSİNDEKİ DEĞERLERE
-             ONCE BUYUK MU DİYE BAKIYOR BUYUKSE TRUE DİYOR
-             SONRA EŞİT Mİ DİYE BAKIYOR EŞİTSE TRUE DİYOR
-             BAKTIGINDA BUYUK AMA EŞİTSE DEĞİLSE TRUE DER
-             BAKTIGINDA BUYUK DEĞİL AMA EŞİTSE TRUE DER 
-             BAKTIGINDA BUYUK VEYA EŞİT DEĞİLSE FALSE DER
-            */
-
-            int s7 = 100;
-            int s8 = 100;
-            bool buyukEsitSonuc = s7 >= s8;
-
-
-
-            /* VİDEO 56 Karşılaştırma Operatörleri - Küçük Eşittir */
-
-            /* KUCUK EŞİT Mİ KARŞILAŞTIRMASI <= İŞARETİ İLE KULLANILIR */
-
-            /*
-             bool tipinden değer döner KARSILASTIRMA OPERATÖRÜ
-             ONCE KUCUK MU DİYE BAKAR KUCUKSE TRUE
-             KUCUK DEĞİLSE EŞİT Mİ EŞİTSE TRUE
-             KUCUK DEĞİL AMA EŞİTSE TRUE
-             KUCUK AMA EŞİT DEĞİLSE TRUE
-             KUCUK VEYA EŞİT DEĞİLSE FALSE
-            */
-
-            int s9 = 100;
-            int s10 = 100;
-            bool kucukEsitSonuc = s9 <= s10;
         }
         #endregion
+
+
 
     }
 }
