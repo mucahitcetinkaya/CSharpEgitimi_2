@@ -789,82 +789,168 @@ namespace D_07_TemelKonularOperatorKullanimi
         #endregion
 
         #region VİDEO 60
+        //static void Main(string[] args)
+        //{
+
+        //    /*
+
+        //     KULLANICI ADI : admin
+        //     şifre : 123
+
+        //     KULLANICIDAN 
+        //     kullanıcı adı şifre isteyecek
+        //     kullanıcı admin mi 
+        //     şifre 123 mü diye bakacak
+
+        //    */
+
+        //    /* BENİM YAPTIGIM */
+
+        //    /*
+        //     Console.Write("Kullanıcı adınızı giriniz : ");
+        //     string kulAdi = Console.ReadLine();
+        //     Console.Write("Şifrenizi giriniz : ");
+        //     int sifre = Convert.ToInt32(Console.ReadLine());
+        //     bool sifreKont = sifre == 123;
+
+        //     Console.Write($"Şifreniz {sifreKont} ");
+
+        //     Console.ReadLine();
+        //    */
+
+        //    /* BENİM YAPTIGIM */
+
+        //    /*
+        //     string admin = "admin";
+        //     string password1 = "123";
+
+        //     Console.WriteLine("Hoş geldiniz...");
+
+        //     Console.Write("Kullanıcı adınızı giriniz : ");
+        //     string a1 = Console.ReadLine();
+
+        //     Console.Write("Şifrenizi giriniz: ");
+        //     string s1 = Console.ReadLine();
+
+        //     int password2 = Convert.ToInt32(password1);
+        //     int password3 = Convert.ToInt32(s1);
+
+        //     bool kaa = admin == a1;
+        //     bool kas = password2 == password3;
+
+        //     Console.WriteLine("Kullanıcı adınız : " + kaa + "dur." + "\n" + "Şifreniz : " + kas + "dur.");
+
+        //     bool kaa1 = admin != a1;
+        //     bool kas1 = password2 != password3;
+
+        //     Console.WriteLine("Kullanıcı adınız : " + kaa1 + "dur." + "\n" + "Şifreniz : " + kas1 + "dur.");
+        //    */
+
+
+
+        //    /* HOCANIN YAPTIĞI */
+
+
+        //     Console.Write("Kullanıcı adınızı giriniz : ");
+        //     string kullaniciAdi = Console.ReadLine();
+
+        //     Console.Write("Şifrenizi giriniz : ");
+        //     string sifre = Console.ReadLine();
+
+        //     bool kullaniciAdiKontrol1 = kullaniciAdi == "admin";
+        //     bool kullaniciAdiKontrol2 = kullaniciAdi != "admin";
+
+        //     bool sifreKontrol1 = sifre == "123";
+        //     bool sifreKontrol2 = sifre != "123";
+
+        //     Console.ReadLine();
+
+        //}
+        #endregion
+
+        #region VİDEO 61
         static void Main(string[] args)
         {
 
-            /*
-            
-             KULLANICI ADI : admin
-             şifre : 123
+            /* MANTIKSAL VE OPERATÖRÜ && SİMGESİ İLE KULLANILIR */
+            /* MANTIKSAL VEYA OPERATÖRÜ && SİMGESİ İLE KULLANILIR */
 
-             KULLANICIDAN 
-             kullanıcı adı şifre isteyecek
-             kullanıcı admin mi 
-             şifre 123 mü diye bakacak
-             
-            */
 
-            /* BENİM YAPTIGIM */
+            /* MANTIKSAL VE OPERATÖRÜ && SİMGESİ İLE KULLANILIR */
 
             /*
-             Console.Write("Kullanıcı adınızı giriniz : ");
-             string kulAdi = Console.ReadLine();
-             Console.Write("Şifrenizi giriniz : ");
-             int sifre = Convert.ToInt32(Console.ReadLine());
-             bool sifreKont = sifre == 123;
-           
-             Console.Write($"Şifreniz {sifreKont} ");
-           
-             Console.ReadLine();
+             istediğiniz kadar and operatörü eklenebilir
+             geriye bool döner
+             bool donenDeger = degisken1 == "admin" && degisken2 == "123" TRUE
+             acıklaması
+             degisken1 && (ve) degisken2
+             degisken1 admin e eşit mi evet
+             degisken2 123 e eşit mi evet
+             o zaman sonuc TRUE dur 
             */
-
-            /* BENİM YAPTIGIM */
 
             /*
-             string admin = "admin";
-             string password1 = "123";
-          
-             Console.WriteLine("Hoş geldiniz...");
-          
-             Console.Write("Kullanıcı adınızı giriniz : ");
-             string a1 = Console.ReadLine();
-          
-             Console.Write("Şifrenizi giriniz: ");
-             string s1 = Console.ReadLine();
-          
-             int password2 = Convert.ToInt32(password1);
-             int password3 = Convert.ToInt32(s1);
-          
-             bool kaa = admin == a1;
-             bool kas = password2 == password3;
-          
-             Console.WriteLine("Kullanıcı adınız : " + kaa + "dur." + "\n" + "Şifreniz : " + kas + "dur.");
-          
-             bool kaa1 = admin != a1;
-             bool kas1 = password2 != password3;
-          
-             Console.WriteLine("Kullanıcı adınız : " + kaa1 + "dur." + "\n" + "Şifreniz : " + kas1 + "dur.");
+             * degisken1        degisken2       sonuc
+             * True             True            True
+             * False            True            False
+             * True             False           False
+             * False            False           False
+             * 
             */
 
-
-
-            /* HOCANIN YAPTIĞI */
+            /*
+             yukarıdaki tabloda oldugu gibi bütün sartlar true ise bize true alıyoruz
+             kaç değer olursa hepsinin true olması lazım
+            */
 
             
-             Console.Write("Kullanıcı adınızı giriniz : ");
-             string kullaniciAdi = Console.ReadLine();
-           
-             Console.Write("Şifrenizi giriniz : ");
-             string sifre = Console.ReadLine();
-           
-             bool kullaniciAdiKontrol1 = kullaniciAdi == "admin";
-             bool kullaniciAdiKontrol2 = kullaniciAdi != "admin";
-           
-             bool sifreKontrol1 = sifre == "123";
-             bool sifreKontrol2 = sifre != "123";
-           
-             Console.ReadLine();
+             string kullaniciAdi = "admin";
+             string sifre = "123";
+             string anahtar1 = "1";
+
+             bool donenDeger = kullaniciAdi == "admin" && sifre == "123" && anahtar1 == "1";
+
+
+
+
+
+
+            /* MANTIKSAL VEYA OPERATÖRÜ || (altgr+simgesi) SİMGESİ İLE KULLANILIR */
+            /* 
+             geriye bool döner            
+             ve operatöründe n tane sartın varsa true için hepsinin dogru olması lazım
+             veya operatöründe n tane şarttan 1 tanesi dogru ise true alabilirsin 
+            */
+
+            /*
+             * şart1     şart2       sonuc
+             * T         T           T
+             * T         F           T
+             * F         T           T
+             * F         F           F
+            */
+
+            /*
+             YANİ TEK BİR TANESİ DOGRU OLSA BİLE DOGRUDUR
+             YANLIS İÇİN HEPSİ YANLIS OLMASI LAZIM
+             ornek elimizde bir tane anahtar olsun ve bu anahtarı kullanarak sisteme giriş yapmak istiyoruz
+             sistemde de 4 adet anahtar değeri olsun
+            */
+
+            string anahtar2 = "ASDASJLFGS123123";
+             bool geriDonus = anahtar2 == "ASDASJLFGS123123" || anahtar2 == "asd23errfr" || anahtar2 == "şflghk45tg" || anahtar2 == "345ry456tg";
             
+            /*
+             burada anahtar ilk değerden bakıyor sırayla 1 tanesi dogru ise diğerlerine bakmıyor
+             dogruyu bulursa true der
+             hiç bir anahtar uymuyorsa false verir
+
+             biz bunu nerede kullanırız
+             datebase tarafından veri tabanından veri liste çekilmiştir 
+             listede bu değer var mı diye bakılmada kullanılabilir
+
+             karar yapılarında (if else if) bu operatörler cok kullanılır (ve veya)
+            */
         }
         #endregion
 
