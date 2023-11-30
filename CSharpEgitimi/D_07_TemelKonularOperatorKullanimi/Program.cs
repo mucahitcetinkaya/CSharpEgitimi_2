@@ -674,117 +674,197 @@ namespace D_07_TemelKonularOperatorKullanimi
         #endregion
 
         #region VİDEO 59
+        //static void Main(string[] args)
+        //{
+
+        //    /*
+
+        //     KULLANICI 3 NOT GİRECEK
+        //     3 NOTUN ORTALAMASI
+        //     45 DEN BÜYÜK MÜ KÜÇÜK MÜ
+
+        //    */
+
+        //    /* BENİM YAPTIGIM */
+
+        //    /*
+        //     Console.WriteLine("Hoşgeldiniz");
+
+        //     Console.Write("1. notu giriniz : ");
+        //     int not1 = Convert.ToInt32(Console.ReadLine());
+        //     Console.Write("2. notu giriniz : ");
+        //     int not2 = Convert.ToInt32(Console.ReadLine());
+        //     Console.Write("3. notu giriniz : ");
+        //     int not3 = Convert.ToInt32(Console.ReadLine());
+
+        //     int toplam = not1 + not2 + not3;
+        //     int ortalama = toplam / 3;
+        //     bool result = ortalama > 45;
+
+        //     Console.Clear();
+
+        //     Console.WriteLine($"1. not {not1} 2. not {not2} 3. not {not3} toplamı {toplam} ortalaması {ortalama} 45 den büyük mü {result}");
+
+        //     Console.ReadLine();
+        //    */
+
+
+
+        //    /* BENİM YAPTIGIM */
+
+        //    /*
+        //     Console.WriteLine("HOŞ GELDİNİZ");
+
+        //     Console.Write("1. NOTU GİRİNİZ : ");
+        //     string sayi1 = Console.ReadLine();
+
+        //     Console.Write("2. NOTU GİRİNİZ : ");
+        //     string sayi2 = Console.ReadLine();
+
+        //     Console.Write("3. NOTU GİRİNİZ : ");
+        //     string sayi3 = Console.ReadLine();
+
+        //     int int1 = Convert.ToInt32(sayi1);
+        //     int int2 = Convert.ToInt32(sayi2);
+        //     int int3 = Convert.ToInt32(sayi3);
+
+        //     int toplam = int1 + int2 + int3;
+        //     Console.WriteLine("Toplam          : " + toplam);
+        //     int ortalama = toplam / 3;
+        //     Console.WriteLine("Ortalama        : " + ortalama);
+
+        //     int endusuknot = 45;
+        //     bool sonuc = ortalama >= endusuknot ;
+        //     Console.WriteLine("Sınav Sonucu    : " + sonuc);
+        //     Console.ReadLine();
+        //    */
+
+
+
+
+        //    /*  HOCANIN YAPTIGI */
+
+        //    /*
+        //     BENİM HATAM İNT GİRMEK VİRGÜLLÜ SAYI OLABİLİR DECİMAL VEYA DOUBLE GİRMEM LAZIMDI
+        //     BEN UZUN YOLU SEÇMİŞİM
+        //    */
+
+        //    Console.WriteLine("HOŞ GELDİNİZ");
+
+        //    Console.Write("NOT 1 DEĞERİNİ GİRİNİZ : ");
+        //    string not1 = Console.ReadLine();
+
+        //    Console.Write("NOT 2 DEĞERİNİ GİRİNİZ : ");
+        //    string not2 = Console.ReadLine();
+
+        //    Console.Write("NOT 3 DEĞERİNİ GİRİNİZ : ");
+        //    string not3 = Console.ReadLine();
+
+        //    Console.WriteLine("Değerleriniz alındı hesaplama işlemi yapılıyor... ");
+
+        //    decimal dnot1 = Convert.ToDecimal(not1);
+        //    decimal dnot2 = Convert.ToDecimal(not2);
+        //    decimal dnot3 = Convert.ToDecimal(not3);
+
+        //    /*
+        //     ORTALAMA ALMA UZUN YOL
+        //     TOPLAYIP AYRI ORTALAMA ALIYOR
+        //     decimal toplam = dnot1 + dnot2 + dnot3 ;
+        //     decimal ortalama = toplam / 3;
+
+        //     ORTALAMA ALMA KISA YOL
+        //     ONCE PARANTEZ İÇİ YAPIP SONRA ORTALAMA ALIYOR
+        //    */
+        //    decimal ortalama = (dnot1 + dnot2 + dnot3) / 3;
+
+        //    bool kontrolSonuc = ortalama >= 45;
+        //    Console.WriteLine("Ortalama değeriniz 45 değerinden büyük veya eşit mi ?" + kontrolSonuc);
+
+        //    /*
+        //     NOT SONUCTA SADECE 45 DEN BUYUK VEYA ESİTSE TRUE DEĞİLSE FALSE YAZIYOR SU ANLIK
+        //     İLERİDE FARKLI MESAJLAR YAZMASINI GÖSTERECEĞİZ
+        //    */
+
+        //}
+        #endregion
+
+        #region VİDEO 60
         static void Main(string[] args)
         {
 
             /*
+            
+             KULLANICI ADI : admin
+             şifre : 123
 
-             KULLANICI 3 NOT GİRECEK
-             3 NOTUN ORTALAMASI
-             45 DEN BÜYÜK MÜ KÜÇÜK MÜ
-
+             KULLANICIDAN 
+             kullanıcı adı şifre isteyecek
+             kullanıcı admin mi 
+             şifre 123 mü diye bakacak
+             
             */
 
             /* BENİM YAPTIGIM */
 
             /*
-             Console.WriteLine("Hoşgeldiniz");
-            
-             Console.Write("1. notu giriniz : ");
-             int not1 = Convert.ToInt32(Console.ReadLine());
-             Console.Write("2. notu giriniz : ");
-             int not2 = Convert.ToInt32(Console.ReadLine());
-             Console.Write("3. notu giriniz : ");
-             int not3 = Convert.ToInt32(Console.ReadLine());
-            
-             int toplam = not1 + not2 + not3;
-             int ortalama = toplam / 3;
-             bool result = ortalama > 45;
-            
-             Console.Clear();
-            
-             Console.WriteLine($"1. not {not1} 2. not {not2} 3. not {not3} toplamı {toplam} ortalaması {ortalama} 45 den büyük mü {result}");
-            
+             Console.Write("Kullanıcı adınızı giriniz : ");
+             string kulAdi = Console.ReadLine();
+             Console.Write("Şifrenizi giriniz : ");
+             int sifre = Convert.ToInt32(Console.ReadLine());
+             bool sifreKont = sifre == 123;
+           
+             Console.Write($"Şifreniz {sifreKont} ");
+           
              Console.ReadLine();
             */
-
-
 
             /* BENİM YAPTIGIM */
 
             /*
-             Console.WriteLine("HOŞ GELDİNİZ");
+             string admin = "admin";
+             string password1 = "123";
+          
+             Console.WriteLine("Hoş geldiniz...");
+          
+             Console.Write("Kullanıcı adınızı giriniz : ");
+             string a1 = Console.ReadLine();
+          
+             Console.Write("Şifrenizi giriniz: ");
+             string s1 = Console.ReadLine();
+          
+             int password2 = Convert.ToInt32(password1);
+             int password3 = Convert.ToInt32(s1);
+          
+             bool kaa = admin == a1;
+             bool kas = password2 == password3;
+          
+             Console.WriteLine("Kullanıcı adınız : " + kaa + "dur." + "\n" + "Şifreniz : " + kas + "dur.");
+          
+             bool kaa1 = admin != a1;
+             bool kas1 = password2 != password3;
+          
+             Console.WriteLine("Kullanıcı adınız : " + kaa1 + "dur." + "\n" + "Şifreniz : " + kas1 + "dur.");
+            */
+
+
+
+            /* HOCANIN YAPTIĞI */
+
+            
+             Console.Write("Kullanıcı adınızı giriniz : ");
+             string kullaniciAdi = Console.ReadLine();
            
-             Console.Write("1. NOTU GİRİNİZ : ");
-             string sayi1 = Console.ReadLine();
+             Console.Write("Şifrenizi giriniz : ");
+             string sifre = Console.ReadLine();
            
-             Console.Write("2. NOTU GİRİNİZ : ");
-             string sayi2 = Console.ReadLine();
+             bool kullaniciAdiKontrol1 = kullaniciAdi == "admin";
+             bool kullaniciAdiKontrol2 = kullaniciAdi != "admin";
            
-             Console.Write("3. NOTU GİRİNİZ : ");
-             string sayi3 = Console.ReadLine();
+             bool sifreKontrol1 = sifre == "123";
+             bool sifreKontrol2 = sifre != "123";
            
-             int int1 = Convert.ToInt32(sayi1);
-             int int2 = Convert.ToInt32(sayi2);
-             int int3 = Convert.ToInt32(sayi3);
-           
-             int toplam = int1 + int2 + int3;
-             Console.WriteLine("Toplam          : " + toplam);
-             int ortalama = toplam / 3;
-             Console.WriteLine("Ortalama        : " + ortalama);
-           
-             int endusuknot = 45;
-             bool sonuc = ortalama >= endusuknot ;
-             Console.WriteLine("Sınav Sonucu    : " + sonuc);
              Console.ReadLine();
-            */
-
-
-
-
-            /*  HOCANIN YAPTIGI */
-
-            /*
-             BENİM HATAM İNT GİRMEK VİRGÜLLÜ SAYI OLABİLİR DECİMAL VEYA DOUBLE GİRMEM LAZIMDI
-             BEN UZUN YOLU SEÇMİŞİM
-            */
-
-            Console.WriteLine("HOŞ GELDİNİZ");
-
-            Console.Write("NOT 1 DEĞERİNİ GİRİNİZ : ");
-            string not1 = Console.ReadLine();
-
-            Console.Write("NOT 2 DEĞERİNİ GİRİNİZ : ");
-            string not2 = Console.ReadLine();
-
-            Console.Write("NOT 3 DEĞERİNİ GİRİNİZ : ");
-            string not3 = Console.ReadLine();
-
-            Console.WriteLine("Değerleriniz alındı hesaplama işlemi yapılıyor... ");
-
-            decimal dnot1 = Convert.ToDecimal(not1);
-            decimal dnot2 = Convert.ToDecimal(not2);
-            decimal dnot3 = Convert.ToDecimal(not3);
-
-            /*
-             ORTALAMA ALMA UZUN YOL
-             TOPLAYIP AYRI ORTALAMA ALIYOR
-             decimal toplam = dnot1 + dnot2 + dnot3 ;
-             decimal ortalama = toplam / 3;
-
-             ORTALAMA ALMA KISA YOL
-             ONCE PARANTEZ İÇİ YAPIP SONRA ORTALAMA ALIYOR
-            */
-            decimal ortalama = (dnot1 + dnot2 + dnot3) / 3;
-
-            bool kontrolSonuc = ortalama >= 45;
-            Console.WriteLine("Ortalama değeriniz 45 değerinden büyük veya eşit mi ?" + kontrolSonuc);
-
-            /*
-             NOT SONUCTA SADECE 45 DEN BUYUK VEYA ESİTSE TRUE DEĞİLSE FALSE YAZIYOR SU ANLIK
-             İLERİDE FARKLI MESAJLAR YAZMASINI GÖSTERECEĞİZ
-            */
-
+            
         }
         #endregion
 

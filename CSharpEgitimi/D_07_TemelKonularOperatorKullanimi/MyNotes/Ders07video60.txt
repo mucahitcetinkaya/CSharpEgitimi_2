@@ -1,0 +1,76 @@
+﻿
+
+VİDEO 60 Alıştırma - 2
+
+            /*
+            
+             KULLANICI ADI : admin
+             şifre : 123
+
+             KULLANICIDAN 
+             kullanıcı adı şifre isteyecek
+             kullanıcı admin mi 
+             şifre 123 mü diye bakacak
+             
+            */
+
+            /* BENİM YAPTIGIM */
+
+            /*
+             Console.Write("Kullanıcı adınızı giriniz : ");
+             string kulAdi = Console.ReadLine();
+             Console.Write("Şifrenizi giriniz : ");
+             int sifre = Convert.ToInt32(Console.ReadLine());
+             bool sifreKont = sifre == 123;
+           
+             Console.Write($"Şifreniz {sifreKont} ");
+           
+             Console.ReadLine();
+            */
+
+            /* BENİM YAPTIGIM */
+
+            /*
+             string admin = "admin";
+             string password1 = "123";
+          
+             Console.WriteLine("Hoş geldiniz...");
+          
+             Console.Write("Kullanıcı adınızı giriniz : ");
+             string a1 = Console.ReadLine();
+          
+             Console.Write("Şifrenizi giriniz: ");
+             string s1 = Console.ReadLine();
+          
+             int password2 = Convert.ToInt32(password1);
+             int password3 = Convert.ToInt32(s1);
+          
+             bool kaa = admin == a1;
+             bool kas = password2 == password3;
+          
+             Console.WriteLine("Kullanıcı adınız : " + kaa + "dur." + "\n" + "Şifreniz : " + kas + "dur.");
+          
+             bool kaa1 = admin != a1;
+             bool kas1 = password2 != password3;
+          
+             Console.WriteLine("Kullanıcı adınız : " + kaa1 + "dur." + "\n" + "Şifreniz : " + kas1 + "dur.");
+            */
+
+
+
+            /* HOCANIN YAPTIĞI */
+
+            
+             Console.Write("Kullanıcı adınızı giriniz : ");
+             string kullaniciAdi = Console.ReadLine();
+           
+             Console.Write("Şifrenizi giriniz : ");
+             string sifre = Console.ReadLine();
+           
+             bool kullaniciAdiKontrol1 = kullaniciAdi == "admin";
+             bool kullaniciAdiKontrol2 = kullaniciAdi != "admin";
+           
+             bool sifreKontrol1 = sifre == "123";
+             bool sifreKontrol2 = sifre != "123";
+           
+             Console.ReadLine();
