@@ -577,99 +577,214 @@ namespace D_07_TemelKonularOperatorKullanimi
         #endregion
 
         #region VİDEO 57 58
+        //static void Main(string[] args)
+        //{
+
+        //    /* 57 Is operatörü kullanımı */
+
+        //    int s1 = 50;
+        //    int s2 = 100;
+
+        //    /* object o1 = ..... buraya ne atasam object bunu kabul edecek s1 de bool değişken adını da atasam object kabul edecek */
+
+        //    object o1 = s1;
+        //    /*
+        //     object içindeki değeri ben ekrana yazdırırsam içindeki değeri
+        //     string olarak görürüm bunun nedeni object içindeki komuttan dolayı oluyor
+        //     bunu class lar dersinde göreceğiz
+        //    */
+
+        //    Console.WriteLine(o1); /* dediğimde ekranda görürüz */
+
+        //    /*
+        //     peki ben o1 in içindeki değeri tekrardan nasıl int e dönüştürürüm
+        //     buyuk tip kucuk tipe dönüşecek
+        //     bilinçsiz dönüşüm yapılır
+        //     (int).o1;
+        //    */
+
+        //    s1 = (int)o1; /* konsola yazdı int e dönüştürdü */
+
+
+        //    /* peki burası int değil de byte a cevirseydik nolurdu */
+
+        //    /*
+        //     s1 = (byte)o1;
+
+        //     object değeri 50 normalde byte olabilir ama burda hata veriyor
+        //     sebebi object değerin yanında değerin tipinide kendi içinde barındırıyor
+        //     object te kutulama demiştik kutudan cıkartırken kutuladıgımız tip olarak cıkar
+        //     en basta object int olarak işleme aldık değer o1 de int oldu ondan dolayı
+        //     peki ben uygulamada değerin kutulanırken bunun int mi byte mı
+        //     hangi tipte kutulandıgını nerden öğreneceğim
+        //    */
+
+        //    /* burada is operatörü bize yardımcı olacak */
+
+
+
+        //    /*
+        //     IS OPERATÖRÜ 
+        //     bool tipinde değer döner
+        //     bool donenDeger = degisken is degiskenTipi
+        //    */
+
+        //    bool isKontrol1 = o1 is int;
+
+        //    /*
+        //     yani burada bir soru soruyoruz bunun tipi bumu dur
+        //     uygulama burada değişken değerine bakmaz değişken tipine bakar
+        //     o1 in değeri nerden geldi s1 den s1 nedir int o zaman o1 de int dir.
+        //     o1 int a cevrilebilir mi
+        //     o1 bir onceki gelişinde bize int mi geldi
+        //     burada is bize true veriyor
+        //    */
+
+        //    bool isKontrol2 = o1 is byte;
+
+        //    /*
+        //     o1 bir onceki gelişinde bize byte mi geldi
+        //     burada is bize false veriyor yani byte dan gelmedi diyor
+        //    */
+
+
+
+
+        //    /* 58 As operatörü kullanımı */
+
+        //    /* !!!!!!!!!!!!!!!!!!!!!! string olarak gönderir !!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+
+        //    string isimSoyisim = "Mücahit Çetinkaya";
+        //    object objString = isimSoyisim;
+        //    string sonucStr = objString as string;
+
+        //    /*
+        //     burada uygulama davranısı
+        //     once string tipinde isimSoyisim adında bir değişken oluşturur
+        //     ve içerisine Mücahit Çetinkaya değerini atayacak
+        //     atadıktan sonra
+        //     object tipinde objString adında bir değişken oluşturacak
+        //     içerisine de isimSoyisim değişkenini tipiyle birlikte aktaracak
+        //     yani bir kutulama yapıyor
+        //     daha sonra objString değeri eğer string ise
+        //     olusturdugumuz farklı bir string tipinde sonucStr adına string olarak atayacak
+        //    */
+        //}
+        #endregion
+
+        #region VİDEO 59
         static void Main(string[] args)
         {
 
-            /* 57 Is operatörü kullanımı */
-
-            int s1 = 50;
-            int s2 = 100;
-
-            /* object o1 = ..... buraya ne atasam object bunu kabul edecek s1 de bool değişken adını da atasam object kabul edecek */
-
-            object o1 = s1;
             /*
-             object içindeki değeri ben ekrana yazdırırsam içindeki değeri
-             string olarak görürüm bunun nedeni object içindeki komuttan dolayı oluyor
-             bunu class lar dersinde göreceğiz
+
+             KULLANICI 3 NOT GİRECEK
+             3 NOTUN ORTALAMASI
+             45 DEN BÜYÜK MÜ KÜÇÜK MÜ
+
             */
 
-            Console.WriteLine(o1); /* dediğimde ekranda görürüz */
+            /* BENİM YAPTIGIM */
 
             /*
-             peki ben o1 in içindeki değeri tekrardan nasıl int e dönüştürürüm
-             buyuk tip kucuk tipe dönüşecek
-             bilinçsiz dönüşüm yapılır
-             (int).o1;
-            */
-
-            s1 = (int)o1; /* konsola yazdı int e dönüştürdü */
-
+             Console.WriteLine("Hoşgeldiniz");
             
-            /* peki burası int değil de byte a cevirseydik nolurdu */
-
-            /*
-             s1 = (byte)o1;
+             Console.Write("1. notu giriniz : ");
+             int not1 = Convert.ToInt32(Console.ReadLine());
+             Console.Write("2. notu giriniz : ");
+             int not2 = Convert.ToInt32(Console.ReadLine());
+             Console.Write("3. notu giriniz : ");
+             int not3 = Convert.ToInt32(Console.ReadLine());
             
-             object değeri 50 normalde byte olabilir ama burda hata veriyor
-             sebebi object değerin yanında değerin tipinide kendi içinde barındırıyor
-             object te kutulama demiştik kutudan cıkartırken kutuladıgımız tip olarak cıkar
-             en basta object int olarak işleme aldık değer o1 de int oldu ondan dolayı
-             peki ben uygulamada değerin kutulanırken bunun int mi byte mı
-             hangi tipte kutulandıgını nerden öğreneceğim
+             int toplam = not1 + not2 + not3;
+             int ortalama = toplam / 3;
+             bool result = ortalama > 45;
+            
+             Console.Clear();
+            
+             Console.WriteLine($"1. not {not1} 2. not {not2} 3. not {not3} toplamı {toplam} ortalaması {ortalama} 45 den büyük mü {result}");
+            
+             Console.ReadLine();
             */
 
-            /* burada is operatörü bize yardımcı olacak */
 
 
+            /* BENİM YAPTIGIM */
 
             /*
-             IS OPERATÖRÜ 
-             bool tipinde değer döner
-             bool donenDeger = degisken is degiskenTipi
+             Console.WriteLine("HOŞ GELDİNİZ");
+           
+             Console.Write("1. NOTU GİRİNİZ : ");
+             string sayi1 = Console.ReadLine();
+           
+             Console.Write("2. NOTU GİRİNİZ : ");
+             string sayi2 = Console.ReadLine();
+           
+             Console.Write("3. NOTU GİRİNİZ : ");
+             string sayi3 = Console.ReadLine();
+           
+             int int1 = Convert.ToInt32(sayi1);
+             int int2 = Convert.ToInt32(sayi2);
+             int int3 = Convert.ToInt32(sayi3);
+           
+             int toplam = int1 + int2 + int3;
+             Console.WriteLine("Toplam          : " + toplam);
+             int ortalama = toplam / 3;
+             Console.WriteLine("Ortalama        : " + ortalama);
+           
+             int endusuknot = 45;
+             bool sonuc = ortalama >= endusuknot ;
+             Console.WriteLine("Sınav Sonucu    : " + sonuc);
+             Console.ReadLine();
             */
 
-            bool isKontrol1 = o1 is int;
+
+
+
+            /*  HOCANIN YAPTIGI */
 
             /*
-             yani burada bir soru soruyoruz bunun tipi bumu dur
-             uygulama burada değişken değerine bakmaz değişken tipine bakar
-             o1 in değeri nerden geldi s1 den s1 nedir int o zaman o1 de int dir.
-             o1 int a cevrilebilir mi
-             o1 bir onceki gelişinde bize int mi geldi
-             burada is bize true veriyor
+             BENİM HATAM İNT GİRMEK VİRGÜLLÜ SAYI OLABİLİR DECİMAL VEYA DOUBLE GİRMEM LAZIMDI
+             BEN UZUN YOLU SEÇMİŞİM
             */
 
-            bool isKontrol2 = o1 is byte;
+            Console.WriteLine("HOŞ GELDİNİZ");
+
+            Console.Write("NOT 1 DEĞERİNİ GİRİNİZ : ");
+            string not1 = Console.ReadLine();
+
+            Console.Write("NOT 2 DEĞERİNİ GİRİNİZ : ");
+            string not2 = Console.ReadLine();
+
+            Console.Write("NOT 3 DEĞERİNİ GİRİNİZ : ");
+            string not3 = Console.ReadLine();
+
+            Console.WriteLine("Değerleriniz alındı hesaplama işlemi yapılıyor... ");
+
+            decimal dnot1 = Convert.ToDecimal(not1);
+            decimal dnot2 = Convert.ToDecimal(not2);
+            decimal dnot3 = Convert.ToDecimal(not3);
 
             /*
-             o1 bir onceki gelişinde bize byte mi geldi
-             burada is bize false veriyor yani byte dan gelmedi diyor
+             ORTALAMA ALMA UZUN YOL
+             TOPLAYIP AYRI ORTALAMA ALIYOR
+             decimal toplam = dnot1 + dnot2 + dnot3 ;
+             decimal ortalama = toplam / 3;
+
+             ORTALAMA ALMA KISA YOL
+             ONCE PARANTEZ İÇİ YAPIP SONRA ORTALAMA ALIYOR
             */
+            decimal ortalama = (dnot1 + dnot2 + dnot3) / 3;
 
-
-
-
-            /* 58 As operatörü kullanımı */
-
-            /* !!!!!!!!!!!!!!!!!!!!!! string olarak gönderir !!!!!!!!!!!!!!!!!!!!!!!!!!! */
-
-
-            string isimSoyisim = "Mücahit Çetinkaya";
-            object objString = isimSoyisim;
-            string sonucStr = objString as string;
+            bool kontrolSonuc = ortalama >= 45;
+            Console.WriteLine("Ortalama değeriniz 45 değerinden büyük veya eşit mi ?" + kontrolSonuc);
 
             /*
-             burada uygulama davranısı
-             once string tipinde isimSoyisim adında bir değişken oluşturur
-             ve içerisine Mücahit Çetinkaya değerini atayacak
-             atadıktan sonra
-             object tipinde objString adında bir değişken oluşturacak
-             içerisine de isimSoyisim değişkenini tipiyle birlikte aktaracak
-             yani bir kutulama yapıyor
-             daha sonra objString değeri eğer string ise
-             olusturdugumuz farklı bir string tipinde sonucStr adına string olarak atayacak
+             NOT SONUCTA SADECE 45 DEN BUYUK VEYA ESİTSE TRUE DEĞİLSE FALSE YAZIYOR SU ANLIK
+             İLERİDE FARKLI MESAJLAR YAZMASINI GÖSTERECEĞİZ
             */
+
         }
         #endregion
 
