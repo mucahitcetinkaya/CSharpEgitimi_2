@@ -1,0 +1,69 @@
+﻿ 
+
+bu kısmı sesleri yazıya döken programdan alıp düzelttim daha zor oldu
+
+
+VİDEO 70.Karar yapıları - Alıştırma 1
+
+
+Evet arkadaşlar alıştırmalar bölümüne Hoş geldiniz şimdi alıştırmalar yapacağız birkaç çalıştırmayı ben yapacağım 
+bazı alıştırmaları size bırakacağım size bıraktığım yerde videoyu durdurmanızı isteyeceğim
+Daha sonra ben o alıştırmayı yaparak devam edeceğim bol alıştırma çözmek istiyorum ilk alıştırma ile başlayalım
+
+hatırlarsanız kullanıcı adı ve şifre kontrolü yapmıştık ve bunu operatörlerde incelemiştik
+Şimdi bunu daha aktif hale getirelim 
+
+kullanıcı doğru giriş yaptığında sisteme girişiniz başarılı yazdıralım
+kullanıcı hatalı bir giriş yaptığında 
+lütfen Kullanıcı adı ya da şifrenizi kontrol ediniz diye bir mesaj çıkartalım
+basit bir if else i anlatan bir açıklama bir alıştırma yapıyor olacağız
+neye ihtiyacımız var Öncelikle kullanıcıdan gelen değerlere ihtiyacımız var
+
+o zaman kullanıcıya soru soralım ve karşılıklarını isteyelim
+ilk olarak console istenileni yazdıralım
+Console.WriteLine("Kullanıcı adınızı giriniz : ");
+sonra bunu
+string içerisine alıp readline ile yanıt girilmesini sağlayalım
+sonra şifre bilgisini isteyelim
+Console.Write("Şifrenizi giriniz : ");
+sonra bunu
+string içerisine alıp readline ile yanıt girilmesini sağlayalım
+string sifre = Console.ReadLine();
+
+Bizim burada bir karar yazısını ihtiyacımız var
+Eğer kullanıcı adı ve şifre doğruysa Peki neye göre karşılaştıracağız bunları
+doğru olan kullanıcı adı ve şifre ne onlarda şöyle olacak arkadaşlar
+kullanıcı adı admin ise ve şifresi 1 2 3 ise biz bunu doğru kabul edeceğiz
+if in içerisine geliyoruz if dedik
+hatırlarsanız şart veya şartlar demiştik İşte şimdi o şartları yazıyor olacağız
+kullanıcı adı eşit eşit ise Yani eşit ise neye admine
+ve operatörünü kullanıyorum 2 şartın da doğru olması gerekli
+şifre şöyle şifre eşiteşit ise neye 123 e 
+Eğer bunlar doğruysa and operatörü olduğu için
+birinci şartımın ve ikinci şartımın ikisinin de ne olması gerekli true olması gerekli
+o zaman ekrana şunu yazabilirsin Merhaba, girişiniz başarılı..
+
+Değilse bunun tam tersi ise içlerinden bir tanesi ya da ikisi birden hatalıysa ne olacak
+
+O zaman else hemen onunda mesajını yazalım 
+
+Giriş başarısız kullanıcı adı veya şifrenizi kontrol ediniz dedik
+
+kaydedip kontrol edelim
+önce doğru gireceğim admin 123
+if in içerisine geldim
+Ne yapıyor if ilk önce kullanıcı adına bakıyor kullanıcı adı admin mi evet kullanıcı adı admin
+ve operatörünü gördüğü için diğer şarta bakıyor
+şifre 1 2 3 Evet şifre 123
+yani ilk şartımın sonucu true
+2. şartımın sonucu da true ise ve arada and olduğu için
+ne diyor burda ikisininde sonucu true oldugu için ana sonucta true dur diyor
+ve if in içerisinde ki işlemlerin çalıştı
+Merhaba giriş başarılı ben burada cevabı alabilirim
+tekrar girelim kullanıcı adım doğru şifrem yanlış olsun
+Kullanıcı adı admin mi evet şifre 123 mü Hayır
+arada and operatör olduğu için şartlarında bir tanesi false olduğu için ne oluyor benim işlemler sonucu false olur
+benim ekrana ne yazmam gerekiyor giriş başarısız kullanıcı adı veya şifrenizi kontrol ediniz demem gerekiyor
+bilginize vermiş olduk hem and operatörünü inceledik arkadaşlar hem de if else i
+görmüş olduk Bir sonraki dersimizde size sizin yapmanızı istedim yine bu basitlikte bir uygulama olacak
+onu videoyu durdurup denerseniz sevinirim

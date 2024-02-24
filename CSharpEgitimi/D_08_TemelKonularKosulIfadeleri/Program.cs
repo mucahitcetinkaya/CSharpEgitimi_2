@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
@@ -226,7 +227,7 @@ namespace D_08_TemelKonularKosulIfadeleri
         //    /* 69 Karar yapıları -Switch kullanımı */
 
         //    /* 
-             
+
         //     YAZIMI 
 
         //    switch ( ifade )
@@ -240,10 +241,10 @@ namespace D_08_TemelKonularKosulIfadeleri
         //        case kontrol2;  buradaki case leri if else gibi düşünebilirsin 
         //             çalışacak olan işlemler 
         //            break; ;  ile cıkış yapılır 
-                    
+
         //            bütün kontrollerden geçtik ama herhangi birine takılmadık
         //         else kısmı burada
-                    
+
         //        default:
         //             calısacak olan işlemler 
         //            break;  ile cıkıs yapılır 
@@ -294,8 +295,54 @@ namespace D_08_TemelKonularKosulIfadeleri
         //     case in altına baska bir case yazabiliriz
         //     burada ocak veya nisan mi diyor veya var
         //    */
-            
+
         //}
+        #endregion
+
+        #region VİDEO 70
+
+        //static void Main(string[] args)
+        //{
+
+        //    /*
+        //    kullanıcı adını ve şifreyi degiskene atayıp if içinde degisken adı ile işlem yapabilirsin
+        //    veya
+        //    degisken yerine direk orda da yazabilirsin ama degiskene ataman degistirmen için kolaylık saglar
+        //    */
+
+        //    string ka = "admin";
+        //    string sifre = "123";
+
+        //    Console.WriteLine("Kullanıcı adınızı giriniz : ");
+        //    string girilenKullaniciAdi = Console.ReadLine();
+
+        //    Console.WriteLine("Kullanıcı adınızı giriniz : ");
+        //    string girilenSifre = Console.ReadLine();
+
+        //    if (girilenKullaniciAdi == ka && girilenSifre == sifre)
+        //    {
+        //        Console.WriteLine("Hoşgeldiniz");
+        //    }
+        //    else
+        //    {
+        //        Console.WriteLine("Hatalı giriş!!");
+        //    }
+
+        //    /*
+        //     * 2 side calısır sadece degisken var veya yok farkları bu 
+        //    if (girilenKullaniciAdi == "admin" && girilenSifre == "123")
+        //    {
+        //        Console.WriteLine("Hoşgeldiniz");
+        //    }
+        //    else
+        //    {
+        //        Console.WriteLine("Hatalı giriş!!");
+        //    }
+        //    */
+
+        //    Console.ReadLine();
+        //}
+
         #endregion
 
 
