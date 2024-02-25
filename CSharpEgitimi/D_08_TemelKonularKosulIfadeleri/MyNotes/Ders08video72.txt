@@ -1,0 +1,172 @@
+﻿
+
+VİDEO 72 Karar yapıları - Alıştırma 2
+             
+
+             MENU
+             1 - TOPLAMA
+             2 - CIKARTMA
+             3 - ÇARPMA
+             4 - BÖLME
+             SEÇİNİZ : _
+             
+             KURALLAR 
+             1 2 3 4 DIŞINDA BİR DEĞER GİRERSE GİRMİŞ OLDUĞUNUZ DEĞER HATALI DİYELİM VE SONLANDIRALIM
+             BURDA HENUZ YÖNLENDİRMELERİ GÖRMEDİĞİMİZ TEKRAR AYNI MENUYU KULLANICININ KARSISINA CIKARTMAYACAGIZ
+             4. SECENEK İÇERİSİNDE 0 BÖLENİ OLAMAZ KONTROLÜ YAPILACAK
+             UYGULAMA 1 KERE CALISACAK
+             HER İŞLEMDE KULLANICIDAN 2 SAYI İSTENECEK HANGİSİ SECİLİRSE BUNLAR ONA GÖRE İŞLEME GİRECEK
+             
+           
+
+/* birinci çözüm de if içinde işlemleri yaptık */
+
+Console.WriteLine(" Hoşgeldiniz");
+Console.WriteLine(" 1 - Toplama");
+Console.WriteLine(" 2 - Çıkartma");
+Console.WriteLine(" 3 - Çarpma");
+Console.WriteLine(" 4 - Bölme");
+Console.Write(" Seçiniz : ");
+
+string secilenMenu = Console.ReadLine();
+
+if (secilenMenu == "1")
+{
+    Console.WriteLine("Toplanmasını istediğiniz 2 sayı giriniz : ");
+    Console.Write("1. sayı : ");
+    decimal toplaSayi1 = Convert.ToDecimal(Console.ReadLine());
+    Console.Write("2. sayı : ");
+    decimal toplaSayi2 = Convert.ToDecimal(Console.ReadLine());
+    Console.WriteLine("Toplama Sonucu " + (toplaSayi1 + toplaSayi2));
+
+}
+else if (secilenMenu == "2")
+{
+    Console.WriteLine("Çıkartılmasını istediğiniz 2 sayı giriniz : ");
+    Console.Write("1. sayı : ");
+    decimal cikartSayi1 = Convert.ToDecimal(Console.ReadLine());
+    Console.Write("2. sayı : ");
+    decimal cikartSayi2 = Convert.ToDecimal(Console.ReadLine());
+    Console.WriteLine("Çıkartma Sonucu " + (cikartSayi1 - cikartSayi2));
+
+}
+else if (secilenMenu == "3")
+{
+    Console.WriteLine("Çarpılmasını istediğiniz 2 sayı giriniz : ");
+    Console.Write("1. sayı : ");
+    decimal carpSayi1 = Convert.ToDecimal(Console.ReadLine());
+    Console.Write("2. sayı : ");
+    decimal carpSayi2 = Convert.ToDecimal(Console.ReadLine());
+    Console.WriteLine("Çarpma Sonucu " + (carpSayi1 * carpSayi2));
+
+}
+else if (secilenMenu == "4")
+{
+    Console.WriteLine("Bölünmesini istediğiniz 2 sayı giriniz : ");
+    Console.Write("Bölünecek Sayı : ");
+    decimal bolSayi1 = Convert.ToDecimal(Console.ReadLine());
+    Console.Write("Bölen Sayı : ");
+    decimal bolSayi2 = Convert.ToDecimal(Console.ReadLine());
+    if (bolSayi2 == 0)
+    {
+        Console.WriteLine("Bölen sayı sıfır olamaz!");
+        Console.WriteLine("Uygulama Sonu");
+    }
+    else
+    {
+        Console.WriteLine("Bölme Sonucu " + (bolSayi1 / bolSayi2));
+    }
+}
+else
+{
+    Console.WriteLine("Menude olmayan bir seçenek girdiniz! ");
+}
+
+Console.ReadLine();
+
+
+////////////////////////////////////////////////////////////
+
+HOCANIN YAPTIGI
+
+Console.WriteLine("Menü");
+Console.WriteLine(" 1 - Toplama ");
+Console.WriteLine(" 2 - Çıkartma ");
+Console.WriteLine(" 1 - Çarpma ");
+Console.WriteLine(" 1 - Bölme ");
+Console.Write("Seçiniz :");
+
+string kullaniciSecim = Console.ReadLine();
+
+BU DOUBLE KISMINI NEDEN YAZDIK
+STRİNG S1 S2 KULLANICIDAN GELEN DEĞERLER
+BAŞKA İF BLOGUNDA OLUSTURDUĞU İÇİN ERİŞİM YAPAMADIK
+ONCE BUNDAN DOLAYI SADECE İSİM VERİP DEĞER VERMEMİŞTİK
+SONRA AŞAĞIDA BAŞKA HATA VERDİ
+BİZ İÇERİDE LOCAL DEĞİŞKEN DEDİĞİMİZ DOUBLE İNT VS GİBİ DEĞERLERİ TANIMLIYORSAK
+VE BUNLARIN İÇERİSİNE UYGULAMA İÇERİSİNDE ACIK OLARAK HERHANGİ BİR YERDE
+DEĞER VERMİYORSAK UYGULAMAMIZ HATA VERİR
+LOCAL DEĞİŞKENLER DEĞER ALMAK ZORUNDADIR CALISAMAZLAR
+BİZDE DISARIDA DEFAULT DEĞER 0 ATATIK
+NEDEN BUNU DEDİK İF SARTINA GİRMEDİĞİNDE sayi1 ve sayi2 değersiz kalıyor
+birinci if kısmında konsoldan değer giriyoruz s1 s2 
+sonra double a ceviriyoruz sayi1 sayi2
+sonra baska if e geçince
+sayi1 sayi2 nin değersiz kaldıgı kısım orası
+başka if e geçince değerler orda geçerli kalmıyor local hata veriyor
+İSİMLERİNİ KULLANABİLELİM VE İŞLEME ALABİLELİM DİYE
+İÇERİDE SONRA ATADIGIMIZ DEĞER AKTİF OLUYOR
+
+double sayi1 = 0;
+double sayi2 = 0;
+
+BU BASTAKİ İF KISMINI NEDEN YAZDIK
+MESELA SECİNİZ KISMINA 1234 DEĞİLDE DISINDAKİ BİR DEĞER YAZINCA
+ORADAKİ SORUNU ENGELLEMEK İÇİN YAZDI
+SADECE 1234 DEN BİRİSİ OLURSA DEVAM ET 
+if (kullaniciSecim == "1" || kullaniciSecim == "2" || kullaniciSecim == "3" || kullaniciSecim == "4")
+{
+    Console.WriteLine("Sayı 1 değerini giriniz : ");
+    string s1 = Console.ReadLine();
+
+    Console.WriteLine("Sayı 2 değerini giriniz : ");
+    string s2 = Console.ReadLine();
+
+    sayi1 = Convert.ToDouble(s1); // YUKARIDA DEĞİŞKEN TANIMLADIK 
+    sayi2 = Convert.ToDouble(s2); // TEKRAR DOUBLE YAZMAYA GEREK YOK
+
+}
+
+if (kullaniciSecim == "1")
+{
+    double toplama = sayi1 + sayi2;
+    Console.WriteLine("Sonuç" + toplama);
+}
+else if (kullaniciSecim == "2")
+{
+    double cikartma = sayi1 - sayi2;
+    Console.WriteLine("Sonuç" + cikartma);
+}
+else if (kullaniciSecim == "3")
+{
+    double carpma = sayi1 * sayi2;
+    Console.WriteLine("Sonuç" + carpma);
+}
+else if (kullaniciSecim == "4")
+{
+    if (sayi2 == 0)
+    {
+        Console.WriteLine("Bölen değer sıfır olamaz.");
+    }
+    else
+    {
+        double bolme = sayi1 / sayi2;
+        Console.WriteLine("Sonuç" + bolme);
+    }
+}
+else
+{
+    Console.WriteLine("Seçim dışı değer girişi yaptınız.");
+}
+
+Console.WriteLine("UYGULAMA SONU.");

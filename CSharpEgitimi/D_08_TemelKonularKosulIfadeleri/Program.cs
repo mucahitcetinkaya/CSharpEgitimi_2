@@ -351,7 +351,7 @@ namespace D_08_TemelKonularKosulIfadeleri
         //{
 
         //    /*
-            
+
         //    VİDEO 71 Karar yapıları - Ödev 1
 
         //    sistem içerisine giriş yapılabilecek kullanıcı kodları
@@ -416,7 +416,7 @@ namespace D_08_TemelKonularKosulIfadeleri
         //     VEYA OPERATÖRÜNDE 1 TANESİ DOGRUYSA BLOGUN DISINDAN DEVAM EDER
         //    */
 
-            
+
         //    if (kullaniciKodu == "ABC" || kullaniciKodu == "123" || kullaniciKodu == "CMK")
         //    {
         //        Console.WriteLine("Kullanıcı girişiniz başarılı.");
@@ -431,7 +431,7 @@ namespace D_08_TemelKonularKosulIfadeleri
         //    }
 
         //    Console.ReadLine();
-            
+
 
         //    /*
         //    NOT
@@ -445,6 +445,188 @@ namespace D_08_TemelKonularKosulIfadeleri
         //    kullaniciKodu = kullaniciKodu.ToLower();
         //    yazarsak içine gelen değerin küçük yapar
         //    */
+
+        //}
+
+        #endregion
+
+        #region VİDEO 72
+
+        //static void Main(string[] args)
+        //{
+        //    /* 
+             
+        //     VİDEO 72 Karar yapıları - Alıştırma 2
+             
+        //     MENU
+        //     1 - TOPLAMA
+        //     2 - CIKARTMA
+        //     3 - ÇARPMA
+        //     4 - BÖLME
+        //     SEÇİNİZ : _
+             
+        //     KURALLAR 
+        //     1 2 3 4 DIŞINDA BİR DEĞER GİRERSE GİRMİŞ OLDUĞUNUZ DEĞER HATALI DİYELİM VE SONLANDIRALIM
+        //     BURDA HENUZ YÖNLENDİRMELERİ GÖRMEDİĞİMİZ TEKRAR AYNI MENUYU KULLANICININ KARSISINA CIKARTMAYACAGIZ
+        //     4. SECENEK İÇERİSİNDE 0 BÖLENİ OLAMAZ KONTROLÜ YAPILACAK
+        //     UYGULAMA 1 KERE CALISACAK
+        //     HER İŞLEMDE KULLANICIDAN 2 SAYI İSTENECEK HANGİSİ SECİLİRSE BUNLAR ONA GÖRE İŞLEME GİRECEK
+             
+        //    */
+
+        //    #region Birinci Çözüm
+
+        //    ///* birinci çözüm de if içinde işlemleri yaptık */
+
+        //    //Console.WriteLine(" Hoşgeldiniz");
+        //    //Console.WriteLine(" 1 - Toplama");
+        //    //Console.WriteLine(" 2 - Çıkartma");
+        //    //Console.WriteLine(" 3 - Çarpma");
+        //    //Console.WriteLine(" 4 - Bölme");
+        //    //Console.Write(" Seçiniz : ");
+
+        //    //string secilenMenu = Console.ReadLine();
+
+        //    //if (secilenMenu == "1")
+        //    //{
+        //    //    Console.WriteLine("Toplanmasını istediğiniz 2 sayı giriniz : ");
+        //    //    Console.Write("1. sayı : ");
+        //    //    decimal toplaSayi1 = Convert.ToDecimal(Console.ReadLine());
+        //    //    Console.Write("2. sayı : ");
+        //    //    decimal toplaSayi2 = Convert.ToDecimal(Console.ReadLine());
+        //    //    Console.WriteLine("Toplama Sonucu " + (toplaSayi1 + toplaSayi2));
+
+        //    //}
+        //    //else if (secilenMenu == "2")
+        //    //{
+        //    //    Console.WriteLine("Çıkartılmasını istediğiniz 2 sayı giriniz : ");
+        //    //    Console.Write("1. sayı : ");
+        //    //    decimal cikartSayi1 = Convert.ToDecimal(Console.ReadLine());
+        //    //    Console.Write("2. sayı : ");
+        //    //    decimal cikartSayi2 = Convert.ToDecimal(Console.ReadLine());
+        //    //    Console.WriteLine("Çıkartma Sonucu " + (cikartSayi1 - cikartSayi2));
+
+        //    //}
+        //    //else if (secilenMenu == "3")
+        //    //{
+        //    //    Console.WriteLine("Çarpılmasını istediğiniz 2 sayı giriniz : ");
+        //    //    Console.Write("1. sayı : ");
+        //    //    decimal carpSayi1 = Convert.ToDecimal(Console.ReadLine());
+        //    //    Console.Write("2. sayı : ");
+        //    //    decimal carpSayi2 = Convert.ToDecimal(Console.ReadLine());
+        //    //    Console.WriteLine("Çarpma Sonucu " + (carpSayi1 * carpSayi2));
+
+        //    //}
+        //    //else if (secilenMenu == "4")
+        //    //{
+        //    //    Console.WriteLine("Bölünmesini istediğiniz 2 sayı giriniz : ");
+        //    //    Console.Write("Bölünecek Sayı : ");
+        //    //    decimal bolSayi1 = Convert.ToDecimal(Console.ReadLine());
+        //    //    Console.Write("Bölen Sayı : ");
+        //    //    decimal bolSayi2 = Convert.ToDecimal(Console.ReadLine());
+        //    //    if (bolSayi2 == 0)
+        //    //    {
+        //    //        Console.WriteLine("Bölen sayı sıfır olamaz!");
+        //    //        Console.WriteLine("Uygulama Sonu");
+        //    //    }
+        //    //    else
+        //    //    {
+        //    //        Console.WriteLine("Bölme Sonucu " + (bolSayi1 / bolSayi2));
+        //    //    }
+        //    //}
+        //    //else
+        //    //{
+        //    //    Console.WriteLine("Menude olmayan bir seçenek girdiniz! ");
+        //    //}
+
+        //    //Console.ReadLine();
+
+        //    #endregion
+
+        //    #region İkinci Çözüm Hocanın Çözümü
+
+        //    ///* 
+        //    //ikinci çözüm de aslında bütün seceneklerde kullanıcıdan 2 tane deger istiyoruz
+        //    //o zaman bunu bütün if içinde tekrar ktekrar yazmak yerine dısarıda degisken içine atalım
+        //    //if içinde sadece hesap kısımlarını yapalım
+        //    //*/
+
+        //    //Console.WriteLine(" Menü");
+        //    //Console.WriteLine(" 1 - Toplama");
+        //    //Console.WriteLine(" 2 - Çıkartma");
+        //    //Console.WriteLine(" 3 - Çarpma");
+        //    //Console.WriteLine(" 4 - Bölme");
+        //    //Console.Write(" Seçiniz : ");
+
+        //    //string kullaniciSecim = Console.ReadLine();
+
+        //    ///* buranın ayrı notu var notlarda yazdım */
+        //    //double sayi1 = 0;
+        //    //double sayi2 = 0;
+
+        //    ///* burda kullanıcıdan aldıgımız degeri once string tipinde degiskene atayıp sonradan tür donusumu yapıyoruz */
+
+        //    //if (kullaniciSecim == "1" || kullaniciSecim == "2" || kullaniciSecim == "3" || kullaniciSecim == "4")
+        //    //{
+        //    //    Console.Write("Birinci Sayıyı Giriniz : ");
+        //    //    string s1 = Console.ReadLine();
+        //    //    Console.Write("İkinci Sayıyı Giriniz : ");
+        //    //    string s2 = Console.ReadLine();
+
+        //    //    sayi1 = Convert.ToDouble(s1);
+        //    //    sayi2 = Convert.ToDouble(s2);
+        //    //}
+
+        //    ///*
+        //    //buradaki örnek ile birinci çözümdeki örnek aynı
+        //    //Console.ReadLine geriye string tipinde deger dönüyor üstüne gelince görürsün zaten
+        //    //kullanıcıdan deger isteyip direk hangi tipte degiskene atayacaksak ona cevirme yapıyoruz
+        //    //ayrı ayrı yazmaktan kurtulmus oluyoruz
+        //    //Console.Write("Birinci Sayıyı Giriniz : ");
+        //    //decimal dSayi1 = Convert.ToDecimal(Console.ReadLine());
+        //    //Console.Write("İkinci Sayıyı Giriniz : ");
+        //    //decimal dSayi2 = Convert.ToDecimal(Console.ReadLine());
+        //    //*/
+
+        //    //if (kullaniciSecim == "1")
+        //    //{
+        //    //    double toplamaSonuc = sayi1 + sayi2;
+        //    //    Console.Write("Toplama Sonucu : " + toplamaSonuc);
+
+        //    //}
+        //    //else if (kullaniciSecim == "2")
+        //    //{
+        //    //    double cikartmaSonuc = sayi1 - sayi2;
+        //    //    Console.Write("Çıkartma Sonucu : " + cikartmaSonuc);
+
+        //    //}
+        //    //else if (kullaniciSecim == "3")
+        //    //{
+        //    //    double carpmaSonuc = sayi1 * sayi2;
+        //    //    Console.Write("Çarpma Sonucu : " + carpmaSonuc);
+
+        //    //}
+        //    //else if (kullaniciSecim == "4")
+        //    //{
+        //    //    if (sayi2 == 0)
+        //    //    {
+        //    //        Console.WriteLine("Bölen sayı sıfır olamaz!");
+        //    //        Console.WriteLine("Uygulama Sonu");
+        //    //    }
+        //    //    else
+        //    //    {
+        //    //        double bolmeSonuc = sayi1 / sayi2;
+        //    //        Console.Write("Bölme Sonucu : " + bolmeSonuc);
+        //    //    }
+        //    //}
+        //    //else
+        //    //{
+        //    //    Console.WriteLine("Menude olmayan bir seçenek girdiniz! ");
+        //    //}
+
+        //    //Console.ReadLine();
+
+        //    #endregion
 
         //}
 
