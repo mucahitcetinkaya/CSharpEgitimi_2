@@ -345,6 +345,112 @@ namespace D_08_TemelKonularKosulIfadeleri
 
         #endregion
 
+        #region VİDEO 71
+
+        //static void Main(string[] args)
+        //{
+
+        //    /*
+            
+        //    VİDEO 71 Karar yapıları - Ödev 1
+
+        //    sistem içerisine giriş yapılabilecek kullanıcı kodları
+        //    ABC - 123 - 236 - CMK
+        //    kullanıcı girişiniz başarılı
+
+        //    sistem içerisine yasaklanmıs kullanıcı kodları
+        //    HHH - BBB - MMM
+        //    kullanıcı girişiniz kilitlenmiştir.
+
+        //    bunların dısında ise
+
+        //    hatalı kullanıcı kodu
+
+        //    */
+
+        //    Console.WriteLine("Kullanıcı adınızı giriniz : ");
+        //    string kullaniciKodu = Console.ReadLine();
+        //    kullaniciKodu = kullaniciKodu.ToUpper(); /* hepsi büyük harf */
+
+        //    /*
+        //    if (kullaniciKodu == "ABC")
+        //    {
+        //        Console.WriteLine("Kullanıcı girişiniz başarılı.");
+        //    }
+        //    else if (kullaniciKodu == "123")
+        //    {
+        //        Console.WriteLine("Kullanıcı girişiniz başarılı.");
+        //    }
+        //    else if (kullaniciKodu == "236")
+        //    {
+        //        Console.WriteLine("Kullanıcı girişiniz başarılı.");
+        //    }
+        //    else if (kullaniciKodu == "CMK")
+        //    {
+        //        Console.WriteLine("Kullanıcı girişiniz başarılı.");
+        //    }
+        //    else if (kullaniciKodu == "HHH")
+        //    {
+        //        Console.WriteLine("Kullanıcı girişiniz kilitlenmiştir.");
+        //    }
+        //    else if (kullaniciKodu == "BBB")
+        //    {
+        //        Console.WriteLine("Kullanıcı girişiniz kilitlenmiştir.");
+        //    }
+        //    else if (kullaniciKodu == "MMM")
+        //    {
+        //        Console.WriteLine("Kullanıcı girişiniz kilitlenmiştir.");
+        //    }
+        //    else
+        //    {
+        //        Console.WriteLine("Hatalı kullanıcı kodu !!!!! ");
+        //    }
+
+        //    Console.ReadLine();
+
+        //    Console.Clear();
+        //    */
+
+        //    /*
+        //    2.yol
+        //     VEYA OPERATÖRÜNDE 1 TANESİ DOGRUYSA BLOGUN DISINDAN DEVAM EDER
+        //    */
+
+            
+        //    if (kullaniciKodu == "ABC" || kullaniciKodu == "123" || kullaniciKodu == "CMK")
+        //    {
+        //        Console.WriteLine("Kullanıcı girişiniz başarılı.");
+        //    }
+        //    else if (kullaniciKodu == "HHH" || kullaniciKodu == "BBB" || kullaniciKodu == "MMM")
+        //    {
+        //        Console.WriteLine("Kullanıcı girişiniz kilitlenmiştir.");
+        //    }
+        //    else
+        //    {
+        //        Console.WriteLine("Hatalı kullanıcı kodu !!!!!! ");
+        //    }
+
+        //    Console.ReadLine();
+            
+
+        //    /*
+        //    NOT
+        //    kontrol etmek için breakpoint koyup sıra sıra bakabilirsin
+        //    mesela if in basına gri yere tıkla calıstır tek tek kontrol et true veya false dönüyor buna bakabilirsin
+        //    BUYUK KUCUK DUYARLILIGI VARDIR BUNU DA ENGELLEME YAPABİLİRİZ
+        //    HARFLERİN HEPSİ BUYUK YADA KUCUK YAZABİLİRİZ.
+        //    BUNUN İÇİN İF TEN ONCE STRİNG İN ALTINA
+        //    kullaniciKodu = kullaniciKodu.ToUpper();
+        //    yazarsak içine gelen değeri büyük yapar
+        //    kullaniciKodu = kullaniciKodu.ToLower();
+        //    yazarsak içine gelen değerin küçük yapar
+        //    */
+
+        //}
+
+        #endregion
+
+
 
 
     }
