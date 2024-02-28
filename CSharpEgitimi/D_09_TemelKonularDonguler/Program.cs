@@ -156,6 +156,37 @@ namespace D_09_TemelKonularDonguler
 
         #endregion
 
+        #region VİDEO 78
+
+        //static void Main(string[] args)
+        //{
+
+        //    /*
+            
+        //    VİDEO 78 For döngüsü - Ödev uygulaması - 1
+
+        //    Kullanıcı ekran üzerinden bir sayı girişi yapacak. Mesela 5 gibi
+        //    Girilen sayının faktöriyel hesabını yapıp ekrana sonucu yazdıracağız.
+             
+        //    */
+
+        //    Console.Write("Faktöriyel hesabı yapılmasını istediğiniz sayıyı giriniz : ");
+        //    int kullanicidanGelenDeger = Convert.ToInt32(Console.ReadLine());
+        //    int faktoriyelHesapla = 1;
+            
+        //    for (int i = kullanicidanGelenDeger; i > 1; i--)
+        //    {
+        //        faktoriyelHesapla *= i;
+        //    }
+
+        //    Console.WriteLine("{0} değerinin faktöriyel sonucu : {1}", kullanicidanGelenDeger, faktoriyelHesapla );
+        //    Console.ReadLine();
+
+        //}
+
+        #endregion
+
+
 
 
     }
