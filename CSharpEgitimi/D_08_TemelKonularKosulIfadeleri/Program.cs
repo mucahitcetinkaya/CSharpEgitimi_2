@@ -455,23 +455,23 @@ namespace D_08_TemelKonularKosulIfadeleri
         //static void Main(string[] args)
         //{
         //    /* 
-             
+
         //     VİDEO 72 Karar yapıları - Alıştırma 2
-             
+
         //     MENU
         //     1 - TOPLAMA
         //     2 - CIKARTMA
         //     3 - ÇARPMA
         //     4 - BÖLME
         //     SEÇİNİZ : _
-             
+
         //     KURALLAR 
         //     1 2 3 4 DIŞINDA BİR DEĞER GİRERSE GİRMİŞ OLDUĞUNUZ DEĞER HATALI DİYELİM VE SONLANDIRALIM
         //     BURDA HENUZ YÖNLENDİRMELERİ GÖRMEDİĞİMİZ TEKRAR AYNI MENUYU KULLANICININ KARSISINA CIKARTMAYACAGIZ
         //     4. SECENEK İÇERİSİNDE 0 BÖLENİ OLAMAZ KONTROLÜ YAPILACAK
         //     UYGULAMA 1 KERE CALISACAK
         //     HER İŞLEMDE KULLANICIDAN 2 SAYI İSTENECEK HANGİSİ SECİLİRSE BUNLAR ONA GÖRE İŞLEME GİRECEK
-             
+
         //    */
 
         //    #region Birinci Çözüm
@@ -632,6 +632,80 @@ namespace D_08_TemelKonularKosulIfadeleri
 
         #endregion
 
+        #region VİDEO 73
+
+        //static void Main(string[] args)
+        //{
+
+        //    /*
+            
+        //    VİDEO 73 Karar yapıları - Ödev 2
+
+        //    Not ortalama sistemine hoş geldiniz.
+        //    İsim ve Soyisim : Mücahit Çetinkaya
+        //    Not 1 : 50
+        //    Not 2 : 40
+        //    Not 3 : 60
+
+        //    Ortalama 45 değerinden küçük ise : KALDINIZ.
+        //    Ortalama 45 değerine eşit veya 70 değerinden küçük ise : Orta ile geçtiniz.
+        //    Ortalama 70 değerine eşit veya 90 değerinden küçük ise : İyi ile geçtiniz.
+        //    Ortalama 90 ile 100 arasında ise (100 dahil) : Başarılı tebrikler.
+        //    Ortalama değeri 100 den büyük ise : Notlarınızı kontrol ediniz. 
+             
+        //    */
+
+        //    Console.WriteLine("Not ortalama sistemine hoşgeldiniz...");
+
+        //    Console.Write("Öğrenci ismini giriniz : ");
+        //    string isim = Console.ReadLine();
+        //    Console.Write("Öğrenci Soyismini giriniz : ");
+        //    string soyIsim = Console.ReadLine();
+
+        //    Console.Write("Birinci notu giriniz : ");
+        //    decimal not1 = Convert.ToDecimal(Console.ReadLine());
+        //    Console.Write("İkinci notu giriniz : ");
+        //    decimal not2 = Convert.ToDecimal(Console.ReadLine());
+        //    Console.Write("Üçüncü notu giriniz : ");
+        //    decimal not3 = Convert.ToDecimal(Console.ReadLine());
+
+        //    decimal toplam = (not1 + not2 + not3);
+        //    decimal ortalama = toplam / 3;
+
+        //    /*
+        //     * kısa yol 
+        //    decimal ortalama = (not1 + not2 + not3) / 3;
+        //    */
+
+        //    Console.WriteLine($"1. not {not1} 2. not {not2} 3. not {not3} not toplamı {toplam} ortalama {ortalama} ");
+
+        //    if (ortalama < 45)
+        //    {
+        //        Console.WriteLine("Kaldınız.");
+        //    }
+        //    else if (ortalama >= 45 && ortalama < 70)
+        //    {
+        //        Console.WriteLine("Orta ile geçtiniz.");
+        //    }
+        //    else if (ortalama >= 70 && ortalama < 90)
+        //    {
+        //        Console.WriteLine("İyi ile geçtiniz.");
+        //    }
+        //    else if (ortalama >= 90 && ortalama <= 100)
+        //    {
+        //        Console.WriteLine("Başarılı.");
+        //    }
+        //    else
+        //    {
+        //        Console.WriteLine("Notlarınızı kontrol ediniz ortalamanız 100 den büyük.");
+        //    }
+
+        //    Console.WriteLine("Uygulama Sonu");
+        //    Console.ReadLine();
+
+        //}
+
+        #endregion
 
 
 
