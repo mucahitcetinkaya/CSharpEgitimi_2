@@ -638,7 +638,7 @@ namespace D_08_TemelKonularKosulIfadeleri
         //{
 
         //    /*
-            
+
         //    VİDEO 73 Karar yapıları - Ödev 2
 
         //    Not ortalama sistemine hoş geldiniz.
@@ -652,7 +652,7 @@ namespace D_08_TemelKonularKosulIfadeleri
         //    Ortalama 70 değerine eşit veya 90 değerinden küçük ise : İyi ile geçtiniz.
         //    Ortalama 90 ile 100 arasında ise (100 dahil) : Başarılı tebrikler.
         //    Ortalama değeri 100 den büyük ise : Notlarınızı kontrol ediniz. 
-             
+
         //    */
 
         //    Console.WriteLine("Not ortalama sistemine hoşgeldiniz...");
@@ -701,6 +701,62 @@ namespace D_08_TemelKonularKosulIfadeleri
         //    }
 
         //    Console.WriteLine("Uygulama Sonu");
+        //    Console.ReadLine();
+
+        //}
+
+        #endregion
+
+        #region VİDEO 74
+
+        //static void Main(string[] args)
+        //{
+
+        //    /*
+            
+        //    VİDEO 74 Karar yapıları - Alıştırma 3 (Ödev gibi yapmaya çalışabilirsiniz)
+
+        //    switchcase çalısması
+
+        //    SWİTCH KISA YOLU SW TAB TAB
+
+        //    kullanıcı kodu : 
+
+        //    kullanıcı kodu = AA - BB -- CC
+        //    ADMİN YETKİSİNE SAHİPSİNİZ
+        //    kullanıcı kodu = DD
+        //    GÜÇLÜ KULLANICI YETKİSİNE SAHİPSİNİZ
+        //    kullanıcı kodu = FF - EE - GG 
+        //    STANDART KULLANICI YETKİSİNE SAHİPSİNİZ
+
+        //    farklı bir giriş olursa : HATALI KULLANICI KODU
+             
+        //    */
+
+        //    Console.Write("Lütfen kullanıcı kodunuzu giriniz : ");
+
+        //    string kullaniciKodu = Console.ReadLine();
+
+        //    switch (kullaniciKodu)
+        //    {
+        //        case "AA": /* AYNI KODU YAZINCA HATA VERDİ */
+        //        case "BB":
+        //        case "CC":
+        //            Console.WriteLine("ADMİN YETKİSİNE SAHİPSİNİZ.");
+        //            break;
+        //        case "DD":
+        //            Console.WriteLine("GÜÇLÜ KULLANICI YETKİSİNE SAHİPSİNİZ.");
+        //            break;
+        //        case "FF":
+        //        case "EE":
+        //        case "GG":
+        //            Console.WriteLine("STANDART KULLANICI YETKİSİNE SAHİPSİNİZ.");
+        //            break;
+        //        default:
+        //            Console.WriteLine("HATALI KULLANICI KODU.");
+        //            break;
+        //    }
+
         //    Console.ReadLine();
 
         //}
