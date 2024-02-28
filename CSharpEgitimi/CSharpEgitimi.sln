@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D_07_TemelKonularOperatorKu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D_08_TemelKonularKosulIfadeleri", "D_08_TemelKonularKosulIfadeleri\D_08_TemelKonularKosulIfadeleri.csproj", "{79264305-F1E1-4227-B6E8-048D550E0ED1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D_09_TemelKonularDonguler", "D_09_TemelKonularDonguler\D_09_TemelKonularDonguler.csproj", "{45B8260E-DF56-42B7-A42C-A4747FAC28F0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{79264305-F1E1-4227-B6E8-048D550E0ED1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{79264305-F1E1-4227-B6E8-048D550E0ED1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{79264305-F1E1-4227-B6E8-048D550E0ED1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45B8260E-DF56-42B7-A42C-A4747FAC28F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45B8260E-DF56-42B7-A42C-A4747FAC28F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45B8260E-DF56-42B7-A42C-A4747FAC28F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45B8260E-DF56-42B7-A42C-A4747FAC28F0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
