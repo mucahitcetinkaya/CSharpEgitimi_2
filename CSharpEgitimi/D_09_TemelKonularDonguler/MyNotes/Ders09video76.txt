@@ -1,0 +1,79 @@
+﻿
+
+VİDEO 76 For döngüsü - Genel Kullanım
+
+Uygulamalarımızı yazarken aslında en çok kullandığımız sabit döngülerden biridir.
+
+Eğer istediğimiz işlemin tekrar sayısını biliyor isek for döngüsünü kullanabiliriz.
+
+Örnek olarak sol kısımda olan karikatürü incelersek öğrencinin sınıf içinde kağıt ile uçak yaptığını ve
+öğretmenininde ona ceza olarak 500 kere bir daha sınıfta kağıttan uçak yapmayacağım şekilde yazmasını istediğini görüyoruz.
+
+Burada adet 500 olarak sabit olduğu için for döngüsü kullanılmıştır.
+
+yazılan kod
+int count;
+for (count=1;count<=500;count++)
+  printf("i will not throw paper airplanes in class.");
+return 0 ;
+
+
+Genel Kullanımı
+
+For ( sayaç; şart; sayaç artış işlemi )
+{
+  Tekrar edilmesini istediğimiz kod
+}
+
+
+SAYAÇ DEDİĞİMİZ KISIM
+
+aslında istediğimiz sabit hedefe ulaşabileceğimiz index imizdir.
+o anda kaçıncı adımdaysak bize ilgili adeti veren kısım sayaçtır.
+count=1 olan kısım default değerine 1 demiş 1 den başla 
+
+ŞART 
+
+sabit olan şart kadılan kodta 500 olan kısımdır.
+count<=500 e demiş
+
+bu şart sağlanana kadar içerisindeki kod blogunu gerçekleştir diyoruz
+
+kodtaki kısmı yazı yazdırmak
+
+SAYAÇ ARTIŞ İŞLEMİ
+
+en sondaki ++ olan kısım
+count 500 olana kadar 
+bir arttır demek
+
+1 den başlayıp saymaya başlıyor yazıyor
+<=500 dedik oraya kadar gelecek
+500 oldugunda true döner yine yazar.
+501 <= olmadıgı için false alır
+işlemi bitirir.
+
+return 0; da tekrar sayısı
+
+/*
+            for döngüsü oluşturalım
+            for yazıp tab tab yapınca otomatik olusturdu
+            int değişken tipinde i adında içerisinde 0 değeri olan sayaç kısmı
+            0 default değeri saymaya 0 dan başla demiş oluyoruz.
+            i değişkeni 10 dan kucuk yada eşitse bu işlemi yap diyoruz şart kısmı
+            program buraya kadar geliyor kucuk yada eşit mi diye bakar true ise içindeki işlemi yapar
+            işlemi yaptıktan sonra i++ kısmı sayaç artış kısmı oluyor biz burda++ ile 1 arttır demişiz
+            illa++ veya 1 arttır dememiz gerekmiyor istediğimizi yazabiliriz.
+            sayaç artış kısmını okur tekrar eder şart sağlana kadar
+            şartımız 10 dan kucuk yada eşit 10 a eşit olunca yine yazdırır
+            11 olunca false verir yazdırmaz programı durdurur.
+            */
+
+            for (int i = 0; i <= 10; i++)
+            {
+                Console.WriteLine("Ben bir for döngüsüyüm.");
+            }
+
+            Console.ReadLine();
+
+*/
