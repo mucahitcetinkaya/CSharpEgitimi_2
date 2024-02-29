@@ -162,24 +162,92 @@ namespace D_09_TemelKonularDonguler
         //{
 
         //    /*
-            
+
         //    VİDEO 78 For döngüsü - Ödev uygulaması - 1
 
         //    Kullanıcı ekran üzerinden bir sayı girişi yapacak. Mesela 5 gibi
         //    Girilen sayının faktöriyel hesabını yapıp ekrana sonucu yazdıracağız.
-             
+
         //    */
 
         //    Console.Write("Faktöriyel hesabı yapılmasını istediğiniz sayıyı giriniz : ");
         //    int kullanicidanGelenDeger = Convert.ToInt32(Console.ReadLine());
         //    int faktoriyelHesapla = 1;
-            
+
         //    for (int i = kullanicidanGelenDeger; i > 1; i--)
         //    {
         //        faktoriyelHesapla *= i;
         //    }
 
         //    Console.WriteLine("{0} değerinin faktöriyel sonucu : {1}", kullanicidanGelenDeger, faktoriyelHesapla );
+        //    Console.ReadLine();
+
+        //}
+
+        #endregion
+
+        #region VİDEO 79
+
+        //static void Main(string[] args)
+        //{
+
+        //    /*
+            
+        //        VİDEO 79 For döngüsü - Sonsuz döngü yapılması - Break - Continue Anahtar Kelimeleri
+            
+        //    */
+
+        //    /*
+             
+        //      1 . çalışma kodu anlatımı notlarda var
+
+        //    for (; ; )
+        //    {
+        //        Console.WriteLine("Ben for sonsuz döngüsüyem!");
+        //    }
+
+        //    */
+
+
+        //    /*
+             
+        //      2 . çalışma kodu anlatımı notlarda var
+
+        //    int sayac = 0;
+        //    for (; ; )
+        //    {
+        //        sayac++;
+        //        if (sayac == 2)
+        //            break;
+        //        // continue anahtar kelimesi
+
+        //        Console.WriteLine(sayac);
+
+        //        Console.WriteLine("Ben for sonsuz döngüsüyem!");
+        //    }
+
+        //    */
+
+
+
+        //    /*
+             
+        //      3. çalışma kodu anlatımı notlarda var
+
+        //    int sayac = 0;
+        //    for (; ; )
+        //    {
+        //        sayac++;
+        //        if (sayac == 2)
+        //            continue;
+
+        //        Console.WriteLine(sayac);
+
+        //        Console.WriteLine("Ben for sonsuz döngüsüyem!");
+        //    }
+            
+        //    */
+
         //    Console.ReadLine();
 
         //}
