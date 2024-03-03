@@ -259,13 +259,13 @@ namespace D_09_TemelKonularDonguler
         //static void Main(string[] args)
         //{
         //    /*
-             
+
         //     VİDEO 80 İç içe for döngüsü kullanımı
-             
+
         //    */
 
         //    /*
-           
+
         //      anlatımı notlarda var
 
         //    */
@@ -285,6 +285,73 @@ namespace D_09_TemelKonularDonguler
         //}
 
         #endregion
+
+        #region VİDEO 81
+
+        //static void Main(string[] args)
+        //{
+
+        //    /*
+           
+        //      VİDEO 81 İç İçe For Döngüsü Kullanımı - Ödev Uygulaması - 2
+           
+        //      ödev çarpım tablosu
+
+        //      1 * 1 = 1
+        //      1 * 2 = 2
+        //      1 * 3 = 3
+        //      1 * 4 = 4
+        //      1 * 5 = 5
+        //      1 * 6 = 6
+        //      1 * 7 = 7
+        //      1 * 8 = 8
+        //      1 * 9 = 9
+        //      1 * 10 = 10
+
+        //    */
+
+
+        //    for (int i = 1; i <= 10; i++)
+        //    {
+        //        Console.WriteLine($"1 * {i} = " + (1 * i));
+        //    }
+
+
+        //    for (int i = 1; i <= 10; i++)
+        //    {
+        //        for (int j = i; j <= i; j++)
+        //        {
+        //            Console.WriteLine($"{i} * {j} = " + (i * j));
+        //        }
+        //    }
+
+
+        //    for (int i = 1; i <= 10; i++)
+        //    {
+        //        for (int j = 1; j <= 10; j++)
+        //        {
+        //            int sonuc = i * j;
+        //            Console.Write($"{j}*{i}={sonuc}\t");
+
+        //            /*
+                    
+        //             2. çözüm alt alta sıralama
+                    
+        //             Console.WriteLine($"{i} * {j} = " + (i * j));
+
+        //            */
+
+        //        }
+
+        //        Console.WriteLine();
+        //    }
+
+        //    Console.ReadLine();
+
+        //}
+
+        #endregion
+
 
 
 
