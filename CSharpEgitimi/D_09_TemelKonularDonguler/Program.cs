@@ -192,13 +192,13 @@ namespace D_09_TemelKonularDonguler
         //{
 
         //    /*
-            
+
         //        VİDEO 79 For döngüsü - Sonsuz döngü yapılması - Break - Continue Anahtar Kelimeleri
-            
+
         //    */
 
         //    /*
-             
+
         //      1 . çalışma kodu anlatımı notlarda var
 
         //    for (; ; )
@@ -210,7 +210,7 @@ namespace D_09_TemelKonularDonguler
 
 
         //    /*
-             
+
         //      2 . çalışma kodu anlatımı notlarda var
 
         //    int sayac = 0;
@@ -231,7 +231,7 @@ namespace D_09_TemelKonularDonguler
 
 
         //    /*
-             
+
         //      3. çalışma kodu anlatımı notlarda var
 
         //    int sayac = 0;
@@ -245,7 +245,7 @@ namespace D_09_TemelKonularDonguler
 
         //        Console.WriteLine("Ben for sonsuz döngüsüyem!");
         //    }
-            
+
         //    */
 
         //    Console.ReadLine();
@@ -254,6 +254,37 @@ namespace D_09_TemelKonularDonguler
 
         #endregion
 
+        #region VİDEO 80
+
+        //static void Main(string[] args)
+        //{
+        //    /*
+             
+        //     VİDEO 80 İç içe for döngüsü kullanımı
+             
+        //    */
+
+        //    /*
+           
+        //      anlatımı notlarda var
+
+        //    */
+
+        //    for (int i = 1; i <= 20; i++)
+        //    {
+        //        for (int j = 1; j <= i; j++)
+        //        {
+        //            Console.Write("*");
+        //        }
+        //        Console.WriteLine();
+
+        //    }
+
+        //    Console.ReadLine();
+
+        //}
+
+        #endregion
 
 
 
