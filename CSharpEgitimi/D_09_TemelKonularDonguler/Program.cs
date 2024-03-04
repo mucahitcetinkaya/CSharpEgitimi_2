@@ -416,6 +416,79 @@ namespace D_09_TemelKonularDonguler
 
         #endregion
 
+        #region VİDEO 84
+
+        //static void Main(string[] args)
+        //{
+
+        //    /*
+             
+        //    Bölüm 9 VİDEO 84 While döngüsü - Örnek uygulama serisi - ( 2 farklı örnek uygulama içerir )
+             
+        //    */
+
+        //    /*
+             
+        //    Çalışma 1
+        //    Kullanıcıdan gelen sayısal değere göre ekrana 1 eksilterek 0 değerine ulaşıncaya kadar ekrana yazdıralım
+        //    mesela ekrana 3 yazdık
+        //    3 2 1 0 olacak
+
+        //    notlarda anlatımı var
+             
+        //    */
+
+            
+        //    Console.Write("Sayı giriniz : ");
+        //    int kullaniciGelen = Convert.ToInt32(Console.ReadLine());
+
+        //    while (kullaniciGelen != -1)
+        //    {
+        //        Console.WriteLine(kullaniciGelen);
+        //        kullaniciGelen--;
+        //    }
+            
+
+        //    /*--------------------------------------------------------------------------------------------*/
+
+        //    /*
+             
+        //    Çalışma 2
+        //    Kullanıcıdan gelen değerlerin toplamını ekrana yazdıralım.
+        //    0 dan küçük bir değer girişi yapılırsa yani -1 mesela
+        //    toplama işlemini bitirelim ve ekrana toplam sonucu yazalım
+
+        //    notlarda anlatımı var            
+            
+        //    */
+
+        //    Console.WriteLine(" Lütfen toplamak istediğiniz sayıları giriniz : ");
+        //    Console.WriteLine(" Not -1 değeri işlemleri durdurur. ");
+
+        //    int toplamDeger = 0;
+
+        //    while (true)
+        //    {
+        //        string kullaniciGelenDegerString = Console.ReadLine();
+        //        int kullaniciGelenDegerInt = Convert.ToInt32(kullaniciGelenDegerString);
+        //        if (kullaniciGelenDegerInt < 0)
+        //        {
+        //            break;
+        //        }
+        //        else
+        //        {
+        //            toplamDeger = toplamDeger + kullaniciGelenDegerInt;
+        //        }
+        //    }
+
+        //    Console.WriteLine("Toplam Değer : {0}", toplamDeger);
+
+        //    Console.ReadLine();
+
+        //}
+
+        #endregion
+
 
 
 
