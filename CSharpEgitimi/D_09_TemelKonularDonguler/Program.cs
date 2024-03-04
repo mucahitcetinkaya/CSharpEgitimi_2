@@ -383,6 +383,41 @@ namespace D_09_TemelKonularDonguler
 
         #endregion
 
+        #region VİDEO 83 
+
+        //static void Main(string[] args)
+        //{
+
+        //    /*
+
+        //     Bölüm 9 VİDEO 83 While Döngüsü Genel Kullanım
+
+        //     ANLATIMI NOTLARDA VAR
+
+        //    */
+
+
+        //    /*
+
+        //    Örnek Kullanım 1 : Ekrana 1 - 10 a kadar sayıların değerlerini yazdıralım 
+
+        //     */
+
+        //    int sayac = 1;
+        //    while (sayac <= 10)
+        //    {
+        //        Console.WriteLine(sayac);
+        //        sayac++;
+
+        //    }
+        //    Console.ReadLine();
+
+        //}
+
+        #endregion
+
+
+
 
     }
 }
