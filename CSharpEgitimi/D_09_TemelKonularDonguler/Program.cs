@@ -422,23 +422,23 @@ namespace D_09_TemelKonularDonguler
         //{
 
         //    /*
-             
+
         //    Bölüm 9 VİDEO 84 While döngüsü - Örnek uygulama serisi - ( 2 farklı örnek uygulama içerir )
-             
+
         //    */
 
         //    /*
-             
+
         //    Çalışma 1
         //    Kullanıcıdan gelen sayısal değere göre ekrana 1 eksilterek 0 değerine ulaşıncaya kadar ekrana yazdıralım
         //    mesela ekrana 3 yazdık
         //    3 2 1 0 olacak
 
         //    notlarda anlatımı var
-             
+
         //    */
 
-            
+
         //    Console.Write("Sayı giriniz : ");
         //    int kullaniciGelen = Convert.ToInt32(Console.ReadLine());
 
@@ -447,19 +447,19 @@ namespace D_09_TemelKonularDonguler
         //        Console.WriteLine(kullaniciGelen);
         //        kullaniciGelen--;
         //    }
-            
+
 
         //    /*--------------------------------------------------------------------------------------------*/
 
         //    /*
-             
+
         //    Çalışma 2
         //    Kullanıcıdan gelen değerlerin toplamını ekrana yazdıralım.
         //    0 dan küçük bir değer girişi yapılırsa yani -1 mesela
         //    toplama işlemini bitirelim ve ekrana toplam sonucu yazalım
 
         //    notlarda anlatımı var            
-            
+
         //    */
 
         //    Console.WriteLine(" Lütfen toplamak istediğiniz sayıları giriniz : ");
@@ -489,8 +489,123 @@ namespace D_09_TemelKonularDonguler
 
         #endregion
 
+        #region VİDEO 85
+
+        static void Main(string[] args)
+        {
+
+            /*
+             
+            Bölüm 9 VİDEO 85 While döngüsü - Ödev uygulaması - 1
+             
+            */
+
+            /*
+             
+            Ödev 1
+            Sistemin çalışma zamanında oluşturduğu 1 ile 10 arasındaki bir değeri kullanıcının
+            tahmin etmesini isteyecek bir uygulama yazalım
+            en sonda da bilinirse eger su kadar denemede bildiniz gibi bir yazı yazalım
+            
+            */
+
+            /*
+             
+            1.çözüm
+            burda direk kullanıcıdan gelen degeri int e cevirmiş olduk
+            
+            */
+
+            int sistemUretSayi1 = 0;
+            int tahminAdet1 = 1;
+            Random rnd1 = new Random();
+            sistemUretSayi1 = rnd1.Next(1, 3);
+
+            while (true)
+            {
+                Console.Write(tahminAdet1 + " . denemeniz tahmin giriniz : ");
+                int rndKullaniciGelenInt1 = Convert.ToInt32(Console.ReadLine());
+                if (rndKullaniciGelenInt1 == sistemUretSayi1)
+                {
+                    tahminAdet1++;
+                    Console.WriteLine(tahminAdet1 + " . denemede doğru tahmin ettiniz. Tebrikler...");
+                    break;
+                }
+                else
+                {
+                    Console.Clear();
+                    Console.WriteLine(tahminAdet1 + " . denemeniz yanlış tahmin tekrar deneyiniz. Tahmin Giriniz : ");
+                    tahminAdet1++;
+                }
+                Console.ReadLine();
+            }
 
 
+            /*
+            
+            2.çözüm
+            readline ile string üzerine alıp sonradan int e ceviriyoruz
+            ek bir satır daha giriyor araya
 
+            */
+
+            int sistemUretSayi2 = 0;
+            int tahminAdet2 = 1;
+            Random rnd2 = new Random();
+            sistemUretSayi2 = rnd2.Next(1, 3);
+
+            while (true)
+            {
+                Console.Write(tahminAdet2 + " . denemeniz tahmin giriniz : ");
+                string rndKullaniciGelen2 = Console.ReadLine();
+                int rndKullaniciGelenInt2 = int.Parse(rndKullaniciGelen2);
+                if (rndKullaniciGelenInt2 == sistemUretSayi2)
+                {
+                    tahminAdet2++;
+                    Console.WriteLine(tahminAdet2 + " . denemede doğru tahmin ettiniz. Tebrikler...");
+                    break;
+                }
+                else
+                {
+                    Console.Clear();
+                    Console.WriteLine(tahminAdet2 + " . denemeniz yanlış tahmin tekrar deneyiniz. Tahmin Giriniz : ");
+                    tahminAdet2++;
+                }
+                Console.ReadLine();
+            }
+
+            /*
+            
+            3.çözüm
+            if parantez içi değişik sadece notlarda anlatımı var
+            int cevirme olayını satırda değil de if içinde yapıyoruz
+            
+            */
+
+            int sistemUretSayi3 = 0;
+            int tahminAdet3 = 1;
+            Random rnd3 = new Random();
+            sistemUretSayi3 = rnd3.Next(1, 3);
+
+            while (true)
+            {
+                Console.WriteLine(tahminAdet3 + " . denemeniz tahmin giriniz : ");
+                string rndKullaniciGelen3 = Console.ReadLine();
+                if (int.Parse(rndKullaniciGelen3) == sistemUretSayi3)
+                {
+                    tahminAdet3++;
+                    Console.WriteLine(tahminAdet3 + " . denemede doğru tahmin ettiniz. Tebrikler...");
+                    break;
+                }
+                else
+                {
+                    Console.Clear();
+                    Console.WriteLine(tahminAdet3 + " . denemeniz yanlış tahmin tekrar deneyiniz. Tahmin Giriniz : ");
+                    tahminAdet3++;
+                }
+                Console.ReadLine();
+            }
+        }
+        #endregion
     }
 }
