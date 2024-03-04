@@ -292,9 +292,9 @@ namespace D_09_TemelKonularDonguler
         //{
 
         //    /*
-           
+
         //      VİDEO 81 İç İçe For Döngüsü Kullanımı - Ödev Uygulaması - 2
-           
+
         //      ödev çarpım tablosu
 
         //      1 * 1 = 1
@@ -334,9 +334,9 @@ namespace D_09_TemelKonularDonguler
         //            Console.Write($"{j}*{i}={sonuc}\t");
 
         //            /*
-                    
+
         //             2. çözüm alt alta sıralama
-                    
+
         //             Console.WriteLine($"{i} * {j} = " + (i * j));
 
         //            */
@@ -352,7 +352,36 @@ namespace D_09_TemelKonularDonguler
 
         #endregion
 
+        #region VİDEO 82
 
+        //static void Main(string[] args)
+        //{
+
+        //    /*
+
+        //    Bölüm 9 VİDEO 82 Foreach Döngüsü
+
+        //    */
+
+        //    /*
+
+        //    notlarda anlatımı var
+
+        //    */
+
+        //    string[] isimler = new[] { "Mücahit", "Muhammet", "Çetinkaya", "Arden", "Arthur", "Zayn" };
+
+        //    foreach (string item in isimler)
+
+        //    {
+        //        Console.WriteLine(item);
+        //    }
+
+        //    Console.ReadLine();
+
+        //}
+
+        #endregion
 
 
     }
