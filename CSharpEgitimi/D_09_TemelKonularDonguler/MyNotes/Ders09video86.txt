@@ -1,0 +1,33 @@
+﻿
+
+Bölüm 9 VİDEO 86 DO WHILE Döngüsü - Genel Kullanımı
+
+
+while (true)
+{
+	while içindeki şartımız true ise içindeki kodlar calısacaktır
+	while içindeki şartımız false ise içindeki kodlara girmez çalışmaz
+}
+do while dongusu
+
+yazım şekli
+
+do
+{
+} while (true);
+
+burada while ın aşagıda oldugunu üzerinde do blogunun oldugunu görebilirsiniz.
+do while ın ozelliği
+şartımız ne olursa olsun
+ÖNCELİKLE BİR KERE CALISTIR
+do	DO BÖLUMUNE GİRER
+	İÇERİNDEKİ KODU YAPAR BURADA KONSOLE MERHABA DO WHİLE YAZDIRIR
+	SONRA ŞARTA BAKAR
+	ŞART DOGRUYSA TEKRAR EDER DEĞİLSE ORADA BİTER.
+{
+	Console.WriteLine("MERHABA DO WHİLE");
+} while (1==2); // BURASI DEFAULT OLARAK TRUE GELİR
+
+1 EŞİT İSE 2 E DİYORSUN BURDA EŞİT OLMADIGI İÇİN WHİLE A GİRMEZ
+EGER 1 == 1 OLSA TEKRAR TEKRAR GİRERDİ
+DO WHİLE DE ŞART NE OLURSA OLSUN 1 KERE YAPIYOR
