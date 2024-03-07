@@ -1,0 +1,42 @@
+﻿
+
+Bölüm 11 Koleksiyonlar VİDEO 95 Bilgilendirme
+
+
+Diziler bölümünde öğrenmiş olduğumuz konuların bir seviye üstü diyebileceğimiz koleksiyonlar ile çalışmaya başlayalım.
+
+Koleksiyonlar 2 ye ayrılıyor
+
+1 Standart Koleksiyonlar
+2 Generic Koleksiyonlar
+
+suanda generic kavramını görmediğimiz için standart koleksiyonları göreceğiz
+
+Diziler bölümünde aynı veri tipinde olan değerler ile beraber nasıl çalışacağımızı belirli bir limitinin oldugunu
+limiti dolduktan sonra herhangi bir esnemenin arttırmanın standartta olamadıgını yeni bir dizi tanımlamak gerektiğini yani
+daha bütük bir dizi tanımlamak gerekiyor ve var olan elemanları diger diziye aktarmak gerekiyor boylece dizinin boyutunu
+büyütebiliriz ama cok zahmetli bir iş oldugu için kullanılmamakta bunları inceledik ve
+diziler için koleksiyonların atası diyebiliriz demiştik.
+
+Koleksiyonlar adını vermiş olduğumuz bu bölüm içerisinde güncel yazım tekniklerine daha yakın olan konuları inceliyor olacağız.
+
+ArrayList
+HastTable
+SortedList
+Stack
+Queue
+
+Bu seviyede öğreneceğimiz koleksiyonlar değer olarak object veri tipinden değerleri kabul ettikleri için ve .net framework alt yapısındaki
+tüm class lar object class ından türetildiği için ( bu kısmı kalıtım konusunu ilerleyen bölümlerde göreceğiz )
+tüm veri tiplerini alan bir yapıya sahiptir.
+
+hatta bu işlemi boxing unboxing işlemi olarakta tanımlayabilirsiniz.
+
+Koleksiyon tanımlamalarında dizilerde oldugu gibi bir eleman sınırı olmaz hatırlarsanız diziler kısmında 10 elemanlı bir dizi tanımladıgımız
+zaman 11. elemanı ekleyebilmemiz mümkün değildi.
+
+Koleksiyonlar kapasiteleri doldugu zaman otomatik olarak içerisindeki mevcut kapasitesini arttırırlar.
+
+Generic yapıları incelediğimiz zaman koleksiyonların generic versiyonlarını inceleyeceğiz.
+
+Fakat diziler konusunda oldugu gibi bu bölümü atlamadan izlemeye ve gelişiminizi kademeli ve dogru bir şekilde yapınız.
