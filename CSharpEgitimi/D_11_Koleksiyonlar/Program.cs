@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -652,6 +653,171 @@ namespace D_11_Koleksiyonlar
         //    A1.Add("Arden");
 
         //    object[] D1 = A1.ToArray();
+
+        //}
+
+        #endregion
+
+        #region VİDEO 97 ArrayList Ödev
+
+        //static void Main(string[] args)
+        //{
+
+        //    /*
+
+        //     Bölüm 11 Koleksiyonlar VİDEO 97 ArrayList Ödev
+
+        //    */
+
+        //    /*
+
+        //    Ödev açıklaması
+        //    Konsolda bir menü tasarımı yapılacak
+        //    Menü
+        //    1 - Değer Ekle
+        //    2 - Değer Listele
+        //    3 - Değer Ara
+        //    4 - Değer Düzenle
+        //    5 - Değer Sil
+        //    6 - Uygulama Çıkış
+        //    Seçiniz :
+
+        //    Yeni bir arraylist olusturulacak
+        //    kullanıcıdan gelen degere göre switch case kontrol edilecek
+        //    uygulama durmadan dönecek ekle sil ara vs gibi
+        //    sadece 6 ya basılırsa uygulamadan cıkacak
+        //    1 dedi mesela deger eklenecek tekrar dönecek
+        //    2 dedi listeleme yapacak gibi
+
+        //    ip ucu olarak burda sonsuz döngü olmayacak do while kullanacagız once seçimi yapıp sonra secimin sonucuna göre işlem yapılacak
+
+        //    programın beklemesını saglayacak 2 saniye
+        //                System.Threading.Thread.Sleep(2000);
+
+
+        //    */
+
+
+        //    ArrayList degerListesi = new ArrayList();
+        //    degerListesi.Add(1);
+        //    degerListesi.Add(2);
+        //    degerListesi.Add(3);
+        //    degerListesi.Add(4);
+        //    degerListesi.Add(5);
+        //    degerListesi.Add("Muhammet");
+        //    degerListesi.Add("Mücahit");
+        //    degerListesi.Add("Çetinkaya");
+        //    degerListesi.Add("Arden");
+        //    degerListesi.Add("Zayn");
+        //    degerListesi.Add("Arthur");
+
+
+        //    degerListesi[3] = "10";
+
+        //    string kullaniciGiris = string.Empty;
+
+        //    do
+        //    {
+        //        Console.Clear();
+        //        Console.WriteLine("Menü");
+        //        Console.WriteLine("1 - Değer Ekle");
+        //        Console.WriteLine("2 - Değer Listele");
+        //        Console.WriteLine("3 - Değer Ara");
+        //        Console.WriteLine("4 - Değer Düzenle");
+        //        Console.WriteLine("5 - Değer Sil");
+        //        Console.WriteLine("6 - Uygulama Çıkış");
+        //        Console.Write("Seçiniz : ");
+
+        //        kullaniciGiris = Console.ReadLine();
+
+
+        //        switch (kullaniciGiris)
+        //        {
+        //            case "1":
+        //                Console.Write("Eklemek istediğiniz değeri giriniz : ");
+        //                string kullaniciEklenenDeger = Console.ReadLine();
+        //                degerListesi.Add(kullaniciEklenenDeger);
+        //                Console.Write("Değeriniz başarılı bir şekilde eklendi : ");
+        //                System.Threading.Thread.Sleep(2000);
+        //                break;
+        //            case "2":
+        //                for (int i = 0; i < degerListesi.Count; i++)
+        //                {
+        //                    Console.WriteLine("{0}. Değer = {1}", i, degerListesi[i]);
+        //                }
+        //                Console.WriteLine("Devam etmek için bir tuşa basınız.");
+        //                Console.ReadLine();
+        //                break;
+        //            case "3":
+        //                Console.Write("Aramak istediğiniz değeri giriniz : ");
+        //                string kullaniciArananDeger = Console.ReadLine();
+        //                bool arananSonuc = degerListesi.Contains(kullaniciArananDeger);
+        //                if (arananSonuc)
+        //                {
+        //                    int bulunanIndex = degerListesi.IndexOf(kullaniciArananDeger);
+        //                    string bulunanDeger = degerListesi[bulunanIndex].ToString();
+        //                    Console.Write($"Aranan veri {kullaniciArananDeger} koleksiyon içinde bulunuyor.");
+        //                    Console.WriteLine($"Değeriniz bulundu index sırası {bulunanIndex} bulunan değer {bulunanDeger}");
+        //                }
+        //                else
+        //                {
+        //                    Console.WriteLine("Aradığınız kriterlerde bir değer bulunamadı.");
+        //                    /*
+        //                     Eğer aradığı kriterlerde değer bulunamadıysa kullanıcıya bu değeri listeye ekleyelim mi olarak sorun
+        //                     eğer kullanıcı evet derse ekleyin hayır derse devam edin.                            
+        //                     */
+        //                }
+        //                System.Threading.Thread.Sleep(2000);
+        //                break;
+        //            case "4":
+        //                Console.WriteLine("Güncellemek istediğiniz değeri giriniz : ");
+        //                string kullaniciDuzenlenecekDeger = Console.ReadLine();
+
+        //                Console.WriteLine("{0} Değerini hangi değer ile güncellemek istiyorsunuz : ", kullaniciDuzenlenecekDeger);
+        //                string kullaniciYeniDeger = Console.ReadLine();
+        //                if (degerListesi.Contains(kullaniciDuzenlenecekDeger))
+        //                {
+        //                    int kullaniciHedefIndex = degerListesi.IndexOf(kullaniciDuzenlenecekDeger);
+        //                    degerListesi[kullaniciHedefIndex] = kullaniciYeniDeger;
+        //                    Console.WriteLine("Değeriniz güncellendi.");
+        //                }
+        //                else
+        //                {
+        //                    Console.WriteLine("Aradığınız değer liste içerisinde bulunamadı.");
+        //                }
+        //                System.Threading.Thread.Sleep(2000);
+
+        //                break;
+        //            case "5":
+        //                Console.WriteLine("Tüm değerleri mi silmek istiyorsunuz : (E/N)");
+        //                string kullaniciSilCevap = Console.ReadLine();
+
+        //                if (kullaniciSilCevap.ToLower() == "E")
+        //                {
+        //                    degerListesi.Clear();
+        //                    Console.WriteLine("Tüm değerler silindi.");
+        //                }
+        //                else
+        //                {
+        //                    Console.WriteLine("Liste içerisinde silmek istediğiniz değeri giriniz : ");
+        //                    string kullaniciSilDeger = Console.ReadLine();
+        //                    if (degerListesi.Contains(kullaniciSilDeger))
+        //                    {
+        //                        degerListesi.Remove(kullaniciSilDeger);
+        //                        Console.WriteLine("Değeriniz silindi.");
+        //                    }
+        //                    else
+        //                    {
+        //                        Console.WriteLine("Silmek istediğiniz değer liste içerisinde mevcut değil.");
+        //                    }
+        //                }
+        //                break;
+        //            case "6":
+        //                break;
+        //            default:
+        //                break;
+        //        }
+        //    } while (kullaniciGiris != "6");
 
         //}
 
