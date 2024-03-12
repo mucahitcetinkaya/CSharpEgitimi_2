@@ -823,6 +823,109 @@ namespace D_11_Koleksiyonlar
 
         #endregion
 
+        #region VİDEO 98
+
+        //static void Main(string[] args)
+        //{
+        //    /*
+             
+        //    Bölüm 11 Koleksiyonlar VİDEO 98 Hashtable Nedir 
+             
+             
+        //    */
+
+        //    /*
+             
+        //    Hashtable notları 
+             
+        //    Hashtable System.Collection kutuphanesinde bulunmakta 
+        //    kırmızı olursa eger yukarıya ekleme yapman lazım ctrl+. a basarsan da gelir
+
+        //    ht lar class lardan beslendıgı için new lemen lazım
+
+        //    Hashtable H1 = new Hashtable();
+
+        //    ht lar kendını key ve value ile beslerler
+            
+        //    H1.Add( yaptıgında cıkan yardımcı ekranda görebilirsin key ve value istediğini
+        //    key degerleri ht lar içinde benzersiz olmak zorunda
+        //    value degerleri için bu konu geçerli degil
+
+        //    key degerleri liste içinde dataya ulasmak için kullanacagımız anahtar kelimelerdir.
+
+        //    zaten ht ların amacı bir anahtar kelimeyi bir data ya baglayabilmektir.
+
+        //    Car ile Arabayı House ile Ev i tutuyor
+        //    H1.Add("Car","Araba");
+        //    H1.Add("House","Ev");
+
+
+        //    Key farklı ama Value aynı olsada sorun olmuyor
+        //    H1.Add("Cars", "Araba");
+            
+        //    Burda uygulama bize hata veriyor key degeri uniq olmalı kuralına takılıyoruz
+        //    H1.Add("Cars", "Arabalar");
+            
+
+
+        //    */
+
+        //    Hashtable H1 = new Hashtable();
+        //    H1.Add("Car","Araba");
+        //    H1.Add("House","Ev");
+
+        //    H1.Add("Cars", "Araba");
+
+        //    /*H1.Add("Cars", "Arabalar");*/
+
+
+        //    /* 
+              
+        //    Yardımcı Metotları 
+
+        //    Contains
+        //    bizden key degeri ister varsa true yoksa false döner
+             
+        //    ContainsKey yine key degerine bakıyor
+        //    ContainsValue value degerine bakar
+
+        //    Count ilgili koleksiyonda kac deger var görebiliriz for içinde de kullanılabilir
+
+        //    Romove key alır siler
+
+        //    CopyTo kopyalar
+
+        //    Clear geriye bişey dönmez void metotdur hepsini temizler
+        //    */
+
+        //    bool kontrol1 = H1.Contains("House");
+        //    bool kontrol2 = H1.Contains("Door");
+        //    bool kontrol3 = H1.ContainsKey("House");
+        //    bool kontrol4 = H1.ContainsValue("Araba");
+
+        //    int koleksiyonIcindekiToplamDeger = H1.Count;
+
+        //    /*
+             
+        //    Koleksiyon içindeki bir veriyi güncellemek için 
+             
+        //    h1 bizden key degeri istiyor index olarak alıyor
+        //    yazdıgın verinin value sunu guncelliyor
+        //    H1["House"] = "Villa";
+             
+        //    */
+
+        //    H1["House"] = "Villa";
+
+        //}
+
+        #endregion
+
+
+
+
+
+
 
 
 
