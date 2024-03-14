@@ -1163,7 +1163,51 @@ namespace D_11_Koleksiyonlar
 
         #endregion
 
+        #region VİDEO 102
 
+        //static void Main(string[] args)
+        //{
+
+        //    /*
+
+        //    Bölüm 11 Koleksiyonlar VİDEO 102 Queue Nedir
+
+        //    Queue de aynı stack gibi farkları
+        //    ilk giren ilk cıkıyor
+        //    first in first out
+
+        //    class oldugu için new lemen lazım
+
+        //    using System.Collections; kutuphanesi kullanıyor
+
+        //    eklemek için farklı metotlar var
+        //    q1.Enqueue kullanıyoruz
+
+        //    object O1 = q1.Peek();
+        //    object O2 = q1.Dequeue();
+
+        //    que den cıkartmak için Peek var bu obje dönuyor
+        //    Peek ilk giren degeri veriyor
+        //    ön izleme yapıyor listeden cıkartmadı
+
+        //    Dequeue de obje donuyor ilk degeri veriyor listeden cıkartıyor
+
+        //    */
+
+        //    Queue q1 = new Queue();
+        //    q1.Enqueue("Bir");
+        //    q1.Enqueue("İki");
+        //    q1.Enqueue("Üç");
+        //    q1.Enqueue("Dört");
+
+
+        //    object O1 = q1.Peek();
+        //    object O2 = q1.Dequeue();
+
+
+        //}
+
+        #endregion
 
 
     }
