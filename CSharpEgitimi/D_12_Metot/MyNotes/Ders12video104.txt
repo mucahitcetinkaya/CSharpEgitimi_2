@@ -1,0 +1,71 @@
+﻿
+Bölüm 12 Metot VİDEO 104 Bilgilendirme
+
+Bu bölümde metotları işleyeceğiz
+
+C# Programlama dilinde herşeyi unutun ama metot mantıgını unutmayın. Yoksa çok kod yazarsınız.
+
+Nesne yönelimli bir programala dili olan C# da her yaptıgımız aslında bir metotdur
+
+Metotlar
+
+C# programlama dilinde en önemli olan bir konu ile birlikteyiz
+Bu bölüm içerisinde anlatılan konuları yavaş ve dikkatli bir şekilde inlemenizi ve konuları anlayarak ilerlemenizi tavsiye ederim
+
+Dersler arasında olan ödevleri ve testleri atlamadan ilerlemeye çalışın.
+
+Bu bölüme kadar yazmıs oldugumuz tüm işlemlerimizi aslında bilinçsiz olarak bir metot içerisinde yaptık bu metotun adı main metotudur.
+
+static void Main(string[] args)
+{
+
+}
+
+static void string args köşeli parantezler süslü parantezler hepsini inceleyeceğiz
+
+main metodu konsol uygulamasının giriş metotudur
+
+
+Uygulamamızda iş yapan en temel parça tanımına metot adını veririz
+
+Merkezi olarak kod yazmamızı ve daha az kod ile daha yönetilebilir projeler olusturmamızı saglarlar
+
+Tek baslarına calısabilen yapılar değillerdir çalışmaları için uygulama içerisinde bir noktada çağrılması kullanılması gereklidir.
+
+
+Metotlar kullanımlarına göre aşağıdaki gibi çeşitlenebilirler.
+
+Herhangi bir değer almayan ve geriye herangi bir değer döndürmeyen yapılar
+
+Çalışabilmesi için kendisini çağıran yerden bazı değerler alan ve değerleri kullanarak bazı işlemler yapan yapılar.
+
+Çalışması için değer aldığı gibi değerin sonucunda kendisini çağıran noktaya dönen yapılar.
+
+
+Tek baslarına calısabilen yapılar değillerdir metotlar
+Metotlarımızı hazırlarız ihtiyacımız oldugu zaman uygulama içerisinde bir noktada
+yazmıs oldugumuz metotumuza bir class ın uzerınden erişip ilgili metoda
+istersek cagırıp kullanabiliriz metodun burda yapısı cok onemli
+istersek içerisine bir değer verir ilgili değer ile bir işlem yapıp bitirmesini saglayabiliriz
+istersen deger veririz işlem yaptırırız işlemın sonucunuda çağırmış oldugumuz program noktasında geri elde edebiliriz.
+
+
+
+C# programlama dili 100% nesne yönelimli yapıya uygun oldugu için içerisinde kullanılan tüm işlemler aslında bir nesnenin ve o nesneye ait olan bir metotun
+ürünü olarak karsımıza cıkmaktadır.
+
+Console.WriteLine("Merhaba");
+
+Kullanımda Console bir sınıfı temsil etmektedir. WriteLine bir metot bildirimidir parametre olarak ise bizden bir değer ister ve
+metot içerisinde vermiş oldugumuz değeri ekrana yazar.
+
+
+Mesela ReadLine kullanıcıdan bir deger alıyor almıs oldugu degeri string olarak gönderiyor
+ReadLine metotu da parametresel olarak yazılımsal bir parametre almaz kullanıcıdan bir değer bekler
+kullanıcıdan gelen degeri metotun cıkıs parametresi olarak
+
+INPUT X => FUNCTİON f: => OUTPUT f(x)
+
+output u temsil eder bize bildirir
+
+Şimdi C# ile metot yapılarını yazarak inceleyelim.
