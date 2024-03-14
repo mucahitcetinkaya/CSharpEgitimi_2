@@ -828,16 +828,16 @@ namespace D_11_Koleksiyonlar
         //static void Main(string[] args)
         //{
         //    /*
-             
+
         //    Bölüm 11 Koleksiyonlar VİDEO 98 Hashtable Nedir 
-             
-             
+
+
         //    */
 
         //    /*
-             
+
         //    Hashtable notları 
-             
+
         //    Hashtable System.Collection kutuphanesinde bulunmakta 
         //    kırmızı olursa eger yukarıya ekleme yapman lazım ctrl+. a basarsan da gelir
 
@@ -846,7 +846,7 @@ namespace D_11_Koleksiyonlar
         //    Hashtable H1 = new Hashtable();
 
         //    ht lar kendını key ve value ile beslerler
-            
+
         //    H1.Add( yaptıgında cıkan yardımcı ekranda görebilirsin key ve value istediğini
         //    key degerleri ht lar içinde benzersiz olmak zorunda
         //    value degerleri için bu konu geçerli degil
@@ -862,10 +862,10 @@ namespace D_11_Koleksiyonlar
 
         //    Key farklı ama Value aynı olsada sorun olmuyor
         //    H1.Add("Cars", "Araba");
-            
+
         //    Burda uygulama bize hata veriyor key degeri uniq olmalı kuralına takılıyoruz
         //    H1.Add("Cars", "Arabalar");
-            
+
 
 
         //    */
@@ -880,12 +880,12 @@ namespace D_11_Koleksiyonlar
 
 
         //    /* 
-              
+
         //    Yardımcı Metotları 
 
         //    Contains
         //    bizden key degeri ister varsa true yoksa false döner
-             
+
         //    ContainsKey yine key degerine bakıyor
         //    ContainsValue value degerine bakar
 
@@ -906,13 +906,13 @@ namespace D_11_Koleksiyonlar
         //    int koleksiyonIcindekiToplamDeger = H1.Count;
 
         //    /*
-             
+
         //    Koleksiyon içindeki bir veriyi güncellemek için 
-             
+
         //    h1 bizden key degeri istiyor index olarak alıyor
         //    yazdıgın verinin value sunu guncelliyor
         //    H1["House"] = "Villa";
-             
+
         //    */
 
         //    H1["House"] = "Villa";
@@ -921,11 +921,109 @@ namespace D_11_Koleksiyonlar
 
         #endregion
 
+        #region VİDEO 99
+
+        //static void Main(string[] args)
+        //{
+
+        //    /*
+
+        //    Bölüm 11 Koleksiyonlar VİDEO 99 Hashtable Ödev
+
+        //    Hashtable içerisine ENG - TR olarak data ekleyen uygulamayı yapacağız
+        //    ENG tarafını key TR tarafını value olarak saklayacagız
+
+        //    Yeni Kayıt eklemek istiyor musunuz (E/H) diye soracak
+        //    büyük küçük harf olmayacak hepsi büyük
+        //    E cevabı gelirse yeni kayıt eklemeye devam edecek
+        //    H cevabı gelirse tüm liseyi yazdıracak
+
+        //    var olan bir key değeri ekliyor ise kullanıcıya bu değer daha önceden .... şeklinde sistemimizde bulunmaktadır
+        //    yazması lazım
+
+        //    */
+
+        //    Hashtable sozlukVeriTabani = new Hashtable();
+
+        //    do
+        //    {
+        //        Console.Clear();
+        //        Console.WriteLine("Eklemek istediğiniz sözlük değerini yazınız : ");
+        //        Console.WriteLine("EN karşılığı : ");
+        //        string eng = Console.ReadLine();
+
+        //        bool kontrol = sozlukVeriTabani.ContainsKey(eng);
+        //        if (kontrol)
+        //        {
+        //            Console.WriteLine($"Eklemek istediğiniz değer {eng} sözlük içerisinde bulunmaktadır. {sozlukVeriTabani[eng].ToString()} değerin türkçe karşılığıdır.");
+        //        }
+        //        else
+        //        {
+        //            Console.WriteLine($"{eng} ingilizce değerinin türkçe karşılığını yazınız.");
+        //            string tr = Console.ReadLine();
+        //            sozlukVeriTabani.Add(eng, tr);
+        //            Console.WriteLine("Değer ekleme işlemi başarılı.");
+        //        }
+
+        //        Console.WriteLine("Yeni değer eklemek istiyor musunuz ? (E/H) ");
+
+
+
+        //    } while (Console.ReadLine().ToUpper() != "H");
+
+        //    /*
+
+        //    2 yöntem ile bunun içinde dönebiliriz
+        //    1. yöntem key veririz keylerine döneriz keylerini bize koleksiyon olarak veriyor
+
+
+
+        //    foreach (var item in sozlukVeriTabani.Keys)
+        //    {
+        //        Console.WriteLine("ENG : {0} = TR : {1}", item , sozlukVeriTabani[item]);
+        //    }
+
+        //     */
+
+        //    /*
+
+        //    2. yöntem
+
+        //    direk sozlukVeriTabani içinde doneriz ama
+        //    var yerine direk tipini yazmak veya foreach içinde tip dönüşümü yapmamız lazım
+        //    DictionaryEntry kullandık burda sebebi datanın karsılıgını almak
+
+        //    DictionaryEntry nerden geliyor onu anlatıyoruz burda
+        //    bir verinin tipinin ne döndüğünü bilmiyorsanız eğer
+
+        //    foreach (var item in sozlukVeriTabani)
+        //    {
+        //        Console.WriteLine(item.GetType().Name);
+        //    }
+
+        //    olarak tipini bulabilirsiniz
+
+        //    bazı veriler kapalı geliyor bizde bunların tipini bulmak zorunda kalıyoruz
+        //    var yazıyorken item gettype i kullanıyoruz
 
 
 
 
+        //    foreach (var item in sozlukVeriTabani)
+        //    {
+        //        Console.WriteLine(item.GetType().Name);
+        //    }
 
+        //    */
+
+        //    foreach (DictionaryEntry item in sozlukVeriTabani)
+        //    {
+        //        Console.WriteLine("ENG : {0} = TR : {1}", item.Key, item.Value);
+        //    }
+
+        //}
+
+        #endregion
 
 
 
