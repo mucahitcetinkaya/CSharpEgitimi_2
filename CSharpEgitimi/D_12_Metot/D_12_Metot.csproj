@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Matematik108.cs" />
     <Compile Include="Ogrenci106.cs" />
     <Compile Include="Ogrenci107.cs" />
     <Compile Include="Program.cs" />
@@ -52,6 +53,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="MyNotes\Ders12video108.txt" />
     <Content Include="MyNotes\Ders12video107.txt" />
     <Content Include="MyNotes\Ders12video106.txt" />
     <Content Include="MyNotes\Ders12video105.txt" />

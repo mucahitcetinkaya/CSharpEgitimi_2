@@ -197,6 +197,123 @@ namespace D_12_Metot
 
         #endregion
 
+        #region VİDEO 108
+
+        //static void Main(string[] args)
+        //{
+
+        //    /*
+
+        //    Bölüm 12 Metot VİDEO 108 Metot Uygulama - 1 : Matematiksel İşlemler
+
+        //    */
+
+        //    /*
+
+        //    Daha önceden yaptıgımız toplama cıkartma işlemlerini 
+        //    class acıp metotlastırarak yapmak istiyorum
+
+        //    bir class acalım Matematik108
+        //    gerekli eklemeleri yaptık 
+
+        //    Matematik108 den geldik
+
+        //    debug yaparsan eger aynı işlemler gidiyor okuyor geliyor vs
+
+        //    menu de secim yapmamızı istiyor
+        //    bunu ReadLine ile üzerine alacagız değiskenin
+        //    int kullaniciSecim olarak kullanıdan gelen degeri kayıt edecegım ama
+        //    ReadLine ile almam lazım şöyle bir durum var
+        //    ReadLine üzerine gelirsen eger tooltype de yazıyor string olarak geriye değer dönüyorum diyor
+
+        //    o zaman once tür dönüşümü yapıp sonra kayıt edecegiz geleni
+
+        //    int kullaniciSecim = Convert.ToInt32(Console.ReadLine());
+
+        //    burda kullanıcı bir secim yaptı o zaman hemen bir
+        //    switch case yapısı kuralım kullaniciSecim e bakacak
+        //    1 2 3 4 e basınca ne olacak ona göre karar verdirelim
+
+        //    bütün seçimlerde 2 deger isteyecek o zaman bunuda dısarıda isteyelim
+
+        //    kullanıcı rakam sayı yazmazsa abc gibi bir deger yazarsa ne olur
+        //    normalde bunları da kontrol etmemız lazım ama su anda biz 
+        //    kullanıcıdan gelen degerin dogru oldugunu kabul ediyoruz
+        //    yoksa try cash mekanizmalarımız var 
+        //    degere göre böyle davran diyebiliriz ileride göreceğiz
+
+        //    1 e basınca toplama işlemi yapacak
+        //    class içinden toplama metodunu cagırmak için
+        //    M1.ToplamaIslemi() ni cagırmamız lazım ve gerekli parametreleri vermemiz gerekiyor
+        //    parametleri de kullanıcıdan alıyoruz onları vereceğiz
+
+        //    ToplamaIslemi decimal deger istiyor 2 tane onları verdik
+        //    geriye de decimal dönüyor onuda decimal sonuc degiskenine atadık
+
+        //    bütün metotları hazırladık birde ekrana yazması için sonucları bunun için bir metot hazırlamak istiyorum
+        //    3 tane parametre isteyecek kullaniciSayi1 kullaniciSayi2 sonuc 
+
+        //    Matematik108 e dönelim
+
+        //    debug ta yaptık gerekli işleme gidiyor kullanıcıdan deger istiyor işlemi yapıp return ediyor ekrana basıyor vs
+        //    */
+
+
+        //    Matematik108 M1 = new Matematik108();
+
+        //    YenidenIslemYap:
+
+        //    M1.MenuHazirla();
+
+        //    int kullaniciSecim = Convert.ToInt32(Console.ReadLine());
+
+        //    Console.Write("Lütfen 1. sayı değerini giriniz : ");
+        //    decimal kullaniciSayi1 = Convert.ToDecimal(Console.ReadLine());
+        //    Console.Write("Lütfen 2. sayı değerini giriniz : ");
+        //    decimal kullaniciSayi2 = Convert.ToDecimal(Console.ReadLine());
+
+        //    decimal sonuc = 0;
+
+
+        //    switch (kullaniciSecim)
+        //    {
+        //        case 1: /* Toplama */
+        //            sonuc = M1.ToplamaIslemi(kullaniciSayi1, kullaniciSayi2);
+        //            M1.SonucEkranaYaz(kullaniciSayi1, kullaniciSayi2, sonuc, "+");
+        //            break;
+        //        case 2: /* Çıkartma */
+        //            sonuc = M1.CikartmaIslemi(kullaniciSayi1, kullaniciSayi2);
+        //            M1.SonucEkranaYaz(kullaniciSayi1, kullaniciSayi2, sonuc, "-");
+        //            break;
+        //        case 3: /* Bölme */
+        //            sonuc = M1.BolmeIsleme(kullaniciSayi1, kullaniciSayi2);
+        //            M1.SonucEkranaYaz(kullaniciSayi1, kullaniciSayi2, sonuc, "/");
+        //            break;
+        //        case 4: /* Çarpma */
+        //            sonuc = M1.CarpmaIslemi(kullaniciSayi1, kullaniciSayi2);
+        //            M1.SonucEkranaYaz(kullaniciSayi1, kullaniciSayi2, sonuc, "*");
+        //            break;
+        //        default:
+        //            Console.WriteLine("Belirtmiş oldugunuz değer liste içerisinde bulunamadı.");
+        //            Console.WriteLine("Lütfen yeniden deneyiniz.");
+        //            System.Threading.Thread.Sleep(2000);
+        //            goto YenidenIslemYap;
+        //    }
+
+        //    Console.WriteLine("Yeni işlem yapmak istiyor musunuz ? (E/H)");
+        //    string eh = Console.ReadLine();
+
+        //    if (eh.ToUpper() == "E")
+        //    {
+        //        goto YenidenIslemYap;
+        //    }
+
+
+        //    Console.ReadLine();
+
+        //}
+
+        #endregion
 
 
 
