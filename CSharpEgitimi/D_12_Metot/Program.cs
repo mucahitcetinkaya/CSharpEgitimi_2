@@ -94,7 +94,7 @@ namespace D_12_Metot
         //    aslında arka tarafta stack heap yapıları bişeyler degişiyor ama class bölümünde göreceğiz
 
 
-        //    Ogrenci O1 = new Ogrenci();
+        //                Ogrenci106 O1 = new Ogrenci106();
 
         //    şimdi O1. dedigimizde içindeki metoda ulasmıs olduk
 
@@ -104,7 +104,8 @@ namespace D_12_Metot
         //    void Ogrenci.OgrenciSelamla() yazıyor
         //    yani parametre almamıs geriye bişey döndürmüyor bilgisini veriyor
 
-        //    Ogrenci O1 = new Ogrenci();
+        //                Ogrenci106 O1 = new Ogrenci106();
+
         //    e gelip breakpoint koyup debug edelim
 
         //    f11 ile devam ediyoruz
@@ -114,7 +115,7 @@ namespace D_12_Metot
 
         //    */
 
-        //    Ogrenci O1 = new Ogrenci();
+        //    Ogrenci106 O1 = new Ogrenci106();
         //    O1.OgrenciSelamla();
 
 

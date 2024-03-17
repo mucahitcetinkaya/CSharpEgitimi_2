@@ -40,7 +40,7 @@ Bölüm 12 Metot VİDEO 106 C# Nesne yönelimli programlama ( Kısa Giriş )
             aslında arka tarafta stack heap yapıları bişeyler degişiyor ama class bölümünde göreceğiz
 
 
-            Ogrenci O1 = new Ogrenci();
+            Ogrenci106 O1 = new Ogrenci106();
 
             şimdi O1. dedigimizde içindeki metoda ulasmıs olduk
 
@@ -50,7 +50,7 @@ Bölüm 12 Metot VİDEO 106 C# Nesne yönelimli programlama ( Kısa Giriş )
             void Ogrenci.OgrenciSelamla() yazıyor
             yani parametre almamıs geriye bişey döndürmüyor bilgisini veriyor
 
-            Ogrenci O1 = new Ogrenci();
+            Ogrenci106 O1 = new Ogrenci106();
             e gelip breakpoint koyup debug edelim
 
             f11 ile devam ediyoruz
@@ -60,7 +60,7 @@ Bölüm 12 Metot VİDEO 106 C# Nesne yönelimli programlama ( Kısa Giriş )
 
             */
 
-            Ogrenci O1 = new Ogrenci();
+            Ogrenci106 O1 = new Ogrenci106();
             O1.OgrenciSelamla();
 
 
