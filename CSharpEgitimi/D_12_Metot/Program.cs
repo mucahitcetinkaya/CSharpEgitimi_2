@@ -19,6 +19,47 @@ namespace D_12_Metot
 
         //#endregion
 
+        #region VİDEO 105
+
+        //static void Main(string[] args)
+        //{
+        //    /*
+             
+        //    Bölüm 12 Metot VİDEO 105 Main Metotu İnceleme 
+             
+        //    */
+
+        //    /*
+            
+        //    notlarda tamamı var
+
+        //    */
+
+        //    Console.WriteLine("Merhaba");
+
+        //    System.Console.WriteLine("Merhaba");
+
+        //    Selamla();
+
+        //    Console.ReadLine();
+
+        //}
+
+        ///*
+         
+        //anlatımı notlarda yazıyor
+
+        //*/
+        //static void Selamla()
+        //{
+        //    Console.WriteLine("Merhaba Metot");
+        //}
+
+        #endregion
+
+
+
+
 
 
 
