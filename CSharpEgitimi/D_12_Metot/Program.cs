@@ -322,13 +322,13 @@ namespace D_12_Metot
         //{
 
         //    /*
-            
+
         //    Bölüm 12 Metot VİDEO 109 Metot Ödev - 1
-             
+
         //    */
 
         //    /*
-             
+
         //    Main metodunda bir ögrencinin adını soyadını 3 adet ders notunu alacaksınız
         //    Almış oldugunuz bu bilgileri Ogrenci sınıfı içinde 
         //    OgrenciPuanHesapla adında bir metoda parametre olarak verip bilgisini ekrana cıkartacaksınız
@@ -337,7 +337,7 @@ namespace D_12_Metot
         //    45 den büyükse geçti
         //    45 den küçükse kaldı
 
-            
+
         //    */
 
         //    Ogrenci109 O1 = new Ogrenci109();
@@ -359,7 +359,68 @@ namespace D_12_Metot
 
         #endregion
 
+        #region VİDEO 110
 
+        //static void Main(string[] args)
+        //{
+        //    /*
+             
+        //        Bölüm 12 Metot VİDEO 110 Public ve Private erişim belirleyicileri.
+             
+        //    */
+
+        //    /*
+            
+        //    Ogrenci110 class ını actık public ve private farklarına bakıyoruz su anda
+        //    OgrenciMetotHesapla private olarak olusturduk 
+        //    burda Ogrenci classını new ledik ama
+        //    o. diyince public olan metot geliyor ama private oldugu için digerine ulaşamıyoruz
+
+        //    bunun yerıne yapacagımız olay 
+        //    OgrenciPuanHesaplama metodu içinde degisiklikler oraya gidip not alalım
+
+        //    private metot neden lazım olur
+        //    dıs katmanda biz bazı bilgileri alırız
+        //    almıs oldugumuz bilgileri ise 
+        //    içeride olusturmus oldugumuz public metodun içinde sırasıyla yazmak istemeyiz
+        //    onlarda aslında kendi başlarına iş yapan modüller olarak yazılması gerekir
+        //    ama dış dunyaya da kapalı olması gerekir
+        //    bu durumlarda dıs dunyaya actıgımız metodu puclic
+        //    içerideki operasyonlarımızı private olarak belirleriz
+
+        //    veya
+        //    tc kimlik tutacak diyelim herkesin görmesini istemeyiz ama bilginin dönmesi gerekiyor
+        //    private olarak saklarız döndürürüz puclic metota 
+        //    onun üstünden işlem yaparız
+
+        //    kodlama içerisinde 3 satırı geçiyorsanız eger bunu metot yapın diye bir söylem vardır
+        //    bu söylem cok tutulmasa da 
+        //    yazılan kod bir modulse operasyonsa bir iş yapıyorsa işi ayırmak en dogru secenek
+
+        //    debug anlatımı 
+        //    public metota gidiyor sonra onun içine private metotdu verdık aynı yerde oldukları için okuyor
+        //    sonra oraya gidip bilgileri alıp geliyor vs 
+             
+        //    */
+
+        //    Ogrenci110 O = new Ogrenci110();
+
+        //    Console.Write("Ögrencinin Adını giriniz : ");
+        //    string ad = Console.ReadLine();
+        //    Console.Write("Ögrencinin Soyadını giriniz : ");
+        //    string soyAd = Console.ReadLine();
+        //    Console.Write("Ögrencinin birinci notunu giriniz : ");
+        //    decimal not1 = Convert.ToDecimal(Console.ReadLine());
+        //    Console.Write("Ögrencinin ikinci notunu giriniz : ");
+        //    decimal not2 = Convert.ToDecimal(Console.ReadLine());
+        //    Console.Write("Ögrencinin üçüncü notunu giriniz : ");
+        //    decimal not3 = Convert.ToDecimal(Console.ReadLine());
+
+        //    O.OgrenciPuanHesaplama(ad, soyAd, not1, not2, not3);
+
+        //}
+
+        #endregion
 
 
 
