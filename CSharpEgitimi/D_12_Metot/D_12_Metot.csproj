@@ -49,6 +49,7 @@
     <Compile Include="Ogrenci109.cs" />
     <Compile Include="Ogrenci110.cs" />
     <Compile Include="Ogrenci111.cs" />
+    <Compile Include="Ogrenci112.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -56,6 +57,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="MyNotes\Ders12video112.txt" />
     <Content Include="MyNotes\Ders12video111.txt" />
     <Content Include="MyNotes\Ders12video110.txt" />
     <Content Include="MyNotes\Ders12video109.txt" />

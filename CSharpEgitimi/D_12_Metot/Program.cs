@@ -428,28 +428,41 @@ namespace D_12_Metot
         //{
 
         //    /*
-             
+
         //        Bölüm 12 Metot VİDEO 111 return anahtar kelimesi
-             
+
         //    */
 
         //    /*
-             
+
         //    Metotlarımız bir değer olusturduktan sonra bu değeri onu cagıran noktaya geri gönderebilir
         //    geri gönderme işlemin de return anahtar kelimesini kullanırız
         //    bu return anahtar kelimesi mevcut olan degeri alıyor 
         //    ve metodun dısarısına gönderiyor
-            
+
         //    Ogrenci11 class ında notlar yazıyor burda herhangi bir işlem yapmaya gerek olmadı
         //    Ogrencı110 dan aldık kodları
-             
+
         //    */
 
         //}
 
         #endregion
 
+        #region VİDEO 112
 
+        //static void Main(string[] args)
+        //{
+
+        //    /*
+
+        //        Bölüm 12 Metot VİDEO 112 Parametre alan ve parametre gönderen metotlar
+
+        //    */
+
+        //}
+
+        #endregion
 
 
 
