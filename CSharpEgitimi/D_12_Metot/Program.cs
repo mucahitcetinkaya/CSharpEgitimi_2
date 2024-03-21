@@ -364,13 +364,13 @@ namespace D_12_Metot
         //static void Main(string[] args)
         //{
         //    /*
-             
+
         //        Bölüm 12 Metot VİDEO 110 Public ve Private erişim belirleyicileri.
-             
+
         //    */
 
         //    /*
-            
+
         //    Ogrenci110 class ını actık public ve private farklarına bakıyoruz su anda
         //    OgrenciMetotHesapla private olarak olusturduk 
         //    burda Ogrenci classını new ledik ama
@@ -400,7 +400,7 @@ namespace D_12_Metot
         //    debug anlatımı 
         //    public metota gidiyor sonra onun içine private metotdu verdık aynı yerde oldukları için okuyor
         //    sonra oraya gidip bilgileri alıp geliyor vs 
-             
+
         //    */
 
         //    Ogrenci110 O = new Ogrenci110();
@@ -421,6 +421,34 @@ namespace D_12_Metot
         //}
 
         #endregion
+
+        #region VİDEO 111
+
+        //static void Main(string[] args)
+        //{
+
+        //    /*
+             
+        //        Bölüm 12 Metot VİDEO 111 return anahtar kelimesi
+             
+        //    */
+
+        //    /*
+             
+        //    Metotlarımız bir değer olusturduktan sonra bu değeri onu cagıran noktaya geri gönderebilir
+        //    geri gönderme işlemin de return anahtar kelimesini kullanırız
+        //    bu return anahtar kelimesi mevcut olan degeri alıyor 
+        //    ve metodun dısarısına gönderiyor
+            
+        //    Ogrenci11 class ında notlar yazıyor burda herhangi bir işlem yapmaya gerek olmadı
+        //    Ogrencı110 dan aldık kodları
+             
+        //    */
+
+        //}
+
+        #endregion
+
 
 
 
