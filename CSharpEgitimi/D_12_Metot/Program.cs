@@ -464,6 +464,77 @@ namespace D_12_Metot
 
         #endregion
 
+        #region VİDEO 113
+
+        //static void Main(string[] args)
+        //{
+
+        //    /*
+
+        //        Bölüm 12 Metot VİDEO 113 Metot parametrelerinde varsayılan değer atama işlemi
+
+        //    */
+
+        //    /*
+            
+        //    Ogrenci113 den geldik
+
+        //    not3 ü silince hata veriyor
+        //    parametre olarak istiyor ama deger yok içinde ondan dolayı
+        //    default olarak deger atamamız gerekiyor
+        //    O.OgrenciPuanHesaplama(ad, soyAd, not1, not2);
+        //    bu zorunlulugu kaldırmak için Ogrenci113 class ına gidelim 
+        //    OgrenciPuanHesaplama da ki zorunlulugu kaldıralım
+
+        //    Ogrenci113 den geldik
+
+        //        decimal not3 = 45
+
+        //    yazdık metoda zorunlulugu kalduırmıs olduk
+
+        //    O.OgrenciPuanHesaplama(ad, soyAd, not1, not2);
+
+        //    bunda olan hata da kalktı boylece
+        //    parametre girmeye calısırsak eger not de yazım sekli değişti
+        //    [decimal not3 = 45]
+        //    olarak yazmaya basladı tooltype de 
+             
+        //    direk not3 olarak yazıp debug yapalım noluyor
+        //    not3 e 30 yazdık default olarak 45 atasan da 
+        //    üzerinde deger gelince mevcut degeri eziyor
+        //    30 olarak alıyor
+
+        //    not3 ü istemeden debug yapınca 45 olarak alıyor
+
+        //    peki not3 = 45 den sonra , ile
+        //    decimal not4 yazarsak ne oluyor hata alıyoruz
+        //    sebebi default olarak degeri olan parametre hep sonra olmalı veya 
+        //    default degeri varsa sonra gelende default deger sahibi olmalı
+             
+        //    */
+
+        //    Ogrenci113 O = new Ogrenci113();
+
+        //    Console.Write("Ögrencinin Adını giriniz : ");
+        //    string ad = Console.ReadLine();
+        //    Console.Write("Ögrencinin Soyadını giriniz : ");
+        //    string soyAd = Console.ReadLine();
+        //    Console.Write("Ögrencinin birinci notunu giriniz : ");
+        //    decimal not1 = Convert.ToDecimal(Console.ReadLine());
+        //    Console.Write("Ögrencinin ikinci notunu giriniz : ");
+        //    decimal not2 = Convert.ToDecimal(Console.ReadLine());
+        //    Console.Write("Ögrencinin üçüncü notunu giriniz : ");
+        //    decimal not3 = Convert.ToDecimal(Console.ReadLine());
+
+        //    O.OgrenciPuanHesaplama(ad, soyAd, not1, not2);
+        //    //O.OgrenciPuanHesaplama(ad, soyAd, not1, not2, not3);
+
+        //}
+
+        #endregion
+
+
+
 
 
 
