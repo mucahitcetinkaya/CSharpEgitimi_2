@@ -58,6 +58,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="MyNotes\Ders12video114.txt" />
     <Content Include="MyNotes\Ders12video113.txt" />
     <Content Include="MyNotes\Ders12video112.txt" />
     <Content Include="MyNotes\Ders12video111.txt" />

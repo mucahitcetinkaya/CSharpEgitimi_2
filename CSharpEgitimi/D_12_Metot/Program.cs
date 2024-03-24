@@ -476,7 +476,7 @@ namespace D_12_Metot
         //    */
 
         //    /*
-            
+
         //    Ogrenci113 den geldik
 
         //    not3 ü silince hata veriyor
@@ -498,7 +498,7 @@ namespace D_12_Metot
         //    parametre girmeye calısırsak eger not de yazım sekli değişti
         //    [decimal not3 = 45]
         //    olarak yazmaya basladı tooltype de 
-             
+
         //    direk not3 olarak yazıp debug yapalım noluyor
         //    not3 e 30 yazdık default olarak 45 atasan da 
         //    üzerinde deger gelince mevcut degeri eziyor
@@ -510,7 +510,7 @@ namespace D_12_Metot
         //    decimal not4 yazarsak ne oluyor hata alıyoruz
         //    sebebi default olarak degeri olan parametre hep sonra olmalı veya 
         //    default degeri varsa sonra gelende default deger sahibi olmalı
-             
+
         //    */
 
         //    Ogrenci113 O = new Ogrenci113();
@@ -533,6 +533,105 @@ namespace D_12_Metot
 
         #endregion
 
+        #region VİDEO 114
+
+        //static void Main(string[] args)
+        //{
+
+        //    /*
+            
+        //    Bölüm 12 Metot VİDEO 114 Parametrelerde ref ve out anahtar sözcüklerinin kullanımı
+             
+        //    */
+
+        //    /*
+            
+        //    Ref ve Out anahtar sözcüklerinde eski .net framework versiyonlarında 1 fark vardı
+        //    mevcut framework sürümü 7.0 olanlar bu farktan etkilenmeyecektir.
+             
+        //    bir metot yazarak işlemlerimize baslayalım
+
+        //    hoca bir videodan bahsediyor ama öyle bir video yoktu netten arastırdım bende ne nedir diye
+
+        //    notlarda yazıyor
+
+        //    stack ve heap yapılarından bahsetmıs ama videosu yok
+        //    stack bolumunde bir int degisken olusturup içerisine bir deger atayıp bunun bir deger tipli bir davranıs oldugunu
+        //    heap bolumunde ise referans durdugunu ortak yerlere bakan yerler olarak söz etmiş
+
+        //    kodun anlatımı
+
+        //    stack de sayi1 degiskenı olustu içinde 0 var 
+        //    sonra bir metot olusturduk parametre verdik 
+
+        //    DegerAtaRef metoduna ref ile degerini aktarırken
+        //    gelenDeger adında bir degisken daha olustu
+        //    degeri 0 olarak
+        //    buda normal sartlarda stack bolgede olusması gerekiyordu fakat
+        //    biz orda ref kullandıgımız için heap bolgede olustu
+
+        //    standart davranıslarında ikiside degisken oldugu için
+        //    stack bölgede olusmaları ve üzerlerindeki degerleri 0 olması gerekiyordu
+        //    biz ref ile parametreye değeri aktardıgımız için
+        //    bizim ref anahtar sozcugumuz bunları deger tipi davranıstan cıkarttılar
+        //    ikisinin de ortak olarak heap bolgede degeri görmesini sagladı
+
+        //    ref ve out anahtar sozcukleri aslında deger tipli davranısa sahip olan
+        //    değişkenlerin referans tipli degisken olmasına olanak saglıyor
+
+        //    sayi1 0 ken gelenDeger 10 
+        //    bunları ref ile birbirine atadıgımız da 
+        //    aynı yere bakacakları için
+        //    sayi1 de 10 oluyor
+
+
+        //    aralarındaki fark eger ben degiskenın içerisinde ref ile işaretlenmiş bir degisken ataması yapacaksam
+        //    metodu cağırıp degisken atamasını yapacagım noktada 
+        //    int sayi1 = 0; yani burda 
+        //    atamak istediğim degiskenın refte bir deger alması gerekiyordu
+        //    out kullanımında ise deger almazsa hata veriyordu
+
+        //    yani 7 den oncesınde
+        //    int sayi1;
+        //    DegerAtaOut(out sayi1);
+
+        //    static void DegerAtaOut(out int gelenDeger)
+        //    {
+        //        gelenDeger = 10;
+        //    }
+        //    boyle bir tanım yapsaydık
+        //    hata veriyordu artık bu hata ortadan kalktı
+
+        //    framework 7.0 dan sonra ref veya out degiskenler deger alıp almasa da bişey farketmiyor
+
+        //    bu anahtar kelimeler onemlı 
+        //    uygulamarın içerisinde cok sık kullanmasakta bazı noktalarda degiskenın butunlugunu bozmamak için
+        //    ilgili degiskenın bir kopyasını olusturmak yerine degiskenı takip etmek için
+        //    ref ve out anahtar sozcuklerınden faydanalıyoruz
+
+            
+        //    */
+
+        //    int sayi1 = 0;
+
+        //    DegerAtaRef(ref sayi1);
+
+
+
+
+        //}
+
+        //static void DegerAtaRef(ref int gelenDeger)
+        //{
+        //    gelenDeger = 10;
+        //}
+
+        //static void DegerAtaOut(out int gelenDeger)
+        //{
+        //    gelenDeger = 10;
+        //}
+
+        #endregion
 
 
 
