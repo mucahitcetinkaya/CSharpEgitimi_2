@@ -539,16 +539,16 @@ namespace D_12_Metot
         //{
 
         //    /*
-            
+
         //    Bölüm 12 Metot VİDEO 114 Parametrelerde ref ve out anahtar sözcüklerinin kullanımı
-             
+
         //    */
 
         //    /*
-            
+
         //    Ref ve Out anahtar sözcüklerinde eski .net framework versiyonlarında 1 fark vardı
         //    mevcut framework sürümü 7.0 olanlar bu farktan etkilenmeyecektir.
-             
+
         //    bir metot yazarak işlemlerimize baslayalım
 
         //    hoca bir videodan bahsediyor ama öyle bir video yoktu netten arastırdım bende ne nedir diye
@@ -609,7 +609,7 @@ namespace D_12_Metot
         //    ilgili degiskenın bir kopyasını olusturmak yerine degiskenı takip etmek için
         //    ref ve out anahtar sozcuklerınden faydanalıyoruz
 
-            
+
         //    */
 
         //    int sayi1 = 0;
@@ -632,6 +632,76 @@ namespace D_12_Metot
         //}
 
         #endregion
+
+        #region VİDEO 115
+
+        //static void Main(string[] args)
+        //{
+        //    /*
+             
+        //    Bölüm 12 Metot VİDEO 115 Değişken sayıda parametre almak ( params kullanımı )
+             
+        //    */
+
+        //    /*
+            
+        //    degisken sayıda degısken alma işlemini params anahtar kelimesi ile yapıyoruz
+        //    metot üzerinden anlatalım
+             
+        //    bir metot olusturduk main metodunun dısında yeni bir sınıf acmak yerine
+        //    Topla metodu 
+        //    static void Topla(params int[] sayilar)
+        //    {
+        //        int toplam = 0;
+
+        //        for (int i = 0; i < sayilar.Length; i++)
+        //        {
+        //            toplam += sayilar[i];
+        //        }
+        //        Console.WriteLine("Toplam : {0}", toplam);
+        //    }
+
+        //    (params int[] sayilar) parametre istiyor şimdi bunu cagıralım
+
+        //    Topla( yazdıgımızda tooltype cıkıyor ne istedigini bize gösteriyor
+
+        //     (params int[] sayilar) params olarak bir dizi istiyor
+
+        //    Topla(5, 9, 20, 45, 22, 12, 11, 56);
+            
+        //    dizi tanımı yapmadık normal parametre olarak yazıyoruz direk
+        //    istediğimiz kadar degeri yazabiliyoruz params sayesinde
+
+        //    params ifadesi girilen degerleri belirtmiş oldugumuz veri tipinden diziye cevirir
+        //    ama bunu parametre olarak isterken bizden dizi istemez
+        //    belirtmiş oldugumuz veri tipinden sıralı data ister
+        //    sıralı datayı da iceride bir dizinin içerisine otomatik olarak aktarır
+
+        //    params ifadesinden sonra string bir ifade alamazsınız
+        //    params ifadeleri son ifade olmalıdır
+
+        //    */
+
+        //    Topla(5, 9, 20, 45, 22, 12, 11, 56);
+
+
+
+        //}
+
+        //static void Topla(params int[] sayilar)
+        //{
+        //    int toplam = 0;
+
+        //    for (int i = 0; i < sayilar.Length; i++)
+        //    {
+        //        Console.WriteLine(sayilar[i]);
+        //        toplam += sayilar[i];
+        //    }
+        //    Console.WriteLine("Toplam : {0}", toplam);
+        //}
+
+        #endregion
+
 
 
 
