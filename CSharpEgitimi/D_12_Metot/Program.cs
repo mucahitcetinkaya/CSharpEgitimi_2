@@ -638,16 +638,16 @@ namespace D_12_Metot
         //static void Main(string[] args)
         //{
         //    /*
-             
+
         //    Bölüm 12 Metot VİDEO 115 Değişken sayıda parametre almak ( params kullanımı )
-             
+
         //    */
 
         //    /*
-            
+
         //    degisken sayıda degısken alma işlemini params anahtar kelimesi ile yapıyoruz
         //    metot üzerinden anlatalım
-             
+
         //    bir metot olusturduk main metodunun dısında yeni bir sınıf acmak yerine
         //    Topla metodu 
         //    static void Topla(params int[] sayilar)
@@ -668,7 +668,7 @@ namespace D_12_Metot
         //     (params int[] sayilar) params olarak bir dizi istiyor
 
         //    Topla(5, 9, 20, 45, 22, 12, 11, 56);
-            
+
         //    dizi tanımı yapmadık normal parametre olarak yazıyoruz direk
         //    istediğimiz kadar degeri yazabiliyoruz params sayesinde
 
@@ -702,7 +702,109 @@ namespace D_12_Metot
 
         #endregion
 
+        #region VİDEO 116
 
+        //static void Main(string[] args)
+        //{
+        //    /*
+
+        //     Bölüm 12 Metot VİDEO 116 Metotlara aşırı yüklenme işlemi nedir ?
+
+        //    */
+
+        //    /*
+
+        //    Metotlara asırı yuklenme nedir 
+
+        //    ilk egıtıme baslarken 
+        //    Console.WriteLine ile baslamıstık
+        //    bunun tooltype ıne baktıgımızda 
+
+        //    void Console.WriteLine yazıyor
+        //    geriye bişey döndürmüyor Console sınıfına ait WriteLine metotuyum parametre almam diyor
+
+        //    yanında da 1 of 19 yazıyor
+
+        //    bu Console.WriteLine metotunun 19 farklı kullanımı mevcut anlamına geliyor
+
+        //    bunlardan bir tanesi hiç parametre almayan versiyonu
+
+        //    oklar ile degistirince baska kullanımları geliyor
+
+        //    bool value parametre alan versiyonu
+
+        //    char veri tipi alan versiyon char dizi alan versiyon vs 
+
+        //    farklı farklı kullanım sekılleri var
+
+        //    biz normal sartlarda string value versiyonunu kullanıyoruz
+
+        //    yani
+
+        //    Console.WriteLine("Merhaba Dünya");
+
+        //    yazdıgımızda "" içinde oldugu için string versiyonunu kullanmıs oluyoruz
+
+        //    veya
+
+        //    Console.WriteLine(true);
+
+        //    yazarsak bu seferde boolean versiyonunu cagırmıs oluruz
+
+        //    biz bunun gibi metotlar tasarlayabiliriz
+
+        //    aynı isimde ama farklı veri turlerinde 
+
+        //    yeni bir class acmak yerine burda main metotunun dısında bir metot yazalım
+
+        //    Topla metotunu burda cagıralım
+
+        //    bu metotu cagırdıgımız da 
+
+        //    Program class ının içinde olan void int sayi1 int sayi2 parametre isteyen bir metot cıkıyor tooltype da 
+
+        //    yanında farklı kullanımlarını görmüyoruz cunku yok bunu görmek için ne yapmamız gerekiyor
+
+        //    aynı metot imzasına ait ismine farklı bir metot olusturalım 
+
+        //    aynı isme sahip ama istenilen veri tiplerinde farklı olarak metot olusturunca ve 
+
+        //    Topla metodunu yenıden cagırınca 
+
+        //    Tooltype da overloads cıktı farklı kullanımları da yazmaya basladı
+
+        //    debug olarak baktımızda int deger verdik oda int deger olan metoda girdi islemi yaptı
+
+        //    aşırı yukleme de bu oluyor
+
+        //    */
+
+
+        //    Topla(10,20);
+
+        //}
+
+
+        //static void Topla(int sayi1, int sayi2)
+        //{
+        //    int toplam = sayi1 + sayi2;
+        //    Console.WriteLine(toplam);
+        //}
+
+        //static void Topla(double sayi1, double sayi2)
+        //{
+        //    double toplam = sayi1 + sayi2;
+        //    Console.WriteLine(toplam);
+        //}
+
+        //static void Topla(float sayi1, float sayi2)
+        //{
+        //    float toplam = sayi1 + sayi2;
+        //    Console.WriteLine(toplam);
+        //}
+
+
+        #endregion
 
 
 
