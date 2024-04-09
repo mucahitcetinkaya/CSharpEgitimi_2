@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D_11_Koleksiyonlar", "D_11_
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D_12_Metot", "D_12_Metot\D_12_Metot.csproj", "{9E2C09FB-7E14-404B-9E52-C8112BA29EA9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D_13_OOP_Siniflar", "D_13_OOP_Siniflar\D_13_OOP_Siniflar.csproj", "{95311DCA-9F95-4452-9DD1-E5BF247B27A8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{9E2C09FB-7E14-404B-9E52-C8112BA29EA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9E2C09FB-7E14-404B-9E52-C8112BA29EA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9E2C09FB-7E14-404B-9E52-C8112BA29EA9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95311DCA-9F95-4452-9DD1-E5BF247B27A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95311DCA-9F95-4452-9DD1-E5BF247B27A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95311DCA-9F95-4452-9DD1-E5BF247B27A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95311DCA-9F95-4452-9DD1-E5BF247B27A8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

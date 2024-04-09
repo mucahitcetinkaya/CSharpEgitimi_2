@@ -1,0 +1,128 @@
+
+
+Bölüm 13 OOP Sýnýflar VÝDEO 120 Bilgilendirme
+
+             
+Bu bölümde OOP Object - Oriented Programming - Nesne Yönelimli Programlama NYP
+nin ne demek oldugunu C# içerisinde ne kadar nufus ettýgýný biz OOP e neden ihtiyac duyarýz
+ve bunun gibi bir cok soruyu su anda karsýlasmadýgýmýz ama boyle olmasý cok mantýklýymýs 
+diyeceðimiz durumlarý kavramlarý birlikte inceleyeceðiz
+
+Nesne Yönelimli Programlama
+
+Bu bölüm içerisinde nesne yönelimli programlamanýn ne oldugunu birlikte inceleyeceðiz
+
+NYP konusundaki temel fikir iþ prosedürleri ile tanýmlarýn bir arada tutulmasý ve bir uyumun saðlanmasýdýr
+yukarýdaki cümlenin acýklamasý 
+örnek olarak herkesin sýkca kullandýgý cep telefonlarýmýzý düþünürseniz
+bu telefonlardaki temel taným nedir
+aslýnda temel taným 90 larda cýktýgýnda o telefonlarýn temel tanýmý neydi
+karsýdaki bir insaný sesli olarak arayabilmek yada yazýlý olarak bir metin gönderebilmek
+peki günümüze geldiðimiz de bu temel ihtiyacýmýz nasýl bir prosedürel yapýya geldiðini görüyoruz
+elimizde akýllý telefonlar var 
+karsýyý arayýp text mesaj göndermek gibi temel ihtiyacýn dýsýna cýkýp 
+ilgili cihazýn içerisinden video da izleyebiliyoruz
+internete de girebiliyoruz oyun oynayabiliyoruz
+ama hepsi neyin içerisinde nesnesel olarak o telefonun içerisinde
+temel fikir iþ prosedürü ile tanýmlarýn bir arada tutulmasý ve bir uyumus saðlanmasý
+buradaki taným telefon prosedürlerimiz içerisine yüklü olan tüm prosedürler
+biz buna o prosedüre ulasmak için ne yapýyoruz
+telefonumuzu elimize alýyoruz
+ve telefonun içerisindeki eylemleri kullanmaya baslýyoruz
+
+
+Bir nesne oluþturduðumuz zaman ilgili nesnenin tüm tanýmlarýnýn ve 
+iþlevselliðinin oluþturmuþ olduðumuz nesnenin içerisinde olmasýný isteriz
+
+yukarýdaki cümlenin acýklamasý 
+ben telefonumu aldýgýmda içerisindeki tüm özelliklerini iþlevselliðini kullanabilmeliyim
+ne yaptýgýmda telefonu aldýgýmda burda aldýgýmda kýsmý bizim programlama dunyasýnda
+o nesneyi ornekledýgýmýz new leme yaptýgýmýz kýsmýma denk geliyor
+bir nesneyi ornekledýgýnýz de 
+bir nesneye programsal olarak eriþtiðiniz de o nesnenin tüm özelliklerini ve 
+iþlevselliðini kullanabilmeniz gerekiyor
+iþte bu nyp nin tanýmýdýr
+
+Bu isteðimizin karþýlýðý ise nesne yönelimli programlamadýr.
+
+OOP == 
+Object / Inheritance / Encapsulation / Abstraction / Polymorphism 
+Attribute / Method / Class /
+
+OOP bunlarýn hepsini kapsýyor
+
+
+
+Uygulamalarýmýzý tasarlarken müþterilerimizin süreçlerini modeller ve 
+sistem üzerinde iþlerini takip etmelerini saðlarýz.
+
+Ýkinci el araç satýsý yapan bir müþterimiz oldugunu ve þirketinin temel süreçlerinin
+takibinin yapýlmasýný istediði bir uygulamayý bizden talep ettiðini düþünelim
+bana bu þekilde bir uygulama yazar mýsýn diye talep ettiðinde 
+
+hemen tamam yazarýz demiyoruz al burda da diyemeyiz sýfýrdan yazacagýz daha once yazmadýysak
+
+Uygulamamýzý yazmaya baþlamadan önce müþterilerimizi ziyaret etmemiz ve onun ilgilendiði
+gerçek hayatta uðramýþ oldugu tüm nesneleri analiz etmemiz gerekir
+
+ilk once müþterimizi tanýmamýz gerekir benim müþterim ne yapýyor
+ikinci el arac satýyor ama ne yapýyor
+ben onun oradaki yerini görmeliyim
+temel süreclerini kavramalýyým
+nelerle ilgileniyor bunlarý bilmem gerekir
+
+bir satýþ nasýl gerçekleþir nelere ihtiyaç vardýr ?
+Müþteri
+Satýþ Temcilcisi
+Arac (Araba - Motor - vb...)
+Teklif
+Sipariþ
+Fatura
+
+Maddeler halinde sýraladýgýmýz her bir taným aslýnda sistemde tanýmlanmasý gereken bir nesnedir.
+
+bunlar bir nesne ise bunlarýn özelliklerinin ve iþlevselliðinin olmasý gerekir
+hemen düþünelim müþterimizin iþlevseliði ve ozellikleri nedir
+
+Müþteri
+{Tc Kimlik Numarasý - Ýsim - SoyÝsim - Cinsiyet - vb...}
+
+Satýþ Temsilcisi
+{Tc Kimlik Numarasý - Sicil Numarasý - Ýsim - Soyisim - Cinsiyet - vb ...} (Kaltým konusunda iþimize yarayacak)
+
+yukarýdaki Müþteri ve Satýþ Temcilcisi ortak özellikleri kullandýgý yerler var
+cunku bir müþteri de insandýr satýþ temcilciside insandýr
+o zaman insana ait farklý bir nesne olusturulur ortak ozellikler burda tutulur
+ordan diger taraflara kalýtým ile özellikler alýnýr
+uygulamaya baslarsýn yolda kararlar verirsin
+
+Araç
+{Marka - Model - Model Yýl - Km - Yakýt türü - Ekpertiz kaydý - vb}
+özellikleri bulunur ve bize bu bir ürünü temsil eder bizde bunu sistemimizde Ürün Product olarak modelleriz
+
+Teklif
+{Teklif Numarasý - Müþteri - Satýcý - Ürün - Fiyat - vb ...}
+teklif elle tutulmayan gözle görülmeyen bir kavram gibidir
+teklif sistemde olusan bir kayýttýr
+arac gibi degildir
+kagýt diyemem ama kagýt parçasýdýr bizim için
+bundan dolayý içerisinde bir baðlam yapmak zorundayým
+müþteri benim nesnemdi teklifin içerisinde müþteri yazýyoruz ki ordan ulasabilmek için
+biz buna innertype diyoruz
+müþteri satýcý ürün 3 tane iç nesnemiz var
+
+Sipariþ
+{Sipariþ Numarasý - Teklif - Fiyat}
+sipariþte kendýný tekrar etmeyen alanlar olacak
+teklif inner type olacak
+teklif iç nesnesine indiðimiz de ordan da 
+müþteri satýsý ürüne ulasabiliyoruz
+burda bir kýrýlým var buda iç içe programlama oluyor
+
+Fatura
+{Fatura Numarasý - Teklif - Müþteri - vb ...}
+
+faturada ise teklif ve müþteri var inner type
+müþteriye teklif üzerinden de ulaþabiliriz ama boyle de oldugunu gorelim diye buraya yazdýk
+bazý durumlarda uygulama daha hýzlý calýssýn diye bazý nesneleri neslerimizin içerisine bir daha cekmek isteriz
+
