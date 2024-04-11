@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="Musteri121.cs" />
     <Compile Include="Musteri122.cs" />
+    <Compile Include="Musteri123.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -52,6 +53,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="MyNotes\Ders13video123.txt" />
     <Content Include="MyNotes\Ders13video122.txt" />
     <Content Include="MyNotes\Ders13video121.txt" />
     <Content Include="MyNotes\Ders13video120.txt" />

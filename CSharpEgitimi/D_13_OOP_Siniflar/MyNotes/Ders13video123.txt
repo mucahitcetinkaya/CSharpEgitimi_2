@@ -1,0 +1,346 @@
+
+
+Bölüm 13 OOP Sýnýflar VÝDEO 123 Yapýcý Metot Kullanýmý
+
+        #region VÝDEO 123
+
+        static void Main(string[] args)
+        {
+            /*
+             
+            Bölüm 13 OOP Sýnýflar VÝDEO 123 Yapýcý Metot Kullanýmý
+             
+            */
+
+            /*
+             
+            biz musteri new musteri dediðimizde sistem
+            stack bolgeden heap bolgeye datayý cýkartýrken
+            default degerler ile cýkartmýs oldugunu soylemýstýk
+            ve bunu nasýl duzeltebilecegýmýzden bahsedecektik
+
+            tekrar hatýrlayalým
+
+            Musteri123 M1 = new Musteri123(); e 
+            breakpoint koyalým
+            calýstýralým uygulamayý
+            buraya geldýgýnde M1 in uzerýne gelýnce null olarak yazýyor
+            gecýnce nesneyi new lemýs orneklemýs oluyor
+            stack bolgede bir point tutuyor
+
+            sonra M1. diyip field larýný doldurunca field lar heap bolgede tutuluyor
+            nesne üzerinden bir iþlem yaptýgýnda heap bolgeyi iþaret etmiþ oluyosun
+
+            nesne olusturdugunda new Musteri() deki () parantezler
+            bir nesne olustur ama default degerler ile olustur demek oluyor
+
+            default degerleri degýstýrmek için tam bu noktada 
+            Constructor yapýcý metot olarak bilinen bir metot var
+            tam olarak bu noktada calýsýyor
+
+            bu metodun detayýna inmek için 
+            Musteri123.cs i olusturalým gerekli field alanlarýný yazalým 
+            eriþim belirleciyi kýsýmlarýný public yapalým
+
+            1. not oraya gidelim
+            Musteri123 den geldik 1.not bitiþi
+
+            2. not baþlangýc
+
+            debug edelim
+
+            gerekli nesneyi new leyelim
+            field alanlarýný dolduralým
+
+            Musteri123 e breakpoint koyalým
+            TcKimlikNumarasý null mý olacak ctor da verdiðimiz deger mi gelecek
+            ona bakalým
+
+            ilk calýsýtýnda M1 null ornekleme olmadý
+            ilerletelim
+            f10 üstünden geçiyor f11 içine giriyor
+
+            f11 ile gidince ctor içine gitti ilk yapýcý metot calýstý
+            f10 ile devam ettik sonra
+            ilk ctor calýstýgý için oradaki degeri aldý
+            ilk default ayarýný degistirmiþ olduk
+            diger kýsýmlar default ayarlarý duruyor onlara biþey vermedik
+
+            Musteri123() deki () parantezler bir metodu gösteriyor demiþtik
+            bu bir metodu gosteriyorsa ve ben bunu ezdiysem
+            ezmekten kastýmýz su var olan bir metodun terkar üzerinden 
+            geçip bunu kullan diyoruz
+
+            bu konuyu virtual metotlarda goreceksýnýz burda olay ezmek kýsmýný anlamak
+
+            var olan bir yapý var ben buna mudahale etmek istiyorum
+            var olan seklini bozmak ezmektir zaten ve ben bunu ezdim
+
+            f11 ile içeriye dogru gittiðimde yapýcý metota gitti
+            musteri class ýnýn içerisindeki ctor a gitti
+
+            tckimliknumarasý default degeri degil benim verdiðim degeri aldý
+
+            f10 ile devam edince nesne orneklendý default ayarlarýný degýstýrmýs olduk
+
+            bu iþlemi yapýcý metot olayýný
+            Musteri123() deki () parantezler arasýnda yapýyor
+            nesne orneklenmeden once yapýcý metotlar calýsýyor
+            default degerleri degistiriyor boylece
+
+            peki bizim birden fazla yapýcý metodumuz olabilir mi 
+            hatýrlarsanýz metotlar kýsmýnda bir metot ismi ile 
+            overload asýrý yukleme yapmýstýk
+
+            toplama int + int 
+            toplama string + string
+            toplama decimal + decimal gibi
+
+            ben istiyorum ki beným musteri orneklenirken 
+            orneklenme asamasýnda benden parametre olarak bazý degerler istesin
+            ben o bazý degerleri verdiðimde o degerlere göre nesne orneðini alayým
+            vermezsem default degerleri ile belleðe cýksýn 
+
+            bunun için Musteri123 e gidelim 
+            
+            2. not baslangýc
+            2. not bitiþ Musteri123 den geldik
+
+            3. not baslangýc
+
+            gerekli yapýcý metotlarý olusturduk
+            sýmdý burda yenýden new leyeme kalktýgýmýz da 
+            Musteri123 M1 = new Musteri123( yazdýgýmýz da 
+            4 tane overload cýkýyor yapýcý metotlara biz yazdýk bunlarý
+            bize diyor ki 
+            dilersen bos býrak default degerler gelsin
+            dilersen sadece tckimlikno ver
+            dilersen tc ile isim
+            dilersen tc isim soyisim ver
+
+            mesela burda da deger vermek için 
+            string _tcKimlikNo, string isim diyor
+            string sekilde tc verdiyor string sekilde isim yaz diyor
+
+            Musteri123 M1 = new Musteri123("123123123","Mücahit");
+            a breakpoint koyalým debug yapalým
+            f11 ile devam edelim parametredeki metotu yakalamak için
+
+            m1 null orneklenmeden once Musteri123 e gidecek
+            gerekli overload a dusecek
+
+            Musteri123 e gidelim 
+
+            3. not devam 
+            3. not bitiþ Musteri123 den geldik
+
+            4. not baslangýc
+            atama iþlemlerýný yapýp buraya new lemeye geri gelecek
+
+            new len dýgýnde direk ctor dan verdiðimiz verilerle gelecek
+            vermezsek eger bos default ayarlarý ile gelir
+
+            iþ biz bu mantýga yapýcý metot diyoruz
+            hiç dokunmazsak default degerleri ile gelir veri tipine göre
+            bos olarak calýsýr
+
+            yada biz buna mudahale edip class içinde yapýcý metotlarý olusturup kullanýrsak
+            o zaman da þöyle bir artýmýz olur 
+            sen burda degerleri alýrken su kriterler ile al 
+            sunu kontrol bu field içine bunu ver 
+            veya sabit olarak bunu ver gibi ayarlar yapabiliyoruz
+
+            yogun olarak kullandýgýmýz sekilde budur
+
+            cok nadir nesnenin içine dokunmadan iþlem yaparýz
+
+            oop de database e giden katmanlar da 
+            cogunlukla dokunuruz
+            ctor lar kullanýlan onemli bir alan
+            
+            diger dersimiz de 
+            nesneyi ornekleyip cagýrýrken M1. gibi 
+            field alanlarýnda bizim olusturmadýgýmýz 
+            ama gozuken kodlar cýkýyor 
+            mesela ToString gibi bunlar nedir nerden geldi bunlara bakacagýz
+
+            ufak olarak bu konulara girecegýz bunlar normal de kalýtým konusunun konularý
+
+            diger derse gecelim
+
+            */
+
+            // 2. not
+            Musteri123 M1 = new Musteri123("123123123","Mücahit");
+            M1.TcKimlikNumarasi = "1";
+            M1.Isim = "Mücahit";
+            M1.SoyIsim = "Çetinkaya";
+            M1.Cinsiyet = 717770001;
+
+
+            // 1. not
+            //Musteri123 M1 = new Musteri123();
+            //M1.TcKimlikNumarasi = "1";
+            //M1.Isim = "Mücahit";
+            //M1.SoyIsim = "Çetinkaya";
+            //M1.Cinsiyet = 717770001;
+
+            //Musteri123 M2 = M1;
+
+            //M2.Isim = "Muhammet";
+            //M1.TcKimlikNumarasi = "2";
+
+            //M2 = null;
+            //M1 = null;
+
+            //string isim = M2.Isim;
+
+
+        }
+
+        #endregion
+
+
+
+
+
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace D_13_OOP_Siniflar
+{
+    // 2. not
+    public class Musteri123
+    {
+
+        public Musteri123()
+        {
+            TcKimlikNumarasi = "12345678910";
+        }
+
+        public Musteri123(string _tcKimlikNo)
+        {
+            TcKimlikNumarasi = _tcKimlikNo;
+        }
+
+        public Musteri123(string _tcKimlikNo, string _isim)
+        {
+            TcKimlikNumarasi = _tcKimlikNo;
+            Isim = _isim;
+        }
+
+        public Musteri123(string _tcKimlikNo, string _isim, string _soyIsim)
+        {
+            TcKimlikNumarasi = _tcKimlikNo;
+            Isim = _isim;
+            SoyIsim = _soyIsim;
+        }
+
+
+        public string TcKimlikNumarasi { get; set; }
+        public string Isim { get; set; }
+        public string SoyIsim { get; set; }
+        public int Cinsiyet { get; set; }
+    }
+
+    // 1. not
+    //public class Musteri123
+    //{
+
+    //    public Musteri123()
+    //    {
+    //        TcKimlikNumarasi = "12345678910";
+    //    }
+
+    //    public string TcKimlikNumarasi { get; set; }
+    //    public string Isim { get; set; }
+    //    public string SoyIsim { get; set; }
+    //    public int Cinsiyet { get; set; }
+    //}
+}
+
+
+/*
+ 
+1. not program.cs den geldik
+
+fieldlarý yazdýk public olarak eriþim belirleyicini yazdýk
+field larý prop olarak kolay yazabilirsin
+
+þimdi asýl konumuz olan yapýcý metotlara girelim
+bunlar constructor olarak geçiyor
+kýsa yollarý ctor olarak geçer
+ctor yazýp tab tab yaptýgýnýz da yapýcý metotlar yazýlýr
+
+nesnelerimizi orneklerken içerisinde bulunan field larýn
+bir deger almasý gerekir
+bu deger alma zorunlulugu .net içerisinde 
+yapýcý metotlar ile saglanýr
+eger biz bu yapýcý metotlara mudahale etmezsek
+arka tarafta calýsýrken kodumuz calýsýrken bu metotlar bizim için olusuyor
+bos bir þekilde duruyor
+class ýn içindeki
+field larýn veri tiplerine göre default olarak degerler veriyor
+field lar default degerlerýný aldýktan sonra iþlem yapabilir hale geçiyor
+ve dinlemeye baslýyor içerisine bir deger girecek mý iþlem olacak mý diye
+
+sistem o class ý bizim kullanabilirliðimize acýyor
+
+iþte biz tam bu noktada yapýcý metotlara mudahale edebilirsek
+sistemin default degerlerini degistirebiliriz
+
+ornek olarak sunu soyleyebiliriz
+
+TcKimlikNumarasi string oldugu için
+default degeri null dý 
+null olmasýnda 
+
+yapýcý metot içinde 
+ public Musteri123()
+        {
+            TcKimlikNumarasi = "12345678910";
+        }
+
+olsun diyebiliriz
+
+program.cs e gidip uygulamayý calsýtýrýp debug edelim
+1. not bitiþi
+
+2. not baslangýc
+
+program.cs den geldýk
+ctor lar overload ediliyor mu ona bakacagýz
+parametreler ile ayný isimde ctor lar yazacagýz
+
+farklý farklý ctor lar olusturduk 
+yani biz dedýkki burda
+dilersen bos býrak default degerler gelsin
+dilersen sadece tckimlikno ver
+dilersen tc ile isim
+dilersen tc isim soyisim ver
+
+yani ctor da da overload oluyor
+
+parametre ile field kýsýmlarýný birleþtirme yapýyosun burda
+field ile parametre olarak gelen yapýyosun
+program.cs e gidelim
+
+2. not bitiþ
+
+3. not baslangýc
+
+parametreden ctor dan gerekli metoda geldi 
+string _tcKimlikNo, string _isim olaný kullandýk ona dustu kod
+diger tarafdan veri yolladýk _ olanlara geldi
+
+sonra _ olanlarý digerlerine ata dedik kodun içinde 
+atama yaptý diger tarafa gecti
+
+3. not bitiþ
+ 
+*/
