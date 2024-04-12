@@ -593,6 +593,120 @@ namespace D_13_OOP_Siniflar
 
         #endregion
 
+        #region VİDEO 124
+
+        //static void Main(string[] args)
+        //{
+
+        //    /*
+
+        //    Bölüm 13 OOP Sınıflar VİDEO 124 Sınıflarda Metotların Kullanımı
+
+        //    */
+
+        //    /*
+
+        //    bu derste sınıfların içinde metot kullanımlarına bakacagız
+        //    Musteri class ı olusturacagız
+        //    field larımızı yazacagız
+
+        //    public private olarak inceleme yapacagız
+
+        //    Musteri124 e gidelim bir metot olusturalım
+
+        //    1. not baslangıc
+        //    1. not bitişi Musteri124 den geldik
+
+        //    2. not baslangıc
+
+        //    gerekli işlemleri yaptık nesne olustur field ları doldur vs 
+
+        //    metotlarla işimiz var M1. uzerınden metot cagıralım
+
+        //                bool musteriKontrol = M1.MusteriKontrol();
+
+        //    parametre vermiyoruz buraya breakpoint koyalım debug yapalım
+
+        //    bu metot onemli sebebi public bir metodun içinde private bir metot cagırıp 
+        //    dönen degeri döndürüyoruz ondan dolayı onemli 
+
+        //    şimdı bunu yazdık breakpoint koyup cagırdık
+
+        //    M1 in üzerine gelince içinde alanlarını görebiliyoruz
+
+        //    f11 ile devam edince metotun içine dallanıyor
+
+        //    musterikontrol metotu herhangi bir parametre almıyor
+
+        //    musterikontrol metodu dısarıdan onu cagıran kişiden herhangi bir deger almıyor
+
+        //    musteri nesnesinin içindeki field ları kullanacak
+
+        //    o verileri kullanacak işlemlerini yapacak zaten deger ram de var
+
+        //    calısturıp f11 ile içine geçtiğimde
+        //    MusteriKontrol body sine geliyor scoplarına düşüyor kod 
+
+        //    MusteriKontrol içinde de MusteriKontrolDataBase adlı farklı bir metoda ulasmak istiyor
+        //    MusteriKontrolDataBase private aynı yerde oldukları için ulasabiliyor
+
+        //    parametre istiyor istediği parametre Musteri124 ün içindeki alanlardan
+
+        //    aldıgı veri ile MusteriKontrolDataBase metoduna gidiyor
+        //    gelen deger ile kayıtlı olan deger aynı true u alıyor tekrar bu kısımda kurgusal olarak
+        //    database de kontrol etmıs gibi davrandık
+        //    MusteriKontrol e return ediyor
+
+        //    oda tekrar kontrol degiskenını program cs e return ediyor
+        //    dış dünyaya program.cs e MusteriKontrol ün cagrılan yerine gönderiyoruz
+
+        //    nesne içinde metot
+        //    metot içinde metot 
+        //    metot içinde parametre 
+        //    return edilen sonucu return etmiş oluyoruz
+
+        //    peki M1 içinde 
+
+        //    MusteriKontrolDataBase metoduna bakalım göremiyoruz neden
+        //    cunku public olarak işaretlenmemiş
+        //    private oldugu için sadece olusturuldugu yerde kullanabiliyoruz
+
+        //    yeri gelmişken diger erişimbelirleyicilerine bakalım 
+        //    private olanı internal yaptıgımızda 
+        //    M1. dediğimizde MusteriKontrolDataBase metodunu görebiliriz
+        //    internal demek bu namespace içinde bu classı ornekleyenler bu classa ulasabilirler
+
+        //    yani bu namespace guvenli alandır demıs oluyoruz 
+        //    yanında da bir kalp ikonu cıkıyor internal diyince
+
+        //    public kim cagırırsa cagırırsın herkese acık oluyor
+        //    internal namespace catısı altında geçerli oluyor
+
+        //    MusteriKontrolDataBase kısmında sql de veri tabanında kayıtlı kısımlardan 
+        //    tckimlik numarasına göre kullanıcı bulup ekli oldugunu varsayalım 
+        //    digerleri ileri konular
+
+
+        //    */
+
+
+        //    Musteri124 M1 = new Musteri124();
+        //    M1.TcKimlikNumarasi = "1";
+        //    M1.Isim = "Mücahit";
+        //    M1.SoyIsim = "Çetinkaya";
+        //    M1.Cinsiyet = 717770001;
+
+        //    Musteri124 M2 = M1;
+        //    M2.Isim = "Muhammet";
+        //    M1.TcKimlikNumarasi = "2";
+
+        //    bool musteriKontrol = M1.MusteriKontrol();
+        //}
+
+        #endregion
+
+
+
 
 
 

@@ -1,0 +1,245 @@
+
+
+Bölüm 13 OOP Sýnýflar VÝDEO 124 Sýnýflarda Metotlarýn Kullanýmý
+
+
+        #region VÝDEO 124
+
+        static void Main(string[] args)
+        {
+
+            /*
+            
+            Bölüm 13 OOP Sýnýflar VÝDEO 124 Sýnýflarda Metotlarýn Kullanýmý
+            
+            */
+
+            /*
+            
+            bu derste sýnýflarýn içinde metot kullanýmlarýna bakacagýz
+            Musteri class ý olusturacagýz
+            field larýmýzý yazacagýz
+
+            public private olarak inceleme yapacagýz
+
+            Musteri124 e gidelim bir metot olusturalým
+
+            1. not baslangýc
+            1. not bitiþi Musteri124 den geldik
+            
+            2. not baslangýc
+
+            gerekli iþlemleri yaptýk nesne olustur field larý doldur vs 
+
+            metotlarla iþimiz var M1. uzerýnden metot cagýralým
+
+                        bool musteriKontrol = M1.MusteriKontrol();
+
+            parametre vermiyoruz buraya breakpoint koyalým debug yapalým
+
+            bu metot onemli sebebi public bir metodun içinde private bir metot cagýrýp 
+            dönen degeri döndürüyoruz ondan dolayý onemli 
+
+            þimdý bunu yazdýk breakpoint koyup cagýrdýk
+
+            M1 in üzerine gelince içinde alanlarýný görebiliyoruz
+
+            f11 ile devam edince metotun içine dallanýyor
+
+            musterikontrol metotu herhangi bir parametre almýyor
+
+            musterikontrol metodu dýsarýdan onu cagýran kiþiden herhangi bir deger almýyor
+
+            musteri nesnesinin içindeki field larý kullanacak
+
+            o verileri kullanacak iþlemlerini yapacak zaten deger ram de var
+
+            calýsturýp f11 ile içine geçtiðimde
+            MusteriKontrol body sine geliyor scoplarýna düþüyor kod 
+
+            MusteriKontrol içinde de MusteriKontrolDataBase adlý farklý bir metoda ulasmak istiyor
+            MusteriKontrolDataBase private ayný yerde olduklarý için ulasabiliyor
+
+            parametre istiyor istediði parametre Musteri124 ün içindeki alanlardan
+
+            aldýgý veri ile MusteriKontrolDataBase metoduna gidiyor
+            gelen deger ile kayýtlý olan deger ayný true u alýyor tekrar bu kýsýmda kurgusal olarak
+            database de kontrol etmýs gibi davrandýk
+            MusteriKontrol e return ediyor
+
+            oda tekrar kontrol degiskenýný program cs e return ediyor
+            dýþ dünyaya program.cs e MusteriKontrol ün cagrýlan yerine gönderiyoruz
+
+            nesne içinde metot
+            metot içinde metot 
+            metot içinde parametre 
+            return edilen sonucu return etmiþ oluyoruz
+
+            peki M1 içinde 
+
+            MusteriKontrolDataBase metoduna bakalým göremiyoruz neden
+            cunku public olarak iþaretlenmemiþ
+            private oldugu için sadece olusturuldugu yerde kullanabiliyoruz
+
+            yeri gelmiþken diger eriþimbelirleyicilerine bakalým 
+            private olaný internal yaptýgýmýzda 
+            M1. dediðimizde MusteriKontrolDataBase metodunu görebiliriz
+            internal demek bu namespace içinde bu classý ornekleyenler bu classa ulasabilirler
+
+            yani bu namespace guvenli alandýr demýs oluyoruz 
+            yanýnda da bir kalp ikonu cýkýyor internal diyince
+
+            public kim cagýrýrsa cagýrýrsýn herkese acýk oluyor
+            internal namespace catýsý altýnda geçerli oluyor
+
+            MusteriKontrolDataBase kýsmýnda sql de veri tabanýnda kayýtlý kýsýmlardan 
+            tckimlik numarasýna göre kullanýcý bulup ekli oldugunu varsayalým 
+            digerleri ileri konular
+             
+             
+            */
+
+
+            Musteri124 M1 = new Musteri124();
+            M1.TcKimlikNumarasi = "1";
+            M1.Isim = "Mücahit";
+            M1.SoyIsim = "Çetinkaya";
+            M1.Cinsiyet = 717770001;
+
+            Musteri124 M2 = M1;
+            M2.Isim = "Muhammet";
+            M1.TcKimlikNumarasi = "2";
+
+            bool musteriKontrol = M1.MusteriKontrol();
+        }
+
+        #endregion
+
+
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace D_13_OOP_Siniflar
+{
+    public class Musteri124
+    {
+
+        public Musteri124()
+        {
+            TcKimlikNumarasi = "12345678910";
+        }
+
+        public Musteri124(string _tcKimlikNo)
+        {
+            TcKimlikNumarasi = _tcKimlikNo;
+        }
+
+        public Musteri124(string _tcKimlikNo, string _isim)
+        {
+            TcKimlikNumarasi = _tcKimlikNo;
+            Isim = _isim;
+        }
+
+        public Musteri124(string _tcKimlikNo, string _isim, string _soyIsim)
+        {
+            TcKimlikNumarasi = _tcKimlikNo;
+            Isim = _isim;
+            SoyIsim = _soyIsim;
+        }
+
+        public string TcKimlikNumarasi { get; set; }
+        public string Isim { get; set; }
+        public string SoyIsim { get; set; }
+        public int Cinsiyet { get; set; }
+
+
+        public bool MusteriKontrol()
+        {
+            bool kontrol = MusteriKontrolDataBase(TcKimlikNumarasi);
+            return kontrol;
+        }
+
+        private bool MusteriKontrolDataBase(string tcKimlikNumarasi)
+        {
+            // database e gidilir müþterinin tckimlik numarasýna göre daha önce kayýt 
+            // edilip edilmediði bilgisi sorgulanýr
+            return true;
+        }
+
+        internal bool MusteriKontrolDataBase1(string tcKimlikNumarasi)
+        {
+            // database e gidilir müþterinin tckimlik numarasýna göre daha önce kayýt 
+            // edilip edilmediði bilgisi sorgulanýr
+            return true;
+        }
+
+    }
+}
+
+
+
+
+/*
+
+
+ilk ctor bos da olabilir direk hiç bir parametre verilmediyse default ayarlarýný getir
+parametre verilmediði halde ilk kesin olarak bunu bu yap gibi bir sey de yazabilirsin
+
+123. video da anlatýldý zaten
+parametre ile de devam edebilirsin
+
+1. not baslangýc 
+ 
+program.cs den geldik 
+
+metot olusturacagýz
+public bir metot olusturacagýz public oldugu için nesneyi new leyen herkes buna eriþebilecek
+
+geri donusu bool olacak true veya false donecek
+
+baska bir metot daha yapacagýz oda private olacak ve public olanýn içinde parametre ile cagýracagýz
+
+
+        public bool MusteriKontrol()
+        {
+            bool kontrol = MusteriKontrolDataBase(TcKimlikNumarasi);
+            return kontrol;
+        }
+
+        private bool MusteriKontrolDataBase(string tcKimlikNumarasi)
+        {
+            // database e gidilir müþterinin tckimlik numarasýna göre daha önce kayýt 
+            // edilip edilmediði bilgisi sorgulanýr
+            return true;
+        }
+
+bu iki metodu acýklayalým 
+
+program.cs de M1.MusteriKontrol yazýp buraya breakpoint ekleyip debug yapalým
+
+anlatýmýný orda yazacagým
+
+1. not bitiþi
+
+
+
+
+ 
+*/
+
+
+
+
+
+
+
+
+
+
+
+
