@@ -10,6 +10,7 @@ namespace D_01_04_Giris
     {
         static void Main(string[] args)
         {
+
         }
     }
 }
