@@ -1,0 +1,25 @@
+
+
+Bölüm 6 : Temel Konular - Deðiþkenler & Tür Dönüþümleri
+Video 25 Bilgilendirme
+
+
+NOT: Console.WriteLine için cw yazýp iki kere tab tusuna basýnca otomatik yazar
+
+
+Bu derste ne öðreneceðiz ?
+Deðiþken nedir ?
+Metinsel deðer saklayabilen deðiþkenler
+Sayýsal deðer saklayabilen deðiþkenler
+Mantýksal deðer saklayabilen deðiþkenler
+Zaman deðeri saklayabilen deðiþkenler
+Tür dönüþümü nedir ? Tür dönüþümüne ne zaman ihtiyaç duyarýz ?
+Bilinçli tür dönüþümü nedir ?
+Bilinçsiz tür dönüþümü nedir ?
+
+Object tipi hakkýnda bilgi
+Object tipi özelliði olan---
+--Tür dönüþümünde kutulama (Boxing)
+--Tür dönüþümünde kutudan çýkartma (UnBoxing)
+Alýþtýrmalar
+Bölüm sonu test
