@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("D_05_NewConsoleWriteLineReadLine")]
+[assembly: AssemblyTitle("Bolum_05_Baslangic")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("D_05_NewConsoleWriteLineReadLine")]
-[assembly: AssemblyCopyright("Copyright ©  2023")]
+[assembly: AssemblyProduct("Bolum_05_Baslangic")]
+[assembly: AssemblyCopyright("Copyright ©  2024")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("e9e4e77e-f20a-479c-92c5-540a2f4b17e1")]
+[assembly: Guid("7e9a2e87-5ef9-488f-b7d8-d100a2d06fc7")]
 
 // Version information for an assembly consists of the following four values:
 //

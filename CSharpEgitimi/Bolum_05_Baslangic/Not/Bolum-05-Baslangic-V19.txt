@@ -1,0 +1,21 @@
+
+
+Bölüm 5 : Eðitime Baþlamadan Önce
+Video 19 Yeni bir console uygulama açmak
+
+
+Visual Studio u acalým
+daha önceden proje actýysan sol tarafta gösterir
+create new e project e týklayalým
+sectikten sonra farklý bir pencere gelecek
+burada bize nasýl bir proje olusturmak istediðimizi sormakta
+daha onceden actýysan sol tarafta daha önceden olusturdugunuz proje dosyalarýný görürsün
+arama kutusuna gelip
+console app yazýyoruz biz burada programa console app olusturmak istediðimizi söylemiþ oluyoruz
+biz burada secerken
+Console App (.Net Framework) ü seçiyoruz. next e basýyoruz.
+proje ismi nereye kayýt edilecek hangi framework kullanýlsýn onu istiyor
+proje isminde türkçe karakter olmasýn
+projeleri tek bir dosya altýnda toplaman sana fayda saðlar.
+solution name bir çok proje ile calýsýldýgýnda bir çözüm dosyasý içinde calýsmak ister bu ileri konu ismi ile ayný olmasý su anlýk sorunolmaz
+framework 4.8 sectik

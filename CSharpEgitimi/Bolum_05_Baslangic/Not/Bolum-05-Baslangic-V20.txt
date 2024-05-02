@@ -1,0 +1,28 @@
+
+
+Bölüm 5 : Eðitime Baþlamadan Önce
+Video 20 Console uygulamamýzý tanýyalým
+
+
+USÝNG
+
+
+bu bölüm sectiðin .netframework un versiyonuna göre deðiþkenlik gösteren kütüphanelerdir.
+biz 4.8 .netframework seçtik ona göre cýktý
+
+NAMESPACE KISMI
+
+isim uzayý olarak geçer claslarý oluþturan yerdir.
+olustururken verdiðin isim orada yazar
+
+INTERNAL CLASS PROGRAM KISMI
+ 
+aslýnda .netframework ana yapý tasý olan Object-oriented programming
+yani nesne yönelimli programlamanýn temelini olusturan bölümdür.
+
+STATÝC VOÝD KISMI
+
+süslü parantez ile açýlmýþ ve kapatýlmýþ
+biz console uygulamalarýmýzýn kodlarýný süslü parantez arasýna yazýyoruz
+static void programlamada metod olarak geçer
+þu anda kafa karýsýklýðý olmamasý için komut diye seslendireceðiz

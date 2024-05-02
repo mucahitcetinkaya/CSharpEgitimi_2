@@ -1,0 +1,27 @@
+
+
+Bölüm 5 : Eðitime Baþlamadan Önce
+Video 22 Console.Readline komutu
+
+
+Consol App (.Net Framework) de acýlan proje direk kapanýyordu
+nedeni ise
+Console.Write veya WriteLine ile parantez içindekini yazdýrýyoruz
+komut calýsýp bitiyor ama console paneli acýlmýyor
+nedeni program hýzlý ac kapa yapýyor
+burada araya ReadLine komutu giriyor
+programý ac calýstýr readline sayesinde imleç cýkýyor konsolu acýk býrakýyor
+kullanýcýdan deðer bekliyor ama biz deðer beklemeyi yaptýgýmýz iþlemlerin
+sonucunu görmek için yapýyoruz henüz
+yani kýsaca console kapanmasýn diye readline yazýyoruz altýna.
+
+
+Ben console.ReadLine komutu olarak konsol uygulamalarda kullanýcýlardan deðer beklerim diyor
+ve kullanýcýnýn girmiþ oldugu deðeri de sana bunu bir iletirim diyor
+bunu bir deðiþkenin içerisine atabilirsin diyor
+deðiþken nedir daha oraya gelmedik
+
+Console.ReadLine 
+kullanýcýdan deger bekleyen bir komuttur deger beklediði içinde siyah ekran yani console ekraný acýk kalýyor
+
+ileri zamanda kullanýcýdan deger alacagýz gelen degere göre iþlem yapacagýz

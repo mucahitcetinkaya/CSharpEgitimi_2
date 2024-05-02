@@ -1,0 +1,57 @@
+
+
+Bölüm 5 : Eðitime Baþlamadan Önce
+Video 23 Uygulamalarý satýr , satýr inceleme
+
+
+yazýlým mühendisliði kýsmýnýn en önemli dersi bu bölüm
+mesela kodunuz da hatalarýnýz var veya satýr satýr bakmak istiyoruz
+anlamadýgýnýz bir konu var bu nasýl calýsýyor
+daha onceden calýsan birinden aldýgýnýz kodlar nasýl calýsýyor
+
+bunlarý anlamak için debug etme yani
+
+SATIR SATIR CALISTIRMA NASIL OLUYOR ÖÐRENELÝM
+
+kod yazmaya geçelim
+
+kod kýsmýnda bizde .... satýrda 1. satýr yazýyor
+programý calýstýrýnca uygulamýnýn hepsi calýsýyor
+yani bütün satýrlarý görüyoruz
+adým adým hangi kodun calýstýgýný o anda görmek istiyorum.
+5. satýr birden yazmayacak ben ilerle dediðimde 1. 2. 3. 4. 5. satýr diye
+ben kontrol etmek istiyorum
+buna debug etme deniyor
+programýn en solunda gri bir alan var
+1. satýrýn karsýsýnda o gri alana gelip týkladýgýmýzda
+kýrmýzý bir yuvarlak cýkýyor
+bu ben programý calýstýrýnca kýrmýzý alana gelince DUR demek oluyor.
+buraya gelince dur ilerleme ben inceleme yapacaðým demek
+ben ileri geri yapýp kontrol etmek istiyorum anlamýna gelir.
+kayýt edip Debug veya start ile çalýstýrýnca console paneli acýlýr 
+imge yanýp sönüyor ama hiç biþey yazmýyor
+daha ilk komut bile calýsmadý
+ne yapmak istiyorsun onu soruyor
+yukarýda stop tusunun yanýnda 
+ok tuslarýmýz var sen bu kodu bir adým ileriye geriye götür demektir.
+f10 nada basabiliriz.
+basýnca console paneline baktýgýmýzda panelde 1. satýr yazýyor.
+her ileriye basýnca kodu okudugunda panelde gösteriyor
+bu iþleme debug deniyor
+satýr satýr kontrol etmemize yarýyor
+bütün saatýrlarý okutalým
+
+mesela ben 4. ve 5. satýrlarýn yeniden calýsmasýný istiyorum demek için
+
+program calýsýrken gri alanda sarý bir ok var
+mause u sarý okun üstüne götürünce
+yukarý asagý oklarý cýkýyor 
+bu adýmý istediðin adýma kaydýrabilirsin demektir.
+sarý oka basýp hangi alana gelmek istiyorsak oraya býrakýnca
+sarý ok o kýsma gelir
+kod ordan calýsmaya devam eder.
+mesela 2. satýra gelince tekrar ileriye alýnca
+5. satýr yazan panelin altýna 2. satýr tekrar yazýyor.
+bu ne iþimize yarayacak 
+biz uygulamamýzý satýr satýr incelerken bir yerde oranýn deðerini nasýl aldýgýný düþünebiliriz.
+oku alýp oraya koyunca ordan devam edip satýr satýr kontrol edeceðiz.

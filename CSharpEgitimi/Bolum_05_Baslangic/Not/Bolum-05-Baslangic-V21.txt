@@ -1,0 +1,74 @@
+
+
+Bölüm 5 : Eðitime Baþlamadan Önce
+Video 21 Console.Write ve Console.WriteLine komutlarý
+
+
+Ekrana kullanýcýnýn görmesi için bir yazý yazdýrmak istediðimizde biz bu komutlarý caðýrýrýz.
+
+
+Write komutu yazdýr demektir
+Console.Write konsola yazdýr oluyor
+neyi yazdýracak ?
+parantez içinde olaný
+
+Console yazýp noktaya basýyoruz yanýnda bir panel acýlýyor Console.
+Write yazýp ("Hello World!"); yazýyoruz
+altýna bir komut daha yazýyoruz
+Console.ReadLine(); bu komutun yazýlma nedenini acýlan konsolun acýk kalmasý 22. video da anlatýlýyor
+
+sonuc
+
+Console.Write("Hello World!");
+Console.ReadLine();
+
+komutlar nokta ile birbirine baðlanýr.
+noktadan sonra acýlan panalde komutlara göre kullaným þekilleri yazar.
+Write komutu parantez içinde kullanýlýr.
+parantez içinde kullanýlmasýnýn sebebi nokta koyduktan sonra acýlan panelde
+komutun sol tarafýnda simgeler vardýr
+mor küp olanlar metod demektir.
+metodlar her zaman sonuna parantez ac kapa ister.
+biz þu anlýk komut demeye devam edeceðiz.
+metinsel bir þey yazýlacaksa eðer "" çift týrnak içine yazýlmalýdýr.
+C# da bütün komutlar noktalý virgül ile kapatýlýr.
+çalýþtýrmak için f5 e basabiliriz.
+yukarýda play tusuna benzer bir tus var dosya adý yazar üstünde ona basabiliriz.
+console acýlýr parantez içinde yazýlan console yazýlmýs olur.
+
+Write komutu console acýlýnca görürsünüz yazýyý yazar
+yanýnda yanýp sönen bir imleç var
+Write komutu yazar 
+imleci YANINDA bekletir. buradaki en önemli nokta burasý
+yazýlan kodun altýna farklý bir kod yazýldýgýnda yanýna yazmaya devam eder.
+
+mesela ("Hello World!") kodunun altýna ayný kod ile ("Hey City!") yazalým.
+
+sonuc
+
+Console.Write("Hello World");
+Console.Write("Hey City");
+Console.ReadLine();
+
+kaydedip calýstýrýnca yazýlan kodun ilk kodun yanýna yazýldýgýný görürürüz.
+çift týrnak arasýna yazýlan bosluk vs de console da gözükür.
+burada alt satýra geçmek için diðer komut
+
+WriteLine komutuna geliyoruz.
+
+Write komutu gibi WriteLine komutuda metodtur mor küpten anlýyoruz.
+sonuna parantez aç kapa ister.
+WriteLine ýn Write komutundan farklý alt satýrdan devam eder.
+imleç yine var ama bu sefer 
+ALT SATIRDA yanmaya devam eder. bu komutun en önemli kýsmý burasý
+
+sonuc
+
+write komutlarýný yorum satýrý yapýp writeline komutlarýna geçelim
+
+Console.WriteLine("Mücahit! ");
+Console.WriteLine("Çetinkaya! ");
+Console.ReadLine();
+
+
+komutlarý alt alta yazar.

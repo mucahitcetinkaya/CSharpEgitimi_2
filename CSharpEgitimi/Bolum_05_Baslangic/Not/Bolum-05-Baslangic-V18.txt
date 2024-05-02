@@ -1,0 +1,12 @@
+
+
+Bölüm 5 : Eðitime Baþlamadan Önce
+Video 18 Bilgilendirme
+
+
+neler göreceðiz
+
+Console uygulamasý acmak
+Console.Write Console.Writeline
+Console.Readline
+Uygulamayý adým adým inceleme iþlemleri
