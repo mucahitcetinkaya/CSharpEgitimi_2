@@ -1,0 +1,487 @@
+----------
+
+
+Bölüm 1 : Tanýtým 
+Video 1 Tanýtým
+
+
+Merhaba bu eðitimde sýfýrdan ileri seviye C# eðitimine baþlýyorum
+
+Merhaba,
+Bu eðitim seti içerisinde anlatýlan konularýn ve uygulamalarýn tümü gerçek hayat içerisinde karþýlaþacaðýnýz þekilde deðerlendirilmiþ ve örneklenmiþtir.
+
+Standart kitap örneklerinin dýþýnda benim projeleri yaparken müþteri deneyimiyle olsun projeyi yaparkenki kodlama düzenimizle alakalý olsun konuyu anlatýrken bunlara da dikkatinizi çekeceðiz.
+
+Gerçek hayatta bu konu böyle gelir atlamayýn önemsiz gibi görmeyin gibi yönlendirmeler olacak.
+
+
+Eðitim içeriklerinden tümü ile faydalanabilmek için lütfen aþaðýdaki maddeleri saðlamaya özen gösteriniz.
+
+Hatýrlatma :
+
+Lütfen cep telefonunuzu sessize alýnýz.
+Eðitime baþlarken günde 2 saat çalýþsam 30 günde bu eðitimi bitirebilirim þeklinde bir matematik hesabý yapmayýn.
+
+Yapmanýz gerekenler :
+
+Dersi izlediðiniz zaman izlemiþ olduðunuz konu için ufak notlar alarak ilerlemenizi tavsiye ederim. Özellikle ilk bölümler de notlarýnýzý kaðýt üzerine almanýz öðrenmenize yardýmcý olacaktýr.
+Bölüm sonlarýnda sizler için hazýrlanmýþ olan alýþtýrma ödev veya sorularý incelemeden geçmeyin.
+
+Bu eðitim programcýlýðý kendi mesleði olarak görmek isteyen ve disiplinli çalýþan kiþilere yardým edebilir.
+
+Bunun dýþýnda kalan katýlýmcýlara herhangi bir fayda saðlamayacaktýr.
+
+
+----------
+
+
+Bölüm 1 : Tanýtým 
+Video 2 Çalýþma süresi ve düzeni hakkýnda
+
+
+Eðitim içerisinde anlatýlacak olan konular bölümlere ayrýlmýþtýr. Bölüm içerisinde anlatýlan konular diðer bölümler ile baðlantýlýr.
+
+Bölüm içerisinde : 
+
+Bölüm hakkýnda bilgi veren bir tanýtým dersi bulunmaktadýr. Tanýtým dersinin süresi ortalama 3 dakika olarak hesaplanabilir.
+Konu anlatýmý
+Konu anlatýmýnýn içerisinde yazýlan kod örneðinin debug edilmesi
+Debug etmek uygulama çalýþýrken adým adým kontrol ile anlatarak devam edilmesi oluyor
+Her adýmda neden böyle noldu vs diye anlatýlacak
+Mesela
+
+Database den datayý cektim
+Çekerken SQL connection kullandým
+Sql ile bu select komutunu hazýrladým 
+Göndermeden önce sql baglantýsýný actým 
+Data yý gönderdim dönüþte datareader aldým 
+gelen reader ý while ile döndüm
+döndükten sonra bir list generic e ekledim
+ekledikten sonra iþim bitti sql connection ý kapatýyorum
+gibi adým adým anlatýlacak
+
+Ýlgili konu ile alakalý gerçek hayat içerisinde yaþanýlmýþ deneyim ufak bir not var ise paylaþýlýr.
+
+Ben bir danýþmaným her gittiðimiz firma birbirinden baðýmsýz olarak calýsýyor
+birisi hastane birisi inþaat birisi parakende sektörü 
+her sektörün kendine ait bir iþleyiþi var 
+biz o iþleyiþlerde farklý farklý senaryolarý her gün görebiliyoruz
+inþaat sektöründeki bir müþteri satmýs oldugu dairenin dolar euro cinsinden taksinlendirmesini isterken
+hastane sektöründeki bir kiþi de call center aramalarýndaki müþterilere cýkacak kampanyayý sunuyor
+
+bir sürü firma ile calýstýk konuyla alakalý yazdýgýmýz senaryo ve kod lar zaten elimde
+size gercek hayatta bakýn böyle bir durumla karsýlastýk bu konuyu böyle cozduk gibi öneriler vereceðim hatta bu durumu simule edeceðiz fake datadan cekeceðiz aynýsýný yapmaya calýsacagýz
+
+sadece C# ogrenmek yerine gercek hayattaki senaryolarý da ogreneceksýnýz
+algoritmalarý ogreneceksýnýz musteriye karsý nasýl cevap verileceðini de ogreneceksiniz
+
+
+Bölüm sonunda neler öðrendik þeklinde genel konular hakkýnda bilgi verilir.
+Bölüm ile alakalý olarak bir ödev veya sýnav ile bölüm tamamlanýr.
+
+
+UYARI : 
+
+Bazý bölümler içerisinde konu anlatýmý yapýlýr ve ilgili bölüm içinde anlatýlan konu ile alakalý bir alýþtýrma yapýlmaz. Bunun nedeni bölüm içerisinde anlatýlan konularýn diðer bölüm için bir giriþ niteliðinde olmasýdýr. Alýþtýrma yapýlmayan bölümlerin alýþtýrmalarý diðer bölümde öðrenmiþ olduðunuz konular ile birlikte yapýlacaktýr.
+
+
+----------
+
+
+Bölüm 2 : Kurulumlar
+Video 3 Bilgilendirme 
+
+
+Eðitim içerisinde C# kodlarýmýzý yazabilmemiz için bize yardýmcý olacak olan ara birim (IDE) Visual Studio kurulumunu yapacaðýz. Eðitim içerisinde anlatýlan konularý deneyimleyebilmemiz için Visual Studio 2022 Community kurulumunu veya üzeri bir kurulum gerçekleþtirmeniz yeterli olacaktýr.
+
+Eðitim içerisinde kullanacaðýmýz veri tabaný iþlemlerini deneyimleyebilmek için Microsoft SQL Server Express kurulumu yeterli olacaktýr.
+
+Kursun ilerleyen bölümlerinde farklý database leri de aslýnda örnek olarak SQLite mesela nasýl kurarýz anlatacagýz
+
+Kurs içerisinde farklý veri tabanlarý kullanýlacak olursa ilgili konunun bölüm videolarý içerisinde öncelikle kurulumundan bahsedilir.
+
+Önemli Uyarý ! 
+
+Kurulumlarýnýzýn saðlýklý olarak ilerleyebilmesi için mevcut iþletim sisteminizin temiz bir kurulum ile yenilenmesi önerilir.
+
+
+----------
+
+
+Bölüm 2 : Kurulumlar
+Video 4 Windows Update son durum
+
+Kiþisel bilgisayarýmýzý istersek sýfýrdan kurulum yapabiliriz daha saglýklý bir kurulum olmasý için kurulum bittikten sonra 
+Önceklikle windows update kýsmýna gelip bunlarý yapalým 
+
+
+----------
+
+
+Bölüm 2 : Kurulumlar
+Video 5 Visual Studio 2022 Comminity
+
+
+burayý açmak için öncelikle yapýlmasý gerekenler
+Visual Studio 2022 Community
+https://visualstudio.microsoft.com/tr/
+yukarýdaki siteden Community i indirdikten sonra yukleme kýsmýna geçelim
+yüklemek istediðimiz paketleri soracak
+ASP.NET and web development .NET desktop development i seçelim
+framework kýsmýnda istediklerimizi hangi .net ile calýsacaksak onu veya onlarý yükleyeceðiz
+ek olarak farklý .net sürünleriyle calýsacaksak eger bunlarý yukleyebiliriz
+dil paketlerinden türkçeyi kaldýrýn ingilizceyi secin programý ingilizce kullanmak daha aþine olmanýza yardýmcý olur
+
+bu bittikten sonra sql servere geçelim
+
+
+----------
+
+
+Bölüm 2 : Kurulumlar
+Video 6 Microsoft SQL Server Kurulum
+
+
+Visual Studio kurulumu bittikten sonra yeniden baslatma istiyor istemezse de siz yeniden baslatma yapýn progrmaý acýn yuklenip yuklenmedýgýne bakýn sadece 
+
+SQL server a gecelim
+
+Microsoft SQL Server Express i indireceðiz
+
+Microsoft SQL Server Express
+https://www.microsoft.com/en-us/download/details.aspx?id=101064
+yukarýdaki siteden indirip yükleyelim
+basic olarak kuracaðýz
+
+bunu kurduktan sonra install ssms seceneði var oraya gidelim onu yukleyelim
+ssms = sql server menagement studio
+
+
+
+SQLite yukleyebilirsin kullanmasý daha basit ayar yapmana gerek kalmýyor ama kolay projelerde kullanmalýsýn
+
+
+----------
+
+
+Bölüm 2 : Kurulumlar
+Video 7 Microsoft SQL Managment Studio Kurulum
+
+
+sql serveri kullanmamýzý saglýyor veya asagýdaki siteden indirip yukleyebilirsin
+https://learn.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver16
+
+kurulum tamam actýk baktýk sorun yok diger video a gecelim
+
+
+----------
+
+
+Bölüm 2 : Kurulumlar
+Video 8 Genel Ayarlarýn Yapýlmasý
+
+
+Visual Studio a girelim ayarlarý yapalým ister giriþ yap ister yapma sorun olmaz
+
+SQL Management Studio u acalým ayarlarýna bakalým
+
+Server Name bilgisayarýnýn adý oluyor gelmezse otomatik olarak
+BilgisayarAdý\SQL-EXPRESS yazabilirsin
+
+Authentication (Kimlik doðrulama)
+Windows Authentication olarak kalsýn farklýlýklarýný sonra anlatacagýz
+
+giriþ yapalým sorun yok kurulum bölümü tamamdýr diger bölüme gecelim
+
+
+----------
+
+
+Bölüm 3 : C# Programlama dili hakkýnda
+Video 9 Bilgilendirme
+
+
+Merhaba bu bölümde C# hakkýnda genel bir bilgilendirme yapacaðýz
+C# nedir nerelerde kullanýlýr vs gibi
+
+Zaman çok deðerli ve harcanan zamaný geri getirme imkaný hiç bir para birimi ile mümkün olmadýðý için harcamýþ olduðumuz zamanýmýzý ve enerjimizi her konuda idareli ve verimli kullanmalýyýz.
+
+C# programlama dilini öðrenmeye baþlamadan önce öðrenmek istediðimiz bu dilin yetenekleri ve piyasadaki deðeri hakkýnda bilgi sahibi olmamýz eðitimin ilerleyen aþamalarýnda bize yardýmcý olacaktýr.
+
+C# Nedir
+Nerelerde kullanýlýr
+Gerçek hayatta C# bilen bir geliþtirici neler yapabilir vs 
+
+
+----------
+
+
+Bölüm 3 : C# Programlama dili hakkýnda
+Video 10 C# Nedir
+
+
+C# programlama dilini seçerek gerçekten çok doðru bir kara verdiniz. C#, C, C++ ve Java dillerinden esinlenerek üretilmiþ bir dildir.
+
+C C++ gömülü yazýlýmlarda hala kullanýlan aktif dillerdir.
+Artýk son durumlarýna gelmiþ durumdalar.
+Java zaten bütün dünyaca bilinen bir dil nesne yönelimli programlama da öncü
+
+C# burda bu güçlü dillerin bütün özelliklerini alarak olusturulmus bir dil
+
+Nesne yönelimli bir dil olduðu için öðrenmesi basit ve hýzlý bir dildir. C# dilini kullanarak uygulamalar geliþtirmeye baþladýðýnýz zaman dil içerisinde gelen nesne yönelimli programlamanýn bir çok avantajýndan faydalanacaksýnýz.
+
+Ýlk öðrenirken yanda duran resimde oldugu gibi ( I'm Bored ) biraz sýkýntý cekecek bazen býrakmak bile isteyebilirsiniz ama sabrederek düzenli bir þekilde çalýþtýðýnýz zaman daha çok sevecek ve iþinizi severek yapacaksýnýz.
+
+Eðer java diline hakimseniz C# dili sizin için çok benzer süreçleri ve mimarisi olan ikinci bir dil olarak gelecektir.
+
+C# programlama dilini öðrendiðiniz zaman üzerine ekleyeceðiniz bir kaç ek teknoloji ile yazýlým geliþtiricisi olarak iþ yapabilir durumda olacaksýnýz.
+
+Yeni bir dil öðrenmek istiyorsanýz herhangi bir kariyer sayfasýna girin iþ ilanlarýna bakýn ülkemde ne kadar geçerli kaç iþ ilaný var vs bunlara bakabilirsiniz
+
+C# programlama dili Microsoft un kendi özel teknolojileri olan dynamics crm gibi erp gibi farklý markalarýn farklý ürünleriylede içine entegre olarak calýsabildiði için 2 yönlü entegresyonlarý ve teknolojileri de saglayabildiði için Türkiye de ve dünyada öncü bir dil 
+
+
+----------
+
+
+Bölüm 3 : C# Programlama dili hakkýnda
+Video 11 Nerelerde kullanýlýr
+
+
+Ufak orta ve büyük ölçekli bir iþletmelerin iþ süreçleri Windows formlar veya web formlar yardýmý ile yazýlabilir.
+
+Ýþletmelerin ortaklýk yaptýðý diðer firmalar ile aralarýnda olan entegrasyonlar ( veri alýþveriþi ) kýsmýnda yaygýn olarak kullanýlýr.
+
+Ýþletmenin sahip olduðu mobil uygulama veya B2B ekranlarýnýn backend iþlemlerin de kullanýlýr
+
+Çalýþmýþ oldugunuz veya danýþmanlýðýný vermiþ oldugunuz firma veya firmalarýn zaman içerisinde ihtiyaç duymus oldugu tüm teknolojilerin veri alýsveriþlerinde kullanýlabilen güçlü ve kendini zamana göre yenileyen bir dildir.
+
+C# öðrendikten sonra UI dediðimiz kullanýcý ekranlarýnýn olusmasýnda C# ýnda içinde yazýlabildiði MVC denilen teknojileri de öðrenebilirsiniz.
+
+Bunun dýsýnda JavaScript tabanlý iþlemlere geçebilirsiniz bunun tarafýnda React veya Angular gibi farklý UI dillerini de öðrenip C# ile birlikte kullanabilirsiniz.
+
+
+----------
+
+
+Bölüm 3 : C# Programlama dili hakkýnda
+Video 12 Gerçek hayatta C# aranan bir dil midir ?
+
+
+Aranan bir dil olmasý yetmez ! Aranan kiþi olmak lazým.
+
+C# Türkiyede aranan bir dil neden Türkiye diyoruz Almanyada Amerikada farklý bir dil popüler olabilir Türkiye için konuþursak C# aranan popüler bir dil.
+
+Her ülkede C# bilinen ve aranan bir dil.
+
+
+
+----------
+
+
+Bölüm 4 : Algoritma
+Video 13 Bilgilendirme
+
+
+algoritma calýsmak için bu siteyi kullanabilirsin
+https://www.mindmeister.com/
+
+Bu bölümde algoritma nedir nasýl düþünmeliyiz
+
+Algoritmanýn programlama üzerindeki yeri nedir olmasa olur mu olmazsa neden olmaz gibi konularý iþleyeceðiz
+
+Bir sorunu bir problemi normal bir insan nasýl düþünüyor programlama yapan bir insan nasýl düþünüyor buna bakacagýz
+
+
+----------
+
+
+Bölüm 4 : Algoritma
+Video 14 Algoritma nedir ?
+
+
+Ýyi bir geliþtirici olabilmemiz için uygulamayý ( Öðrenmiþ oldugumuz programlama dilinin komurlarýný ) çok deneyimlemek gerekir yani eðer ben C# yazýyorsam C# ile alakalý olan sýk kullanýlan kütüphaneleri o kütüphanelerin içerisinde bulunan metodlarý ve nerde neyi kullanacagýmý hangi komutu nasýl kullanacagýmý bilmem gerekir.
+
+Fakat bunlarýn algoritma yapýsýný da oturtmuþ olmammýz lazým elimde bir arac gerek var ama nasýl konumlandýracagýmý nasýl dizeceðimi bilemezsem ortaya bir uygulama cýkartamam
+
+Programlama dünyasýnda algoritmanýn yeri en az bir dilin içerinde bulunan nesnelerin iþlevselliðini bilmek kadar önemlidir.
+
+Algoritma tasarlamak zor gibi görünebilir ama cok basit bir ornekle bunu anlatabiliriz.
+
+Bir uygulama yazmak isterken nasýl düþünmemiz gerektiðini bilmek bizi daha iyi bir yazýlým geliþtiricisi yapar.
+
+Algoritma nasýl tasarlanýr bilemiyorsunuz ama hayatýnýzýn her noktasýnda bir algoritma sürecini kendýnýz öðrenmiþsiniz ve ordan devam ediyorsunuz gerçek hayat bir algoritmadýr
+
+Örnek olarak
+
+aracla gidiyorsunuz ve aracýnýzýn benzin ýsýgý yandý 
+ilk olarak ne düþünüyorsunuz her zaman benzin aldýgým benzýn istanyonuna yakýnmýyým
+kalan benzýn oraya bený goturur mu 
+2 secenek var evet hayýr
+evetse oraya gidelim benzini alalým iþlemi kapatalým
+hayýrsa baska secenek bakalým en yakýn istasyon nerede 
+yada ilk denk geldýgýnýz istanyondan ihtiyac kadar alýp sonra yine kendý istasyonunuza gidebilirsiniz
+
+farklý baský acýlarýyla davranýslarýnýz size öðretmiþ olduklarý aslýnda birer algoritmadýr
+
+mesela sabah kalktýnýz su içtiniz vitamýn aldýnýz kahve içerim bunlar sizin adýmlarýnýz bunlardan gectikten sonra diger adýmlara geçiyorsunuz hep yaptýgýnýz bir þeyi yapmayý atladýgýnýz da ben bunu yapmayý unuttum benim hep yaptýgým biþeydi diyorsunuz 
+
+Baslangýc ve sonuc arasýnda gecen bütün olaylar ve bu olaylarýn o ana baglý olan degiskenliði bir algoritmadýr
+
+Gerçek bir hayat senaryolarýndan bir örnek verelim
+
+Uygulamayý talep eden firma ile bir proje toplantýsý yapýlýr. Firma içerisinde olan tüm süreçler size ard arda aktarýlýr
+
+Mesela yeni bir proje geldi gittik firmaya sürecleri sorduk
+her departmanlardaki anahtar kullanýcýlar kendi deprtmanlarýnýn süreçlerini size anlatýrlar
+burda yazýlýmcý ne yapýyor onlarýn süreçlerini tekrar eden kýsýmlarýný alýyor günlük aylýk yýllýk vs olarak bunlarý kayýt ediyorum ve sonra bakýyoruz departmanlar arasýnda ortak neler var ben neyi nereye koyarsam daha az kod yazarým daha hýzlý calýstýrýrým daha merkezi olur 
+
+bazý departmanlarýn süreçleri birbirleri ile ayný iken bazý departmanlar çok farklý firma gibi yeni bir süreç çizerler.
+
+Uygulama geliþtirici olarak bizim yapmamýz gereken tüm ihtiyaçlarý dinlemek ve hepsini ortak bir noktada toplamak.
+
+iþte bu bütün süreçler benzin ýsýgýnýn yanmasýyla sabah kalkmanýzla yapmýs oldugunuz þeyler ile hepsi ayný sadece kullanýcý gözünden degil artýk geliþtirici gözünden bakmanýz gerekiyor 
+
+Þimdi hayatýmýzýn içerisinde sýklýk ile yapmýs oldugumuz bazý maddeleri sizinle birlikye senaryolaþtýralým ve algoritma mantýgý için sýkýcý çizimlere girmeyelim
+
+Algoritma yapýsý karýsýktýr yapcagýnýz iþin detayýna göre algoritma kendý içerisinde karýsýklasýr 
+resimde gözüken gibi cok uzaktan bakarsanýz algoritma cok karýsýk gelir ama resmý büyütür ve ana adým noktasýna odaklanýrsanýz bütün resmi kolayca okuyabilirsiniz.
+
+Algoritma bazen sizi sýkabilir sýkýldým diye bazen bagýrmanýz gelebilir ama öncelikle sakin olun algoritma yapýsý kod yazdýkca bir þeyleri tecrübe ettikçe oturacak bir þeydir.
+
+Tattýgýmýz tadýný aldýgýmýz birþey deðil deneyimlemiz içine girmemiz lazým 
+
+Kod yazmamýz hata almamýz yanlýs mantýkla kod yazmamýz lazým vs
+
+
+----------
+
+
+Bölüm 4 : Algoritma
+Video 15 Algoritma Alýþtýrma - 1
+
+algoritma calýsmak için bu siteyi kullanabilirsin
+https://www.mindmeister.com/
+
+kullanýcýdan gelen 2 sayýyý toplayan bir uygulamanýn algoritmasýný yapmak istiyoruz
+
+
+once uygulamanýn baslangýc noktasý olacak
+uygulamanýn uzerýne çift týkladýgýmýz kýsým
+çift týkladýgýmýz zaman ilk karsýmýza gelecek ekran ne olmalý
+2 sayýnýn toplamý olacak uygulama o zaman 
+ilk sayý istenmeli
+1. sayýyý giriniz
+sayýyý girdi enter tusuna bastý
+normalde sonradan 2. sayýyý sormak lazým
+ama bizim programcý olarak kontrol etmemýz lazým
+sayý girildi mi dogru mu nasýl bir sayý ondalýklý mý vs belki metin girdi 
+girilen degerin kontrolü
+
+Deger bos mu evet hayýr
+
+evet bos ise farklý bir iþlemm ekranda yazmasý gereken sayý giriniz
+hayýr bos degýlse o zamanda sayý mý metýn mý dogru toplanabilir bir deger mi
+hayýr da evet hayýr olarak ayrýlýr evetse 2. sayý iste hayýrsa dogru deger giriniz yazsýn
+
+2. sayýyý giriniz
+girdi ve enter tusuna bastý
+yine kontrol yapýlmasý lazým
+
+sonrada toplam degýskený olusturup bunda saklayýp 
+ekrana yazdýrýyoruz
+
+
+----------
+
+
+Bölüm 4 : Algoritma
+Video 16 Algoritma Alýþtýrma - 2
+
+
+kullanýcý giriþ ekranýnýn algoritmasýný olusturalým
+
+baslangýc noktasý olacak
+kullanýcý adý ve þifre ekraný gelecek
+bunlar yazýlacak ve enter tusuna gönder tusuna basýlacak
+
+göndere basýnca degerler dogru mu dolu mu bosmu
+
+degerlerýn kontrolu
+dolu mu 
+evet dolu ama dogru mu buda ayrýlýyor 2 e
+veri tabanýnda kontrol edilir
+veri tabanýnda girilen deger dogruysa giriþ yapar yoksa yok yazar
+dolu mu nun cevabý hayýrsa
+doldurun olarak yazar
+
+veri tabanýndan da gelen cevep evetse yaný varsa o zaman da giriþ yapýlýr
+
+giriþ yaparken kullanýcý adý ve þifre 2 si de bos olabilir 
+1 i de bos olabilir bunlar da kontrol edilmesi lazým
+
+
+----------
+
+
+Bölüm 4 : Algoritma
+Video 17 Algoritma Alýþtýrma - 3
+
+
+Þifremi unuttum
+
+
+baslangýc sayfasý 
+kullanýcý adý þifre yeri ve þifremi unuttum butonu
+
+þifremi unuttuma basýlýr
+
+mail hesabý telefon numarasý vs sorulur
+
+girilen degerin mail formatýnda olmasýna bakýlýr
+dogru girilmiþ mi 
+
+evetse
+
+veri tabanýnda arama yapýlýr 
+
+veri varsa maile yeni þifre gelir random veya link uzerýnden degisilikli yaptýrýlabilir
+baska birisi degistirirse diye mailinin de sifresini bilmesi lazým ondan dolayý
+veri yoksa bu mailde kullanýcý yok yazýsý gönderilir
+
+hayýrsa mail dogru giriniz uyarýsý cýkar
+
+birde mesela email adresi veri tabanýnda yok kayýtlý olmasýn yine de 
+gönderildi olarak yazar 
+sebebi yoksa eger sistem de acýk býrakýlmýs olur durmadan istek atar kayýtlý mý degil mi 
+
+
+---------------------------------------------------------------------------------------
+
+
+Kendi notlarým
+
+
+BÝR KODUN ÜSTÜNE TIKLAYIP HEPSÝNÝ SECMEDEN CTRL+C YAPARSANIZ BÜTÜN SATIRI KOPYALAR
+CTRL X C V KISAYOLLARI CALISIYOR.
+
+YORUM SATIRI YAPMAK ÝÇÝN SEÇÝP CTRL+K+C C YANÝ COMMENT TEN AKLINA GELSÝN 
+ÝKÝ ADET // DE KOYABÝLÝRSÝN SONUNA YÝNE // YAZMAN LAZIM
+YORUM SATIRINDAN CIKMAK ÝÇÝN SEÇÝP CTRL+K+U U YANÝ UNCOMMENT TEN AKLINA GELSÝN
+YUKARIDAKÝ ARAÇLARDA KISAYOL TUSUDA VAR. STAR TUSUNUN HÝZASINDA SAÐA DOGRU
+SIRALI YORUM SATIRI YAPMAK ÝÇÝN /.* NOKTAYI GÖRME *./ ARASINA YAZILIR
+KISAYOLU CTRL+K+Ö
+
+
+birden fazla secim yapmak için ayný anda 
+ALT + mouse ile secebilirsin
+
+satýrlarý yukarý asagýya tasýmak için 
+ALT+ yön tuþlarýný kullanabilirsin
+
+yeni bir proje acmak için solution a sag týk add new project e bas ConsoleApp.netframework ü sec
+hangi projenin calýsmasýný istiyorsan eger aktif olmasý için
+projeye sag týk yap Set as Startup Project e bas
+
+
+---------------------------------------------------------------------------------------

@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34202.233
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D_01_04_Giris", "D_01_04_Giris\D_01_04_Giris.csproj", "{3802DCFC-C9B5-4144-BB05-C128B46CE337}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D_05_NewConsoleWriteLineReadLine", "D_05_NewConsoleWriteLineReadLine\D_05_NewConsoleWriteLineReadLine.csproj", "{E9E4E77E-F20A-479C-92C5-540A2F4B17E1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D_06_TemelKonularDegiskenlerTurDonusumleri", "D_06_TemelKonularDegiskenlerTurDonusumleri\D_06_TemelKonularDegiskenlerTurDonusumleri.csproj", "{272AD155-11EC-47AE-B3B6-608756EBCA5D}"
@@ -23,16 +21,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D_12_Metot", "D_12_Metot\D_
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D_13_OOP_Siniflar", "D_13_OOP_Siniflar\D_13_OOP_Siniflar.csproj", "{95311DCA-9F95-4452-9DD1-E5BF247B27A8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bolum_01_04_Giris", "Bolum_01_04_Giris\Bolum_01_04_Giris.csproj", "{2A851324-E65B-4B54-ABD9-6A2DCCDBE377}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{3802DCFC-C9B5-4144-BB05-C128B46CE337}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3802DCFC-C9B5-4144-BB05-C128B46CE337}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3802DCFC-C9B5-4144-BB05-C128B46CE337}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3802DCFC-C9B5-4144-BB05-C128B46CE337}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E9E4E77E-F20A-479C-92C5-540A2F4B17E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E9E4E77E-F20A-479C-92C5-540A2F4B17E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E9E4E77E-F20A-479C-92C5-540A2F4B17E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -69,6 +65,10 @@ Global
 		{95311DCA-9F95-4452-9DD1-E5BF247B27A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{95311DCA-9F95-4452-9DD1-E5BF247B27A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{95311DCA-9F95-4452-9DD1-E5BF247B27A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A851324-E65B-4B54-ABD9-6A2DCCDBE377}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A851324-E65B-4B54-ABD9-6A2DCCDBE377}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A851324-E65B-4B54-ABD9-6A2DCCDBE377}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A851324-E65B-4B54-ABD9-6A2DCCDBE377}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

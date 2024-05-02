@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{3802DCFC-C9B5-4144-BB05-C128B46CE337}</ProjectGuid>
+    <ProjectGuid>{2A851324-E65B-4B54-ABD9-6A2DCCDBE377}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>D_01_04_Giris</RootNamespace>
-    <AssemblyName>D_01_04_Giris</AssemblyName>
+    <RootNamespace>Bolum_01_04_Giris</RootNamespace>
+    <AssemblyName>Bolum_01_04_Giris</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -50,7 +50,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="MyNotes\Ders0104Giris.txt" />
+    <Content Include="Not\Bolum-01-04-Giris-V01-V17.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
