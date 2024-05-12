@@ -1,0 +1,96 @@
+
+
+Bölüm 6 : Temel Konular - Deðiþkenler & Tür Dönüþümleri
+VÝDEO 41 Convert ve Parse Kullanýmlarý
+
+
+string gelen bir deðeri int a decimal a veya farklý bir sayýsal deðiþken tipine nasýl ceviririz
+
+örnekler
+
+string metin1 = "100" ; biz bu metinsel deðeri sayýsal deðere atmak istediðimizde
+int s1 = metin1 ; int karsýda atancak deðerin tipine bakýyor
+burada string görüp böyle biþey olmaz diye hata veriyor
+
+bilinçsiz dönüþüm gibi
+int s1 = (int) metin1 ; desek yine olmaz diyor kabul etmiyor
+nasýl yapacaðýz
+
+Parse komutu ile Parse komutu ile biz int a biz sana string bir deðer veriyoruz
+bu deðer senin aralýgýndadýr diyoruz
+int.Parse komutu string deðeri alýp int e cevirip s1 üzerine atýyor.
+
+int s1 = int.Parse(metin1);
+
+farklý bir yol Convert.ToInt32();
+
+böyle yaparak metin1 int32 e cevir dedik
+int s2 = Conver.ToInt32(metin1);
+
+peki sadece sayýsal deðerler için mi bu böyle HAYIR
+
+metinsel deðerlerde de bunu kullanabiliriz.
+
+string metin2 = "True";
+bool b1 = bool.Parse(metin2);
+
+bool. yazdýgýmýzda onun yanýnda acýlan panelde komutlarý görürüz
+üstüne geldiðimiz de acýlan pencere de ben string deðer alýr bool a çeviririm diyor
+convert olarakta kullanýlabilir.
+bool b2 = Convert.ToBoolean(metin2);
+
+peki parse ve convert arasýndaki fark nedir
+
+string metin3 = null; null demek içerisinde herhangi bir deðer yok demek
+boþluk bile olsa bizim için deðerdir ama null dediðimizde bu deðiþken deðer almamýs diyoruz
+
+peki string içinde null var bende bunu decimal a cevirmek istiyorum
+
+string metin3 = null;
+decimal d1 = decimal.Parse(metin3);
+decimal d2 = Convert.ToDecimal(metin3);
+
+böyle yazýp calýstýrýlsa
+decimal.Parse için hata veriyor deðer null olamaz diyor
+Convert.ToDecimal için hata vermiyor ama deðeri 0 olarak çeviriyor.
+uygulamayý durdurmak istemiyor belki içeride sýfýrsa diye komut vardýr olarak bakýyor
+
+bool deðiþkeni hiç biþey tanýmlanmazsa deðeri false dur
+
+bool b3 = Convert.ToBoolean(metin3);
+
+bool deðiþken tipinin default ayarý false dur
+uygulama debug da bakýlýrsa ilk b3 false alýr
+null deðerini cevirmeye kalktýgýnda cevirme yapmayacak hata vermeyecek
+false i korur false olarak kalýr
+
+öneri Convert kullanýn
+convertte hata vermez stantdart deðerini kullanýr
+zaten altýnda if ile bunu sorgulama yaparsýnýz 
+deðer bos ise farklý iþlem yaparsýnýz
+
+eðer parse i kullanýrsanýz 
+null gelen database leri okuyamazsýnýz
+uygulama hata verir
+prot ortam dediðimiz production yani gercek kullanýcýlarýn gördüðü yerlerde
+kullanýcýnýn hiç anlamadýgý acayip acayip hata fýrlatmak bütün uygulamayý çöp edebilir
+kullanýcý anlamaz adam 10 bin satýr kod yazmýs parse gelmiþ oda beni buldu demez
+uygulama calýsmýyor der
+
+bu hatalarý hata yönetiminde de konusacaðýz
+hatalarý kullanýcýya göstermeden 
+sistem içerisinde manipüle ederek
+kullanýcý bunu anlamadan
+deðer gelmiyor neden bu data cekmiyor ama hata da vermedi dendiðinde
+biz þunu anlayacaðýz daha null geldi.
+
+kullanýcý bilmesin bizim programsal hatalarý
+
+bildiði zaman uygulama kullanýcýnýn gözünden düþer sýfýr bir program alýnmýs
+demosu yapýlmýs bir ton para verilmiþ gerçek hayatta kullanýlacak
+çok basit bir kottan dolayý olsada uygulama hata veriyor olur
+
+karar yapýlarý hata yönetimi kod içerinde alýnan hatalarýn manipüle ederek 
+kullanýcýya farklý hata mesajlarýyla bilgilerin verilmesi o bilgilerinde 
+vermiþ oldugumuz hata mesajlarýyla
+sistem yoneticisine basvurun gibi o tür bilgi mesajlarýyla bize gelmesini isteriz.
