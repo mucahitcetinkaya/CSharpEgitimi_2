@@ -179,7 +179,19 @@
 
         #endregion
 
+        #region VİDEO 33 Değişkenlerin Davranışları
 
+        //static void Main(string[] args)
+        //{
+
+        //    string degiskenVal1 = "Mücahit Çetinkaya";
+        //    string degiskenVal2 = "Muhammet Mücahit Çetinkaya";
+
+        //    degiskenVal1 = degiskenVal2;
+        //    degiskenVal2 = "Muhammet Çetinkaya";
+        //}
+
+        #endregion
 
 
 

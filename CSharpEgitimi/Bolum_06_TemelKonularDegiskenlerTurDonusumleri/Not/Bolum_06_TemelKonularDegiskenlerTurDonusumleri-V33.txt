@@ -1,0 +1,65 @@
+
+
+Bölüm 6 : Temel Konular - Deðiþkenler & Tür Dönüþümleri
+VÝDEO 33 Deðiþkenlerin Davranýþlarý
+
+
+iki farklý deðiþken davranýsý var ama bir tanesini anlatacaðýz burada
+konusu iþlemedik daha
+
+uygulamayý yazarken devamlý kullandýgýmýz nesnedir deðiþken
+nesnedir deyince bile ortalýk biraz karýsýyor
+mesela
+string yazýp sað týk yapýp Go To Definition veya F12 bastýgýmýzda
+string için orada public sealed class oldugu yazýyor.
+daha oraya gelmediðimiz için anlatmaya gerek yok
+
+C# nesne yönelimli bir program dilidir
+
+biz deðiþken davranýslarýndan devam edelim
+
+bir string deðiþkenleri oluþturup isim verelim
+string metinsel kayýt tipidir 
+"" çift týrnak arasýna yazýlýr
+
+SONUC 
+
+string degiskenVal1 = "Mücahit Çetinkaya";
+string degiskenVal2 = "Muhammet Mücahit Çetinkaya";
+
+burada iki farklý deðiþken var peki biz böyle biþey yapsak
+
+degiskenVal1 = degiskenVal2 ;
+degiskenVal2 = "Muhammet Çetinkaya";
+
+BURDA DÝYORUZ KÝ 
+
+degiskenVal2 DEÐERÝNÝ degiskenVal1 ÝN ÝÇÝNE EÞÝTTÝR OPERATÖRÜ ÝLE ATA
+
+BÖYLE YAPTIGIMIZDA
+
+degiskenVal2 DE YAZAN DEÐER "Muhammet Mücahit Çetinkaya"
+degiskenVal1 DE YAZAN DEÐER "Mücahit Çetinkaya"
+
+val1 deki deðeri de val2 de yazan deðer yapýyor
+val1 deðeri val2 nin deðerini alýyor
+val2 kendi deðerini biliyor
+val1 deðeri val2 deki deðeri KOPYALIYOR BU AYRINTI COK ONEMLÝ
+
+ 
+debug ile en asaðýya geldiðimizde
+degiskenVal2 içindeki deðer "Muhammet Çetinkaya" oluyor
+AMA ORAYA GELDÝÐÝMÝZDE VAL1 DEKÝ DEÐER DEÐÝÞMEZ
+
+
+BUNUN NEDENÝ
+BELLEK YONETÝMÝNDE
+DEÐÝÞKENLER DEÐERLERÝ BÝRBÝRÝNÝN ÜZERÝNDEN KOPYALARAK ALIR
+HANGÝ DEÐÝÞKENÝN ÜZERÝNDE ÝÞLEM YAPIYORSAK
+ÝLGÝLÝ DEÐÝÞKENÝN ÜZERÝNDEKÝ DEÐER DEÐÝÞÝR
+
+SINIF YAPISINI ANLATIRKEN BU BIRAZ DAHA DEÐÝÞECEK
+BELLEK RESMÝ CIZILECEK ORAYA GELDÝÐÝMÝZ ZAMAN ANLATACAÐIM
+
+DEÐÝÞKENLER DEÐERLERÝ KENDÝ ÝÇLERÝNDE SAKLAR
+BÝRBÝRLERÝNE DEÐER ATADIKLARINDA DA BÝR KOPYASINI ATARLAR
