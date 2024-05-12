@@ -1,0 +1,75 @@
+
+
+Bölüm 7 : Temel Konular - Operatör Kullanýmý
+VÝDEO 52 Aritmatiksel Operatörler - Alýþtýrma 2
+
+
+EKRANA 2 ADET SAYI GÝRÝLECEK
+
+SAYI DOUBLE VEYA DECÝMAL A CEVÝRÝLECEK
+
+SONRA SAYI 1 ÝLE SAYI 2 YÝ
+
+TOPLA CIKAR BÖL CARP MODUNU AL
+
+/* DENEME KODLARI HANGÝSÝ NEYE DÖNER HATA VERÝR MÝ VS */
+
+            Console.Write("1. Sayýný Giriniz : ");
+            string sayi1 = Console.ReadLine();
+
+            Console.Write("2. Sayýný Giriniz : ");
+            string sayi2 = Console.ReadLine();
+
+            Console.Write("3. Sayýný Giriniz : ");
+            string sayi3 = Console.ReadLine();
+
+            Console.Write("4. Sayýný Giriniz : ");
+            string sayi4 = Console.ReadLine();
+
+            byte s1 = Convert.ToByte(sayi1);
+            int s2 = Convert.ToInt32(sayi2);
+            double s3 = Convert.ToDouble(sayi3);
+            decimal s4 = Convert.ToDecimal(sayi4);
+
+
+            int sonuc1 = Convert.ToInt32(s1 + s2);
+            /* double + decimal topla int e cevir int e yaz */
+
+            double sonuc2 = Convert.ToDouble(s1 + s2); /* hepsinde hata veriyor */
+            decimal sonuc3 = Convert.ToDecimal(s1 + s2);
+            /* '+' operatörü, 'double' ve 'decimal' yazmak için iþlenenlere uygulanamaz */
+
+
+            byte sonuc4 = Convert.ToByte(s1 + s2);
+            Console.WriteLine(sonuc4);
+            int sonuc5 = Convert.ToInt32(sayi1 + sayi2); /* burada metin birleþtirme yapýyor yazýlan deðerleri yanyana yazýyor */
+            Console.WriteLine(sonuc5);
+            double sonuc6 = Convert.ToDouble(s3 + s2);
+            Console.WriteLine(sonuc6);
+            decimal sonuc7 = Convert.ToDecimal(s4 + s4);
+            Console.WriteLine(sonuc7);
+            /* int sonuc8 = int.Parse(s1 + s2);  burda string almýyor sayýsal deðer olmasý lazým */
+            int sonuc9 = (int)s1 + s2; 
+            int sonuc10 = int.Parse(sayi1 + sayi2); /* string deðer almýþ metin birleþtirme yapýyor */
+            int sonuc11 = (byte)s1 + s1;
+
+            /* byte deðer alýp int e cevirmek için */
+            byte a = 10;
+            int b = (int)a; /* buraya int yazmaya da gerek yok byte to int oldugu için */
+            
+            /* int deðer alýp byte a cevirmek için */
+            int c = 100;
+            byte d = (byte)c; /* byte yazýlmasý lazým bilinçsiz dönüþüm oluyor */
+            /* metinsel bir deðer alýp sayýsala cevirmek için */
+            /* yani string alýp byte int float decimal double vs */
+            /* yani normalde string lerde aritmetiksel iþlem yapýlmaz */
+            /* böyle yaparak buna olanak saðlanýr */
+            string e = "10"; /* paranteze gerek yok */
+            string f = "20";
+            byte g = Convert.ToByte(e); /* e deki deðeri byte a cevir byte a yaz */
+            int h = Convert.ToByte(e); /* e deki deðeri byte a cevir int e yaz */
+            //byte i = Convert.ToInt32(e);
+            /* HATA VERDÝ e deki deðeri int e cevir byte a yaz BÖYLE BÝR DURUMDA BÝLÝNÇÝ DÖNÜÞÜM YAPILMASI LAZIM */
+            /* convert.to ve .Parse da ayný kullanýlýr */
+
+            Console.ReadLine();
