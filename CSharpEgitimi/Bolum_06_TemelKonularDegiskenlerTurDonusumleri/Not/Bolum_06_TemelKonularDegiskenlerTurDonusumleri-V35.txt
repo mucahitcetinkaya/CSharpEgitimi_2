@@ -1,0 +1,116 @@
+
+
+Bölüm 6 : Temel Konular - Deðiþkenler & Tür Dönüþümleri
+VÝDEO 35 Alýþtýrma
+
+
+kullanýcýdan ad soyad þehir isteyen uygulama yapalým
+buradaki olay WriteLine ile konsola yazdýrýyoruz
+ReadLine ile imleci bekletip yanýt bekliyoruz
+
+benim yaptýgým
+
+Console.WriteLine("Adýnýzý Giriniz: ");
+Console.ReadLine();
+Console.WriteLine("Soyadýnýzý Giriniz: ");
+Console.ReadLine();
+Console.WriteLine("Þehir Giriniz: ");
+Console.ReadLine();
+
+hocanýn yaptýgý
+
+ad soy þehir sorsun cevaplarý yazdýgýmýzda ekraný silip
+kullanýcýnýn girdiði bilgileri gösterelim
+
+Console.WriteLine(" Merhaba ");
+
+Console.WriteLine(" Adýnýz nedir ? : ");
+
+bunun cevabýný almak için konsolu bekletmem gerek kullanýcý bir deðer giriþi yapacak
+girilen deðer bir string deðiþken üzerinde saklayacaðým
+benim ihtiyacým olan string deðiþken
+olusturalým deðiþkeni deðiþken adý verelim
+deðerini nerden alacak deðerini kullanýcý girecek
+burada iþleme Console.ReadLine komutu giriyor
+
+string ad = Console.ReadLine();
+
+string vererek metinsel atamayý kayýt etmesini saðladýk
+
+burada ReadLine kýsmýna gelirsek diyorki
+Console.ReadLine komutunu calýstýrýyorsun bu komut
+kullanýcýdan deðer okuyor kullanýcýnýn girmiþ olduðu deðerleri bize getirmeye calýsýyor
+hem imleci bekletiyor hemde kullanýdan bir dönüþ bekliyor
+kullanýcý entere bastýgý zaman
+ben sana deðeri string tipinde dönerim diyor.
+sen bunu istersen bir string in üzerine alabilirsin diyor
+
+Console.WriteLine(" Soyadýnýz nedir ? : ");
+string soyAd = Console.ReadLine();
+
+Console.WriteLine(" Yaþadýðýnýz þehri giriniz : ");
+string sehir = Console.ReadLine()
+
+buraya kadar istediðim bilgileri aldýk
+bundan sonra 
+ekraný temizlemem lazým 
+kullanýcýnýn girmiþ oldugu deðerler kaybolsun
+benim girmiþ oldugum deðerler ekrana yazsýn
+ekraný temizlemek için Console.Clear kullanýlýr
+
+Console.Clear();
+
+bundan sonra yapmamýz gereken deðiþkenin içindeki deðerleri ekrana yazdýrmamýz lazým
+artý operatörünü görmedik ama örnek olarak yapalým
+amacýmýz su isim yazdýktan sonra deðiþkenin deðerini eklemek istiyorum
+yani iki metni birleþtirmek istiyorum
+çift týrnak içinde isim yazýp + ile devam ederek deðiþken adýný yazýyoruz
+
+Console.WriteLine("Ad : " + ad);
+
+böylece iki metni birleþtirecek
+ad kýsmýna ne yazarsanýz mesela Mücahit bosluklarda cýktýda gözükür.
+bu kodun cýktýsý þöyle olacak Ad : Mücahit
+
+Console.WriteLine("Soyad : " + soyAd);
+Console.WriteLine("Yaþadýðý Þehir : " + sehir);
+
+Console.ReadLine(); // bu komut ile konsol kapanmýyor
+
+uygulama sýrayla
+ad soracak girilecek
+soyad soracak girilecek
+þehir soracak girilecek
+en son hepsini temizleyip
+Ad : girilen
+Soyad : girilen
+Þehir : girilen
+olarak gösterecek
+
+debug motta kontrol ederken
+
+calýstýr uygulamayý merhaba dunya yazdý enter
+isminiz nedir diye sordu isim girdim enter
+entere basýnca string kýsma geldi
+string in içine yazdýgým metinsel deðeri kayýt etti enter
+soyad sordu soyad girdim enter
+string kýsmýna geldi
+string in içine soyadýna yazýdýgým metinsel deðeri kayýt etti             
+bu içine dediðim kýsým debug modunda bakarken            
+deðiþken adýnýn üstüne mause ile gelirseniz orada yazar
+soyadý da kayýt etti enter
+entere basýnca            
+sehir sordu sehir girip enter            
+enter a basýnca kayýt etti yine tekrar enter            
+entere basýnca boslukta bekliyor
+tekrar entere basýnca
+clear komutunu calýstýrýp konsolda yazan herþeyi silecek
+tekrar enter
+ekran temizlendi imlec yanýp sönüyor tekrar enter
+Console.WriteLine("isim : " + ad); kýsmýna geldik
+entere basýp bu kýsmý okutunca
+uygulamada
+çift týrnak içinde yazdýgýmýz Ýsim : ile ad deðiþkenine verdiðimiz deðer
+yanyana yazýlmýs þekilde cýkar
+artý + operatörü string tipte bu iþe yarýyor yanýna yazýyor birleþtirme yapýyor
+diðerleri de böyle gider.
