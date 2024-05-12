@@ -1,0 +1,43 @@
+
+
+Bölüm 6 : Temel Konular - Deðiþkenler & Tür Dönüþümleri
+VÝDEO 32 Zamansal Deðiþken Tipi                             DateTime DEÐÝÞKENADI = DateTime.Now;
+
+
+uygulama içinde zamaný nasýl saklarýz
+neden zaman saklamak istiyoruz
+iþ yerine girerken turnike olur kartý okuturuz
+bu iþlem id deðerini alýr giriþini kontrol eder
+neye göre kontrol ediyor
+vardiyalý calýsan birisi 1-5 ve 5-10 gibi vardiyalý sistemde calýsýyor olsun
+günde 5 saatlik vardiyalar
+
+1. kullanýcý vardiyasý 13.00 de baslýyor 17.00 e kadar
+2. kullanýcý vardiyasý 17-22 arasý
+3. kullanýcý 22-02 arasý vs vs vs 
+
+1. kullanýcý turnikeye geldi kartý okuttu 
+uygulamanýn kartýn içinde bulunan id e ulasmasý gerekiyor
+yani id:1 e ulastý
+database e giderken dogrulama yapmasý lazým
+kartý okudu zaman dahil izin ver yada verme
+mesela
+1. kullanýcý geldi okuttu saat 14 
+giriþ yapabilir mi true
+2. kullanýcý geldi okuttu saat 14
+giriþ yapabilir mi false
+
+id nin yanýnda zaman saklayabileceðimiz deðiþken tipi
+
+DateTime  deðiþken tipi oluyor
+deðiþken adý veirilir
+anlattým zamanýn þimdinin zamanýný almak istiyorsak
+eþittir karsýsýna
+DateTime.Now yazýlýr þimdinin zamanýný alýr
+
+SONUC
+
+DateTime tarihSaat = DateTime.Now;
+
+SAYI ÝLE BUGUNUN TARIHINI VE SAAT DAKÝKA SANÝYESÝNÝ YAZAR
+6.02.2023 21:22:29

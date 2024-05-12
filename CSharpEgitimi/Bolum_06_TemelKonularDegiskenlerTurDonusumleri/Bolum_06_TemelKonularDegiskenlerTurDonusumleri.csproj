@@ -50,6 +50,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Not\Bolum_06_TemelKonularDegiskenlerTurDonusumleri-V32.txt" />
     <Content Include="Not\Bolum_06_TemelKonularDegiskenlerTurDonusumleri-V31.txt" />
     <Content Include="Not\Bolum_06_TemelKonularDegiskenlerTurDonusumleri-V30.txt" />
     <Content Include="Not\Bolum_06_TemelKonularDegiskenlerTurDonusumleri-V29.txt" />

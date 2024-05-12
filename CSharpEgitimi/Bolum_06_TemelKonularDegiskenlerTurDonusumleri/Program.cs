@@ -168,7 +168,16 @@
 
         #endregion
 
+        #region VİDEO 32 Zamansal Değişken Tipi
 
+        //static void Main(string[] args)
+        //{
+        //    DateTime tarihSaat = DateTime.Now;
+        //    Console.WriteLine(tarihSaat);
+        //    Console.ReadLine();
+        //}
+
+        #endregion
 
 
 
