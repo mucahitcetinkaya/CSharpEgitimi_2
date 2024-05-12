@@ -1,0 +1,113 @@
+
+
+Bölüm 7 : Temel Konular - Operatör Kullanýmý
+VÝDEO 60 Alýþtýrma - 1
+
+
+            /*
+
+             KULLANICI 3 NOT GÝRECEK
+             3 NOTUN ORTALAMASI
+             45 DEN BÜYÜK MÜ KÜÇÜK MÜ
+
+            */
+
+            /* BENÝM YAPTIGIM */
+
+            /*
+             Console.WriteLine("Hoþgeldiniz");
+            
+             Console.Write("1. notu giriniz : ");
+             int not1 = Convert.ToInt32(Console.ReadLine());
+             Console.Write("2. notu giriniz : ");
+             int not2 = Convert.ToInt32(Console.ReadLine());
+             Console.Write("3. notu giriniz : ");
+             int not3 = Convert.ToInt32(Console.ReadLine());
+            
+             int toplam = not1 + not2 + not3;
+             int ortalama = toplam / 3;
+             bool result = ortalama > 45;
+            
+             Console.Clear();
+            
+             Console.WriteLine($"1. not {not1} 2. not {not2} 3. not {not3} toplamý {toplam} ortalamasý {ortalama} 45 den büyük mü {result}");
+            
+             Console.ReadLine();
+            */
+
+
+
+            /* BENÝM YAPTIGIM */
+
+            /*
+             Console.WriteLine("HOÞ GELDÝNÝZ");
+           
+             Console.Write("1. NOTU GÝRÝNÝZ : ");
+             string sayi1 = Console.ReadLine();
+           
+             Console.Write("2. NOTU GÝRÝNÝZ : ");
+             string sayi2 = Console.ReadLine();
+           
+             Console.Write("3. NOTU GÝRÝNÝZ : ");
+             string sayi3 = Console.ReadLine();
+           
+             int int1 = Convert.ToInt32(sayi1);
+             int int2 = Convert.ToInt32(sayi2);
+             int int3 = Convert.ToInt32(sayi3);
+           
+             int toplam = int1 + int2 + int3;
+             Console.WriteLine("Toplam          : " + toplam);
+             int ortalama = toplam / 3;
+             Console.WriteLine("Ortalama        : " + ortalama);
+           
+             int endusuknot = 45;
+             bool sonuc = ortalama >= endusuknot ;
+             Console.WriteLine("Sýnav Sonucu    : " + sonuc);
+             Console.ReadLine();
+            */
+
+
+
+
+            /*  HOCANIN YAPTIGI */
+
+            /*
+             BENÝM HATAM ÝNT GÝRMEK VÝRGÜLLÜ SAYI OLABÝLÝR DECÝMAL VEYA DOUBLE GÝRMEM LAZIMDI
+             BEN UZUN YOLU SEÇMÝÞÝM
+            */
+
+            Console.WriteLine("HOÞ GELDÝNÝZ");
+
+            Console.Write("NOT 1 DEÐERÝNÝ GÝRÝNÝZ : ");
+            string not1 = Console.ReadLine();
+
+            Console.Write("NOT 2 DEÐERÝNÝ GÝRÝNÝZ : ");
+            string not2 = Console.ReadLine();
+
+            Console.Write("NOT 3 DEÐERÝNÝ GÝRÝNÝZ : ");
+            string not3 = Console.ReadLine();
+
+            Console.WriteLine("Deðerleriniz alýndý hesaplama iþlemi yapýlýyor... ");
+
+            decimal dnot1 = Convert.ToDecimal(not1);
+            decimal dnot2 = Convert.ToDecimal(not2);
+            decimal dnot3 = Convert.ToDecimal(not3);
+
+            /*
+             ORTALAMA ALMA UZUN YOL
+             TOPLAYIP AYRI ORTALAMA ALIYOR
+             decimal toplam = dnot1 + dnot2 + dnot3 ;
+             decimal ortalama = toplam / 3;
+
+             ORTALAMA ALMA KISA YOL
+             ONCE PARANTEZ ÝÇÝ YAPIP SONRA ORTALAMA ALIYOR
+            */
+            decimal ortalama = (dnot1 + dnot2 + dnot3) / 3;
+
+            bool kontrolSonuc = ortalama >= 45;
+            Console.WriteLine("Ortalama deðeriniz 45 deðerinden büyük veya eþit mi ?" + kontrolSonuc);
+
+            /*
+             NOT SONUCTA SADECE 45 DEN BUYUK VEYA ESÝTSE TRUE DEÐÝLSE FALSE YAZIYOR SU ANLIK
+             ÝLERÝDE FARKLI MESAJLAR YAZMASINI GÖSTERECEÐÝZ
+            */
