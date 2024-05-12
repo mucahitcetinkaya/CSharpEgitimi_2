@@ -1,0 +1,46 @@
+
+
+Bölüm 6 : Temel Konular - Deðiþkenler & Tür Dönüþümleri
+VÝDEO 38 Bilinçsiz Tür Dönüþümü 
+
+
+buyuk deðiþken aralýgý olan deðiþkeni
+kucuk deðiþken aralýgý olana okuma
+
+bir deðiþken olusturalým
+
+int sayi1 = 30;
+
+int intMinVal = int.MinValue;
+int intMaxVal = int.MaxValue;
+
+byte sayi2 = sayi1 ; burada hata veriyor
+
+byte içine int atadýðýn için bunu kaldýramam diyor
+kaldýramam kýsmýný içindeki deðere bakmadan söylüyor
+aralýgýna bakarak karar veriyor içindeki deðeri göremiyor
+byte aralýðý int aralýðýna göre az oldugu için ben bunu alamam diyor
+Allah bilir içine ne yazdýn kardesým diyo
+
+burada diyor ki sorumluluðu sen alýyorsan eðer anca öyle içime kayýt ederim diyor
+bu iþlemi de
+
+byte sayi2 = (byte)sayi1 ; böyle yapýyoruz yazýlan deðer senin aralýkta ben biliyorum
+sen bunu byte a cevir sorumluluk bende demek oluyo
+
+biz bu iþleme bilinçsiz tür dönüþümü diyoruz
+uygulama düþünemiyor onun yerine biz düþünüyoruz
+uygulama söze güveniyor
+
+peki burada sayi1 deki deðer byte ýn aralýðý içindeyse direk söze güveniyor
+verilen deðer int aralýgý içinde 
+ama
+byte ýn aralýgý içinde deðilse mesela 256 olsa
+
+int sayi1 = 30;
+byte sayi2 = (byte)sayi1 ; güvendi içine 30 yazdý aralýkta sorun yok
+
+int sayi3 = 256; int 256 kaldýrýr sorun yok
+byte sayi4 = (byte)sayi3 ; byte 256 kaldýrmadýgý için içine 0 atadý
+
+hata burada iþte deðeri almadý 0 yazdý
