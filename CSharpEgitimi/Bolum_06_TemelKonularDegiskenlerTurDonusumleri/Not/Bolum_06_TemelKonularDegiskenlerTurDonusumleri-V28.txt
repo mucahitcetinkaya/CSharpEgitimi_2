@@ -1,0 +1,51 @@
+
+
+Bölüm 6 : Temel Konular - Deðiþkenler & Tür Dönüþümleri
+VÝDEO 28 Char Deðiþken Tipi
+
+
+neden ihtiyac duyarýz
+uygulama içinde kullanýcýlarýn bazý noktalarda seçimleri olur 
+neyi sectiðine göre uygulama oraya dogru akýsýna devam eder.
+kullanýdan gelen seçim tek hane oldugu için
+tek bir karakter oldugu için
+biz bunlarý string içinde saklamak yerine
+
+TEK KARAKTER SAKLAYABÝLECEK 
+
+char deðiþken tiplerinde saklayabiliriz.
+char deðiþken tipinde saklayacaðýmýz deðer kod ile caðýrýlacaksa '' tek týrnak arasýna yazýlýr.
+; ile bitirilir.
+
+mesela kullanýcý seçimi A: oldugunu düþünelim
+aslýnda bu A deðerini saklayabilecek elimde string deðiþken tipi var ama
+string deðiþken tipi tek bir karaktere göre büyük kalýyor.
+yani bellek yönetiminde ben bunu char olarak saklasam daha mantýklý
+
+string ile saklasak ne olur ? HÝÇ BÝÞEY OLMAZ
+
+string kullaniciSecimString = "A";
+
+char kullaniciSecimChar = 'A';
+
+gerçek hayatta iki kullanýmda mümkündür.
+illa tek karakter char ile kullan calýsmaz diye bir þey yoktur
+ama yer kaplama olarak tek karakterleri char ile kullanmak gerekiyor.
+
+calýstýrdýgýmýzda consol da gösterir
+
+SONUC
+
+string kullaniciSecimString = "A";
+Console.WriteLine(kullaniciSecimString);
+char kullaniciSecimChar = 'A';
+Console.WriteLine(kullaniciSecimChar);
+Console.ReadLine();
+
+
+
+deðiþken adýný yazýp noktaya bastýgýmýzda panel cýkar
+kullaniciSecimChar.
+bu panelde cok fazla komut yok gibi gözükebilir ama
+char deðiþken tipini yazýp noktaya bastýgýmýzda panel cýkar
+char. burada daha fazla secenek cýkar ama bu ilerinin konularý

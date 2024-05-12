@@ -69,6 +69,19 @@
 
         #endregion
 
+        #region VİDEO 28 Char Değişken Tipi
+
+        //static void Main(string[] args)
+        //{
+        //    string kullaniciSecimString = "A";
+        //    Console.WriteLine(kullaniciSecimString);
+        //    char kullaniciSecimChar = 'A';
+        //    Console.WriteLine(kullaniciSecimChar);
+        //    Console.ReadLine();
+        //}
+
+        #endregion
+
 
 
 
