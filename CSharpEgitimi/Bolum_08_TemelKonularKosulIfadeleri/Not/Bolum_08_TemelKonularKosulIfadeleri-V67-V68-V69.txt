@@ -1,0 +1,184 @@
+
+
+Bölüm 8 : Temel Konular - Koþul Ýfadeleri 
+
+
+VÝDEO 67 Karar Yapýlarý - IF Kullanýmý
+VÝDEO 68 Karar Yapýlarý - IF ve ELSE Kullanýmý
+VÝDEO 69 Karar Yapýlarý - IF ve ELSE IF Kullanýmý
+ 
+ 
+VÝDEO 67 Karar Yapýlarý - IF Kullanýmý
+ 
+ 
+KARAR YAPILARINDA BÝZ NE GÖRDÜK
+&& VE
+|| VEYA
+GERÝYE bool dönen karsýlastýrmalar yazdýk
+ve þartý hepsinin true olmasýna bakýyordu
+veya þartý sadece 1 tanesi dogru olsa true veriyordu
+buna göre bize true yada false yanýtlarý veriyolardý
+þimdi bu yanýtlarý daha mantýklý yerlerde kullanmamýz gerekiyor
+
+bu yerlerden birisi IF kullanýmý olacak
+
+IF dediðimiz kullaným : uygulama içerisinde eðer þartýmýz dogruysa yapsýný istediðimiz ek iþler olarakta adlandýrýlabilir.
+
+Örneðin : biz kullanýdan 2 tane decimal deger alalým ve bu 2 decimal deðerin toplamý 50 den büyükse ekrana girilen 
+deðerlerin toplamý 50 den büyük yazsýn
+
+IF kullanýmý
+
+if (þart/þartlar()&&/||) //sonra süslü parantez acýlýr
+{
+
+    eðer þart ve þartlarýmýz dogruysa yapýlacak iþlemler
+
+}
+
+þart kýsmý 1 þartta olabilir and veya or operatörü ile 1 den fazla þartta yazabilirsiniz
+ 
+ 
+Console.WriteLine("Sayý 1 deðerinizi giriniz : ");
+string sStr1 = Console.ReadLine();
+
+Console.WriteLine("Sayý 2 deðerini giriniz : ");
+string sStr2 = Console.ReadLine();
+
+decimal sayi1 = Convert.ToDecimal(sStr1);
+decimal sayi2 = Convert.ToDecimal(sStr2);
+decimal toplam = sayi1 + sayi2;
+
+bool toplamKontrol = toplam > 50; // geçen bölüm if lere gelmeden buraya kadar yapabiliyorduk
+
+if  (toplamKontrol) // burasý uzun kullaným gerek yok
+{
+    Console.WriteLine("Girmiþ olduðunuz deðerlerin toplamý 50'den büyüktür.");
+
+}
+
+if  (toplam > 50) // bool a gerek yok parantez içinde oldugundan if true yada false veriyor zaten
+{
+
+    Console.WriteLine("Girmiþ olduðunuz deðerlerin toplamý 50'den büyüktür.");
+ 
+    konsoldan girilen deðer 50 den büyükse süslü parantez iþlemine geçiyor
+    konsoldan girilen deðer 50 den küçükse if içindeki süslü parantez iþlemlerini çalýþtýrmaz atlar
+    altýnda biþey yoksa programý bitirir
+
+}
+
+
+
+VÝDEO 68 Karar Yapýlarý - IF ve ELSE Kullanýmý
+ 
+
+IF KISMINI ÝNCELEDÝK 
+IF ÞARTININ OLUMSUZ OLMASI DURUMUNDA ÇALIÞMASINI ÝSTEDÝÐÝMÝZ EK ÝÞLEMLER VARSA
+BUNLARI NASIL BELÝRLEYEBÝLÝRÝZ BÝRLÝKTE BUNLARI ÝNCELEYELÝM
+
+IF TEN SONRA GELÝYOR IF TE YAZILANLAR EGER DOGRU DEÐÝLSE ELSE KULLANILIYOR
+
+else
+{
+
+    þart veya þartlar dogru deðilse o zaman calýsacak kodlar 
+
+}
+
+if (toplam > 50)
+{
+
+    mesela burada konsoldan girilen deðer toplamý 100 se
+    if gelir toplama bakar büyüktür yazdýrýr cýkar
+    else hiç bakmaz
+    altýndaki kodlarý calýsmaya geçer
+
+    Console.WriteLine("Girmiþ olduðunuz deðerlerin toplamý 50'den büyüktür.");
+
+}
+else
+{
+
+    toplam 50 den büyük deðilse o zaman else bakar
+    kucuktür yazdýrýr
+    altýnda herhangi bir kod varsa onlarý calýstýrmaya geçer
+
+    Console.WriteLine("Girmiþ olduðunuz deðerlerin toplamý 50'den küçüktür.");
+
+}
+
+
+
+VÝDEO 69 Karar Yapýlarý - IF ve ELSE IF Kullanýmý
+
+
+ONCEKÝLERDE
+GÝRÝLEN DEÐERLERÝN TOPLAMI 50 DEN BÜYÜKSE
+EKRANA BUYUK YAZ
+BUYUK DEÐÝLSE KUCUK YAZ DEMÝÞTÝK
+
+PEKÝ BÝZÝM ÝSTEÐÝMÝZ ÞÖYLE OLSA
+GÝRÝLEN DEÐERLERÝN TOPLAMI
+100 DEN BUYUKSE 100 DEN BUYUK YAZALIM
+50 DEN BUYUKSE 50 DEN BUYUK YAZALIM
+50 DEN KUCUKSE 50 DEN KUCUK YAZALIM
+BURADA 3 ÞART VAR
+100 DEN BUYUKSE ÝF
+50 DEN BUYUKSE ELSE ÝF
+50 DEN KUCUKSE ELSE 
+IF EGER BU DOGRUYSA DEÐÝL MÝ ELSE IF YA BU DEMEMÝZÝ SAÐLIYOR
+IF ILE ELSE ARASINA ISTEDIGIMIZ KADAR ELSE IF ÝLE ARA KOD YAZABÝLÝRÝZ
+EL SON ELSE ÝLE KODU BÝTÝRÝRÝZ
+ALTINA YAZILACAK BASKA KODLAR VARSA DEVAM EDEBÝLÝR
+
+if (toplam >= 100)
+{
+
+    Console.WriteLine("Girmiþ olduðunuz deðerlerin toplamý 100'den büyük veya eþittir.");
+
+    1. girilen deðerler 50 den küçük olsun
+    burada deðer false gelirse
+    bir altýna iner 2. þartý test eder
+    2. girilen deðerler 100 den küçük 50 den büyük olsun
+    burayý false okur bir aþaðýya iner
+    3. deðer 100 den büyük olsun
+    burasý true gelir konsola yazdýrýr
+    else if veya else ugramaz
+    if blogunun dýsýndan devam eder
+
+}
+
+else if (toplam >= 50)
+{
+
+    Console.WriteLine("Girmiþ olduðunuz deðerlerin toplamý 50'den büyük veya eþittir.");
+
+    1. girilen deðer 50 den küçük
+    if false verdi buraya geldi burasýda false verdi
+    baþka else if varsa ona bakar yoksa uygulama else bakar
+    2. girilen deðerler 100 den küçük 50 den büyük olsun
+    50 den büyük konsola yazdýrýr else gitmez
+    if blogunun dýsýndan devam eder
+
+}
+
+else
+{
+
+    Console.WriteLine("Girmiþ olduðunuz deðerlerin toplamý 50'den küçüktür.");
+
+    1. girilen deðer 50 den küçük
+    buraya gelir konsola yazdýrýr
+    if blogunun dýsýndan devam eder
+
+}
+
+
+NOT : if te 1. sayý 50 2. sayý 100 olsa algoritma yanlýs olur 50 den büyükse zaten 100 den büyük olur
+hiç diðer kýsýmlara bakmaz 
+1. kodda dogru olaný aldým bitti gibi bakýyor
+if blogunun dýsýndan devam eder
+uygulamayý yazarken kodsal hata aldýgýmýzda bir þekilde çözülür
+stackoverflow da yardým bulabiliriz.
+mantýksal hata yaparsak eðer o zaman mecbur kodu okuyup çözmen gerekiyor
