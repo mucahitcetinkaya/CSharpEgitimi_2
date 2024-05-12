@@ -84,7 +84,33 @@
 
         #endregion
 
+        #region VİDEO 47 Aritmetiksel Operatörler Çıkartma
 
+        //static void Main(string[] args)
+        //{
+        //    /* int - int(int verir) */
+
+        //    int s1 = 100;
+        //    int s2 = 50;
+        //    int cıkarmaInt1 = s1 - s2;
+
+        //    /* byte - byte(int verir) */
+
+        //    byte b1 = 100;
+        //    byte b2 = 50;
+        //    byte cıkartmaByte1 = b1 - b2;
+
+        //    /*
+        //     yazamayız burada b1 büyük ama b2 kucuk sayı yani
+        //     sonuc negatifte olabilir ondan dolayı
+        //    */
+
+        //    /* byte - byte için sonucunda int veya var dememiz lazım */
+        //    int cıkarmaInt2 = b1 - b2;
+        //    var cıkarmaInt3 = b1 - b2;
+        //}
+
+        #endregion
 
 
 

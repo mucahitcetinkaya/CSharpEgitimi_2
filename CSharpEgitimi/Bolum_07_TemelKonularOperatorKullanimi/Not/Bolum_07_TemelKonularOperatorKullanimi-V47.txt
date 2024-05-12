@@ -1,0 +1,11 @@
+
+
+Bölüm 7 : Temel Konular - Operatör Kullanýmý
+VÝDEO 47 Aritmatiksel Operatörler - Çýkartma
+
+
+ÇIKARMA OPERATÖRÜ (-) ÝLE KULLANILIR
+
+sayýsal deðiþken tiplerinde kullanýlýr
+
+byte int double float decimal vs 
