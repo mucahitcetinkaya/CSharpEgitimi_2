@@ -388,7 +388,17 @@
 
         #endregion
 
+        #region VİDEO 39 Object Tipi Hakkında Bilgilendirme
 
+        //static void Main(string[] args)
+        //{
+        //    object o1 = 100;
+        //    object o2 = 10.90;
+
+        //    /* hata vermiyor ikisini de alabiliyor */
+        //}
+
+        #endregion
 
 
 

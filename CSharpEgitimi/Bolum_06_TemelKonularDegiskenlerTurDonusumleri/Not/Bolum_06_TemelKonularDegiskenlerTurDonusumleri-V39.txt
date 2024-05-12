@@ -1,0 +1,38 @@
+
+
+Bölüm 6 : Temel Konular - Deðiþkenler & Tür Dönüþümleri
+VÝDEO 39 Object Tipi Hakkýnda Bilgilendirme
+
+
+class dersinde object tipini daha detaylý anlatacaðýz
+
+object tipinin içerisine alabileceði bazý tipler
+
+object
+{
+
+int,
+decimal,
+string,
+bool,
+float,
+double,
+sistem class,
+kendi olusturgumuz custom class,
+
+}
+ 
+bütün deðiþken tiplerin içinde min deðerden daha min
+bütün deðiþken tiplerin içinde max deðerden daha max
+deðeri taþýyabilir
+
+object tiplerin en büyüðüdür
+
+ornek olarak
+
+object o1 = 100;
+object o2 = 10.90;
+
+hata vermiyor ikisini de alabiliyor
+
+bu iþleme boxing iþlemi deniyor 39. videoda anlatýlacak
