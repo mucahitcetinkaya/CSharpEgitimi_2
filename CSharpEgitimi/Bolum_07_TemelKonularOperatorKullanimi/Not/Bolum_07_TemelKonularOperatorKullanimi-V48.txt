@@ -1,0 +1,11 @@
+
+
+Bölüm 7 : Temel Konular - Operatör Kullanýmý
+VÝDEO 48 Aritmatiksel Operatörler - Çarpma
+
+
+ÇARPMA OPERATÖRÜ YILDIZA BASIYORUZ (*) 
+
+SAYISAL DEÐÝÞKEN TÝPLERÝNDE ÝÞLEM YAPAR
+
+byte int float decimal double vs
