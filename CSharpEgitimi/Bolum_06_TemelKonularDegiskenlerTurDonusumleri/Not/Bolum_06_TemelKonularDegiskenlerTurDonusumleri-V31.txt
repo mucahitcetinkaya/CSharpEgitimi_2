@@ -1,0 +1,69 @@
+
+
+Bölüm 6 : Temel Konular - Deðiþkenler & Tür Dönüþümleri
+VÝDEO 31 Mantýksal Deðiþken
+
+
+MANTIKSAL DEÐERLERÝ TUTABÝLECEÐÝMÝZ DEÐÝÞKEN
+bu deðiþkeni cok kullanýyoruz
+neden kullanýrýz ?
+kullanýcý adý þifre kýsmýna bilgileri girdiðinizde giriþ yap butonuna basarsanýz
+arkada datebase tarafýndan girilen deðerler doðrulanýr
+buradaki doðrulanýr kýsmý 
+mantýksal deðiþkenin kullanýldýgý anlamýna geliyor
+
+örnek olarak
+siteye girdik kullanýcý adý þifre girdik
+kullanýcý adý: abc@ vs vs
+þifre:            1
+giriþe basýnca  ne olacak
+
+sistem þunu yapacak
+deðerleri kullanýdan al 
+deðerleri deðiþkenlere kayýt et
+deðerleri kontrol et kullanýcý adý þifre girilmiþ mi 
+deðerleri veri tabanýndan doðrula
+
+biz burda database e benim elimde böyle bir kayýt var sende var mý diyoruz
+burda evet hayýr dönüyor
+evet true
+hayýr false döner 
+
+iþte burada evet hayýrýn saklandýðý veri tipi bool verip tipi oluyor
+
+bool verip tipi olusturalým
+
+bool kullaniciSonuc = true;
+kullaniciSonuc = false;
+
+iki farklý deðer alabiliyor true olumlu olan false olumsuz olan
+
+genelde karar yapýlarýnda göreceðimiz olan if else bloklarýn da da kullanabiliriz
+yada deðerleri çekip farklý yerlerde kontroller içerisinde de kullanabiliriz.
+
+
+bu örneði calýstýrdýgýmýzda karsýsýnda ne varsa onu okur
+true okudu true yazar false okudu false yazar
+bool kullaniciSonuc = true;
+kullaniciSonuc = false;
+
+atanan deðer bossa eðer default deðeri false dir
+içine deðer true atarsak true yazar
+bu ornekte karsýlýðý olmadýgý için ilk okuyacaðý deðer false olur
+diðer örnekte true okudugu için true yazar
+bool kullaniciDeger;
+kullaniciDeger = true ;
+
+
+özet olarak böylede diyebiliriz
+deðiþken tipi yazýp
+deðiþken adý verip
+eþittir ile atama yapýyoruz
+atayacaðýmýz deðeri eþittirten sonra yazýyoruz
+
+bool
+kullaniciSonuc = true;
+kullaniciSonuc = false;
+
+böyle de yazýlabilir.
+ 

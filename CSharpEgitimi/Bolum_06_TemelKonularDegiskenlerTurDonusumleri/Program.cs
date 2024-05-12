@@ -144,7 +144,29 @@
 
         #endregion
 
+        #region VİDEO 31 Mantıksal Değişken
 
+        //static void Main(string[] args)
+        //{
+
+        //    /* bool */
+
+        //    bool kullaniciSonuc = false; /* false okudu false yazdı */
+        //    kullaniciSonuc = true; /* true okudu true yazdı */
+
+        //    Console.WriteLine(kullaniciSonuc);
+
+        //    /* bool */
+
+        //    bool kullaniciDeger; /* bos deger default olarak false okur yazar */
+        //    kullaniciDeger = true;  /* true okudu true yazar */
+
+        //    Console.WriteLine(kullaniciDeger);
+        //    Console.ReadLine();
+
+        //}
+
+        #endregion
 
 
 
