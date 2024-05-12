@@ -1,0 +1,11 @@
+
+
+Bölüm 7 : Temel Konular - Operatör Kullanýmý
+VÝDEO 49 Aritmatiksel Operatörler - Bölme
+
+
+BÖLME OPERATÖRÜ ( / ) DÜR
+
+SAYISAL DEÐÝÞKEN TÝPLERÝNDE ÝÞLEM YAPAR
+
+byte int float decimal double vs

@@ -190,6 +190,29 @@
 
         #endregion
 
+        #region VİDEO 49 Aritmetiksel Operatörler Bölme
+
+        //static void Main(string[] args)
+        //{
+
+        //    /* / simgesi kullanılır */
+
+        //    int s1 = 10;
+        //    int s2 = 2;
+        //    int sonuc = s1 / s2;
+
+        //    /* peki ben s1 deki 10 değerini 0 a bölmek istesem sonuc ne olur */
+
+        //    int s3 = 0;
+        //    int sonuc1 = s1 / s3;
+
+        //    /*
+        //     burada System.DivideByZeroException hatası veriyor
+        //     bölen 0 olamaz diyor
+        //    */
+        //}
+
+        #endregion
 
 
 
