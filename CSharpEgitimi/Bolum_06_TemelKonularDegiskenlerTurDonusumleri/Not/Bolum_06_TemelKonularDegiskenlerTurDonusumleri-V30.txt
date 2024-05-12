@@ -1,0 +1,48 @@
+
+
+Bölüm 6 : Temel Konular - Deðiþkenler & Tür Dönüþümleri
+VÝDEO 30 Double , Decimal , Float Deðiþken Tipleri
+
+
+tam sayýlarý nasýl saklarýz gördük bu sefer
+ondalýklý sayýlarý nasýl saklarýz onu göreceðiz
+
+double
+
+ondalýklý sayý saklar
+double doubleVal1 = 10.2;
+
+double tam sayý da saklar neden ?
+double tipi int tipinden büyük büyük oldugu için kendisinden küçük olan deðeri saklayabiliyor
+double doubleVal2 = 10;  
+
+sonuna koyulan d double ýn d si diðer veri tiplerinde yazýlmasý gerekiyor
+double da yazýlan deðer alabileceði bir deðerse böyle bir zorunluluk istemiyor
+alamayacaðý deðeri zaten yazamayýz
+double doubleVal3 = 10.9d; 
+
+double doubleMinVal = double.MinValue; -1,79769313486232E+308
+double doubleMaxVal = double.MaxValue; 1,79769313486232E+308
+
+
+decimal 
+
+decimal decimalVal1 = 10.2M; sonuna M koymamýz lazým
+
+decimal decimalMinVal = decimal.MinValue; -79228162514264337593543950335
+decimal decimalMaxVal = decimal.MaxValue; 79228162514264337593543950335
+
+float
+
+float floatVal1 = 10.2F; sonuna F koymamýz lazým
+
+float floatMinVal = float.MinValue; -3,402823E+38
+float floatMaxVal = float.MaxValue; 3,402823E+38
+
+neden bunlarý kullanýyoruz
+hocanýn basýna gelen olay
+mobil tarafta API yazarken double yada decimal dönüyormuþ
+oradaki IOS DEVELOPER
+bende double deðerler yok decimal döner misin diye bir istekte bulunmus
+
+min max deðerleri tür dönüþümlerinde tekrar iþleyeceðiz
