@@ -1,0 +1,62 @@
+
+
+Bölüm 6 : Temel Konular - Deðiþkenler & Tür Dönüþümleri
+VÝDEO 29 Byte ve Int Deðiþken Tipleri
+
+
+SAYISAL DEÐERLERÝ SAKLAYABÝLÝYORUZ
+ARÝTMETÝKSEL ÝÞLEMLER YAPABÝLÝYORUZ
+
+string ten farký aritmetiksel iþlem yapmak
+
+bunlarla biz tam sayýlarý saklayabiliyoruz
+tam sayý ise - sonsuzdan + sonsuza kadar deðer saklayabiliriz 
+kusuratlý sayýlarý saklamak için farklý deðiþen tipi var
+
+byte deðiþken tipi
+
+byte deger1 = 10;
+
+byte deðiþken tipi
+deger1 deðiþken adý
+= deðiþken atama operatörü
+10 atanan deðer
+; kodu kapa bitir
+
+
+int deðiþken tipi intecýr diye okunur
+buda tam sayýlarý saklýyor
+byte tan farký daha cok sayý saklayabilmesi
+
+int deger2 = 100;
+
+biz bu deðiþkenlerimiz içinde aritmetiksel iþlemler yapabiliriz.
+
+biz bu rakamlarý string içinde de saklayabiliriz.
+
+string ornek1 = "10"; þeklinde
+ama string deðiþken tipinde aritmetiksel iþlemler yapamayýz.
+
+aritmetiksel iþlemler tür dönüþümleri ile yapýlýr ilerinin konusu göreceðiz
+
+byte ýn alabileceði min max deðerler
+int ýn alabileceði min max deðerler
+
+byte byteMinVal = byte.MinValue; 0
+byte byteMaxVal = byte.MaxValue; 255
+
+int intMinVal = int.MinValue; -2147483648
+int intMaxVal = int.MaxValue; 2147483647
+
+yazdýðýmýzda min max deðerler gösterilir.
+
+byte 8 bit oldugu için okla üstüne geldiðinde yazýyor
+en fazla 2 üzeri 8 deðerini alýr
+2 üzeri 256 yapar 0 da dahil olunca 255 e kadar deðer alabiliyor
+negatif deðer almaz
+
+int 32 bit oldugu için okla üstüne geldiðinde yazýyor
+en fazla 2 üzeri 32 deðerini alýr
+negatif deðer de alýr
+
+aritmetik iþlemlerde genelde int kullanýlýr
