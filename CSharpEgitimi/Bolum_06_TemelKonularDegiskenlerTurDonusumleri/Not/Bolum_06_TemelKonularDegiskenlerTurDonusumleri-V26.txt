@@ -1,0 +1,113 @@
+
+
+Bölüm 6 : Temel Konular - Deðiþkenler & Tür Dönüþümleri
+Video 26 Deðiþken nedir, nasýl tanýmlanýr
+
+
+Deðiþken nedir ? 
+
+Uygulamalarýmýzý yazarken kullanýcýdan veya veri tabanýmýzdan bilgilerimizi alýr ve sürecin yönüne göre bu bilgileri iþleriz. Bilgilerin C# tarafýnda saklandýgý ve iþlendiði alanlara DEÐÝÞKENLER denir.
+
+Saklanýlan deðiþkenlerin türlerine göre deðiþken tipleride farklýlýk gösterir.
+
+Örnek olarak gündelik hayatta karsýlastýgýmýz bir üye giriþi ekranýnda kullanýcý adýmýzý ve þifremizi yazar ve giriþ yap butonuna basarýz bu yapmýs oldugumuz iþlemin veri tabanýnda kontrolünün saðlanmasý için öncelikle hangi yazýlým dili ile yazýlýrsa yazýlsýn bir deðiþken üzerinde toplanýr ve ilgili veri tabanýnda sorgulanmasý yapýlýr.
+
+
+
+Deðiþkenlere neden ihtiyac duyarýz
+
+farklý programlama dillerininde de deðiþkenler denir
+degiþkenler ismi aslýnda cok genel bir isimdir
+her uygulamanýn degiskenler bölümü illaki vardýr
+veriyi uygulama içerisinde illaki bir yerde saklamamýz gerekiyor
+gerek bunu kullanýcýdan alalým gerekse veritabanýndan cekelim
+
+
+veri tabanýndan dönen degerin sonucuna göre 
+iþlemimiz ya basarýlýdýr dashport dediðimiz bizim kendý anasayfamýza gönderir
+yada kullanýcý adý þifreniz yanlýsdýr der 
+ve uyarý penceresi cýkar 
+buda veri tabanýndan almýs oldugumuz bir degiskenýn içerisine aktarýlýp 
+kullanýcýya ilettiðimiz bir süreçtir
+
+
+almýþ oldugumuz verilerimizi
+uygulama boyunca tasýmak isteriz ve deðiþkenlere ihtiyac duyarýz
+örneðin
+bir üye kayýt formu düþünelim
+kullanýcýdan adý soyad þifre mail vs isteriz
+kullanýcý da bunlarý belirtmiþ oldugumuz kriterlerde yazdý ve kaydet butonuna bastý
+butona basýnca ilgili deðerler bize geliyor
+bize gelmesi iþi çözüyor mu HAYIR
+bize gelen bilgileri alýp bir yerde saklayýp ve bunlarý database e kontrollu bir þekilde
+aktarmamýz gerekiyor
+yada kullanýcý üye oldu uygulamada giriþ yaptý giriþ yaptýktan sonra aylýk satýs raporunu istedi
+ne yapýyoruz data base e gidiyoruz
+seçmiþ oldugu ayýn satýs raporunu kullanýcýya göstermemiz gerekiyor
+bu taraftada bilgileri tasýmaya yani deðiþkenlere ihtiyac duyuyoruz
+deðiþkenler baslýk baslýk anlatýlacak yukarýda içeri yazýyor.
+
+peki bir deðiþken oluþturmamýz için ne yapmamýz gerekiyor 
+deðiþken oluþturmanýn bazý sorularý var.
+hangi tür deðer veri saklanacak deðiþkenin tipi ne olmalý
+deðiþkenin adý ne olacak yani sakladýgýmýz deðiþkeni nasýl caðýracagýz
+eþittir operatörü gelen deðeri deðiþken adýna yaný deðiþkene atama operatödür
+yani deðeri deðiþken içine atar.
+kodlar noktalý virgül ile kapatýlmalýdýr.
+
+METÝNSEL DEÐER string
+
+örnek ben adýmý ve soyadýmý consola yazdýrmak istiyorum
+yani metinsel bir deðer saklamak istiyorum
+metinsel deðerleri saklayabileceðimiz deðiþken tipi
+
+string dir
+
+ben bu deðiþkeni nasýl caðýracaðým isimSoyisim yazdým
+deðer atamak için eþittir operatörünü kullanýyorum
+içerisine metinsel bir deðer girileceði için
+"" çift týrnak içerisine isimi ve soy ismimi yazýyorum
+en sonda noktalý virgül ile kodu kapatýyorum
+
+SONUC
+degiskenTipi degiskenAdi = deðer;
+string isimSoyisim = "Mücahit Çetinkaya";
+
+string deðiþken
+isimSoyisim deðiþken adý bununla caðýrma yapacaðýz.
+deðiþken adlarýnda ortak yazma stili
+deðiþken adý tek kelimeden olusuryorsa hepsi küçük yazýlýr
+deðiþken adý birden fazla kelimeden olusuryorsa ilk kelime küçük
+diðer kelimelerin ilk harfleri büyük yazýlýr
+deðiþken adlarýnda türkçe karakter kullanýlmaz.
+eþittir operatörü ile atama iþlemini yapmýs olduk
+
+sýra bu komutu console yazdýrmaya geldi bunun için
+önceki derslerde gördüðümüz
+Console.WriteLine(); kullanýyoruz. Write da kullanabilirdik aþaðýya geçsin diye WriteLine kullandým
+Console.Write("Hello World"); yazýp ekrana yazdýrabiliyorsak
+
+Hello World yerine deðiþkenin ismini yazarak yani deðiþkeni caðýrarak
+konsola bunu da yazdýrabiliriz.
+
+SONUC
+1. YOL
+elimizde bir deðer varsa biz bu deðeri hemen bir deðiþkene atamak istiyorsak 
+1.YOL kullanýlabilir.
+
+string isimSoyisim = "Mücahit Çetinkaya";
+Console.WriteLine(isimSoyisim);
+Console.ReadLine(); ReadLine yazmamýzýn sebebi konsolun kapanmamasý için 
+
+2. YOL
+önce deðiþkeni olusturup program içinde bir yerde deðiþkeni atamak istiyorsak
+2. YOL kullanýlabilir.
+
+
+önce deðiþkeni tanýmlarýz 
+sonra deðiþkeni caðýrýp 
+eþittir operatörü ile yazdýrabiliriz.
+string isimSoyisim;
+isimSoyisim = "Mücahit Çetinkaya";
+Console.WriteLine(isimSoyisim);
+Console.ReadLine();

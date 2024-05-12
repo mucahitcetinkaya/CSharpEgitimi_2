@@ -12,14 +12,22 @@
 
         //#endregion
 
-        #region VİDEO 
+        #region Video 26 Değişken nedir, nasıl tanımlanır
 
-        static void Main(string[] args)
-        {
-
-        }
+        //static void Main(string[] args)
+        //{
+        //    /* degiskenTipi degiskenAdi = değer; */
+        //    string isimSoyisim = "Mücahit Çetinkaya";
+        //    Console.WriteLine(isimSoyisim);
+        //    Console.ReadLine();
+        //}
 
         #endregion
+
+
+
+
+
 
     }
 }
