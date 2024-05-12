@@ -1,0 +1,160 @@
+
+
+Bölüm 6 : Temel Konular - Deðiþkenler & Tür Dönüþümleri
+VÝDEO 44 Bölüm Sonu Alýþtýrma 2
+
+
+SORU 1 : string olarak verilen deðeri bool tipine dönüþtürün
+string metin1 = "True";
+Boolean deðiþken tipi içerisinde istiyorum
+
+
+SORU 2 : int içerisinde olan 100 deðerini ayrý ayrý olarak byte ve float deðiþken tiplerine dönüþtürün
+int s1 = 100;
+
+
+SORU 3 : byte deðiþken içerisinde olan tipi decimal deðiþken tipine dönüþtürün
+byte b1 = 10;
+
+--1. SORU
+string metin1 = "True";
+bool boolDegisken1 = bool.Parse(metin1);
+Console.WriteLine(boolDegisken1);
+
+bool boolDegisken2 = Convert.ToBoolean(metin1);
+Console.WriteLine(boolDegisken2);
+--
+
+--2. SORU
+burda int ten byte a yani büyükken kucuge tip donusumu var bilincsiz tür dönüþümü olacak
+int intDegisken1 = 100;
+100 deðeri byte ve int aralýgýnda vardýr böyle olur
+byte byteDegisken1 = (byte)intDegisken1;
+Console.WriteLine(byteDegisken1);
+
+intDegisken1 adýnda int tipindeki deðeri
+byte a çevir byte tipindeki byteDegisken1 adýna ata
+buyuk aralýk int ten kucuk aralýk byte yaptýgýmýz için basýna byte tipini yazdýk
+sorumluluk alýyorsun
+donusumlerde atanan deðere bakmaz tipine bakar karar verir
+
+intDegisken1 = (byte)intDegisken1;
+Console.WriteLine(intDegisken1);
+
+
+bu ikisinin farký 
+byte byteDegisken2 = (byte)intDegisken1;
+intDegisken1 = (byte)intDegisken1;
+
+
+byte byteDegisken2 = (byte)intDegisken1;
+
+bunda arada deðiþken adý oldugu için
+okurken üstüne geldiðinde kod önce 0 sýfýr okuyor kodu okudugunda deðeri alýyor.
+
+intDegisken1 = (byte)intDegisken1;
+bunda farklý deðiþken adý olmadýgý için
+direk atanan deðeri alýyor.
+
+float floatDegisken = intDegisken1;
+bunun önüne(byte) yazsakta olur yazmasakta olur
+
+float floatDegisken1 = (byte)intDegisken1;
+
+nedeni float ýn deðer aralýðý int ýn deðer aralýgýndan fazla
+
+bundan dolayý float bakar int görür alýrým der dönüþtürür.
+
+
+
+int intDegisken2 = 300;
+
+300 deðeri int aralýgýnda var ama byte ta yok byte a atama yapalým
+intDegisken2 i okurken 300 okuyor
+intDegisken2 = (byte)intDegisken2;  // verine yerine gelince 44 olarak cevirdi
+Console.WriteLine(intDegisken2);    /*  konsola 44 yazdý 300 ün 256 a bolumunden kalan 44 */
+int intDegisken3 = 5;
+5 deðeri int ve byte aralýgýnda var convert.tobyte ile dönüþtürme
+byte byteDegisken3 = Convert.ToByte(intDegisken3);
+intDegisken3 te yazan int deðerini byte e dönüþtürüp byteDegisken2 byte a atacak
+
+Console.WriteLine(byteDegisken3);
+
+int intDegisken4 = 1000;
+1000 deðeri int aralýgýnda var ama byte ta yok byte a atama yapalým
+byte byteDegisken4 = Convert.ToByte(intDegisken4);
+burada izin vermiyor
+böyle bir iþlem yapacaksak eðer bilinçli dönüþüm yapmamýz lazým
+conver.tobyte deðil(byte)intDegisken4; kullanmalýyýz
+byte byteDegisken44 = (byte)intDegisken4;
+
+Console.WriteLine(byteDegisken44);
+
+1000 deðerini okuyor ama 232 olarak ceviriyor
+
+Console.WriteLine(byteDegisken3);
+
+byte byteDegisken5 = 111; // 111 i byte olarak okudu konsola yazdý
+
+decimal decimalDegisken1 = Convert.ToDecimal(byteDegisken5);
+byte tipini decimal yaptý
+
+Console.WriteLine(decimalDegisken1); // decimal tipinde konsola tekrar yazdý
+byte byteDegisken6 = 111; // 111 i byte olarak okudu konsola yazdý
+decimal decimalDegisken2 = byteDegisken6;
+Console.WriteLine(decimalDegisken2);
+
+Console.ReadLine();
+Console.Clear();
+
+int a = 1;
+byte b = (byte)a;
+Console.WriteLine(b);
+Console.ReadLine();
+
+int c = 256;
+byte d = (byte)c;
+Console.WriteLine(d);
+Console.ReadLine(); //konsola 0 yazdý
+
+int e = 257;
+byte f = (byte)e;
+Console.WriteLine(f);
+Console.ReadLine(); //konsola 1 yazdý
+
+int g = 10;
+g = (byte)g;
+Console.WriteLine(g);
+Console.ReadLine();
+byte aa = 100;
+int bb = aa;
+Console.WriteLine(bb);
+Console.ReadLine();
+
+byte aaa = 100;
+int bbb = (int)aaa;
+Console.WriteLine(bbb);
+Console.ReadLine();
+
+hata vermesinin sebebi çift týrnak arasýna metinsel iþlem yazýlýr dogru
+ama int e cevireceksek eðer metinsel olmamalý
+string aa = "abcd";
+int bb = int.Parse(aa); // hata veriyor
+Console.WriteLine(aa);
+Console.ReadLine();
+
+string aa = "abcd";
+int bb = Convert.ToInt32(aa); // hata veriyor
+Console.ReadLine();
+
+string aa = "abcd";
+bool bb = bool.Parse(aa);
+bool cc = Convert.ToBoolean(aa);
+
+string içine rakam yazarsak eðer bilinsiz dönüþüm gibi yazamayýz
+parse veya convert kullanmamýz lazým
+string h = "100";
+int g = (int)h; hata veriyor.
+string aaaa = "100"; // çift týrnak arasýna aritmetik iþlem yazdýk
+int cccc = int.Parse(aaaa);
+int bbbb = Convert.ToInt32(aaaa);
