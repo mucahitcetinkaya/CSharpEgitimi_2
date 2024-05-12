@@ -50,6 +50,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Not\Bolum_07_TemelKonularOperatorKullanimi-V46.txt" />
     <Content Include="Not\Bolum_07_TemelKonularOperatorKullanimi-V45.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -1,0 +1,34 @@
+
+
+Bölüm 7 : Temel Konular - Operatör Kullanýmý
+VÝDEO 46 Aritmatiksel Operatörler - Toplama
+
+
+Merhaba arkadaslar operatörler bolumune hosgeldiniz
+bu bolumde bir onceki bolumde ogrenmýs oldugumuz konularýda kapsayan
+konularý da pekiþtirmeye calýsacagýz
+aritmetiksel operatörlere baslýyoruz
+
+toplama iþlemi 
+
+kendine özgü bir kaç davranýsa sahip 2 tane string i birleþtirmek için kullandýgýmýzda da bundan bahsetmýþtik
+
++ ifadesi ile belirtilir
++ operatörünün sagýna ve soluna gelen ifadelerde davranýþý deðiþir
+
+sayýsal iþlem yapabildiðimiz deðiþken tipinin
+sagýna ve soluna geldiðinde toplama iþlemi yapar
+int byte double float decimal vs
+int + int 
+
+fakat bir metinsel ifade alan deðiþkeninin string gibi
+sagýna yada soluna geldiðinde
+string + int sonuc string cýkar
+int + string gibi sonuc string cýkar
+
+ve üçüncü bir secenek
+bu gibi iþlemlerde + opratörü yazýlan deðerin yanýna birleþtirme iþlemi yapýyor
+string + string sonuc string cýkar
+
+YANINA BÝRLEÞTÝRME YAPMASI SADECE + OPERATÖRÜNE AÝT BÝR DAVRANIS
+DÝÐER OPERATÖRLER BUNU YAPMAZ
