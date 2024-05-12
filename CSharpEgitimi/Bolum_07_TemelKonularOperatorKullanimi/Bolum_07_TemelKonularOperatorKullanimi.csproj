@@ -50,6 +50,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Not\Bolum_07_TemelKonularOperatorKullanimi-V51.txt" />
     <Content Include="Not\Bolum_07_TemelKonularOperatorKullanimi-V50.txt" />
     <Content Include="Not\Bolum_07_TemelKonularOperatorKullanimi-V49.txt" />
     <Content Include="Not\Bolum_07_TemelKonularOperatorKullanimi-V48.txt" />

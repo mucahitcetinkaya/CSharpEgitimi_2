@@ -1,0 +1,71 @@
+
+
+Bölüm 7 : Temel Konular - Operatör Kullanýmý
+VIDEO 51 Aritmatiksel Operatörler - Alýþtýrma 
+
+
+ÝSTENÝLEN
+
+Merhaba 
+
+Adýnýz : 
+Soyadýnýz : 
+Doðum yýlýnýz : 
+
+Ekraný Temizle
+
+Ekranda
+
+Merhaba Mücahit Çetinkaya ... yaþýndasýnýz.
+
+yazacak
+
+
+            //// BENÝM YAPTIGIM 
+            
+
+            //// HOCANIN YAPTIGI
+
+            Console.WriteLine("Merhaba ,");
+
+            Console.Write("Adýnýz : ");
+            string ad = Console.ReadLine();
+
+            Console.Write("Soyadýnýz : ");
+            string soyAd = Console.ReadLine();
+
+            Console.Write("Doðum Yýlýnýz : ");
+            string dogumYili = Console.ReadLine();
+
+            Console.Clear();
+
+            int yil = Convert.ToInt32(dogumYili);
+
+            // karar yapýlarýna geldiðimizde girilen deðerin 0 veya x bir deðer
+            // olup olmadýgýný kontrol edeceðiz
+            // daha oraya gelmedik ekleme yapmýyorum
+
+            //int mevcutYil = 2023; // burada yýla göre hesaplama yaptýk
+            //int yas = mevcutYil - yil;
+
+            //// 2023 yýlýnda calýsýr ama zaman geçiyor
+            //// DateTime.Now.Year; ile yapmamýz lazým
+
+            int mevcutYil = DateTime.Now.Year; //// YAPAMADIGIM KISIM BURASI .YEAR YAZMAYI UNUTMUSUM
+            int yas = mevcutYil - yil;
+
+            // BURADA DEDÝÐÝMÝZ OLAY BUGUNUN ZAMANINI VE YILINI GETÝR mevcutYil a ata
+
+
+            string mesaj = "Merhaba " + ad + " " + soyAd + " " + yas + " yaþýndasýnýz... ";
+            Console.WriteLine(mesaj);
+            Console.ReadLine();
+
+            // string mesajda parantezlere gerek yok 
+            // çift týrnak arasý ifade direk yazýlýr oldugu gibi
+            // metinsel de yazsan rakamsalda yazsan
+            // simge iþaret boslukta koysan çift týrnak içinde oldugu gibi yazar
+            // çift týrnak içindeki bir ifade metinsel oldugu için 
+            // aritmetik iþlem yapýlmaz.
+            // komut oldugunu belirtmek için ters slash kullanýlýr \ ALT GR + SÝMGE TUÞU
+            // alt satýra geçmek için \n kullanýlýr

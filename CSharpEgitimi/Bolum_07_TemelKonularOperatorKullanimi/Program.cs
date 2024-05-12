@@ -306,6 +306,107 @@
 
         #endregion
 
+        #region VİDEO 51 Aritmatiksel Operatörler Alıştırma 1
+
+        //static void Main(string[] args)
+        //{
+        //    /*
+
+
+        //     VIDEO 50 Aritmatiksel Operatörler - Alıştırma 
+
+        //     İSTENİLEN
+
+        //     Merhaba 
+
+        //     Adınız : 
+        //     Soyadınız : 
+        //     Doğum yılınız : 
+
+        //     Ekranı Temizle
+
+        //     Ekranda
+
+        //     Merhaba Mücahit Çetinkaya ... yaşındasınız.
+
+        //     yazacak
+
+        //    */
+
+        //    /* BENİM YAPTIĞIM */
+
+        //    Console.WriteLine("Merhaba");
+        //    Console.Write("Adınız : ");
+        //    string ad1 = Console.ReadLine();
+        //    Console.Write("Soyadınız : ");
+        //    string soyAd1 = Console.ReadLine();
+        //    Console.Write("Doğum Yılınız : ");
+        //    int dogumTarihi1 = Convert.ToInt32(Console.ReadLine());
+
+        //    int yas1 = DateTime.Now.Year - dogumTarihi1;
+
+        //    Console.Clear();
+
+        //    Console.WriteLine("Merhaba" + " " + ad1 + " " + soyAd1 + " " + yas1 + " " + "yaşındasınız.");
+
+
+
+
+        //    /* HOCANIN YAPTIĞI */
+
+        //    Console.WriteLine("Merhaba ,");
+
+        //    Console.Write("Adınız : ");
+        //    string ad = Console.ReadLine();
+
+        //    Console.Write("Soyadınız : ");
+        //    string soyAd = Console.ReadLine();
+
+        //    Console.Write("Doğum Yılınız : ");
+        //    string dogumYili = Console.ReadLine();
+
+        //    Console.Clear();
+
+        //    int yil = Convert.ToInt32(dogumYili);
+
+        //    /*
+        //     karar yapılarına geldiğimizde girilen değerin 0 veya x bir değer
+        //     olup olmadıgını kontrol edeceğiz
+        //     daha oraya gelmedik ekleme yapmıyorum
+        //    */
+
+        //     int mevcutYil2 = 2023; /* burada yıla göre hesaplama yaptık */
+        //     int yas2 = mevcutYil2 - yil;
+
+        //    /*
+        //     2023 yılında calısır ama zaman geçiyor
+        //     DateTime.Now.Year; ile yapmamız lazım
+        //    */
+
+        //    int mevcutYil3 = DateTime.Now.Year; /* YAPAMADIGIM KISIM BURASI .YEAR YAZMAYI UNUTMUSUM */
+        //    int yas3 = mevcutYil3 - yil;
+
+        //    /* BURADA DEDİĞİMİZ OLAY BUGUNUN ZAMANINI VE YILINI GETİR mevcutYil a ata */
+
+
+        //    string mesaj = "Merhaba " + ad + " " + soyAd + " " + yas3 + " yaşındasınız... ";
+        //    Console.WriteLine(mesaj);
+        //    Console.ReadLine();
+
+        //    /*
+        //     string mesajda parantezlere gerek yok 
+        //     çift tırnak arası ifade direk yazılır oldugu gibi
+        //     metinsel de yazsan rakamsalda yazsan
+        //     simge işaret boslukta koysan çift tırnak içinde oldugu gibi yazar
+        //     çift tırnak içindeki bir ifade metinsel oldugu için 
+        //     aritmetik işlem yapılmaz.
+        //     komut oldugunu belirtmek için ters slash kullanılır \ ALT GR + SİMGE TUŞU
+        //     alt satıra geçmek için \n kullanılır
+        //    */
+
+        //}
+
+        #endregion
 
 
 
