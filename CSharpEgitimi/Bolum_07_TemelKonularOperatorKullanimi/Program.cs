@@ -895,15 +895,97 @@
 
         #endregion
 
+        #region VİDEO 62 63 Mantıksal Operatörler Ve Veya Operatörü
+
+        //static void Main(string[] args)
+        //{
+
+
+        //    /* MANTIKSAL VE OPERATÖRÜ && SİMGESİ İLE KULLANILIR */
+        //    /* MANTIKSAL VEYA OPERATÖRÜ || SİMGESİ İLE KULLANILIR */
+
+
+        //    /* VİDEO 62 Mantıksal Operatörler - Ve operatörü && SİMGESİ İLE KULLANILIR */
+
+
+        //    /*
+        //     istediğiniz kadar and operatörü eklenebilir
+        //     geriye bool döner
+        //     bool donenDeger = degisken1 == "admin" && degisken2 == "123" TRUE
+        //     acıklaması
+        //     degisken1 && (ve) degisken2
+        //     degisken1 admin e eşit mi evet
+        //     degisken2 123 e eşit mi evet
+        //     o zaman sonuc TRUE dur 
+        //    */
+
+        //    /*
+        //     * degisken1        degisken2       sonuc
+        //     * True             True            True
+        //     * False            True            False
+        //     * True             False           False
+        //     * False            False           False
+        //     * 
+        //    */
+
+        //    /*
+        //     yukarıdaki tabloda oldugu gibi bütün sartlar true ise bize true alıyoruz
+        //     kaç değer olursa hepsinin true olması lazım
+        //    */
+
+
+        //    string kullaniciAdi = "admin";
+        //    string sifre = "123";
+        //    string anahtar1 = "1";
+
+        //    bool donenDeger = kullaniciAdi == "admin" && sifre == "123" && anahtar1 == "1";
 
 
 
 
 
+        //    /* VİDEO 63 Mantıksal Operatörler - Veya Operatörü || (altgr+simgesi) SİMGESİ İLE KULLANILIR */
+        
+        
+        
+        //    /* 
+        //     geriye bool döner            
+        //     ve operatöründe n tane sartın varsa true için hepsinin dogru olması lazım
+        //     veya operatöründe n tane şarttan 1 tanesi dogru ise true alabilirsin 
+        //    */
 
+        //    /*
+        //     * şart1     şart2       sonuc
+        //     * T         T           T
+        //     * T         F           T
+        //     * F         T           T
+        //     * F         F           F
+        //    */
 
+        //    /*
+        //     YANİ TEK BİR TANESİ DOGRU OLSA BİLE DOGRUDUR
+        //     YANLIS İÇİN HEPSİ YANLIS OLMASI LAZIM
+        //     ornek elimizde bir tane anahtar olsun ve bu anahtarı kullanarak sisteme giriş yapmak istiyoruz
+        //     sistemde de 4 adet anahtar değeri olsun
+        //    */
 
+        //    string anahtar2 = "ASDASJLFGS123123";
+        //    bool geriDonus = anahtar2 == "ASDASJLFGS123123" || anahtar2 == "asd23errfr" || anahtar2 == "şflghk45tg" || anahtar2 == "345ry456tg";
 
+        //    /*
+        //     burada anahtar ilk değerden bakıyor sırayla 1 tanesi dogru ise diğerlerine bakmıyor
+        //     dogruyu bulursa true der
+        //     hiç bir anahtar uymuyorsa false verir
+
+        //     biz bunu nerede kullanırız
+        //     datebase tarafından veri tabanından veri liste çekilmiştir 
+        //     listede bu değer var mı diye bakılmada kullanılabilir
+
+        //     karar yapılarında (if else if) bu operatörler cok kullanılır (ve veya)
+        //    */
+        //}
+
+        #endregion
 
     }
 }

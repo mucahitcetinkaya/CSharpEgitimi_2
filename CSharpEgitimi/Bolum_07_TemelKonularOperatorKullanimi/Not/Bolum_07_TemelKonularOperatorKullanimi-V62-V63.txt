@@ -1,0 +1,104 @@
+
+
+Bölüm 7 : Temel Konular - Operatör Kullanýmý
+
+
+VÝDEO 62 Mantýksal Operatörler - Ve operatörü && 
+VÝDEO 63 Mantýksal Operatörler - Veya operatörü ||
+
+
+karsýlastýrma operatörlerini bitirdik
+karsýlastýrma yaparken gerçek hayatta 
+karþýlaþtýrdýgýmýz deðerler birer tane olmayabilir
+birden fazla deðerin cevabýnýn true olmasýna yönelik bir çalýþma yapýp
+hepsinin cevabýn true ise yani bütün karþýlaþtýrmalarýn cevaplarý true ise
+iþlemi true olarak kabul etmek isteyebiliriz
+mesela kullanýcý adý þifre gibi
+kullanýcý adýnýz dogru þifrenizi bilemediniz ama hadi içeri devam edebilirsiniz diyen
+bir sistemimiz yok ne oluyor kullanýcý adý ve þifreyi dogruluyoruz 
+dogruladýktan sonra Two Factor Authentication ( Ýki Faktörlü Kimlik Doðrulama )
+yoksa telefona sms gelip onuda dogrulamamýz gerekmiyorsa 
+içeri girebiliyoruz
+eðer oda varsa iþin içine bir algoritma daha giriyor
+sms gelir gelen þifreyi dogru girince girebiliriz
+yani sistemde belli algoritmalar belli kurallar var 
+zaten karsýlastýrma operatörleri ve veya operatörlerinin ana mantýklarý
+bu algoritlarý kurmak üzerine bunlarla biz o algoritmalarý kurabiliyoruz
+nerelerde kullanýldýgýný öðrenelim diye böyle not aldýk
+
+
+
+            /* VÝDEO 62 Mantýksal Operatörler - Ve operatörü &&  */
+
+            /*
+             istediðiniz kadar and operatörü eklenebilir
+             geriye bool döner
+             bool donenDeger = degisken1 == "admin" && degisken2 == "123" TRUE
+             acýklamasý
+             degisken1 && (ve) degisken2
+             degisken1 admin e eþit mi evet
+             degisken2 123 e eþit mi evet
+             o zaman sonuc TRUE dur 
+            */
+
+            /*
+             * degisken1        degisken2       sonuc
+             * True             True            True
+             * False            True            False
+             * True             False           False
+             * False            False           False
+             * 
+            */
+
+            /*
+             yukarýdaki tabloda oldugu gibi bütün sartlar true ise bize true alýyoruz
+             kaç deðer olursa hepsinin true olmasý lazým
+            */
+
+            
+             string kullaniciAdi = "admin";
+             string sifre = "123";
+             string anahtar1 = "1";
+
+             bool donenDeger = kullaniciAdi == "admin" && sifre == "123" && anahtar1 == "1"; 
+            
+
+
+
+
+            /* VÝDEO 63 Mantýksal Operatörler - Veya Operatörü || (altgr+simgesi) SÝMGESÝ ÝLE KULLANILIR */
+            /* 
+             geriye bool döner            
+             ve operatöründe n tane sartýn varsa true için hepsinin dogru olmasý lazým
+             veya operatöründe n tane þarttan 1 tanesi dogru ise true alabilirsin 
+            */
+
+            /*
+             * þart1     þart2       sonuc
+             * T         T           T
+             * T         F           T
+             * F         T           T
+             * F         F           F
+            */
+
+            /*
+             YANÝ TEK BÝR TANESÝ DOGRU OLSA BÝLE DOGRUDUR
+             YANLIS ÝÇÝN HEPSÝ YANLIS OLMASI LAZIM
+             ornek elimizde bir tane anahtar olsun ve bu anahtarý kullanarak sisteme giriþ yapmak istiyoruz
+             sistemde de 4 adet anahtar deðeri olsun
+            */
+
+             string anahtar2 = "ASDASJLFGS123123";
+             bool geriDonus = anahtar2 == "ASDASJLFGS123123" || anahtar2 == "asd23errfr" || anahtar2 == "þflghk45tg" || anahtar2 == "345ry456tg";
+            
+            /*
+             burada anahtar ilk deðerden bakýyor sýrayla 1 tanesi dogru ise diðerlerine bakmýyor
+             dogruyu bulursa true der
+             hiç bir anahtar uymuyorsa false verir
+
+             biz bunu nerede kullanýrýz
+             datebase tarafýndan veri tabanýndan veri liste çekilmiþtir 
+             listede bu deðer var mý diye bakýlmada kullanýlabilir
+
+             karar yapýlarýnda (if else if) bu operatörler cok kullanýlýr (ve veya)
+            */
