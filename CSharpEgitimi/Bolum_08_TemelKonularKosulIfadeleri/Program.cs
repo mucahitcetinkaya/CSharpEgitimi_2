@@ -21,7 +21,14 @@
 
         #endregion
 
+        #region VİDEO 66 Karar Yapıları Nedir ?
 
+        //static void Main(string[] args)
+        //{
+
+        //}
+
+        #endregion
 
 
 
