@@ -1,0 +1,57 @@
+
+
+Bölüm 6 : Temel Konular - Deðiþkenler & Tür Dönüþümleri
+VÝDEO 42 Var Anahtar Kelimesinin Kullanýmý Hakkýnda
+
+
+int s1 = 10 ;
+
+int veri tipi kullanacaðýz
+deðiþken tipine ulaþacaðýz deðiþkene isim veriyoruz
+eþittir operatörü ile deðiþkene deðer atýyoruz
+
+peki aynýsýný var ile yaparsak
+var deðiþken anahtar kelimesinin karsýsýna ne atarsak deðiþken tipimiz o olur
+mesela
+var s2 = "Mücahit";
+yazdýk
+artýk s2 string oldu çift týrnak ile yazdýk
+
+var s3 = 100;
+yazdýk
+artýk s3 int oldu
+
+peki bu var niye cýktý
+eskiden .NetFramework 3.5 iken sql e kayýtlarýmý aktarýrken
+uygulamalarýmýzý yazarken
+elio .net kullanýlýrdý elio .net yapýsýnýda bu eðitim içinde göreceðiz
+bir anda entiti .net görmeye geçmeyeceðiz
+mantýgýný anlamak için elio .net da iþlenecek
+biz cok uzun kodlamalar yapardýk 
+o ara Linq denilen bir teknoloji geldi
+bu teknoloji ile birlikte geldi var anahtar kelimesi
+deðerler database den geldiðinde biz bunlarý var ýn üzerine atmaya baþladýk
+tipinin ne oldugunun önemi yok dedik
+ileride göreceðimiz interface ler de geldi
+iþte bunlarý karsýlayabilmek için var anahtar kelimesi hayatýmýza girmiþ oldu
+
+mesela ornek
+
+debug ile bakýnca kodun üstüne geldiðinde var deðiþkeni null okur ilk deðeri yani null dýr
+üstüne deðer atandýgýnda atanan deðere göre o deðerin tipine bürünür
+
+int s1 = 10;
+var s2 = "Mücahit";
+var s3 = 100;
+
+s2 = 10;
+burada hata verir int içine string atamaya calýsýyorsun diyor
+yukarýda s2 e çift týrnak içinde oldugundan string oldugunu anlýyor
+string içine int atýlmaz diyor
+deðeri aldýktan sonra deðerin tipine bürünür o tip gibi davranýr
+
+uygulama boyunca artýk bunlar deðiþmez
+s1 int nasýlsa
+s2 de var string okudugu için çift týrnak ile s2 string olarak geçer
+
+bu kýsa anlatým detaylý anlatým elio . net linq komutlarýnda tekrar iþlenecek

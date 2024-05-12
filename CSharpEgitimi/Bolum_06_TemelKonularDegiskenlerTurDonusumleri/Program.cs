@@ -436,6 +436,23 @@
 
         #endregion
 
+        #region VİDEO 42 Var Anahtar Kelimesinin Kullanımı Hakkında
+
+        //static void Main(string[] args)
+        //{
+        //    int s1 = 10;
+        //    var s2 = "Mücahit";
+        //    var s3 = 100;
+        //}
+
+        #endregion
+
+
+
+
+
+
+
 
 
 
