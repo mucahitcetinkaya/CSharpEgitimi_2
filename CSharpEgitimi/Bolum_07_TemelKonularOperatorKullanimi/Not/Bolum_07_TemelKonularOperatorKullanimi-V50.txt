@@ -1,0 +1,9 @@
+
+
+Bölüm 7 : Temel Konular - Operatör Kullanýmý
+VÝDEO 50 Özel Operatörler
+
+
+MOD ALMA OPERATÖRÜ ÝÞARETÝ % YÜZDE ÝÞARETÝ
+++ OPERATÖRÜ 1 ARTTIRMAK ÝÇÝN KULLANILIR
+-- OPERATÖRÜ 1 AZALTMAK ÝÇÝN KULLANILIR 
