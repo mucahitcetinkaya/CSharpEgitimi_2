@@ -1,0 +1,127 @@
+
+
+Bölüm 6 : Temel Konular - Deðiþkenler & Tür Dönüþümleri
+VÝDEO 43 Bölüm Sonu Alýþtýrma 1
+
+
+HEDEFLER
+
+Merhaba yazacak
+
+bunlarý isteyecek            bunlar girilenler
+
+Adýnýz :                      Mücahit
+Soyadýnýz :                   Çetinkaya
+Þehir :                       Ýstanbul
+Yaþ :                         29
+
+ekraný temizle
+
+girinlen deðerleri ekrana yazdýr
+
+Adýnýz :                      Mücahit
+Soyadýnýz :                   Çetinkaya
+Þehir :                       Ýstanbul
+Yaþ :                         29
+
+not
+ad soyad þehir de hepsi string
+yaþ dediðimiz zaman bunu string den int e cevirmemiz gerekiyor
+2 farklý cevirme yöntemi var ikisini de kullanarak bu örneði yapalým
+
+
+benim yaptýðým
+
+
+Console.WriteLine("Merhaba");
+Console.WriteLine("Adýnýz : ");
+string ad = Console.ReadLine();
+
+Console.WriteLine("Soyadýnýz : ");
+string SoyAd = Console.ReadLine();
+
+Console.WriteLine("Þehir : ");
+string sehir = Console.ReadLine();
+
+Console.WriteLine("Yaþýnýz1 : ");
+string yas1 = (int)Console.ReadLine();
+
+Console.WriteLine("Yaþýnýz2 : ");
+string yas2 = int.Parse(Console.ReadLine());
+
+Console.WriteLine("Yaþýnýz3 : ");
+int yas3 = Convert.ToInt32(Console.ReadLine());
+
+Console.Clear();
+
+Console.WriteLine(ad);
+Console.WriteLine(SoyAd);
+Console.WriteLine(sehir);
+Console.WriteLine(yas1);
+Console.WriteLine(yas2);
+Console.WriteLine(yas3);
+
+Console.ReadLine();
+
+NOT
+Console.WriteLine("Yaþýnýz1 : ");
+int yas11 = (int)Console.ReadLine();
+Console.ReadLine ýn dönüþ tipi string dir direk dönerken (int) olarak tip dönüþümü yapýlamaz
+parse veya convert kullanmak gerekiyor
+
+
+hocanýn yaptýgý
+
+Console.WriteLine("Merhaba");
+
+Console.Write("Adýnýz : ");
+
+string ad = Console.ReadLine();
+Console.Write("Soyadýnýz : ");
+
+string SoyAd = Console.ReadLine();
+Console.Write("Þehir : ");
+
+string sehir = Console.ReadLine();
+Console.Write("Yaþýnýz : ");
+string yasString = Console.ReadLine();
+int yasParse = int.Parse(yasString);
+int yasConvert = Convert.ToInt32(yasString);
+
+kýsa kullaným
+
+int yasConvert2 = Convert.ToInt32(Console.ReadLine());
+convert.toint32 deðeri benden string deðer istiyor
+burada biz string deðere console.readline ile ulasýyoruz
+yani içine console.readline yazýnca onun sonunu bize string dönüyor
+string döndüðünde convert.toint32 string kabul ettiði için
+birbirlerini tamamlarlar tamamladýklarýnda
+ben string olarak gelen int deðerine ulasýyorum
+onun deðerini convert.toint32 ile int üzerine alabiliyoruz
+console.readline kýsmý bize ne veriyor string veriyor
+bu kýsýmda kullanýcýdan deðer bekliyor
+kullanýcý deðer giriyor console.readline dýsarýya string veriyor
+convert.toint32 de parantez içinden string bekliyor ki int e cevirsin
+int e cevirip diðer tarafa atýyor.
+bunu yaparak bizi 1 satýr kodtan kurtarýyor
+
+
+Console.Write("Yaþýnýz1 : ");
+string yasString1 = Console.ReadLine();
+int yasConvert1 =  Convert.ToInt32(yasString1);
+
+Console.Write("Yaþýnýz1 : ");
+int yasConvert2 = Convert.ToInt32(Console.ReadLine());
+
+
+mantýklý kullaným ama ilerinin konusu su anda uzun olaný tercih edelim
+ben kendi yaptýgýmda bilmeden kýsa yolu kullanmýsým ahahahaha
+
+Console.Clear();
+
+Console.WriteLine("Ýsim : " + ad);
+Console.WriteLine("Soyisim : " + SoyAd);
+Console.WriteLine("Þehir : " + sehir);
+Console.WriteLine("Yaþ : " + yasConvert);
+
+Console.ReadLine();
