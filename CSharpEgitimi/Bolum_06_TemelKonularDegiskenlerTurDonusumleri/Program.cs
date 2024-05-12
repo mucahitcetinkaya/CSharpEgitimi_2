@@ -193,6 +193,27 @@
 
         #endregion
 
+        #region VİDEO 34 Faaliyet Alanları
+
+        //static void Main(string[] args)
+        //{
+        //    /* alıstırması yok konu özeti notlarda yazıyor ileri konu ön bilgi verildi */
+        //}
+
+        #endregion
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

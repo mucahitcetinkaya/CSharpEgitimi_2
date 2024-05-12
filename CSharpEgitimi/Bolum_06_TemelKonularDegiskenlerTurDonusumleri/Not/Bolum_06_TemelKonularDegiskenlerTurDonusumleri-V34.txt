@@ -1,0 +1,74 @@
+
+
+Bölüm 6 : Temel Konular - Deðiþkenler & Tür Dönüþümleri
+VÝDEO 34 Faaliyet Alanlarý
+
+
+BU DERS EK DERS GÝBÝ ÇÜNKÜ DAHA FAALÝYET ALANLARININ KULLANILDIGI
+üst katmanlarý metodlarý class larý görmedik 
+faaliyet alaný nedir kýsmý biraz havada kalabilir.
+sadece not alanacak bu bölümde
+metodlarý class larý anlatýrken tekrardan anlatýlacak
+
+bir deðiþken olusturdugumuzda o deðiþkeni kullanabileceðimiz sýnýrlar vardýr
+mesela 
+
+string S1 = "Mücahit Çetinkaya";
+
+oluþturalým 
+
+biz bu deðiþkeni main komutundaki süslü parantezler {} arasýna yazýyoruz
+biz S1 deðiþkenini bu süslü parantezler arasýnda caðýrabilir ve tekrardan kullanabiliriz.
+yani bizim S1 deðiþkeninin sýnýrlarý arasýna yazýlan süslü parantezler arasýnda geçerlidir.
+
+süslü parantez içinde
+
+S1 = "Ýkinci Ýsim"; gibi kullanabiliriz yani 
+
+SONUC
+
+static void Main(string[] args)
+
+{
+         string S1 = "Mücahit Çetinkaya";
+         S1 = "Ýkinci Ýsim"; gibi kullanabiliriz yani 
+}
+
+yukarýdaki süslü parantezler arasýnda tanýmlandý
+süslü parantezden cýktýktan sonra bellekten düþüyor
+
+ama farklý bir static void actýgýmýzda
+acýlan S1 burada olmadýgý için ayný S1 deðiþkenini çaðýramaz kullanamayýz.
+S1 yazdýgýmýzda panelde acýlýr orada S1 gözükmez
+bu arada S1 sadece verilen isim herhangi biþey de olabilir.
+
+peki benim bu deðiþkene ulaþmak için ne yapmam gerekiyor
+içeride bulunan süslü parantezlerin bir dýsýna cýkmam gerekiyor
+
+mesela bu örnekte static void main in bir üstü class seviyesi
+class seviyesinde bir string acarsak ne olur ?
+
+
+ internal class Program
+
+{
+   static string S2 = "üçüncü isim";
+   basýna gelen static baska konu sonra anlatýlacak böyle yazýlýyor.
+   bu deðiþken bir üst blokta oldugu için
+   altýnda olan her blokta calýsýr.
+   
+      static void Main(string[] args)
+      {
+         string S1 = "Mücahit Çetinkaya";
+         S1 = "Ýkinci Ýsim"; gibi kullanabiliriz yani 
+      }
+      static void Test(string[] args)
+      {
+         burada acýlan süslü parantez dýsýnda oldugu için
+         S1 deðiþkenini calýsmaz
+         CALISMASI ÝÇÝN 
+         CLASS SEVÝYESÝNE CIKMAMIZ LAZIM
+      
+      }
+ 
+ }
