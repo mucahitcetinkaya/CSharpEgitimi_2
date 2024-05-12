@@ -1,0 +1,122 @@
+
+
+Bölüm 7 : Temel Konular - Operatör Kullanýmý
+
+
+Karþýlaþtýrma için elimizde 2 veya daha fazla nesnenin deðiskenin olmasý gerekiyor
+
+VÝDEO 53 Karþýlaþtýrma Operatörleri - Büyüktür
+VÝDEO 54 Karþýlaþtýrma Operatörleri - Küçüktür
+VÝDEO 55 Karþýlaþtýrma Operatörleri - Eþit ve Eþit Deðildir
+VÝDEO 56 Karþýlaþtýrma Operatörleri - Büyük Eþittir
+VÝDEO 57 Karþýlaþtýrma Operatörleri - Küçük Eþittir
+
+
+            /* VÝDEO 53 Karþýlaþtýrma Operatörleri - Büyüktür */
+
+            
+            /* BÜYÜK MÜ KARSILAÞTIRMASI > ÝÞARETÝ KULLANILIR */
+            
+            /*
+             KARSILAÞTIRMANIN GENEL YAZIMINA BAKARSAK
+             bool tipinden deðer döner KARSILASTIRMA OPERATÖRÜ
+             bool tip deðiþken 2 deger alýr true ve false deðeri yoksa false döner
+
+             bool donusDeger = degisken1 > degisken 2;
+             degisken1 ve 2 nin içindeki deðere bakýyor
+             mesela degisken1 degisken2 den kucuk olsun
+             bool bize false döner buyukse eger true donuyor
+            */
+
+            int s1 = 100;
+            int s2 = 150;
+
+            bool sonucBuyuk = s1 > s2;
+            Console.WriteLine(sonucBuyuk);
+
+            /*
+             burada bool s1 ve s2 nin içindeki deðere bakýyor
+             bu durumda false veriyor
+             eðer tam tersi s2>s1 olsa true verirdi
+             eþit olsa yine false verir
+            */
+
+
+
+            /* VÝDEO 54 Karþýlaþtýrma Operatörleri - Küçüktür */
+
+            /* KÜÇÜKTÜR KARÞILAÞTIRMASI < ÝÞARETÝ ÝLE KULLANILIR */
+
+            int s3 = 150;
+            int s4 = 100;
+            bool sonucKucuk = s3 < s4;
+
+            /*
+             s3 kucuk s4 den diyor
+             bu durumda s3 buyuk s4 oldugundan sonuc false verir
+             eþit olursa eðer yine false verir
+            */
+
+            /*
+             EÞÝTTÝR TEK BASINA KULLANILDIGINDA ATAMA OPERATÖRÜ OLARAK KULLANILIR 
+             ATAMA OPERATÖRÜ = ÝLE KULLANILIR
+             degisken = atanacakDeger þeklinde olur
+             örnek decimal d1 = 10.90M; gibi
+            */
+
+
+
+            /* VÝDEO 55 Karþýlaþtýrma Operatörleri - Eþit ve Eþit Deðildir */
+
+            /*
+             EÞÝT VEYA EÞÝT DEÐÝLDÝR KARÞILAÞTIRMASI 
+             EÞÝT MÝ            ==     ÝLE GÖSTERÝLÝR
+             EÞÝT DEÐÝL MÝ      !=     ÝLE GÖSTERÝLÝR
+             bool tipinden deðer döner KARSILASTIRMA OPERATÖRÜ
+            */
+
+            int s5 = 100;
+            int s6 = 100;
+            bool esitKontrol1 = s5 == s6; /* eþitse eðer true alýyoruz */
+            bool esitKontrol2 = s5 != s6; /* eþitse eðer false alýr */
+
+
+
+            /* VÝDEO 56 Karþýlaþtýrma Operatörleri - Büyük Eþittir */
+
+            /* BÜYÜK EÞÝT MÝ KARÞILAÞTIRMASI >= ÝÞARETÝ ÝLE KULLANILIR */
+
+            /*
+             bool tipinden deðer döner KARSILASTIRMA OPERATÖRÜ
+             UYGULAMA BURADA ÝKÝ ADET DEÐERE BAKIYOR
+             EÞÝT VEYA BUYUK MU
+             DEÐÝÞKEN ÝÇERÝSÝNDEKÝ DEÐERLERE
+             ONCE BUYUK MU DÝYE BAKIYOR BUYUKSE TRUE DÝYOR
+             SONRA EÞÝT MÝ DÝYE BAKIYOR EÞÝTSE TRUE DÝYOR
+             BAKTIGINDA BUYUK AMA EÞÝTSE DEÐÝLSE TRUE DER
+             BAKTIGINDA BUYUK DEÐÝL AMA EÞÝTSE TRUE DER 
+             BAKTIGINDA BUYUK VEYA EÞÝT DEÐÝLSE FALSE DER
+            */
+
+            int s7 = 100;
+            int s8 = 100;
+            bool buyukEsitSonuc = s7 >= s8;
+
+
+
+            /* VÝDEO 57 Karþýlaþtýrma Operatörleri - Küçük Eþittir */
+
+            /* KUCUK EÞÝT MÝ KARÞILAÞTIRMASI <= ÝÞARETÝ ÝLE KULLANILIR */
+
+            /*
+             bool tipinden deðer döner KARSILASTIRMA OPERATÖRÜ
+             ONCE KUCUK MU DÝYE BAKAR KUCUKSE TRUE
+             KUCUK DEÐÝLSE EÞÝT MÝ EÞÝTSE TRUE
+             KUCUK DEÐÝL AMA EÞÝTSE TRUE
+             KUCUK AMA EÞÝT DEÐÝLSE TRUE
+             KUCUK VEYA EÞÝT DEÐÝLSE FALSE
+            */
+
+            int s9 = 100;
+            int s10 = 100;
+            bool kucukEsitSonuc = s9 <= s10;

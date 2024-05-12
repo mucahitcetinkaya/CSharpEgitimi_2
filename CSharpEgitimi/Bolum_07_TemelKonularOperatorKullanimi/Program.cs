@@ -481,6 +481,125 @@
 
         #endregion
 
+        #region VİDEO 53 54 55 56 57 Aritmatiksel Operatörler Büyüktür Küçüktür Eşittir Eşit Değildir Büyük Eşit Küçük Eşit
+
+        //static void Main(string[] args)
+        //{
+        //    /* VİDEO 53 Karşılaştırma Operatörleri - Büyüktür */
+
+
+        //    /* BÜYÜK MÜ KARSILAŞTIRMASI > İŞARETİ KULLANILIR */
+
+        //    /*
+        //     KARSILAŞTIRMANIN GENEL YAZIMINA BAKARSAK
+        //     bool tipinden değer döner KARSILASTIRMA OPERATÖRÜ
+        //     bool tip değişken 2 deger alır true ve false değeri yoksa false döner
+
+        //     bool donusDeger = degisken1 > degisken 2;
+        //     degisken1 ve 2 nin içindeki değere bakıyor
+        //     mesela degisken1 degisken2 den kucuk olsun
+        //     bool bize false döner buyukse eger true donuyor
+        //    */
+
+        //    int s1 = 100;
+        //    int s2 = 150;
+
+        //    bool sonucBuyuk = s1 > s2;
+        //    Console.WriteLine(sonucBuyuk);
+
+        //    /*
+        //     burada bool s1 ve s2 nin içindeki değere bakıyor
+        //     bu durumda false veriyor
+        //     eğer tam tersi s2>s1 olsa true verirdi
+        //     eşit olsa yine false verir
+        //    */
+
+
+
+        //    /* VİDEO 54 Karşılaştırma Operatörleri - Küçüktür */
+
+        //    /* KÜÇÜKTÜR KARŞILAŞTIRMASI < İŞARETİ İLE KULLANILIR */
+
+        //    int s3 = 150;
+        //    int s4 = 100;
+        //    bool sonucKucuk = s3 < s4;
+
+        //    /*
+        //     s3 kucuk s4 den diyor
+        //     bu durumda s3 buyuk s4 oldugundan sonuc false verir
+        //     eşit olursa eğer yine false verir
+        //    */
+
+        //    /*
+        //     EŞİTTİR TEK BASINA KULLANILDIGINDA ATAMA OPERATÖRÜ OLARAK KULLANILIR 
+        //     ATAMA OPERATÖRÜ = İLE KULLANILIR
+        //     degisken = atanacakDeger şeklinde olur
+        //     örnek decimal d1 = 10.90M; gibi
+        //    */
+
+
+
+        //    /* VİDEO 55 Karşılaştırma Operatörleri - Eşit ve Eşit Değildir */
+
+        //    /*
+        //     EŞİT VEYA EŞİT DEĞİLDİR KARŞILAŞTIRMASI 
+        //     EŞİT Mİ            ==     İLE GÖSTERİLİR
+        //     EŞİT DEĞİL Mİ      !=     İLE GÖSTERİLİR
+        //     bool tipinden değer döner KARSILASTIRMA OPERATÖRÜ
+        //    */
+
+        //    int s5 = 100;
+        //    int s6 = 100;
+        //    bool esitKontrol1 = s5 == s6; /* eşitse eğer true alıyoruz */
+        //    bool esitKontrol2 = s5 != s6; /* eşitse eğer false alır */
+
+
+
+        //    /* VİDEO 56 Karşılaştırma Operatörleri - Büyük Eşittir */
+
+        //    /* BÜYÜK EŞİT Mİ KARŞILAŞTIRMASI >= İŞARETİ İLE KULLANILIR */
+
+        //    /*
+        //     bool tipinden değer döner KARSILASTIRMA OPERATÖRÜ
+        //     UYGULAMA BURADA İKİ ADET DEĞERE BAKIYOR
+        //     EŞİT VEYA BUYUK MU
+        //     DEĞİŞKEN İÇERİSİNDEKİ DEĞERLERE
+        //     ONCE BUYUK MU DİYE BAKIYOR BUYUKSE TRUE DİYOR
+        //     SONRA EŞİT Mİ DİYE BAKIYOR EŞİTSE TRUE DİYOR
+        //     BAKTIGINDA BUYUK AMA EŞİTSE DEĞİLSE TRUE DER
+        //     BAKTIGINDA BUYUK DEĞİL AMA EŞİTSE TRUE DER 
+        //     BAKTIGINDA BUYUK VEYA EŞİT DEĞİLSE FALSE DER
+        //    */
+
+        //    int s7 = 100;
+        //    int s8 = 100;
+        //    bool buyukEsitSonuc = s7 >= s8;
+
+
+
+        //    /* VİDEO 57 Karşılaştırma Operatörleri - Küçük Eşittir */
+
+        //    /* KUCUK EŞİT Mİ KARŞILAŞTIRMASI <= İŞARETİ İLE KULLANILIR */
+
+        //    /*
+        //     bool tipinden değer döner KARSILASTIRMA OPERATÖRÜ
+        //     ONCE KUCUK MU DİYE BAKAR KUCUKSE TRUE
+        //     KUCUK DEĞİLSE EŞİT Mİ EŞİTSE TRUE
+        //     KUCUK DEĞİL AMA EŞİTSE TRUE
+        //     KUCUK AMA EŞİT DEĞİLSE TRUE
+        //     KUCUK VEYA EŞİT DEĞİLSE FALSE
+        //    */
+
+        //    int s9 = 100;
+        //    int s10 = 100;
+        //    bool kucukEsitSonuc = s9 <= s10;
+        //}
+
+        #endregion
+
+
+
+
 
 
 
