@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("D_06_TemelKonularDegiskenlerTurDonusumleri")]
+[assembly: AssemblyTitle("Bolum_07_TemelKonularOperatorKullanimi")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("D_06_TemelKonularDegiskenlerTurDonusumleri")]
-[assembly: AssemblyCopyright("Copyright ©  2023")]
+[assembly: AssemblyProduct("Bolum_07_TemelKonularOperatorKullanimi")]
+[assembly: AssemblyCopyright("Copyright ©  2024")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("272ad155-11ec-47ae-b3b6-608756ebca5d")]
+[assembly: Guid("f68cf7a0-8991-478a-922e-709f88fff86d")]
 
 // Version information for an assembly consists of the following four values:
 //

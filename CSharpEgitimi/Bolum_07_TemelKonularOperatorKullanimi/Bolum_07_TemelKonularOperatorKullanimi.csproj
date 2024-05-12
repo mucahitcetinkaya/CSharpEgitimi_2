@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{272AD155-11EC-47AE-B3B6-608756EBCA5D}</ProjectGuid>
+    <ProjectGuid>{F68CF7A0-8991-478A-922E-709F88FFF86D}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>D_06_TemelKonularDegiskenlerTurDonusumleri</RootNamespace>
-    <AssemblyName>D_06_TemelKonularDegiskenlerTurDonusumleri</AssemblyName>
+    <RootNamespace>Bolum_07_TemelKonularOperatorKullanimi</RootNamespace>
+    <AssemblyName>Bolum_07_TemelKonularOperatorKullanimi</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -50,26 +50,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="MyNotes\Ders06video43.txt" />
-    <Content Include="MyNotes\Ders06video42.txt" />
-    <Content Include="MyNotes\Ders06video41.txt" />
-    <Content Include="MyNotes\Ders06video40.txt" />
-    <Content Include="MyNotes\Ders06video39.txt" />
-    <Content Include="MyNotes\Ders06video38.txt" />
-    <Content Include="MyNotes\Ders06video37.txt" />
-    <Content Include="MyNotes\Ders06video36.txt" />
-    <Content Include="MyNotes\Ders06video35.txt" />
-    <Content Include="MyNotes\Ders06video34.txt" />
-    <Content Include="MyNotes\Ders06video33.txt" />
-    <Content Include="MyNotes\Ders06video32.txt" />
-    <Content Include="MyNotes\Ders06video31.txt" />
-    <Content Include="MyNotes\Ders06video30.txt" />
-    <Content Include="MyNotes\Ders06video29.txt" />
-    <Content Include="MyNotes\Ders06video28.txt" />
-    <Content Include="MyNotes\Ders06video27.txt" />
-    <Content Include="MyNotes\Ders06video26.txt" />
-    <Content Include="MyNotes\Ders06video25.txt" />
-    <Content Include="MyNotes\Ders06video24.txt" />
+    <Content Include="Not\Bolum_07_TemelKonularOperatorKullanimi-V45.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
