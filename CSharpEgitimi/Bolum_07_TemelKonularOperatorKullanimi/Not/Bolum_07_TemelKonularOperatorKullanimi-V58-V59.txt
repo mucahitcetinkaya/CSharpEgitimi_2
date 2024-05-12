@@ -1,0 +1,107 @@
+
+
+Bölüm 7 : Temel Konular - Operatör Kullanýmý
+
+
+VÝDEO 58 Is operatörü kullanýmý
+VÝDEO 59 As operatörü kullanýmý
+
+
+VÝDEO 58 Is operatörü kullanýmý
+
+NOT object içerisine deðeri aldýgýnda o deðerin hangi deðiþken tipinde oldugunuda alýr
+int 10 sa eðer object te 10 oldugunu görürüz int 10 dur ama int oldugunu göremeyiz
+int oldugunu görebilmemiz için de 
+is operatörü bize yardýmcý oluyor
+
+          
+            /* 58 Is operatörü kullanýmý */
+
+            int s1 = 50;
+            int s2 = 100;
+
+            /* object o1 = ..... buraya ne atasam object bunu kabul edecek s1 de bool deðiþken adýný da atasam object kabul edecek */
+
+            object o1 = s1;
+            /*
+             object içindeki deðeri ben ekrana yazdýrýrsam içindeki deðeri
+             string olarak görürüm bunun nedeni object içindeki komuttan dolayý oluyor
+             bunu class lar dersinde göreceðiz
+            */
+
+            Console.WriteLine(o1); /* dediðimde ekranda görürüz */
+
+            /*
+             peki ben o1 in içindeki deðeri tekrardan nasýl int e dönüþtürürüm
+             buyuk tip kucuk tipe dönüþecek
+             bilinçsiz dönüþüm yapýlýr
+             (int).o1;
+            */
+
+            s1 = (int)o1; /* konsola yazdý int e dönüþtürdü */
+
+            /* peki burasý int deðil de byte a cevirseydik nolurdu */
+
+
+            /*
+             s1 = (byte)o1;
+            
+             object deðeri 50 normalde byte olabilir ama burda hata veriyor
+             sebebi object deðerin yanýnda deðerin tipinide kendi içinde barýndýrýyor
+             object te kutulama demiþtik kutudan cýkartýrken kutuladýgýmýz tip olarak cýkar
+             en basta object int olarak iþleme aldýk deðer o1 de int oldu ondan dolayý
+             peki ben uygulamada deðerin kutulanýrken bunun int mi byte mý
+             hangi tipte kutulandýgýný nerden öðreneceðim
+            */
+
+            /* burada is operatörü bize yardýmcý olacak */
+
+
+
+            /*
+             IS OPERATÖRÜ 
+             bool tipinde deðer döner
+             bool donenDeger = degisken is degiskenTipi
+            */
+
+            bool isKontrol1 = o1 is int;
+
+            /*
+             yani burada bir soru soruyoruz bunun tipi bumu dur
+             uygulama burada deðiþken deðerine bakmaz deðiþken tipine bakar
+             o1 in deðeri nerden geldi s1 den s1 nedir int o zaman o1 de int dir.
+             o1 int a cevrilebilir mi
+             o1 bir onceki geliþinde bize int mi geldi
+             burada is bize true veriyor
+            */
+
+            bool isKontrol2 = o1 is byte;
+
+            /*
+             o1 bir onceki geliþinde bize byte mi geldi
+             burada is bize false veriyor yani byte dan gelmedi diyor
+            */
+
+
+
+
+            /* 59 As operatörü kullanýmý */
+
+            /* !!!!!!!!!!!!!!!!!!!!!! string olarak gönderir !!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+
+            string isimSoyisim = "Mücahit Çetinkaya";
+            object objString = isimSoyisim;
+            string sonucStr = objString as string;
+
+            /*
+             buradaa uygulama davranýsý
+             once string tipinde isimSoyisim adýnda bir deðiþken oluþturur
+             ve içerisine Mücahit Çetinkaya deðerini atayacak
+             atadýktan sonra
+             object tipinde objString adýnda bir deðiþken oluþturacak
+             içerisine de isimSoyisim deðiþkenini tipiyle birlikte aktaracak
+             yani bir kutulama yapýyor
+             daha sonra objString deðeri eðer string ise
+             olusturdugumuz farklý bir string tipinde sonucStr adýna string olarak atayacak
+            */
