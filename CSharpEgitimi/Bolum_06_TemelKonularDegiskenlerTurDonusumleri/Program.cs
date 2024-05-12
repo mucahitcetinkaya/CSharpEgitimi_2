@@ -400,6 +400,15 @@
 
         #endregion
 
+        #region VİDEO 40 Boxing İşlemi
+
+        //static void Main(string[] args)
+        //{
+        //    object o1 = 100;
+        //    object o2 = 10.90;
+        //}
+
+        #endregion
 
 
 

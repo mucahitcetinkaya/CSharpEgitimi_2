@@ -1,0 +1,32 @@
+
+
+Bölüm 6 : Temel Konular - Deðiþkenler & Tür Dönüþümleri
+VÝDEO 40 Boxing Ýþlemi
+
+
+object tipinin bütün tipleri kapsayabildiðini bir önceki ders gördük
+ve iki adet kod yazdýk 
+object o1 = 100;
+object o2 = 10.90;
+
+ve bunlarýn kutulama yani boxing oldugundan bahsedeceðiz dedik
+
+object o1 = 100;
+object burada diyorki o1 deðiþkeni içinde 100 deðerini saklarým ama bunun tipinde saklarým diyor yani
+int olarak saklarým diyor
+hangi tip saklama olayý ileri konu
+
+
+object o2 = 10.90;
+object burada diyorki o2 deðiþkeni içinde 10.90 deðerini sonuna biþey yazmadýgýmýz için
+double olarak saklarým diyor
+hangi tip saklama olayý ileri konu
+
+object o3 = true; bool olarak da saklýyor
+
+nerede kullanýrýz
+kendi class larýmýzý yazdýgýmýz zaman kalýtým konutunda kendi yaptýgýmýz ana tipe döndürmek isteyeceðiz
+orda da bu kutulamayý ve kutudan cýkartmayý kullanacaðýz
+object oranýn kapýlarýný acýyor
+class lar konusunda bizim class ýmýz da object gibi davranabilecek
+kendinden sonra kendini kalýtabilecek kalýtým konusunda anlatýlacak
