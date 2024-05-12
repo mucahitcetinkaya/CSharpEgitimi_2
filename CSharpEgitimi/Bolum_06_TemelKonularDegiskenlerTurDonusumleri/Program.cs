@@ -331,7 +331,14 @@
 
         #endregion
 
+        #region VİDEO 36 Tür Dönüşümü Nedir ?
 
+        //static void Main(string[] args)
+        //{
+        //    /* VİDEO 36 Tür Dönüşümü nedir ? */
+        //}
+
+        #endregion
 
 
 

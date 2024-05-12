@@ -1,0 +1,42 @@
+
+
+Bölüm 6 : Temel Konular - Deðiþkenler & Tür Dönüþümleri
+VÝDEO 36 Tür Dönüþümü Nedir ?
+
+
+kullanýcýlar bize bilgi getirirler
+mesela bir form hazýrlanýr hazýrlanan form içinde deðerler olur 
+bu deðerlerde isim soyisim dogum tarihi yasý
+bir ürün için düþünürsek
+ürünün kodu fiyatý kdv si satýþ fiyatý alýs fiyatý vb 
+kullanýcý bize bir çok deðiþken tipinde deðer gönderir.
+biz bu deðerleri ilk cektiðimizde
+kullanýcýdan bu deðerleri string olarak alýrýz.
+bu deðerler bize string olarak geldiði için 
+bizim bunlarý uygun tiplere dönüþtürmemiz gerekir
+mesela yaþ için int bir ürünün alýs fiyatý için decimal double yada float gibi
+ürünün miktarý için
+eðer tekil satýlan bir ürünse yani tam sayýyla satýlan bir ürünse int
+ondalýklý da satýlabiliyorsa ondalýklý deðiþken tiplerinden herhangi biri
+bizim bu deðerleri ilgili deðiþken tiplerine dönüþtürme iþlemine 
+tür dönüþümü denir
+anlatýlmýs olan dönüþüm
+string ten (metinselden) sayýsala olan deðiþken dönüþümü farklý isimlendirilir
+sayýsalsan sayýsala olan deðiþken dönüþümü farklý isimlendirilir.
+
+ÖRNEK OLARAK
+
+int olan bir deðiþkenin deðiþken tipini double a dönüþtürme iþlemine
+bilinçli dönüþüm denir 
+
+double olan bir deðiþken tipini int a dönüþtürme iþlemine
+bilinçsiz tür dönüþümü denir
+
+string deðiþken tipini sayýsal deðiþken tipine dönüþtürme iþlemine
+boxing ve unboxing iþlemleri yapýlýr
+kutulama ve kutudan cýkarma
+bu konuya gelmeden önce arada object diye bir tip var
+önce o konu iþlenecek sonra bu konu ileri konu anlatýlacak
+
+sayýsal deðiþkenleri anlatýrkan min max deðerler anlatýlmýstý
+þimdi bu bilgileri tür dönüþümlerinde kullanacaðýz
