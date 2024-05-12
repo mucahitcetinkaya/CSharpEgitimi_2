@@ -340,7 +340,29 @@
 
         #endregion
 
+        #region VİDEO 37 Bilinçli Tür Dönüşümü
 
+        //static void Main(string[] args)
+        //{
+        //    byte sayi1 = 0;
+        //    byte sayi2 = 100;
+        //    byte sayi3 = 255;
+
+        //    int intMinVal = int.MinValue;
+        //    int intMaxVal = int.MaxValue;
+
+        //    byte sayi4 = 256;  /*hata veriyor */
+
+        //    int sayi5 = 256;
+
+        //    int sayi7 = sayi2;
+        //    /*
+        //     bilinçi tür dönüşümü küçük olan sayıyı büyük olan sayıya atıyorsun
+        //     notlarda acıklaması var
+        //    */
+        //}
+
+        #endregion
 
 
 

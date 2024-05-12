@@ -1,0 +1,72 @@
+
+
+Bölüm 6 : Temel Konular - Deðiþkenler & Tür Dönüþümleri
+VÝDEO 37 Bilinçli Tür Dönüþümü 
+
+
+sayýsal deðiþkenler arasýnda olan tür dönüþümü
+kucuk olan deðiþken tipindeki deðeri
+buyuk olan deðiþken tipine atama iþlemi
+
+
+byte sayi1 = 100 ;
+byte deðiþken tipinde sayi1 adýnda bir deðiþken oluþturduk
+ve sayi1 deðiþken içerisine eþittir operatörü ile 100 sayýsýný atadýk
+
+byte ýn sýnýrý vardý diðer video var min 0 max 255
+byte 8 bit 2 üzeri 8 den geliyor
+byte in üzerinde gelince kaç bit yazýyor
+
+yani byte a 100 deðerini girince 0 ile 255 arasýnda oldugu için
+byte için 100 true dur yani saklamaya baþlar
+
+ama 256 girersek ne olur ?
+sayi1 = 256 ;
+kodu yazarken bile hata alýyoruz altýnda kýrmýzý iþaret cýkýyor
+mause ile üstüne gelince orada bilgisi yazýyor
+
+peki biz 256 deðerini nereye gireriz
+
+byte tan sonra int var int 32 bit 2 üzeri 32 den gelir
+negatif deðerler de alabilir
+
+int sayi2 = 256;
+int ne deðer aldýgýný nasýl öðreniyorduk
+
+int intMinVal = int.MinValue;
+int intMaxVal = int.MaxValue;
+
+yazarak öðrenebiliriz
+burada int deðiþken tipi
+intMinVal intMaxVal deðiþken adý
+int.MinValue int.MaxValue min max gösterecek deðiþken deðerleri
+
+peki þöyle bir sey yapsak ne olur
+
+sayi1 in içindeki deðeri
+olusturacaðým herhangi bir int deðerinin içine göndermek istesek
+uygulama burada nasýl davranýr
+
+int sayi3 = burada uygulama bizden deðer bekliyor 
+elimizlede deðer yazabiliriz deðiþken atama da yapabiliriz
+sadece girilen deðer int deðerleri arasýnda olmasý lazým
+
+int sayi3 = sayi1; burada naptýk sayi1 i caðýrdýk
+çaðýrdýðýmýzda herhangi bir hata vermez
+burada yapýlan iþlem
+byte deðiþken tipinde olan bir deðiþkenin içinde olan deðeri
+int deðiþken tipinde olan farklý bir deðiþkenin içerisine aktardýk
+burada uygulama söyle dusunuyor
+benim karsýma gelen 
+deðiþken nedir sayi1
+deðiþken tipi nedir byte
+burada int düþünür
+byte ýn alabileceði min max value kaç 0 a 255
+ben byte tan büyüðüm diyor
+yani byte ýn içinde ne olursa olsun ben saklarým hata vermem diyor
+
+bu iþleme bilinçi tür dönüþümü denir
+
+burada int byte ýn deðiþken deðerine bakmýyor
+byte ýn deðiþken aralýgýna bakýyor
+byte kucuk int buyuk byte alýyorsa bende alýrým diyor
