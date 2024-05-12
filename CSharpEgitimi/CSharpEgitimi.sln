@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34202.233
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D_07_TemelKonularOperatorKullanimi", "D_07_TemelKonularOperatorKullanimi\D_07_TemelKonularOperatorKullanimi.csproj", "{FA37983C-90E3-4339-8C87-F70A5429A1CD}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D_08_TemelKonularKosulIfadeleri", "D_08_TemelKonularKosulIfadeleri\D_08_TemelKonularKosulIfadeleri.csproj", "{79264305-F1E1-4227-B6E8-048D550E0ED1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D_09_TemelKonularDonguler", "D_09_TemelKonularDonguler\D_09_TemelKonularDonguler.csproj", "{45B8260E-DF56-42B7-A42C-A4747FAC28F0}"
@@ -25,16 +23,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bolum_06_TemelKonularDegisk
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bolum_07_TemelKonularOperatorKullanimi", "Bolum_07_TemelKonularOperatorKullanimi\Bolum_07_TemelKonularOperatorKullanimi.csproj", "{F68CF7A0-8991-478A-922E-709F88FFF86D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bolum_08_TemelKonularKosulIfadeleri", "Bolum_08_TemelKonularKosulIfadeleri\Bolum_08_TemelKonularKosulIfadeleri.csproj", "{C2701FA1-6D32-45E3-BCDB-77A740DEC5E1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{FA37983C-90E3-4339-8C87-F70A5429A1CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FA37983C-90E3-4339-8C87-F70A5429A1CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FA37983C-90E3-4339-8C87-F70A5429A1CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FA37983C-90E3-4339-8C87-F70A5429A1CD}.Release|Any CPU.Build.0 = Release|Any CPU
 		{79264305-F1E1-4227-B6E8-048D550E0ED1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{79264305-F1E1-4227-B6E8-048D550E0ED1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{79264305-F1E1-4227-B6E8-048D550E0ED1}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -75,6 +71,10 @@ Global
 		{F68CF7A0-8991-478A-922E-709F88FFF86D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F68CF7A0-8991-478A-922E-709F88FFF86D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F68CF7A0-8991-478A-922E-709F88FFF86D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2701FA1-6D32-45E3-BCDB-77A740DEC5E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2701FA1-6D32-45E3-BCDB-77A740DEC5E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2701FA1-6D32-45E3-BCDB-77A740DEC5E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2701FA1-6D32-45E3-BCDB-77A740DEC5E1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

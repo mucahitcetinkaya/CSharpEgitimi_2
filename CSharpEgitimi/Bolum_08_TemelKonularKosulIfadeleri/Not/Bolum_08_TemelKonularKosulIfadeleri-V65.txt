@@ -1,0 +1,12 @@
+
+
+Bölüm 8 : Temel Konular - Koþul Ýfadeleri 
+VÝDEO 65 Bilgilendirme
+
+
+Karar yapýlarý nedir ?
+IF Karar Yapýsý
+IF ELSE Karar Yapýsý
+IF ELSE IF ELSE Karar Yapýsý
+Switch Karar Yapýsý
+Operatörler kýsmýnda görmüþ olduðumuz konularýn bu konu ile beraber kullanýlmasý ve örnek uygulamalar

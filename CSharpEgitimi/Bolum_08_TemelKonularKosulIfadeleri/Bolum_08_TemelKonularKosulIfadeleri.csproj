@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{FA37983C-90E3-4339-8C87-F70A5429A1CD}</ProjectGuid>
+    <ProjectGuid>{C2701FA1-6D32-45E3-BCDB-77A740DEC5E1}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>D_07_TemelKonularOperatorKullanimi</RootNamespace>
-    <AssemblyName>D_07_TemelKonularOperatorKullanimi</AssemblyName>
+    <RootNamespace>Bolum_08_TemelKonularKosulIfadeleri</RootNamespace>
+    <AssemblyName>Bolum_08_TemelKonularKosulIfadeleri</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -50,19 +50,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="MyNotes\Ders07video61_62.txt" />
-    <Content Include="MyNotes\Ders07video60.txt" />
-    <Content Include="MyNotes\Ders07video59.txt" />
-    <Content Include="MyNotes\Ders07video57_58.txt" />
-    <Content Include="MyNotes\Ders07video52_53_54_55_56.txt" />
-    <Content Include="MyNotes\Ders07video51.txt" />
-    <Content Include="MyNotes\Ders07video50.txt" />
-    <Content Include="MyNotes\Ders07video49.txt" />
-    <Content Include="MyNotes\Ders07video48.txt" />
-    <Content Include="MyNotes\Ders07video47.txt" />
-    <Content Include="MyNotes\Ders07video46.txt" />
-    <Content Include="MyNotes\Ders07video45.txt" />
-    <Content Include="MyNotes\Ders07video44.txt" />
+    <Content Include="Not\Bolum_08_TemelKonularKosulIfadeleri-V65.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
