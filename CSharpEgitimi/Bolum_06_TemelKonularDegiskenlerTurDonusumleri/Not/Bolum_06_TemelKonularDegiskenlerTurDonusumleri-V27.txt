@@ -1,0 +1,98 @@
+
+
+Bölüm 6 : Temel Konular - Deðiþkenler & Tür Dönüþümleri
+VÝDEO 27 String deðiþken tipi
+
+
+metinsel deðerleri string deðiþken tipinde tutarýz
+string içinde sayýsal deðerde olabilir ama matematiksel iþlemler yapýlmaz.
+mat iþlemler yapmak istiyorsak deðiþken tipi string olmamalý
+sayýsal deðiþken tiplerinden herhangi birisi olmalý
+
+string DEÐÝÞKEN TÝPÝ
+
+string isimSoyisim = "Mücahit Çetinkaya";
+Console.WriteLine(isimSoyisim);
+Console.ReadLine();
+
+daha sonra uygulama içerisinde deðiþkenimize ulasýp içerisindeki deðeri güncelleyebiliriz.
+zaten deðiþkenlerin ana kullaným amaclarý da budur.
+istediðimiz yerde olusturdugumuz deðeri
+caðýrabilmek okuyabilmek güncelleyebilmek
+
+biz aslýnda yukarýda yazan kodda
+Console.WriteLine kýsmýnda (isimSoyisim); deðiþkenine ulaþtýk
+ve içerindeki deðeri okuyabildik.
+
+string isimSoyisim = "Mücahit Çetinkaya";
+Console.WriteLine(isimSoyisim);
+
+bunu yazdýðýmýzdan sonra
+
+isimSoyisim = "Muhammet Çetinkaya";
+Console.WriteLine(isimSoyisim);
+
+yazarsak eðer programý debug ile calýstýrdýgýmýzda 
+gri alandan ilk string kýsmýna nokta koyalým
+deðiþkenin üstüne geldiðimizde null yazdýgýný görürüz
+kodu ilerlettiðimiz de deðiþkenin içine Mücahit Çetinkaya yazar ve konsola yazdýrýr.
+kodu tekrar ilerlettiðimizde biþey olmaz
+alttaki deðiþkeni okudugu zaman ilk deðiþkenin içindeki veriyi siler
+yeni veriyi içine yazar. bu sefer okla üstüne geldiðimizde Muhammet Çetinkaya yazdýgýný görürüz.
+konsolda yazmaya devam eder.
+
+ne yapmýs olduk
+
+bir deðiþkeni farklý isimlere atayýp o koda gelince güncellendiðini görmüþ olduk
+
+
+string deðiþkeni içinde kullandýgýmýz bazý komutlar var.
+bunlarda string in içindeki deðerleri deðiþtirebilmemize
+yada o deðerlerin belli indexten farklý index e kadar olan aralýðýný alabilmemize yarar.
+
+örnek 
+yazdýgýmýz metinlerin hepsinin 
+BÜYÜK HARF OLMASINI ÝSTÝYORUM                                                 ToUpper
+önce deðiþken tipi deðiþken adý atama operatörü deðiþkeni caðýr
+noktaya bas bir panel cýkacak burada yanýnda yýldýz olan komutlar 
+bu deðiþken tipi için en sýk kullanýlan komutlardýr.
+burdan ToUpper ý caðýyoruz
+parantez ac kapa yapýyoruz. bunun nedeni yanýnda mor küp var metod
+ToUpper yazýlan harflerin hepsini büyük harf yapar
+
+string isimSoyisim = "Mücahit Çetinkaya";
+string buyukKarakter = isimSoyisim.ToUpper();
+Console.WriteLine(buyukKarakter);
+Console.ReadLine();
+
+HEPSÝNÝ KUCUK KARAKTER YAPMAK ÝSTÝYORUM                                        ToLower
+
+string isimSoyisim = "Mücahit Çetinkaya";
+string buyukKarakter = isimSoyisim.ToUpper();
+string kucukKarakter = isimSoyisim.ToLower();
+Console.WriteLine(buyukKarakter);
+Console.WriteLine(kucukKarakter);
+Console.ReadLine();
+
+SECTÝÐÝM YERÝ BÜYÜK KARAKTER YAPSIN                                           Substring
+Substring de parantez içine hangi karakterden baslayýp deðiþiklik yapmasýný yazmamýz gerekiyor
+
+Substring(2, 4); ikinci karakterden baþla 4 karakter al
+
+SONUC 
+
+string isimSoyisim = "Mücahit Çetinkaya";
+string buyukKarakter = isimSoyisim.Substring(2, 4);
+Console.WriteLine(belirliBirBolum);
+Console.ReadLine(); console da yazan deðer cahi
+M sýfýr ü birinci c ikinci karakter olarak sayar
+2 den basla dediðimiz için 2. karakter dahil consola yazdýrýr
+
+NOT
+
+debug olarak bakarken kod üstüne gelince deðiþkeni okuyor
+kodu geçtiðinde deðiþkeni atýyor
+
+mesela console.writeline yani konsola yaz dediðinde
+yaz kodunun üstünde biþey yapmýyor
+yaz kodunu bitirince yazmýs oluyo
