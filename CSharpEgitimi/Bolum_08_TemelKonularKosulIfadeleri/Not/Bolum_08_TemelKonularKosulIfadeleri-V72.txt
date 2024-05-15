@@ -1,0 +1,99 @@
+ 
+
+Bölüm 8 : Temel Konular - Koþul Ýfadeleri 
+VÝDEO 72 Karar Yapýlarý - Ödev 1
+
+
+/*
+
+sistem içerisine giriþ yapýlabilecek kullanýcý kodlarý
+ABC - 123 - 236 - CMK
+kullanýcý giriþiniz baþarýlý
+
+sistem içerisine yasaklanmýs kullanýcý kodlarý
+HHH - BBB - MMM
+kullanýcý giriþiniz kilitlenmiþtir.
+
+bunlarýn dýsýnda ise
+
+hatalý kullanýcý kodu
+
+*/
+
+            Console.WriteLine("Kullanýcý adýnýzý giriniz : ");
+            string kullaniciKodu = Console.ReadLine();
+            kullaniciKodu = kullaniciKodu.ToUpper(); /* hepsi büyük harf */
+
+            /*
+            if (kullaniciKodu == "ABC")
+            {
+                Console.WriteLine("Kullanýcý giriþiniz baþarýlý.");
+            }
+            else if (kullaniciKodu == "123")
+            {
+                Console.WriteLine("Kullanýcý giriþiniz baþarýlý.");
+            }
+            else if (kullaniciKodu == "236")
+            {
+                Console.WriteLine("Kullanýcý giriþiniz baþarýlý.");
+            }
+            else if (kullaniciKodu == "CMK")
+            {
+                Console.WriteLine("Kullanýcý giriþiniz baþarýlý.");
+            }
+            else if (kullaniciKodu == "HHH")
+            {
+                Console.WriteLine("Kullanýcý giriþiniz kilitlenmiþtir.");
+            }
+            else if (kullaniciKodu == "BBB")
+            {
+                Console.WriteLine("Kullanýcý giriþiniz kilitlenmiþtir.");
+            }
+            else if (kullaniciKodu == "MMM")
+            {
+                Console.WriteLine("Kullanýcý giriþiniz kilitlenmiþtir.");
+            }
+            else
+            {
+                Console.WriteLine("Hatalý kullanýcý kodu !!!!! ");
+            }
+
+            Console.ReadLine();
+
+            Console.Clear();
+            */
+
+            /*
+            2.yol
+             VEYA OPERATÖRÜNDE 1 TANESÝ DOGRUYSA BLOGUN DISINDAN DEVAM EDER
+            */
+
+            
+            if (kullaniciKodu == "ABC" || kullaniciKodu == "123" || kullaniciKodu == "CMK")
+            {
+                Console.WriteLine("Kullanýcý giriþiniz baþarýlý.");
+            }
+            else if (kullaniciKodu == "HHH" || kullaniciKodu == "BBB" || kullaniciKodu == "MMM")
+            {
+                Console.WriteLine("Kullanýcý giriþiniz kilitlenmiþtir.");
+            }
+            else
+            {
+                Console.WriteLine("Hatalý kullanýcý kodu !!!!!! ");
+            }
+
+            Console.ReadLine();
+            
+
+            /*
+            NOT
+            kontrol etmek için breakpoint koyup sýra sýra bakabilirsin
+            mesela if in basýna gri yere týkla calýstýr tek tek kontrol et true veya false dönüyor buna bakabilirsin
+            BUYUK KUCUK DUYARLILIGI VARDIR BUNU DA ENGELLEME YAPABÝLÝRÝZ
+            HARFLERÝN HEPSÝ BUYUK YADA KUCUK YAZABÝLÝRÝZ.
+            BUNUN ÝÇÝN ÝF TEN ONCE STRÝNG ÝN ALTINA
+            kullaniciKodu = kullaniciKodu.ToUpper();
+            yazarsak içine gelen deðeri büyük yapar
+            kullaniciKodu = kullaniciKodu.ToLower();
+            yazarsak içine gelen deðerin küçük yapar
+            */
