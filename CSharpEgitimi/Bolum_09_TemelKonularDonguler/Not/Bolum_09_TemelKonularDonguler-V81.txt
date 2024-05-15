@@ -1,0 +1,140 @@
+
+
+Bölüm 9 : Temel Konular - Döngüler
+VÝDEO 81 Ýç Ýçe For Döngüsü Kullanýmý
+
+
+For Döngülerinde þimdi iç içe for döngülerini göreceðiz
+iç içe for döngüleri nedir ne zaman kullanýlýr
+
+döngüler belirli bir adete veya belirli bir þarta doðru
+bizim belirtmiþ olduðumuz iþlemlerimizi tekrar ederler
+iç içe kullanýmlarý da söz konusu olabiliyor
+
+örnek olarak
+
+bir database den beslendiðimizi ve o database in detayýný da
+farklý sorgularla baþka komut satýrlarýndan ögrendiðimizi düþünürseniz
+aslýnda bir tablonun alt tablolarýný da iliþkisel veri tabanýnda bunu daha net anlacaksýnýz
+çekmek zorunda kalacagýz
+böyle bir durumda bir veri blogunun içerisinde gezerken
+ilgili tek bir verinin de veri blogu oldugu için
+bir verinin veri bloguna ulasýrken iç içe for dongulerýný kullanýyoruz
+
+
+            /*
+             
+            önce bir for döngusu olusturalým
+           
+            for (int i = 1; i <= 20; i++)
+            {
+           
+            }
+           
+            int i 1 ilk baslangýc
+            i <= 20 olana kadar devam et
+            i++ i yi 1 er arttýr
+           
+            bir for döngüsü daha olustualým bu sefer ilk dongunun içine olacak
+           
+            for (int i = 1; i <= 20; i++)
+            {
+                for(int j = 1; j <= i; j++)
+                {
+           
+                }
+           
+            }
+           
+            int j = 1 baslangýc verdik
+            j <= i  ---- j i den kucuk esit olana kadar calýsmaya devam et
+            j++ j yi birer arttýr
+           
+            i nin her bir degeri için j calýsmaya devam edecek
+           
+            bunun için Console.Write(); ile ekrana bir yýldýz yazdýralým
+           
+            for (int i = 1; i <= 20; i++)
+            {
+               for(int j = 1; j <= i; j++)
+               {
+                   Console.Write("*");
+               }
+               Console.WriteLine();
+           
+            }
+           
+            Console.ReadLine();
+           
+           
+            olusan kod konsol da böyle oldu
+           
+            *
+            **
+            ***
+            ****
+            *****
+            ******
+            *******
+            ********
+            *********
+            **********
+            ***********
+            ************
+            *************
+            **************
+            ***************
+            ****************
+            *****************
+            ******************
+            *******************
+            ********************
+           
+            þimdi biz bu tabloyu iç içe for döngüsünü kullanarak nasýl yaptýk ilk 3 4 satýrýný anlatacagým
+           
+            for kýsmýna breakpoint ekleyelim
+            benim for döngumun kapladýgý alan 2 scop arasýnda
+            dýsarýda olan for calýstýgýnda
+            scoplarý arasýnda olan kodlarý calýstýrmak zorunda
+
+            ilk basta i nin degeri 0 basladýk 1 oldu
+            1 kucuk esit 20 mi evet true o zaman scop içine girdi
+            baska bir for dongusu daha var
+            ilk for i için calýsýrken
+            içindeki for da baska bir sartý saglamak zorunda
+            j en basta sýfýr içeri girdi 1 oldu
+            i de 1 j de 1 oldu su anda
+            içteki for da j <= i diyor
+            1 1 e eþit mi evet
+            içine girdi bir * yazdýrdý
+            tekrar dýsarý cýktý j yi bir arttýrdý
+            j 2 oldu i hala 1
+            j <= i mi hayýr o zaman üste cýkacak dýsarýdaki forun kodu var console.writeline devam ediyor yani
+            i 1 di 1 arttýrdý i 2 oldu i <= 20 sarta baktý
+            2 <= 20 mi evet içerideki fora girdi
+            j 2 idi i 2 oldu yeni
+            ama burda j yi 2 den devam ettirmiyor kodunu bitirdi tekrar j 1 oldu
+            j <= i yani 1 <= 2 mi evet
+            koda girdi * yazdý
+            j yi bir arttýrdý 2 oldu i de 2
+            j <= i yani 2 <= 2 mi evet
+            koda girdi yine * attý bu sefer yanyana 2 yýldýz oldu
+            j yi arttýrdý 3 oldu
+            þart saðlanmadý bitti
+            tekrar üst fora cýktý
+            boyle boyle devam edecek
+            nereye kadar i <= 20 saglanmayana kadar
+
+            for (int i = 1; i <= 20; i++)
+            {
+                for (int j = 1; j <= i; j++)
+                {
+                    Console.Write("*");
+                }
+                Console.WriteLine();
+
+            }
+
+            Console.ReadLine();
+
+            */

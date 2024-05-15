@@ -258,6 +258,37 @@
 
         #endregion
 
+        #region VİDEO 81 İç İçe For Döngüsü Kullanımı
+
+        //static void Main(string[] args)
+        //{
+        //    /*
+
+        //     VİDEO 81 İç İçe For Döngüsü Kullanımı
+
+        //    */
+
+        //    /*
+
+        //      anlatımı notlarda var
+
+        //    */
+
+        //    for (int i = 1; i <= 20; i++)
+        //    {
+        //        for (int j = 1; j <= i; j++)
+        //        {
+        //            Console.Write("*");
+        //        }
+        //        Console.WriteLine();
+
+        //    }
+
+        //    Console.ReadLine();
+
+        //}
+
+        #endregion
 
 
 
