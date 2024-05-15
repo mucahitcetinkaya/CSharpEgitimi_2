@@ -1,0 +1,112 @@
+
+
+Bölüm 10 : Diziler Arrays
+VÝDEO 93 Dizi Nedir
+       
+
+       /*
+       
+       string[] ogrenciIsimListesi = new string[5];
+
+       string tipinde
+       ogrenciIsimListesi adýn da
+       new yeni bir dizi
+       string[5] 5 elemanlý index sayýsý 4 sýfýrdan baslýyor
+       
+       Nasýl deðer ekleriz
+
+       normalde 10 a kadar say dendiðinde 1 den baslanýr AMA
+       uygulama saymaya sýfýrdan baslar
+
+       5 elemanlý bir dizinin index i 4 olur sýfýrda oldugu için
+
+       yani biz 5 elemanlý bir dizi olusturgumuzda
+       1. elemanýna ulasmak için [0]. index i
+       2. elemanýna ulasmak için [1]. index i kullanacagýz
+
+       ekleme kýsmýna gecelim
+       once adý ile cagýrým yapýlýr sonra hangi tipte ise ona göre atama yapýlýr.
+
+       string[] ogrenciIsimListesi = new string[5];
+       ogrenciIsimListesi[0] = "Muhammet";
+       ogrenciIsimListesi[1] = "Mücahit";
+       ogrenciIsimListesi[2] = "Çetinkaya";
+       
+       okumadan once ogrenciIsimListesi null oluyor okumadýgýnda
+       okuyup gectiðinde new lendýgý için dizi oldugunu anlýyor
+       5 elemanlý ama 3 tane eleman ekledik digerlerini null olarak okudu
+
+       mesela ekrana yazdýrmak istersek nasýl oluyor
+       5 elemanlý dizimizin 1. ýndex ini ekrana yazdýralým
+
+       Console.WriteLine(ogrenciIsimListesi[1]);
+
+       dizinin bütün elemanlarýný foreach ile ekrana yazdýralým
+
+       string[] ogrenciIsimListesi = new string[5];
+       ogrenciIsimListesi[0] = "Muhammet";
+       ogrenciIsimListesi[1] = "Mücahit";
+       ogrenciIsimListesi[2] = "Çetinkaya";
+       ogrenciIsimListesi[3] = "Arden";
+       ogrenciIsimListesi[4] = "Zayn";
+
+       foreach (string item in ogrenciIsimListesi)
+       {
+           Console.WriteLine(item);
+       }
+
+       Console.ReadLine();
+
+
+
+       for ile yapalým ayný iþlemi
+
+       Console.WriteLine();
+       Console.WriteLine("for ile olan");
+
+       for (int i = 0; i < ogrenciIsimListesi.Length; i++)
+       {
+           string gelenIsim = ogrenciIsimListesi[i];
+           Console.WriteLine(gelenIsim);
+       }
+
+       Console.ReadLine();
+
+
+           i < ogrenciIsimListesi.Length; dememizin nedeni
+       eleman sayýmýz 5 burda 5 dersek eger 5. index yok eleman var ama index yok hata alýrýz ondan
+       ileride kac tane olacagýný bilmiyoruz ondan dolayý
+       direk dizinin uzunlugu kadar diyoruz kesin çözüm oluyor
+
+           string gelenIsim = ogrenciIsimListesi[i];
+       burdaki i de dizinin o anki degeri oluyor
+
+       */
+
+
+       string[] ogrenciIsimListesi = new string[5];
+       ogrenciIsimListesi[0] = "Muhammet";
+       ogrenciIsimListesi[1] = "Mücahit";
+       ogrenciIsimListesi[2] = "Çetinkaya";
+       ogrenciIsimListesi[3] = "Arden";
+       ogrenciIsimListesi[4] = "Zayn";
+
+       Console.WriteLine("foreach ile olan");
+
+       foreach (string item in ogrenciIsimListesi)
+       {
+           Console.WriteLine(item);
+       }
+
+       Console.WriteLine();
+       Console.WriteLine("for ile olan");
+
+       for (int i = 0; i < ogrenciIsimListesi.Length; i++)
+       {
+           string gelenIsim = ogrenciIsimListesi[i];
+           Console.WriteLine(gelenIsim);
+       }
+
+       Console.ReadLine();
+
+   }
