@@ -1,0 +1,86 @@
+ 
+
+Bölüm 8 : Temel Konular - Koþul Ýfadeleri 
+VÝDEO 74 Karar Yapýlarý - Ödev 2
+
+
+Not ortalama sistemine hoþ geldiniz.
+Ýsim ve Soyisim : Mücahit Çetinkaya
+Not 1 : 50
+Not 2 : 40
+Not 3 : 60
+
+Ortalama 45 deðerinden küçük ise : KALDINIZ.
+Ortalama 45 deðerine eþit veya 70 deðerinden küçük ise : Orta ile geçtiniz.
+Ortalama 70 deðerine eþit veya 90 deðerinden küçük ise : Ýyi ile geçtiniz.
+Ortalama 90 ile 100 arasýnda ise (100 dahil) : Baþarýlý tebrikler.
+Ortalama deðeri 100 den büyük ise : Notlarýnýzý kontrol ediniz.
+  
+  
+
+            /*
+            
+            VÝDEO 73 Karar yapýlarý - Ödev 2
+
+            Not ortalama sistemine hoþ geldiniz.
+            Ýsim ve Soyisim : Mücahit Çetinkaya
+            Not 1 : 50
+            Not 2 : 40
+            Not 3 : 60
+
+            Ortalama 45 deðerinden küçük ise : KALDINIZ.
+            Ortalama 45 deðerine eþit veya 70 deðerinden küçük ise : Orta ile geçtiniz.
+            Ortalama 70 deðerine eþit veya 90 deðerinden küçük ise : Ýyi ile geçtiniz.
+            Ortalama 90 ile 100 arasýnda ise (100 dahil) : Baþarýlý tebrikler.
+            Ortalama deðeri 100 den büyük ise : Notlarýnýzý kontrol ediniz. 
+             
+            */
+
+            Console.WriteLine("Not ortalama sistemine hoþgeldiniz...");
+
+            Console.Write("Öðrenci ismini giriniz : ");
+            string isim = Console.ReadLine();
+            Console.Write("Öðrenci Soyismini giriniz : ");
+            string soyIsim = Console.ReadLine();
+
+            Console.Write("Birinci notu giriniz : ");
+            decimal not1 = Convert.ToDecimal(Console.ReadLine());
+            Console.Write("Ýkinci notu giriniz : ");
+            decimal not2 = Convert.ToDecimal(Console.ReadLine());
+            Console.Write("Üçüncü notu giriniz : ");
+            decimal not3 = Convert.ToDecimal(Console.ReadLine());
+
+            decimal toplam = (not1 + not2 + not3);
+            decimal ortalama = toplam / 3;
+
+            /*
+             * kýsa yol 
+            decimal ortalama = (not1 + not2 + not3) / 3;
+            */
+
+            Console.WriteLine($"1. not {not1} 2. not {not2} 3. not {not3} not toplamý {toplam} ortalama {ortalama} ");
+
+            if (ortalama < 45)
+            {
+                Console.WriteLine("Kaldýnýz.");
+            }
+            else if (ortalama >= 45 && ortalama < 70)
+            {
+                Console.WriteLine("Orta ile geçtiniz.");
+            }
+            else if (ortalama >= 70 && ortalama < 90)
+            {
+                Console.WriteLine("Ýyi ile geçtiniz.");
+            }
+            else if (ortalama >= 90 && ortalama <= 100)
+            {
+                Console.WriteLine("Baþarýlý.");
+            }
+            else
+            {
+                Console.WriteLine("Notlarýnýzý kontrol ediniz ortalamanýz 100 den büyük.");
+            }
+
+            Console.WriteLine("Uygulama Sonu");
+            
+            Console.ReadLine();
