@@ -387,7 +387,43 @@
 
         #endregion
 
+        #region VİDEO 84 While Döngüsü Genel Kullanım
 
+        //static void Main(string[] args)
+        //{
+
+        //    /*
+
+        //     VİDEO 84 While Döngüsü Genel Kullanım
+
+        //     ANLATIMI NOTLARDA VAR
+
+        //    */
+
+
+        //    /*
+
+        //    Örnek Kullanım 1 : Ekrana 1 - 10 a kadar sayıların değerlerini yazdıralım 
+
+        //     */
+
+        //    int sayac = 1;
+        //    while (sayac <= 10)
+        //    {
+        //        Console.WriteLine(sayac);
+        //        sayac++;
+
+        //    }
+        //    Console.ReadLine();
+
+        //}
+
+
+
+
+
+
+        #endregion
 
 
 

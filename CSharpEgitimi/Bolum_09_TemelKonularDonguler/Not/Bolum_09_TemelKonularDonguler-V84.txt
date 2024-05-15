@@ -1,0 +1,104 @@
+
+
+Bölüm 9 : Temel Konular - Döngüler
+VÝDEO 84 While Döngüsü Genel Kullaným
+
+ 
+/*
+
+ANLATIMI
+
+while tab tab yazýnca cýkýyor
+ 
+while (true) 
+{
+
+}
+
+parantezler içerisinde true yazýyor yani lojik bir iþlemin olmasý gerektiðini anlamýs oluyoruz
+true geldiði sürece bizim döngümüzün dönmesi gerektiðini anlarýz
+mesela 1 == 1 gibi bu sonsuz döngü oluyor tabiki
+
+þartýmýz yani parantez içindeki iþlem true oldugu süre boyunca döngümüz calýsmasýna devam eder
+ne zamana kadar devam eder
+1 - while içindeki iþlem false olana kadar devam eder
+2 - döngü içinde bir yerde Break; anahtar kelimesini kullanýrsak kýrýlma olur
+
+*/
+
+/*
+ 
+Örnek Kullaným 1 : Ekrana 1 - 10 a kadar sayýlarýn deðerlerini yazdýralým 
+
+ */
+
+/*
+
+for ile yapmýs olsaydýk
+for (int i = 1; i <= 10; i++)
+    {
+        Console.WriteLine(i);
+    }
+
+ */
+
+/*
+ 
+while de herhangi bir sart olmadýgý için degisken olusturduk dýsarýda
+su anda kod yarým yanlýs olaný görmek için boyle yapýyoruz
+
+int sayac = 1;
+while (sayac <= 10)
+{
+    Console.WriteLine(sayac);
+
+}
+Console.ReadLine();
+
+sayac 1 içeri girdi 10 a kucuk esit true olur 
+bunu görmek istiyorsan eger
+breakpoint ekle calýsýrken
+sayac <= 10 u sec sag týk add watch a týkla görürsün
+iþlemin value ve type degerini verecektir.
+value su true yazýyor mesela
+
+devam edelim içeri girdi sayac 1 
+10 dan kucuk esit girdi içine sayac yani 1 yazdýrdý
+tekrar tekrar bu iþlemi yapacak 
+artan biþey yok hep 1 
+while sadece true false a baktýgý için siz bunu sarta baglý mý degiskenle mi sayacla mý sagladýnýz buna bakmýyor
+sadece true ve false a bakýyor yoluna devam ediyor
+yani biz kendimiz arttýrmamýz gerekiyor
+Console.WriteLine(sayac); dan sonra
+sayac++; ekledik yani 1 er arttýrmýs olduk
+int sayac = 1;
+while (sayac <= 10)
+{
+    Console.WriteLine(sayac);
+    sayac++;
+
+}
+Console.ReadLine();
+
+zaten biz while dongusunu 1 den 10 na kadar olan sayýlarý göstermek için kullanmayýz
+iþlemin sonucu false olana kadar devam etsin diye kullanýrýz
+breakpoint le devam edelim sýra sýra devam edecek
+11 olunca false olup cýkacak
+add watch kýsmýnda true olup false olarak degistiðinide görebilirsin
+sayac degerinide görmek istersen eger ona da add watch diyebilirsin
+
+sonuc olarak false olana kadar 
+veya
+break gorene kadar devam eder
+
+ 
+ */
+
+int sayac = 1;
+while (sayac <= 10)
+{
+    Console.WriteLine(sayac);
+    sayac++;
+
+}
+Console.ReadLine();
