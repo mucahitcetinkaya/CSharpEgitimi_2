@@ -1,0 +1,81 @@
+
+
+Bölüm 9 : Temel Konular - Döngüler
+VÝDEO 77 For Döngüsü - Genel Kullaným
+
+
+Uygulamalarýmýzý yazarken aslýnda en çok kullandýðýmýz sabit döngülerden biridir.
+
+Eðer istediðimiz iþlemin tekrar sayýsýný biliyor isek for döngüsünü kullanabiliriz.
+
+Örnek olarak sol kýsýmda olan karikatürü incelersek öðrencinin sýnýf içinde kaðýt ile uçak yaptýðýný ve
+öðretmenininde ona ceza olarak 500 kere bir daha sýnýfta kaðýttan uçak yapmayacaðým þekilde yazmasýný istediðini görüyoruz.
+
+Burada adet 500 olarak sabit olduðu için for döngüsü kullanýlmýþtýr.
+
+yazýlan kod
+int count;
+for (count=1;count<=500;count++)
+  printf("i will not throw paper airplanes in class.");
+return 0 ;
+
+
+Genel Kullanýmý
+
+For ( sayaç; þart; sayaç artýþ iþlemi )
+{
+  Tekrar edilmesini istediðimiz kod
+}
+
+
+SAYAÇ DEDÝÐÝMÝZ KISIM
+
+aslýnda istediðimiz sabit hedefe ulaþabileceðimiz index imizdir.
+o anda kaçýncý adýmdaysak bize ilgili adeti veren kýsým sayaçtýr.
+count=1 olan kýsým default deðerine 1 demiþ 1 den baþla 
+
+ÞART 
+
+sabit olan þart kadýlan kodta 500 olan kýsýmdýr.
+count<=500 e demiþ
+
+bu þart saðlanana kadar içerisindeki kod blogunu gerçekleþtir diyoruz
+
+kodtaki kýsmý yazý yazdýrmak
+
+SAYAÇ ARTIÞ ÝÞLEMÝ
+
+en sondaki ++ olan kýsým
+count 500 olana kadar 
+bir arttýr demek
+
+1 den baþlayýp saymaya baþlýyor yazýyor
+<=500 dedik oraya kadar gelecek
+500 oldugunda true döner yine yazar.
+501 <= olmadýgý için false alýr
+iþlemi bitirir.
+
+return 0; da tekrar sayýsý
+
+/*
+            for döngüsü oluþturalým
+            for yazýp tab tab yapýnca otomatik olusturdu
+            int deðiþken tipinde i adýnda içerisinde 0 deðeri olan sayaç kýsmý
+            0 default deðeri saymaya 0 dan baþla demiþ oluyoruz.
+            i deðiþkeni 10 dan kucuk yada eþitse bu iþlemi yap diyoruz þart kýsmý
+            program buraya kadar geliyor kucuk yada eþit mi diye bakar true ise içindeki iþlemi yapar
+            iþlemi yaptýktan sonra i++ kýsmý sayaç artýþ kýsmý oluyor biz burda++ ile 1 arttýr demiþiz
+            illa++ veya 1 arttýr dememiz gerekmiyor istediðimizi yazabiliriz.
+            sayaç artýþ kýsmýný okur tekrar eder þart saðlana kadar
+            þartýmýz 10 dan kucuk yada eþit 10 a eþit olunca yine yazdýrýr
+            11 olunca false verir yazdýrmaz programý durdurur.
+            */
+
+            for (int i = 0; i <= 10; i++)
+            {
+                Console.WriteLine("Ben bir for döngüsüyüm.");
+            }
+
+            Console.ReadLine();
+
+*/
