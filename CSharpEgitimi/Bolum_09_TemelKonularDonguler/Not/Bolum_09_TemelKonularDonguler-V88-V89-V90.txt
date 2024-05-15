@@ -1,0 +1,150 @@
+
+
+Bölüm 9 : Temel Konular - Döngüler
+VÝDEO 88 do While Döngüsü Ödev
+VÝDEO 89 do While Döngüsü Ödev 1 Cevap
+VÝDEO 90 do While Döngüsü Ödev 2 Cevap
+
+
+            /*
+
+            Ödev 1 :
+
+            kullanýcýyý do while içerisine alýn ve kullanýcý adý ve password sorun.
+            kullanýcý adý : Demo
+            Þifre: Demo
+            olacak eðer kullanýcý bu deðerleri bilirse donguden cýkýn ve tebrikler baþarýlý yazýn.
+            eðer bilemezse tekrar sormaya devam edin.
+
+            */
+
+            string kullaniciAdi = "a";
+            string sifre = "a";
+            string girilenKullaniciAdi;
+            string girilenSifre;
+
+            do
+            {
+                Console.WriteLine(" Kullanýcý adýnýzý giriniz : ");
+                girilenKullaniciAdi = Console.ReadLine();
+                girilenKullaniciAdi = girilenKullaniciAdi.ToLower();
+                Console.WriteLine(" Þifrenizi giriniz : ");
+                girilenSifre = Console.ReadLine();
+                girilenSifre = girilenSifre.ToLower();
+
+                if (kullaniciAdi != girilenKullaniciAdi || sifre != girilenSifre)
+                {
+                    Console.WriteLine("Tekrar deneyiniz.");
+                }
+            } while (kullaniciAdi != girilenKullaniciAdi || sifre != girilenSifre);
+            Console.WriteLine("Tebrikler baþarýlý.");
+            Console.ReadLine();
+
+            /*
+
+            Hocanýn yaptýgý
+
+            sayac degiskenýne neden ihtiyacýmýz var onu anlatacagým
+
+            do while döngusu ne olursa olsun 1 kere her zaman calýsýyor
+            giriyor yanlýs girerse eger tekrar basa dönuyor ama hatalý demýyor
+            bunun için bir if sart blogu koyalým
+            hatalý diyebilmek için do içine koymamýz lazým ama onu da sarta baglamamýz gerekiyor ki
+            her zaman calýsmasýn sayac bundan dolayý lazým bize
+
+            not
+
+            sayac ile kontrol etmemýz onemlý bunun nedeni do while içerisinde herhangi bir if kosulu ile þartlarýmýzý kontrol etmedik
+            while ( þart ) blogu içerisinde kontrollerimizi yaptýgýmýz için deðerin hatalý veya dogru oldugunu sayac adýndaki
+            bu degisken üzerinden kontrol ettik.
+
+            */
+
+            string kullaniciAdi1 = string.Empty;
+            string sifre1 = string.Empty;
+            int sayac1 = 0;
+
+            do
+            {
+                if (sayac1 > 0)
+                {
+                    Console.WriteLine("Kullanýcý veya þifre deðerlerinizden birisi hatalý tekrar deneyiniz.");
+                }
+                Console.WriteLine(" Kullanýcý adýnýzý giriniz : ");
+                kullaniciAdi1 = Console.ReadLine();
+                Console.WriteLine(" Þifrenizi giriniz : ");
+                sifre1 = Console.ReadLine();
+
+                sayac1++;
+
+            } while (kullaniciAdi.ToLower() != "demo" || sifre.ToLower() != "demo");
+            Console.WriteLine("Tebrikler baþarýlý.");
+            Console.ReadLine();
+
+            /*
+
+            Ödev 2 :
+
+            kullanýcýdan 1 ile x arasýnda bir sayý girmesini isteyin
+            daha sonra sistem kullanýcýnýn girmiþ oldugu 1 ile x deðerleri arasýnda bir sayý tahmini yapsýn
+            daha sonra kullanýcý sistemin tahmin etmiþ oldugu sayýyý bulmaya calýssýn.
+            bulamazsa yeniden sorsun
+            ne zaman kullanýcý ilgili deðeri bulursa y kadar denediniz ve sonuca ulastýnýz desin.
+
+            */
+
+            int odev2Tahmin = 0;
+            int odev2UretilenSayi = 0;
+            int odev2TahminAdet = 0;
+
+            Console.Write("Tahmin oyunu için en yüksek deðeri giriniz : ");
+            int odev2KullaniciMaxValue = Convert.ToInt32(Console.ReadLine());
+
+            Random odev2Random = new Random();
+            odev2UretilenSayi = odev2Random.Next(1, odev2KullaniciMaxValue);
+
+            do
+            {
+                odev2TahminAdet++;
+                Console.WriteLine("{0}. hakkýnýz üretilen sayýyý tahmin ediniz.", odev2TahminAdet);
+                odev2Tahmin = Convert.ToInt32(Console.ReadLine());
+
+            } while (odev2Tahmin != odev2UretilenSayi);
+
+            Console.WriteLine("{0}. kere denemenizde sayýyý doðru tahmin ettiniz.", odev2TahminAdet);
+
+
+
+            /*
+
+            Çalýþma 3 ben yaptým bunu
+            kullanýcý rakam giriyor sistem bulmaya calýsýyor
+
+            */
+
+            Console.Write("Tahmin edilmesini istediðiniz rakamý giriniz : ");
+            int kullaniciGirilenTahminSayi1 = Convert.ToInt32(Console.ReadLine());
+            int sistemTahminSayi1 = 0;
+            int sayac4 = 1;
+
+            do
+            {
+
+                if (sayac4 > 1)
+                    Console.WriteLine(sayac4 + ". yanlýþ tahmin.");
+
+                Random random = new Random();
+                sistemTahminSayi1 = random.Next(1, kullaniciGirilenTahminSayi1);
+
+                if (kullaniciGirilenTahminSayi1 == sistemTahminSayi1)
+                {
+                    Console.WriteLine(sayac4 + ". denemede sistem sayýnýzý dogru tahmin etti.");
+                }
+
+                sayac4++;
+
+            } while (kullaniciGirilenTahminSayi1 != sistemTahminSayi1);
+
+            Console.ReadLine();
+
+        }
