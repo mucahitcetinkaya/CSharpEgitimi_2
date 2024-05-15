@@ -1,0 +1,82 @@
+ 
+
+Bölüm 8 : Temel Konular - Koþul Ýfadeleri 
+VÝDEO 70 Karar Yapýlarý - Switch Case Kullanýmý
+
+
+KULLANICI SECÝMLERÝNDE YADA TEK BÝR DEÐÝÞKEN ÜZERÝNDEKÝ DEÐERLERE GÖRE ÝÞLEM YAPMAK ÝSTEDÝÐÝMÝZDE 
+BÝRAZ DAHA SADE OLARAK KARAR YAPISI KULLANMAK ÝSTEDÝÐÝMÝZ DE 
+SEÇMÝÞ OLDUGUMUZ
+YANÝ SWÝTCH CASE DEN BAHSEDECEÐÝZ
+
+            /* 
+             
+             YAZIMI 
+
+            switch ( ifade )
+            {
+                case kontrol1;  buradaki case leri if else gibi düþünebilirsin 
+                    çalýþacak olan iþlemler 
+                    break; ;  ile cýkýþ yapýlýr 
+
+                     altýna baska case lerde koyabilirsin 
+
+                case kontrol2;  buradaki case leri if else gibi düþünebilirsin 
+                     çalýþacak olan iþlemler 
+                    break; ;  ile cýkýþ yapýlýr 
+                    
+                    bütün kontrollerden geçtik ama herhangi birine takýlmadýk
+                 else kýsmý burada
+                    
+                default:
+                     calýsacak olan iþlemler 
+                    break;  ile cýkýs yapýlýr 
+            }
+            */
+
+            /*
+            kullanýcý ne girebilir ocak subat mart vs veya bunlarýn dýsýnda yanlýs bir cevap
+            bunlarý switchcase ile kontrol edelim
+            */
+            Console.WriteLine("Hangi Ay : ");
+            string kullanicidanGelen = Console.ReadLine();
+
+            switch (kullanicidanGelen)
+            {
+                case "Ocak": /* alttaki notu oku */
+                case "Nisan":
+                    Console.WriteLine("01");
+                    break; /* ile kodu kapattýk */
+                case "Þubat":
+                    Console.WriteLine("02");
+                    break;
+                case "Mart":
+                    Console.WriteLine("03");
+                    break;
+                /* bunlardan hiç biri deðilse default kýsmý else kýsmý oluyor bunu yaz dedik */
+                default:
+                    Console.WriteLine("Belirtirilen deðerlerin dýþýnda bir deðer giriþi yaptýnýz.");
+                    break; /* ile yine kodu kapattýk */
+
+            }
+
+            /*
+             switchcase de girilen bütün deðerleri kayýt ediyor tek tek bakmýyor
+             mesela if te böyle birþey yaparsak
+             if ocak mý þubat mý mart mý diye tek tek hepsini okur
+             switchcase de ocak þubat mart vs hepsini kayýt ediyor
+             kullanýcý ocak yazdý diyelim
+             diðerlerine bakmaz switch blogunun dýsýndan devam eder
+             kullanýcý subat yazdý diyelim ocaga bakmaz þubatta bakar blogun dýsýndan devam eder
+             yani kodu arama yapýyor varsa eðer ordan devam ediyor
+             yoksa eðer default a gidiyor istenilen þeyi yapýyor
+             blogun dýsýna cýkýyor
+
+             peki ocak veya subatsa mart veya nisansa bu calýssýn nasýl denir
+             yani case imiz birden fazla olabilir mi ayný iþlemi calýstýrabilir mi evet yapabilir
+
+             case in altýna baska bir case yazabiliriz
+             burada ocak veya nisan mi diyor veya var
+            */
+            
+        }

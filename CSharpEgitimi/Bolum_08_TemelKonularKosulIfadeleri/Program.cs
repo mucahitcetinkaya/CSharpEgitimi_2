@@ -233,6 +233,95 @@
 
         #endregion
 
+        #region VİDEO 70 Karar Yapıları - Switch Case Kullanımı
+
+        //static void Main(string[] args)
+        //{
+        //    /* 70 Karar yapıları -Switch kullanımı */
+
+        //    /* 
+
+        //     YAZIMI 
+
+        //    switch ( ifade )
+        //    {
+        //        case kontrol1;  buradaki case leri if else gibi düşünebilirsin 
+        //            çalışacak olan işlemler 
+        //            break; ;  ile cıkış yapılır 
+
+        //             altına baska case lerde koyabilirsin 
+
+        //        case kontrol2;  buradaki case leri if else gibi düşünebilirsin 
+        //             çalışacak olan işlemler 
+        //            break; ;  ile cıkış yapılır 
+
+        //            bütün kontrollerden geçtik ama herhangi birine takılmadık
+        //         else kısmı burada
+
+        //        default:
+        //             calısacak olan işlemler 
+        //            break;  ile cıkıs yapılır 
+        //    }
+        //    */
+
+        //    /*
+        //    kullanıcı ne girebilir ocak subat mart vs veya bunların dısında yanlıs bir cevap
+        //    bunları switchcase ile kontrol edelim
+        //    */
+        //    Console.WriteLine("Hangi Ay : ");
+        //    string kullanicidanGelen = Console.ReadLine();
+
+        //    switch (kullanicidanGelen)
+        //    {
+        //        case "Ocak": /* alttaki notu oku */
+        //        case "Nisan":
+        //            Console.WriteLine("01");
+        //            break; /* ile kodu kapattık */
+        //        case "Şubat":
+        //            Console.WriteLine("02");
+        //            break;
+        //        case "Mart":
+        //            Console.WriteLine("03");
+        //            break;
+        //        /* bunlardan hiç biri değilse default kısmı else kısmı oluyor bunu yaz dedik */
+        //        default:
+        //            Console.WriteLine("Belirtirilen değerlerin dışında bir değer girişi yaptınız.");
+        //            break; /* ile yine kodu kapattık */
+
+        //    }
+
+        //    /*
+        //     switchcase de girilen bütün değerleri kayıt ediyor tek tek bakmıyor
+        //     mesela if te böyle birşey yaparsak
+        //     if ocak mı şubat mı mart mı diye tek tek hepsini okur
+        //     switchcase de ocak şubat mart vs hepsini kayıt ediyor
+        //     kullanıcı ocak yazdı diyelim
+        //     diğerlerine bakmaz switch blogunun dısından devam eder
+        //     kullanıcı subat yazdı diyelim ocaga bakmaz şubatta bakar blogun dısından devam eder
+        //     yani kodu arama yapıyor varsa eğer ordan devam ediyor
+        //     yoksa eğer default a gidiyor istenilen şeyi yapıyor
+        //     blogun dısına cıkıyor
+
+        //     peki ocak veya subatsa mart veya nisansa bu calıssın nasıl denir
+        //     yani case imiz birden fazla olabilir mi aynı işlemi calıstırabilir mi evet yapabilir
+
+        //     case in altına baska bir case yazabiliriz
+        //     burada ocak veya nisan mi diyor veya var
+        //    */
+
+        //}
+        #endregion
+
+
+
+
+
+
+
+
+
+
+
 
 
 
