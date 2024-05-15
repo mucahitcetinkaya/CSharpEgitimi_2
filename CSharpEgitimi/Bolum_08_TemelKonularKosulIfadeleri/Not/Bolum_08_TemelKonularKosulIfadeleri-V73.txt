@@ -1,0 +1,173 @@
+ 
+
+Bölüm 8 : Temel Konular - Koþul Ýfadeleri 
+VÝDEO 73 Karar Yapýlarý - Alýþtýrma 2
+             
+
+             MENU
+             1 - TOPLAMA
+             2 - CIKARTMA
+             3 - ÇARPMA
+             4 - BÖLME
+             SEÇÝNÝZ : _
+             
+             KURALLAR 
+             1 2 3 4 DIÞINDA BÝR DEÐER GÝRERSE GÝRMÝÞ OLDUÐUNUZ DEÐER HATALI DÝYELÝM VE SONLANDIRALIM
+             BURDA HENUZ YÖNLENDÝRMELERÝ GÖRMEDÝÐÝMÝZ TEKRAR AYNI MENUYU KULLANICININ KARSISINA CIKARTMAYACAGIZ
+             4. SECENEK ÝÇERÝSÝNDE 0 BÖLENÝ OLAMAZ KONTROLÜ YAPILACAK
+             UYGULAMA 1 KERE CALISACAK
+             HER ÝÞLEMDE KULLANICIDAN 2 SAYI ÝSTENECEK HANGÝSÝ SECÝLÝRSE BUNLAR ONA GÖRE ÝÞLEME GÝRECEK
+             
+           
+
+/* birinci çözüm de if içinde iþlemleri yaptýk */
+
+Console.WriteLine(" Hoþgeldiniz");
+Console.WriteLine(" 1 - Toplama");
+Console.WriteLine(" 2 - Çýkartma");
+Console.WriteLine(" 3 - Çarpma");
+Console.WriteLine(" 4 - Bölme");
+Console.Write(" Seçiniz : ");
+
+string secilenMenu = Console.ReadLine();
+
+if (secilenMenu == "1")
+{
+    Console.WriteLine("Toplanmasýný istediðiniz 2 sayý giriniz : ");
+    Console.Write("1. sayý : ");
+    decimal toplaSayi1 = Convert.ToDecimal(Console.ReadLine());
+    Console.Write("2. sayý : ");
+    decimal toplaSayi2 = Convert.ToDecimal(Console.ReadLine());
+    Console.WriteLine("Toplama Sonucu " + (toplaSayi1 + toplaSayi2));
+
+}
+else if (secilenMenu == "2")
+{
+    Console.WriteLine("Çýkartýlmasýný istediðiniz 2 sayý giriniz : ");
+    Console.Write("1. sayý : ");
+    decimal cikartSayi1 = Convert.ToDecimal(Console.ReadLine());
+    Console.Write("2. sayý : ");
+    decimal cikartSayi2 = Convert.ToDecimal(Console.ReadLine());
+    Console.WriteLine("Çýkartma Sonucu " + (cikartSayi1 - cikartSayi2));
+
+}
+else if (secilenMenu == "3")
+{
+    Console.WriteLine("Çarpýlmasýný istediðiniz 2 sayý giriniz : ");
+    Console.Write("1. sayý : ");
+    decimal carpSayi1 = Convert.ToDecimal(Console.ReadLine());
+    Console.Write("2. sayý : ");
+    decimal carpSayi2 = Convert.ToDecimal(Console.ReadLine());
+    Console.WriteLine("Çarpma Sonucu " + (carpSayi1 * carpSayi2));
+
+}
+else if (secilenMenu == "4")
+{
+    Console.WriteLine("Bölünmesini istediðiniz 2 sayý giriniz : ");
+    Console.Write("Bölünecek Sayý : ");
+    decimal bolSayi1 = Convert.ToDecimal(Console.ReadLine());
+    Console.Write("Bölen Sayý : ");
+    decimal bolSayi2 = Convert.ToDecimal(Console.ReadLine());
+    if (bolSayi2 == 0)
+    {
+        Console.WriteLine("Bölen sayý sýfýr olamaz!");
+        Console.WriteLine("Uygulama Sonu");
+    }
+    else
+    {
+        Console.WriteLine("Bölme Sonucu " + (bolSayi1 / bolSayi2));
+    }
+}
+else
+{
+    Console.WriteLine("Menude olmayan bir seçenek girdiniz! ");
+}
+
+Console.ReadLine();
+
+
+////////////////////////////////////////////////////////////
+
+HOCANIN YAPTIGI
+
+Console.WriteLine("Menü");
+Console.WriteLine(" 1 - Toplama ");
+Console.WriteLine(" 2 - Çýkartma ");
+Console.WriteLine(" 1 - Çarpma ");
+Console.WriteLine(" 1 - Bölme ");
+Console.Write("Seçiniz :");
+
+string kullaniciSecim = Console.ReadLine();
+
+BU DOUBLE KISMINI NEDEN YAZDIK
+STRÝNG S1 S2 KULLANICIDAN GELEN DEÐERLER
+BAÞKA ÝF BLOGUNDA OLUSTURDUÐU ÝÇÝN ERÝÞÝM YAPAMADIK
+ONCE BUNDAN DOLAYI SADECE ÝSÝM VERÝP DEÐER VERMEMÝÞTÝK
+SONRA AÞAÐIDA BAÞKA HATA VERDÝ
+BÝZ ÝÇERÝDE LOCAL DEÐÝÞKEN DEDÝÐÝMÝZ DOUBLE ÝNT VS GÝBÝ DEÐERLERÝ TANIMLIYORSAK
+VE BUNLARIN ÝÇERÝSÝNE UYGULAMA ÝÇERÝSÝNDE ACIK OLARAK HERHANGÝ BÝR YERDE
+DEÐER VERMÝYORSAK UYGULAMAMIZ HATA VERÝR
+LOCAL DEÐÝÞKENLER DEÐER ALMAK ZORUNDADIR CALISAMAZLAR
+BÝZDE DISARIDA DEFAULT DEÐER 0 ATATIK
+NEDEN BUNU DEDÝK ÝF SARTINA GÝRMEDÝÐÝNDE sayi1 ve sayi2 deðersiz kalýyor
+birinci if kýsmýnda konsoldan deðer giriyoruz s1 s2 
+sonra double a ceviriyoruz sayi1 sayi2
+sonra baska if e geçince
+sayi1 sayi2 nin deðersiz kaldýgý kýsým orasý
+baþka if e geçince deðerler orda geçerli kalmýyor local hata veriyor
+ÝSÝMLERÝNÝ KULLANABÝLELÝM VE ÝÞLEME ALABÝLELÝM DÝYE
+ÝÇERÝDE SONRA ATADIGIMIZ DEÐER AKTÝF OLUYOR
+
+double sayi1 = 0;
+double sayi2 = 0;
+
+BU BASTAKÝ ÝF KISMINI NEDEN YAZDIK
+MESELA SECÝNÝZ KISMINA 1234 DEÐÝLDE DISINDAKÝ BÝR DEÐER YAZINCA
+ORADAKÝ SORUNU ENGELLEMEK ÝÇÝN YAZDI
+SADECE 1234 DEN BÝRÝSÝ OLURSA DEVAM ET 
+if (kullaniciSecim == "1" || kullaniciSecim == "2" || kullaniciSecim == "3" || kullaniciSecim == "4")
+{
+    Console.WriteLine("Sayý 1 deðerini giriniz : ");
+    string s1 = Console.ReadLine();
+
+    Console.WriteLine("Sayý 2 deðerini giriniz : ");
+    string s2 = Console.ReadLine();
+
+    sayi1 = Convert.ToDouble(s1); // YUKARIDA DEÐÝÞKEN TANIMLADIK 
+    sayi2 = Convert.ToDouble(s2); // TEKRAR DOUBLE YAZMAYA GEREK YOK
+
+}
+
+if (kullaniciSecim == "1")
+{
+    double toplama = sayi1 + sayi2;
+    Console.WriteLine("Sonuç" + toplama);
+}
+else if (kullaniciSecim == "2")
+{
+    double cikartma = sayi1 - sayi2;
+    Console.WriteLine("Sonuç" + cikartma);
+}
+else if (kullaniciSecim == "3")
+{
+    double carpma = sayi1 * sayi2;
+    Console.WriteLine("Sonuç" + carpma);
+}
+else if (kullaniciSecim == "4")
+{
+    if (sayi2 == 0)
+    {
+        Console.WriteLine("Bölen deðer sýfýr olamaz.");
+    }
+    else
+    {
+        double bolme = sayi1 / sayi2;
+        Console.WriteLine("Sonuç" + bolme);
+    }
+}
+else
+{
+    Console.WriteLine("Seçim dýþý deðer giriþi yaptýnýz.");
+}
+
+Console.WriteLine("UYGULAMA SONU.");
