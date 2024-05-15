@@ -50,6 +50,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Not\Bolum_09_TemelKonularDonguler-V78.txt" />
     <Content Include="Not\Bolum_09_TemelKonularDonguler-V77.txt" />
     <Content Include="Not\Bolum_09_TemelKonularDonguler-V76.txt" />
   </ItemGroup>
