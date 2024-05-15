@@ -1,0 +1,155 @@
+
+
+Bölüm 9 : Temel Konular - Döngüler
+VÝDEO 83 Foreach Döngüsü
+
+
+Temel Konular - Döngüler
+
+Döngüler belirli bir sayýda yapan veya belirli bir þarta göre yapan yapýlardýr.
+
+For - Foreach - While - do While olarak isimlendirdiðimiz döngülerimizi davranýþ tiplerine göre ayýralým.
+
+Sabit Döngü tipleri
+
+For - Foreach
+
+Þartlý Döngü tipleri
+
+While - do While
+
+---------------------------
+
+bu bölümde foreach döngüsünü göreceðiz
+
+yapýsýný davranýþýný ve ne için kullanýldýðýný inceliyor olacaðýz
+
+detaylý ve ödevli bölümleri diziler konusunun içerisinde yapmak zorundayým
+
+çünkü foreach aslýnda çalýþýrken sabit degerini mevcut olan bir veri kümesinin içerisinde
+
+bulunan adetten almakta
+
+foreach i anlatmak için diziler konusundan yardým alacagýz
+
+sonra ileride diziler konusunu daha kolay anlacaksýnýz
+
+program.cs e gecelim
+
+önce bir dizi olusturalým
+
+string[] isimler = new[] { "Mücahit","Muhammet","Çetinkaya","Arden","Arthur","Zayn" };
+
+elimizde bir veri bütünü var bizim bu veri bütünü üzerinde iþlem yapmamýz gerekiyor
+
+standart kullanýmda for foreach bizim cok sýk kullandýgýmýz döngülerden bir tanesi
+
+daha az kullandýklarýmýz do while mesela
+
+bir veri kaynagýndan database den bütün bir datayý cektiginizi dusunun
+
+bu veri kaynagýnda operasyonel iþlemleriniz var ne gibi
+
+elinizde bir insert var database e kayýt etmek istiyorsunuz
+
+veri kümesi düþünelim içerisinde
+
+müþterilerin ýd leri ve bilgileri var
+
+ilk once verileri database den kontrol etmeniz gerekecek
+
+ilgili müþterinin id si benim sistemim de var mý
+
+ilgili müþterinin tknc vs bilgileri benim sistemim de var mý
+
+id den bulamýyorsam sosyal hesabýndan bulmam gerekecek
+
+bu bilgilere ait bir müþteri bende var mý diye dönmek istediðimde
+
+o veri kümesi içinde dönmek isteyeceðiz
+
+iþte o zaman burada foreach döngüsünü kullanýyor olacagýz
+
+ayný iþlem for içinde yapýlabilir ama bazý þeylerin standartý oluyor
+
+standart olan da eger bir tip listesi içinde dönüyosan
+
+bunu foreach ile yapmaktýr.
+
+yazýmý
+
+foreach tab tab yapýnca geliyor
+
+foreach (var item in collection)
+
+{
+
+}
+
+foreach (string item in isimler)
+
+{
+
+}
+
+isimler dizisinin içinde dön hepsine item adýný ver demiþ oluyoruz
+
+item degisebilir
+
+dizi string dizisi oldugundan foreach te string acýldý
+
+string[] isimler = new[] { "Mücahit","Muhammet","Çetinkaya","Arden","Arthur","Zayn" };
+
+foreach (string item in isimler)
+
+{
+
+Console.WriteLine(item);
+
+}
+
+Console.ReadLine();
+
+yazdýgýmýzda dizi içinde döndügü için kaç tane verisi varsa o kadar dönüyor
+
+her veri de bir tane okuyor
+
+breakpoint ekleyip bakýnca
+
+isimler veri kümesi dizisi 6 elamanlý bir dizi index i 5 oluyor sebebi index 0 dan baslýyor
+
+basta dizi içine giriyor kac index var 5 o kadar dönüyor içinde foreach ile sýra sýra yazdýrýyor hepsini
+
+foreach e girdiðinde 0. index i okuyor
+
+bunu item in uzerýne alýyor
+
+item i da yazdýrýyoruz burda
+
+hangisini okursa onu item olarak kabul ediyor
+
+en basta zaten diziyi okudu isimler dizisinin içinde döndüðümüz için
+
+ordan bakýyor
+
+diziler konusunun içerisine girdiðimiz de
+
+dizi örneklerinde foreach i cok sýk kullanacagýz
+
+suan bilmeniz gereken foreach in koleksiyon içerisinde döngüsel bir iþleme girdiðimizde
+
+kullanacagýmýz bir döngü oldugunu
+
+item in koleksiyon içerisindeki tek bir degeri iþaret ettiðini bilmemiz yeterli
+
+string[] isimler = new[] { "Mücahit","Muhammet","Çetinkaya","Arden","Arthur","Zayn" };
+
+foreach (string item in isimler)
+
+{
+
+Console.WriteLine(item);
+
+}
+
+Console.ReadLine();

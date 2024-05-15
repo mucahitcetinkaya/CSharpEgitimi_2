@@ -356,6 +356,44 @@
 
         #endregion
 
+        #region VİDEO 83 Foreach Döngüsü
+
+        //static void Main(string[] args)
+        //{
+
+        //    /*
+
+        //    VİDEO 83 Foreach Döngüsü
+
+        //    */
+
+        //    /*
+
+        //    notlarda anlatımı var
+
+        //    */
+
+        //    string[] isimler = new[] { "Mücahit", "Muhammet", "Çetinkaya", "Arden", "Arthur", "Zayn" };
+
+        //    foreach (string item in isimler)
+
+        //    {
+        //        Console.WriteLine(item);
+        //    }
+
+        //    Console.ReadLine();
+
+        //}
+
+        #endregion
+
+
+
+
+
+
+
+
 
 
 
