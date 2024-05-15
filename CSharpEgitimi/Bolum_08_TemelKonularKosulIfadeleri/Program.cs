@@ -312,7 +312,51 @@
         //}
         #endregion
 
+        #region VİDEO 71 Karar Yapıları - Alıştırma 1
 
+        //static void Main(string[] args)
+        //{
+
+        //    /*
+        //    kullanıcı adını ve şifreyi degiskene atayıp if içinde degisken adı ile işlem yapabilirsin
+        //    veya
+        //    degisken yerine direk orda da yazabilirsin ama degiskene ataman degistirmen için kolaylık saglar
+        //    */
+
+        //    string ka = "admin";
+        //    string sifre = "123";
+
+        //    Console.WriteLine("Kullanıcı adınızı giriniz : ");
+        //    string girilenKullaniciAdi = Console.ReadLine();
+
+        //    Console.WriteLine("Kullanıcı adınızı giriniz : ");
+        //    string girilenSifre = Console.ReadLine();
+
+        //    if (girilenKullaniciAdi == ka && girilenSifre == sifre)
+        //    {
+        //        Console.WriteLine("Hoşgeldiniz");
+        //    }
+        //    else
+        //    {
+        //        Console.WriteLine("Hatalı giriş!!");
+        //    }
+
+        //    /*
+        //     * 2 side calısır sadece degisken var veya yok farkları bu 
+        //    if (girilenKullaniciAdi == "admin" && girilenSifre == "123")
+        //    {
+        //        Console.WriteLine("Hoşgeldiniz");
+        //    }
+        //    else
+        //    {
+        //        Console.WriteLine("Hatalı giriş!!");
+        //    }
+        //    */
+
+        //    Console.ReadLine();
+        //}
+
+        #endregion
 
 
 

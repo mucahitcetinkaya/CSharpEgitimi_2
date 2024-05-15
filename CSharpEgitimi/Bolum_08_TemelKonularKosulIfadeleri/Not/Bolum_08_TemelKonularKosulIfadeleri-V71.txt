@@ -1,0 +1,70 @@
+ 
+
+Bölüm 8 : Temel Konular - Koþul Ýfadeleri 
+VÝDEO 71 Karar Yapýlarý - Alýþtýrma 1
+ 
+
+bu kýsmý sesleri yazýya döken programdan alýp düzelttim daha zor oldu
+
+
+Evet arkadaþlar alýþtýrmalar bölümüne Hoþ geldiniz þimdi alýþtýrmalar yapacaðýz birkaç çalýþtýrmayý ben yapacaðým 
+bazý alýþtýrmalarý size býrakacaðým size býraktýðým yerde videoyu durdurmanýzý isteyeceðim
+Daha sonra ben o alýþtýrmayý yaparak devam edeceðim bol alýþtýrma çözmek istiyorum ilk alýþtýrma ile baþlayalým
+
+hatýrlarsanýz kullanýcý adý ve þifre kontrolü yapmýþtýk ve bunu operatörlerde incelemiþtik
+Þimdi bunu daha aktif hale getirelim 
+
+kullanýcý doðru giriþ yaptýðýnda sisteme giriþiniz baþarýlý yazdýralým
+kullanýcý hatalý bir giriþ yaptýðýnda 
+lütfen Kullanýcý adý ya da þifrenizi kontrol ediniz diye bir mesaj çýkartalým
+basit bir if else i anlatan bir açýklama bir alýþtýrma yapýyor olacaðýz
+neye ihtiyacýmýz var Öncelikle kullanýcýdan gelen deðerlere ihtiyacýmýz var
+
+o zaman kullanýcýya soru soralým ve karþýlýklarýný isteyelim
+ilk olarak console istenileni yazdýralým
+Console.WriteLine("Kullanýcý adýnýzý giriniz : ");
+sonra bunu
+string içerisine alýp readline ile yanýt girilmesini saðlayalým
+sonra þifre bilgisini isteyelim
+Console.Write("Þifrenizi giriniz : ");
+sonra bunu
+string içerisine alýp readline ile yanýt girilmesini saðlayalým
+string sifre = Console.ReadLine();
+
+Bizim burada bir karar yazýsýný ihtiyacýmýz var
+Eðer kullanýcý adý ve þifre doðruysa Peki neye göre karþýlaþtýracaðýz bunlarý
+doðru olan kullanýcý adý ve þifre ne onlarda þöyle olacak arkadaþlar
+kullanýcý adý admin ise ve þifresi 1 2 3 ise biz bunu doðru kabul edeceðiz
+if in içerisine geliyoruz if dedik
+hatýrlarsanýz þart veya þartlar demiþtik Ýþte þimdi o þartlarý yazýyor olacaðýz
+kullanýcý adý eþit eþit ise Yani eþit ise neye admine
+ve operatörünü kullanýyorum 2 þartýn da doðru olmasý gerekli
+þifre þöyle þifre eþiteþit ise neye 123 e 
+Eðer bunlar doðruysa and operatörü olduðu için
+birinci þartýmýn ve ikinci þartýmýn ikisinin de ne olmasý gerekli true olmasý gerekli
+o zaman ekrana þunu yazabilirsin Merhaba, giriþiniz baþarýlý..
+
+Deðilse bunun tam tersi ise içlerinden bir tanesi ya da ikisi birden hatalýysa ne olacak
+
+O zaman else hemen onunda mesajýný yazalým 
+
+Giriþ baþarýsýz kullanýcý adý veya þifrenizi kontrol ediniz dedik
+
+kaydedip kontrol edelim
+önce doðru gireceðim admin 123
+if in içerisine geldim
+Ne yapýyor if ilk önce kullanýcý adýna bakýyor kullanýcý adý admin mi evet kullanýcý adý admin
+ve operatörünü gördüðü için diðer þarta bakýyor
+þifre 1 2 3 Evet þifre 123
+yani ilk þartýmýn sonucu true
+2. þartýmýn sonucu da true ise ve arada and olduðu için
+ne diyor burda ikisininde sonucu true oldugu için ana sonucta true dur diyor
+ve if in içerisinde ki iþlemlerin çalýþtý
+Merhaba giriþ baþarýlý ben burada cevabý alabilirim
+tekrar girelim kullanýcý adým doðru þifrem yanlýþ olsun
+Kullanýcý adý admin mi evet þifre 123 mü Hayýr
+arada and operatör olduðu için þartlarýnda bir tanesi false olduðu için ne oluyor benim iþlemler sonucu false olur
+benim ekrana ne yazmam gerekiyor giriþ baþarýsýz kullanýcý adý veya þifrenizi kontrol ediniz demem gerekiyor
+bilginize vermiþ olduk hem and operatörünü inceledik arkadaþlar hem de if else i
+görmüþ olduk Bir sonraki dersimizde size sizin yapmanýzý istedim yine bu basitlikte bir uygulama olacak
+onu videoyu durdurup denerseniz sevinirim
