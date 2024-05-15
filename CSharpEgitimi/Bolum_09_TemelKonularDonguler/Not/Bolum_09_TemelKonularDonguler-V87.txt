@@ -1,0 +1,34 @@
+
+
+Bölüm 9 : Temel Konular - Döngüler
+VÝDEO 87 do While Döngüsü Genel Kullanýmý
+
+
+while (true)
+{
+	while içindeki þartýmýz true ise içindeki kodlar calýsacaktýr
+	while içindeki þartýmýz false ise içindeki kodlara girmez çalýþmaz
+}
+do while dongusu
+
+yazým þekli
+
+do
+{
+} while (true);
+
+burada while ýn aþagýda oldugunu üzerinde do blogunun oldugunu görebilirsiniz.
+do while ýn ozelliði
+þartýmýz ne olursa olsun
+ÖNCELÝKLE BÝR KERE CALISTIR
+do	DO BÖLUMUNE GÝRER
+	ÝÇERÝNDEKÝ KODU YAPAR BURADA KONSOLE MERHABA DO WHÝLE YAZDIRIR
+	SONRA ÞARTA BAKAR
+	ÞART DOGRUYSA TEKRAR EDER DEÐÝLSE ORADA BÝTER.
+{
+	Console.WriteLine("MERHABA DO WHÝLE");
+} while (1==2); // BURASI DEFAULT OLARAK TRUE GELÝR
+
+1 EÞÝT ÝSE 2 E DÝYORSUN BURDA EÞÝT OLMADIGI ÝÇÝN WHÝLE A GÝRMEZ
+EGER 1 == 1 OLSA TEKRAR TEKRAR GÝRERDÝ
+DO WHÝLE DE ÞART NE OLURSA OLSUN 1 KERE YAPIYOR

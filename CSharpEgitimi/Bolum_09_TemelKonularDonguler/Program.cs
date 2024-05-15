@@ -618,9 +618,26 @@
 
         #endregion
 
+        #region VİDEO 87 do While Döngüsü Genel Kullanım
 
+        //static void Main(string[] args)
+        //{
 
+        //    /*
 
+        //    Bölüm 9 VİDEO 86 DO WHILE Döngüsü Genel Kullanımı
+        //    anlatımı notlar da var
+
+        //    */
+
+        //    do
+        //    {
+        //      Console.WriteLine("MERHABA DO WHİLE");
+        //    } while (1 == 2);
+        //    Console.ReadLine();
+        //}
+
+        #endregion
 
 
 
