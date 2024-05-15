@@ -1,0 +1,43 @@
+
+
+Bölüm 11 : Koleksiyonlar
+VÝDEO 96 Bilgilendirme
+
+
+Diziler bölümünde öðrenmiþ olduðumuz konularýn bir seviye üstü diyebileceðimiz koleksiyonlar ile çalýþmaya baþlayalým.
+
+Koleksiyonlar 2 ye ayrýlýyor
+
+1 Standart Koleksiyonlar
+2 Generic Koleksiyonlar
+
+suanda generic kavramýný görmediðimiz için standart koleksiyonlarý göreceðiz
+
+Diziler bölümünde ayný veri tipinde olan deðerler ile beraber nasýl çalýþacaðýmýzý belirli bir limitinin oldugunu
+limiti dolduktan sonra herhangi bir esnemenin arttýrmanýn standartta olamadýgýný yeni bir dizi tanýmlamak gerektiðini yani
+daha bütük bir dizi tanýmlamak gerekiyor ve var olan elemanlarý diger diziye aktarmak gerekiyor boylece dizinin boyutunu
+büyütebiliriz ama cok zahmetli bir iþ oldugu için kullanýlmamakta bunlarý inceledik ve
+diziler için koleksiyonlarýn atasý diyebiliriz demiþtik.
+
+Koleksiyonlar adýný vermiþ olduðumuz bu bölüm içerisinde güncel yazým tekniklerine daha yakýn olan konularý inceliyor olacaðýz.
+
+ArrayList
+HastTable
+SortedList
+Stack
+Queue
+
+Bu seviyede öðreneceðimiz koleksiyonlar deðer olarak object veri tipinden deðerleri kabul ettikleri için ve .net framework alt yapýsýndaki
+tüm class lar object class ýndan türetildiði için ( bu kýsmý kalýtým konusunu ilerleyen bölümlerde göreceðiz )
+tüm veri tiplerini alan bir yapýya sahiptir.
+
+hatta bu iþlemi boxing unboxing iþlemi olarakta tanýmlayabilirsiniz.
+
+Koleksiyon tanýmlamalarýnda dizilerde oldugu gibi bir eleman sýnýrý olmaz hatýrlarsanýz diziler kýsmýnda 10 elemanlý bir dizi tanýmladýgýmýz
+zaman 11. elemaný ekleyebilmemiz mümkün deðildi.
+
+Koleksiyonlar kapasiteleri doldugu zaman otomatik olarak içerisindeki mevcut kapasitesini arttýrýrlar.
+
+Generic yapýlarý incelediðimiz zaman koleksiyonlarýn generic versiyonlarýný inceleyeceðiz.
+
+Fakat diziler konusunda oldugu gibi bu bölümü atlamadan izlemeye ve geliþiminizi kademeli ve dogru bir þekilde yapýnýz.

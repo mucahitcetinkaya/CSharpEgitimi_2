@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{2DBBE94F-8216-436D-ADEE-BB0A9287B5FB}</ProjectGuid>
+    <ProjectGuid>{8CF69176-CA4F-4B1D-A580-CE58ECFC1D67}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>D_10_Diziler_Arrays</RootNamespace>
-    <AssemblyName>D_10_Diziler-Arrays</AssemblyName>
+    <RootNamespace>Bolum_11_Koleksiyonlar</RootNamespace>
+    <AssemblyName>Bolum_11_Koleksiyonlar</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -49,10 +49,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Content Include="MyNotes\Ders10video93.txt" />
-    <Content Include="MyNotes\Ders10video92.txt" />
-    <Content Include="MyNotes\Ders10video91.txt" />
+    <Content Include="Not\Bolum_11_Koleksiyonlar-V96.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
