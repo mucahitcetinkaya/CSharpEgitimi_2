@@ -1,0 +1,229 @@
+
+
+Bölüm 9 : Temel Konular - Döngüler
+VÝDEO 80 For Döngüsü Sonsuz Döngü Yapýlmasý - Break - Continue Anahtar Kelimeleri
+
+
+For döngüsü ile sonsuz bir döngü oluþturacaðýz
+Sonsuz döngü ne demek ?
+Sonsuz döngüde bir þart olur ve o þart her zaman saðlanýr bundan dolayý bu sonsuz döngü olur.
+For döngüsünün bir sonsuz döngü þablonu var bunu yaparak for döngüsünü ilgili þarta baðlýlýktan ayýrýp sonsuz döngüye çevirebiliyoruz.
+
+
+Sonsuz döngü oluþturmak
+
+burda önce standart kalýptan bahsedelim 
+sonra sonsuz döngü içerisinde öðrenmemiz gereken 2 farklý keyword var bunlarý ögreneceðiz
+aslýnda sonsuz döngüyü 2 keyword du da anlatmak için kullanacagýz
+
+standart for da
+
+Genel Kullanýmý
+
+For ( sayaç; þart; sayaç artýþ iþlemi )
+{
+  Tekrar edilmesini istediðimiz kod
+}
+
+
+SAYAÇ DEDÝÐÝMÝZ KISIM
+
+aslýnda istediðimiz sabit hedefe ulaþabileceðimiz index imizdir.
+o anda kaçýncý adýmdaysak bize ilgili adeti veren kýsým sayaçtýr.
+count=1 olan kýsým default deðerine 1 demiþ 1 den baþla 
+
+ÞART 
+
+sabit olan þart kadýlan kodta 500 olan kýsýmdýr.
+count<=500 e demiþ
+
+bu þart saðlanana kadar içerisindeki kod blogunu gerçekleþtir diyoruz
+
+kodtaki kýsmý yazý yazdýrmak
+
+SAYAÇ ARTIÞ ÝÞLEMÝ
+
+en sondaki ++ olan kýsým
+count 500 olana kadar 
+bir arttýr demek
+
+1 den baþlayýp saymaya baþlýyor yazýyor
+<=500 dedik oraya kadar gelecek
+500 oldugunda true döner yine yazar.
+501 <= olmadýgý için false alýr
+iþlemi bitirir.
+
+return 0; da tekrar sayýsý
+
+
+sonsuz döngü yapmak için içeriye herhangi bir þart belirtmiyoruz
+for içine 2 tane noktalý virgül koyuyoruz
+ilk noktalý virgül deðiþken 
+
+ikinci noktalý virgül koþul
+
+en sonra artma veya azalma
+
+for(; ; )
+{
+
+}
+
+///////////////////////////////////////////////////////////////////////////////
+
+
+           /*
+            
+                VÝDEO 80 For döngüsü - Sonsuz döngü Yapýlmasý - Break - Continue Anahtar Kelimeleri
+            
+            */
+
+            /*
+             
+             1 . çalýþma kodu
+
+            for (; ; )
+            {
+                Console.WriteLine("Ben for sonsuz döngüsüyem!");
+            }
+
+            */
+
+///////////////////////////////////////////////////////////////////////////////
+
+bu nereye kadar devam eder ? 
+
+bu kod sadece bir satýr bir kod yazýyor bunda pek sorun olmaz ama
+eðer bu bir deðiþken içerisine deðer alýp onu da 
+sonraki bölümlerde göreceðimiz olan dizi veya koleksiyon gibi deðerlerin içine atmaya baþlasaydý
+bir noktadan sonra makinenin mevcut ram ini þiþirir
+ram yetmediði için makine harddisk i ram olarak kullanýrdý
+cpu aþýrý ýsýnýr ve makinemiz kendi kendine kapanacaktý
+sonsuz döngüde bu þekilde sona erecekti
+bunu bir kaç datayý okurken yaþadýgým için bu kadar net anlatabiliyorum
+
+sonsuz döngü kullandýgýmýz yerler var arkadaslar
+þartýn içeride forun içerisin de saðlanýp forun dýsarýsýnda devamlý okuma ihtiyacý olan bölümlerde kullanýlýr
+böyle cok sýk kullanýlan biþey degil ama kullandýgýmýz bir þey
+aslýnda sonsuz dönguyu görduk mantýgýný anladýk 
+makine iptal olarak kadar bu böyle yazmaya devam eder
+
+biz bu döngü içerisinde 2 farklý keyword den bahsedeceðiz
+
+bunlardan bir tanesi aslýnda gördük switch case de 
+
+break anahtar kelimesi
+ve
+continue anahtar kelimesi
+
+break anahtar kelimesini switch case de gördük bi þart saglandýgýnda switch i kýrmak için kullanýlýyordu
+
+for(; ; )
+{
+    break;
+}
+
+break kýrmak arkadaslar bakarsýnýz eger 2 si de mavi yanýyor
+sonsuz döngü baþlar break ifadesini gördüðünde þart ne olursa olsun bir üstünde yani
+içinde bulunmus oldugu döngüyü kýrar ve kodu bir alttan devam ettirir
+
+
+            /*
+            
+
+             2 . çalýþma kodu
+
+             
+            önce bir int degisken olusturalým dýsýna
+            sonsuz döngü her döndüðünde sayacý bir arttýrsýn sayac++;
+            sayac eþit eþit ise ikiye if(sayac == 2)
+            o zaman gir döngüyü kýr diyebiliriz iþte burda break giriyor araya
+            eðer deðilse breakten sonra yazýyoruz
+                Console.WriteLine(sayac);
+                Console.WriteLine("Ben for sonsuz döngüsüyem!");
+
+            debug ile kontrol edelim
+            for kýsmýna breakpoint koy kontrol et
+            sayac 0 fora girdi
+            baþladý sýfýr olarak
+            sayac 1 oldu
+                Console.WriteLine("Ben for sonsuz döngüsüyem!");
+            yazdý
+            tekrar girdi sayac 1 hala
+            sayac 2 oldu 
+            2 ye eþit break calýstý
+            döngüden cýktý
+            iþte break anahtar kelimesi bizim istediðimiz bir sarta göre kýrmaya yarýyor
+
+             */
+
+            int sayac = 0;
+            for (; ; )
+            {
+                sayac++;
+                if (sayac == 2)
+                    break;
+                // continue anahtar kelimesi
+
+                Console.WriteLine(sayac);
+
+                Console.WriteLine("Ben for sonsuz döngüsüyem!");
+            }
+
+
+peki continue nedir
+
+
+           /*
+             
+              3. çalýþma kodu anlatýmý notlarda var
+
+            continue anahtar kelimesine gecelim
+            þu iþe yarar break döngüyü kýrarken
+            continue anahtar kelimesi ilgili sart saglandýgýnda
+            continue anahtar kelimesi calýstýgýnda sadece o seferliðine
+            aþaðýsýnda olan kod blogunu calýstýrmaz
+            continue u gördügünde for a geri döner
+            sayacý bir arttýrýr sanki for kendýný tamamlamýs gibi davranmasýný saglar
+
+            þimdi bu durumda ekrana 2 yazmayacak 
+            sayac 2 oldugunda if blogu içindeki continue anahtar kelimesi calýsacak
+            for sanki buradaki komutlarý calýstýrmýs gibi
+            sayacý 3 yapacak öyle kodu bitirecek
+
+            for un oraya breakpoint koyalým
+
+            sayac 0
+            for a girdi sayac++ 1 oldu
+            sayac 2 ye eþit mi hayýr 
+            o zaman if e girmedim continue calýsmadý
+            ekrana
+                Console.WriteLine(sayac);
+                Console.WriteLine("Ben for sonsuz döngüsüyem!");
+            yazdý
+            tamamlandý su anda devam ediyoruz
+            sayac 2 oldu 2 2 ye eþit mi evet if e girdi
+            continue calýstý altýna devam etmeyecek sonraki kodlar calýsmayacak
+            en basa dönecek
+            sayac 2 idi sayac++ 3 oldu 
+            3 2 ye eþit mi hayýr if e girmedi 
+            tekrar ekrana yazdý 
+            if e girmediði için calýsmaya devam edebildim
+            burda kodu en alta indirmeden continue ile en basa cektik 
+             
+
+            int sayac = 0;
+            for (; ; )
+            {
+                sayac++;
+                if (sayac == 2)
+                    continue;
+
+                Console.WriteLine(sayac);
+
+                Console.WriteLine("Ben for sonsuz döngüsüyem!");
+            }
+            
+            */
+
+            Console.ReadLine();

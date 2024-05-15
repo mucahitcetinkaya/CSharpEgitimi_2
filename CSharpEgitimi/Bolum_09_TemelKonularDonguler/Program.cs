@@ -190,7 +190,73 @@
 
         #endregion
 
+        #region VİDEO 80 For Döngüsü Sonsuz Döngü Yapılması - Break - Continue Anahtar Kelimeleri
 
+        //static void Main(string[] args)
+        //{
+
+        //    /*
+
+        //        VİDEO 80 For Döngüsü Sonsuz Döngü Yapılması - Break - Continue Anahtar Kelimeleri
+
+        //    */
+
+        //    /*
+
+        //      1 . çalışma kodu anlatımı notlarda var
+
+        //    for (; ; )
+        //    {
+        //        Console.WriteLine("Ben for sonsuz döngüsüyem!");
+        //    }
+
+        //    */
+
+
+        //    /*
+
+        //      2 . çalışma kodu anlatımı notlarda var
+
+        //    int sayac = 0;
+        //    for (; ; )
+        //    {
+        //        sayac++;
+        //        if (sayac == 2)
+        //            break;
+        //        // continue anahtar kelimesi
+
+        //        Console.WriteLine(sayac);
+
+        //        Console.WriteLine("Ben for sonsuz döngüsüyem!");
+        //    }
+
+        //    */
+
+
+
+        //    /*
+
+        //      3. çalışma kodu anlatımı notlarda var
+
+        //    int sayac = 0;
+        //    for (; ; )
+        //    {
+        //        sayac++;
+        //        if (sayac == 2)
+        //            continue;
+
+        //        Console.WriteLine(sayac);
+
+        //        Console.WriteLine("Ben for sonsuz döngüsüyem!");
+        //    }
+
+        //    */
+
+        //    Console.ReadLine();
+
+        //}
+
+        #endregion
 
 
 
