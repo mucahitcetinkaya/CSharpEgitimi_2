@@ -1,0 +1,51 @@
+ 
+
+Bölüm 8 : Temel Konular - Koþul Ýfadeleri 
+VÝDEO 75 Karar Yapýlarý - Alýþtýrma 3 (Ödev gibi yapmaya çalýþabilirsiniz)
+
+
+/*
+
+
+            switchcase çalýsmasý
+
+            SWÝTCH KISA YOLU SW TAB TAB
+
+            kullanýcý kodu : 
+
+            kullanýcý kodu = AA - BB -- CC
+            ADMÝN YETKÝSÝNE SAHÝPSÝNÝZ
+            kullanýcý kodu = DD
+            GÜÇLÜ KULLANICI YETKÝSÝNE SAHÝPSÝNÝZ
+            kullanýcý kodu = FF - EE - GG 
+            STANDART KULLANICI YETKÝSÝNE SAHÝPSÝNÝZ
+
+            farklý bir giriþ olursa : HATALI KULLANICI KODU
+             
+            */
+
+            Console.Write("Lütfen kullanýcý kodunuzu giriniz : ");
+
+            string kullaniciKodu = Console.ReadLine();
+
+            switch (kullaniciKodu)
+            {
+                case "AA": /* AYNI KODU YAZINCA HATA VERDÝ */
+                case "BB":
+                case "CC":
+                    Console.WriteLine("ADMÝN YETKÝSÝNE SAHÝPSÝNÝZ.");
+                    break;
+                case "DD":
+                    Console.WriteLine("GÜÇLÜ KULLANICI YETKÝSÝNE SAHÝPSÝNÝZ.");
+                    break;
+                case "FF":
+                case "EE":
+                case "GG":
+                    Console.WriteLine("STANDART KULLANICI YETKÝSÝNE SAHÝPSÝNÝZ.");
+                    break;
+                default:
+                    Console.WriteLine("HATALI KULLANICI KODU.");
+                    break;
+            }
+
+            Console.ReadLine();
