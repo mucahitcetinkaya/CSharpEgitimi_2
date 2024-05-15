@@ -1,0 +1,46 @@
+
+
+Bölüm 9 : Temel Konular - Döngüler
+VÝDEO 79 For Döngüsü - Ödev Uygulamasý 1
+
+
+*/
+
+kullanýcý ekran üzerinden bir sayý girecek
+girilen sayýnýn faktöriyelini alacaðýz.
+once girilecek sayýyý isteyeceðiz
+string de sayýyý kayýt ettirip
+decimal a cevireceðiz
+for döngüsüne gireceðiz
+burda düþünmek lazým faktöriyel nedir
+en büyük sayýnýn 1 e kadar olanlar acýlýmýnýn carpýmý
+o zaman girilen sayýyý birer birer azaltarak carpýlmasýný saðlamammýz lazým
+
+*/
+
+
+/* 
+
+HOCANIN YAPTIGI
+
+string kullaniciGelenDeger = string.Empty;
+int kullaniciGelenDegerInt = 0;
+int faktoriyelHesapla = 1;
+
+Console.Write("Lütfen faktöriyel hesabý yapmak istediðiniz deðeri giriniz: ");
+kullaniciGelenDeger = Console.ReadLine();
+kullaniciGelenDegerInt = int.Parse(kullaniciGelenDeger);
+
+for (int i = kullaniciGelenDegerInt; i > 1; i--)
+{
+    faktoriyelHesapla = faktoriyelHesapla * i;
+    //faktoriyelHesapla *= i;
+}
+Console.WriteLine("{0} deðerinin faktöriyel sonucu : {1}", kullaniciGelenDeger, faktoriyelHesapla);
+
+ÇÝFT TIRNAKTAN SONRA GELEN SIFIRINCI ÝÞLEM OLUYO DEÐÝÞKEN ADINI ORAYA KOYUYOR
+SIFIRINCI BÝRÝNCÝ ÝÞLEM DÝYE GÝDÝYOR
+SIFIRINCI ÝÞLEM ÇÝFT TIRNAKTAN SONRA ÝLK GELEN ÝÞLEM KULLANICIGELENDEGER
+BÝRÝNCÝ ÝÞLEM ÇÝFT TIRNAKTAN SONRA ÝKÝNCÝ GELEN ÝÞLEM FAKTÖRÝYELHESAPLA
+
+*/
