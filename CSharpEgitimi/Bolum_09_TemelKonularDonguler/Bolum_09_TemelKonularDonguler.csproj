@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{79264305-F1E1-4227-B6E8-048D550E0ED1}</ProjectGuid>
+    <ProjectGuid>{E3E59F87-3677-4D2E-AD31-666887A7686E}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>D_08_TemelKonularKosulIfadeleri</RootNamespace>
-    <AssemblyName>D_08_TemelKonularKosulIfadeleri</AssemblyName>
+    <RootNamespace>Bolum_09_TemelKonularDonguler</RootNamespace>
+    <AssemblyName>Bolum_09_TemelKonularDonguler</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -50,14 +50,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="MyNotes\Ders08video74.txt" />
-    <Content Include="MyNotes\Ders08video73.txt" />
-    <Content Include="MyNotes\Ders08video72.txt" />
-    <Content Include="MyNotes\Ders08video71.txt" />
-    <Content Include="MyNotes\Ders08video70.txt" />
-    <Content Include="MyNotes\Ders08video69.txt" />
-    <Content Include="MyNotes\Ders08video66_67_68.txt" />
-    <Content Include="MyNotes\Ders08video64_65.txt" />
+    <Content Include="Not\Bolum_09_TemelKonularDonguler-V76.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

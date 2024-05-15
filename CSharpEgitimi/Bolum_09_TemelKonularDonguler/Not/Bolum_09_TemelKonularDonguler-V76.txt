@@ -1,0 +1,56 @@
+
+
+Bölüm 9 : Temel Konular - Döngüler
+VÝDEO 76 Bilgilendirme
+
+
+Bir iþlemi belirli bir sayýda veya bir þart gerçekleþtiði sürece tekrar etmek ayný kodlarýn defalarca çalýþmasýný
+uygulamalarýmýzýn bazý noktalarýnda isteriz.
+
+(özellikle database üzerinde bir veriyi okurken yada boll olarak tabir ettimiðiz toplu bir data yý
+belli bir operasyondan geçtikten sonra database e kayýt etme iþleminde kullanýrýz. )
+
+Bu ihtiyacýmýzý karþýlamak için C# programlama dilinde aþaðýdaki döngü yapýlarý bulunmaktadýr.
+
+For
+Foreach
+While
+Do While
+
+Sadece programlama dünyasýnda deðil aslýnda hayatýmýzýn bir çok yerinde döngülerden faydalanýrýz.
+
+
+Biraz ilginç hayat örnekleri ile döngülerin çalýþma mantýðýný anlamaya çalýþalým.
+
+Evden iþe doðru gittiðinizi düþünün
+Eðer bu bir uygulama ile yazýlýyor olsaydý yürü adýnda bir komut yapmak zorunda kalýrdýk ve 
+þarta baðlý bir döngüye girmek zorunda kalýrdýk.
+Þartýmýz ise iþ yerine varana kadar yürü olurdu.
+Bu noktada iþ yerine varana kadar kýsmý bizim döngümüzün þartý
+Yürüme eylemi ise kendini tekrar eden kod bloklarýmýz olmaktadýr.
+
+Programlama dünyasýnda öðrendiðimiz konularýn hayat karþýlýklarýný bu þekilde düþünerek hem eðlenebilir
+hemde örneklermizi çeþitlendirebiliriz.
+
+
+Döngüler belirli bir sayýda yapan veya belirli bir þarta göre yapan yapýlardýr.
+
+For - Foreach - While - Do While
+olarak isimlendirdiðimiz döngülerimizi davranýþ tiplerine göre ayýralým.
+
+Sabit döngü tipleri
+
+For
+Foreach
+
+sabit dediðimiz için burada adetten bahsedilir
+10 kere þu iþlemi yap
+veri blogunun içindeki tüm kayýtlar için bu iþlemi yap gibi
+
+Þartlý döngü tipleri
+
+While
+Do While
+
+þartlý döngüde true veya false deðeri dönen 
+þu iþlem olana kadar bu iþlemi yapmayý devam et
