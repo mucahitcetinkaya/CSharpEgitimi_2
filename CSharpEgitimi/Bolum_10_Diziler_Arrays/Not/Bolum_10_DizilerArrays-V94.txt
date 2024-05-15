@@ -1,0 +1,127 @@
+
+
+Bölüm 10 : Diziler Arrays
+VÝDEO 94 Dizi - Örnek 2 Adet
+
+
+    /*
+   
+    Uygulama - 1
+
+    int veri tipinde bir dizi oluþturalým, kullanýcýmýz dizinin kaç elemanlý olacaðý bilgisini bize versin
+    ve dizi içerisindeki alanlara deðer atamasý yapsýn.
+     
+    burda bir for döngüsünden yararlanacagýz
+    diziyi olustururken dizinin eleman sayýsýný kullanýcýdan isteyeceðiz
+    tür dönüþümü yapacaðýz
+
+    daha sonra dizi içerisindeki elemanlarýn toplamlarýný ve ortalamasýný ekrana yazdýran bir uygulama yazalým.
+
+
+    kodun anlatýmý
+
+    önce veri kümesinin uzunlugunu istedik
+    sonra girilen sayýyý int e cevirdik
+
+    yeni bir dizi olusturduk girilen sayý kadar elemanlý olacak sekilde
+
+    for ile dizinin içinde dönüyoruz
+    sýfýrdan baslamasý önemli index 0 dan baslýyor çünkü
+
+    kaç elemanlý bir diziyse onun uzunlugu kadar dönecek
+    her seferinde bizden veri isteyip int e cevirecek
+
+    bittiðinde cýkacak for dan tebrikler kýsmýný yazacak
+
+    sonra toplama kýsmýna geliyor
+
+    bildiri yazdý
+
+    toplama ve ortalama için 2 tane degisken olusturduk
+    bu kýsmý foreach ile yapalým
+    int tipindeki uygulama1Dizi nin içinde dön hepsine item de
+    bütün sýradaki item larý ekrana yazdýr
+
+    toplam zaten basta sýfýrdý sýradaki item ile toplayýp
+    toplamýn ustune atama yapýyoruz
+
+    +---------
+
+    uygulama1Toplamý
+
+    bildirim
+
+    ortalama aldýk uzunluguna böldük
+
+    bildirim
+
+    */
+
+    //Console.Write("Lütfen oluþturmak istediðiniz veri kümesinin uzunluðunu giriniz : ");
+    //int diziElamanSayisi = Convert.ToInt32(Console.ReadLine());
+
+
+    //int[] uygulama1Dizi = new int[diziElamanSayisi];
+
+    //for (int i = 0; i < uygulama1Dizi.Length; i++)
+    //{
+    //    Console.WriteLine("{0}. index e denk gelen deðeri giriniz : ", i);
+    //    uygulama1Dizi[i] = Convert.ToInt32(Console.ReadLine());
+    //}
+    //Console.WriteLine("Tebrikler dizinin içerisindeki tüm alanlarý doldurdunuz.");
+
+
+    //Console.WriteLine("Dizi içerisindeki deðerler ve toplam ortalama deðeri aþaðýdaki gibidir.");
+
+    //int uygualama1Toplam=0, uygulama1Ortalama = 0;
+
+    //foreach (int item in uygulama1Dizi)
+    //{
+    //    Console.WriteLine(item);
+    //    uygualama1Toplam = uygualama1Toplam + item;
+
+    //}
+    //Console.WriteLine("+---------------------");
+
+    //Console.WriteLine(uygualama1Toplam);
+
+    //Console.WriteLine("Dizi içerisindeki eleman sayýsý : {0}", uygulama1Dizi.Length);
+    //uygulama1Ortalama = uygualama1Toplam / uygulama1Dizi.Length;
+    //Console.WriteLine("Ortalama : {0}", uygulama1Ortalama);
+
+
+    /*
+     
+    Uygulama - 2
+     
+    20 elemanlý bir int dizi oluþturalým. Deðerlerimizi random sýnýfýnýn next fonksiyonu ile 1 - 20 arasýndaki deðerler
+    ile dolduralým daha sonra dizi içerisindeki elemanlarýmýzý ekrana yazdýralým ve ilgili dizi içerisinde kaç tane 4 deðeri
+    oldugunu bulalým
+
+    */
+
+    int[] uygulama2Dizi = new int[20];
+    Random random = new Random();
+
+
+    for (int i = 0; i < uygulama2Dizi.Length; i++)
+    {
+        uygulama2Dizi[i] = random.Next(1, 20);
+    }
+
+    int uygulama2Bul = 0;
+
+    foreach (int item in uygulama2Dizi)
+    {
+
+        Console.WriteLine(item);
+
+        if (item == 4)
+        {
+            uygulama2Bul++;
+        }
+
+    }
+
+    Console.WriteLine("Dizi içindeki 4 {0} tane vardýr. ",uygulama2Bul);
+    Console.ReadLine();
