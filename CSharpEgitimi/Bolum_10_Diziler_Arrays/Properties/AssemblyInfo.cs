@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("D_09_TemelKonularDonguler")]
+[assembly: AssemblyTitle("Bolum_10_Diziler_Arrays")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("D_09_TemelKonularDonguler")]
+[assembly: AssemblyProduct("Bolum_10_Diziler_Arrays")]
 [assembly: AssemblyCopyright("Copyright ©  2024")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("45b8260e-df56-42b7-a42c-a4747fac28f0")]
+[assembly: Guid("30b9ce2a-4085-4b59-8db6-dcaea59efcf0")]
 
 // Version information for an assembly consists of the following four values:
 //

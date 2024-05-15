@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34202.233
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D_09_TemelKonularDonguler", "D_09_TemelKonularDonguler\D_09_TemelKonularDonguler.csproj", "{45B8260E-DF56-42B7-A42C-A4747FAC28F0}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D_10_Diziler-Arrays", "D_10_Diziler-Arrays\D_10_Diziler-Arrays.csproj", "{2DBBE94F-8216-436D-ADEE-BB0A9287B5FB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D_11_Koleksiyonlar", "D_11_Koleksiyonlar\D_11_Koleksiyonlar.csproj", "{78ADAA57-673F-4534-9649-DD38810919D1}"
@@ -25,16 +23,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bolum_08_TemelKonularKosulI
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bolum_09_TemelKonularDonguler", "Bolum_09_TemelKonularDonguler\Bolum_09_TemelKonularDonguler.csproj", "{E3E59F87-3677-4D2E-AD31-666887A7686E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bolum_10_Diziler_Arrays", "Bolum_10_Diziler_Arrays\Bolum_10_Diziler_Arrays.csproj", "{30B9CE2A-4085-4B59-8DB6-DCAEA59EFCF0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{45B8260E-DF56-42B7-A42C-A4747FAC28F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{45B8260E-DF56-42B7-A42C-A4747FAC28F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{45B8260E-DF56-42B7-A42C-A4747FAC28F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{45B8260E-DF56-42B7-A42C-A4747FAC28F0}.Release|Any CPU.Build.0 = Release|Any CPU
 		{2DBBE94F-8216-436D-ADEE-BB0A9287B5FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{2DBBE94F-8216-436D-ADEE-BB0A9287B5FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2DBBE94F-8216-436D-ADEE-BB0A9287B5FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -75,6 +71,10 @@ Global
 		{E3E59F87-3677-4D2E-AD31-666887A7686E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E3E59F87-3677-4D2E-AD31-666887A7686E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E3E59F87-3677-4D2E-AD31-666887A7686E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30B9CE2A-4085-4B59-8DB6-DCAEA59EFCF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30B9CE2A-4085-4B59-8DB6-DCAEA59EFCF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30B9CE2A-4085-4B59-8DB6-DCAEA59EFCF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30B9CE2A-4085-4B59-8DB6-DCAEA59EFCF0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

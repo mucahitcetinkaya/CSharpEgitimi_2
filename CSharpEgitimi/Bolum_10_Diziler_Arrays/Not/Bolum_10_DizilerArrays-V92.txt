@@ -1,0 +1,65 @@
+
+
+Bölüm 10 : Diziler Arrays
+VÝDEO 92 Bilgilendirme
+
+
+Temel konularý bitirdik
+
+Þimdi C# programlama dilinde çok önemli bir yere sahip olacak olan
+koleksiyonlar konusunun atasý diyebileceðimiz diziler konusunu inceleyelim.
+
+Diziler uygulamalarýmýzý yazarken sýklýkla baþvurdugumuz yardým aldýgýmýz veri yapýlarýdýr.
+Bu bölüm içerisinde standart dizi kavramýndan bahsedeceðiz ve bölüm sonunda dizilerin hangi amaçlara hizmet ettiðini
+neler yapýlabildiðini öðrenmiþ olacak, geçmiþ konularýnda örnek ve ödevler ile üzerinden geçmiþ olacaðýz.
+
+Mesela foreach kýsmýnda örnek uygulama yapmadýk bu bölüme artardýk onlarýnda uygulamarý bu bölümde olacak.
+
+
+
+Programcýlýk ile alakalý olan ve bir þekilde diziler konusunu öðrenenler tren öðreneðini bilirler.
+
+Diziler veri kümeleridir ve genel olarak trene benzetilir.
+
+Gelin beraber diziler incelemeye baþlayalým.
+
+Genel dizi kavramý ve ilerleyen bölümlerde göreceðimiz generic dizi kavramý olarak iki farklý taným söz konusu olacak arkadaþlar.
+
+Öncelikle genel dizi kavramlarýný inceleyecek sonrasýnda ise ( generic bölümden sonra ) generic dizi kavramlarýný inceleyeceðiz.
+
+
+
+Standart dizi nedir ?
+
+Bellekte ard arda ayný veri tipleri türünden deðerler barýndýran yapýlara dizi ( array ) denir.
+
+5 adet öðrencinin isim bilgisini tutmak istediðimiz zaman veri tipi string olan bir dizi tanýmýndan faydalanmamýz gereklidir.
+
+Dizi tanýmlarý [] operatörleri ile tanýmlanýr.
+
+
+
+Bir dizi tanýmý yapmak
+
+string[] ogrencilerinIsimListesi = new string[5];
+
+þeklinde taným yapmamýz gereklidir. Kodlarýmýzý yazmaya baþlamadan önce yukarýda paylaþmýþ oldugumuz kod blogunu beraber inceleyelim.
+
+String veri tipinde dizi olusturabilmek için [] operatörünü olusturmak istediðimiz veri tipinin yanýnda kullandýk.
+
+string[] tanýmý ile bir string veri tipinde dizi olusturmak istediðimizi belirttik.
+
+String[] ogrencilerinIsimListesi tanýmýnda ise olusturmus oldugumuz string[] dizimize uygulama içerisinde çaðýrabilmek için bir isim verdik.
+Dizimizin ismi ogrencilerinIsimListesi dir.
+
+String[] ogrencilerinIsimListesi = new string[5];
+tanýmýndaki new anahtar sözcüðü ile aslýnda dizimizi uygulama içerisinde aktif ettik ve dizimizin kapasitesini 5 olarak belirledik.
+
+
+Artýk elimizde kullanabileceðimiz 5 elemanlý bir string dizisi bulunmaktadýr.
+
+Bu dizi içerisinde 5 adet string deðer saklayabilir ve bundan uygulamamýzýn istediðimiz noktasýnda kullanabiliriz.
+
+Þimdi yeni bir uygulama açalým ve dizimizin tanýmýný yapalým.
+Daha sonra dizimizin içerisine yeni elemanlarýn nasýl eklendiðini listelenebildiðini düzenleme ve silme
+iþlemlerinin nasýl yapýldýgýný inceleyelim.

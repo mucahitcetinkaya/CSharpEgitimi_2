@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{45B8260E-DF56-42B7-A42C-A4747FAC28F0}</ProjectGuid>
+    <ProjectGuid>{30B9CE2A-4085-4B59-8DB6-DCAEA59EFCF0}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>D_09_TemelKonularDonguler</RootNamespace>
-    <AssemblyName>D_09_TemelKonularDonguler</AssemblyName>
+    <RootNamespace>Bolum_10_Diziler_Arrays</RootNamespace>
+    <AssemblyName>Bolum_10_Diziler_Arrays</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -50,19 +50,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="MyNotes\Ders09video87-88-89.txt" />
-    <Content Include="MyNotes\Ders09video86.txt" />
-    <Content Include="MyNotes\Ders09video85.txt" />
-    <Content Include="MyNotes\Ders09video84.txt" />
-    <Content Include="MyNotes\Ders09video83.txt" />
-    <Content Include="MyNotes\Ders09video82.txt" />
-    <Content Include="MyNotes\Ders09video81.txt" />
-    <Content Include="MyNotes\Ders09video80.txt" />
-    <Content Include="MyNotes\Ders09video79.txt" />
-    <Content Include="MyNotes\Ders09video78.txt" />
-    <Content Include="MyNotes\Ders09video77.txt" />
-    <Content Include="MyNotes\Ders09video76.txt" />
-    <Content Include="MyNotes\Ders09video75.txt" />
+    <Content Include="Not\Bolum_10_DizilerArrays-V92.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
