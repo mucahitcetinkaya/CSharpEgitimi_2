@@ -1,0 +1,170 @@
+
+
+Bölüm 11 : Koleksiyonlar
+VÝDEO 98 Array List Ödev
+
+
+ #region VÝDEO 98 ArrayList Ödev
+
+ static void Main(string[] args)
+ {
+
+     /*
+     
+      Bölüm 11 Koleksiyonlar VÝDEO 98 ArrayList Ödev
+     
+     */
+
+     /*
+     
+     Ödev açýklamasý
+     Konsolda bir menü tasarýmý yapýlacak
+     Menü
+     1 - Deðer Ekle
+     2 - Deðer Listele
+     3 - Deðer Ara
+     4 - Deðer Düzenle
+     5 - Deðer Sil
+     6 - Uygulama Çýkýþ
+     Seçiniz :
+
+     Yeni bir arraylist olusturulacak
+     kullanýcýdan gelen degere göre switch case kontrol edilecek
+     uygulama durmadan dönecek ekle sil ara vs gibi
+     sadece 6 ya basýlýrsa uygulamadan cýkacak
+     1 dedi mesela deger eklenecek tekrar dönecek
+     2 dedi listeleme yapacak gibi
+
+     ip ucu olarak burda sonsuz döngü olmayacak do while kullanacagýz once seçimi yapýp sonra secimin sonucuna göre iþlem yapýlacak
+
+     programýn beklemesýný saglayacak 2 saniye
+                 System.Threading.Thread.Sleep(2000);
+
+     
+     */
+
+
+     ArrayList degerListesi = new ArrayList();
+     degerListesi.Add(1);
+     degerListesi.Add(2);
+     degerListesi.Add(3);
+     degerListesi.Add(4);
+     degerListesi.Add(5);
+     degerListesi.Add("Muhammet");
+     degerListesi.Add("Mücahit");
+     degerListesi.Add("Çetinkaya");
+     degerListesi.Add("Arden");
+     degerListesi.Add("Zayn");
+     degerListesi.Add("Arthur");
+
+
+     degerListesi[3] = "10";
+
+     string kullaniciGiris = string.Empty;
+
+     do
+     {
+         Console.Clear();
+         Console.WriteLine("Menü");
+         Console.WriteLine("1 - Deðer Ekle");
+         Console.WriteLine("2 - Deðer Listele");
+         Console.WriteLine("3 - Deðer Ara");
+         Console.WriteLine("4 - Deðer Düzenle");
+         Console.WriteLine("5 - Deðer Sil");
+         Console.WriteLine("6 - Uygulama Çýkýþ");
+         Console.Write("Seçiniz : ");
+
+         kullaniciGiris = Console.ReadLine();
+
+
+         switch (kullaniciGiris)
+         {
+             case "1":
+                 Console.Write("Eklemek istediðiniz deðeri giriniz : ");
+                 string kullaniciEklenenDeger = Console.ReadLine();
+                 degerListesi.Add(kullaniciEklenenDeger);
+                 Console.Write("Deðeriniz baþarýlý bir þekilde eklendi : ");
+                 System.Threading.Thread.Sleep(2000);
+                 break;
+             case "2":
+                 for (int i = 0; i < degerListesi.Count ; i++)
+                 {
+                     Console.WriteLine("{0}. Deðer = {1}", i, degerListesi[i]);
+                 }
+                 Console.WriteLine("Devam etmek için bir tuþa basýnýz.");
+                 Console.ReadLine();
+                 break;
+             case "3":
+                 Console.Write("Aramak istediðiniz deðeri giriniz : ");
+                 string kullaniciArananDeger = Console.ReadLine();
+                 bool arananSonuc = degerListesi.Contains(kullaniciArananDeger);
+                 if (arananSonuc)
+                 {
+                     int bulunanIndex = degerListesi.IndexOf(kullaniciArananDeger);
+                     string bulunanDeger = degerListesi[bulunanIndex].ToString();
+                     Console.Write($"Aranan veri {kullaniciArananDeger} koleksiyon içinde bulunuyor.");
+                     Console.WriteLine($"Deðeriniz bulundu index sýrasý {bulunanIndex} bulunan deðer {bulunanDeger}");
+                 }
+                 else
+                 {
+                     Console.WriteLine("Aradýðýnýz kriterlerde bir deðer bulunamadý.");
+                     /*
+                      Eðer aradýðý kriterlerde deðer bulunamadýysa kullanýcýya bu deðeri listeye ekleyelim mi olarak sorun
+                      eðer kullanýcý evet derse ekleyin hayýr derse devam edin.                            
+                      */
+                 }
+                 System.Threading.Thread.Sleep(2000);
+                 break;
+             case "4":
+                 Console.WriteLine("Güncellemek istediðiniz deðeri giriniz : ");
+                 string kullaniciDuzenlenecekDeger = Console.ReadLine();
+
+                 Console.WriteLine("{0} Deðerini hangi deðer ile güncellemek istiyorsunuz : ", kullaniciDuzenlenecekDeger);
+                 string kullaniciYeniDeger = Console.ReadLine();
+                 if (degerListesi.Contains(kullaniciDuzenlenecekDeger))
+                 {
+                     int kullaniciHedefIndex = degerListesi.IndexOf(kullaniciDuzenlenecekDeger);
+                     degerListesi[kullaniciHedefIndex] = kullaniciYeniDeger;
+                     Console.WriteLine("Deðeriniz güncellendi.");
+                 }
+                 else
+                 {
+                     Console.WriteLine("Aradýðýnýz deðer liste içerisinde bulunamadý.");
+                 }
+                 System.Threading.Thread.Sleep(2000);
+
+                 break;
+             case "5":
+                 Console.WriteLine("Tüm deðerleri mi silmek istiyorsunuz : (E/N)");
+                 string kullaniciSilCevap = Console.ReadLine();
+
+                 if (kullaniciSilCevap.ToLower() == "E")
+                 {
+                     degerListesi.Clear();
+                     Console.WriteLine("Tüm deðerler silindi.");
+                 }
+                 else
+                 {
+                     Console.WriteLine("Liste içerisinde silmek istediðiniz deðeri giriniz : ");
+                     string kullaniciSilDeger = Console.ReadLine();
+                     if (degerListesi.Contains(kullaniciSilDeger))
+                     {
+                         degerListesi.Remove(kullaniciSilDeger);
+                         Console.WriteLine("Deðeriniz silindi.");
+                     }
+                     else
+                     {
+                         Console.WriteLine("Silmek istediðiniz deðer liste içerisinde mevcut deðil.");
+                     }
+                 }
+                 break;
+             case "6":
+                 break;
+             default:
+                 break;
+         }
+     } while (kullaniciGiris != "6");
+
+ }
+
+ #endregion
