@@ -1,0 +1,146 @@
+
+
+Bölüm 12 : Metot
+VÝDEO 107 C# Nesne Yönelimli Programlama ( Kýsa Giriþ )
+
+
+        #region VÝDEO 107 
+
+        static void Main(string[] args)
+        {
+
+            /*
+             
+            Bölüm 12 Metot VÝDEO 107 C# Nesne yönelimli programlama ( Kýsa Giriþ )
+             
+            */
+
+            /*
+             
+            Metotlar kýsmýna calýsmak için yeni bir class olusturup
+            bu class ý ornekleyip metotlarýna eriþip main metotunda metotlarýn tanýmlarýný incelememiz lazým
+
+            þimdilik class kavramýna girmiyorum ihtiyacýmýz oldugu kadar anlatacagým
+
+            yeni bir class eklemek için
+            Solution Explorer kýsmýnda ki uygulamamýzýn üstüne gelelim calýsýtýgýmýz projeye
+            D_12_Metot sag týk Add e týklayýp Class kýsmýný secelim
+            acýlan pencerede class secip isim verelim 
+            Ogrenci adýný verdik
+            uygulamamýzýn içerisinde bir Ogrenci.cs adýnda bir dosya olustu 
+            Ogrenci class ýmýz olusmus oldu
+
+            Ogrenci.cs de devam edelim
+
+            Ogrenci.cs den geldik
+             
+            Ogrenci class ýný cagýralým burda
+
+            class kullandýgýmýz için new lemek orneklemek instance olusturmak gerekiyor
+            burda sadece class a ulasmak için olarak dusunebilirsin 
+            aslýnda arka tarafta stack heap yapýlarý biþeyler degiþiyor ama class bölümünde göreceðiz
+
+
+            Ogrenci107 O1 = new Ogrenci107();
+
+            þimdi O1. dedigimizde içindeki metoda ulasmýs olduk
+
+            O1.OgrenciSelamla();
+
+            metotu yazarken parantezlere geldiðinde tooltype cýkýyor 
+            void Ogrenci.OgrenciSelamla() yazýyor
+            yani parametre almamýs geriye biþey döndürmüyor bilgisini veriyor
+
+            Ogrenci107 O1 = new Ogrenci107();
+            e gelip breakpoint koyup debug edelim
+
+            f11 ile devam ediyoruz
+            nesneyi olusturdu o1. kýsmýnda metotun oldugu yere gitti Ogrenci class ýna 
+            OgrenciSelamla metodunun scoplarýna düþtü
+            calýstýrdý bitirdi geriye buraya döndü 
+
+            */
+
+            Ogrenci107 O1 = new Ogrenci107();
+            O1.OgrenciSelamla();
+
+
+        }
+
+        #endregion
+
+
+
+namespace D_12_Metot
+{
+    class Ogrenci
+    {
+
+        public void OgrenciSelamla()
+        {
+            Console.WriteLine("Ogrenci classýnýn içindeki Ogrenci Selamla metotu calýstý.");
+        }
+
+    }
+}
+
+
+
+
+/*
+
+Program.cs den geldik video 107
+
+ayný namespace içinde bir class olusturmus olduk
+kutuphaneleri de var default olarak eklendiler
+gerekli tanýmlarý burda yapýp 
+Program.cs de ornekleyip kullanacagýz
+ 
+namespace D_12_Metot
+{
+    internal class Ogrenci
+    {
+    }
+}
+
+internal kýsmý otomatik olarak ilk olusturuldugunda cýktý ona ihtiyacýmýz yok ileri konu bunu biz public yapalým þimdilik
+public yapmamýzýn sebebi bütün uygulama içerisinde kullanabilmek için
+public olmazsa main metotunda göremeyiz Ogrenci class ýný
+bunlara eriþim belirleyicisi deniyor
+eriþim belirleyiciler ile class larýn veya metotlarýn eriþim noktalarýný ayarlayabiliyoruz
+
+public eklediðimiz de Ogrenci için
+bu class ý herhangi bir baska class dan cagýrabilirsin kullanabilirsin
+yada bu class kutuphane olarak eklenirse baska insanlarýnda buna ulasmasýna izin verebilirsin
+
+bizim kullanma sebebimiz Ogrenci nesnesine classýna sýnýfýna hepsi ayný seye geliyor objesine vs vs
+main metotundan Ogrenci class ýna eriþebilmek ve kullanabilmek
+
+þimdi içine bir metot tanýmý yapalým
+bu metot baska bir class a ait baska bir metot içinden mi cagýrýlacak evet
+Program class ýna ait main metot a cagýralacak
+biz program class ýnýn içinden Ogrenci class ýnýn içideki bir metoto ulasmak istiyorsam
+o zaman metot da eriþim belirleyici tasýmalý public olmalý baska yerde kullanýlabilsin
+
+geriye bir þey döndürmeyecek o zaman void olacak
+
+metot adýný yazacagýz OgrenciSelamla()
+
+sonuc olarak
+
+þeklinde bir metot olustu
+public void OgrenciSelamla() 
+{
+    içine de ConsoleWriteLine ile konsola bir bilgi verelim
+} 
+
+ public void OgrenciSelamla()
+        {
+            Console.WriteLine("Ogrenci classýnýn içindeki Ogrenci Selamla metotu calýstý.");
+        }
+
+calýsýnca anlarýz
+
+Program.cs e gidelim 
+ 
+*/
