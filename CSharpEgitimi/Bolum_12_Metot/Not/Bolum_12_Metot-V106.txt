@@ -1,0 +1,190 @@
+
+
+Bölüm 12 : Metot
+VÝDEO 106 Main Metotu Ýnceleme
+
+
+        #region VÝDEO 106
+
+        static void Main(string[] args)
+        {
+            /*
+             
+            Bölüm 12 Metot VÝDEO 106 Main Metotu Ýnceleme 
+             
+            */
+
+            /*
+             
+            biz bir proje actýgýmýz zaman web veya konsol api form uygulamasý da olabilir C# da alakalý herhangi bir platformda
+            uygulama acýyorsak eger 
+
+            using lerin oldugunu görmüþ oluruz
+            using System;
+            using System.Collections.Generic;
+            using System.Linq;
+            using System.Text;
+            using System.Threading.Tasks;
+
+            peki bu using ler nedir
+            .net framework içinde kullandýgýmýz her komut bir kutuphaneden gelmektedir.
+
+            mesela Console.WriteLine(); komutu aslýnda using System; kutuphanesinden gelmektedir.
+            biz Console.WriteLine yazdýgýmýzda aslýnda 
+            Console class ýný cagýrýyoruz
+            Console clasýnýn içerisindeki WriteLine metotunu cagýrýyoruz
+
+            using System; demek bir kutuphane dosyasýný uygulamamýzýn içerine eklemek demektir.
+
+            bunu yazmazsak eger yolunu uzun olarak belirtmek zorunda kalýrýz mesela using System; i yoruma alalým
+
+            //using System; yapýp Console. yazýnca herhangi bir kod tamamlayýcýsý karsýmýza gelmiyor
+            Console.WriteLine();
+
+            uzun yazým sekli
+
+            System.Console.WriteLine();
+
+            metotlar sýnýflarýn ýcýnde bulunur
+            sýnýfýnda ustu kutuphanelerdir.
+
+            bizim uygulamarýmýzdaki bu using bloklarýnýn aslýnda temel olarak içeriye eklenmiþ kutuphanelerdir.
+
+            peki bunlar nedir neden standart olarak eklenmiþler
+
+            5 tane kutuphane özel olarak neden eklenmiþler
+            .net framework unuz versiyonunuza baglý olarak
+            baglý kutuphaneler degiþir bazýlarý standart olarak eklenir
+            konsol uygulamalarýnýn da standart kutuphaneleri system kutuphaneleridir.
+            istediðiniz .net framework u acýn system kutuphanesinin default olarak eklendiðini görürsünüz
+
+            su anda biz .net framework 4.8 kullanýyoruz bu versiyonlarý 2 3 e cekersek eger
+            using System.Collections.Generic;
+            using System.Linq;
+            gelmeyecegýný görürürüz bu kutuphanaler .net framework un versiyonunda 
+            yenilik olarak cýkartmýs oldugu ve bunuda kullan olarak bize de ogretmek istediði bilgi
+
+            using System.Threading.Tasks;
+            kutuphanesi ise actýgýmýz projenin ismine karsýlýk geliyor yani namespace kýsmýna 
+            namespace D_12_Metot
+            bu namaspace i baska bir uygulamada kullanabiliriz
+
+            yani namespace tanýmý bir kutuphaneye denk geliyor
+
+            kutuphanelerin içinde de class larýmýzýn oldugundan bahsettik
+
+            class kavramýný ileride göreceðiz ama burda biraz anlatmam lazým metotlarý anlatabilmek için
+
+            namespace i isim uzayý gibi dusunebiliriz
+
+            bir alan dusunun bos ve bu alan içinde de namespace lerýn oldugunu dusunun
+
+            bu alan içinde bizim kucuk kucuk parcalarýmýz olacak
+            mesela bir ogrenci tanýmým var ogrenci class ý diyeceðiz
+            database ile ugrasan bir katmanýmýz olacak biz buna DateBaseLogicLayer diyeceðiz
+            DateBaseLogicLayer data gönderen bir katmanýmýz olacak BusinessLogicLayer diyeceðiz
+            ve tabiki bunlarýn hepsi class
+
+            yani namespace içerisinde class tanýmlarýmýz bulunur
+            class tanýmlarýmýz aslýnda bizim .net framework içerisinde c# .net framework ile kodlama yaparken olusturmus oldugumuz
+            içerisinde metotlarý ve bir çok özelliði barýndýran kucuk paketlerimiz 
+            bu kucuk paketlerýn içerisinde neler var
+            iþte biz burada metotlarý inceliyor olacagýz
+
+            bir classý dusursenýz de bir class ýn içinde birden fazla metot olabilir
+
+            her metot aslýnda kendýsý cagrýldýgýnda iþlem yapar
+
+            kendý projemize bakarsak eger 
+            Program adýnda bir class ýmýz var 
+            ve onun içinde de metot tanýmý Main metodu yani oldugunu görürürüz
+
+
+            namespace D_12_Metot
+            {
+                internal class Program
+                {
+                    static void Main(string[] args)
+                    {
+
+                    }
+                }
+            }
+
+            static kýsmýný geçiyorum orasý ayrý bir bölüm olarak anlatýlacak
+            benim metot tanýmým 
+            void Main(string[] args) burasý
+            Main metodu nedir ne iþ yapar
+
+            Konsol ve windows form uygulamalarýmýz arka tarafta baþlangýc için
+            uygulama ilk baþlayacagý metot olarak main metodunu tanýr
+
+            ve uygulama da ilk satýr bolumunden baslar 
+            son satýra kadar devam eder 2 scop süslü parantez arasýnda 
+            2 scop uygulamanýn tüm kodlarýný barýndýrýr son scop a geldiðinde uygulamadan cýkmýs olur
+
+            biz bu zamana kadar hep main metodunda iþlemler yaptýk
+            ekrana yazdýk deger aldýk vs
+
+            þimdi metot yazýmýna baslayalým
+
+            metot yazmak için main metot scopunun dýsýna cýkalým
+
+            yazacagýmýz metot cagýrýlýnca merhaba metot diye konsola yazý yazsýn
+
+
+
+            */
+
+            //Console.WriteLine("Merhaba");
+
+            //System.Console.WriteLine("Merhaba");
+
+            Selamla();
+
+
+            Console.ReadLine();
+
+        }
+
+
+        /*
+         
+        metot notlarý
+        static yazdýk diger tarafta kullanabilmek için sonra anlatýlacak yazmazsak kullanamayýz þimdilik bu kadar bilgi yeter
+        bu metot olusturmak oluyor
+        void metot calýsacak ama geriye herhangi bir parametre dönmeyecek oluyor
+        Selamla metot ismi bu isimle cagýrýyorsun
+        cagýrýrken Selamla() olarak cagýrmak zorundasýn metotlarý sonralarýnda parantez ac kapa yapýlýr.
+        Selamla() metotunu cagýrdýgýnda scoplarýn arasýnda yazdýklarýn calýsýr ve biter
+
+        main metotunda cagýrdýk Selamla metodunu orda bir breakpoint koyalým
+        ustune gelince buraya gelip okuyacak bunu görmek için
+        breakpoint ile debug yaparken
+        f10 ile de gidebilirsin ama iç iþlemlerini görmezsin
+        f11 ile gidersen eðer ilgili metotun içine gider hareketlerini görebilirsin
+        f11 ile takip edince Selamla metotuna gidiyor metot parametre almýyor deðer göndermiyor geriye
+        içine gidiyor okuyor sonra tekrar main metotuna dönüyor bitiriyor
+
+        biz eskiden ne yapýyoduk 
+        main metotunun içinde consolewriteline ile yazýp yukarýdan asagýya dogru devam ettiriyorduk
+        artýk kendýsýný tekrar eden iþlemlerimizi 
+        yada tekrar etmeyen operasyonel iþlemlerimizi 
+        kendi class tanýmlarýnda kucuk kucuk metotlara bölup 
+        istediðimiz zaman ulasabilir durumda olacagýz
+        iþte bundan dolayý metotlar oop de cok buyuk bir yere sahip
+
+        dersi terkar calýsýrken f10 f11 ile breakpoint ile giderek calýs
+         
+        birde metotlarý yazarken mesela Selamla( yazarken yanýnda ufak bilgiler cýkar 
+        bu bilgilere biz tooltip deriz
+        bunlarý da nasýl okuyup çözeceðimizi de size detaylý olarak anlatacagýz
+        bu bölüm önemli anlayarak devam edin
+
+        */
+        static void Selamla()
+        {
+            Console.WriteLine("Merhaba Metot");
+        }
+
+        #endregion
