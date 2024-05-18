@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("D_11_Koleksiyonlar")]
+[assembly: AssemblyTitle("Bolum_12_Metot")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("D_11_Koleksiyonlar")]
+[assembly: AssemblyProduct("Bolum_12_Metot")]
 [assembly: AssemblyCopyright("Copyright ©  2024")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("78adaa57-673f-4534-9649-dd38810919d1")]
+[assembly: Guid("aaf9e917-f13b-4e2a-a8cf-0afff04960fd")]
 
 // Version information for an assembly consists of the following four values:
 //

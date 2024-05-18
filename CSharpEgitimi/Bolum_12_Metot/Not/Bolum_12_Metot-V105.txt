@@ -1,0 +1,74 @@
+
+
+Bölüm 12 : Metot
+VÝDEO 105 Bilgilendirme
+
+
+Bu bölümde metotlarý iþleyeceðiz
+
+C# Programlama dilinde herþeyi unutun ama metot mantýgýný unutmayýn. Yoksa çok kod yazarsýnýz.
+
+Nesne yönelimli bir programala dili olan C# da her yaptýgýmýz aslýnda bir metotdur
+
+Metotlar
+
+C# programlama dilinde en önemli olan bir konu ile birlikteyiz
+Bu bölüm içerisinde anlatýlan konularý yavaþ ve dikkatli bir þekilde inlemenizi ve konularý anlayarak ilerlemenizi tavsiye ederim
+
+Dersler arasýnda olan ödevleri ve testleri atlamadan ilerlemeye çalýþýn.
+
+Bu bölüme kadar yazmýs oldugumuz tüm iþlemlerimizi aslýnda bilinçsiz olarak bir metot içerisinde yaptýk bu metotun adý main metotudur.
+
+static void Main(string[] args)
+{
+
+}
+
+static void string args köþeli parantezler süslü parantezler hepsini inceleyeceðiz
+
+main metodu konsol uygulamasýnýn giriþ metotudur
+
+
+Uygulamamýzda iþ yapan en temel parça tanýmýna metot adýný veririz
+
+Merkezi olarak kod yazmamýzý ve daha az kod ile daha yönetilebilir projeler olusturmamýzý saglarlar
+
+Tek baslarýna calýsabilen yapýlar deðillerdir çalýþmalarý için uygulama içerisinde bir noktada çaðrýlmasý kullanýlmasý gereklidir.
+
+
+Metotlar kullanýmlarýna göre aþaðýdaki gibi çeþitlenebilirler.
+
+Herhangi bir deðer almayan ve geriye herangi bir deðer döndürmeyen yapýlar
+
+Çalýþabilmesi için kendisini çaðýran yerden bazý deðerler alan ve deðerleri kullanarak bazý iþlemler yapan yapýlar.
+
+Çalýþmasý için deðer aldýðý gibi deðerin sonucunda kendisini çaðýran noktaya dönen yapýlar.
+
+
+Tek baslarýna calýsabilen yapýlar deðillerdir metotlar
+Metotlarýmýzý hazýrlarýz ihtiyacýmýz oldugu zaman uygulama içerisinde bir noktada
+yazmýs oldugumuz metotumuza bir class ýn uzerýnden eriþip ilgili metoda
+istersek cagýrýp kullanabiliriz metodun burda yapýsý cok onemli
+istersek içerisine bir deðer verir ilgili deðer ile bir iþlem yapýp bitirmesini saglayabiliriz
+istersen deger veririz iþlem yaptýrýrýz iþlemýn sonucunuda çaðýrmýþ oldugumuz program noktasýnda geri elde edebiliriz.
+
+
+
+C# programlama dili 100% nesne yönelimli yapýya uygun oldugu için içerisinde kullanýlan tüm iþlemler aslýnda bir nesnenin ve o nesneye ait olan bir metotun
+ürünü olarak karsýmýza cýkmaktadýr.
+
+Console.WriteLine("Merhaba");
+
+Kullanýmda Console bir sýnýfý temsil etmektedir. WriteLine bir metot bildirimidir parametre olarak ise bizden bir deðer ister ve
+metot içerisinde vermiþ oldugumuz deðeri ekrana yazar.
+
+
+Mesela ReadLine kullanýcýdan bir deger alýyor almýs oldugu degeri string olarak gönderiyor
+ReadLine metotu da parametresel olarak yazýlýmsal bir parametre almaz kullanýcýdan bir deðer bekler
+kullanýcýdan gelen degeri metotun cýkýs parametresi olarak
+
+INPUT X => FUNCTÝON f: => OUTPUT f(x)
+
+output u temsil eder bize bildirir
+
+Þimdi C# ile metot yapýlarýný yazarak inceleyelim.

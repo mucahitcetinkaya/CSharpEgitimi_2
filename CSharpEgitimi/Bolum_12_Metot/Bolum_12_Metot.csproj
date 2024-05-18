@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{78ADAA57-673F-4534-9649-DD38810919D1}</ProjectGuid>
+    <ProjectGuid>{AAF9E917-F13B-4E2A-A8CF-0AFFF04960FD}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>D_11_Koleksiyonlar</RootNamespace>
-    <AssemblyName>D_11_Koleksiyonlar</AssemblyName>
+    <RootNamespace>Bolum_12_Metot</RootNamespace>
+    <AssemblyName>Bolum_12_Metot</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -50,14 +50,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="MyNotes\Ders11video102.txt" />
-    <Content Include="MyNotes\Ders11video101.txt" />
-    <Content Include="MyNotes\Ders11video100.txt" />
-    <Content Include="MyNotes\Ders11video99.txt" />
-    <Content Include="MyNotes\Ders11video98.txt" />
-    <Content Include="MyNotes\Ders11video97.txt" />
-    <Content Include="MyNotes\Ders11video96.txt" />
-    <Content Include="MyNotes\Ders11video95.txt" />
+    <Content Include="Not\Bolum_12_Metot-V105.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
