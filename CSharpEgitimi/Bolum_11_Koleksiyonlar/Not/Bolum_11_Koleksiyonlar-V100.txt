@@ -1,0 +1,107 @@
+
+
+Bölüm 11 : Koleksiyonlar
+VÝDEO 100 HashTable Ödev
+
+
+//static void Main(string[] args)
+//{
+
+//    /*
+     
+//    Bölüm 11 Koleksiyonlar VÝDEO 100 Hashtable Ödev
+     
+//    Hashtable içerisine ENG - TR olarak data ekleyen uygulamayý yapacaðýz
+//    ENG tarafýný key TR tarafýný value olarak saklayacagýz
+
+//    Yeni Kayýt eklemek istiyor musunuz (E/H) diye soracak
+//    büyük küçük harf olmayacak hepsi büyük
+//    E cevabý gelirse yeni kayýt eklemeye devam edecek
+//    H cevabý gelirse tüm liseyi yazdýracak
+
+//    var olan bir key deðeri ekliyor ise kullanýcýya bu deðer daha önceden .... þeklinde sistemimizde bulunmaktadýr
+//    yazmasý lazým
+
+//    */
+
+//    Hashtable sozlukVeriTabani = new Hashtable();
+
+//    do
+//    {
+//        Console.Clear();
+//        Console.WriteLine("Eklemek istediðiniz sözlük deðerini yazýnýz : ");
+//        Console.WriteLine("EN karþýlýðý : ");
+//        string eng = Console.ReadLine();
+
+//        bool kontrol = sozlukVeriTabani.ContainsKey(eng);
+//        if (kontrol)
+//        {
+//            Console.WriteLine($"Eklemek istediðiniz deðer {eng} sözlük içerisinde bulunmaktadýr. {sozlukVeriTabani[eng].ToString()} deðerin türkçe karþýlýðýdýr.");
+//        }
+//        else
+//        {
+//            Console.WriteLine($"{eng} ingilizce deðerinin türkçe karþýlýðýný yazýnýz.");
+//            string tr = Console.ReadLine();
+//            sozlukVeriTabani.Add(eng, tr);
+//            Console.WriteLine("Deðer ekleme iþlemi baþarýlý.");
+//        }
+
+//        Console.WriteLine("Yeni deðer eklemek istiyor musunuz ? (E/H) ");
+
+
+
+//    } while (Console.ReadLine().ToUpper() != "H");
+
+//    /*
+   
+//    2 yöntem ile bunun içinde dönebiliriz
+//    1. yöntem key veririz keylerine döneriz keylerini bize koleksiyon olarak veriyor
+     
+   
+
+//    foreach (var item in sozlukVeriTabani.Keys)
+//    {
+//        Console.WriteLine("ENG : {0} = TR : {1}", item , sozlukVeriTabani[item]);
+//    }
+   
+//     */
+
+//    /*
+     
+//    2. yöntem
+
+//    direk sozlukVeriTabani içinde doneriz ama
+//    var yerine direk tipini yazmak veya foreach içinde tip dönüþümü yapmamýz lazým
+//    DictionaryEntry kullandýk burda sebebi datanýn karsýlýgýný almak
+   
+//    DictionaryEntry nerden geliyor onu anlatýyoruz burda
+//    bir verinin tipinin ne döndüðünü bilmiyorsanýz eðer
+   
+//    foreach (var item in sozlukVeriTabani)
+//    {
+//        Console.WriteLine(item.GetType().Name);
+//    }
+
+//    olarak tipini bulabilirsiniz
+
+//    bazý veriler kapalý geliyor bizde bunlarýn tipini bulmak zorunda kalýyoruz
+//    var yazýyorken item gettype i kullanýyoruz
+
+
+   
+
+//    foreach (var item in sozlukVeriTabani)
+//    {
+//        Console.WriteLine(item.GetType().Name);
+//    }
+   
+//    */
+
+//    foreach (DictionaryEntry item in sozlukVeriTabani)
+//    {
+//        Console.WriteLine("ENG : {0} = TR : {1}", item.Key, item.Value);
+//    }
+
+//}
+
+#endregion

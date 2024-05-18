@@ -51,6 +51,7 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Content Include="Not\Bolum_11_Koleksiyonlar-V100.txt" />
     <Content Include="Not\Bolum_11_Koleksiyonlar-V99.txt" />
     <Content Include="Not\Bolum_11_Koleksiyonlar-V98.txt" />
     <Content Include="Not\Bolum_11_Koleksiyonlar-V97.txt" />
