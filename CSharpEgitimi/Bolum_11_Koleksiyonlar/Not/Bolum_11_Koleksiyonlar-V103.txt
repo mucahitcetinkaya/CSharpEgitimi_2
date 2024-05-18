@@ -1,0 +1,49 @@
+
+
+Bölüm 11 : Koleksiyonlar
+VÝDEO 103 Queue Nedir 
+
+
+  static void Main(string[] args)
+  {
+
+      /*
+       
+      Bölüm 11 Koleksiyonlar VÝDEO 103 Queue Nedir
+     
+      Queue de ayný stack gibi farklarý
+      ilk giren ilk cýkýyor
+      first in first out
+       
+      class oldugu için new lemen lazým
+     
+      using System.Collections; kutuphanesi kullanýyor
+
+      eklemek için farklý metotlar var
+      q1.Enqueue kullanýyoruz
+       
+      object O1 = q1.Peek();
+      object O2 = q1.Dequeue();
+
+      que den cýkartmak için Peek var bu obje dönuyor
+      Peek ilk giren degeri veriyor
+      ön izleme yapýyor listeden cýkartmadý
+
+      Dequeue de obje donuyor ilk degeri veriyor listeden cýkartýyor
+
+      */
+
+      Queue q1 = new Queue();
+      q1.Enqueue("Bir");
+      q1.Enqueue("Ýki");
+      q1.Enqueue("Üç");
+      q1.Enqueue("Dört");
+
+
+      object O1 = q1.Peek();
+      object O2 = q1.Dequeue();
+
+
+  }
+
+  #endregion
