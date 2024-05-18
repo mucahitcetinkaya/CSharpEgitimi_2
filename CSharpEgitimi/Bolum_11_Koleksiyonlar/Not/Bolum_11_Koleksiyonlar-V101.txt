@@ -1,7 +1,7 @@
 
 
 Bölüm 11 : Koleksiyonlar
-VÝDEO 101 SortedList Nedir
+VÝDEO 102 Stack Nedir
 
 
 static void Main(string[] args)
@@ -9,42 +9,82 @@ static void Main(string[] args)
 
     /*
      
-    Bölüm 11 Koleksiyonlar VÝDEO 101 SortedList Nedir
+    Bölüm 11 Koleksiyonlar VÝDEO 102 Stack Nedir
 
-    Hashtable in farklý bir koleksiyon karsýlýgý olan SortedList leri inceleyelim
+    burda inceleceðimiz koleksiyon Stack
+    bu koleksiyon ArrayList Hashtable SortedList e benzemiyor farklý bir koleksiyon
+    Bu Koleksiyonun tam tersi bir koleksiyon daha var oda Queue onuda göreceðiz
+    bunlarýn generic versiyonlarý da var obje tasýyan versiyonlarý da bulunmakta
 
-    SortedList içerisine key ve value degerleri alan bir koleksiyon
-    Hashtable den farký içerisine alan deðerleri key deðerlerine göre sýralar
-    küçükten büyüðe a dan z e
-   
-    key deðerine göre sýralama yaptýgý için degerlerin benzersiz olmasý ve ayný veri tipinde olmasý gerekiyor
-
-    ayný veri tipinde olmasýnýn nedeni int ve string i sýralama yapamaz bundan dolayý
-
-    class oldugu için new lemen gerekiyor
-
+    Stack de koleksiyon oldugundan dolayý new lemen lazým
     kutuphane olarak
+    using System.Collections; ý kullanýyor
 
-    using System.Collections;
+    Temel prensibi
 
-    kullanýyor
+    Ýçerisine almýs oldugu datalarý bir komut kullanarak sýralý bir þekilde kendi listesinden cýkartmamýza
+    olanak saglýyor
 
+    Mesela bir data blogunun geldiðini düþünün
+    1000 row (satýrlýk)
+    bu blogu alýp tek tek inceleyip
+    bu satýrlar uzerýnde iþlemler yapýp baþarýlý ise listeden cýkartmak istiyoruz
+
+    mesela datalar geliyor müþteriden bu datalarý windows servise ara tabloya yazacaklar
+    bizim de bu ara tabloya ulasýp kayýtlarý okuyup kendi database imize kontrollü bir þekilde yazmamýz gerekiyor
+
+    günlük rapor halinde de bunu belirli insanlara mail atmamýz gerekiyor
+    gerçek hayat uygulamasý bu bu arada
+
+    bu durumda ne yapmamýz lazým
+    biz bu data yý stack veya queue içerisinde toplamamýz
+    iþlemler yaptýkca bu listeden cýkartmamýz
+    ve listeyi yavas yavas bosaltmamýz gerekiyor
+
+    stack in calýsma sekli last in first out son giren ilk cýkar
+
+    mesela 1 2 3 4 5 diye kayýt ekledik içine diyelim
+    ilk iþlemi 5 üzerinde yapýyor son data iþlem sýrasýnýn en oncesýne denk geliyor
+
+    eklemek için Push kullanýyoruz bir datayý obje tipinde bizim koleksiyonumuza ekliyor
+     
+    Stack s1 = new Stack();
+    s1.Push("Bir");
+    s1.Push("Ýki");
+    s1.Push("Üç");
+    s1.Push("Dört");
+    s1.Push("Beþ");
+
+    þu anda ben koleksiyona baktýgýmda 5 adet string data görebilirim
+
+    calýstýrýnca gördüðümüz son eklenen degerin en basa geldiði sondan baslayacak cunku deðiþiklik yapmaya
+
+    Pop ve Peek komutlarý da var bunlarda obje tipinde geriye döner
+
+    object O1 = s1.Pop();
+    object O2 = s1.Peek();
+
+    iþlem nasýl yaparým
+
+    Pop
+    calýstýrýp push ettik sonra pop a gelince bana bir data gönder demýs oluyoruz
+    ilk gelen data son yazýlan data oluyor Beþ geliyor
+    ilgili datayý gönderdi bize listeden cýkarttý
+
+    Peek
+    datayý gönderiyor ama ön izleme yapýyor listeden cýkartmýyor
 
     */
 
-    SortedList sl = new SortedList();
-    sl.Add(100,"Yüz");
-    sl.Add(90, "Doksan");
-    sl.Add(1, "Bir");
-    sl.Add(9000, "Dokuzbin");
-   
-    /*
-   
-    burda hata veriyor int içine string ekliyoruz sýralama yapamýyor
-   
-    sl.Add("a","b");
-   
-    */
+    Stack s1 = new Stack();
+    s1.Push("Bir");
+    s1.Push("Ýki");
+    s1.Push("Üç");
+    s1.Push("Dört");
+    s1.Push("Beþ");
+
+    object O1 = s1.Pop();
+    object O2 = s1.Peek();
 
 
 }

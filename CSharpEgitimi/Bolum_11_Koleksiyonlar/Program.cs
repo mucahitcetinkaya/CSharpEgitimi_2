@@ -1076,6 +1076,94 @@
 
         #endregion
 
+        #region VİDEO 102 Stack Nedir
+
+        //static void Main(string[] args)
+        //{
+
+        //    /*
+
+        //    Bölüm 11 Koleksiyonlar VİDEO 102 Stack Nedir
+
+        //    burda inceleceğimiz koleksiyon Stack
+        //    bu koleksiyon ArrayList Hashtable SortedList e benzemiyor farklı bir koleksiyon
+        //    Bu Koleksiyonun tam tersi bir koleksiyon daha var oda Queue onuda göreceğiz
+        //    bunların generic versiyonları da var obje tasıyan versiyonları da bulunmakta
+
+        //    Stack de koleksiyon oldugundan dolayı new lemen lazım
+        //    kutuphane olarak
+        //    using System.Collections; ı kullanıyor
+
+        //    Temel prensibi
+
+        //    İçerisine almıs oldugu dataları bir komut kullanarak sıralı bir şekilde kendi listesinden cıkartmamıza
+        //    olanak saglıyor
+
+        //    Mesela bir data blogunun geldiğini düşünün
+        //    1000 row (satırlık)
+        //    bu blogu alıp tek tek inceleyip
+        //    bu satırlar uzerınde işlemler yapıp başarılı ise listeden cıkartmak istiyoruz
+
+        //    mesela datalar geliyor müşteriden bu dataları windows servise ara tabloya yazacaklar
+        //    bizim de bu ara tabloya ulasıp kayıtları okuyup kendi database imize kontrollü bir şekilde yazmamız gerekiyor
+
+        //    günlük rapor halinde de bunu belirli insanlara mail atmamız gerekiyor
+        //    gerçek hayat uygulaması bu bu arada
+
+        //    bu durumda ne yapmamız lazım
+        //    biz bu data yı stack veya queue içerisinde toplamamız
+        //    işlemler yaptıkca bu listeden cıkartmamız
+        //    ve listeyi yavas yavas bosaltmamız gerekiyor
+
+        //    stack in calısma sekli last in first out son giren ilk cıkar
+
+        //    mesela 1 2 3 4 5 diye kayıt ekledik içine diyelim
+        //    ilk işlemi 5 üzerinde yapıyor son data işlem sırasının en oncesıne denk geliyor
+
+        //    eklemek için Push kullanıyoruz bir datayı obje tipinde bizim koleksiyonumuza ekliyor
+
+        //    Stack s1 = new Stack();
+        //    s1.Push("Bir");
+        //    s1.Push("İki");
+        //    s1.Push("Üç");
+        //    s1.Push("Dört");
+        //    s1.Push("Beş");
+
+        //    şu anda ben koleksiyona baktıgımda 5 adet string data görebilirim
+
+        //    calıstırınca gördüğümüz son eklenen degerin en basa geldiği sondan baslayacak cunku değişiklik yapmaya
+
+        //    Pop ve Peek komutları da var bunlarda obje tipinde geriye döner
+
+        //    object O1 = s1.Pop();
+        //    object O2 = s1.Peek();
+
+        //    işlem nasıl yaparım
+
+        //    Pop
+        //    calıstırıp push ettik sonra pop a gelince bana bir data gönder demıs oluyoruz
+        //    ilk gelen data son yazılan data oluyor Beş geliyor
+        //    ilgili datayı gönderdi bize listeden cıkarttı
+
+        //    Peek
+        //    datayı gönderiyor ama ön izleme yapıyor listeden cıkartmıyor
+
+        //    */
+
+        //    Stack s1 = new Stack();
+        //    s1.Push("Bir");
+        //    s1.Push("İki");
+        //    s1.Push("Üç");
+        //    s1.Push("Dört");
+        //    s1.Push("Beş");
+
+        //    object O1 = s1.Pop();
+        //    object O2 = s1.Peek();
+
+
+        //}
+
+        #endregion
 
 
 

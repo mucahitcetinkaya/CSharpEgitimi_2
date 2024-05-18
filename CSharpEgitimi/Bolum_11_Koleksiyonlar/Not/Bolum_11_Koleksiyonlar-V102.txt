@@ -1,0 +1,52 @@
+
+
+Bölüm 11 : Koleksiyonlar
+VÝDEO 101 SortedList Nedir
+
+
+static void Main(string[] args)
+{
+
+    /*
+     
+    Bölüm 11 Koleksiyonlar VÝDEO 101 SortedList Nedir
+
+    Hashtable in farklý bir koleksiyon karsýlýgý olan SortedList leri inceleyelim
+
+    SortedList içerisine key ve value degerleri alan bir koleksiyon
+    Hashtable den farký içerisine alan deðerleri key deðerlerine göre sýralar
+    küçükten büyüðe a dan z e
+   
+    key deðerine göre sýralama yaptýgý için degerlerin benzersiz olmasý ve ayný veri tipinde olmasý gerekiyor
+
+    ayný veri tipinde olmasýnýn nedeni int ve string i sýralama yapamaz bundan dolayý
+
+    class oldugu için new lemen gerekiyor
+
+    kutuphane olarak
+
+    using System.Collections;
+
+    kullanýyor
+
+
+    */
+
+    SortedList sl = new SortedList();
+    sl.Add(100,"Yüz");
+    sl.Add(90, "Doksan");
+    sl.Add(1, "Bir");
+    sl.Add(9000, "Dokuzbin");
+   
+    /*
+   
+    burda hata veriyor int içine string ekliyoruz sýralama yapamýyor
+   
+    sl.Add("a","b");
+   
+    */
+
+
+}
+
+#endregion
