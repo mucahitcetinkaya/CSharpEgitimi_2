@@ -51,6 +51,7 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Content Include="Not\Bolum_11_Koleksiyonlar-V97.txt" />
     <Content Include="Not\Bolum_11_Koleksiyonlar-V96.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

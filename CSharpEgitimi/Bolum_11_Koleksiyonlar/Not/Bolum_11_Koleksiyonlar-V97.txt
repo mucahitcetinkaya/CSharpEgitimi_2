@@ -1,0 +1,641 @@
+
+
+Bölüm 11 : Koleksiyonlar
+VÝDEO 97 ArrayList Nedir ?
+
+        //static void Main(string[] args)
+        //{
+
+        //    /*
+
+        //    Bölüm 11 Koleksiyonlar VÝDEO 97 ArrayList Nedir ?
+
+        //    */
+
+        //    /*
+
+        //    ArrayList Genel Kullaným
+        //    Genel kullaným
+        //    normalde dizi olustururken
+
+        //    string[] isimler = new string[10];
+
+        //    10 elemanlý string bir diziyi böyle olusturuyorduk
+        //    ArrayList te bu biraz farklý
+
+        //    ArrayList yazdýgýmýzda kýrmýzý yanýyor hata veriyor sebebi yukarýya kütüphane eklememiþ olmamýz
+        //    yukarýdaki tanýmlar .net kutuphaneleri
+        //    using e basýnca yukarýya ekleme yaptý
+        //    yukarýda yazan kutuphane kullanýlýyorsa eger aktif olarak gözüküyor
+        //    kullanýlmýyorsa gri olarak yazar orda dursa da silinse de sorun olmaz
+
+
+        //    using System.Collections;
+
+        //    .net içinde olan bir sýnýf bu ArrayList
+        //    system collections içinden kullan demýs olduk
+
+        //    ArrayList a1 = new ArrayList();
+
+        //    class lar dersýn de görecegýz ama kýsa olarak anlatmak gerekirse
+        //    yeni bir class tanýmlandýgýn da onu new lemek zorundasýn kullanmak için
+        //    artýk a1 uzerýnden iþlem yapabiliriz
+
+        //    a1. dedigimiz de kullanabileceðimiz yardýmcýlar geliyor
+        //    mesela
+        //    a1.Add sadece 1 deger eklememýze yarar
+        //    object veri tipinden deger aldýgý için bu degerler herhangi bir deger olabilir
+        //    int string double decimal boolean vs gibi
+        //    yada ileride gorecegýmýz bizim kendý olusturacagýmýz tipler de olabilir
+        //    sadece string yazýyosan eger "" içinde yazarsan onun string anlar
+
+        //    ---------------------------------------------------------------------------------------------
+
+        //    Tek Deðer eklemek için                                  Add
+
+        //    string[] isimler = new string[10];
+
+        //    ArrayList a1 = new ArrayList();
+        //    a1.Add("Mücahit Çetinkaya");
+        //    a1.Add(100);
+
+        //    ---------------------------------------------------------------------------------------------
+
+        //    Birden fazla deger eklemek için                         AddRange
+
+        //    yeni bir ArrayList olusturalým deger girelim
+        //    ArrayList a2 = new ArrayList();
+        //    a2.Add("Arden");
+        //    a2.Add("Arthur");
+
+        //    a1 koleksiyonuna birden fazla deger eklemek istiyoruz burda
+        //    bunun için a2 yi kaynak olarak gösteriyoruz ve AddRange i kullanýyoruz
+
+        //    a1.AddRange(a2);
+
+        //    a1 koleksiyonu içerisine a2 koleksiyonundaki degerleri aldý
+
+        //    debug anlatým
+        //    string ten baslayarak breakpoint ile debug yaptýgýmýzda
+        //    10 elemanlý bir dizi olusturdu kullanmadýk sadece olusturduk
+
+
+        //    a1 arraylist olusturdu veri girmedik daha count 0 olarak yazýyor
+        //    0. ve 1. index e elemanlarý girdi
+        //    a1 in 0 ve 1. index leri dolu suanda
+        //    2 farklý deger tutuyor birisi metin birisi sayýsal
+
+
+        //    a2 arraylist olusturdu 0 ve 1. ixdex e elemanlarýný girdi
+        //    a1.AddRange(a2); yi okudugunda a1 e a2 deki verileride kayýt etti
+        //    a1 de 2. ve 3. index de dolmus oldu kaldýgý yerden devam ettý
+
+        //    a1 i a2 den beslemiþ olduk
+
+        //    s2 nin içindeki degerler kayýp olmadý duruyor
+
+        //    ---------------------------------------------------------------------------------------------
+
+        //    gördüðünüz gibi dizilerden biraz daha kolay
+        //    içerideki komutlara göre iþlemler yapabiliyoruz
+        //    daha farklý ne gibi iþlemler yapabiliriz örneklere devam edelim
+
+
+        //    karýsmamasý için yeni bir main metodu olusturmak istiyorum
+
+        //    2. main metodundan devam
+
+
+        //    ---------------------------------------------------------------------------------------------
+
+        //    */
+
+
+        //    string[] isimler = new string[10];
+
+        // /* tek veri eklemne */
+
+        //    ArrayList a1 = new ArrayList();
+        //    a1.Add("Mücahit Çetinkaya");
+        //    a1.Add(100);
+
+
+        // /* Birden fazla veri eklemne baþka kaynaðý kullanarak baþka bir kaynaða */
+
+        //    ArrayList a2 = new ArrayList();
+        //    a2.Add("Arden");
+        //    a2.Add("Arthur");
+
+
+        //    a1.AddRange(a2);
+
+        //}
+
+        #endregion
+
+        #region VÝDEO 97 Capacity Count
+
+        //static void Main(string[] args)
+        //{
+
+        //    /*
+
+        //    2. main metot devam
+
+        //    Capacity ve Count kavramlarýna bakalým
+
+        //    önce degiskenlerýný olusturduk
+        //    int Capacity = 0;
+        //    int Count = 0;
+
+        //    sonra bunlarý kullanarak A1 ve A2 in içindeki capacity ve count larýna atama yaptýk
+
+        //    Capacity = A1.Capacity;
+        //    Count = A1.Count;
+
+        //    þimdi burda anlatmak istediðimiz konu
+        //    ArrayList olusturdugumuz zaman new leme yaptýgýmýz da sadece ArrayList olusuyor demýstýk
+
+        //    daha sonra veri ekleme yaptýgýmýz da bos olan arraylist arka tarafta bazý degerler ile belleðe çýkýyor
+        //    belleðe cýktýgý bu degerler
+        //    capacity ve count kavramý
+
+        //    biz bunu dizilerde eleman sayýsý olarak görmustuk arraylist te bu biraz daha farklý
+
+        //    ArrayList A1 den breakpoint ile debug yapalým
+
+        //    en basta A1 null olarak duruyor cunku daha new leme yapmadýk
+        //    new leme yapýp içine girince bazý bilgiler yazýyor
+        //    Capacity ve Count gibi ikiside 0 sýfýr suanda
+
+        //    Capacity Koleksiyonun alabileceði maksimum deðeri ifade eder
+        //    Conut Koleksiyon içerisindeki mevcut deger sayýsýný ifade eder
+
+        //    for ile capacity ile dönersek farklý sonuc count kadar dönersen farklý sonuc alýrsýn
+
+        //    þimdi bu degerler 0 deger ekledýgýnde
+
+        //    Capacity i 4 Count u 1 yapacak
+        //    bunun sebebi
+        //    ArrayList ilk elemaný aldýgýnda kendýsýný 4 elemanlý bir dizi gibi düþünüyor
+        //    4 elemaný geçince Capacity sini 8 yapýyor 2 nin üstü olarak böyle gidiyor
+        //    yani
+        //    Capacity 8 se eðer Count 5 veya 8 olabilir demek bu
+
+        //    bir deger daha ekleyelim
+        //    Capacity 4 Count 2 oldu
+
+        //    A2 nin verilerini A1 e ekleyip Capacity sini cogaltalým 4 den fazla olursa ne oluyor
+
+        //    Capacity 8 oldu Count 5 oldu
+
+
+        //    baþka bir main metodu acýp oradan devam edeceðim
+
+        //    3. main metot devam
+
+        //    */
+
+        //    int Capacity = 0;
+        //    int Count = 0;
+
+
+        //    /* tek veri eklemne */
+
+        //    ArrayList A1 = new ArrayList();
+        //    A1.Add("Mücahit Çetinkaya");
+
+        //    /*
+
+        //    4 4 mü artýyor 2 nin üstü olarak mý onu kontrol etmek için burayý yaptým
+        //    4 8 16 olarak gidiyor 2 nin üstü olarak
+
+        //    A1.Add("Arden");
+        //    A1.Add("Arthur");
+        //    A1.Add("Zayn");
+        //    A1.Add("Arden");
+        //    A1.Add("Arthur");
+        //    A1.Add("Zayn");
+        //    A1.Add("Arden");
+        //    A1.Add("Arthur");
+        //    A1.Add("Zayn");
+        //    */
+
+        //    Capacity = A1.Capacity;
+        //    Count = A1.Count;
+
+        //    A1.Add(100);
+
+        //    /* Birden fazla veri eklemne baþka kaynaðý kullanarak baþka bir kaynaða */
+
+        //    ArrayList A2 = new ArrayList();
+        //    A2.Add("Arden");
+        //    A2.Add("Arthur");
+        //    A2.Add("Zayn");
+
+        //    A2.Add("Arden");
+        //    A2.Add("Arthur");
+        //    A2.Add("Zayn");
+
+        //    A1.AddRange(A2);
+
+        //    Capacity = A1.Capacity;
+        //    Count = A1.Count;
+
+        //}
+
+        #endregion
+
+        #region VÝDEO 97 Veri Ekleme ve Ýçindeki Deðere Ulaþma
+
+        //static void Main(string[] args)
+        //{
+
+        //    /*
+
+        //    3. main metodu
+
+        //    biz ArrayList içindeki bir elemana nasýl ulasýrýz güncelleriz deðiþtirebiliriz
+
+        //    A1[ yaptýgýmýzda indexer acmaya calýstýgýmýzda
+        //    object ArrayList[int Index] yardýmcý penceresi cýkýyor
+        //    dizilerde olan fonksiyonite buraya da yansýmýs durumda
+        //    dizileride anlamak bundan dolayý onemliydi
+
+        //    dizilerdeki indexer arraylist e
+        //    arraylist deki capacity count kavramý genericlist lere dogru evriliyor
+
+        //    istediðim arraylist e bir index acýp istediðim index numarasýný obje tipinde ulasým sagyalabilirim
+
+        //    object O1 = A1[3];
+
+        //    koleksiyon içinde objeler deger saklamakta bundan dolayý
+
+        //    a1 in içinde 3. index de olan deger Arden string bir deger
+        //    direk object olarak degilde string olarak almak istersek
+
+        //    string S1 = A1[3].ToString();
+
+        //    olarak dönüþtürme yapabiliriz
+
+        //    int almak istersek eger A1 içindeki 1. index int
+
+        //    int I1 = (int)A1[1];
+
+        //    deðiþtirmek için
+
+        //    A1[3] = "3. index deðeri deðiþti 3. main metod";
+
+
+        //    debug anlatýmý
+        //                object O1 = A1[3];
+        //    kýsmýna breakpoint koy
+
+        //    ilk olustugunda null olarak olusuyor
+
+        //    A1 içinde 5 tane veri var
+        //    3. index deki degere ulasacagýz Arthur
+
+        //    object üstüne alýp string e basýyoruz degeri
+
+        //    direk Arthur u cekti ordan
+
+        //    a1 i de int üstüne aldýk ayný iþlem
+        //    object tipinden int tipine dönusturduk
+
+        //    en sonda da A1 in 3. index inin verisini degistirdik üstüne yazdýrdýk direk
+
+        //    yeni main 4 deger silme
+
+        //    */
+
+
+        //    /* Koleksiyon içerisine veri ekleme */
+
+        //    ArrayList A1 = new ArrayList();
+        //    A1.Add("Mücahit Çetinkaya");
+        //    A1.Add(100);
+        //    A1.Add("Arden");
+        //    A1.Add("Arthur");
+        //    A1.Add("Zayn");
+
+
+
+        //    /* Koleksiyon içindeki deðere ulaþmak */
+
+        //    object O1 = A1[3];
+
+        //    string S1 = A1[3].ToString();
+
+        //    int I1 = (int)A1[1];
+
+        //    /* Koleksiyon içindeki deðeri deðiþtirmek için */
+
+        //    A1[3] = "3. index deðeri deðiþti 3. main metod";
+
+        //}
+
+        #endregion
+
+        #region VÝDEO 97 Dizilerde Deðer Silme
+
+        //static void Main(string[] args)
+        //{
+
+        //    /*
+
+        //    97 notlarý devam main 4 deger silme
+
+        //    Remove() metodunu kullanacagýz
+        //    parantez içinde koleksiyondan sileceðin degeri istiyor obje tipinde
+
+        //                A1.Remove("3. index deðeri deðiþti 3. main metod");
+
+        //    bunu bul liste içinden kaldýr diyebiliyoruz
+
+        //    calýstýrdýgýmýzda 3. index deki deger komple kalktý diger deger 3. index e geldi bir üste kaydý hepsi
+
+        //    kaldýrmanýn farklý yollarý da var mesela
+
+        //    RemoveRange baslangýc ve bitiþ index i veriyosun ona göre kaldýrma iþlemi yapýyor
+
+        //                A1.RemoveRange(2,2);
+        //    2. index den basladý kendý dahil sildi
+
+        //    RemoveAt metodu direk index veriyosun index e göre siliyor
+
+        //    A1.RemoveAt(1);
+
+        //    peki remove metodu varken removeat e ne gerek var
+        //    index e göre silmek ne kadar dogru
+        //    biz degeri bilip silme iþlemi yapabiliyoruz
+        //    koleksiyon içerisinde cok fazla veri olabilir
+        //    çalýþma zamanýnda degerin ne geldiðini bilmediðin durumlar olabilir
+        //    sabit bir þekilde verilerin yoksa
+        //    hangi deger hangi index de onu da bilememe ihtimalin var
+        //    once degerin index i ni bulup sonra da index e göre koleksiyondan data yý cýkartmamýz lazým
+
+        //    genelde veriler database den cekilir hangi index hangi degere geliyor bilemeyiz
+        //    bundan dolayý bu iþlem kullanýlýr.
+
+        //    main 5 den devam
+
+        //    */
+
+        //    ArrayList A1 = new ArrayList();
+        //    A1.Add("Mücahit Çetinkaya");
+        //    A1.Add(100);
+        //    A1.Add("Arden");
+        //    A1.Add("Arthur");
+        //    A1.Add("Zayn");
+
+        //    /* Koleksiyon içindeki deðeri deðiþtirmek için */
+
+        //    A1[3] = "3. index deðeri deðiþti 3. main metod";
+
+        //    /* Koleksiyon içindeki deðeri silmek için */
+
+        //    A1.Remove("3. index deðeri deðiþti 3. main metod");
+        //    A1.RemoveRange(2,2);
+        //    A1.RemoveAt(1);
+
+        //}
+
+        #endregion
+
+        #region VÝDEO 97 Arraylist Sýralama
+
+        //static void Main(string[] args)
+        //{
+
+        //    /*
+
+        //    97 notlarý devam main 5 Arraylist Sýralama
+
+        //    Arraylist Sýralama
+
+        //    A dan Z ye sýralama
+
+        //    A1.Sort();
+
+        //    Dizinin mevcut sýralamasýný terse döndürme
+
+        //    A1.Reverse();
+
+        //    sort yaparken dizi içinde baska bir tip varsa eger hata alýrsýn bizim dizimizde
+        //    a1 dizinin hepsi int
+        //    a2 dizisinin hepsi string
+        //    hepsi ayný tip bundan dolayý sort yapabiliyor
+        //    ama arasýna baska bir tip koyarsak hata alýrýz
+        //    1 ile a yý nasýl sýralasýn ondan dolayý
+
+        //    reverse yaparken baska bir tip olsa da hata vermiyor sebebi direk cevirme yapýyor ne olduguna bakmýyor
+
+        //    main 6 dan devam
+
+
+        //    */
+
+
+        //    ArrayList A1 = new ArrayList();
+        //    ArrayList A2 = new ArrayList();
+
+        //    A1.Add(1);
+        //    A1.Add(2);
+        //    A1.Add(3);
+        //    A1.Add(4);
+        //    A1.Add(5);
+
+        //    A2.Add("a");
+        //    A2.Add("b");
+        //    A2.Add("c");
+        //    A2.Add("d");
+        //    A2.Add("e");
+
+        //    A1.Sort();
+        //    A2.Sort();
+
+        //    A1.Reverse();
+        //    A2.Reverse();
+
+
+        //    /*
+
+        //    10 elemanlý string ArrayList içindeki deðerleri Z-A olacak þekilde sýralayýn
+
+        //     */
+
+        //    ArrayList siralama = new ArrayList();
+        //    siralama.Add("Ezel");
+        //    siralama.Add("Ramiz");
+        //    siralama.Add("Eyþan");
+        //    siralama.Add("Kenan");
+        //    siralama.Add("Ali");
+        //    siralama.Add("Cengiz");
+        //    siralama.Add("Bayraktar");
+        //    siralama.Add("Karaeski");
+        //    siralama.Add("Tefo");
+        //    siralama.Add("Sekiz");
+
+        //    siralama.Sort();
+        //    siralama.Reverse();
+
+
+        //}
+
+        #endregion
+
+        #region VÝDEO 97 ArrayList Yardýmcý Komutlar
+
+        //static void Main(string[] args)
+        //{
+
+        //    /*
+
+        //    97 notlarý devam main 6 Yardýmcý Komutlar
+
+        //    .Contains() metodu dizi içinde parantez içine yazdýgýmýz veri var mý diye bakýyor bool dönüþ yapýyor
+        //    mesela
+
+        //    bool kontrol1 = A1.Contains(1);
+        //    bool kontrol2 = A1.Contains("Mücahit");
+        //    bool kontrol3 = A1.Contains(100);
+        //    bool kontrol4 = A1.Contains("Merve");
+
+        //    kodlarýnýn sonuclarý true veya false olarak gelir
+
+        //    Diger Komut
+
+        //    IndexOf
+
+        //    index ini bilmedigimiz verilerin index ini bulmaya yarýyor
+
+        //    int indexDeger = A1.IndexOf("Mücahit");
+
+        //    a1 içindeki Mücahit degerinin index ini indexDeger içine ata demiþ olduk
+        //    mesela burdan index degerinin 6 oldugunu ögrendýk bunu sarta da baglayabiliriz
+
+        //    if (A1.Contains(1))
+        //    {
+        //        int indexDeger2 = A1.IndexOf(1);
+        //        A1.RemoveAt(indexDeger2);
+        //    }
+
+        //    a1 in içinde 1 varsa git a in içindeki 1 degerinin index ini bul sonra da onu sil
+
+
+        //   7. main e gecelim
+
+
+        //    */
+
+        //    ArrayList A1 = new ArrayList();
+
+        //    A1.Add(1);
+        //    A1.Add(2);
+        //    A1.Add(3);
+        //    A1.Add(4);
+        //    A1.Add(5);
+        //    A1.Add("Muhammet");
+        //    A1.Add("Mücahit");
+        //    A1.Add("Çetinkaya");
+        //    A1.Add("Zayn");
+        //    A1.Add("Arthur");
+        //    A1.Add("Arden");
+
+        //    bool kontrol1 = A1.Contains(1);
+        //    bool kontrol2 = A1.Contains("Mücahit");
+        //    bool kontrol3 = A1.Contains(100);
+        //    bool kontrol4 = A1.Contains("Merve");
+
+        //    int indexDeger = A1.IndexOf("Mücahit");
+
+        //    if (A1.Contains(1))
+        //    {
+        //        int indexDeger2 = A1.IndexOf(1);
+        //        A1.RemoveAt(indexDeger2);
+        //    }
+
+
+        //}
+
+        #endregion
+
+        #region VÝDEO 97 ArrayList Yardýmcý Komutlar
+
+        //static void Main(string[] args)
+        //{
+
+        //    /*
+
+        //    97 notlarý devam main 7 Yardýmcý Komutlar
+
+        //    Claer
+
+        //    A1.Clear();
+        //    dediðimiz de dizinin içinde ne varsa hepsini siler
+
+        //    silmesine siliyor count u sýfýr yapýyor ama capacity i deðiþtirmiyor sýfýrlama yapmýyor
+
+        //    Capacity yeniden ayarlamak boyutlandýrmak için de
+
+        //    A1.TrimToSize(); ý kullanabiliriz yeniden 4 e cekti
+
+        //    */
+
+        //    ArrayList A1 = new ArrayList();
+
+        //    A1.Add(1);
+        //    A1.Add(2);
+        //    A1.Add(3);
+        //    A1.Add(4);
+        //    A1.Add(5);
+        //    A1.Add("Muhammet");
+        //    A1.Add("Mücahit");
+        //    A1.Add("Çetinkaya");
+        //    A1.Add("Zayn");
+        //    A1.Add("Arthur");
+        //    A1.Add("Arden");
+
+        //    A1.Clear();
+        //    A1.TrimToSize();
+
+
+        //}
+
+        #endregion
+
+        #region VÝDEO 97 ArrayList Yardýmcý Komutlar
+
+        //static void Main(string[] args)
+        //{
+
+        //    /*
+
+        //    97 notlarý devam main 8 Yardýmcý Komutlar
+
+        //    ToArray
+
+        //    ArrayList içindeki tüm data larý dizi olarak verir
+
+        //    */
+
+        //    ArrayList A1 = new ArrayList();
+
+        //    A1.Add(1);
+        //    A1.Add(2);
+        //    A1.Add(3);
+        //    A1.Add(4);
+        //    A1.Add(5);
+        //    A1.Add("Muhammet");
+        //    A1.Add("Mücahit");
+        //    A1.Add("Çetinkaya");
+        //    A1.Add("Zayn");
+        //    A1.Add("Arthur");
+        //    A1.Add("Arden");
+
+        //    object[] D1 = A1.ToArray();
+
+        //}
+
+        #endregion
