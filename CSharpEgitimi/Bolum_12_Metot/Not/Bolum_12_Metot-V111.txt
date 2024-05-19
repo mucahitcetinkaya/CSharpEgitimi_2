@@ -1,0 +1,111 @@
+
+
+Bölüm 12 : Metot
+VÝDEO 111 Public ve Private Eriþim Belirleyicileri.
+
+
+    static void Main(string[] args)
+        {
+            /*
+             
+                Bölüm 12 Metot VÝDEO 111 Public ve Private eriþim belirleyicileri.
+             
+            */
+
+            /*
+            
+            Ogrenci111 class ýný actýk public ve private farklarýna bakýyoruz su anda
+            OgrenciMetotHesapla private olarak olusturduk 
+            burda Ogrenci classýný new ledik ama
+            o. diyince public olan metot geliyor ama private oldugu için digerine ulaþamýyoruz
+
+            bunun yerýne yapacagýmýz olay 
+            OgrenciPuanHesaplama metodu içinde degisiklikler oraya gidip not alalým
+
+            private metot neden lazým olur
+            dýs katmanda biz bazý bilgileri alýrýz
+            almýs oldugumuz bilgileri ise 
+            içeride olusturmus oldugumuz public metodun içinde sýrasýyla yazmak istemeyiz
+            onlarda aslýnda kendi baþlarýna iþ yapan modüller olarak yazýlmasý gerekir
+            ama dýþ dunyaya da kapalý olmasý gerekir
+            bu durumlarda dýs dunyaya actýgýmýz metodu puclic
+            içerideki operasyonlarýmýzý private olarak belirleriz
+
+            veya
+            tc kimlik tutacak diyelim herkesin görmesini istemeyiz ama bilginin dönmesi gerekiyor
+            private olarak saklarýz döndürürüz puclic metota 
+            onun üstünden iþlem yaparýz
+
+            kodlama içerisinde 3 satýrý geçiyorsanýz eger bunu metot yapýn diye bir söylem vardýr
+            bu söylem cok tutulmasa da 
+            yazýlan kod bir modulse operasyonsa bir iþ yapýyorsa iþi ayýrmak en dogru secenek
+
+            debug anlatýmý 
+            public metota gidiyor sonra onun içine private metotdu verdýk ayný yerde olduklarý için okuyor
+            sonra oraya gidip bilgileri alýp geliyor vs 
+             
+            */
+
+            Ogrenci111 O = new Ogrenci111();
+
+            Console.Write("Ögrencinin Adýný giriniz : ");
+            string ad = Console.ReadLine();
+            Console.Write("Ögrencinin Soyadýný giriniz : ");
+            string soyAd = Console.ReadLine();
+            Console.Write("Ögrencinin birinci notunu giriniz : ");
+            decimal not1 = Convert.ToDecimal(Console.ReadLine());
+            Console.Write("Ögrencinin ikinci notunu giriniz : ");
+            decimal not2 = Convert.ToDecimal(Console.ReadLine());
+            Console.Write("Ögrencinin üçüncü notunu giriniz : ");
+            decimal not3 = Convert.ToDecimal(Console.ReadLine());
+
+            O.OgrenciPuanHesaplama(ad, soyAd, not1, not2, not3);
+
+        }
+
+
+
+
+namespace D_12_Metot
+{
+    public class Ogrenci111
+    {
+        public void OgrenciPuanHesaplama(string ad, string soyAd, decimal not1, decimal not2, decimal not3)
+        {
+            Console.WriteLine("Öðrencinin bilgileri aþaðýdaki gibidir...");
+            Console.WriteLine("Ad Soyad : {0} {1}", ad, soyAd);
+            //decimal ortalama = (not1 + not2 + not3) / 3; 
+            decimal ortalama = OrtalamaHesapla(not1, not2, not3);
+            if (ortalama > 45)
+            {
+                Console.WriteLine("Ortalama deðeriniz : {0} - Geçtiniz!", ortalama);
+            }
+            else
+            {
+                Console.WriteLine("Ortalama deðeriniz : {0} - Kaldýnýz!", ortalama);
+            }
+        }
+
+        private decimal OrtalamaHesapla(decimal privateNot1, decimal privateNot2, decimal privateNot3)
+        {
+            decimal ortalama = (privateNot1 + privateNot2 + privateNot3) / 3;
+            return ortalama;
+        }
+
+
+    }
+
+}
+
+/*
+ 
+OgrenciPuanHesaplama içindeki not hesap kýsmýný metot olarak alacagýz
+metotun ustune gelirsen eger
+kup iþareti metot oldugunu
+kilit iþareti private oldugunu belirtiyor
+
+verilen degisken isimleri ayný olmak zorunda degil
+not1 i alacak privateNot1 e atacak mesela
+
+
+*/
