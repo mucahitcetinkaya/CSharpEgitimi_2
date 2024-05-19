@@ -1,0 +1,220 @@
+
+
+Bölüm 12 : Metot
+VÝDEO 109 Metot Uygulama - 1 : Matematiksel Ýþlemler
+
+
+        #region VÝDEO 109
+
+        static void Main(string[] args)
+        {
+
+            /*
+             
+            Bölüm 12 Metot VÝDEO 109 Metot Uygulama - 1 : Matematiksel Ýþlemler
+             
+            */
+
+            /*
+             
+            Daha önceden yaptýgýmýz toplama cýkartma iþlemlerini 
+            class acýp metotlastýrarak yapmak istiyorum
+
+            bir class acalým Matematik109
+            gerekli eklemeleri yaptýk 
+
+            Matematik109 den geldik
+
+            debug yaparsan eger ayný iþlemler gidiyor okuyor geliyor vs
+
+            menu de secim yapmamýzý istiyor
+            bunu ReadLine ile üzerine alacagýz deðiskenin
+            int kullaniciSecim olarak kullanýdan gelen degeri kayýt edecegým ama
+            ReadLine ile almam lazým þöyle bir durum var
+            ReadLine üzerine gelirsen eger tooltype de yazýyor string olarak geriye deðer dönüyorum diyor
+
+            o zaman once tür dönüþümü yapýp sonra kayýt edecegiz geleni
+
+            int kullaniciSecim = Convert.ToInt32(Console.ReadLine());
+
+            burda kullanýcý bir secim yaptý o zaman hemen bir
+            switch case yapýsý kuralým kullaniciSecim e bakacak
+            1 2 3 4 e basýnca ne olacak ona göre karar verdirelim
+
+            bütün seçimlerde 2 deger isteyecek o zaman bunuda dýsarýda isteyelim
+
+            kullanýcý rakam sayý yazmazsa abc gibi bir deger yazarsa ne olur
+            normalde bunlarý da kontrol etmemýz lazým ama su anda biz 
+            kullanýcýdan gelen degerin dogru oldugunu kabul ediyoruz
+            yoksa try cash mekanizmalarýmýz var 
+            degere göre böyle davran diyebiliriz ileride göreceðiz
+
+            1 e basýnca toplama iþlemi yapacak
+            class içinden toplama metodunu cagýrmak için
+            M1.ToplamaIslemi() ni cagýrmamýz lazým ve gerekli parametreleri vermemiz gerekiyor
+            parametleri de kullanýcýdan alýyoruz onlarý vereceðiz
+
+            ToplamaIslemi decimal deger istiyor 2 tane onlarý verdik
+            geriye de decimal dönüyor onuda decimal sonuc degiskenine atadýk
+
+            bütün metotlarý hazýrladýk birde ekrana yazmasý için sonuclarý bunun için bir metot hazýrlamak istiyorum
+            3 tane parametre isteyecek kullaniciSayi1 kullaniciSayi2 sonuc 
+
+            Matematik109 e dönelim
+
+            debug ta yaptýk gerekli iþleme gidiyor kullanýcýdan deger istiyor iþlemi yapýp return ediyor ekrana basýyor vs
+            */
+
+
+            Matematik109 M1 = new Matematik109();
+
+            YenidenIslemYap:
+
+            M1.MenuHazirla();
+
+            int kullaniciSecim = Convert.ToInt32(Console.ReadLine());
+
+            Console.Write("Lütfen 1. sayý deðerini giriniz : ");
+            decimal kullaniciSayi1 = Convert.ToDecimal(Console.ReadLine());
+            Console.Write("Lütfen 2. sayý deðerini giriniz : ");
+            decimal kullaniciSayi2 = Convert.ToDecimal(Console.ReadLine());
+
+            decimal sonuc = 0;
+
+
+            switch (kullaniciSecim)
+            {
+                case 1: /* Toplama */
+                    sonuc = M1.ToplamaIslemi(kullaniciSayi1, kullaniciSayi2);
+                    M1.SonucEkranaYaz(kullaniciSayi1, kullaniciSayi2, sonuc, "+");
+                    break;
+                case 2: /* Çýkartma */
+                    sonuc = M1.CikartmaIslemi(kullaniciSayi1, kullaniciSayi2);
+                    M1.SonucEkranaYaz(kullaniciSayi1, kullaniciSayi2, sonuc, "-");
+                    break;
+                case 3: /* Bölme */
+                    sonuc = M1.BolmeIsleme(kullaniciSayi1, kullaniciSayi2);
+                    M1.SonucEkranaYaz(kullaniciSayi1, kullaniciSayi2, sonuc, "/");
+                    break;
+                case 4: /* Çarpma */
+                    sonuc = M1.CarpmaIslemi(kullaniciSayi1, kullaniciSayi2);
+                    M1.SonucEkranaYaz(kullaniciSayi1, kullaniciSayi2, sonuc, "*");
+                    break;
+                default:
+                    Console.WriteLine("Belirtmiþ oldugunuz deðer liste içerisinde bulunamadý.");
+                    Console.WriteLine("Lütfen yeniden deneyiniz.");
+                    System.Threading.Thread.Sleep(2000);
+                    goto YenidenIslemYap;
+            }
+
+            Console.WriteLine("Yeni iþlem yapmak istiyor musunuz ? (E/H)");
+            string eh = Console.ReadLine();
+
+            if (eh.ToUpper() == "E")
+            {
+                goto YenidenIslemYap;
+            }
+
+
+            Console.ReadLine();
+
+        }
+
+        #endregion
+
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace D_12_Metot
+{
+    public class Matematik109
+    {
+
+        public decimal ToplamaIslemi(decimal sayi1, decimal sayi2)
+        {
+            decimal sonuc = sayi1 + sayi2;
+            return sonuc;
+        }
+
+        public decimal CikartmaIslemi(decimal sayi1, decimal sayi2)
+        {
+            decimal sonuc = sayi1 - sayi2;
+            return sonuc;
+        }
+
+        public decimal BolmeIsleme(decimal sayi1, decimal sayi2)
+        {
+            decimal sonuc = sayi1 / sayi2;
+            return sonuc;
+        }
+
+        public decimal CarpmaIslemi(decimal sayi1, decimal sayi2)
+        {
+            decimal sonuc = sayi1 * sayi2;
+            return sonuc;
+        }
+
+        public void MenuHazirla()
+        {
+            Console.WriteLine("*** Menü ***");
+            Console.WriteLine("1- Toplama");
+            Console.WriteLine("2- Çýkartma");
+            Console.WriteLine("3- Bölme");
+            Console.WriteLine("4- Çarpma");
+            Console.Write("Lütfen deðer seçiniz : ");
+        }
+
+        public void SonucEkranaYaz(decimal kullaniciSayi1, decimal kullaniciSayi2, decimal sonuc, string operators)
+        {
+            Console.WriteLine("{0} {1} {2} = {3}", kullaniciSayi1, operators, kullaniciSayi2, sonuc);
+        }
+
+
+
+    }
+
+}
+
+
+/*
+ 
+program.cs den geldik
+public yaptýk dýsarýdan eriþebilmek için
+
+Topla metodunu tasarlayalým
+dýsarýdan eriþilecek public olacak
+geriye deger dönecek mi evet decimal deger dönsün
+adý ne olacak nasýl cagýralým ToplamaIslemi
+parametre alacak mý evet decimal sayi1 decimal sayi2
+peki içeride ne yapacak gelen 2 degeri toplayýp geriye gönderecek
+bunlar dahilinde o zaman 
+        public decimal ToplamaIslemi(decimal sayi1, decimal sayi2)
+        {
+            decimal sonuc = sayi1 + sayi2;
+            return sonuc;
+        }
+bunun gibi oldu
+decimal oldugu için geriye deger dönüyor ondan dolayý return kullanýyoruz
+bir iþlem yapýp bunu geriye dönüyor
+
+geriye deger dönmesi demek metot içinde iþlemler yapýyor elde edilen bir sonuc result var
+bunu alýp gönderip kullanýyoruz return ediyoruz
+
+Cýkartma metodunu tasarlayalým
+Bolme metodunu tasarlayalým
+Çarpma metodunu tasarlayalým
+Menu içinde bir metot tasarlayalým
+
+Program.cs e geri dönelim
+
+Program.cs den geldik
+ekrana yazdýrmak için metot hazýrlayalým
+4 tane parametre isteyecek kullaniciSayi1 kullaniciSayi2 sonuc operators
+içerisinde string bir formatla bunu ekrana yazacak geriye bir deger dönmeyecek
+
+*/
