@@ -127,6 +127,96 @@ namespace Bolum_12_Metot
 
         #endregion
 
+        #region VİDEO 108 Yeni Bir Metot Tanımlamak
+
+        //static void Main(string[] args)
+        //{
+
+        //    /*
+
+        //    Bölüm 12 Metot VİDEO 108 Yeni Bir Metot Tanımlamak
+
+        //    */
+
+        //    /*
+
+        //    107. video da sadece Ogrenci class ını olusturup bir tane metot olusturduk
+        //    108. video da bunu geliştirelim
+        //    detaylarına inelim
+        //    nerele ihtiyacımız var 
+        //    hangi ihtiyacımızı karsılamak için nasıl bir tanım yapmamız lazım
+
+        //     Ogrenci Class ından devam edelim
+
+        //    Ogrenci class ından geldik
+        //    newleme yapmamız lazım
+
+        //    Ogrenci108 O2 = new Ogrenci108();
+        //    02.OgrenciMetot( yazınca tooltype ler cıkıyor 
+        //    Ogrenci108 clasının içinde bir metot bu
+        //    diger tarafta verdiğimiz parametre istemesi void geriye dönüş olmasın vs hepsi orda ornek olarak yazıyor
+
+        //    O2.OgrenciMetot("Mücahit", "Çetinkaya");
+
+        //    sırayla parametreleri verince verilen parametre daha kalın yazıyor
+
+        //    Ogrenci108 e breakpoint bırakalım f11 ile debug yapalım
+
+        //    Ogrenci108 nesnesini new ledi bunun acıklaması class işlerken detaylı yapılacak
+        //    O2. uzerınden OgrenciMetot metoduna gidecek giderken parametre götürüyor
+        //    f11 ile devam edince Ogrenci108 e geçiyor scoplara düşüyor
+        //    oradaki parametrelere bakınca bilgileri tasıdıgını görürürüz
+        //    kodu okuyup buraya geri dönüyor
+
+        //    Ogrenci108 deki metotun erişim belirleyicisini private yapalım ne olacak bakalım
+
+        //    OgrenciMetot kısmında hata yazdı 
+        //    tekrar O2. yazıp ulasmaya calısalım 
+        //    OgrenciMetot gözükmüyor private oldugu için sadece olustugu kısımda kullanılmaya izni var 
+
+        //    private bir metot hazırlayıp aynı class içinde kontrol edelim
+
+        //    Ogrenci108 classına gidelim
+
+        //    Ogrenci108den geldik
+
+        //    OgrenciMetot3 public 
+        //    OgrenciMetot2 private
+        //    public içinde private metot cagırdık burda da onu tetiklemiş olduk
+
+        //    debug
+        //    nesne olustu nesne uzerınden metota gitti metot içindeki kodu calıstırdı
+        //    ordada baska nesne var private ama aynı yerdeler onu da ordan calıstırdı
+        //    tekrar metot3 e geldi kodu bitirdi buraya geldi tamamen bitirmiş oldu
+
+        //    */
+
+        //    Ogrenci108 O2 = new Ogrenci108();
+        //    O2.OgrenciMetot1("Mücahit", "Çetinkaya");
+
+
+        //    O2.OgrenciMetot3();
+
+        //}
+
+        #endregion
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     }

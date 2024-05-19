@@ -1,0 +1,198 @@
+
+
+Bölüm 12 : Metot
+VÝDEO 108 Yeni Bir Metot Tanýmlamak
+
+
+  #region VÝDEO 108
+
+        static void Main(string[] args)
+        {
+
+            /*
+
+            Bölüm 12 Metot VÝDEO 108 Yeni Bir Metot Tanýmlamak
+
+            */
+
+            /*
+
+            107. video da sadece Ogrenci class ýný olusturup bir tane metot olusturduk
+            108. video da bunu geliþtirelim
+            detaylarýna inelim
+            nerele ihtiyacýmýz var 
+            hangi ihtiyacýmýzý karsýlamak için nasýl bir taným yapmamýz lazým
+
+             Ogrenci Class ýndan devam edelim
+
+            Ogrenci class ýndan geldik
+            newleme yapmamýz lazým
+
+            Ogrenci108 O2 = new Ogrenci108();
+            02.OgrenciMetot( yazýnca tooltype ler cýkýyor 
+            Ogrenci108 clasýnýn içinde bir metot bu
+            diger tarafta verdiðimiz parametre istemesi void geriye dönüþ olmasýn vs hepsi orda ornek olarak yazýyor
+
+            O2.OgrenciMetot("Mücahit", "Çetinkaya");
+
+            sýrayla parametreleri verince verilen parametre daha kalýn yazýyor
+
+            Ogrenci108 e breakpoint býrakalým f11 ile debug yapalým
+
+            Ogrenci108 nesnesini new ledi bunun acýklamasý class iþlerken detaylý yapýlacak
+            O2. uzerýnden OgrenciMetot metoduna gidecek giderken parametre götürüyor
+            f11 ile devam edince Ogrenci108 e geçiyor scoplara düþüyor
+            oradaki parametrelere bakýnca bilgileri tasýdýgýný görürürüz
+            kodu okuyup buraya geri dönüyor
+
+            Ogrenci108 deki metotun eriþim belirleyicisini private yapalým ne olacak bakalým
+
+            OgrenciMetot kýsmýnda hata yazdý 
+            tekrar O2. yazýp ulasmaya calýsalým 
+            OgrenciMetot gözükmüyor private oldugu için sadece olustugu kýsýmda kullanýlmaya izni var 
+
+            private bir metot hazýrlayýp ayný class içinde kontrol edelim
+
+            Ogrenci108 classýna gidelim
+
+            Ogrenci108den geldik
+
+            OgrenciMetot3 public 
+            OgrenciMetot2 private
+            public içinde private metot cagýrdýk burda da onu tetiklemiþ olduk
+
+            debug
+            nesne olustu nesne uzerýnden metota gitti metot içindeki kodu calýstýrdý
+            ordada baska nesne var private ama ayný yerdeler onu da ordan calýstýrdý
+            tekrar metot3 e geldi kodu bitirdi buraya geldi tamamen bitirmiþ oldu
+
+            */
+
+            Ogrenci108 O2 = new Ogrenci108();
+            O2.OgrenciMetot1("Mücahit", "Çetinkaya");
+
+
+            O2.OgrenciMetot3();
+
+        }
+
+        #endregion
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace D_12_Metot
+{
+    public class Ogrenci108
+    {
+
+        public void OgrenciMetot1(string ogrenciAdi, string ogrenciSoyadi)
+        {
+            Console.WriteLine("Öðrenci Bilgileri : {0} {1}" , ogrenciAdi , ogrenciSoyadi);
+        }
+        private void OgrenciMetot2(string ogrenciAdi, string ogrenciSoyadi)
+        {
+            Console.WriteLine("Öðrenci Bilgileri : {0} {1}", ogrenciAdi, ogrenciSoyadi);
+        }
+        public void OgrenciMetot3()
+        {
+            OgrenciMetot2("Mücahit","Çetinkaya");
+        }
+
+    }
+}
+
+
+
+/*
+ 
+Bölüm 12 Metot VÝDEO 108
+öncelikle bizim metotlarýmýzýn
+
+Metot yazarken olmasý gerekenler
+
+[EriþimBelirleyicisi] <GeriDönüþDeðeri> MetotAdý()
+{
+    metotun calýsmasý için gereken kodlar
+}
+
+mevcut metot iþlem yapmaya baslarken kendýsýný cagýran noktadan herhangi bir parametre alýp
+parametre uzerýnde iþlem yapacaksa parantezler içine parametreler yazýlýr
+iþlem yapýlmayacaksa parametre yollanmaz
+daha sonrada metot içindeki scop içine
+yani metotun body si de denir buna iþlemler buraya yazýlýr
+
+
+[EriþimBelirleyicisi] <GeriDönüþDeðeri> MetotAdý(Parametreler)
+{
+    metotun calýsmasý için gereken kodlar
+}
+
+
+Eriþim Belirleyicisi Nedir ??
+
+5 farklý eriþim belirleyicisi bulunmaktadýr.
+
+Public Private Protected Internal InternalProtected
+
+Public 
+Ben metotuma sadece class ýn içinden degil classýma ulasan herkesinde buna ulasmasýna izin veriyorum demektir.
+
+Private
+metot sadece içerisinde bulunan class duzeyinde cagýrabilir 
+yani private bir metot nerde olusturulduysa orda kullanýlýr
+Ogrenci classýna ulasabilir ama metoda ulasamaz
+metoda ulasmak için metotun olustugu yerde iþlem yapmak gerekir
+
+Protected
+Kalýtým konusunda yoðun olarak iþleyeceðiz
+Birbirinden nesneler kalýtýldýgýnda Protected kullanýlabilir.
+
+Internal
+Ýlgili kutuphane içerisinde ulaþabilirsin
+
+InternalProtected
+Uygulama içerisinde veya kalýtýldýysa ulasabilirsin diyoruz
+
+bu kýsýmda sadece public ve private kýsýmlarýna giriyoruz
+diðer kýsýmlarý Polymorphism kalýtým konularýnda göreceðiz
+
+þimdi bir metot tanýmý yapalým 
+classýn dýsarýsýndan eriþilmesini istiyorum
+class ýma ulasan herkes metotumu görebilsin
+eriþim belirleyicisi public olacak
+geri dönüþü olmayacak void olacak
+parametre alsýn ogrenciAdi ogrenciSoyadi
+
+public void OgrenciMetot(string ogrenciAdi, string ogrenciSoyadi)
+        {
+            Console.WriteLine("Öðrenci Bilgileri : {0} {1}" , ogrenciAdi , ogrenciSoyadi);
+        }
+
+Program.cs e gidelim bu metotu cagýralým
+
+Program.cs den geldik
+
+        private void OgrenciMetot2(string ogrenciAdi, string ogrenciSoyadi)
+        {
+            Console.WriteLine("Öðrenci Bilgileri : {0} {1}", ogrenciAdi, ogrenciSoyadi);
+        }
+        public void OgrenciMetot3()
+        {
+            OgrenciMetot2("Mücahit","Çetinkaya");
+        }
+
+private oldugu halde ayný class içinde oldugundan cagýrma yapabildik.
+
+OgrenciMetot2 private OgrenciMetot3 public
+
+OgrenciMetot3 içinde 2 yi cagýrdýk oldu ayný yerde olduklarý için
+peki 3 de public oldugu için diger class da cagýrsak
+
+Program.cs e gidelim
+
+*/
