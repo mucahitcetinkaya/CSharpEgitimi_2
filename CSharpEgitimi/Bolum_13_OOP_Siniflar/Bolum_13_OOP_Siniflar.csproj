@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{9E2C09FB-7E14-404B-9E52-C8112BA29EA9}</ProjectGuid>
+    <ProjectGuid>{21530A77-347F-403B-8772-218FC7010A87}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>D_12_Metot</RootNamespace>
-    <AssemblyName>D_12_Metot</AssemblyName>
+    <RootNamespace>Bolum_13_OOP_Siniflar</RootNamespace>
+    <AssemblyName>Bolum_13_OOP_Siniflar</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,15 +43,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Deneme118.cs" />
-    <Compile Include="Matematik108.cs" />
-    <Compile Include="Ogrenci106.cs" />
-    <Compile Include="Ogrenci107.cs" />
-    <Compile Include="Ogrenci109.cs" />
-    <Compile Include="Ogrenci110.cs" />
-    <Compile Include="Ogrenci111.cs" />
-    <Compile Include="Ogrenci112.cs" />
-    <Compile Include="Ogrenci113.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -59,21 +50,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="MyNotes\Ders12video118.txt" />
-    <Content Include="MyNotes\Ders12video117.txt" />
-    <Content Include="MyNotes\Ders12video116.txt" />
-    <Content Include="MyNotes\Ders12video115.txt" />
-    <Content Include="MyNotes\Ders12video114.txt" />
-    <Content Include="MyNotes\Ders12video113.txt" />
-    <Content Include="MyNotes\Ders12video112.txt" />
-    <Content Include="MyNotes\Ders12video111.txt" />
-    <Content Include="MyNotes\Ders12video110.txt" />
-    <Content Include="MyNotes\Ders12video109.txt" />
-    <Content Include="MyNotes\Ders12video108.txt" />
-    <Content Include="MyNotes\Ders12video107.txt" />
-    <Content Include="MyNotes\Ders12video106.txt" />
-    <Content Include="MyNotes\Ders12video105.txt" />
-    <Content Include="MyNotes\Ders12video104.txt" />
+    <Content Include="Not\Bolum_13_OOP_Siniflar-V121.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
