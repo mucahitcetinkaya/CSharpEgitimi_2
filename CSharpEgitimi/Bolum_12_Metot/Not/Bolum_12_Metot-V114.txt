@@ -1,0 +1,136 @@
+
+
+Bölüm 12 : Metot
+VÝDEO 114 Metot parametrelerinde varsayýlan deðer atama iþlemi
+
+
+        static void Main(string[] args)
+        {
+
+            /*
+
+                Bölüm 12 Metot VÝDEO 114 Metot parametrelerinde varsayýlan deðer atama iþlemi
+
+            */
+
+            /*
+            
+            Ogrenci114 den geldik
+
+            not3 ü silince hata veriyor
+            parametre olarak istiyor ama deger yok içinde ondan dolayý
+            default olarak deger atamamýz gerekiyor
+            O.OgrenciPuanHesaplama(ad, soyAd, not1, not2);
+            bu zorunlulugu kaldýrmak için Ogrenci114 class ýna gidelim 
+            OgrenciPuanHesaplama da ki zorunlulugu kaldýralým
+
+            Ogrenci114 den geldik
+
+                decimal not3 = 45
+
+            yazdýk metoda zorunlulugu kalduýrmýs olduk
+
+            O.OgrenciPuanHesaplama(ad, soyAd, not1, not2);
+
+            bunda olan hata da kalktý boylece
+            parametre girmeye calýsýrsak eger not de yazým sekli deðiþti
+            [decimal not3 = 45]
+            olarak yazmaya basladý tooltype de 
+             
+            direk not3 olarak yazýp debug yapalým noluyor
+            not3 e 30 yazdýk default olarak 45 atasan da 
+            üzerinde deger gelince mevcut degeri eziyor
+            30 olarak alýyor
+
+            not3 ü istemeden debug yapýnca 45 olarak alýyor
+
+            peki not3 = 45 den sonra , ile
+            decimal not4 yazarsak ne oluyor hata alýyoruz
+            sebebi default olarak degeri olan parametre hep sonra olmalý veya 
+            default degeri varsa sonra gelende default deger sahibi olmalý
+             
+            */
+
+            Ogrenci114 O = new Ogrenci114();
+
+            Console.Write("Ögrencinin Adýný giriniz : ");
+            string ad = Console.ReadLine();
+            Console.Write("Ögrencinin Soyadýný giriniz : ");
+            string soyAd = Console.ReadLine();
+            Console.Write("Ögrencinin birinci notunu giriniz : ");
+            decimal not1 = Convert.ToDecimal(Console.ReadLine());
+            Console.Write("Ögrencinin ikinci notunu giriniz : ");
+            decimal not2 = Convert.ToDecimal(Console.ReadLine());
+            Console.Write("Ögrencinin üçüncü notunu giriniz : ");
+            decimal not3 = Convert.ToDecimal(Console.ReadLine());
+
+            O.OgrenciPuanHesaplama(ad, soyAd, not1, not2);
+            //O.OgrenciPuanHesaplama(ad, soyAd, not1, not2, not3);
+
+        }
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace D_12_Metot
+{
+    public class Ogrenci114
+    {
+        public void OgrenciPuanHesaplama(string ad, string soyAd, decimal not1, decimal not2, decimal not3 = 45)
+        {
+            Console.WriteLine("Öðrencinin bilgileri aþaðýdaki gibidir...");
+            Console.WriteLine("Ad Soyad : {0} {1}", ad, soyAd);
+
+            //decimal ortalama = OrtalamaHesapla(not1, not2, not3);
+            //OrtalamaNotDegerlendir(ortalama);
+
+            OrtalamaNotDegerlendir(OrtalamaHesapla(not1, not2, not3));
+        }
+
+        void OrtalamaNotDegerlendir(decimal ogrenciOrtalama)
+        {
+            if (ogrenciOrtalama > 45)
+            {
+                Console.WriteLine("Ortalama deðeriniz : {0} - Geçtiniz!", ogrenciOrtalama);
+            }
+            else
+            {
+                Console.WriteLine("Ortalama deðeriniz : {0} - Kaldýnýz!", ogrenciOrtalama);
+            }
+        }
+
+        private decimal OrtalamaHesapla(decimal privateNot1, decimal privateNot2, decimal privateNot3)
+        {
+            //decimal ortalama = (privateNot1 + privateNot2 + privateNot3) / 3;
+            //return ortalama;
+
+            return (privateNot1 + privateNot2 + privateNot3) / 3;
+        }
+
+    }
+}
+
+
+/*
+ 
+þimdide parametrelerin biraz daha detaylarýna girelim
+bazen metot içerisinde istemiþ oldugumuz degerlerin hepsini kullanýcý bize vermez
+yada biz bunu uygulama içerisinden net olarak alamayabiliriz
+bu gibi durumlarda default bir deger atamamýz gerekebilir
+yani eger not 3 girilmediyse bunu default olarak 45 olarak gir diyebiliriz
+
+mesela program.cs e gidelim
+program.cs den geldik zorunlulugu kaldýrmak için
+
+decimal not3 = 45
+
+yazarsak eger default degeri 45 olarak atanýr 
+girilmese de olur zaten biz girmiþ oluyoruz
+
+program.cs e gidelim
+
+ 
+*/
