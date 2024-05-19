@@ -29,7 +29,7 @@ VÝDEO VÝDEO 112 Return Anahtar Kelimesi
 
 
 
-namespace D_12_Metot
+namespace Bolum_12_Metot
 {
     public class Ogrenci112
     {

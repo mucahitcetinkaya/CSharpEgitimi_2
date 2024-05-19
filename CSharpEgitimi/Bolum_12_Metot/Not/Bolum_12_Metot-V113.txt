@@ -4,7 +4,7 @@ Bölüm 12 : Metot
 VÝDEO 113 Parametre alan ve parametre gönderen metotlar
 
 
-namespace D_12_Metot
+namespace Bolum_12_Metot
 {
     public class Ogrenci113
     {

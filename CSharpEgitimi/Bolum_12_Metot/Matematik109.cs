@@ -4,7 +4,7 @@
 //using System.Text;
 //using System.Threading.Tasks;
 
-//namespace D_12_Metot
+//namespace Bolum_12_Metot
 //{
 //    public class Matematik109
 //    {

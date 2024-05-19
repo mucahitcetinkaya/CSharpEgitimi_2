@@ -66,7 +66,7 @@ VÝDEO 106 Main Metotu Ýnceleme
 
             using System.Threading.Tasks;
             kutuphanesi ise actýgýmýz projenin ismine karsýlýk geliyor yani namespace kýsmýna 
-            namespace D_12_Metot
+            namespace Bolum_12_Metot
             bu namaspace i baska bir uygulamada kullanabiliriz
 
             yani namespace tanýmý bir kutuphaneye denk geliyor
@@ -100,7 +100,7 @@ VÝDEO 106 Main Metotu Ýnceleme
             ve onun içinde de metot tanýmý Main metodu yani oldugunu görürürüz
 
 
-            namespace D_12_Metot
+            namespace Bolum_12_Metot
             {
                 internal class Program
                 {

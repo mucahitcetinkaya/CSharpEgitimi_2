@@ -24,7 +24,7 @@ VÝDEO 107 C# Nesne Yönelimli Programlama ( Kýsa Giriþ )
 
             yeni bir class eklemek için
             Solution Explorer kýsmýnda ki uygulamamýzýn üstüne gelelim calýsýtýgýmýz projeye
-            D_12_Metot sag týk Add e týklayýp Class kýsmýný secelim
+            Bolum_12_Metot sag týk Add e týklayýp Class kýsmýný secelim
             acýlan pencerede class secip isim verelim 
             Ogrenci adýný verdik
             uygulamamýzýn içerisinde bir Ogrenci.cs adýnda bir dosya olustu 
@@ -71,7 +71,7 @@ VÝDEO 107 C# Nesne Yönelimli Programlama ( Kýsa Giriþ )
 
 
 
-namespace D_12_Metot
+namespace Bolum_12_Metot
 {
     class Ogrenci
     {
@@ -96,7 +96,7 @@ kutuphaneleri de var default olarak eklendiler
 gerekli tanýmlarý burda yapýp 
 Program.cs de ornekleyip kullanacagýz
  
-namespace D_12_Metot
+namespace Bolum_12_Metot
 {
     internal class Ogrenci
     {

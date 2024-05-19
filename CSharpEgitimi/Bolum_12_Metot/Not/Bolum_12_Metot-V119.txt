@@ -67,7 +67,7 @@ VÝDEO 119 Metot içinde metot tanýmlama ( Local function )
 
 
 
-namespace D_12_Metot
+namespace Bolum_12_Metot
 {
     public class Deneme119
     {

@@ -1,4 +1,4 @@
-﻿//using D_12_Metot;
+﻿//using Bolum_12_Metot;
 
 namespace Bolum_12_Metot
 {
@@ -81,7 +81,7 @@ namespace Bolum_12_Metot
 
         //    yeni bir class eklemek için
         //    Solution Explorer kısmında ki uygulamamızın üstüne gelelim calısıtıgımız projeye
-        //    D_12_Metot sag tık Add e tıklayıp Class kısmını secelim
+        //    Bolum_12_Metot sag tık Add e tıklayıp Class kısmını secelim
         //    acılan pencerede class secip isim verelim 
         //    Ogrenci adını verdik
         //    uygulamamızın içerisinde bir Ogrenci.cs adında bir dosya olustu 

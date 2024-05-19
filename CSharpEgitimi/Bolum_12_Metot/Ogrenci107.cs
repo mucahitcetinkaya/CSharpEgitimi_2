@@ -6,7 +6,7 @@
 //using System.Text;
 //using System.Threading.Tasks;
 
-//namespace D_12_Metot
+//namespace Bolum_12_Metot
 //{
 //    class Ogrenci107
 //    {
@@ -30,7 +30,7 @@
 //gerekli tanımları burda yapıp 
 //Program.cs de ornekleyip kullanacagız
 
-//namespace D_12_Metot
+//namespace Bolum_12_Metot
 //{
 //    internal class Ogrenci
 //    {

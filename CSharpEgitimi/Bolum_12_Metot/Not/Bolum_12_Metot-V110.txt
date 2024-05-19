@@ -47,7 +47,7 @@ VÝDEO 110 Metot Ödev - 1
 
 
 
-namespace D_12_Metot
+namespace Bolum_12_Metot
 {
     public class Ogrenci110
     {
