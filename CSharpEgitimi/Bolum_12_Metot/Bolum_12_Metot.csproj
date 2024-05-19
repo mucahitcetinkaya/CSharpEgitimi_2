@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Deneme119.cs" />
     <Compile Include="Matematik109.cs" />
     <Compile Include="Ogrenci107.cs" />
     <Compile Include="Ogrenci108.cs" />
@@ -58,6 +59,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Not\Bolum_12_Metot-V119.txt" />
     <Content Include="Not\Bolum_12_Metot-V118.txt" />
     <Content Include="Not\Bolum_12_Metot-V117.txt" />
     <Content Include="Not\Bolum_12_Metot-V116.txt" />

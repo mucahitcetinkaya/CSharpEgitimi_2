@@ -920,13 +920,81 @@ namespace Bolum_12_Metot
 
         #endregion
 
+        #region VİDEO 119 Metot içinde metot tanımlama ( Local function )
+
+        //static void Main(string[] args)
+        //{
+
+        //    /*
+
+        //     Bölüm 12 Metot VİDEO 119 Metot içinde metot tanımlama ( Local function )
+
+        //    */
+
+        //    /*
+
+        //    bu özellik .net framework 4.7 ile geldi daha oncesinde bulamazsınız
+        //    standart kullanımda bizim metotlarımız vardı
+        //    bu metotlarımız bir class ın içerisinde barınıyordu
+        //    erişim belirleyicilerimiz vardı public private
+        //    biz metotlarımı hep ayrı ayrı tasarlayıp daha sonra metotları birbiri cagırarak kullanmıstık
 
 
+        //    bu yapıda biz metotların içinde metotlar tanımlayabiliyoruz aslında local function ın görevi bu 
+        //    ve o metodun özel metotlar oldugu sadece o metotun ulasabildiği metotlar tanımlayabiliyoruz
+        //    main dısında bir metot olusturalım
+
+        //    static kavramını görmek için yeni bir class olusturdum
+        //    Deneme119 orda notlar aldım 
+
+        //    normalde class ı cagırıp new yapman lazımdı static olunca gerek kalmadı
+        //    direk class ismi üzerinden metota ulasabildik
+
+        //    main dısında bir metot olusturalım
 
 
+        //    */
+
+        //    Deneme119.Selam();
+
+        //    LocalFunctionKullanimi(12, 22);
 
 
+        //}
 
+        ///*
+
+        //burda yaptıgımız bir metot hazırlamak statik
+        //metot içinde baska bir metot hazırladık 
+        //LocalFuntionKullanimi metodunu direk main içinde cagırabiliyoruz ve deger de atayabiliyoruz
+        //ama LocalFuntionKullanimi içindeki topla metotuna erişemiyoruz
+        //çünkü metotun yasam süresi ilgili scop kadardır
+        //LocalFuntionKullanimi içinde istediğimiz kadar bunu cagırabiliriz ama dısında cagıramıyoruz
+        //işte buna LocalFuntionKullanimi diyoruz
+
+        //metot içinde bir metot yazınca sadece o metot içinde cagırabiliyoruz kompleksliği azaltıyor
+
+        //mesela bir metot yazılır ama bu metot sadece o metot içinde kullanılıyordur baska bir yerde kullanılmıyordur
+        //her yerde gözükse hata alırsın 
+        //bunu engellemek için metot içinde metot kullanımı sadece scop içindekini ilgilendirir şeklinde yapmıslar
+
+        //*/
+
+        //static void LocalFunctionKullanimi(int sayi1, int sayi2)
+        //{ 
+        //    int toplamDeger = topla(sayi1, sayi2);
+
+        //    int topla(int gelenSayi1, int gelenSayi2)
+        //    {
+        //        return gelenSayi1 + gelenSayi2;
+        //    }
+
+
+        //    Console.WriteLine(toplamDeger);
+
+        //}
+
+        #endregion
 
     }
 }

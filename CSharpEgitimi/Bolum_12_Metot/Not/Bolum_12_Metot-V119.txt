@@ -1,0 +1,84 @@
+
+
+Bölüm 12 : Metot
+VÝDEO 119 Metot içinde metot tanýmlama ( Local function )
+
+             
+            bu özellik .net framework 4.7 ile geldi daha oncesinde bulamazsýnýz
+            standart kullanýmda bizim metotlarýmýz vardý
+            bu metotlarýmýz bir class ýn içerisinde barýnýyordu
+            eriþim belirleyicilerimiz vardý public private
+            biz metotlarýmý hep ayrý ayrý tasarlayýp daha sonra metotlarý birbiri cagýrarak kullanmýstýk
+
+
+            bu yapýda biz metotlarýn içinde metotlar tanýmlayabiliyoruz aslýnda local function ýn görevi bu 
+            ve o metodun özel metotlar oldugu sadece o metotun ulasabildiði metotlar tanýmlayabiliyoruz
+            main dýsýnda bir metot olusturalým
+
+            static kavramýný görmek için yeni bir class olusturdum
+            Deneme119 orda notlar aldým 
+
+            normalde class ý cagýrýp new yapman lazýmdý static olunca gerek kalmadý
+            direk class ismi üzerinden metota ulasabildik
+
+            main dýsýnda bir metot olusturalým
+
+             
+            */
+
+            Deneme119.Selam();
+
+            LocalFunctionKullanimi(12, 22);
+
+
+        }
+
+        /*
+         
+        burda yaptýgýmýz bir metot hazýrlamak statik
+        metot içinde baska bir metot hazýrladýk 
+        LocalFuntionKullanimi metodunu direk main içinde cagýrabiliyoruz ve deger de atayabiliyoruz
+        ama LocalFuntionKullanimi içindeki topla metotuna eriþemiyoruz
+        çünkü metotun yasam süresi ilgili scop kadardýr
+        LocalFuntionKullanimi içinde istediðimiz kadar bunu cagýrabiliriz ama dýsýnda cagýramýyoruz
+        iþte buna LocalFuntionKullanimi diyoruz
+
+        metot içinde bir metot yazýnca sadece o metot içinde cagýrabiliyoruz kompleksliði azaltýyor
+
+        mesela bir metot yazýlýr ama bu metot sadece o metot içinde kullanýlýyordur baska bir yerde kullanýlmýyordur
+        her yerde gözükse hata alýrsýn 
+        bunu engellemek için metot içinde metot kullanýmý sadece scop içindekini ilgilendirir þeklinde yapmýslar
+         
+        */
+
+        static void LocalFunctionKullanimi(int sayi1, int sayi2)
+        { 
+            int toplamDeger = topla(sayi1, sayi2);
+
+            int topla(int gelenSayi1, int gelenSayi2)
+            {
+                return gelenSayi1 + gelenSayi2;
+            }
+
+
+            Console.WriteLine(toplamDeger);
+
+        }
+
+
+
+namespace D_12_Metot
+{
+    public class Deneme119
+    {
+        public static void Selam()
+        {
+            Console.WriteLine("static metot newlemeden calýstý");
+        }
+    }
+}
+
+/*
+
+public class içinde
+puclic static bir metot olusturduk
