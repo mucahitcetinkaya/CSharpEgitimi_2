@@ -176,6 +176,213 @@
 
         #endregion
 
+        #region VİDEO 123 Sınıf Tanımlama ve inceleme - 2
+
+        //static void Main(string[] args)
+        //{
+        //    /*
+
+        //    Bölüm 13 OOP Sınıflar VİDEO 123 Sınıf Tanımlama ve inceleme - 2
+
+        //    */
+
+        //    /*
+
+        //    122 in devamı notlar karısmasın 123 e göre not alınacak
+        //    yeni bir musteri class ı acılacak
+
+        //    debug anlatımı
+
+        //    Musteri123 e breakpoint koyalım
+        //    calıstıralım 
+        //    M1 in üstine gelince null yazdıgını görüyoruz
+        //    neden M1 null yazıyor ona bakalım
+
+
+        //    Ram tarafını konusalım 
+
+        //    bir dikdörtgen çizelim 
+        //    -------------------------------------
+        //    I    Stack       I       Heap       I
+        //    I                I                  I
+        //    I                I                  I
+        //    -------------------------------------
+        //    I              Static               I
+        //    I                                   I
+        //    -------------------------------------
+
+
+        //    M1 in null kısmını stack kısımda bir nokta olarak dusunelim
+        //    biz nesnemizi program içinde cagırdıgımız da 
+        //    stack bolgesindeki M1 e ulasıyoruz
+        //    M1 demek stack bolgede bir pointer işaretçi olarak durması demek
+        //    = new Musteri dediğimiz de Musteri nesnemizin içerisinde bulunan
+        //    tüm alanların metotların bir paket olarak 
+        //    heap bölgede acılması demek
+
+        //    breakpoint i ilerlettiğimiz de M1 null olmayacak
+        //    new lenmıs olacak
+        //    M1 bir musteri yi gostermıs olacak
+        //    heap bolgede duran bir musteriyi işaret etmiş olacak
+        //    buna referans tipli bir davranıs deniyor
+
+        //    ilerlettiğimiz de ben artık null degilim diyor
+        //    benim işaret ettiğim bir bölge var diyor
+        //    oda
+        //    {NetFramework.D_13_OOP_Siniflar.Musteri122}
+        //    dir diyor
+        //    bunu ok kısmından actıgımız da ram uzerınde olan degerlere ulasabiliyoruz
+        //    henuz bir deger ataması yapmadıgımız için default degerler ile geliyor
+        //    string in default degeri null
+        //    int in default degeri 0 dır
+
+        //    programı ilerletip degerleri atalım ok kısmından tekrar bakalım degerler atandı
+        //    atanan degerler
+        //    heap bolgedeki kısımda tutuluyor
+        //    buda Musteri122 nin field kısmında olan kısma deger ataması yapmıs oluyosun
+
+        //    buraya ulasmak için M1 i kullanıyoruz
+
+        //    bir Musteri daha tanımlayalım M2 diyelim
+
+        //    M2 ye de M1 i atayalım
+
+        //    bu sefer ne olacak
+
+        //    M2 de stack kısımda olusacak
+
+        //    ama heap bolgede işaret ettiği yer M1 ile aynı yer olacak
+        //    M2 için tekrar heap bolgede bir yer olusturmayacak
+        //    ortak yerleri kullanacak
+
+        //    uzaktaki birinin bir vazoyu gosterdiğini dusunun
+        //    baska bir kişi gelince aynı seyi göstermesi için
+        //    onunda kişiyi degil vazoyu göstermesi gerekir
+
+        //    2. kişi 1. kişiyi gösterirse mantıklı olmaz 
+        //    amac vazo vazoyu gostermesi gerekir
+
+        //    vazoyu degistirip baska bişey koyarsan oraya gosterilen yer aynı 
+        //    o zaman deger degişir
+
+        //    1 kişiyi kaldırdım yine vazoyu gosterir
+        //    2 sinide kaldırırsak neyi gosterdiğini bulamayız
+
+        //    Musteriden yeni bir new leme yapalım
+
+        //    sistemde bir pointer daha olusturduk ama bu M2 oldu
+        //    bunun ozel bir degeri olmayacak
+        //    M1 neyi gosteriyorsa onu gosterecek
+
+        //    M1 neye bakıyorsa sende ona bak diyoruz
+
+        //    ben m1 veya m2 uzerınden bir degeri degistirdiğim de 
+        //    degerin degismesi gerekir yapalım
+
+
+        //    kurgulayarak gidelim kişi olarak anlatacagız sizde öyle yapın
+        //    nesne yonelimli programlayamayı ogrenırken 
+        //    gercek hayattan ornekleri bolca kullanmalıyız
+        //    cunku biz gercek hayatta da nesne yönelimli bir dunya da yasıyoruz
+        //    telefon bilgisayar vs hepsi birer nesne aslında
+
+        //    M1 nesnesi olusurken
+        //    M1 null olarak duruyor new ile orneklenmesı gerekir
+        //    new lenmediği için ondan dolayı null
+
+        //    diyoruz ki suraya bak baktıgında new lenme işlemi oldugunda ornek olusmus oluyor
+        //    sonra diyoruz ki oraya su degerleri yaz
+
+        //    sonra M2 olusacak once null new lenmesı gerekiyor
+        //    M2 e diyoruz ki m1 in yanına git neye bakıyorsa aynı yere bak
+
+        //    şimdi biz m2 e diyoruz ki isim degerini guncelle
+        //    ram e gidip guncelleyecek m1 bu guncellemeyi gorur aynı yere bakıyorlar
+        //    m1 e desek oda aynı işlemi yapacak bu sefer de m2 gorecek
+
+
+        //    M2 ve m1 den degisiklik yapıp degistirdik
+        //    degerler degisti
+
+
+        //    burası referans tipli davranısın anlatımı 
+        //    class lar referans tiplidir.
+
+        //    ---------------------------------------------
+
+        //    birde soyle yapalım M2 ve M1 yi null a alıp yani bos a cekelim
+        //    sonrada atama işlemi yapalım o zaman ne olacak
+
+        //    şimdi buradaki mantıgı anlatacagız
+        //    bellekten dusmeler nasıl oluyor
+
+        //    garbage collector çöp toplama nasıl işliyor
+
+        //    garbage collector dedıgımız bir mantık var
+        //    bizim burda o mantıga dokunmamız anlamsız
+        //    .net framework garbage collector dediğimiz bir yapı ile ram den dusen artık atıl kalan 
+        //    nesneleri temizliyor bu temizleme mantıgından biraz bahsedelim
+
+        //    M2 null kısmına breakpoint koyalım
+        //    m2 e diyoruz ki sen ortamdan cekil
+        //    m2 e diyoruz ki sen artık buraya bakma
+        //    m2 e ulasınca null gorecegız bir yere bakmıyor yani
+
+        //    benım degerım m1 in uzerınde 
+        //    yanı benım degerımı heap bolgede degerımı stack bolgede duran
+        //    bir pointerim hala tutuyor
+        //    yani ben dataya m1 uzerınden hala erişebiliyorum
+        //    peki ben m1 i de ortamdan kaldırdıgımda 
+        //    yani m1 i de null yaptıgımız da 
+
+        //    artık bellekte o bilgiyi tutan bir pointerim olmuyor
+        //    işte tam bu boktada arkada bir yapı calısıyor
+
+        //    heap bolgede bir deger pointersiz kalırsa
+        //    yanı onu gosteren bir deger kalmaz ise
+
+        //    bu deger ram den duser
+
+        //    arkada atıl kalan datayı alan garbage collector yapısı bunu siler
+
+        //    m2.isim e ulasmaya calıstıgımız da null hatası alırız
+        //    m2 nin musteri nesnesi oldugunu biliyorum
+        //    ama senın bana gosterdıgın deger acılmamıs diyor onun hatasını verıyor
+
+        //    boyle bir hata alıyorsanız = new dememıssınızdır
+
+        //    bir sonraki videomuz da bir nesnenin olusumunda bizim arkada görmediğimiz ama calısan bir yapı var 
+        //    m1 new musteri dedigimizde field lerımız default bir deger alır demıstık yapıcı metot dedıgımız bir
+        //    kavram var orda ben istiyorum ki default deger almasın
+        //    mesela her musterinin tc si 111 olsun ki böyle
+        //    ihtiyaclar bazen ortaya cıkıyor bir nesne olusurken o nesnenin degerlerini kendımız atamak isteriz
+        //    sistemin default degerlerinin gelmesini istemiyoruz o nesnenin içine girip metotu kurcalayacagız bir
+        //    sonraki derste constructor yapıcı metotlara bakacagız
+
+
+        //    */
+
+        //    Musteri123 M1 = new Musteri123();
+        //    M1.TcKimlikNumarasi = "12345678910";
+        //    M1.Isim = "Mücahit";
+        //    M1.SoyIsim = "Çetinkaya";
+        //    M1.Cinsiyet = 717770001;
+
+        //    Musteri123 M2 = M1;
+
+        //    M2.Isim = "Muhammet";
+        //    M1.TcKimlikNumarasi = "122544013250";
+
+        //    M2 = null;
+        //    M1 = null;
+
+        //    string isim = M2.Isim;
+
+
+
+        //}
+
+        #endregion
 
 
 
