@@ -49,6 +49,7 @@
     <Compile Include="Ogrenci110.cs" />
     <Compile Include="Ogrenci111.cs" />
     <Compile Include="Ogrenci112.cs" />
+    <Compile Include="Ogrenci113.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -56,6 +57,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Not\Bolum_12_Metot-V113.txt" />
     <Content Include="Not\Bolum_12_Metot-V112.txt" />
     <Content Include="Not\Bolum_12_Metot-V111.txt" />
     <Content Include="Not\Bolum_12_Metot-V110.txt" />

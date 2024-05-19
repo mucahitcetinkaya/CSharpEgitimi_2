@@ -1,0 +1,103 @@
+
+
+Bölüm 12 : Metot
+VÝDEO 113 Parametre alan ve parametre gönderen metotlar
+
+
+namespace D_12_Metot
+{
+    public class Ogrenci113
+    {
+        public void OgrenciPuanHesaplama(string ad, string soyAd, decimal not1, decimal not2, decimal not3)
+        {
+            Console.WriteLine("Öðrencinin bilgileri aþaðýdaki gibidir...");
+            Console.WriteLine("Ad Soyad : {0} {1}", ad, soyAd);
+
+            //decimal ortalama = OrtalamaHesapla(not1, not2, not3);
+            //OrtalamaNotDegerlendir(ortalama);
+
+            OrtalamaNotDegerlendir(OrtalamaHesapla(not1, not2, not3));
+        }
+
+        void OrtalamaNotDegerlendir(decimal ogrenciOrtalama)
+        {
+            if (ogrenciOrtalama > 45)
+            {
+                Console.WriteLine("Ortalama deðeriniz : {0} - Geçtiniz!", ogrenciOrtalama);
+            }
+            else
+            {
+                Console.WriteLine("Ortalama deðeriniz : {0} - Kaldýnýz!", ogrenciOrtalama);
+            }
+        }
+
+        private decimal OrtalamaHesapla(decimal privateNot1, decimal privateNot2, decimal privateNot3)
+        {
+            //decimal ortalama = (privateNot1 + privateNot2 + privateNot3) / 3;
+            //return ortalama;
+
+            return (privateNot1 + privateNot2 + privateNot3) / 3;
+        }
+
+    }
+}
+
+/*
+
+yeni bir metot olusturalým 
+
+OgrenciPuanHesaplama daki if sartlarýný metot olarak yazacagýz cagýracagýz
+
+eriþim beliryecisi yazmazsak eger default olarak private anlar ortalama
+
+        void OrtalamaNotDegerlendir(decimal ogrenciOrtalama)
+        {
+            if (ogrenciOrtalama > 45)
+            {
+                Console.WriteLine("Ortalama deðeriniz : {0} - Geçtiniz!", ogrenciOrtalama);
+            }
+            else
+            {
+                Console.WriteLine("Ortalama deðeriniz : {0} - Kaldýnýz!", ogrenciOrtalama);
+            }
+        }
+
+private bir metot hazýrladýk decimal bir parametre istedik
+
+ OgrenciPuanHesaplama a gidip yeni yazdýgýmýz metodu cagýralým 
+
+OrtalamaNotDegerlendir yazdýgýmýz da tooltype olarak bizden istedikleri geliyor 
+decimal OgrenciOrtalama yazýyor
+bu metot bizden decimal bir deger istiyor 
+adýnýn illa OgrenciOrtalama olmasýna gerek yok 
+sadece içine yazacagýn decimal deger olmak zorunda
+
+bir önceki derste bosuna degisken tutmanýn zarar olacagýndan bahsemiþtik
+
+        decimal ortalama = OrtalamaHesapla(not1, not2, not3);
+
+bunu boyle yazýyoruz sadece metot içinde degýsken adýný kullanýyoruz herhangi bir iþlemden geçmiyor if else gibi
+
+bunun yerýne metot içinde ortalama degiskenýn yaptýgý iþi yazalým 
+metot içinde metot cagýrmýs olacagýz
+
+            OrtalamaNotDegerlendir(OrtalamaHesapla(not1, not2, not3));
+
+bastan iþleyiþi anlatalým 
+
+OgrenciPuanHesaplama a gidecek degerleri alacak
+decimal ortalama = OrtalamaHesapla(not1, not2, not3); a gelecek
+OrtalamaHesapla metoduna gidip iþlemleri yapýp return edecek sonuc ortalama degiskenýne gelecek
+ortalama deðiþkenýni de gittik 
+
+OrtalamaNotDegerlendir bu metoda verdik if sartlarýný saglamak için
+
+o zaman degiskený ortadan kaldýrmak için metot içinde metot kullandýk
+
+            OrtalamaNotDegerlendir(OrtalamaHesapla(not1, not2, not3));
+
+OrtalamaHesapla 3 degeri aldý decimal olarak deger gönderdi
+OrtalamaNotDegerlendir de decimal veri gönderiyor ikiside anlasmýs olacak
+
+ 
+*/

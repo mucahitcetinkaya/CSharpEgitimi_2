@@ -452,6 +452,20 @@ namespace Bolum_12_Metot
 
         #endregion
 
+        #region VİDEO 113 Parametre alan ve parametre gönderen metotlar
+
+        //static void Main(string[] args)
+        //{
+
+        //    /*
+
+        //        Bölüm 12 Metot VİDEO 113 Parametre alan ve parametre gönderen metotlar
+
+        //    */
+
+        //}
+
+        #endregion
 
 
 
