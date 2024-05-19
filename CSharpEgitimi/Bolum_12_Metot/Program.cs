@@ -425,6 +425,32 @@ namespace Bolum_12_Metot
 
         #endregion
 
+        #region VİDEO 112 Return Anahtar Kelimesi
+
+        //static void Main(string[] args)
+        //{
+
+        //    /*
+
+        //        Bölüm 12 Metot VİDEO 112 Return Anahtar Kelimesi
+
+        //    */
+
+        //    /*
+
+        //    Metotlarımız bir değer olusturduktan sonra bu değeri onu cagıran noktaya geri gönderebilir
+        //    geri gönderme işlemin de return anahtar kelimesini kullanırız
+        //    bu return anahtar kelimesi mevcut olan degeri alıyor 
+        //    ve metodun dısarısına gönderiyor
+
+        //    Ogrenci112 class ında notlar yazıyor burda herhangi bir işlem yapmaya gerek olmadı
+        //    Ogrencı111 dan aldık kodları
+
+        //    */
+
+        //}
+
+        #endregion
 
 
 

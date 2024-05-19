@@ -1,0 +1,105 @@
+
+
+Bölüm 12 : Metot
+VÝDEO VÝDEO 112 Return Anahtar Kelimesi
+
+
+ static void Main(string[] args)
+        {
+
+            /*
+             
+                Bölüm 12 Metot VÝDEO 112 Return Anahtar Kelimesi
+             
+            */
+
+            /*
+             
+            Metotlarýmýz bir deðer olusturduktan sonra bu deðeri onu cagýran noktaya geri gönderebilir
+            geri gönderme iþlemin de return anahtar kelimesini kullanýrýz
+            bu return anahtar kelimesi mevcut olan degeri alýyor 
+            ve metodun dýsarýsýna gönderiyor
+            
+            Ogrenci11 class ýnda notlar yazýyor burda herhangi bir iþlem yapmaya gerek olmadý
+            Ogrencý110 dan aldýk kodlarý
+             
+            */
+
+        }
+
+
+
+namespace D_12_Metot
+{
+    public class Ogrenci112
+    {
+        public void OgrenciPuanHesaplama(string ad, string soyAd, decimal not1, decimal not2, decimal not3)
+        {
+            Console.WriteLine("Öðrencinin bilgileri aþaðýdaki gibidir...");
+            Console.WriteLine("Ad Soyad : {0} {1}", ad, soyAd);
+            //decimal ortalama = (not1 + not2 + not3) / 3; 
+            decimal ortalama = OrtalamaHesapla(not1, not2, not3);
+            if (ortalama > 45)
+            {
+                Console.WriteLine("Ortalama deðeriniz : {0} - Geçtiniz!", ortalama);
+            }
+            else
+            {
+                Console.WriteLine("Ortalama deðeriniz : {0} - Kaldýnýz!", ortalama);
+            }
+
+        }
+
+
+        private decimal OrtalamaHesapla(decimal privateNot1, decimal privateNot2, decimal privateNot3)
+        {
+            //decimal ortalama = (privateNot1 + privateNot2 + privateNot3) / 3;
+            //return ortalama;
+
+            return (privateNot1 + privateNot2 + privateNot3) / 3;
+        }
+
+    }
+}
+
+
+/*
+ 
+burda bir return kelimesi kullandýk bunu uygulama uzerýnden anlatalým
+
+            decimal ortalama = OrtalamaHesapla(not1, not2, not3);
+
+burda bir metot cagýrdýk ve degerlerimi girdik
+uygulama bizim girdiðimiz degerleri ortalama hesapla metoduna gönderdi
+deger karsýtlarý olarakta 
+        private decimal OrtalamaHesapla(decimal privateNot1, decimal privateNot2, decimal privateNot3)
+
+daha sonra private metoda girdi OrtalamaHesapla içine girdi
+bir iþlemden geçirdi
+sonra ortalama degiskený uzerýnde saklandý
+sonrada ortalama degiskeni return ile metodun dýsarýsýna gönderildi
+metodun geri dönus tipi decimal 
+yani return da decimal olarak dönüyor
+döndugu kýsýmda cagýran nokta 
+yani public metotda olan kýsým OgrenciPuanHesaplama
+            decimal ortalama = OrtalamaHesapla(not1, not2, not3);
+burda da ortalama degýskenýne atýlmýs oldu return oldu yaný
+
+peki burda kodu azaltmak istersek ne yapmamýz lazým
+            decimal ortalama = (privateNot1 + privateNot2 + privateNot3) / 3;
+burda bir deger saklanýyor ama iþlem yapýlmýyor gereksiz bir veri tipi olusturma var
+bunun yerýne aynýsýný return ile direk yollayabiliriz.
+ 
+            return (privateNot1 + privateNot2 + privateNot3) / 3;
+
+zaten metodun donus tipi decimal ordan anlasýlýyor ne oldugu
+
+iþlem hesaplanacak ordan yapýlan deger decimal olarak cagrýlan yere return edilecek
+
+not olarak
+uygulama içerisinde ortalama degiskený uzerýnde herhangi bir iþlem yapýlacak olsaydý eger 
+boyle de yazabilirdik ama herhangi bir iþlem yapmýyoruz
+return da ayný iþlemý yapýyor ortalama degiskenýný baska bir yerde kullanmýyoruz
+bundan dolayý böyle yaptýk
+
+*/
