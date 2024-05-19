@@ -1,0 +1,166 @@
+
+
+Bölüm 12 : Metot
+VÝDEO 115 Parametrelerde ref ve out anahtar sözcüklerinin kullanýmý
+
+
+            Heap ve Stack Kavramý
+
+            bunlar ram üzerinde olan 2 alanýmýz
+            stack alanýnda value alanýmýz yer alýyor
+            int byte short double gibi
+            heap alanýnda daha komplesk karmasýk olanlar class larýmýz yer alýyor
+
+            örnek olarak
+            int a = 5; int tipinde a adýnda 
+            bir deðiþken olusturdugumuz da 
+            ram de olanlar 
+            stack de bir alan olusturuluyor container olusturulur
+            buna a adýný veriyor içine 5 degerini atýyor
+            ve sonra baska bir degýsken olusturup içine a yý atalým
+            int b = a;
+            stack alanýnda yeniden b için bir alan olusturulur ve içine 5 degeri atýlýr
+
+            heap alanýnda ise
+            User sýnýfýndan u1 adýnda bir nesne olusturduk new ledik yani
+            User u1 = new User();
+
+            bunu yazdýgýmýz da heap alanýnda bir alan olusuyor
+
+            User tipini ve u1 ini heap alanýnda tutuyoruz
+            ama
+            stack alanýnda bir referans ediniyoruz bunu uygulama kendýsý veriyor
+            bu referans heap alanýndaki alaný iþaret ediyor
+            bir nesne olustugunda olusan heap alanýndaki yeri ifade ediyor
+
+            sonra da User dan bir nesne daha olusturalým ama new keyword unu kullanmayalým
+            u2 içine u1 i attýk 
+            User u2 = u1;
+            tekrar bir nesne üretmedik sadece içine atma iþlemi oldu
+
+            bu sefer stack alanýnda yine u2 alaný olustu ama
+            heap alanýnda ayný alaný gösteriyor
+
+            baska bir videonun notlarý
+            bunlar ram üzerinde olan 2 alanýmýz
+            stack alanýnda value alanýmýz yer alýyor stack = deger tipi
+            sbyte byte short ushort int uint long ulong
+            float double decimal bool char enum struct
+            bunlardan birisi varsa deðer tipi kullanýyoruz demektir.
+
+            diziler classlar referans tiplidir
+            heap alanýnda daha komplesk karmasýk olanlar class larýmýz yer alýyor
+
+            int sayi1 = 1;
+            int sayi2 = sayi1;
+
+            dediðimiz de stack alanýnda 2 tane alan acýlýr sayi1 ve sayi2 nin deðeri 1 olur
+
+            sayi2 = 2; dersek sayi2 2 olarak guncellenir
+
+            referans tipliler
+
+            bir dizi olusturalým
+
+            var dizi1 = new int[] {1,2}; burda new leme var heap giriyor iþin içine
+            degisken adý dizi1 stackte tutulurken deðerleri heap kýsmýnda tutulur
+
+            var dizi2 = dizi1; yazdýgýmýzda stack alanýnda dizi2 acýlýr ama heap kýsmýnda ayný yeri iþaret eder
+            bir alan referans numarasý verdiðimiz için referans tipli diyoruz
+            heap alanýnda bulundugu alanýnda bir kodunu atýyor kendisi burayý göster diye
+            tek bir yerden herkes faydalanabiliyor
+
+
+
+            /*
+            
+            Bölüm 12 Metot VÝDEO 115 Parametrelerde ref ve out anahtar sözcüklerinin kullanýmý
+             
+            */
+
+            /*
+            
+            Ref ve Out anahtar sözcüklerinde eski .net framework versiyonlarýnda 1 fark vardý
+            mevcut framework sürümü 7.0 olanlar bu farktan etkilenmeyecektir.
+             
+            bir metot yazarak iþlemlerimize baslayalým
+
+            hoca bir videodan bahsediyor ama öyle bir video yoktu netten arastýrdým bende ne nedir diye
+
+            notlarda yazýyor
+
+            stack ve heap yapýlarýndan bahsetmýs ama videosu yok
+            stack bolumunde bir int degisken olusturup içerisine bir deger atayýp bunun bir deger tipli bir davranýs oldugunu
+            heap bolumunde ise referans durdugunu ortak yerlere bakan yerler olarak söz etmiþ
+
+            kodun anlatýmý
+
+            stack de sayi1 degiskený olustu içinde 0 var 
+            sonra bir metot olusturduk parametre verdik 
+
+            DegerAtaRef metoduna ref ile degerini aktarýrken
+            gelenDeger adýnda bir degisken daha olustu
+            degeri 0 olarak
+            buda normal sartlarda stack bolgede olusmasý gerekiyordu fakat
+            biz orda ref kullandýgýmýz için heap bolgede olustu
+
+            standart davranýslarýnda ikiside degisken oldugu için
+            stack bölgede olusmalarý ve üzerlerindeki degerleri 0 olmasý gerekiyordu
+            biz ref ile parametreye deðeri aktardýgýmýz için
+            bizim ref anahtar sozcugumuz bunlarý deger tipi davranýstan cýkarttýlar
+            ikisinin de ortak olarak heap bolgede degeri görmesini sagladý
+
+            ref ve out anahtar sozcukleri aslýnda deger tipli davranýsa sahip olan
+            deðiþkenlerin referans tipli degisken olmasýna olanak saglýyor
+
+            sayi1 0 ken gelenDeger 10 
+            bunlarý ref ile birbirine atadýgýmýz da 
+            ayný yere bakacaklarý için
+            sayi1 de 10 oluyor
+
+
+            aralarýndaki fark eger ben degiskenýn içerisinde ref ile iþaretlenmiþ bir degisken atamasý yapacaksam
+            metodu caðýrýp degisken atamasýný yapacagým noktada 
+            int sayi1 = 0; yani burda 
+            atamak istediðim degiskenýn refte bir deger almasý gerekiyordu
+            out kullanýmýnda ise deger almazsa hata veriyordu
+
+            yani 7 den oncesýnde
+            int sayi1;
+            DegerAtaOut(out sayi1);
+
+            static void DegerAtaOut(out int gelenDeger)
+            {
+                gelenDeger = 10;
+            }
+            boyle bir taným yapsaydýk
+            hata veriyordu artýk bu hata ortadan kalktý
+
+            framework 7.0 dan sonra ref veya out degiskenler deger alýp almasa da biþey farketmiyor
+
+            bu anahtar kelimeler onemlý 
+            uygulamarýn içerisinde cok sýk kullanmasakta bazý noktalarda degiskenýn butunlugunu bozmamak için
+            ilgili degiskenýn bir kopyasýný olusturmak yerine degiskený takip etmek için
+            ref ve out anahtar sozcuklerýnden faydanalýyoruz
+
+            
+            */
+
+            int sayi1 = 0;
+
+            DegerAtaRef(ref sayi1);
+
+
+
+
+        }
+
+        static void DegerAtaRef(ref int gelenDeger)
+        {
+            gelenDeger = 10;
+        }
+
+        static void DegerAtaOut(out int gelenDeger)
+        {
+            gelenDeger = 10;
+        }
