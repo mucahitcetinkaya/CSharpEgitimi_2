@@ -319,6 +319,48 @@ namespace Bolum_12_Metot
 
         #endregion
 
+        #region VİDEO 110 Metot Ödev - 1
+
+        //static void Main(string[] args)
+        //{
+
+        //    /*
+
+        //    Bölüm 12 Metot VİDEO 110 Metot Ödev - 1
+
+        //    */
+
+        //    /*
+
+        //    Main metodunda bir ögrencinin adını soyadını 3 adet ders notunu alacaksınız
+        //    Almış oldugunuz bu bilgileri Ogrenci sınıfı içinde 
+        //    OgrenciPuanHesapla adında bir metoda parametre olarak verip bilgisini ekrana cıkartacaksınız
+        //    3 adet notu toplayıp ortalama alacak ekrana yazacak
+        //    ortalama sonuc
+        //    45 den büyükse geçti
+        //    45 den küçükse kaldı
+
+
+        //    */
+
+        //    Ogrenci110 O1 = new Ogrenci110();
+
+        //    Console.Write("Ögrencinin Adını giriniz : ");
+        //    string ad = Console.ReadLine();
+        //    Console.Write("Ögrencinin Soyadını giriniz : ");
+        //    string soyAd = Console.ReadLine();
+        //    Console.Write("Ögrencinin birinci notunu giriniz : ");
+        //    decimal not1 = Convert.ToDecimal(Console.ReadLine());
+        //    Console.Write("Ögrencinin ikinci notunu giriniz : ");
+        //    decimal not2 = Convert.ToDecimal(Console.ReadLine());
+        //    Console.Write("Ögrencinin üçüncü notunu giriniz : ");
+        //    decimal not3 = Convert.ToDecimal(Console.ReadLine());
+
+        //    O1.OgrenciPuanHesaplama(ad,soyAd,not1,not2,not3);
+
+        //}
+
+        #endregion
 
 
 

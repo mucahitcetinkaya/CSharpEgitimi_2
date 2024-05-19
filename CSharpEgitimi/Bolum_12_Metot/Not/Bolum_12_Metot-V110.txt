@@ -1,0 +1,69 @@
+
+
+Bölüm 12 : Metot
+VÝDEO 110 Metot Ödev - 1
+
+
+ static void Main(string[] args)
+        {
+
+            /*
+            
+            Bölüm 12 Metot VÝDEO 110 Metot Ödev - 1
+             
+            */
+
+            /*
+             
+            Main metodunda bir ögrencinin adýný soyadýný 3 adet ders notunu alacaksýnýz
+            Almýþ oldugunuz bu bilgileri Ogrenci sýnýfý içinde 
+            OgrenciPuanHesapla adýnda bir metoda parametre olarak verip bilgisini ekrana cýkartacaksýnýz
+            3 adet notu toplayýp ortalama alacak ekrana yazacak
+            ortalama sonuc
+            45 den büyükse geçti
+            45 den küçükse kaldý
+
+            
+            */
+
+            Ogrenci110 O1 = new Ogrenci110();
+
+            Console.Write("Ögrencinin Adýný giriniz : ");
+            string ad = Console.ReadLine();
+            Console.Write("Ögrencinin Soyadýný giriniz : ");
+            string soyAd = Console.ReadLine();
+            Console.Write("Ögrencinin birinci notunu giriniz : ");
+            decimal not1 = Convert.ToDecimal(Console.ReadLine());
+            Console.Write("Ögrencinin ikinci notunu giriniz : ");
+            decimal not2 = Convert.ToDecimal(Console.ReadLine());
+            Console.Write("Ögrencinin üçüncü notunu giriniz : ");
+            decimal not3 = Convert.ToDecimal(Console.ReadLine());
+
+            O1.OgrenciPuanHesaplama(ad,soyAd,not1,not2,not3);
+
+
+
+        }
+
+
+
+namespace D_12_Metot
+{
+    public class Ogrenci110
+    {
+        public void OgrenciPuanHesaplama(string ad, string soyAd, decimal not1, decimal not2, decimal not3)
+        {
+            Console.WriteLine("Öðrencinin bilgileri aþaðýdaki gibidir...");
+            Console.WriteLine("Ad Soyad : {0} {1}", ad, soyAd);
+            decimal ortalama = (not1 + not2 + not3) / 3;
+            if (ortalama > 45)
+            {
+                Console.WriteLine("Ortalama deðeriniz : {0} - Geçtiniz!", ortalama); 
+            }
+            else
+            {
+                Console.WriteLine("Ortalama deðeriniz : {0} - Kaldýnýz!", ortalama);
+            }
+        }
+    }
+}
