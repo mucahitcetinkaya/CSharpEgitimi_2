@@ -384,6 +384,203 @@
 
         #endregion
 
+        #region VİDEO 124 Yapıcı Metot Kullanımı
+
+        //static void Main(string[] args)
+        //{
+        //    /*
+
+        //    Bölüm 13 OOP Sınıflar VİDEO 124 Yapıcı Metot Kullanımı
+
+        //    */
+
+        //    /*
+
+        //    biz musteri new musteri dediğimizde sistem
+        //    stack bolgeden heap bolgeye datayı cıkartırken
+        //    default degerler ile cıkartmıs oldugunu soylemıstık
+        //    ve bunu nasıl duzeltebilecegımızden bahsedecektik
+
+        //    tekrar hatırlayalım
+
+        //    Musteri124 M1 = new Musteri124(); e 
+        //    breakpoint koyalım
+        //    calıstıralım uygulamayı
+        //    buraya geldıgınde M1 in uzerıne gelınce null olarak yazıyor
+        //    gecınce nesneyi new lemıs orneklemıs oluyor
+        //    stack bolgede bir point tutuyor
+
+        //    sonra M1. diyip field larını doldurunca field lar heap bolgede tutuluyor
+        //    nesne üzerinden bir işlem yaptıgında heap bolgeyi işaret etmiş oluyosun
+
+        //    nesne olusturdugunda new Musteri() deki () parantezler
+        //    bir nesne olustur ama default degerler ile olustur demek oluyor
+
+        //    default degerleri degıstırmek için tam bu noktada 
+        //    Constructor yapıcı metot olarak bilinen bir metot var
+        //    tam olarak bu noktada calısıyor
+
+        //    bu metodun detayına inmek için 
+        //    Musteri124.cs i olusturalım gerekli field alanlarını yazalım 
+        //    erişim belirleciyi kısımlarını public yapalım
+
+        //    1. not oraya gidelim
+        //    Musteri124 den geldik 1.not bitişi
+
+        //    2. not başlangıc
+
+        //    debug edelim
+
+        //    gerekli nesneyi new leyelim
+        //    field alanlarını dolduralım
+
+        //    Musteri124 e breakpoint koyalım
+        //    TcKimlikNumarası null mı olacak ctor da verdiğimiz deger mi gelecek
+        //    ona bakalım
+
+        //    ilk calısıtında M1 null ornekleme olmadı
+        //    ilerletelim
+        //    f10 üstünden geçiyor f11 içine giriyor
+
+        //    f11 ile gidince ctor içine gitti ilk yapıcı metot calıstı
+        //    f10 ile devam ettik sonra
+        //    ilk ctor calıstıgı için oradaki degeri aldı
+        //    ilk default ayarını degistirmiş olduk
+        //    diger kısımlar default ayarları duruyor onlara bişey vermedik
+
+        //    Musteri124() deki () parantezler bir metodu gösteriyor demiştik
+        //    bu bir metodu gosteriyorsa ve ben bunu ezdiysem
+        //    ezmekten kastımız su var olan bir metodun terkar üzerinden 
+        //    geçip bunu kullan diyoruz
+
+        //    bu konuyu virtual metotlarda goreceksınız burda olay ezmek kısmını anlamak
+
+        //    var olan bir yapı var ben buna mudahale etmek istiyorum
+        //    var olan seklini bozmak ezmektir zaten ve ben bunu ezdim
+
+        //    f11 ile içeriye dogru gittiğimde yapıcı metota gitti
+        //    musteri class ının içerisindeki ctor a gitti
+
+        //    tckimliknumarası default degeri degil benim verdiğim degeri aldı
+
+        //    f10 ile devam edince nesne orneklendı default ayarlarını degıstırmıs olduk
+
+        //    bu işlemi yapıcı metot olayını
+        //    Musteri124() deki () parantezler arasında yapıyor
+        //    nesne orneklenmeden once yapıcı metotlar calısıyor
+        //    default degerleri degistiriyor boylece
+
+        //    peki bizim birden fazla yapıcı metodumuz olabilir mi 
+        //    hatırlarsanız metotlar kısmında bir metot ismi ile 
+        //    overload asırı yukleme yapmıstık
+
+        //    toplama int + int 
+        //    toplama string + string
+        //    toplama decimal + decimal gibi
+
+        //    ben istiyorum ki benım musteri orneklenirken 
+        //    orneklenme asamasında benden parametre olarak bazı degerler istesin
+        //    ben o bazı degerleri verdiğimde o degerlere göre nesne orneğini alayım
+        //    vermezsem default degerleri ile belleğe cıksın 
+
+        //    bunun için Musteri124 e gidelim 
+
+        //    2. not baslangıc
+        //    2. not bitiş Musteri124 den geldik
+
+        //    3. not baslangıc
+
+        //    gerekli yapıcı metotları olusturduk
+        //    sımdı burda yenıden new leyeme kalktıgımız da 
+        //    Musteri124 M1 = new Musteri124( yazdıgımız da 
+        //    4 tane overload cıkıyor yapıcı metotlara biz yazdık bunları
+        //    bize diyor ki 
+        //    dilersen bos bırak default degerler gelsin
+        //    dilersen sadece tckimlikno ver
+        //    dilersen tc ile isim
+        //    dilersen tc isim soyisim ver
+
+        //    mesela burda da deger vermek için 
+        //    string _tcKimlikNo, string isim diyor
+        //    string sekilde tc verdiyor string sekilde isim yaz diyor
+
+        //    Musteri124 M1 = new Musteri124("123123123","Mücahit");
+        //    a breakpoint koyalım debug yapalım
+        //    f11 ile devam edelim parametredeki metotu yakalamak için
+
+        //    m1 null orneklenmeden once Musteri124 e gidecek
+        //    gerekli overload a dusecek
+
+        //    Musteri124 e gidelim 
+
+        //    3. not devam 
+        //    3. not bitiş Musteri124 den geldik
+
+        //    4. not baslangıc
+        //    atama işlemlerını yapıp buraya new lemeye geri gelecek
+
+        //    new len dıgınde direk ctor dan verdiğimiz verilerle gelecek
+        //    vermezsek eger bos default ayarları ile gelir
+
+        //    iş biz bu mantıga yapıcı metot diyoruz
+        //    hiç dokunmazsak default degerleri ile gelir veri tipine göre
+        //    bos olarak calısır
+
+        //    yada biz buna mudahale edip class içinde yapıcı metotları olusturup kullanırsak
+        //    o zaman da şöyle bir artımız olur 
+        //    sen burda degerleri alırken su kriterler ile al 
+        //    sunu kontrol bu field içine bunu ver 
+        //    veya sabit olarak bunu ver gibi ayarlar yapabiliyoruz
+
+        //    yogun olarak kullandıgımız sekilde budur
+
+        //    cok nadir nesnenin içine dokunmadan işlem yaparız
+
+        //    oop de database e giden katmanlar da 
+        //    cogunlukla dokunuruz
+        //    ctor lar kullanılan onemli bir alan
+
+        //    diger dersimiz de 
+        //    nesneyi ornekleyip cagırırken M1. gibi 
+        //    field alanlarında bizim olusturmadıgımız 
+        //    ama gozuken kodlar cıkıyor 
+        //    mesela ToString gibi bunlar nedir nerden geldi bunlara bakacagız
+
+        //    ufak olarak bu konulara girecegız bunlar normal de kalıtım konusunun konuları
+
+        //    diger derse gecelim
+
+        //    */
+
+        //    // 2. not
+        //    Musteri124 M1 = new Musteri124("123123123","Mücahit");
+        //    M1.TcKimlikNumarasi = "1";
+        //    M1.Isim = "Mücahit";
+        //    M1.SoyIsim = "Çetinkaya";
+        //    M1.Cinsiyet = 717770001;
+
+
+        //    // 1. not
+        //    //Musteri124 M1 = new Musteri124();
+        //    //M1.TcKimlikNumarasi = "1";
+        //    //M1.Isim = "Mücahit";
+        //    //M1.SoyIsim = "Çetinkaya";
+        //    //M1.Cinsiyet = 717770001;
+
+        //    //Musteri124 M2 = M1;
+
+        //    //M2.Isim = "Muhammet";
+        //    //M1.TcKimlikNumarasi = "2";
+
+        //    //M2 = null;
+        //    //M1 = null;
+
+        //    //string isim = M2.Isim;
+
+
+        //}
+
+        #endregion
 
 
 
