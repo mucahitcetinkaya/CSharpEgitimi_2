@@ -1,0 +1,64 @@
+
+
+Bölüm 12 : Metot
+VÝDEO 116 Deðiþken sayýda parametre almak ( params kullanýmý )
+             
+
+            */
+
+            /*
+            
+            degisken sayýda degýsken alma iþlemini params anahtar kelimesi ile yapýyoruz
+            metot üzerinden anlatalým
+             
+            bir metot olusturduk main metodunun dýsýnda yeni bir sýnýf acmak yerine
+            Topla metodu 
+            static void Topla(params int[] sayilar)
+            {
+                int toplam = 0;
+
+                for (int i = 0; i < sayilar.Length; i++)
+                {
+                    toplam += sayilar[i];
+                }
+                Console.WriteLine("Toplam : {0}", toplam);
+            }
+
+            (params int[] sayilar) parametre istiyor þimdi bunu cagýralým
+
+            Topla( yazdýgýmýzda tooltype cýkýyor ne istedigini bize gösteriyor
+
+             (params int[] sayilar) params olarak bir dizi istiyor
+
+            Topla(5, 9, 20, 45, 22, 12, 11, 56);
+            
+            dizi tanýmý yapmadýk normal parametre olarak yazýyoruz direk
+            istediðimiz kadar degeri yazabiliyoruz params sayesinde
+
+            params ifadesi girilen degerleri belirtmiþ oldugumuz veri tipinden diziye cevirir
+            ama bunu parametre olarak isterken bizden dizi istemez
+            belirtmiþ oldugumuz veri tipinden sýralý data ister
+            sýralý datayý da iceride bir dizinin içerisine otomatik olarak aktarýr
+
+            params ifadesinden sonra string bir ifade alamazsýnýz
+            params ifadeleri son ifade olmalýdýr
+
+            */
+
+            Topla(5, 9, 20, 45, 22, 12, 11, 56);
+
+
+
+        }
+
+        static void Topla(params int[] sayilar)
+        {
+            int toplam = 0;
+
+            for (int i = 0; i < sayilar.Length; i++)
+            {
+                Console.WriteLine(sayilar[i]);
+                toplam += sayilar[i];
+            }
+            Console.WriteLine("Toplam : {0}", toplam);
+        }
