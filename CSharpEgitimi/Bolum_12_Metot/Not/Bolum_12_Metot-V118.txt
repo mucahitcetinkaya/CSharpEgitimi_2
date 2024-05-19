@@ -1,0 +1,113 @@
+
+
+Bölüm 12 : Metot
+VÝDEO 118 Metot parametrelerinde metot kullanýmý
+
+
+        static void Main(string[] args)
+        {
+
+            /*
+             
+             Bölüm 12 Metot VÝDEO 118 Metot parametrelerinde metot kullanýmý
+             
+            */
+
+            /*
+             
+            bu dersimiz de metot içinde metot kullanýmýný inceleyeceðiz
+            bunu daha onceden de gormustuk ama daha detaylý iþlemek istiyoruz
+
+            Topla adýnda metot yazdýk ve asýrý yukleme yaptýk 
+            ayný adý tasýyan metot 3 farklý parametre 
+
+            Topla olarak cagýrdýgýmýzda tooltype da gösteriyor bunu
+
+            void olarak degil de geriye dönüþ tipi olan metot yazdýk 
+
+            Program class ýn da olan metot
+            Topla metot ismi
+            geriye int decimal string dönüþ tipinde olabilir
+
+            verilen veriyi toplayýp geri gönderecek 
+
+            baska bir metot tanýmý daha yapacagým 
+            bu metot da kendýne gelen degeri ekranda gösterecek
+
+            bunu da object tipinde yazalým degisiklik olsun 
+            object bütün tipleri alan kabul eden bir veri tipiydi 
+
+            normal sartlarda toplama yapýp bunu da ekranda gostermek istersek eger
+
+            12M M yazýnca decimal olarak anlýyor
+
+            debug olarak anlatmak 
+
+            Topla metoduyla verileri alýyor gerekli metoda gidiyor iþlemleri yapýyor 
+            12+45=57 i aldý toplam a getirdi 
+            EkrandaGoster metotunda yazdý oraya gitti ekrana yazdý 
+            bu uzun olarak yapmak
+
+            metot içinde metot kullanýnca nasýl kýsalýyor iþlemler ona bakalým 
+
+            decimal toplam = Topla(12M,45M);
+            EkrandaGoster(toplam);
+
+            biz burda ne yaptýk topla adýnda metotda parametre gonderip degiskene atadýk basla bir iþlem de kullanmadýk
+
+            decimal toplam degiskený bellekte bosuna yer kaplýyor
+
+            biz ne istiyoruz ekranda gostermek metodu cagýralým 
+            
+            EkrandaGoster();
+
+            metot bizden ne istiyor parametre olarak degerler
+
+            EkrandaGoster();
+
+            istedigimiz degerleri bu metota parametre olarak yazabiliriz o zaman
+
+            EkrandaGoster(Topla(12M,57M));
+
+            Topla metotu bir deger gönderdiðinde normalde bir degiskenýn uzerýne alýyordu 
+
+            artýk onun uzerýne almýyor direk diger parametre de iþleme giriyor
+
+            iç içe metot kullanýmý boyle oluyor 
+
+            kod okunaklýgýný etkiliyorsa iç içe metotlarý kullanmak iyi biþey degildir
+
+            bellekte degisken kalmasýn istiyosan en sonunda bellek yonetýmý yaparsýn 
+             
+            */
+
+            //decimal toplam = Topla(12M,45M);
+            //EkrandaGoster(toplam);
+
+            EkrandaGoster(Topla(12M, 45M));
+
+
+        }
+
+        static void EkrandaGoster(object o)
+        {
+            Console.WriteLine(o.ToString());
+        }
+
+
+        static int Topla(int sayi1, int sayi2)
+        {
+            int toplam = sayi1 + sayi2;
+            return toplam;
+        }
+
+        static decimal Topla(decimal sayi1, decimal sayi2)
+        {
+            decimal toplam = sayi1 + sayi2;
+            return toplam;
+        }
+
+        static string Topla(string metin1, string metin2)
+        {
+            return metin1 + "" + metin2;
+        }

@@ -1,7 +1,7 @@
 
 
 Bölüm 12 : Metot
-Bölüm 12 Metot VÝDEO 116 Metotlara aþýrý yüklenme iþlemi nedir ?
+VÝDEO 117 Metotlara aþýrý yüklenme iþlemi nedir ?
 
 
         static void Main(string[] args)
