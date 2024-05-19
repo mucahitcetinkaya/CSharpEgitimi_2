@@ -1,0 +1,104 @@
+
+
+Bölüm 12 : Metot
+Bölüm 12 Metot VÝDEO 116 Metotlara aþýrý yüklenme iþlemi nedir ?
+
+
+        static void Main(string[] args)
+        {
+            /*
+             
+             Bölüm 12 Metot VÝDEO 117 Metotlara aþýrý yüklenme iþlemi nedir ?
+             
+            */
+
+            /*
+             
+            Metotlara asýrý yuklenme nedir 
+
+            ilk egýtýme baslarken 
+            Console.WriteLine ile baslamýstýk
+            bunun tooltype ýne baktýgýmýzda 
+
+            void Console.WriteLine yazýyor
+            geriye biþey döndürmüyor Console sýnýfýna ait WriteLine metotuyum parametre almam diyor
+
+            yanýnda da 1 of 19 yazýyor
+
+            bu Console.WriteLine metotunun 19 farklý kullanýmý mevcut anlamýna geliyor
+
+            bunlardan bir tanesi hiç parametre almayan versiyonu
+
+            oklar ile degistirince baska kullanýmlarý geliyor
+
+            bool value parametre alan versiyonu
+
+            char veri tipi alan versiyon char dizi alan versiyon vs 
+
+            farklý farklý kullaným sekýlleri var
+
+            biz normal sartlarda string value versiyonunu kullanýyoruz
+             
+            yani
+
+            Console.WriteLine("Merhaba Dünya");
+
+            yazdýgýmýzda "" içinde oldugu için string versiyonunu kullanmýs oluyoruz
+
+            veya
+
+            Console.WriteLine(true);
+
+            yazarsak bu seferde boolean versiyonunu cagýrmýs oluruz
+
+            biz bunun gibi metotlar tasarlayabiliriz
+
+            ayný isimde ama farklý veri turlerinde 
+
+            yeni bir class acmak yerine burda main metotunun dýsýnda bir metot yazalým
+
+            Topla metotunu burda cagýralým
+
+            bu metotu cagýrdýgýmýz da 
+
+            Program class ýnýn içinde olan void int sayi1 int sayi2 parametre isteyen bir metot cýkýyor tooltype da 
+
+            yanýnda farklý kullanýmlarýný görmüyoruz cunku yok bunu görmek için ne yapmamýz gerekiyor
+
+            ayný metot imzasýna ait ismine farklý bir metot olusturalým 
+
+            ayný isme sahip ama istenilen veri tiplerinde farklý olarak metot olusturunca ve 
+
+            Topla metodunu yenýden cagýrýnca 
+
+            Tooltype da overloads cýktý farklý kullanýmlarý da yazmaya basladý
+             
+            debug olarak baktýmýzda int deger verdik oda int deger olan metoda girdi islemi yaptý
+
+            aþýrý yukleme de bu oluyor
+
+            */
+
+
+            Topla(10,20);
+
+        }
+
+
+        static void Topla(int sayi1, int sayi2)
+        {
+            int toplam = sayi1 + sayi2;
+            Console.WriteLine(toplam);
+        }
+
+        static void Topla(double sayi1, double sayi2)
+        {
+            double toplam = sayi1 + sayi2;
+            Console.WriteLine(toplam);
+        }
+
+        static void Topla(float sayi1, float sayi2)
+        {
+            float toplam = sayi1 + sayi2;
+            Console.WriteLine(toplam);
+        }

@@ -58,6 +58,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Not\Bolum_12_Metot-V117.txt" />
     <Content Include="Not\Bolum_12_Metot-V116.txt" />
     <Content Include="Not\Bolum_12_Metot-V115.txt" />
     <Content Include="Not\Bolum_12_Metot-V114.txt" />
