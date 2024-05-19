@@ -46,6 +46,7 @@
     <Compile Include="Musteri122.cs" />
     <Compile Include="Musteri123.cs" />
     <Compile Include="Musteri124.cs" />
+    <Compile Include="Musteri125.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -53,6 +54,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Not\Bolum_13_OOP_Siniflar-V125.txt" />
     <Content Include="Not\Bolum_13_OOP_Siniflar-V124.txt" />
     <Content Include="Not\Bolum_13_OOP_Siniflar-V123.txt" />
     <Content Include="Not\Bolum_13_OOP_Siniflar-V122.txt" />

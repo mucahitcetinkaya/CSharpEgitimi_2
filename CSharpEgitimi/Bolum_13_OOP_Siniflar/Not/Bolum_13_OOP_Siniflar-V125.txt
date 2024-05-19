@@ -1,16 +1,17 @@
 
 
-Bölüm 13 OOP Sýnýflar VÝDEO 124 Sýnýflarda Metotlarýn Kullanýmý
+Bölüm 13 : OOP - Sýnýflar
+VÝDEO 125 Sýnýflarda Metotlarýn Kullanýmý
 
 
-        #region VÝDEO 124
+        #region VÝDEO 125
 
         static void Main(string[] args)
         {
 
             /*
             
-            Bölüm 13 OOP Sýnýflar VÝDEO 124 Sýnýflarda Metotlarýn Kullanýmý
+            Bölüm 13 OOP Sýnýflar VÝDEO 125 Sýnýflarda Metotlarýn Kullanýmý
             
             */
 
@@ -22,10 +23,10 @@ Bölüm 13 OOP Sýnýflar VÝDEO 124 Sýnýflarda Metotlarýn Kullanýmý
 
             public private olarak inceleme yapacagýz
 
-            Musteri124 e gidelim bir metot olusturalým
+            Musteri125 e gidelim bir metot olusturalým
 
             1. not baslangýc
-            1. not bitiþi Musteri124 den geldik
+            1. not bitiþi Musteri125 den geldik
             
             2. not baslangýc
 
@@ -60,7 +61,7 @@ Bölüm 13 OOP Sýnýflar VÝDEO 124 Sýnýflarda Metotlarýn Kullanýmý
             MusteriKontrol içinde de MusteriKontrolDataBase adlý farklý bir metoda ulasmak istiyor
             MusteriKontrolDataBase private ayný yerde olduklarý için ulasabiliyor
 
-            parametre istiyor istediði parametre Musteri124 ün içindeki alanlardan
+            parametre istiyor istediði parametre Musteri125 ün içindeki alanlardan
 
             aldýgý veri ile MusteriKontrolDataBase metoduna gidiyor
             gelen deger ile kayýtlý olan deger ayný true u alýyor tekrar bu kýsýmda kurgusal olarak
@@ -100,13 +101,13 @@ Bölüm 13 OOP Sýnýflar VÝDEO 124 Sýnýflarda Metotlarýn Kullanýmý
             */
 
 
-            Musteri124 M1 = new Musteri124();
+            Musteri125 M1 = new Musteri125();
             M1.TcKimlikNumarasi = "1";
             M1.Isim = "Mücahit";
             M1.SoyIsim = "Çetinkaya";
             M1.Cinsiyet = 717770001;
 
-            Musteri124 M2 = M1;
+            Musteri125 M2 = M1;
             M2.Isim = "Muhammet";
             M1.TcKimlikNumarasi = "2";
 
@@ -124,28 +125,28 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace D_13_OOP_Siniflar
+namespace Bolum_13_OOP_Siniflar
 {
-    public class Musteri124
+    public class Musteri125
     {
 
-        public Musteri124()
+        public Musteri125()
         {
             TcKimlikNumarasi = "12345678910";
         }
 
-        public Musteri124(string _tcKimlikNo)
+        public Musteri125(string _tcKimlikNo)
         {
             TcKimlikNumarasi = _tcKimlikNo;
         }
 
-        public Musteri124(string _tcKimlikNo, string _isim)
+        public Musteri125(string _tcKimlikNo, string _isim)
         {
             TcKimlikNumarasi = _tcKimlikNo;
             Isim = _isim;
         }
 
-        public Musteri124(string _tcKimlikNo, string _isim, string _soyIsim)
+        public Musteri125(string _tcKimlikNo, string _isim, string _soyIsim)
         {
             TcKimlikNumarasi = _tcKimlikNo;
             Isim = _isim;
@@ -231,15 +232,3 @@ anlatýmýný orda yazacagým
 
  
 */
-
-
-
-
-
-
-
-
-
-
-
-
