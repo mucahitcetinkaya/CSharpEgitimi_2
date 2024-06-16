@@ -1,0 +1,34 @@
+﻿
+
+Bölüm 14 : OOP - Kapsülleme
+VİDEO 127 Bilgilendirme
+
+
+Encapsulations dediğimiz kapsülleme konusunu ögreneceğiz
+Kapsülleme konusu class mimarisinin içerisinde cok sık kullandıgımız
+özellikle hızlı özellik tanımlama da bize otomatik olarak gelen bazı özelliklerin
+alt detay kırılımlarıdır.
+
+Buraya kadar kodları uzun uzun yazdık bundan sonra kırılımları daha kolay anlabilmeniz içindi.
+
+Bu bölüm içinde bir cok yenı sey ogrenıp class ların mantıgını biraz daha cok anlamaya calısacagız
+
+Nesne Yönelimli Programlama - Kapsülleme
+
+Bir önceki bölüm içerisinde nesne yönelimli programlama konusuna bir giriş yaptık ve class kavramlarını ögrendik. 
+
+-
+C# .nette class nedir biz bir class ı neden kullanırız
+
+Genel olarak tekrar edersek verilerimizi modelleme işlemlerinde class ları kullandıgımızı biliyoruz.
+
+Şimdi olusturdugumuz class larımızın elemanları olan alanlara biraz daha derinlemesine inelim ve verilerimizi nasıl kapsülleyeceğimizi öğrenelim.
+
+-
+elemanları olan alanlarımız derken neden bahsediyoruz
+Musteri class ının isim tanımı bizim için bir alandı yani field
+işte bu alanlara biraz daha derinlemesine bakacagız
+
+C# programlama dünyasına yeniden hoşgeldiniz. Bu videodan sonra artık seviye biraz yükseliyor.
+
+Kemerlerinizi bağlayın :)
