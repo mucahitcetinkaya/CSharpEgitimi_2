@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Arac126.cs" />
     <Compile Include="Musteri122.cs" />
     <Compile Include="Musteri123.cs" />
     <Compile Include="Musteri124.cs" />
@@ -54,6 +55,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Not\Bolum_13_OOP_Siniflar-V126.txt" />
     <Content Include="Not\Bolum_13_OOP_Siniflar-V125.txt" />
     <Content Include="Not\Bolum_13_OOP_Siniflar-V124.txt" />
     <Content Include="Not\Bolum_13_OOP_Siniflar-V123.txt" />

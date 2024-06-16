@@ -694,15 +694,56 @@
 
         #endregion
 
+        #region VİDEO 126 Ödev - Araç Sınıfının Tanımlanması
+
+        //static void Main(string[] args)
+        //{
 
 
+        //    /*
+
+        //    Bölüm 13 OOP Sınıflar VİDEO 126 Ödev - Araç Sınıfının Tanımlanması
+
+        //    */
+
+        //    /*
+            
+        //    2. not baslangıc
+
+        //    Musteri126 dan geldik class ı new leyerek işlemlere devam edelim
+
+        //    Arac126 A1 = new Arac126( yazınca overload ları cıkıyor yapıcı metotları yazmıstık ordan istediğini kullanabilirsin diyor
 
 
+        //    A1.Fiyat = burda kapsulleme konusu girecek sonra anlatılacak biz su anlık yazdıgımız metodu kullanacagız deger atıp görüntülemek istemiyoruz veya goruntulemek istiyoruz ama deger atanmasını istemiyoruz bu konularda kapsulleme girecek işin içine
 
+        //    mesela bankaları aradıgımızda soyadınızın ilk 2 hanesi diyor orda sadece onları gördüğü için onu soruyor orda da bir kapsulleme var 
 
+        //    özel degerler kapsullenerek gönderilir
 
+             
+             
+        //    */
 
+        //    Arac126 A1 = new Arac126("Opel", "Corsa", 2010, 56000);
 
+        //    A1.AlisFiyat = 28000;
+        //    A1.SatisFiyat = 32000;
+        //    A1.MaxIndirimTutar = 1500;
+        //    /*A1.Fiyat = burda kapsulleme konusu girecek sonra anlatılacak biz su anlık yazdıgımız metodu kullanacagız deger atıp görüntülemek istemiyoruz veya goruntulemek istiyoruz ama deger atanmasını istemiyoruz bu konularda kapsulleme girecek işin içine */
+        //    A1.FiyatAta(32000);
+
+        //    A1.BilgileriGoruntule();
+
+        //    //A1.Marka = "Bmw";
+        //    //A1.Model = "4.20";
+        //    //A1.ModelYil = 2030;
+        //    //A1.KM = 0;
+        //    //A1.YakitTip = 1;
+        //    //A1.VitesTip = 2;
+        //}
+
+        #endregion
 
     }
 }

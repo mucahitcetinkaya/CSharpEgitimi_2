@@ -1,0 +1,169 @@
+
+
+Bölüm 13 : OOP - Sýnýflar
+VÝDEO 126 Ödev - Araç Sýnýfýnýn Tanýmlanmasý
+
+
+Nesne Yönelimli Programlama
+
+Araç Nesnesi 
+
+Marka Model ModelYil YakitTipi VitesTipi AlisFiyat SatisFiyat MaxIndirimTutar Fiyat
+
+Marka Model (bu yapýcý metot)
+
+Marka Model Model Yýl (bu yapýcý metot)
+
+Marka Model Model Yýl KM (bu yapýcý metot)
+
+Void BilgileriGoruntule(); metot buna gelince nesnenin içinde olan degerleri görmek istiyorum
+markasý mercedes modeli c serisi gibi
+
+Void FiyatAta(fiyat);
+atamak istediðim fiyat satýsfiyatý - maxindirimtutarý
+satýs fiyatý 10 liraysa maxindirim 2 liraysa max 8 e kadar satýlsýn yoksa satýlmasýn
+
+
+veri türlerini size býrakýyorum
+bir tanede bos yapýcý metot olsun
+
+
+
+
+        #region VÝDEO 126 Ödev - Araç Sýnýfýnýn Tanýmlanmasý
+
+        //static void Main(string[] args)
+        //{
+
+
+        //    /*
+
+        //    Bölüm 13 OOP Sýnýflar VÝDEO 126 Ödev - Araç Sýnýfýnýn Tanýmlanmasý
+
+        //    */
+
+        //    /*
+            
+        //    2. not baslangýc
+
+        //    Musteri126 dan geldik class ý new leyerek iþlemlere devam edelim
+
+        //    Arac126 A1 = new Arac126( yazýnca overload larý cýkýyor yapýcý metotlarý yazmýstýk ordan istediðini kullanabilirsin diyor
+
+
+        //    A1.Fiyat = burda kapsulleme konusu girecek sonra anlatýlacak biz su anlýk yazdýgýmýz metodu kullanacagýz deger atýp görüntülemek istemiyoruz veya goruntulemek istiyoruz ama deger atanmasýný istemiyoruz bu konularda kapsulleme girecek iþin içine
+
+        //    mesela bankalarý aradýgýmýzda soyadýnýzýn ilk 2 hanesi diyor orda sadece onlarý gördüðü için onu soruyor orda da bir kapsulleme var 
+
+        //    özel degerler kapsullenerek gönderilir
+
+             
+             
+        //    */
+
+        //    Arac126 A1 = new Arac126("Opel", "Corsa", 2010, 56000);
+
+        //    A1.AlisFiyat = 28000;
+        //    A1.SatisFiyat = 32000;
+        //    A1.MaxIndirimTutar = 1500;
+        //    /*A1.Fiyat = burda kapsulleme konusu girecek sonra anlatýlacak biz su anlýk yazdýgýmýz metodu kullanacagýz deger atýp görüntülemek istemiyoruz veya goruntulemek istiyoruz ama deger atanmasýný istemiyoruz bu konularda kapsulleme girecek iþin içine */
+        //    A1.FiyatAta(32000);
+
+        //    A1.BilgileriGoruntule();
+
+        //    //A1.Marka = "Bmw";
+        //    //A1.Model = "4.20";
+        //    //A1.ModelYil = 2030;
+        //    //A1.KM = 0;
+        //    //A1.YakitTip = 1;
+        //    //A1.VitesTip = 2;
+        //}
+
+        #endregion
+
+
+
+
+//using System;
+
+//namespace Bolum_13_OOP_Siniflar
+//{
+//    public class Arac126
+//    {
+//        public string Marka;
+//        public string Model;
+//        public int ModelYil;
+//        public decimal KM;
+//        public int YakitTip;
+//        public int VitesTip;
+//        public decimal AlisFiyat;
+//        public decimal SatisFiyat;
+//        public decimal MaxIndirimTutar;
+//        public decimal Fiyat;
+
+//        public Arac126()
+//        {
+
+//        }
+
+//        public Arac126(string _marka, string _model)
+//        {
+//            Marka = _marka;
+//            Model = _model;
+//        }
+
+//        public Arac126(string _marka, string _model, int _modelYil)
+//        {
+//            Marka = _marka;
+//            Model = _model;
+//            ModelYil = _modelYil;
+//        }
+
+//        public Arac126(string _marka, string _model, int _modelYil, decimal _km)
+//        {
+//            Marka = _marka;
+//            Model = _model;
+//            ModelYil = _modelYil;
+//            this.KM = _km;
+//        }
+
+//        public void BilgileriGoruntule()
+//        {
+//            Console.WriteLine("Marka {0} - Model {1} - Model Yil {2}", Marka , Model , ModelYil);
+//        }
+
+//        public void FiyatAta(decimal _fiyat)
+//        {
+//            decimal fiyatHesap = SatisFiyat - MaxIndirimTutar;
+
+//            if (_fiyat < fiyatHesap)
+//            {
+//                Console.WriteLine("Geçersiz fiyat giriþi");
+//            }
+//            else
+//            {
+//                this.Fiyat = _fiyat;
+//                Console.WriteLine("Fiyat güncellendi.");
+//            }
+
+//        }
+
+//    }
+
+//}
+
+
+///*
+
+//1. not baslangýc 
+
+//gerekli alanlarý doldurduk ctor larý ayarladýk metotlarý yazdýk
+//this kullanýmýna baktýk
+
+//Program.cs e gidelim
+ 
+//1. not bitiþ
+
+
+
+//*/
