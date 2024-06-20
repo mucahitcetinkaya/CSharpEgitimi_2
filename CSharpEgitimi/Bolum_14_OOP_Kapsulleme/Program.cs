@@ -29,13 +29,13 @@ namespace Bolum_14_OOP_Kapsulleme
         //{
 
         //    /*
-             
+
         //    Bölüm 14 OOP Kapsülleme VİDEO 128 Verileri Kapsülleme - 1
 
         //    */
 
         //    /*
-            
+
         //    1. not baslangıc
         //    yeni proje actık set a startup dedik not actık vs
         //    yeni bir class acalım
@@ -175,7 +175,7 @@ namespace Bolum_14_OOP_Kapsulleme
         //    yanında bir kilit işareti var bunun sebebi private olması
         //    devam ettirip kodu bitirelim hepsini atayalım degerlerin
         //    id isim soyisim field olanlar emailadres prob olan hepsi deger aldı
-             
+
         //    emailadres field olan deger almadı
         //    ben prob olarak bunu tanımladım get set dedim ama içine herhangi bir özelleştirme yapmadım atama yapmadım bunu bilerek yapmadım
 
@@ -234,7 +234,7 @@ namespace Bolum_14_OOP_Kapsulleme
         //    13. not 
 
         //    Console.WriteLine(M1.EMailAdres);
-            
+
         //    yazıp calıstırınca get bloguna gidecek
 
         //    13. not bitiş
@@ -270,7 +270,139 @@ namespace Bolum_14_OOP_Kapsulleme
 
         #endregion
 
+        #region VİDEO 129 Verileri Kapsülleme - 2 
 
+        //static void Main(string[] args)
+        //{
+
+        //    /*
+            
+        //    Bolum 14 OOP Kapsulleme V129 Verileri Kapsülleme - 2
+             
+        //    */
+
+        //    /*
+             
+        //    1. not baslangıc
+
+        //    field lara baktık
+        //    property olusturup get set bloklarına baktık
+        //    value a baktık
+        //    private field a aktarmaya baktık
+
+        //    yeni bir musteri class ı acalım ordan devam edelim
+
+        //    Fielda deger ataması yapılamasın ama deger okunabilsin
+        //    bu işlemi yapacagız
+
+        //    Musteri129 a gecelim
+             
+        //    1. not bitiş
+
+        //    2. not bitiş
+
+        //    3. not baslangıc
+
+        //    Musteri129 u newleyerek alanlarını dolduralım degerlerını atayalım
+
+        //    id diger derste publicti sorun yoktu su anda private olarak yazdık
+        //    hemen hata verdi burda onu tanımıyor görmüyor çünkü
+
+        //    tekrar class a gidelim ve bir prop yazalım public olarak
+
+        //    3. not bitiş
+
+        //    4. not bitiş
+
+        //    5. not baslangıc
+
+        //    Console.WriteLine("Musteri id degeri : " + M1.idProp.ToString());
+
+        //    ToString metotu int decimal boolean vs string in dısında kalan herhangi bir tipi string e cevirebiliyoruz
+
+        //    ToString e virtual metotlarda derinlemesine gireceğiz
+        //    sanal metot kullanımda anlatacagız
+        //    kendısı bize object nesnesinden geliyor
+
+        //    Musteri129 M1 = new Musteri129();
+        //    e breakpoint koyalım debug yapalım
+
+        //    ilk amacımız sistemi incelemek sonra da set kısmını kaldıracagız
+
+        //    Musteri129 un üzerinde orneklenmesı olmadı null yazıyor
+        //    f11 e basınca orneklerken class ın icerisine girecek
+        //    yapıcı metot a gidecek
+
+        //    Musteri129 a gidelim F11 ile
+
+        //    5. not bitiş
+
+        //    6. not bitiş
+
+        //    7. not baslangıc
+
+        //    bu işlemler daha nesne orneklendıgınde oldu
+        //    gecinde ornekleme kısmını private olarak saklanan field da diger prob da 
+        //    atanan id degerını aldıgını göruyoruz
+
+        //    console kısmına geldık ekrana yazdıracagız
+
+        //    Musteri129 un içinde get set kısmına bir breakpoint koyalım
+        //    f11 ile devam edince tekrar get kısmına dusecek kod
+
+        //    7. not bitiş
+        //    8. not bitiş
+            
+        //    9. not baslangıc
+
+        //    get kısmından buraya dustu kod
+        //    kod u yazdırdı ekrana
+
+        //    M1.IdProp = 10 ; dedigimiz de set kısmına duser kod deger ataması da yapabiliriz
+
+        //    buraya breakpoint koyalım
+        //    yukarıdaki seklemelerden Debug kısmından 
+        //    Delete All BreakPoints dersenız bütün breakpointleri kaldırır
+
+        //    Musteri129 un içinde get set kısmına breakpoint koyalım
+
+        //    calıstırınca kodu get kısmına dustu kod 
+        //    f10 ile devam edince ekrana yazdıralım
+        //    normalde prop ve field alanları aynı ama biz prop kısmına deger ataması yaptık
+        //    burdan f11 ile devam edince set kısmına dusecek kod
+        //    set ile deger degıstırmesı yapmıs olduk
+        //    ama ben bunun olmamasını istiyorum
+        //    bu mekanızma calısmasın
+
+        //    Musteri129 a gidelim
+
+        //    9. not bitiş
+        //    10. not bitiş
+
+        //    11. not baslangıc
+
+        //    set kısmını private yaptık hata veriyor
+        //    hatada set kısmına ulasılamaz diyor
+        //    private set yazıyor
+
+        //    istediğimiz sartı saglamıs olduk
+
+        //    deger ataması yapamıyor okuma yapabiliyoruz
+
+
+        //    */
+
+        //    Musteri129 M1 = new Musteri129();
+        //    //M1.id = 1;
+        //    //M1.isim = "Mücahit";
+        //    //M1.soyIsim = "Çetinkaya";
+
+        //    Console.WriteLine("Musteri id degeri : " + M1.idProp.ToString());
+        //    //M1.idProp = 10;
+
+        //}
+
+        #endregion
 
 
 

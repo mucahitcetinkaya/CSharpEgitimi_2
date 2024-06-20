@@ -1,0 +1,401 @@
+﻿
+
+Bölüm 14 : OOP - Kapsülleme
+VİDEO 129 Verileri Kapsülleme - 2
+
+
+            /*
+            
+            Bolum 14 OOP Kapsulleme V129 Verileri Kapsülleme - 2
+             
+            */
+
+            /*
+             
+            1. not baslangıc
+
+            field lara baktık
+            property olusturup get set bloklarına baktık
+            value a baktık
+            private field a aktarmaya baktık
+
+            yeni bir musteri class ı acalım ordan devam edelim
+
+            Fielda deger ataması yapılamasın ama deger okunabilsin
+            bu işlemi yapacagız
+
+            Musteri129 a gecelim
+             
+            1. not bitiş
+
+            2. not bitiş
+
+            3. not baslangıc
+
+            Musteri129 u newleyerek alanlarını dolduralım degerlerını atayalım
+
+            id diger derste publicti sorun yoktu su anda private olarak yazdık
+            hemen hata verdi burda onu tanımıyor görmüyor çünkü
+
+            tekrar class a gidelim ve bir prop yazalım public olarak
+
+            3. not bitiş
+
+            4. not bitiş
+
+            5. not baslangıc
+
+            Console.WriteLine("Musteri id degeri : " + M1.idProp.ToString());
+
+            ToString metotu int decimal boolean vs string in dısında kalan herhangi bir tipi string e cevirebiliyoruz
+
+            ToString e virtual metotlarda derinlemesine gireceğiz
+            sanal metot kullanımda anlatacagız
+            kendısı bize object nesnesinden geliyor
+
+            Musteri129 M1 = new Musteri129();
+            e breakpoint koyalım debug yapalım
+
+            ilk amacımız sistemi incelemek sonra da set kısmını kaldıracagız
+
+            Musteri129 un üzerinde orneklenmesı olmadı null yazıyor
+            f11 e basınca orneklerken class ın icerisine girecek
+            yapıcı metot a gidecek
+
+            Musteri129 a gidelim F11 ile
+
+            5. not bitiş
+
+            6. not bitiş
+
+            7. not baslangıc
+
+            bu işlemler daha nesne orneklendıgınde oldu
+            gecinde ornekleme kısmını private olarak saklanan field da diger prob da 
+            atanan id degerını aldıgını göruyoruz
+
+            console kısmına geldık ekrana yazdıracagız
+
+            Musteri129 un içinde get set kısmına bir breakpoint koyalım
+            f11 ile devam edince tekrar get kısmına dusecek kod
+
+            7. not bitiş
+            8. not bitiş
+            
+            9. not baslangıc
+
+            get kısmından buraya dustu kod
+            kod u yazdırdı ekrana
+
+            M1.IdProp = 10 ; dedigimiz de set kısmına duser kod deger ataması da yapabiliriz
+
+            buraya breakpoint koyalım
+            yukarıdaki seklemelerden Debug kısmından 
+            Delete All BreakPoints dersenız bütün breakpointleri kaldırır
+
+            Musteri129 un içinde get set kısmına breakpoint koyalım
+
+            calıstırınca kodu get kısmına dustu kod 
+            f10 ile devam edince ekrana yazdıralım
+            normalde prop ve field alanları aynı ama biz prop kısmına deger ataması yaptık
+            burdan f11 ile devam edince set kısmına dusecek kod
+            set ile deger degıstırmesı yapmıs olduk
+            ama ben bunun olmamasını istiyorum
+            bu mekanızma calısmasın
+
+            Musteri129 a gidelim
+
+            9. not bitiş
+            10. not bitiş
+
+            11. not baslangıc
+
+            set kısmını private yaptık hata veriyor
+            hatada set kısmına ulasılamaz diyor
+            private set yazıyor
+
+            istediğimiz sartı saglamıs olduk
+
+            deger ataması yapamıyor okuma yapabiliyoruz
+
+
+            */
+
+            Musteri129 M1 = new Musteri129();
+            //M1.id = 1;
+            //M1.isim = "Mücahit";
+            //M1.soyIsim = "Çetinkaya";
+
+            Console.WriteLine("Musteri id degeri : " + M1.idProp.ToString());
+            //M1.idProp = 10;
+
+        }
+
+
+using System;
+
+namespace Bolum_14_OOP_Kapsulleme
+{
+    internal class Musteri129
+    {
+        public Musteri129()
+        {
+            this.idField = IdUret();
+        }
+
+        private int idField;
+
+        public int idProp {
+            get
+            {
+                return this.idField;
+            } 
+            private set
+            {
+                this.idField = value;
+            }
+        }
+
+        public string isim;
+        public string soyIsim;
+        public string eMailAdresField;
+        public string EmailAdresProp { get; set; }
+
+        private int IdUret()
+        {
+            Random random = new Random();
+            return random.Next(10000, 90000);
+        }
+
+
+    }
+}
+
+
+
+
+
+/*
+
+1. not bitiş
+
+2. not baslangıc
+
+        // 2. not baslangıc
+
+        // Class => Field
+
+        public int id;
+
+        public string isim;
+        public string soyIsim;
+
+
+        // Class => Property prop tab tab
+
+        public string eMailAdresField;
+
+        public string EmailAdresProp { get; set; }
+
+benim id yi class ın içinde saklamam lazım
+property bunun önüne gecsin
+arkada private olarak saklamıs oldugum 
+field a degeri kontrollu bir sekilde verebilelim ve alabilelim
+emailadresinde oldugu gibi gecen derste
+
+eger herhangi bir erişim belirleyicisi yazmazsan
+defult olarak private olarak gecer
+onune private olarak da yazabilirsin aynı sey
+
+        int id;
+
+        private int id;
+
+Program.cs e gidip Musteri129 u newleyerek alanları nı dolduralım
+
+2. not bitiş
+
+3. not bitiş
+
+4. not baslangıc
+
+public olarak ıd olusturalım
+
+         private int idField;
+
+        public int idProp {
+            get
+            {
+
+            } 
+            set
+            {
+
+            }
+        }
+
+get bloklarında
+içeride private olarak saklamıs oldugum degerimi 
+property yardımıyla onu cagıran kot parcasına gönderiyorum
+içerideki private field in degerini alıp propperty yardımıyla 
+onu cagıran koda gönderiyorum
+amacım neydi kod okunabilsin ama degistirilme olmasın set edilemesin
+
+public int idProp {
+            get
+            {
+                return this.idField;
+            } 
+            set
+            {
+
+            }
+        }
+
+                return this.idField;
+yazarak field a gönderim yaptım
+
+burda benim isteğime göre işlem yapmam gereken yer set blokları
+
+şimdi set bloklarında bir tekrar yapalım
+hatırlarsanız biz müdahale etmesekte calısan bir yapı var demıstik
+
+constructor ctor tab tab yapıcı metot
+
+class ımın yapıcı metodunu neden modifiye etme geregı duydum onu birazdan anlatacagız
+
+set bloklarında veya ctor da bir işlem yapmammız lazım
+neden
+bir işlem olacak ki benim id degerim bir yerden deger okusun
+ve onu da içeride ki field ıma yazsın
+
+set bloguna atama yapalım
+
+        public int idProp {
+            get
+            {
+                return this.idField;
+            } 
+            set
+            {
+                this.idField = value;
+            }
+        }
+
+üretilecek olan metodu yapıcı metotta cagıracagız
+
+yapıcı metoda diyecegiz ki bu nesne örneklendıgı zaman sen git
+bir metot yardımıyla bir deger üret
+ürettiğin degeri içeride private olarak duran
+field in içerisine ata genel görevin bu
+
+yapıcı metot zaten class calısırken default olarak calısacak
+benim vermiş oldugum kurala göre bir yerden deger ogrenecek
+ögrenmıs oldugu degeri içeride private olarak saklamıs oldugum 
+field in içerisine atayacak ana görevi bu
+
+bir metot yazalım private olacak
+
+        private int IdUret()
+        {
+            Random random = new Random();
+            return random.Next(10000, 90000);
+        }
+
+random nesnesini new ledik
+next ile yeni bir sayı ürettirdik
+
+nesne orneklendıgın de yapıcı metot calısacak
+yapıcı metot calısırken içeride private olarak saklamıs oldugum
+field ıma deger ataması yapacagım
+
+peki ben private field a ulasmak için property uzerınden mı gitmeliyim
+hayır gerek yok
+neden property class ın dısarısındaki alanlar için gerekli 
+ben zaten class ın ıcerısındeyım su anda private olsada buna erişebiliyorum
+
+        public Musteri129()
+        {
+            this.idField = IdUret();
+        }
+
+boyle yazabiliyoruz
+
+peki set kısmı noldu orası bosa cıktı onu kullanmayacagız
+
+neden
+
+cunku ben dısarıdan bir deger set edilebilsin istemiyorum sadece okunsun istiyorum
+
+önce inceleyelim sonra set kısmını iptal edelim
+
+program.cs e gidelim
+
+4. not bitiş
+5. not bitiş
+
+6. not baslangıc
+
+F11 ile buraya geldık yapıcı metot calıstı
+burası önemli neden yapıcı metotta iken ben id e deger ataması yapacagım
+
+this.idField benim içeride private olarak saklamıs oldugum field ım 
+
+bu field kendısıne IdUret adındaki bir metottan alacak bu metotta private
+F11 ile devam ettim metota gitti random olarak id uretti yapıcı metota geri döndu
+bir deger ataması yaptı devam edince Program.cs e gidecek
+
+6. not bitiş
+
+7. not bitiş
+
+8. not baslangıc
+
+get kısmına dustu kod console kısmında 
+Musteri129 un içindeki 
+IdProp un get kısmındayız
+
+get private olarak saklamıs oldugum alandan degeri cekiyor
+return this idField içerideki degeri dıs dunyaya return et diyor
+
+devam edince ekrana yazdıracak Program.cs e gidiyor kod 
+
+8. not bitiş
+
+9. not bitiş
+
+10. not baslangıc
+
+ne yapabiliriz
+set kısmına bişey yazmayız set edilmesini onlerız
+işe yarar ama böyle yapmıyoruz
+bizim amacımız içeride olan lojic i kapatmak
+kodu kapatmak degil
+
+tek bir dokunusla o lojic i acıp kapama işlemini yapabilmem gerekiyor
+
+peki property nin ana amacı neydi
+dıs dunya ile baglantı
+yanı get ve set blokları aslında public
+yanı dıs dunyaya acık demek public 
+ben bunlardan birinin kullanılmasını istemiyorsam
+kullanılmasını istemediğimizi private yapmam yeterli
+
+set blogunun kullanılmasını istemiyorum o zaman private yaparım
+
+        public int idProp {
+            get
+            {
+                return this.idField;
+            } 
+            private set
+            {
+                this.idField = value;
+            }
+        }
+
+kayıt edip program.cs e gidince idprob a deger atadıgım kısım hata verecek
+
+10. not bitiş
+ 
+*/
