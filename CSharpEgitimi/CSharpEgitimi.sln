@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bolum_13_OOP_Siniflar", "Bo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bolum_14_OOP_Kapsulleme", "Bolum_14_OOP_Kapsulleme\Bolum_14_OOP_Kapsulleme.csproj", "{46042098-6FB4-46AE-B9B9-1CFCFD21FBE7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bolum_15_OOP_Static_Kavrami", "Bolum_15_OOP_Static_Kavrami\Bolum_15_OOP_Static_Kavrami.csproj", "{76E0F2C2-EFD7-45AC-9925-66491DE2A7B0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +77,10 @@ Global
 		{46042098-6FB4-46AE-B9B9-1CFCFD21FBE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{46042098-6FB4-46AE-B9B9-1CFCFD21FBE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{46042098-6FB4-46AE-B9B9-1CFCFD21FBE7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{76E0F2C2-EFD7-45AC-9925-66491DE2A7B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76E0F2C2-EFD7-45AC-9925-66491DE2A7B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76E0F2C2-EFD7-45AC-9925-66491DE2A7B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76E0F2C2-EFD7-45AC-9925-66491DE2A7B0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
