@@ -46,6 +46,7 @@
     <Compile Include="Musteri128.cs" />
     <Compile Include="Musteri129.cs" />
     <Compile Include="Musteri130.cs" />
+    <Compile Include="Musteri131.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -53,6 +54,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Not\Bolum_14_OOP_Kapsulleme-V131.txt" />
     <Content Include="Not\Bolum_14_OOP_Kapsulleme-V130.txt" />
     <Content Include="Not\Bolum_14_OOP_Kapsulleme-V129.txt" />
     <Content Include="Not\Bolum_14_OOP_Kapsulleme-V128.txt" />

@@ -410,13 +410,13 @@ namespace Bolum_14_OOP_Kapsulleme
         //{
 
         //    /*
-             
+
         //    Bolum 14 OOP Kapsulleme V130 Verileri Kapsülleme - 3 Ara Ödev
-            
+
         //    */
 
         //    /*
-             
+
         //    Kapsülleme - Ara Ödev GET SET
 
         //    Musteri sınıfının içerisine _tcKimliknumarasi adında bir private
@@ -444,7 +444,7 @@ namespace Bolum_14_OOP_Kapsulleme
         //    sonra içlerinde dönüp bakacagım her biri int mi yani harf
         //    veya simge var mı diye yada 10 tane mi 12 tane mi girildi diye
         //    sorun varsa olan sorunu yazacak sorun yoksa ekrana ilk 3 hanesini yazdıracak
-            
+
         //    const int expectedCount = 11;
         //    int[] numbers = new int[expectedCount];
         //    bool validInput = true;
@@ -499,7 +499,7 @@ namespace Bolum_14_OOP_Kapsulleme
         //        }
         //    }
 
-             
+
         //    */
 
         //    Musteri130 M1 = new Musteri130();
@@ -514,7 +514,118 @@ namespace Bolum_14_OOP_Kapsulleme
 
         #endregion
 
+        #region VİDEO 131 Verileri Kapsülleme - 4
 
+        //static void Main(string[] args)
+        //{
+
+        //    /*
+
+        //    Bolum 14 OOP Kapsulleme V131 Verileri Kapsülleme - 4
+
+        //    */
+
+        //    /*
+            
+        //    1. not baslangıc
+            
+            
+        //    field deger ataması ve okumasını
+        //    metotlar yarmıdıyla yapmayı deneyecegız
+
+        //    Musteri içerisinde olan isim ve soyisim field lerıne deger atadıgımızda 
+        //    ilgili isim ve soyisime ait bir email adresini olusturup
+        //    sistemde atayıp bunu 
+        //    cagıran kişiye geri gönderecegız
+        //    burda get ve set bloklarında işlemlerimiz devam edecek
+        //    sadece degeri alıp göstermeyecegız bir cok işlem yapacagız
+            
+        //    içeride private olan saklanan bir field ın
+        //    public olarak ayarlanan property vaastasıyla
+        //    get ve set bloklarını kullanarak modifiye edildiğini görebildiniz.
+
+            
+        //    Kapsülleme Nedir ? 
+
+        //    içeride saklamıs oldugumuz private bir field in 
+        //    önüne koymus oldugumuz bir property sayesinde 
+        //    get ve set bloklarını kullanarak
+        //    deger ataması yapabiliriz
+        //    deger de cekebiliriz
+
+        //    su anda tamammen ögrenmemıs olabilirsiniz ama tekrar yapmak gerekiyor
+
+        //    mesela 1 tane sporcu düşünün kickbox ögrenmek isteyen birisi
+        //    yumruk atmasını ögrenirken defalarca aynı kum torbasına yumruk atar
+        //    defalarca aynı hareketi yapar 
+        //    sebeb refreskleri alıssın yumrugu atarken
+        //    nası dönecek nası vuracak hangi pozisyonda duracak
+        //    karsı taraftan gelecek darbeye karsı nası kapanacak
+        //    bunu ögrenmek için yuzlerce kere o kum torbasına defalarca vurur
+
+        //    zeki olmak tek basına iş yapmaz calıskan da olmak gerekir
+        //    calıskan olursanız zekileri de gecersiniz
+
+        //    şimdi son maddemize gecelim
+
+        //    Field deger ataması ve okuma işlemleri yapılsın ama 
+        //    bu iki işlemde bizim belirlediğimiz bir süreçten geçsin
+        //    veri daha sonra gösterilsin
+
+        //    ben ne yapacagım
+
+        //    isim ve soyisim verilerini atama yapacagım
+        //    arka tarafta email adresi olusturacak
+        //    sonra emailadresini get ettiğimde 
+        //    mucahitcetinkaya@outlook.com
+        //    gibi bir deger döndürecek
+
+        //    set ettiğimde hiç bir sey yapamayacagım
+        //    set im private olacak
+
+        //    ben set işlemini 
+        //    isim ve soyisim atarken 
+        //    soy isim kısmının set blogunda yapacagım
+
+        //    burda önce isim sonra soy isim olacak gibi degiskenlere girmiyorum
+        //    amacımız konuyu ögrenmek su anda 
+
+        //    kişi önce isim ve soyisim girecek
+
+        //    soyismin setinde email adresi olusturacak
+        //    emailadresi property sinden get ettiğimde 
+        //    emailadresıne ulasabilecegım
+        //    seti private bıracakacım
+        //    emailadresine set edemeyecegım
+
+        //    Musteri131 e gidelim
+
+        //    1. not bitiş
+        //    2. not bitiş
+
+        //    3. not başlangıç
+
+        //    Musteri131 den geldik new leme yapalım
+
+        //    calıstırınca konsolda 
+        //    mucahitcetinkaya@outlook.com yazdıgını görürsün
+
+        //    3. not bitiş
+
+             
+        //    */
+
+
+        //    Musteri131 M1 = new Musteri131();
+
+        //    M1.isim = "mucahit";
+        //    M1.SoyIsım = "cetinkaya";
+        //    Console.WriteLine(M1.EMailAdres);
+
+
+        //}
+
+        #endregion
 
 
     }
