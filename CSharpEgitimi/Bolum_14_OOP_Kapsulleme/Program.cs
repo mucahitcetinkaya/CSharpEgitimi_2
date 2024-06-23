@@ -276,13 +276,13 @@ namespace Bolum_14_OOP_Kapsulleme
         //{
 
         //    /*
-            
+
         //    Bolum 14 OOP Kapsulleme V129 Verileri Kapsülleme - 2
-             
+
         //    */
 
         //    /*
-             
+
         //    1. not baslangıc
 
         //    field lara baktık
@@ -296,7 +296,7 @@ namespace Bolum_14_OOP_Kapsulleme
         //    bu işlemi yapacagız
 
         //    Musteri129 a gecelim
-             
+
         //    1. not bitiş
 
         //    2. not bitiş
@@ -352,7 +352,7 @@ namespace Bolum_14_OOP_Kapsulleme
 
         //    7. not bitiş
         //    8. not bitiş
-            
+
         //    9. not baslangıc
 
         //    get kısmından buraya dustu kod
@@ -403,6 +403,117 @@ namespace Bolum_14_OOP_Kapsulleme
         //}
 
         #endregion
+
+        #region VİDEO 130 Verileri Kapsülleme - 3 Ara Ödev
+
+        //static void Main(string[] args)
+        //{
+
+        //    /*
+             
+        //    Bolum 14 OOP Kapsulleme V130 Verileri Kapsülleme - 3 Ara Ödev
+            
+        //    */
+
+        //    /*
+             
+        //    Kapsülleme - Ara Ödev GET SET
+
+        //    Musteri sınıfının içerisine _tcKimliknumarasi adında bir private
+        //    field tanımı yapalım ve
+        //    aşağıdaki kurallara göre kapsülleme işlemlerini gerçekleştirelim.
+
+        //    Set
+
+        //    Girilen değer 11 hane olmalıdır.
+        //    Girilen değer içerisindeki tüm değerler sayısal değer olmak zorundadır.
+
+        //    Get
+
+        //    Öncelikle değer okunamaz şekilde ayarlansın
+        //    İlk 3 hanesini gösterelim.
+
+
+
+
+        //    kodu yanlıs anlayıp böyle bir uygulama yaptım
+
+
+        //    bu uygulamada kullanıcı 11 adet sayı girecek
+        //    her sayıyı dizi olarak eklemek istiyorum
+        //    sonra içlerinde dönüp bakacagım her biri int mi yani harf
+        //    veya simge var mı diye yada 10 tane mi 12 tane mi girildi diye
+        //    sorun varsa olan sorunu yazacak sorun yoksa ekrana ilk 3 hanesini yazdıracak
+            
+        //    const int expectedCount = 11;
+        //    int[] numbers = new int[expectedCount];
+        //    bool validInput = true;
+
+        //    Console.WriteLine($"Lütfen {expectedCount} adet sayı giriniz:");
+
+        //    for (int i = 0; i < expectedCount; i++)
+        //    {
+        //        Console.Write($"Sayı {i + 1}: ");
+        //        string input = Console.ReadLine();
+
+        //        if (!int.TryParse(input, out numbers[i]))
+        //        {
+        //            Console.WriteLine("Hata: Geçersiz bir sayı girdiniz.");
+        //            validInput = false;
+        //            break;
+        //        }
+        //    }
+
+        //    if (validInput)
+        //    {
+        //        Console.WriteLine("Girdiğiniz sayıların ilk 3 hanesi:");
+        //        for (int i = 0; i < Math.Min(3, numbers.Length); i++)
+        //        {
+        //            Console.WriteLine(numbers[i]);
+        //        }
+        //    }
+        //    else
+        //    {
+        //        Console.WriteLine("Lütfen sadece geçerli tam sayılar girin.");
+        //    }
+
+
+        //    chatgpt nin yaptıgı
+
+        //    static void Main(string[] args)
+        //    {
+
+        //        try
+        //        {
+        //            Musteri130 M1 = new Musteri130();
+
+        //            M1.TcKimlikNumarasi = "12345678901";
+
+        //            Console.WriteLine("Müşterinin TC Kimlik Numarası: " + M1.TcKimlikNumarasi);
+
+        //        }
+        //        catch (ArgumentException ex)
+        //        {
+
+        //            Console.WriteLine(ex.Message);
+        //        }
+        //    }
+
+             
+        //    */
+
+        //    Musteri130 M1 = new Musteri130();
+        //    M1.TcKimlikNumarasi = "12345678910";
+
+
+
+
+
+
+        //}
+
+        #endregion
+
 
 
 
