@@ -24,7 +24,7 @@
         //    */
 
         //    /*
-            
+
         //    OOP - Static
 
         //    Nesne Yönelimli Programlama - Static Kavramı
@@ -53,7 +53,7 @@
         //    I                                            I
         //    ----------------------------------------------
         //                        STATİC
-             
+
 
         //    nesne üzerinde static nedir
         //    static içerisinde olusturdugumuz 
@@ -93,6 +93,85 @@
 
         #endregion
 
+        #region VİDEO 134 Static Nedir - 1
+
+        //static void Main(string[] args)
+        //{
+
+        //    /*
+
+        //    Bolum 15 OOP Static Kavrami V134 Static Nedir - 1
+
+        //    */
+
+        //    /*
+             
+        //    1. not başlangıç              
+             
+        //    Static : Nesne örneği alınmadan ulaşabildiğimiz metot field 
+        //    static class dedıgımız nesne ornegi alınamayan alınmasını engelledıgımız
+        //    içerisinde metot ve field ları barındıran bir sınıf 
+
+        //    biz static dedigimiz de = new kısmına ihtiyac duymuyoruz
+
+        //    yani
+
+        //    yeni bir class olusturup new ledik nesne ornegi olusturduk diyorduk
+        //    static bir class olusturdugumuz da new lemeye gerek kalmıyor
+
+        //    once ram uzerındeki yerınden bahsedip sonra da calısma mantıgına bakalım
+
+        //    once bir class olusturalım
+
+        //    Ogrenci134 adında bir class olusturalım
+
+        //    class a geçip notlar alalım
+
+        //    1. not bitiş
+        //    2. not bitiş
+
+        //    3. not başlangıc
+
+        //    Ogrenci134 nesnesini cagıralım ve bir isim verelim
+        //    Stack bölge içerisinde pointer ımız olustu...
+        //    Ogrenci134 O1;
+
+        //    Stack bölgede pointer olustugu zaman arka tarafta yanı sistemin 
+        //    calısma zamanında run time da static olan bir yapıcı metot calıstı
+        //    ve yine class içerisinde tanımlı olan static field static metot
+        //    bunların hepsi static dedigimiz bölgede olusturuldu
+
+        //    new lemeden once 
+
+        //    Ogrenci.Test2();
+        //    yazarak
+        //    Test2 adındaki metotuma ulasabildim
+
+        //    daha sonra ben ogrencıden bir nesne ornegi almak istediğimde 
+        //    O1 = new Ogrenci134();
+
+        //    stack bölgede olusan pointer kendisini heap bölgede tamamladı
+        //    neyi tamamladı
+        //    static olmayan tanımlarını tamamladı
+
+        //    ogrenci ornegını aldıktan sonra yanı new ledıkten sonra
+        //    Test1 adındaki metotuma ulasabildim
+        //    O1.Test1();
+
+
+
+        //    */
+
+        //    Ogrenci134 O1;
+
+        //    Ogrenci134.Test2();
+
+        //    O1 = new Ogrenci134();
+        //    O1.Test1();
+
+        //}
+
+        #endregion
 
 
 
