@@ -105,9 +105,9 @@
         //    */
 
         //    /*
-             
+
         //    1. not başlangıç              
-             
+
         //    Static : Nesne örneği alınmadan ulaşabildiğimiz metot field 
         //    static class dedıgımız nesne ornegi alınamayan alınmasını engelledıgımız
         //    içerisinde metot ve field ları barındıran bir sınıf 
@@ -173,6 +173,122 @@
 
         #endregion
 
+        #region VİDEO 135 Static Nedir - 2
+
+        //static void Main(string[] args)
+        //{
+
+        //    /*
+
+        //    Bolum 15 OOP Static Kavrami V135 Static Nedir - 2
+
+        //    */
+
+        //    /*
+
+        //    1. not baslangıc
+
+        //    Video 134 un devamı
+        //    Ogrenci135 class ı acalım oraya gidelim
+
+        //    1. not bitiş
+        //    2. not bitiş
+
+        //    3. not baslangıc
+
+        //    Ogrenci135 in stack alanlarını olusturalım
+        //    O1 i new lemeden olusturduk
+        //    direk class uzerınden test2 metotuna ulastık
+
+        //    O1 i new ledikten sonra test1 i cagırdık
+
+        //    tekrar ram yapısını çizelim
+
+        //                STACK                   HEAP
+        //    ----------------------------------------------
+        //    I                     I                      I
+        //    I                     I                      I
+        //    I                     I                      I
+        //    I                     I                      I
+        //    ----------------------------------------------
+        //    I                                            I
+        //    I                                            I
+        //    ----------------------------------------------
+        //                        STATİC
+
+        //    Ogrenci135 O1; dedigimiz de 
+        //    stack bölgede bir pointer olusturduk
+        //    olusturdugumuz pointer in ismini de O1 olarak işaretledik
+        //    O1 new lenmedıgı için heap bölgede herhangi bir yeri işaret etmiyor
+        //    ama
+        //    Ogrenci135 O1 olusurken 
+        //    arka tarafta static bir yapıcı metot calıstı
+        //    ve static içerisinde yer alan
+        //    field metot olusturuldu
+        //    su anda da static bir metot var içeride 
+        //    Ogrenci135 in içindeki Test2
+
+        //    Test2 static oldugu için O1.Test2 diyemiyoruz static zaten direk 
+        //    class uzerınden gidebiliriz Ogrenci135.Test2 diyebiliriz
+
+        //    O1 pointer i stack bolgede olusan
+        //    heap bolgedeki nesne yıgınına yanı heap bolgede olusacak field metot vb
+        //    işlemlerin yıgınının ulasacagı pointer siz eger static uzerınde 
+        //    static tanımınıza ulasacaksanız class ınız adını yazmanız ve 
+        //    nokta operatörü ile static olarak olusturmus oldugunuz
+        //    bölümlere erişmeniz gerekiyor
+
+        //    yanı ben O1 ile static bolgeye ulasamıyorum
+        //    Ogrenci135 uzerınden static bolgeye ulasabiliyorum
+
+        //    O1 tanımı stack bolgede bir pointer dır
+        //    new ile orneklendıgınde test1 e orneklendıgı
+        //    degisken adı uzerınden ulasabiliriz
+
+        //    Test1 static degil once new leyip sonra onun uzerınden gidebiliriz
+
+        //    debug yapalım
+
+        //    en basa pointer koyalım
+
+        //    Ogrenci135 O1;
+
+        //    uygulama bizi Test2 e gönderecek
+
+        //    nesne ornegı alınamdan kullanılabilir yazdı ekranda
+
+        //    yukarıdaki O1 e bakıyorum hala null yazıyor
+        //    neden
+        //    cunku nesne ornegı alınmadı new ile orneklenmedı
+
+        //    sımdı ben onu O1 = new Ogrenci135(); diyip
+        //    nesne ornegını aldıgım zaman
+
+        //    O1 kendı standart degerlerıne kavusacak Musteri135 in içindeki field lara
+
+        //    sonrada O1 uzerınden Test1 e gidiyoruz
+
+        //    Nesne örneği alındıktan sonra calısan metotdur. yazdı ekranda
+
+        //    şimdi de bunu biraz daha detaylandıralım 
+
+        //    Musteri135 e gidelim
+
+        //    3. not bitiş
+
+
+        //    */
+
+        //    Ogrenci135 O1;
+        //    Ogrenci135.Test2();
+
+        //    O1 = new Ogrenci135();
+
+        //    O1.Test1();
+
+        //}
+
+        #endregion
 
 
 
