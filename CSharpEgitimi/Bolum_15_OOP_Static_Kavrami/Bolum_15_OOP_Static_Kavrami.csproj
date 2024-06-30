@@ -52,6 +52,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Not\Bolum_15_OOP_Static_Kavrami-V136.txt" />
     <Content Include="Not\Bolum_15_OOP_Static_Kavrami-V135.txt" />
     <Content Include="Not\Bolum_15_OOP_Static_Kavrami-V134.txt" />
     <Content Include="Not\Bolum_15_OOP_Static_Kavrami-V133.txt" />

@@ -1,0 +1,147 @@
+﻿
+
+Bölüm 15 : OOP - Static Kavramı
+VİDEO 136 Static neden ve nerelerde kullanılır
+
+
+        #region VİDEO 136 Static neden ve nerelerde kullanılır
+
+        static void Main(string[] args)
+        {
+
+            /*
+             
+             Bolum 15 OOP Static Kavrami V136 Static neden ve nerelerde kullanılır
+             
+            */
+
+
+            /*
+             
+            Nerelerde kullanırız
+            genelde nesne ornegının alınmasını istemediğimiz 
+            farklı parça metotları bir arada tutmak istediğimiz
+            yardımcı class larımız da kullanıyoruz
+
+            mesela ben genelde projemde 
+            Helper.cs adında bir class olustururum
+            bu class ın ıcerısınde gerekli kontrollerım
+            
+            1 - KONTROLLER =>
+
+            ilgili kişinin e mail adresi dogru mu var mı 
+            almıs oldugum isim soy isim dogum yılı ve farklı bilgilerle
+            bir api vaastasıyla tc kimlik numarası dogru mu 
+            yada bana gelen data istediğim aralıkta mı gibi gibi
+            cok parcalı cok karısık olan bolumlerımı 
+            helper dedıgım yardımcı class ın içerisinde 
+            toplar ve bunu bir kere yazarım
+            daha sonra projelerımde bunu rahatlıkla kullanırım
+            Helper içerisindeki bagımlılıklar
+            ya bir api uzerınde olur 
+            yada almıs oldugu parametreler içerisindeki filtrelere göre oldugu için
+            proje bazlı bagımlılık olmaz
+            ve ben bu class ımı istediğim projeme ekleyip kullanabilirim
+            yanı static kavramını biz gercek hayatta 
+            dagınık yapıdaki kontrollerımı bir class ın altında toplamak için yapıyoruz
+            
+            2 - Olusturmus oldugumuz nesnemizin =>
+
+            içerisinde olması gereken bazı kontroller var 
+            ve biz bu kontrollere ulasmak için 
+            biz bu nesnenın ornegını alayım 
+            onun uzerınden bu metota ulasayım 
+            gibi karısık bir yapı istemeyiz
+            bunu helper tarafına da atmak istemeyiz cunku nesne içerisinde
+            nesneye ozel olur bunlar
+            arka tarafta programın farklı parcaları ile bagımlı olur
+            zaten bagımsız olsa helper.cs in içerisine koyardık
+            farklı nesnelere bagımlı oldugu için 
+            içerisinde o uygulamaya ozel prosesler yanı işlemler 
+            barındıracagı için
+            ilgili nesnenin içerisinde static metot yazarız
+
+            3 -
+            
+            Olusturmus oldugumuz nesnemizin mesela Musteri diye
+            bu nesnenin içerisinde bazı sabit degerler vardır
+            musterinin database e giderken alacagı standart degerler gibi
+            yada degismesini ortak merkezi olarak istediğim bazı field ları
+            static olarak ayarlarım ve daha sonra bunların içerlerine degerlerimi atarım
+            nesne içerisinde kullanımına geçtiğimde
+            tek bir noktadan static tanımını cagırır ve bunu kullanırım
+            eger ben o static degeri degistirmek istersem
+            uygulama içerisinde heryerden degistirmem de 
+            static field olarak ayarlamıs oldugum bolume gider
+            bolumu degistirir o static field i referans olarak goren
+            her yerde de degismesini saglarım
+
+            class içerisinde bir static field tanımı yapar 
+            igili field içerisine bir deger ataması yaparız
+            daha sonra uygulama içerisinde n farklı yerde 
+            olusturmus oldugumuz static field ımıza ulasır
+            degerimizi okuruz
+
+            süreç degisiklikleri büyük projelerde devamlı olur
+            bugun bir iş emrinin geldiği bir sistemde
+            ilgili iş emrinin sla süresi yasam süresi 2 günken
+            3 gun sonra entegre oldugunuz bankalarla yapmıs oldugunuz anlasmada
+            bu süre 1 güne geri cekilebilir veya 1 haftaya uzatılabilir
+            yada bazı dogal afet deprem teror gibi olaylardan dolayı
+            servis oraya gidemez ve sla i bapatmak zorunda kalırsınız
+            bunlar hep static bir noktadan okunması gereken işlemlerdir
+            şimdi her surecre bu degistiğinde ben kodumu guncellemek yerine
+            static bir field olusturup
+            olusturmus oldugum static field içerisine 
+            gün bazında ay bazında yada parametrik olarak
+            farklı bir şekilde bunun tanımını yaparım
+            eger standar bir bölge ise 
+            bankanın vermiş oldugu saat birimini tutarım
+            eger deprem teror vs gibi bir olay orda olduysa
+            sla i istersem uzatabilirim
+            istersem kapatabilirim
+            hepsi olusturmus oldugum field in uzerınden tek bir noktadan olur
+            
+            4 - 
+
+            genel olarak bir yere bagımlı kalmayacagınız 
+            helper gibi davranmasını istediginiz ama ozel olarak yazdıgınız
+            işlemlerde kullanabilirsiniz
+            helper dedıgımız de karısık bir sürü metotum var 
+            bu karısık bir sürü metot içerisinde ben bunları
+            bölüm olarak içeriye aktarıyorum ve bunların devamını saglıyorum
+
+            bir kutuphaneyi uygulamama referans ettıgımde onun içerisinde bulunan
+            bazı metotların yine süresiz olarak işlenip 
+            ilgili kutuphaneye gidip deger almasını isteriz
+            ve bu kutuphane için helper metot yazarız
+            x kutuphanesinin helper metotu olarak kayıt eder
+            ilgili referans ile haberleşmek için kullanırız
+            nesne ornegine ihtiyac olmayacak durumlarda 
+            bunuda içeride static olarak tanımlarız
+            araya bir katman olustururuz
+            olusturmus oldugumuz katmanda süreçlerimizi işler ve 
+            datayı geri alırız
+
+            [ Uygulama ] => [ozelHelper] => [DLL] 
+
+            Uygulamamız ozelHelper metotuna gider belli parametreler ile gelir
+            bu metotun içerisinde static metotlarımız field larımız olur
+            bu ozelhelper metotun bagımlılığı bizim dıs bir programdan aldıgımız 
+            bir api olur bir dll olur yanı dıs bir katman olur 
+            bir kutuphane olur
+            kutuphaneye içerideki data işlenerek gider
+            ben parcalı data alırım 
+            isim soyisim email musterinin bazı bilgilerini alırım
+            kutuphaneye gönderirken json formatında gördermem gerekir
+            json formatını ozelhelper içerisinde ayarlar dll e gönderirim
+            dll bana degeri json doner donen json ı yine tipe cevirir
+            uygulmaya geri gönderirim bundan dolayı helper içine kaydetmem de
+            ozelhelper metot sınıf olustururum bunun içinde 
+            işlemlerimi yaparım
+             
+            */
+
+        }
+
+        #endregion
