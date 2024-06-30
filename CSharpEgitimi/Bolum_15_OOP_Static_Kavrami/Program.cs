@@ -432,7 +432,79 @@
 
         #endregion
 
+        #region VİDEO 137 Static Field Kullanımı
 
+        //static void Main(string[] args)
+        //{
+        //    /*
+
+        //     Bolum 15 OOP Static Kavrami V137 Static Field kullanımı
+
+        //    */
+
+        //    /*
+
+        //    1. not baslangıc
+
+        //    Personel class ını tanımlayalım gidip field ları yazalım
+
+        //    1. not bitiş
+        //    2. not bitiş
+
+        //    3. not baslangıc
+
+        //    ornekleme yapalım
+        //    P1. nokta dedigimiz de static olmayan prop lar geliyor
+        //    ornekleme yaptıgımız için digerleri cıkmıyor
+
+        //    field ları dolduralım
+
+        //    Personel class ımıza donelim
+
+        //    3. not bitiş
+        //    4. not bitiş
+
+        //    5. not baslangıc
+
+        //    breakpoint koyup debug edelim
+        //    basta p1 null f10 ile devam edelim
+        //    bilgiler geldi
+        //    Cinsiyet 0
+        //    EmailAdres null
+        //    Isim null
+        //    SoyIsim null
+        //    _emailAdres null
+
+        //    birde altında static members alanı var burda da static alanlara ulasabilirsiniz
+
+        //    domainAdres "firmam.com"
+        //    f10 ile devam edelim 
+        //    ısım soyisim atandı
+
+        //    emailadrese gelince f11 ile devam ediyorum ki diger tarafa gidelim
+
+        //    5. not bitiş
+        //    6. not bitiş
+
+        //    7. not baslangıc            
+
+        //    emailadres staticmembers olan bir domainadresınden gelen veri ile olustu
+
+        //    hepsini de bitirdik oldu
+
+        //    7. not bitiş
+
+        //    */
+
+        //    Personel137 P1 = new Personel137();
+        //    P1.Isim = "Mücahit";
+        //    P1.SoyIsim = "Çetinkaya";
+        //    P1.EmailAdres = "mucahitcetinkaya";
+        //    P1.Cinsiyet = 717777001; // 001 bay 002 bayan
+
+        //}
+
+        #endregion
 
 
 
