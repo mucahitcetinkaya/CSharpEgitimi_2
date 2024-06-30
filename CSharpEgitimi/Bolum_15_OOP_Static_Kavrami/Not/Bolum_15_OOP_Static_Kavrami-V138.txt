@@ -1,0 +1,145 @@
+﻿
+
+Bölüm 15 : OOP - Static Kavramı
+VİDEO 138 Static Metot Kullanımı
+
+
+        #region VİDEO 138 Static Metot Kullanımı
+
+        static void Main(string[] args)
+        {
+            /*
+
+             Bolum 15 OOP Static Kavrami V138 Static Metot Kullanımı
+
+            */
+
+            /*
+             
+            1. not baslangıc
+             
+            yeni bir personel olusturdugumuz da 
+            insan kaynaklarına bu personelin bilgisini verecek
+            static bir metot hazırlayalım
+
+            Personel138 den devam edecegiz 137 den kopyalayalım
+
+            email gönderme işlemleri olacak 
+            biz burda emailadresi metota parametre olarak gecip 
+            metotun body blogunu bos bırakacagız
+            console ekranda oraya mail gönderildi yazdıracagız
+            egitim setinin içerisinde c# ile emailnasıl gönderilir
+            detaylı bir şekilde bulabilirsiniz 
+
+            Helper138 class ını olusturalım
+            bütün kucuk işlemlerimi burda yapmak istiyorum
+
+            Helper class ına gecelım
+
+            1. not bitiş
+            2. not bitiş
+
+            3. not başkangıc
+
+            helper uzerınden devam edecegiz
+
+            helper metodu static new lemeye gerek yok
+            parametreleri var onları doldurmamız lazım
+
+            Helper138.emailGonder("ik@firmam.com", "Yeni personel bilgilendirme", P1.Isim + P1.SoyIsim);
+
+            buraya breakpoint koyup devam edelim
+
+            static metota dusup ekrana yazdırdı
+
+            diger dersimiz de static yapıcı metot uzerıne konusalım
+
+             
+            */
+
+            Personel138 P1 = new Personel138();
+            P1.Isim = "Mücahit";
+            P1.SoyIsim = "Çetinkaya";
+            P1.EmailAdres = "mucahitcetinkaya";
+            P1.Cinsiyet = 717777001; // 001 bay 002 bayan
+
+            Helper138.emailGonder("ik@firmam.com", "Yeni personel bilgilendirme", P1.Isim + P1.SoyIsim);
+
+
+        }
+
+        #endregion
+
+
+
+namespace Bolum_15_OOP_Static_Kavrami
+{
+    public class Personel138
+    {
+
+        public static string domainAdres = "firmam.com";
+        public string Isim { get; set; }
+        public string SoyIsim { get; set; }
+
+        private string _emailAdres;
+        public string EmailAdres
+        {
+            get
+            {
+                return this._emailAdres;
+            }
+
+            set
+            {
+                this._emailAdres = value.ToLower() + "@" + Personel138.domainAdres;
+            }
+        }
+
+        public int Cinsiyet { get; set; }
+
+
+    }
+}
+
+
+
+
+using System;
+
+namespace Bolum_15_OOP_Static_Kavrami
+{
+    public class Helper138
+    {
+
+        public static void emailGonder(string aliciEmailAdres, string konu, string icerik)
+        {
+
+            // email gonderme işlemleri devam edecek
+
+            Console.WriteLine("EMail gönderim işlemi başarılı.");
+
+        }
+
+
+
+
+    }
+}
+
+
+
+/*
+ 
+1. not bitiş
+
+2. not baslangıc
+
+gerekli metotları yazalım 
+ 
+Program.cs e gecelım 
+
+2. not bitiş
+ 
+ 
+ 
+*/
