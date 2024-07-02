@@ -1,4 +1,6 @@
-﻿namespace Bolum_15_OOP_Static_Kavrami
+﻿using System.IO;
+
+namespace Bolum_15_OOP_Static_Kavrami
 {
     internal class Program
     {
@@ -517,9 +519,9 @@
         //    */
 
         //    /*
-             
+
         //    1. not baslangıc
-             
+
         //    yeni bir personel olusturdugumuz da 
         //    insan kaynaklarına bu personelin bilgisini verecek
         //    static bir metot hazırlayalım
@@ -556,7 +558,7 @@
 
         //    diger dersimiz de static yapıcı metot uzerıne konusalım
 
-             
+
         //    */
 
         //    Personel138 P1 = new Personel138();
@@ -572,6 +574,96 @@
 
         #endregion
 
+        #region VİDEO 139 Static Class Kullanımı
+
+        //static void Main(string[] args)
+        //{
+        //    /*
+
+        //     Bolum 15 OOP Static Kavrami V139 Static Class Kullanımı
+
+        //    */
+
+        //    /*
+
+        //    1. not baslangıc
+
+        //    Video 138 den gerekli bilgileri buraya gecirdik
+        //    Video 139 Helper139 Personel139 olarak
+
+        //    static class ları inceleyeceğiz
+
+        //    Helper139 class ına gidelim
+
+        //    1. not bitiş
+        //    2. not bitiş
+
+        //    3. not başlangıc
+
+        //    Helper static class oldu bakalım new lenecek mi
+        //    Helper139 H1 = new Helper139();
+
+        //    hata veriyor olmuyor
+
+        //    static class ların nesne ornegi alınmaz 
+        //    kendi içlerinde ise sadece sadece static olan field ve metotları barındırırlar
+
+        //    Helper a geçelim
+
+        //    3. not bitiş
+        //    4. not bitiş
+
+        //    5. not başlangıc
+
+
+        //    Helper139.emailGonder("ik@firmam.com", "Yeni personel bilgilendirme", P1.Isim + P1.SoyIsim);
+
+        //    demiştik bunu 2 kere yollayalım bakalım nolcak
+
+        //    helper139 a gidiyor static yapıcı metot calısıyor
+
+        //    sonra emailgonder calısıyor program.cs e donuyor
+
+        //    sonra ikinci satır calısıyor
+
+        //    tekrar Helper139 a gidiyor ama bu sefer yapıcı calısmadı
+        //    direk emailgonder metotu calıstı
+
+        //    static yapıcı metot 1 kere calıstı
+
+        //    field metot ve class ları static olarak inceledik
+        //    static leri uygulamamız içerisinde kullanıyoruz
+        //    static class içerisindeki tüm field metotları
+        //    veya Personel139 nesnemiz de var burda
+        //    buna da bir sonraki video da devam edelim
+
+        //    mesela ornek olarak
+
+        //    benım class ım static degil 
+        //    ama içeride static BinaryReader domain adresi adında bir field ım var 
+
+        //    ben istiyorum static field ıma static yapıcı metot uzerınden deger atayayım
+
+        //    bunu da bir sonraki dersimiz de inceleyelim
+
+
+        //    */
+
+        //    Personel139 P1 = new Personel139();
+        //    P1.Isim = "Mücahit";
+        //    P1.SoyIsim = "Çetinkaya";
+        //    P1.EmailAdres = "mucahitcetinkaya";
+        //    P1.Cinsiyet = 717777001; // 001 bay 002 bayan
+
+        //    //Helper139 H1 = new Helper139();
+
+        //    Helper139.emailGonder("ik@firmam.com", "Yeni personel bilgilendirme", P1.Isim + P1.SoyIsim);
+
+        //    Helper139.emailGonder("ik@firmam.com", "Yeni personel bilgilendirme", P1.Isim + P1.SoyIsim);
+
+        //}
+
+        #endregion
 
 
 

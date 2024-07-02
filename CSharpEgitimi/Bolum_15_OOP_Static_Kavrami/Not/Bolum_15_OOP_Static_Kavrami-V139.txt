@@ -1,0 +1,286 @@
+﻿
+
+Bölüm 15 : OOP - Static Kavramı
+VİDEO 139 Static Class Kullanımı
+
+
+        #region VİDEO 139 Static Class Kullanımı
+
+
+        //static void Main(string[] args)
+        //{
+        //    /*
+
+        //     Bolum 15 OOP Static Kavrami V139 Static Class Kullanımı
+
+        //    */
+
+        //    /*
+
+        //    1. not baslangıc
+
+        //    Video 138 den gerekli bilgileri buraya gecirdik
+        //    Video 139 Helper139 Personel139 olarak
+
+        //    static class ları inceleyeceğiz
+
+        //    Helper139 class ına gidelim
+
+        //    1. not bitiş
+        //    2. not bitiş
+
+        //    3. not başlangıc
+
+        //    Helper static class oldu bakalım new lenecek mi
+        //    Helper139 H1 = new Helper139();
+
+        //    hata veriyor olmuyor
+
+        //    static class ların nesne ornegi alınmaz 
+        //    kendi içlerinde ise sadece sadece static olan field ve metotları barındırırlar
+
+        //    Helper a geçelim
+
+        //    3. not bitiş
+        //    4. not bitiş
+
+        //    5. not başlangıc
+
+
+        //    Helper139.emailGonder("ik@firmam.com", "Yeni personel bilgilendirme", P1.Isim + P1.SoyIsim);
+
+        //    demiştik bunu 2 kere yollayalım bakalım nolcak
+
+        //    helper139 a gidiyor static yapıcı metot calısıyor
+
+        //    sonra emailgonder calısıyor program.cs e donuyor
+
+        //    sonra ikinci satır calısıyor
+
+        //    tekrar Helper139 a gidiyor ama bu sefer yapıcı calısmadı
+        //    direk emailgonder metotu calıstı
+
+        //    static yapıcı metot 1 kere calıstı
+
+        //    field metot ve class ları static olarak inceledik
+        //    static leri uygulamamız içerisinde kullanıyoruz
+        //    static class içerisindeki tüm field metotları
+        //    veya Personel139 nesnemiz de var burda
+        //    buna da bir sonraki video da devam edelim
+
+        //    mesela ornek olarak
+
+        //    benım class ım static degil 
+        //    ama içeride static BinaryReader domain adresi adında bir field ım var 
+
+        //    ben istiyorum static field ıma static yapıcı metot uzerınden deger atayayım
+
+        //    bunu da bir sonraki dersimiz de inceleyelim
+
+
+        //    */
+
+        //    Personel139 P1 = new Personel139();
+        //    P1.Isim = "Mücahit";
+        //    P1.SoyIsim = "Çetinkaya";
+        //    P1.EmailAdres = "mucahitcetinkaya";
+        //    P1.Cinsiyet = 717777001; // 001 bay 002 bayan
+
+        //    //Helper139 H1 = new Helper139();
+
+        //    Helper139.emailGonder("ik@firmam.com", "Yeni personel bilgilendirme", P1.Isim + P1.SoyIsim);
+
+        //    Helper139.emailGonder("ik@firmam.com", "Yeni personel bilgilendirme", P1.Isim + P1.SoyIsim);
+
+        //}
+
+        #endregion
+
+
+
+
+namespace Bolum_15_OOP_Static_Kavrami
+{
+    public class Personel139
+    {
+        public static string domainAdres = "firmam.com";
+        public string Isim { get; set; }
+        public string SoyIsim { get; set; }
+
+        private string _emailAdres;
+        public string EmailAdres
+        {
+            get
+            {
+                return this._emailAdres;
+            }
+
+            set
+            {
+                this._emailAdres = value.ToLower() + "@" + Personel139.domainAdres;
+            }
+        }
+
+        public int Cinsiyet { get; set; }
+
+
+    }
+}
+
+
+
+using System;
+
+namespace Bolum_15_OOP_Static_Kavrami
+{
+    public static class Helper139
+    {
+        public static void emailGonder(string aliciEmailAdres, string konu, string icerik)
+        {
+
+            // email gonderme işlemleri devam edecek
+
+            //Helper139 H1 = new Helper139();
+
+
+            Console.WriteLine("EMail gönderim işlemi başarılı.");
+
+        }
+
+
+        //public void Test()
+        //{
+
+        //}
+
+        //public int staticOlmayanField;
+        //public int staticOlmayanProp { get; set; }
+
+
+        //public Helper139()
+        //{
+
+        //}
+
+        static Helper139()
+        {
+            Console.WriteLine("Helper => Static class => static ctor");
+        }
+
+
+
+    }
+
+}
+
+
+/*
+
+1. not bitiş
+
+2. not baslangıc
+
+video 138 den aldık bilgileri
+
+puclic class Helper139 du
+puclic statik class Helper139 yaptık
+ 
+static bir class olmus oldu 
+static class larda nesne ornegi alınamaz yanı new lenemez
+
+Program.cs e gidip bakalım oluyor mu 
+
+2. not bitiş
+3. not bitiş
+
+4. not baslangıc
+
+static olan class lar örneklenemez
+
+            //Helper139 H1 = new Helper139();
+
+içlerinde static olan metotlar barınabilir dedik
+sttatic olmayan metot barınabilir mi
+
+
+        public void Test()
+        {
+
+        }
+
+hata veriyor static class içinde static olmayan bir metot yazamazsın
+zaten nesne ornegini alamıyorsun yazsan da erişemezsin
+standart metotlar nesne ornegi alındıktan sonra erişilen metotlar
+
+içlerinde static olmayan field lar property ler de tanımlayamazsın
+
+        public int staticOlmayanField;
+        public int staticOlmayanProp { get; set; }
+
+yapıcı metotlar nasıl işliyor
+nesnemizi ornekledıgımız de calısan metot
+ctor tab tab
+
+static class lar cagrıldıgında arka tarafta ne gibi işlemler oluyor bundan bahsedelim
+
+static class larda yapıcı metotlar bulunur
+
+ama static class lar da yapıcı metotlar private olarak gecer
+
+private ister yaz ister yazma default olarak private olarak geçer
+
+ama static yazmak zorundasın
+
+boyle yazarsan hata alırsın
+
+        public Helper139()
+        {
+            
+        }
+
+böyle yazman lazım
+
+        private static Helper139()
+        {
+            
+        }
+
+        static Helper139()
+        {
+            
+        }
+
+
+public ve static ctor arasındaki fark
+
+public olan standart yapıcı metot her nesne ornegi alındıgında uygulama
+standart yapıcı metotu calıstırır
+
+ne zaman new Helper desek yapıcı metot calısıyor static degilse
+
+ama
+
+static yapıcı metotlar uygulama boyunca bir kere calısıyor
+
+ilk cagrıldıgında calısırlar ve uygulama boyunca ne kadar cagırırsan
+cagır bir daha calısmazlar
+
+        static Helper139()
+        {
+            Console.WriteLine("Helper => Static class => static ctor");
+        }
+
+bu yazıyı bir kere görmek istiyorum 
+
+program.cs e donelim
+
+4. not bitiş
+
+
+
+
+ 
+*/
+
+
+

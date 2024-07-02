@@ -44,10 +44,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Helper138.cs" />
+    <Compile Include="Helper139.cs" />
     <Compile Include="Ogrenci134.cs" />
     <Compile Include="Ogrenci135.cs" />
     <Compile Include="Personel137.cs" />
     <Compile Include="Personel138.cs" />
+    <Compile Include="Personel139.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -55,6 +57,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Not\Bolum_15_OOP_Static_Kavrami-V139.txt" />
     <Content Include="Not\Bolum_15_OOP_Static_Kavrami-V138.txt" />
     <Content Include="Not\Bolum_15_OOP_Static_Kavrami-V137.txt" />
     <Content Include="Not\Bolum_15_OOP_Static_Kavrami-V136.txt" />
