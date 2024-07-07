@@ -1,0 +1,168 @@
+﻿
+
+Bölüm 15 : OOP - Static Kavramı
+VİDEO 140 Static Yapıcı metot ile Standart Yapıcı metot davranış farkı
+
+
+        #region VİDEO 140 Static Yapıcı metot ile Standart Yapıcı metot davranış farkı
+
+        static void Main(string[] args)
+        {
+            /*
+
+             Bolum 15 OOP Static Kavrami V140 Static Yapıcı metot ile Standart Yapıcı metot davranış farkı
+
+            */
+
+            /*
+
+            1. not baslangıc
+
+            bir önceki videomuz da konustugumuz sartımızı yapalım
+            personel nesnemiz statik degil
+            içeride bir statik metot kullanımı yapacagız
+            domain adresini statik metot da atamak istiyorum
+
+            Personel140 class ını olusturalım ordan devam edelim
+
+            1. not bitiş
+            2. not bitiş
+
+            3. not baslangıc
+
+            Helper140 ı olusturduk 
+
+            Personel140 ı 2 kere doldurduk ki tekrar gitsin ve 
+            statik olana tekrar girecek mi ona bakalım diye
+
+            debug anlatımı
+
+            Personel new lenecek
+            ilk önce yapıcı metotlar calısacak
+            ilk önce her zaman static metot lar calısır yapıcı metot için gecerli degil bu 
+            statik metotların calısma önceliği var
+            statik yapıcı calısır standart yapıcı calısır
+            sonra buraya dönüp p1 ler dolacak
+
+            sonra p2 e gelecek newlenecek
+            sadece standart yapıcı metot calısacak
+            buraya gelip p2 ler calısacak
+
+            helper lar calısacak
+
+
+            */
+
+            Personel140 P1 = new Personel140();
+            P1.Isim = "Mücahit";
+            P1.SoyIsim = "Çetinkaya";
+            P1.EmailAdres = "mucahitcetinkaya";
+            P1.Cinsiyet = 717777001; // 001 bay 002 bayan
+
+            Personel140 P2 = new Personel140();
+            P2.Isim = "Mücahit";
+            P2.SoyIsim = "Çetinkaya";
+            P2.EmailAdres = "mucahitcetinkaya";
+            P2.Cinsiyet = 717777001; // 001 bay 002 bayan
+
+            Helper140.emailGonder("ik@firmam.com", "Yeni personel bilgilendirme", P1.Isim + P1.SoyIsim);
+
+            Helper140.emailGonder("ik@firmam.com", "Yeni personel bilgilendirme", P1.Isim + P1.SoyIsim);
+
+        }
+
+        #endregion
+
+
+using System;
+
+namespace Bolum_15_OOP_Static_Kavrami
+{
+    public class Personel140
+    {
+        public static string domainAdres;
+        public string Isim { get; set; }
+        public string SoyIsim { get; set; }
+
+        private string _emailAdres;
+        public string EmailAdres
+        {
+            get
+            {
+                return this._emailAdres;
+            }
+
+            set
+            {
+                this._emailAdres = value.ToLower() + "@" + Personel140.domainAdres;
+            }
+        }
+
+        public int Cinsiyet { get; set; }
+
+        public Personel140()
+        {
+            Console.WriteLine("Her örneklemede calısan metot");
+        }
+
+        static Personel140()
+        {
+            domainAdres = "firmam.com";
+        }
+
+
+    }
+}
+
+
+
+
+/*
+ 
+1. not bitiş
+
+2. not başlangıc
+
+notları Personel139 dan aldık 
+
+bir tane yapıcı metot yazacagız normal metot oldugu için her ornekleme de calısacak bu
+
+bir tane de static yapıcı metot tanımlayalım
+
+buna da domain adresini atama yapalım
+ 
+ilk calısmada standart ve statik yapıcı metotlar calısacak 
+2. örnekleme de standar olan calısacak ama statik olan calısmayacak
+
+Program.cs e gidelim
+
+2. not bitiş
+ 
+ 
+ 
+ 
+*/
+
+
+using System;
+
+namespace Bolum_15_OOP_Static_Kavrami
+{
+    public static class Helper140
+    {
+        public static void emailGonder(string aliciEmailAdres, string konu, string icerik)
+        {
+
+            Console.WriteLine("EMail gönderim işlemi başarılı.");
+
+        }
+
+        static Helper140()
+        {
+            Console.WriteLine("Helper => Static class => static ctor");
+        }
+
+
+    }
+
+}

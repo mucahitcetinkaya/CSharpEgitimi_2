@@ -665,6 +665,76 @@ namespace Bolum_15_OOP_Static_Kavrami
 
         #endregion
 
+        #region VİDEO 140 Static Yapıcı metot ile Standart Yapıcı metot davranış farkı
+
+        //static void Main(string[] args)
+        //{
+        //    /*
+
+        //     Bolum 15 OOP Static Kavrami V140 Static Yapıcı metot ile Standart Yapıcı metot davranış farkı
+
+        //    */
+
+        //    /*
+
+        //    1. not baslangıc
+
+        //    bir önceki videomuz da konustugumuz sartımızı yapalım
+        //    personel nesnemiz statik degil
+        //    içeride bir statik metot kullanımı yapacagız
+        //    domain adresini statik metot da atamak istiyorum
+
+        //    Personel140 class ını olusturalım ordan devam edelim
+
+        //    1. not bitiş
+        //    2. not bitiş
+
+        //    3. not baslangıc
+
+        //    Helper140 ı olusturduk 
+
+        //    Personel140 ı 2 kere doldurduk ki tekrar gitsin ve 
+        //    statik olana tekrar girecek mi ona bakalım diye
+
+        //    debug anlatımı
+
+        //    Personel new lenecek
+        //    ilk önce yapıcı metotlar calısacak
+        //    ilk önce her zaman static metot lar calısır yapıcı metot için gecerli degil bu 
+        //    statik metotların calısma önceliği var
+        //    statik yapıcı calısır standart yapıcı calısır
+        //    sonra buraya dönüp p1 ler dolacak
+
+        //    sonra p2 e gelecek newlenecek
+        //    sadece standart yapıcı metot calısacak
+        //    buraya gelip p2 ler calısacak
+
+        //    helper lar calısacak
+
+
+        //    */
+
+        //    Personel140 P1 = new Personel140();
+        //    P1.Isim = "Mücahit";
+        //    P1.SoyIsim = "Çetinkaya";
+        //    P1.EmailAdres = "mucahitcetinkaya";
+        //    P1.Cinsiyet = 717777001; // 001 bay 002 bayan
+
+        //    Personel140 P2 = new Personel140();
+        //    P2.Isim = "Mücahit";
+        //    P2.SoyIsim = "Çetinkaya";
+        //    P2.EmailAdres = "mucahitcetinkaya";
+        //    P2.Cinsiyet = 717777001; // 001 bay 002 bayan
+
+        //    Helper140.emailGonder("ik@firmam.com", "Yeni personel bilgilendirme", P1.Isim + P1.SoyIsim);
+
+        //    Helper140.emailGonder("ik@firmam.com", "Yeni personel bilgilendirme", P1.Isim + P1.SoyIsim);
+
+        //}
+
+        #endregion
+
+
 
 
 
