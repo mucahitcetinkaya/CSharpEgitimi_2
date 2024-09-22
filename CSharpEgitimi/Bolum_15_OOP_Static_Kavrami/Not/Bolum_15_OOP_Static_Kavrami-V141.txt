@@ -1,0 +1,43 @@
+﻿
+
+Bölüm 15 : OOP - Static Kavramı
+VİDEO 141 Bölüm Sonu Ödev { Tüm bölümlerin genelini kapsar }
+
+
+Merhaba arkadaslar static bölümünü bitirdik
+Nesne yönelimli programlama - static
+
+Müşteri adında bir nesne oluşturalım ve oluşturmuş oldugumuz nesnemizin içerisin de static olarak bir ArrayList oluşturalım.
+
+Oluşturmuş oldugumuz ArrayList koleksiyonumuzu sanal bir database mantıgında kullanacagız.
+
+ipucu static olarak olusturmus oldugumuz arrayList i static yapıcı metodunda new ile örnekleyip ilgili koleksiyonu açmanız gerekiyor bir sonraki adımda içerisine deger eklemek istediğimiz de hata almayalım 
+
+Müşteri sınıfımızın içerisine
+
+ID Isim SoyIsim EmailAdres KullaniciAdi Sifre isimleri ile fieldlar oluşturalım.
+
+Oluşturmuş oldugumuz bu field listesinden bazılarının kapsülleme filtreleri aşağıdaki gibi olmalıdır.
+
+kapsulleme içerisine giren field ları da metotlastırarak get set içerisine yazmayıp metot yardımıyla cagırmanızı istiyorum 
+
+Kullanıcı adı değeri sanal olarak olusturmus oldugumuz database imiz içerisinde aranan eğer kullanıcı adı sanal database içerisinde bulunursa field içerisine eklenmek istenen değer eklenmesin kullanıcıya bir mesaj dönebilir ( Kapsülleme )
+
+Müşteri ekle adında bir static metot olusturalım parametre olarak müşteri tipi alsın metot içerisinde => 
+
+Musteri nesnesinin null olup olmadıgını ve müşteri nesnesi içerisindeki kullanıcı adının dolu olması şartına baksın 
+neden dolu olmasın bakacak 
+eger ben ilgili kullanıcıyı olusturmus oldugumuz sanal database de bulursam nesne içerisindeki field ın kullanıcıadı field ına string im emty sine basıcam yani bos bir deger basıcam gelen kullanıcıadı nı kabul etmicem
+
+Yukarıdaki kriterlerden geçerse müşterimizi sanal olarak olusturdugumuz database imize eklemeden önce email adresinden bir kontrol saglasın eger sistemde aynı email adresi ile bir müşteri değeri var ise eklemesin yok ise sanal database içerisine ilgili nesneyi eklesin
+
+burda 
+sanal database i
+if else 
+arrayList
+kapsülleme
+class mimarisini en bastan yazacaksınız
+yapıcı metot static
+static metot kullanacaksınız
+field kullanacaksınız
+

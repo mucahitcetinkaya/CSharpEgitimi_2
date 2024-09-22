@@ -734,7 +734,193 @@ namespace Bolum_15_OOP_Static_Kavrami
 
         #endregion
 
+        #region VİDEO 141 Bölüm Sonu Ödev { Tüm bölümlerin genelini kapsar }
 
+        //static void Main(string[] args)
+        //{
+
+        //    /*
+
+        //     Bolum 15 OOP Static Kavrami V141 Bölüm Sonu Ödev { Tüm bölümlerin genelini kapsar }
+
+        //    */
+
+        //    /*
+             
+        //    1. not başlangıc 
+
+        //    Musteri141 class i olusturalım
+
+        //    2. not bitiş 
+
+        //    3. not baslangıc
+
+        //    Musteri141 i new ile ornekleyelim null oldugunu görelim
+        //    Musteri141 M1 = new Musteri141();
+        //    olusturduk breakpoint ekledik
+        //    içeride yapıcı metotun onemını görmek istiyorum 
+
+        //    ustune gelince M1 in butun field lar null olarak gelmıs 
+        //    Static members kısmı var 
+        //    musteriDatabase null olarak gelmıs 
+        //    benım istediğim musteriyi ilk cagırdıgım noktada static yapıcı metotum calıssın 
+        //    musteriDatabase olan koleksiyonum new ile orneklensin ve 
+        //    yeni kayıt almaya hazır halde beklesin 
+        //    neden static yapıcı metot 
+
+        //    static yapıcı metotlar uygulama içerisinde ilgili nesne cagrıldıgında bir kere calısıyor 
+        //    eger ben koleksiyonu standart olan yapıcı metot ile orneklemıs olsam 
+        //    her nesne orneklendıgın de 
+        //    koleksiyonum yenıden orneklenecekti ve içerisindeki datayı kayıp edecektim 
+
+        //    Musteri141 e gidelim 
+
+        //    3. not bitiş 
+        //    4. not bitiş 
+             
+        //    5. not baslangıc
+
+        //    tekrar breakpoint koyup static members lara bakalım ne olmuslar
+
+        //    musteriDatabase Count = 0 olarak gelmıs 
+        //    calısır calısmaz new ile orneklendı ve add metotu ile içine veri eklenebilir hale geldi
+
+        //    Musteri141 e gidelim
+
+        //    5. not bitiş 
+
+        //    6. not bitiş
+
+        //    7. not baslangıc
+
+        //    nesneyi olusturduk new ledik
+
+        //    M1. ile Musteri141 içindeki alanları doldurduk
+
+        //    ve bunları sanaldatabase e eklemek istiyorum
+
+        //    sanaldatabase static olarak nesne içerisinde saklı 
+
+        //    Musteri141.MusteriEkle(M1);
+
+        //    dediğimiz de içerideki süreçler calısacak
+
+        //    bir nesne daha olusturalım M2 olsun buda 
+        //    size farklı bir nesne ornekleme göstereyim
+
+        //    normalde M2 diyip yazmamız lazım 
+        //    hızlı tip denilen bir kavram var 
+
+        //    Musteri141 M2 = new Musteri141() {
+            
+        //    }
+
+        //    new Musteri141() dedikten sonra ; noktalı vürgül koymak yerine süslü parantez acıyoruz
+
+        //    ilgili nesnenin public field larını görebilirsiniz
+        //    aralarda virgül ile gider
+
+        //    birde M3 olusturalım M1 in kopyası kopya olmasını isteme sebebim bunu eklemek istersem sistemde var olacak 
+
+        //    izin vermemesini bekleyeceğiz
+
+        //    M1 e bir breakpoint koyalım ve Musteri141 in içindeki yapıcı metota bir breakpoint koyalım
+        //    set bloguna 
+        //    tüm static metotlara bir breakpoint koyalım süreçleri görelim
+
+        //    programı calıstırınca 
+
+        //    Musteri nesnem orneklenirken arka tarafta benim static yapıcı metotum orneklenecek
+        //    ben aslında arka tarafta olusturmus oldugum database imi orneklemıs olacagım
+
+        //    f11 ile devam edince static yapıcı metota geldik
+        //    new ile orneklendıgını görduk musteriye geri döndü 
+
+        //    kullanıcıadına gelince f11 ile devam edelim Musteri141 e gidicek
+
+        //    KullanıcıAdi set bloguna düşüyor 
+
+        //    içeride bu kullanıcı adı var mı diye bakacak
+
+        //    musteeriKullaniciAdiKontrol metoduna f11 ile gidelim
+
+        //    parametresine bakalım gönderdıgımız deger gelmiş 
+
+        //    kontrol false dedi
+        //    musteriDatabase içinde count u kadar donmemız gerek ama ilk kayıt gerek olmayacak donmesıne
+
+        //    kontrol false dedi yokmus yani kayıt
+
+        //    KullanıcıAdi set bloguna geri dönecek
+
+        //    true olsa sistemde kayıtlı ile bildiri verecekti false geldi else e girecek
+
+        //    value u eklemıs oldu 
+
+        //    şifreyi de atatık 
+
+        //    burdan da MusteriEkle static metotuna gidiyoruz 
+
+        //    kontrol leri yapacak 
+
+        //    sistem de yok ve kontrollerden gececek ilk kayıt
+
+        //    add ile ekleme yapacak
+
+        //    M1 e bakınca count artık 1 oldu 
+
+        //    burdan içine bakınca da ekleme yapmıs sorun yok 
+
+        //    m2 içinde ekleme yapalım 
+
+        //    kayıt eklendi dedi sorun yok 
+
+        //    m3 içinde yapalım bu sefer de içeride var diyecek hata verecek
+
+        //    kontrol lere gelecek içeride var diyecek sonra null a cekecek ordan 
+        //    return diyip bos dönecek ekleme yapmayacak
+
+        //    */
+
+        //    Musteri141 M1 = new Musteri141();
+
+        //    M1.musteriID = 1;
+        //    M1.isim = "Mücahit";
+        //    M1.soyIsim = "Çetinkaya";
+        //    M1.emailAdres = "mucahitcetinkaya@outlook.com";
+        //    M1.KullaniciAdi = "mucahit.cetinkaya";
+        //    M1.sifre = "1";
+
+        //    Musteri141.MusteriEkle(M1);
+
+        //    Musteri141 M2 = new Musteri141()
+        //    {
+        //        musteriID = 2,
+        //        isim = "Zayn",
+        //        soyIsim = "Çetinkaya",
+        //        emailAdres = "zayncetinkaya@hotmail.com",
+        //        KullaniciAdi = "zayn.cetinkaya",
+        //        sifre = "2",
+        //    };
+
+        //    Musteri141.MusteriEkle(M2);
+
+
+        //    Musteri141 M3 = new Musteri141();
+
+        //    M3.musteriID = 1;
+        //    M3.isim = "Mücahit";
+        //    M3.soyIsim = "Çetinkaya";
+        //    M3.emailAdres = "mucahitcetinkaya@outlook.com";
+        //    M3.KullaniciAdi = "mucahit.cetinkaya";
+        //    M3.sifre = "1";
+
+        //    Musteri141.MusteriEkle(M3);
+
+
+        //}
+
+        #endregion
 
 
 

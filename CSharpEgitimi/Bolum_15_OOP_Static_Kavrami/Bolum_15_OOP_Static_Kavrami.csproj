@@ -46,6 +46,7 @@
     <Compile Include="Helper138.cs" />
     <Compile Include="Helper139.cs" />
     <Compile Include="Helper140.cs" />
+    <Compile Include="Musteri141.cs" />
     <Compile Include="Ogrenci134.cs" />
     <Compile Include="Ogrenci135.cs" />
     <Compile Include="Personel137.cs" />
@@ -59,6 +60,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Not\Bolum_15_OOP_Static_Kavrami-V141.txt" />
     <Content Include="Not\Bolum_15_OOP_Static_Kavrami-V140.txt" />
     <Content Include="Not\Bolum_15_OOP_Static_Kavrami-V139.txt" />
     <Content Include="Not\Bolum_15_OOP_Static_Kavrami-V138.txt" />
