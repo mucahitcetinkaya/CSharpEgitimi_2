@@ -1,0 +1,229 @@
+﻿//using System;
+//using System.Collections;
+
+//namespace Bolum_15_OOP_Static_Kavrami
+//{
+//    public class Musteri142
+//    {
+
+//        #region Sanal Database
+
+//        static ArrayList musteriDatabase;
+
+//        #endregion
+
+//        #region Static Yapıcı Metot
+
+//        static Musteri142()
+//        {
+//            musteriDatabase = new ArrayList();
+//        }
+
+//        #endregion
+
+//        #region Field
+
+//        public int musteriID { get; set; }
+//        public string isim { get; set; }
+//        public string soyIsim { get; set; }
+//        public string emailAdres { get; set; }
+//        public string sifre;
+
+//        #endregion
+
+//        #region Kapsulleme
+
+//        private string _kullaniciAdi;
+
+//        public string KullaniciAdi
+//        {
+//            get { return this._kullaniciAdi; }
+//            set
+//            {
+//                bool kullaniciAdiKontrol = musteriKullanıcıAdiKontrol(value);
+//                if (kullaniciAdiKontrol)
+//                {
+//                    Console.WriteLine("Eklemek istediğiniz kullanıcı adı sistem içerisinde kayıtlı.");
+//                    this.KullaniciAdi = string.Empty;
+//                }
+//                else
+//                {
+//                    this._kullaniciAdi = value;
+//                }
+//            }
+//        }
+
+//        #endregion
+
+//        #region Static Metotlar
+
+//        private static bool musteriKullanıcıAdiKontrol(string _kullaniciAdi)
+//        {
+//            bool kontrol = false;
+
+//            for (int i = 0; i < musteriDatabase.Count; i++)
+//            {
+//                Musteri142 Temp = (Musteri142)musteriDatabase[i];
+
+//                if (Temp.KullaniciAdi == _kullaniciAdi)
+//                {
+//                    kontrol = true;
+//                    break;
+//                }
+//            }
+
+//            return kontrol;
+//        }
+
+
+//        public static void MusteriEkle(Musteri142 M)
+//        {
+//            #region Parametre Kontrol
+
+//            if (M != null && !string.IsNullOrEmpty(M.KullaniciAdi) && !string.IsNullOrEmpty(M.emailAdres))
+//            {
+//                bool emailAdresKontrol = musteriEmailAdresKontrol(M.emailAdres);
+//                if (emailAdresKontrol)
+//                {
+//                    Console.WriteLine("Eklemek istediğiniz kullanıcı sistemde kayıtlı.");
+//                }
+//                else
+//                {
+//                    musteriDatabase.Add(M);
+//                    Console.WriteLine("Yeni kayıt işlemi başarılı.");
+//                }
+//            }
+
+//            #endregion
+
+//        }
+
+//        private static bool musteriEmailAdresKontrol(string _emailAdres)
+//        {
+//            bool kontrol = false;
+//            for (int i = 0; i < musteriDatabase.Count; i++)
+//            {
+//                Musteri142 Temp = (Musteri142)musteriDatabase[i];
+//                if (Temp.emailAdres == _emailAdres)
+//                {
+//                    kontrol = true;
+//                    break;
+//                }
+
+//            }
+//            return kontrol;
+//        }
+
+//        #endregion
+
+//    }
+//}
+
+///*
+ 
+//1. not bitiş
+
+//2. not başlangıc
+
+//Musteri141 den notları alıp Musteri142 i olusturduk temiz kod yazabilmek için
+
+//musteriKullanıcıAdiKontrol metodunu inceleyelim 
+
+
+// private static bool musteriKullanıcıAdiKontrol(string _kullaniciAdi)
+//        {
+//            bool kontrol = false;
+
+//            for (int i = 0; i < musteriDatabase.Count; i++)
+//            {
+//                Musteri142 Temp = (Musteri142)musteriDatabase[i];
+
+//                if (Temp.KullaniciAdi == _kullaniciAdi)
+//                {
+//                    kontrol = true;
+//                    break;
+//                }
+//            }
+
+//            return kontrol;
+//        }
+ 
+
+//bu metot static bir metot 
+//geriye boolean bir deger dönüyor
+//ismi musteriKullanıcıAdiKontrol
+//parametre olarak bizden string olarak _kullaniciAdi alıyor
+
+//yani bu metodu cagıran yer bize string olarak bir kullaniciAdi göndermek zorunda
+//bu deger geldıkten sonra biz ne yapıyoruz 
+//bir tane kontrol bool degisken olusturmusuz default olarak false vermişiz zaten bool degerın default degeri false dur
+
+//sonra for ile bir döngü işlemine giriyoruz döngüye girince bizim bir musteriDatabase imiz var 
+//musteriDatabase in ustune mouse ile gelince tooltype çıkıyor bunları okumak cok önemli 
+
+//musteriDatabase imiz field static bir ArrayList miş 
+//ArrayList davranısını hatırlarsınız kendısıne gelen butun tipleri objeye ( object ) cevirip saklıyordu
+//.netframework un en base inde olan obje olarak tutuyordu ve biz içerisine ne atarsak atalım içerisinde obje olarak duruyordu
+
+//biz burda musteriDatabase imize Musteri tipinde degerler ekliyoruz ama ArrayList oldugu için arka tarafta bizim musteri tiplerimiz obje olarak durmakta 
+//bunları f5 yaparak inceleyeceğiz 
+
+//peki for döngusu ile ArrayList in adeti kadar içinde count ile döndük artık benım musteridb içindeki herbir degere ulasabiliyor olmam gerekli ki 
+//gelen kullanıcıadı daha once db de var mı yok mu ona bakabileyim
+ 
+//bunu nasıl yapacagız
+
+//musteridb ine index uzerınden ulasıyoruz 
+//musteridb ine ulastıgımız da arraylist onje saklıyor i ninci degeri bize arraylist den obje olarak gelmekte
+//gelen degeri biz obje olarak kullanamayız içerisindeki field lara erişmemiz lazım ozel yapmıs oldugumuz tipimize döndurmemız gerekli
+//sonra bunu (Musteri) diye tekrar musteri tipine ceviriyoruz 
+
+//Musteri tipine gelirsek 
+
+//içerisinde sanal bir db field lar metotlar kapsulleme barındırmakta 
+
+//uygulamayı calıstırarak kontrol edelim
+
+//for döngusune bir breakpoint koyalım
+
+//ilk seferde count 0 oluyor db içinde veri yok false olacak işlemleri sırayla yapacak 
+//KullaniciAdi kapsullemeye gelecek value olarak mucahit.cetinkaya yı alacak 
+//ilk musteri içeriye eklemiş olacagız 
+
+//program.cs e gidecek
+
+//ordan verileri alıyor tekrar eklemeye devam ediyor 
+//kullanıcı adına göre kontrol ediyor sistemde var mı diye 
+//m1 ve m2 farklı m3 m1 in aynısı m3 eklenirken hata veriyor sistemde var diye
+
+//musteridb ine gittiğimiz de bunun bir musteri tipi oldugunu görüyoruz 
+
+//burda kafamız karısmasın bizim bir custom tipimiz var Musteri adında bunu biz kendımız olusturduk 
+//olusturdugumuz bu tipi ornekleyerek bir arraylist in içerisine attık 
+//arraylist in içerisinden datayı okurken de obje olarak gelen degeri içeriye atmıs oldugumuz tipe geri cevirip kontrol ediyoruz 
+
+//musteriDatabase[i]
+//musteriDatabase i geçip QuickWatch yaptıgımız da gelen i ninci tipin object oldugunu görebiliriz
+//bizim burda obje olarak gelen tipi musteri tipine cevirmemiz lazım ki içerisindeki field lara ulasıp ilgili işlemlerimizi yapabilelim
+
+//bundan dolayı onune parantez içinde Musteri yazıp zorunlu bir cevirme işlemi yapıyoruz bunuda geçici bir musteri tipi üstüne alıyoruz kullanabilmek için
+
+//                Musteri142 Temp = (Musteri142)musteriDatabase[i];
+
+//i ninci deger cevrilerek temp uzerınde geliyor 
+
+//bundan da kullanıcıadı kontrolunu gercekleştiriyorum gelen kullanıcı adı zayn.cetinkaya var olan kullanıcıadı mucahit.cetinkaya
+//bunlar birbirine eşit degil o zaman ben bu musterı de içeriye kabul edecegim
+
+//3. musteriye gidince içeride olan mucahit.cetinkaya gelen mucahit.cetinkaya 
+//içerideki kayıt sayısı 2 oldu
+
+//0. index dekine ulasıyor for ile sıra sıra bakıyor gelen var olan aynı hata verecek eklemeyecek
+
+//kontrol true oluyor break ile for u kırıyorum
+
+//temp diye bir degiskene almak yerine direk (Musteri142)musteriDatabase[i] de kullanılabilirdi ama bu uzun olurdu 
+
+//2. not bitiş 
+ 
+//*/

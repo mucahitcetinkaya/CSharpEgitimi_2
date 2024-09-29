@@ -746,7 +746,7 @@ namespace Bolum_15_OOP_Static_Kavrami
         //    */
 
         //    /*
-             
+
         //    1. not başlangıc 
 
         //    Musteri141 class i olusturalım
@@ -777,7 +777,7 @@ namespace Bolum_15_OOP_Static_Kavrami
 
         //    3. not bitiş 
         //    4. not bitiş 
-             
+
         //    5. not baslangıc
 
         //    tekrar breakpoint koyup static members lara bakalım ne olmuslar
@@ -812,7 +812,7 @@ namespace Bolum_15_OOP_Static_Kavrami
         //    hızlı tip denilen bir kavram var 
 
         //    Musteri141 M2 = new Musteri141() {
-            
+
         //    }
 
         //    new Musteri141() dedikten sonra ; noktalı vürgül koymak yerine süslü parantez acıyoruz
@@ -922,7 +922,70 @@ namespace Bolum_15_OOP_Static_Kavrami
 
         #endregion
 
+        #region VİDEO 142 Bonus Bölüm Sonu Ödev Açıklaması
 
+        //static void Main(string[] args)
+        //{
+
+        //    /*
+
+        //     Bolum 15 OOP Static Kavrami V142 Bonus Bölüm Sonu Ödev Açıklaması
+
+        //    */
+
+        //    /*
+
+        //    1. not baslangıc
+
+        //    Static bölüm sonu ödeviyle alakalı biraz güzel sorular geldi bo bonus video u cekme ihtiyacı duydum
+        //    tipler içerisinde davranıslara biraz burda değineceğiz 
+        //    musteriKullanıcıAdiKontrol metodu uzerınden de yapmıs oldugumuz işlemi biraz daha detaylı anlatmak istiyorum
+
+        //    Program.cs ve Musteri141 deki kodları buraya getirelim Musteri141 e gidelim ordan devam edelim
+
+        //    1. not bitiş
+
+
+        //    */
+
+        //    Musteri142 M1 = new Musteri142();
+
+        //    M1.musteriID = 1;
+        //    M1.isim = "Mücahit";
+        //    M1.soyIsim = "Çetinkaya";
+        //    M1.emailAdres = "mucahitcetinkaya@outlook.com";
+        //    M1.KullaniciAdi = "mucahit.cetinkaya";
+        //    M1.sifre = "1";
+
+        //    Musteri142.MusteriEkle(M1);
+
+        //    Musteri142 M2 = new Musteri142()
+        //    {
+        //        musteriID = 2,
+        //        isim = "Zayn",
+        //        soyIsim = "Çetinkaya",
+        //        emailAdres = "zayncetinkaya@hotmail.com",
+        //        KullaniciAdi = "zayn.cetinkaya",
+        //        sifre = "2",
+        //    };
+
+        //    Musteri142.MusteriEkle(M2);
+
+
+        //    Musteri142 M3 = new Musteri142();
+
+        //    M3.musteriID = 1;
+        //    M3.isim = "Mücahit";
+        //    M3.soyIsim = "Çetinkaya";
+        //    M3.emailAdres = "mucahitcetinkaya@outlook.com";
+        //    M3.KullaniciAdi = "mucahit.cetinkaya";
+        //    M3.sifre = "1";
+
+        //    Musteri142.MusteriEkle(M3);
+
+        //}
+
+        #endregion
 
     }
 }
