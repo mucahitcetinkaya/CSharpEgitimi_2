@@ -1,0 +1,121 @@
+
+
+Bölüm 16 : OOP - Inner Type Kavramý
+VÝDEO 144 Bilgilendirme
+
+
+ #region VIDEO 144 Bilgilendirme
+        static void Main(string[] args)
+        {
+            /*
+             
+             Bolum 16 OOP Inner Type Kavrami V144 Bilgilendirme
+             
+             */
+
+            /*
+             
+            1. not baþlangýç 
+
+            OOP - Inner Type
+
+            Nesne yönelimli programlama - Ýç içe nesne kullanýmý
+
+            Bu bölümde nesne yönelimli programlama da inner type nedir bunu inceleyeceðiz
+
+            Bu bölüm içerisinde aþaðýdaki konular ele alýnacaktýr.
+
+            Inner Type Nedir ?
+
+            Neden Kullanýlýr ? Bir ihtiyaç mýdýr ?
+
+            Örnekler ile innertype kullanýmý
+
+            Bölüm sonu uygulamasý
+
+            Nesne yönelimli programlama konusunda sýk kullandýgýmýz bir tanýmlama olan ýnnertype olarak isimlendirdiðimiz iç içe nesne kullanýmý konusuna geldik.
+            Aslýnda bu zamana kadar da bilinçsiz bir þekilde kullanýdýgýmýz bir kavramdý sistemin tiplerini kendi özel tiplerimizin içerisinde kullandýgýmýzda da 
+            aslýnda bir innertype yapýyoduk nedeni .netframework zaten genel olarak bir class mimarisi üzerine kurulu 
+            kendi veri tipleri de arka tarafta class olarak barýnmakta.
+
+            bundan dolayý class içerisinde class kullanmak innertype ýn tam karsýlýgýdýr
+
+            innertype nedir neden kullanýrýz 
+
+            innertype i kullandýgýmýz yerler iliþkisel veri tabaný modellerimizi uygulama katmanýnda örnekleyebilmek datamýzý daha dogru daha okunabilir 
+            þekilde tek bir class içerisinde toparlayabilme isteðimizdir
+            yazmýs oldugumuz uygulamalarýmýz da bir musteri dediðimiz zaman aslýnda o musterinin bir cok farklý ozellýgýni database tarafýnda 
+            iliþkisel tablo duzeyýnde dagýnýk bir þekilde tuttugumuz için bunun C# programlama tarafýnda ise yine dagýnýk bir þekilde olan nesneleri 
+            tek bir nesnenin içerisine toparlayarak datayý bir bütün olarak elde ederiz 
+
+            tabiki iliþkisel veri tabanýný bilen arkadaslarýmýz oldugu gibi bilmeyen arkadaslarýmýz da vardýr 
+            iliþkisel veri tabanýndan biraz bahsetmek gerekirse aslýnda þudur 
+
+            örnek olarak bir Musteri tanýmýna geldiðimiz de 
+            musterimizin id si ismi soyismi bize ne zaman kayýt oldugu iletiþim bilgileri ve bizden yapmýs oldugu alýsveriþlerin bir listesi 
+            aklýmýza en basit sekilde gelenlerdir
+
+            biz bunu iliþkisel veri tabaný dedýgýmýz mantýkla dagýtacak olursak 
+            Oncelýkle musteri nesnesi olusturmak gerekiyor 
+            musterinin id si olur id uniqe tir ve bir tane olur bunu int olarak tutabiliriz
+            isim ve soyisim degerleri de o musteriye ait tekil degerlerdir string olarak tutulabilir
+            musterinin database e kayýt tarihi datetime tipindedir
+            peki musterinin adres bilgisi
+            musterinin bir cok adresi olabilir
+            ev iþ veya birden fazla da iþ adresleri olabilir yani bir adresleri olabilir
+
+            bundan dolayý adreslerini farklý bir data kumesý üzerinde tutmak isterim 
+
+            burda adres bilgileri yer alýr 
+            adresin tanýmý
+            il ilçe mahalle vs 
+            ve adresin kendisi 
+
+            burasý 1 e n bir yapýda olur yani
+            1 müþterinin n tane adresi olabilir 
+
+            ayný sekýlde iletiþim bilgileri de bu sekildedir
+            cep mi ev mi iþ mi 
+            dahili numarasý vs 
+
+            sýmdý ben bunlarýn hepsini musteri nesnemin içerisinde toparlamak istersem 
+
+            Musteri class ýnýn içinde 1 den fazla adres olabilmesi için bir arraylist adres tipinde tutabilirim
+            Musteri class ýnýn içinde 1 den fazla iletiþim olabilmesi için bir arraylist iletiþim tipinde tutabilirim
+
+            su an arraylist i bildiðimiz için arraylist diyorum
+            ilerleyen konularda list generic anlatýldýgýn da bu arraylist lerin hepsi list generic olacak 
+
+            bir dizi yani bir koleksiyon içeriye atmam gerekiyor 
+            koleksiyonun içericeði deger Adres tipi Iletisim tipi olmalý 
+
+            Musteri içerisinde olusturdugumuz Custom nesnelerimizi cagýrdýgýmýz zaman 
+            nesne içindeki nesneyi
+            aslýnda bir innertype yapmýs oluyoruz 
+
+            ben Musteri nesnesine odaklandýgým da musterinin ve musterinin içerisinde bulunan
+            adres ve iletiþim bilgilerinden yararlanarak musterinin tum datasýna eriþip
+            uygulama katmanýnda kullanabilirim
+            nesne yönlü programlama da gerçek hayatta innertype lar standart olarak kullanýlýr 
+            tek basýna bir nesnenin kullanýlmasý cok dusuk bir ihtimaldir
+
+            nasý bir ihtimal olur il ilçe gibi il ilçe mahalle gibi
+            veya bazý standart tanýmlar nesne tekil olarak hiç bir farklý ozel nesneye ihtiyac duymadan cagrýlýp kullanýlabilir
+            ama musterý kullanýcý urun ve benzeri openasyonel surecler içerisinde yaptýgýmýz ve kullandýgýmýz nesnelerimiz
+            tamamiyle kendi içlerinde iç nesneler yani innertype lar barýndýrýr
+            
+            -------------------------------
+             
+            Bir ihtiyaç mýdýr ?
+
+            evet anlatmýs oldugum openasyonel iþlemler de bir ihtiyactýr 
+            database iniz de farklý tablolar uzerýnde duran datalarýmýzý birleþtirmeye yarayan bir tanýmdýr 
+
+            database bolumune gectiðimiz de iliþkisel veri tabaný konusunu detaylý olarak anlatacagým 
+            bu noktada bir veri kumesýný parcalarayak tablolama olarak bilmenýz yeterli 
+                         
+            */
+
+        }
+
+        #endregion
