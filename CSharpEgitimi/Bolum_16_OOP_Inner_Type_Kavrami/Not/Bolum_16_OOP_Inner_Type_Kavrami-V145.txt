@@ -1,0 +1,270 @@
+
+
+Bölüm 16 : OOP - Inner Type Kavramý
+VÝDEO 145 - 146 Inner Type Modelleme - 1 - 2
+
+
+#region VIDEO 145 - 146 Inner Type Modelleme - 1 - 2
+
+        static void Main(string[] args)
+        {
+
+            /*
+             
+             Bolum 16 OOP Inner Type Kavrami V145 - V146 Inner Type Modelleme - 1 - 2
+             
+             
+            */
+
+            /*
+             
+            1. not baslangýc
+            
+            Once ne yapmak istiyoruz Musteri nesnesine ihtiyacýmýz var onu olusturalým 
+            Musteri145 olacak
+
+            Musteri145 e gidip orda devam edelim
+
+            1. not bitiþ
+
+            7. not bitiþ
+
+            8. not baslangýc
+
+            Musteri145 i ornekleyelim
+
+            145 ve 146. videolar ortak oldu surelerý kýsa oldugu için 
+            147. video uzun olacak ornekleme ve devam etme anlatma metotlar vs olacak ordan devam edelim
+             
+            */
+
+            Musteri145 M1 = new Musteri145();
+
+        }
+
+        #endregion
+
+
+using System;
+
+namespace Bolum_16_OOP_Inner_Type_Kavrami
+{
+    public class Musteri145
+    {
+        #region Tekil olarak kullanýlan field lar
+
+        public int musteriId { get; set; }
+        public string isim { get; set; }
+        public string soyIsim { get; set; }
+        public DateTime olusturmaTarihi { get; set; }
+        public int kullaniciAdi { get; set; }
+
+        #endregion
+
+        #region Inner Type Gerektiren Field lar
+
+        // MusteriAdres145 class ýna tasýndý
+        //public string AdresTip { get; set; }
+        //public string Il { get; set; }
+        //public string Ilce { get; set; }
+        //public string Adres { get; set; }
+
+        public MusteriAdres145[] musteriAdres145Liste;
+        public MusteriIletisimBilgisi146[] musteriIletisimBilgisi146Liste;
+        public MusteriSiparisBilgisi146[] musteriSiparisBilgisi146Liste;
+
+        
+
+        #endregion
+
+
+
+    }
+}
+
+
+/*
+ 
+1. not bitiþ
+2. not baþlangýc
+
+Musteri nesnem public olacak
+prop ile gereken bilgileri yazalým
+
+tekil olanlarý yazdýk
+
+        #region Tekil olarak kullanýlan field lar
+
+        public int musteriId { get; set; }
+        public string isim { get; set; }
+        public string soyIsim { get; set; }
+        public DateTime olusturmaTarihi { get; set; }
+        public int kullaniciAdi { get; set; }
+
+        #endregion
+
+ýnner type larý yazacagýz þimdi
+
+adres mesela beným musterimin birden fazla adresi olabilir
+ben burda 
+        public string Adres { get; set; }
+olarak yazarsam belirli bir kriter koymus olurum
+belirli bir adet kadar Musteri almýs olurum 
+bunun bir ornegýný yapalým 
+
+        #region Inner Type Gerektiren Field lar
+
+        public string AdresTip { get; set; }
+        public string Il { get; set; }
+        public string Ilce { get; set; }
+        public string Adres { get; set; }
+
+        #endregion
+
+boyle yaptýgýmýzý dusunursek musterýnýn farklý farklý adreslerýnýn oldugunu dusunursek 
+AdresTip1 AdresTip2 AdresTip3 vs gibi aslýnda ayný ama içeride kendýný tekrar eden field bloklarý olusturmus oluruz 
+bu tarz kullaným yerýne aslýnda modellemek istediðimiz konu su 
+Adres adýnda veya MusteriAdresý adýnda bir tip class olusturmak burda olusturduklarýmýzý 
+MusteriAdresi nesnesinin içerisine aktarmak ve musteri nesnemizin içerisinde bir koleksiyon olarak 
+adresýmýzý tanýmlamak ve boylece innertype kullanýmýný gerceklestýrmýs olacagýz 
+
+yeni bir class olusturalým MusteriAdres145
+
+burda olusturdugumuz field lar MusteriAdres145 class ýna tasýnacak
+
+ben burda þimdi 2 farklý tipe sahip oldum Musteri ve MusteriAdres nesnesi 
+
+ama beným Musteri nesnem MusteriAdres nesnesinin varlýgýný henuz bilmiyor 
+bunu bildirmek lazým bunun için de innertpye alanýnda bunu cagýralým
+
+        public MusteriAdres145[] musteriAdres145Liste;
+
+MusteriAdres145 adýnda bir dizi tanýmý yaptýk 
+benim Musteri nesnem birden fazla MusteriAdresini bu sekilde içinde barýndýrabilecek
+
+bunu ornekleyip uzerýnden de gececegýz arkadaslar sadece taným yapýyoruz 
+
+2. not bitiþ
+
+Video 146 a gecelim
+
+3. not baslangýc
+
+MusteriAdres nesnemizi Musteri nesnemizin içerisine dizi olarak verdik ve innertype tanýmý yaptýk 
+Musterimizin iletiþim bilgilerini ayný metodu kullanarak olusturalým ve Musteri nesnemizin içerisine ekleyelim
+
+MusteriIletisimBilgisi146 nesnesini olusturalým
+gerekli ozellikleri yazalým MusteriIletisimBilgisi146 gidelim
+
+3. not bitiþ
+4. not bitiþ
+
+5. not baslangýc
+
+MusteriIletisimBilgisi146 olusturduk proplarýný yazdýk þimdi burda tanýtalým
+
+baska neyi olabilir musterinin alýsveriþleri olabilir 
+sipariþ numaralarýný burda tutabiliriz 
+biraz ucunu acýk býrakacagým neden cunku musterinin sipariþlerini burda yaptýgým anda 
+
+musterinin þipariþ anýnda vermiþ oldugu urunlerý de tutabiliriz vs vs vs böyle gider bu o kadar dallanmayý bu video da dusunmuyorum
+bolum sonu odevý olarak size hazýrlamayý dusunuyorum 
+
+yeni bir class olusturalým 
+
+MusteriSiparisBilgisi146 oraya gidelim proplarýný yazalým 
+
+5. not bitiþ
+
+6. not bitiþ
+
+7. not baslangýc
+
+MusteriSiparisBilgisi146 nesnesýný tanýtalým bir dizi olacak
+
+Program.cs e gidelim Musteri145 i ornekleyelim
+
+bir sonraki video da ornekleme ve kullanma asamasýna gececeðiz
+
+7. not bitiþ
+
+*/
+
+
+//namespace Bolum_16_OOP_Inner_Type_Kavrami
+//{
+//    public class MusteriAdres145
+//    {
+
+//        public string AdresTip { get; set; }
+//        public string Il { get; set; }
+//        public string Ilce { get; set; }
+//        public string Adres { get; set; }
+
+
+//    }
+//}
+
+
+//namespace Bolum_16_OOP_Inner_Type_Kavrami
+//{
+//    public class MusteriSiparisBilgisi146
+//    {
+//        public string siparisNumarasi { get; set; }
+//    }
+//}
+
+///*
+ 
+//video 146
+
+//5. not bitiþ
+
+//6. not baslangýc
+
+//public olacak sýnýf
+//gerekli problarý yazacagýz 
+
+//Musteri145 e gidelim tanýtalým
+
+//6. not bitiþ
+ 
+ 
+ 
+//*/
+
+
+//namespace Bolum_16_OOP_Inner_Type_Kavrami
+//{
+//    public class MusteriIletisimBilgisi146
+//    {
+//        public int iletisimTip { get; set; } // 717770001 : Mobil - 717770002 : Sabit Hat
+//        public string alanKodu { get; set; }
+//        public string numara { get; set; }
+//        public bool aktifPasif { get; set; }
+
+
+
+
+//    }
+//}
+
+///*
+ 
+//Video 146 Musteri145 den geldik
+
+//3. not bitiþ
+//4. not baslangýc
+
+//public olacak
+
+//burasý class oldugundan metot kapsulleme hepsini kullanabilirsiniz
+
+//þimdi iletiþim bilgileri için prop larý yazalým 
+
+//yazdýktan sonra Musteri145 e donelim onun burdan haberi yok 
+
+//4. not bitiþ
+ 
+ 
+//*/

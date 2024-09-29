@@ -10,7 +10,7 @@ namespace Bolum_16_OOP_Inner_Type_Kavrami
     {
 
         //#region VIDEO
-        
+
         //static void Main(string[] args)
         //{
 
@@ -19,17 +19,17 @@ namespace Bolum_16_OOP_Inner_Type_Kavrami
         //#endregion
 
         #region VIDEO 144 Bilgilendirme
-        
+
         //static void Main(string[] args)
         //{
         //    /*
-             
+
         //     Bolum 16 OOP Inner Type Kavrami V144 Bilgilendirme
-             
+
         //    */
 
         //    /*
-             
+
         //    1. not başlangıç 
 
         //    OOP - Inner Type
@@ -118,9 +118,9 @@ namespace Bolum_16_OOP_Inner_Type_Kavrami
         //    veya bazı standart tanımlar nesne tekil olarak hiç bir farklı ozel nesneye ihtiyac duymadan cagrılıp kullanılabilir
         //    ama musterı kullanıcı urun ve benzeri openasyonel surecler içerisinde yaptıgımız ve kullandıgımız nesnelerimiz
         //    tamamiyle kendi içlerinde iç nesneler yani innertype lar barındırır
-            
+
         //    -------------------------------
-             
+
         //    Bir ihtiyaç mıdır ?
 
         //    evet anlatmıs oldugum openasyonel işlemler de bir ihtiyactır 
@@ -128,14 +128,52 @@ namespace Bolum_16_OOP_Inner_Type_Kavrami
 
         //    database bolumune gectiğimiz de ilişkisel veri tabanı konusunu detaylı olarak anlatacagım 
         //    bu noktada bir veri kumesını parcalarayak tablolama olarak bilmenız yeterli 
-                         
+
         //    */
 
         //}
 
         #endregion
 
+        #region VIDEO 145-146 Inner Type Modelleme - 1 - 2
 
+        //static void Main(string[] args)
+        //{
+
+        //    /*
+             
+        //     Bolum 16 OOP Inner Type Kavrami V145 - V146 Inner Type Modelleme - 1 - 2
+             
+             
+        //    */
+
+        //    /*
+             
+        //    1. not baslangıc
+            
+        //    Once ne yapmak istiyoruz Musteri nesnesine ihtiyacımız var onu olusturalım 
+        //    Musteri145 olacak
+
+        //    Musteri145 e gidip orda devam edelim
+
+        //    1. not bitiş
+
+        //    7. not bitiş
+
+        //    8. not baslangıc
+
+        //    Musteri145 i ornekleyelim
+
+        //    145 ve 146. videolar ortak oldu surelerı kısa oldugu için 
+        //    147. video uzun olacak ornekleme ve devam etme anlatma metotlar vs olacak ordan devam edelim
+             
+        //    */
+
+        //    Musteri145 M1 = new Musteri145();
+
+        //}
+
+        #endregion
 
 
 
