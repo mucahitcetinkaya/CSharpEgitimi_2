@@ -415,6 +415,86 @@ namespace Bolum_16_OOP_Inner_Type_Kavrami
 
         #endregion
 
+        #region VİDEO 148 Inner Type - İç nesne içindeki metotlara erişme ve kullanma
+
+        //static void Main(string[] args)
+        //{
+
+        //    /*
+
+        //    Bolum 16 OOP Inner Type Kavrami V148 Inner Type - İç nesne içindeki metotlara erişme ve kullanma
+
+        //    */
+
+        //    /*
+
+        //    1. not baslangıc
+
+        //    147. Video dan bilgileri kopyaladık 148 yaptık adlarını ordan devam ediyoruz notlar karısmasın sade olsun diye 
+
+        //    148 adı altında gereken class ları olusturalım 
+
+        //    bundan sonra class larımıza metot ekleyip bunlara nası ulasacagız buna bakalım
+
+        //    bütün class lara birer tane metot ekleyelim
+
+        //    MusteriAdres148 den baslayalım
+
+        //    1. not bitiş
+
+        //    4. not bitiş
+
+        //    5. not baslangıc
+
+        //    M1.musteriAdres148Liste[0] = new MusteriAdres148()
+        //     burda musteriadreslerimin 0. index inde musteri adres saklı 
+
+        //    içine dallanmaya bakalım 
+
+        //    M1.musteriAdres148Liste[0].MusteriAdresTest();
+
+        //    m1 in içindeki musteriadres148listenin içindeki 0. index in musteriadrestest metotu na ulasmıs olduk
+
+        //    nesne içindeki innertype in içindeki metota ulasmıs oluyoruz
+
+        //    M1.musteriAdres148Liste[0].MusteriAdresTest();
+        //    buraya breakpoint koyalım bakalım 
+
+        //    burda şöyle bir ayrıntı var 
+        //    yapıcı metot da koleksiyonu orneklemeseydik
+        //    0. index ine herhangi bir deger atmasaydık musteriadrestestmetot a ulasamazdık
+        //    yine null ref hatası alırdık ama o null hatasını derleyici yazma asamasında vermiyor 
+        //    senin ne zaman o işlemi yapacagını hangi class da yapacagını kestiremiyor 
+        //    snytax dogruysa o işlemi yaptrıyor ama runtime de nesne örnegi alınmadıysa içinde nesne yoksa metota ulasmana izin vermiyor 
+
+        //    ben burda m1 içindeki musteriadreslerıne deger atayıp m1 içindeki tipin 0. index deki metodunu cagırıyorum
+
+        //    148 bitiş
+
+        //    */
+
+        //    Musteri148 M1 = new Musteri148();
+        //    M1.musteriId = 1;
+        //    M1.tcKimlikNumarasi = "12345678901";
+        //    M1.isim = "Mücahit";
+        //    M1.soyIsim = "Çetinkaya";
+        //    M1.olusturmaTarihi = DateTime.Now;
+
+        //    M1.musteriAdres148Liste[0] = new MusteriAdres148()
+        //    {
+        //        Il = "Istanbul",
+        //        Ilce = "Beşiktaş",
+        //        Adres = "Adres...",
+        //        AdresTip = "İş Yeri"
+        //    };
+
+        //    M1.musteriAdres148Liste[0].MusteriAdresTest();
+
+        //}
+
+        #endregion
+
+
 
     }
 }

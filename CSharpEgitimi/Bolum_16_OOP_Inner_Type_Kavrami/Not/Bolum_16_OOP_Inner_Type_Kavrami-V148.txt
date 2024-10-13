@@ -1,0 +1,253 @@
+
+
+Bölüm 16 : OOP - Inner Type Kavramý
+VÝDEO 148 Inner Type - Ýç nesne içindeki metotlara eriþme ve kullanma
+
+
+        #region VÝDEO 148 Inner Type - Ýç nesne içindeki metotlara eriþme ve kullanma
+
+        static void Main(string[] args)
+        {
+
+            /*
+             
+            Bolum 16 OOP Inner Type Kavrami V148 Inner Type - Ýç nesne içindeki metotlara eriþme ve kullanma
+             
+            */
+
+            /*
+             
+            1. not baslangýc
+
+            147. Video dan bilgileri kopyaladýk 148 yaptýk adlarýný ordan devam ediyoruz notlar karýsmasýn sade olsun diye 
+
+            148 adý altýnda gereken class larý olusturalým 
+
+            bundan sonra class larýmýza metot ekleyip bunlara nasý ulasacagýz buna bakalým
+
+            bütün class lara birer tane metot ekleyelim
+
+            MusteriAdres148 den baslayalým
+
+            1. not bitiþ
+
+            4. not bitiþ
+
+            5. not baslangýc
+
+            M1.musteriAdres148Liste[0] = new MusteriAdres148()
+             burda musteriadreslerimin 0. index inde musteri adres saklý 
+
+            içine dallanmaya bakalým 
+
+            M1.musteriAdres148Liste[0].MusteriAdresTest();
+
+            m1 in içindeki musteriadres148listenin içindeki 0. index in musteriadrestest metotu na ulasmýs olduk
+
+            nesne içindeki innertype in içindeki metota ulasmýs oluyoruz
+
+            M1.musteriAdres148Liste[0].MusteriAdresTest();
+            buraya breakpoint koyalým bakalým 
+
+            burda þöyle bir ayrýntý var 
+            yapýcý metot da koleksiyonu orneklemeseydik
+            0. index ine herhangi bir deger atmasaydýk musteriadrestestmetot a ulasamazdýk
+            yine null ref hatasý alýrdýk ama o null hatasýný derleyici yazma asamasýnda vermiyor 
+            senin ne zaman o iþlemi yapacagýný hangi class da yapacagýný kestiremiyor 
+            snytax dogruysa o iþlemi yaptrýyor ama runtime de nesne örnegi alýnmadýysa içinde nesne yoksa metota ulasmana izin vermiyor 
+
+            ben burda m1 içindeki musteriadreslerýne deger atayýp m1 içindeki tipin 0. index deki metodunu cagýrýyorum
+
+            148 bitiþ
+
+            */
+
+            Musteri148 M1 = new Musteri148();
+            M1.musteriId = 1;
+            M1.tcKimlikNumarasi = "12345678901";
+            M1.isim = "Mücahit";
+            M1.soyIsim = "Çetinkaya";
+            M1.olusturmaTarihi = DateTime.Now;
+
+            M1.musteriAdres148Liste[0] = new MusteriAdres148()
+            {
+                Il = "Istanbul",
+                Ilce = "Beþiktaþ",
+                Adres = "Adres...",
+                AdresTip = "Ýþ Yeri"
+            };
+
+            M1.musteriAdres148Liste[0].MusteriAdresTest();
+
+        }
+
+        #endregion
+
+        --------------------------------
+
+        using System;
+
+namespace Bolum_16_OOP_Inner_Type_Kavrami
+{
+    public class Musteri148
+    {
+
+        #region Tekil olarak kullanýlan field lar
+
+        public int musteriId { get; set; }
+        public string isim { get; set; }
+        public string soyIsim { get; set; }
+        public DateTime olusturmaTarihi { get; set; }
+        public int kullaniciId { get; set; }
+        public string tcKimlikNumarasi { get; set; }
+
+        #endregion
+
+        #region Inner Type Gerektiren Field lar
+
+        public MusteriAdres148[] musteriAdres148Liste;
+        public MusteriIletisimBilgisi148[] musteriIletisimBilgisi148Liste;
+        public MusteriSiparisBilgisi148[] musteriSiparisBilgisi148Liste;
+
+        #endregion
+
+        public Musteri148()
+        {
+            musteriAdres148Liste = new MusteriAdres148[5];
+            musteriIletisimBilgisi148Liste = new MusteriIletisimBilgisi148[3];
+            musteriSiparisBilgisi148Liste = new MusteriSiparisBilgisi148[10];
+        }
+
+    }
+}
+
+----------------------------------
+
+using System;
+
+namespace Bolum_16_OOP_Inner_Type_Kavrami
+{
+    public class MusteriSiparisBilgisi148
+    {
+        public string siparisNumarasi { get; set; }
+        public void MusteriSiparisBilgisiTestMetot()
+        {
+            Console.WriteLine("MusteriSiparisBilgisiTestMetot");
+        }
+
+    }
+}
+
+
+/*
+ 
+3. not bitiþ 
+
+4. not baslangýc
+
+metot yazalým
+
+public void MusteriSiparisBilgisiTestMetot()
+        {
+            Console.WriteLine("MusteriSiparisBilgisiTestMetot");
+        }
+ 
+herhangi bir parametre almýyorum 
+amac sadece inner type içindeki metot a nasý ulasabildiðimizi görmek 
+
+program.cs e gidelim
+
+4. not bitiþ
+ 
+*/
+
+-------------------------------------
+
+using System;
+
+namespace Bolum_16_OOP_Inner_Type_Kavrami
+{
+    public class MusteriIletisimBilgisi148
+    {
+        public int iletisimTip { get; set; } // 717770001 : Mobil - 717770002 : Sabit Hat
+        public string alanKodu { get; set; }
+        public string numara { get; set; }
+        public bool aktifPasif { get; set; }
+
+        public void MusteriIletisimBilgisiTestMetot()
+        {
+            Console.WriteLine("MusteriIletisimBilgisiTestMetot");
+        }
+
+
+    }
+
+}
+
+/*
+ 
+2. not bitiþ 
+
+3. not baslangýc
+
+metot ekleyelim
+ 
+ public void MusteriIletisimBilgisiTestMetot()
+        {
+            Console.WriteLine("MusteriAdresTestMetot");
+        }
+
+class scop unun içine yazýyoruz ona dikkat et
+
+siparisbilgisine gidelim
+
+3. not bitiþ
+
+ 
+*/
+
+-----------------------------------------------------
+
+using System;
+
+namespace Bolum_16_OOP_Inner_Type_Kavrami
+{
+    public class MusteriAdres148
+    {
+        public string AdresTip { get; set; }
+        public string Il { get; set; }
+        public string Ilce { get; set; }
+        public string Adres { get; set; }
+
+        public MusteriAdres148()
+        {
+            Console.WriteLine("MusteriAdres147 nin yapýcý metot çalýþtý.");
+        }
+
+        public void MusteriAdresTest()
+        {
+            Console.WriteLine("MusteriAdresTestMetot");
+        }
+
+    }
+}
+
+/*
+
+1. not bitiþ
+
+2. not baslangýc
+
+metot ekleyelim
+
+  public void MusteriAdresTest()
+        {
+            Console.WriteLine("MusteriAdresTestMetot");
+        }
+
+musteriiletisimbilgisine gidelim
+
+2. not bitiþ
+
+
+*/
