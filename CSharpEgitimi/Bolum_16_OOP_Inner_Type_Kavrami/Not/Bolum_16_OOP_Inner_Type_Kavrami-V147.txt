@@ -1,0 +1,378 @@
+
+
+Bölüm 16 : OOP - Inner Type Kavramý
+VÝDEO 147 Inner Type Modelleme - Ýnceleme
+
+
+        #region VIDEO 147 Inner Type Modelleme - Incelemesi
+
+        //static void Main(string[] args)
+        //{
+
+        //    /*
+
+        //    Bolum 16 OOP Inner Type Kavrami V147 Inner Type Modelleme - Incelemesi
+
+        //    */
+
+        //    /*
+
+        //     1. not baslangýc
+
+        //    video 145 ve 146 daki class larý 147 olarak tekrar acalým notlar orda kaldý burda anlatýmlarý olacak karýsmamýs olacak
+        //    Musteri147 MusteriAdres147 MusteriIletisimBilgisi147 MusteriSiparis147
+        //    nesneleri public yapalým ve içerisindeki proplarý da yazalým
+
+        //    Nesneleri olusturduk prop larýný yazdýk public yaptýk
+        //    Musteri147 i ornekleyelim breakpoint koyup bakalým start yaptýk
+
+        //    neler olacak 
+
+        //    Musteri147 den M1 diye bir nesne orneði alacagým 
+        //    almýs oldugum M1 steak tarafta içerisiyse heap bölgede acýlýrken 
+        //    aslýnda içeride tanýmlamýs oldugum field larýn default degerlerini alacaklar 
+        //    int 0 string ler null boolean lar false gibi degerler alacaklar 
+
+        //    olusturmus oldugum dizilerim ise bakalým nasý bir davranýs sergileyecekler 
+
+        //    f10 ile gidip M1 in içine bakalým
+
+        //    olusturmus oldugum diziler koleksiyonlar da null olarak bir default deger aldýgýný görebilirsiniz
+
+        //    ben m1 üzeirinde isim kullanýciId musteriId olusturmaTarihi soyIsim tcKimlikNumarasi yani 
+        //    aslýnda koleksiyon dýsarýnda olan bütün degerlerime bir atama yapmak istiyorum
+
+        //    daha sonra içeride dizi olarak olusturmus oldugum degerlerime göre atama yapmak istiyorum
+
+        //    buradaki atamalarda bir problem yasayacak mýyým 
+        //    programý durdurup atamalara baslayalým
+
+        //    M1.musteriId = 1; gibi vs 
+
+
+        //    // burdan sonra inner type lara gecelim
+
+        //    M1.musteriAdres147Liste[0] = new MusteriAdres147() { };
+        //    musteriAdres147 nin 0. index ine atama yapýyoruz
+
+        //    M1.musteriAdres147Liste[0] = new MusteriAdres147()
+        //    {
+        //        Il = "Istanbul",
+        //        Ilce = "Beþiktaþ",
+        //        Adres = "Adres...",
+        //        AdresTip = "Ýþ Yeri"
+        //    };
+
+        //    süslü parantez içinde new ile atama yapmayý göstermiþtik
+        //    M1 Musteri147 oluyor Musteri147 nin içindeki MusteriAdres147 e gidip onun field larýna ulasýyoruz
+
+        //    þimdi ben bir musteri nesnesi olusturdum
+        //    olusturmus oldugum musteri nesnesi içerisindeki musteriadresleri koleksiyonunun 0. index ine bir musteriadres tanýmý yaptým
+        //    farkýndaysanýz musteriadreste benim ozel tipim musteri de beným özel tipim
+
+        //    ben tam olarak burda bir hata almak istiyorum
+        //    almýs oldugum hata yapýcý metotun onemýný vurgulayacak hata alacagým sekýlde yazdým
+
+        //    tekrar calýstýralým 
+
+        //    musteri orneklecek adres kýsmýnda bir hata verecek
+
+        //                hata alýnan kýsým
+
+        //     Musteri147 M1 = new Musteri147();
+        //    M1.musteriId = 1;
+        //    M1.tcKimlikNumarasi = "12345678901";
+        //    M1.isim = "Mücahit";
+        //    M1.soyIsim = "Çetinkaya";
+        //    M1.olusturmaTarihi = DateTime.Now;
+
+        //    // burdan sonra inner type lara gecelim
+
+        //    M1.musteriAdres147Liste[0] = new MusteriAdres147()
+        //    {
+        //        Il = "Istanbul",
+        //        Ilce = "Beþiktaþ",
+        //        Adres = "Adres...",
+        //        AdresTip = "Ýþ Yeri"
+        //    };
+
+        //    System.NullReferenceException: 'Nesne baþvurusu bir nesnenin örneðine ayarlanmadý.'
+
+        //    bu hatanýn sebebi dk 4.30
+
+        //    içeride koleksiyon olarak tanýmlamýþ oldugum inner type larýn default degerleri null seklinde
+        //    henuz ben dizilerimi = new ile orneklemedýgým için bu hatayý aldým
+
+        //    bunu yapmanýn 2 farklý yolu var 
+
+        //    dilerseniz musteri nesnesini olusturdugunuz her yerde yazacagým kodu yazmak zorundasýnýz 
+        //    yada tek bir de yazarak bu referans lama iþlemini çözebilirsiniz
+
+        //    ornek olarak new liyoruz kac adres almak istiyoruz mesela 5 olsun
+
+        //    M1.musteriAdres147Liste = new MusteriAdres147[5];
+
+        //    nesne orneklenecek sonra MusteriAdres147 new lenecek 5 elemanlý boþ bir dizi olusturacak
+        //    ve ben 0. index ine bir deger atamasý yaptýgým da her hangi bir hata ile karsýlasmayacagým
+
+        //    M1.musteriAdres147Liste = new MusteriAdres147[5];
+        //    buna breakpoint koyalým
+
+        //    üstteki adreslerim dolu musteriAdresleri kýsmým null olarak geldi 
+        //    benim bu null olan innertype ýmý new ile örneklemem lazým 
+        //    benim nesnelerim üzerlerine deger almadan standart tek bir nesne de olsa bunu yapacaktý 
+        //    new ile örneklenmeli ki kendi içinde de steak heap kýrýlýmý olsun 
+
+        //    new ile orneklendýgýn de musteriAdresleri kýsmýnda 5 elemanlý bir dizi olarak sisteme kendini tanýtmýs oldugunu görebiliyoruz
+
+        //    ve 0. index ine yeni bir musteriAdresi atamasý yapacagýz 
+        //    bunu gectýgýmýz de de herhangi bir hata almadýk 0. index ine atama yaptý 
+
+        //    ben bunu bir secenek olarak her yerde cagýrmalýydým ne zaman ben musteri nesnesi kullansam bunu hep new ile orneklemem lazým o zaman
+
+        //    bu böyle yapýlmaz
+        //    neden
+        //    tekrar eden kodlar olur unutulabilir degistirmek istenilebilir o zaman da bütün kodlar da degisiklik gerekir uzun süre alýr 
+
+        //    bizim bu tip koleksiyonlarý inner type larý örnekledýgýmýz yerler ilgili ana tipin yapýcý metotudur
+
+        //    yani bu böyle yapýlmaz!!
+
+        //    M1.musteriAdres147Liste = new MusteriAdres147[5];
+
+        //    burda da calýsýr ama yeri burasý degil 
+
+        //    musteri nesnesine gidip ctor olusturup orda new leyelim 
+
+        //    1. not bitiþ
+
+        //    2. not bitiþ
+
+        //    3. not baslangýc
+
+        //    Musteri147 M1 = new Musteri147(); breakpoint koyalým
+
+        //    öncelikle nesne örneklenmeye calýsacak bu calýsýrken yapýcý metot calýsacak 
+        //    nesne orneklendýgýn de ýnnertype lar da orneklenmýs olacak
+
+        //    yani ben new musteri dedigim de ana tipim musteri yanýnda bu musterýye baglý olan tum koleksiyonlarýmý sisteme tanýtmýs olacagým 
+
+        //    ve atama iþlemi yaparsam sistem null referance hatasý vermeyecek 
+
+        //    f11 ile gidince yapýcý metota dusuyor 
+
+        //    .net framework deki oop nin cok onemlý bir noktasý burasý bir nesne orneklenýrken yapýcý metot siz ezmezseniz kendi default unda arka planda calýsýr 
+
+        //    ezerseniz bu sekýlde mudahale edebilir ve olusmasýný istediðiniz ilk nesne olusurken yapýlmasýný istediðiniz bütün iþleri buraya koyabilirsiniz
+
+        //    ilgili iþlemleri buraya koydugunuzda da ise o müsteri nesnesi yada herhangi bir nesneyi nerde cagýrýrsanýz cagýrýn arka tarafta bir logic olusturmus 
+        //    olusturmus oldugunuz bu logic i tek bir noktadan yönetebilirsiniz
+
+        //    þimdi bana birisi desin ki sen musteri nesneni uygulama içinde yuz bin yerde kullandýn hadi bunlarýn musteri adreslerýný 10 elemanlý bir dizi yap
+        //    boyle yaptýgýmýz da musteri class ýna gidip sadece yazdýgýmýzý 10 yapmak olacak
+        //    diger turlu bütün yerlerde degisiklik gerekir 
+
+        //    devam ettiðimiz de koda ctor da hepsi orneklendi geri program.cs e geldi kod 
+        //    m1 içine baktýgýmýz da butun koleksiyonlar da orneklenmýs oldu kac elemanlý yazdýysak artýk 
+
+        //    ilk once m1. ile atamalarý yapýyor sonra da 0. index e atama yapýyor 
+
+        //    M1.musteriAdres147Liste[0] = new MusteriAdres147() gelince 
+        //    musteriadres147liste nin de yapýcý metodu calýsacak 
+
+        //    bu da bir class her class ýn bir yapýcý metodu vardýr 
+        //    ben bu yapýcý metotlarý duzeltebilirim
+        //    musteriadres147liste nin yapýcý metotu na birþey eklemediðim için arka tarafta beným görmediðim bir yapýcý metot calýsacak
+
+        //    buna da mudahale edersem bunun da yapýcý metotunu calýstýrabilirim
+
+        //    f11 ile devam edince de 0. index e gerekli atamayý yaptý 
+
+        //    MusteriAdres147 e gidip bir yapýcý metot ekleyelim
+
+        //    3. not bitiþ
+        //    4. not bitiþ
+
+        //    5. not baslangýc
+
+        //    MusteriAdres147 e yapýcý metot yazdýk bir cw yazdýk sadece oraya da gidip calýstýgýný görmek için
+
+        //    bütün breakpoint leri kaldýralým 
+
+        //    M1.musteriAdres147Liste[0] = new MusteriAdres147() buraya breakpoint koyalým
+
+        //    burasý calýsýrken MusteriAdres147 nin yapýcý metotuna gidecek 
+        //    kendi özel tiplerinizin yapýcý metotlarý inner type olsada calýsacaktýr
+
+        //    class kendý davranýsýndan vazgecmez 
+
+        //    kodu devam ettirince de konsola yazýyý yazdýrýyor
+
+        //    deginmek istediðim farklý bir nokta innertype larýmýzýn içerisindeki metotlara ulasabilmek 
+
+        //    nesne içerisindeki nesnenin metoduna nasýl ulaþabilirim bunu diger video da görelim
+
+        //    VÝDEO 147 BÝTÝÞ
+
+
+        //    */
+
+        //    Musteri147 M1 = new Musteri147();
+        //    M1.musteriId = 1;
+        //    M1.tcKimlikNumarasi = "12345678901";
+        //    M1.isim = "Mücahit";
+        //    M1.soyIsim = "Çetinkaya";
+        //    M1.olusturmaTarihi = DateTime.Now;
+
+        //    // burdan sonra inner type lara gecelim
+
+        //    // yani bu böyle yapýlmaz!!
+
+        //    //M1.musteriAdres147Liste = new MusteriAdres147[5];
+
+        //    M1.musteriAdres147Liste[0] = new MusteriAdres147()
+        //    {
+        //        Il = "Istanbul",
+        //        Ilce = "Beþiktaþ",
+        //        Adres = "Adres...",
+        //        AdresTip = "Ýþ Yeri"
+        //    };
+
+
+
+        //}
+
+        #endregion
+
+        ---------------------------
+
+        using System;
+
+namespace Bolum_16_OOP_Inner_Type_Kavrami
+{
+    public class Musteri147
+    {
+
+        #region Tekil olarak kullanýlan field lar
+
+        public int musteriId { get; set; }
+        public string isim { get; set; }
+        public string soyIsim { get; set; }
+        public DateTime olusturmaTarihi { get; set; }
+        public int kullaniciId { get; set; }
+        public string tcKimlikNumarasi { get; set; }
+
+        #endregion
+
+        #region Inner Type Gerektiren Field lar
+
+        public MusteriAdres147[] musteriAdres147Liste;
+        public MusteriIletisimBilgisi147[] musteriIletisimBilgisi147Liste;
+        public MusteriSiparisBilgisi147[] musteriSiparisBilgisi147Liste;
+
+        #endregion
+
+        public Musteri147()
+        {
+            musteriAdres147Liste = new MusteriAdres147[5];
+            musteriIletisimBilgisi147Liste = new MusteriIletisimBilgisi147[3];
+            musteriSiparisBilgisi147Liste = new MusteriSiparisBilgisi147[10];
+        }
+
+    }
+}
+
+
+/*
+ 
+1. not bitiþ
+ 
+2. not baslangýc
+
+ctor olusturup new leyelim 
+
+  public Musteri147()
+        {
+                musteriAdres147Liste = new MusteriAdres147[5];
+        }
+
+digerleri için de bunlarý yapabiliriz
+ 
+ public Musteri147()
+        {
+            musteriAdres147Liste = new MusteriAdres147[5];
+            musteriIletisimBilgisi147Liste = new MusteriIletisimBilgisi147[5];
+            musteriSiparisBilgisi147Liste = new MusteriSiparisBilgisi147[5];
+        }
+
+bunlarýn dizi sayýsýnýn 3-5 adet olmasý su anlýk ornek vermek amacýyla list generic konusuna geldiðimiz de istediðimiz kadar olabilecek
+henuz oraya hazýr olmadýgýmýz için bu sekýlde býrakýyorum 
+
+þimdi nesnenin davranýs biçimine bakalým 
+
+            musteriAdres147Liste = new MusteriAdres147[5]; buraya breakpoint koyalým
+
+program.cs e gidelim 
+
+2. not bitiþ
+
+*/
+
+        ----------------------------
+
+using System;
+
+namespace Bolum_16_OOP_Inner_Type_Kavrami
+{
+    public class MusteriAdres147
+    {
+        public string AdresTip { get; set; }
+        public string Il { get; set; }
+        public string Ilce { get; set; }
+        public string Adres { get; set; }
+
+        public MusteriAdres147()
+        {
+            Console.WriteLine("MusteriAdres147 nin yapýcý metot çalýþtý.");
+        }
+
+    }
+}
+
+/*
+ 
+3. not bitiþ 
+
+4. not baslangýc
+
+yapýcý metot olusturup bir cw yazalým sadece bunun da calýsmasýný görmek için
+tekrar dan program.cs e gidelim
+
+4. not bitiþ
+ 
+*/
+
+---------------------------------
+
+
+namespace Bolum_16_OOP_Inner_Type_Kavrami
+{
+    public class MusteriIletisimBilgisi147
+    {
+        public int iletisimTip { get; set; } // 717770001 : Mobil - 717770002 : Sabit Hat
+        public string alanKodu { get; set; }
+        public string numara { get; set; }
+        public bool aktifPasif { get; set; }
+    }
+}
+
+------------------------
+
+namespace Bolum_16_OOP_Inner_Type_Kavrami
+{
+    public class MusteriSiparisBilgisi147
+    {
+        public string siparisNumarasi { get; set; }
+
+    }
+}

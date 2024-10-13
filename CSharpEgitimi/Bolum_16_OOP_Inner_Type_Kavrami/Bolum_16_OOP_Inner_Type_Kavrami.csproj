@@ -44,9 +44,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Musteri145.cs" />
+    <Compile Include="Musteri147.cs" />
     <Compile Include="MusteriAdres145.cs" />
+    <Compile Include="MusteriAdres147.cs" />
     <Compile Include="MusteriIletisimBilgisi146.cs" />
+    <Compile Include="MusteriIletisimBilgisi147.cs" />
     <Compile Include="MusteriSiparisBilgisi146.cs" />
+    <Compile Include="MusteriSiparisBilgisi147.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -54,7 +58,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Not\Bolum_16_OOP_Inner_Type_Kavrami-V145.txt" />
+    <Content Include="Not\Bolum_16_OOP_Inner_Type_Kavrami-V147.txt" />
+    <Content Include="Not\Bolum_16_OOP_Inner_Type_Kavrami-V145-V146.txt" />
     <Content Include="Not\Bolum_16_OOP_Inner_Type_Kavrami-V144.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
