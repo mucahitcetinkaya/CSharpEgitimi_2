@@ -1,0 +1,383 @@
+
+
+Bölüm 16 : OOP - Inner Type Kavramý
+VÝDEO 149 Bölüm sonu ödevi
+
+
+        #region VÝDEO 149 Bölüm sonu ödevi
+
+        static void Main(string[] args)
+        {
+
+            /*
+
+            Bolum 16 OOP Inner Type Kavrami V149 Bölüm sonu ödevi
+
+            */
+
+
+            /*
+
+            1. not baslangýc
+
+            148. den gerekli bilgileri alalým kopyalayým isimlerini deðiþtirelim
+            ek olarak birde Urun tipi class ý olusturup yapýcý metotunda bir console yazdýrýp calýstýgýna bakalým
+
+            gerekenleri olusturduk ve Urun nesnemizi de olusturduk Urun nesnesinden devam edelim
+
+            1. not bitiþ 
+
+            3. not bitiþ 
+
+            4. not baslangýc
+
+              M1.musteriSiparisBilgisi149Liste[0].urunler149[0] = new Urun149()
+            {
+                urunId = 1,
+                Tanim = "Telefon",
+                fiyat = 1500
+            };
+
+            m1 yani musteri içindeki innertype olan
+            musteriSiparisBilgisi149Liste nin 0 index ine
+            musteriSiparisBilgisi149Liste nin içindeki innertype olan
+            urunler149 un 0. index ine yeni taným olusturduk
+
+            Musteri149 M1 = new Musteri149(); e breakpoint koyalým
+
+            start verdik
+
+            f11 ile gidince ilk yapýcý metot calýstý ram da musteri nesnesi calýstý 
+            dizi nesneleri olustu 
+            geri program.cs e geldi m1. dediðimiz degerleri atadý
+
+            kodu devam ettirip 
+
+            M1.musteriSiparisBilgisi149Liste[0].urunler149[0] = new Urun149()
+            
+            geldik
+
+            burda bir þeyi eksik yaptýk 
+
+            musteriSiparisBilgisi149Liste 10 elemanlý bir dizi
+
+            musteriSiparisBilgisi149Liste nin 0. index i null geliyor 
+
+            öncelikle siparisbilgisini daha sonra o sipariþin içindeki urunleri olusturmam gerekiyordu 
+
+            musterisiparisbilgilerine atama yapmadan onun içindeki innertype a gittik
+
+            hatalý olusturma sýrasý asagýdaki gibi 
+
+             Musteri149 M1 = new Musteri149();
+            M1.musteriId = 1;
+            M1.tcKimlikNumarasi = "12345678901";
+            M1.isim = "Mücahit";
+            M1.soyIsim = "Çetinkaya";
+            M1.olusturmaTarihi = DateTime.Now;
+
+            M1.musteriAdres149Liste[0] = new MusteriAdres149()
+            {
+                Il = "Istanbul",
+                Ilce = "Beþiktaþ",
+                Adres = "Adres...",
+                AdresTip = "Ýþ Yeri"
+            };
+
+            M1.musteriAdres149Liste[0].MusteriAdresTest();
+
+            M1.musteriSiparisBilgisi149Liste[0].urunler149[0] = new Urun149()
+            {
+                urunId = 1,
+                Tanim = "Telefon",
+                fiyat = 1500
+            };
+
+            dogru olan 
+
+             Musteri149 M1 = new Musteri149();
+            M1.musteriId = 1;
+            M1.tcKimlikNumarasi = "12345678901";
+            M1.isim = "Mücahit";
+            M1.soyIsim = "Çetinkaya";
+            M1.olusturmaTarihi = DateTime.Now;
+
+            M1.musteriAdres149Liste[0] = new MusteriAdres149()
+            {
+                Il = "Istanbul",
+                Ilce = "Beþiktaþ",
+                Adres = "Adres...",
+                AdresTip = "Ýþ Yeri"
+            };
+
+            M1.musteriAdres149Liste[0].MusteriAdresTest();
+
+            M1.musteriSiparisBilgisi149Liste[0] = new MusteriSiparisBilgisi149()
+            {
+                siparisNumarasi = "SIP001",
+
+            };
+
+            M1.musteriSiparisBilgisi149Liste[0].urunler149[0] = new Urun149()
+            {
+                urunId = 1,
+                Tanim = "Telefon",
+                fiyat = 1500
+            };
+
+            fark sadece 
+
+            arada bunu da olusturduk 
+
+            M1.musteriSiparisBilgisi149Liste[0] = new MusteriSiparisBilgisi149()
+            {
+                siparisNumarasi = "SIP001",
+
+            };
+
+            tekrar kodu calýsýtýrýnca musteriSiparisbilgileri null olarak geliyor 
+            ilgili index e bir sipariþ numarasý atamam gerekiyor ki onun uzerýnden iþlem yapalým
+
+            onun yapýcý metotu calýsacak ve yapýcýsýnda da innertype calýsmýs olacak 
+
+            yapýcýsýnda da urunleri new lemýstýk o calýsmýs oldu 
+
+            innertype lar dagýnýk bir yapýda sql veya database tarafýnda iliþkisel veri tabanýndan datayý cektýgýmýz de innertype ýmýz içerisindeki tüm nesnelerimiz dolar
+
+            ve biz bu nesne içerisinde datamýzý ceker kullanýcýmýza gösteriririz veya tam tersi 
+
+            datayý toplar database e gider yavas yavas iliþkisel veri tablolarýna bunlarý yazmaya baslarýz
+
+            */
+
+            Musteri149 M1 = new Musteri149();
+            M1.musteriId = 1;
+            M1.tcKimlikNumarasi = "12345678901";
+            M1.isim = "Mücahit";
+            M1.soyIsim = "Çetinkaya";
+            M1.olusturmaTarihi = DateTime.Now;
+
+            M1.musteriAdres149Liste[0] = new MusteriAdres149()
+            {
+                Il = "Istanbul",
+                Ilce = "Beþiktaþ",
+                Adres = "Adres...",
+                AdresTip = "Ýþ Yeri"
+            };
+
+            M1.musteriAdres149Liste[0].MusteriAdresTest();
+
+            M1.musteriSiparisBilgisi149Liste[0] = new MusteriSiparisBilgisi149()
+            {
+                siparisNumarasi = "SIP001",
+
+            };
+
+            M1.musteriSiparisBilgisi149Liste[0].urunler149[0] = new Urun149()
+            {
+                urunId = 1,
+                Tanim = "Telefon",
+                fiyat = 1500
+            };
+
+        }
+
+        #endregion
+
+        ---------------------
+
+using System;
+
+namespace Bolum_16_OOP_Inner_Type_Kavrami
+{
+    public class Musteri149
+    {
+
+        #region Tekil olarak kullanýlan field lar
+
+        public int musteriId { get; set; }
+        public string isim { get; set; }
+        public string soyIsim { get; set; }
+        public DateTime olusturmaTarihi { get; set; }
+        public int kullaniciId { get; set; }
+        public string tcKimlikNumarasi { get; set; }
+
+        #endregion
+
+        #region Inner Type Gerektiren Field lar
+
+        public MusteriAdres149[] musteriAdres149Liste;
+        public MusteriIletisimBilgisi149[] musteriIletisimBilgisi149Liste;
+        public MusteriSiparisBilgisi149[] musteriSiparisBilgisi149Liste;
+
+        #endregion
+
+        public Musteri149()
+        {
+            musteriAdres149Liste = new MusteriAdres149[5];
+            musteriIletisimBilgisi149Liste = new MusteriIletisimBilgisi149[3];
+            musteriSiparisBilgisi149Liste = new MusteriSiparisBilgisi149[10];
+        }
+
+    }
+}
+
+---------------------------------
+
+using System;
+
+namespace Bolum_16_OOP_Inner_Type_Kavrami
+{
+    public class Urun149
+    {
+        public int urunId { get; set; }
+        public string Tanim { get; set; }
+        public decimal fiyat { get; set; }
+
+        public Urun149()
+        {
+            Console.WriteLine("Urun149 çalýþtý.");
+        }
+
+        public void UrunTestMetot()
+        {
+            Console.WriteLine("UrunTestMetot");
+        }
+
+    }
+}
+
+/*
+ 
+1. not bitiþ 
+
+2. not baslangýc
+
+gerekenleri olusturduk
+burdan MusteriSiparisBilgisi149 a gidelim
+
+oraya gitme sebebimiz 
+
+inner type içinden innertype cagýrmaya bakacagýz 
+
+2. not bitiþ
+ 
+ 
+ 
+ 
+*/
+
+
+-----------------------------------------------
+
+
+using System;
+
+namespace Bolum_16_OOP_Inner_Type_Kavrami
+{
+    public class MusteriSiparisBilgisi149
+    {
+        public string siparisNumarasi { get; set; }
+
+        public Urun149[] urunler149;
+
+        public MusteriSiparisBilgisi149()
+        {
+            urunler149 = new Urun149[2];
+        }
+
+        public void MusteriSiparisBilgisiTestMetot()
+        {
+            Console.WriteLine("MusteriSiparisBilgisiTestMetot");
+        }
+
+    }
+}
+
+
+/*
+ 
+2. not bitiþ 
+
+3. not baslangýc
+
+innertype içinden innertype cagýracagýz 
+
+MusteriSiparisBilgisi Musteri classýn da innertype bizde m1 yazýp musteri için onun üstünden ulasýyoduk
+þimdi
+
+MusteriSiparisBilgisi nde innertype olusturup
+
+Musteri içindeki innertype MusteriSiparisBilgisi onun içindeki innertype Urun olacak
+
+        public Urun149[] urunler149;
+
+birde siparis bilgisi orneklendýgýn de urunleri new lemek lazým yapýcý metotuna yazalým
+bunu sizden istemedim ama bu yapýsal olarak bir zorunluluk 
+
+yoksa null hatasý alýrýz
+ 
+         public MusteriSiparisBilgisi149()
+        {
+            urunler149 = new Urun149[2];
+        }
+
+program.cs e gidelim
+
+3. not bitiþ 
+ 
+*/
+
+
+---------------------------
+
+
+using System;
+
+namespace Bolum_16_OOP_Inner_Type_Kavrami
+{
+    public class MusteriIletisimBilgisi149
+    {
+        public int iletisimTip { get; set; } // 717770001 : Mobil - 717770002 : Sabit Hat
+        public string alanKodu { get; set; }
+        public string numara { get; set; }
+        public bool aktifPasif { get; set; }
+
+        public void MusteriIletisimBilgisiTestMetot()
+        {
+            Console.WriteLine("MusteriIletisimBilgisiTestMetot");
+        }
+
+
+    }
+
+}
+
+-----------------------------
+
+
+using System;
+
+namespace Bolum_16_OOP_Inner_Type_Kavrami
+{
+    public class MusteriAdres149
+    {
+        public string AdresTip { get; set; }
+        public string Il { get; set; }
+        public string Ilce { get; set; }
+        public string Adres { get; set; }
+
+        public MusteriAdres149()
+        {
+            Console.WriteLine("MusteriAdres147 nin yapýcý metot çalýþtý.");
+        }
+
+        public void MusteriAdresTest()
+        {
+            Console.WriteLine("MusteriAdresTestMetot");
+        }
+
+    }
+}
+
+--------------------------------

@@ -46,22 +46,28 @@
     <Compile Include="Musteri145.cs" />
     <Compile Include="Musteri147.cs" />
     <Compile Include="Musteri148.cs" />
+    <Compile Include="Musteri149.cs" />
     <Compile Include="MusteriAdres145.cs" />
     <Compile Include="MusteriAdres147.cs" />
     <Compile Include="MusteriAdres148.cs" />
+    <Compile Include="MusteriAdres149.cs" />
     <Compile Include="MusteriIletisimBilgisi146.cs" />
     <Compile Include="MusteriIletisimBilgisi147.cs" />
     <Compile Include="MusteriIletisimBilgisi148.cs" />
+    <Compile Include="MusteriIletisimBilgisi149.cs" />
     <Compile Include="MusteriSiparisBilgisi146.cs" />
     <Compile Include="MusteriSiparisBilgisi147.cs" />
     <Compile Include="MusteriSiparisBilgisi148.cs" />
+    <Compile Include="MusteriSiparisBilgisi149.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Urun149.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Not\Bolum_16_OOP_Inner_Type_Kavrami-V149.txt" />
     <Content Include="Not\Bolum_16_OOP_Inner_Type_Kavrami-V148.txt" />
     <Content Include="Not\Bolum_16_OOP_Inner_Type_Kavrami-V147.txt" />
     <Content Include="Not\Bolum_16_OOP_Inner_Type_Kavrami-V145-V146.txt" />

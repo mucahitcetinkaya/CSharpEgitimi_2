@@ -494,7 +494,185 @@ namespace Bolum_16_OOP_Inner_Type_Kavrami
 
         #endregion
 
+        #region VİDEO 149 Bölüm sonu ödevi
 
+        //static void Main(string[] args)
+        //{
+
+        //    /*
+
+        //    Bolum 16 OOP Inner Type Kavrami V149 Bölüm sonu ödevi
+
+        //    */
+
+
+        //    /*
+
+        //    1. not baslangıc
+
+        //    148. den gerekli bilgileri alalım kopyalayım isimlerini değiştirelim
+        //    ek olarak birde Urun tipi class ı olusturup yapıcı metotunda bir console yazdırıp calıstıgına bakalım
+
+        //    gerekenleri olusturduk ve Urun nesnemizi de olusturduk Urun nesnesinden devam edelim
+
+        //    1. not bitiş 
+
+        //    3. not bitiş 
+
+        //    4. not baslangıc
+
+        //      M1.musteriSiparisBilgisi149Liste[0].urunler149[0] = new Urun149()
+        //    {
+        //        urunId = 1,
+        //        Tanim = "Telefon",
+        //        fiyat = 1500
+        //    };
+
+        //    m1 yani musteri içindeki innertype olan
+        //    musteriSiparisBilgisi149Liste nin 0 index ine
+        //    musteriSiparisBilgisi149Liste nin içindeki innertype olan
+        //    urunler149 un 0. index ine yeni tanım olusturduk
+
+        //    Musteri149 M1 = new Musteri149(); e breakpoint koyalım
+
+        //    start verdik
+
+        //    f11 ile gidince ilk yapıcı metot calıstı ram da musteri nesnesi calıstı 
+        //    dizi nesneleri olustu 
+        //    geri program.cs e geldi m1. dediğimiz degerleri atadı
+
+        //    kodu devam ettirip 
+
+        //    M1.musteriSiparisBilgisi149Liste[0].urunler149[0] = new Urun149()
+
+        //    geldik
+
+        //    burda bir şeyi eksik yaptık 
+
+        //    musteriSiparisBilgisi149Liste 10 elemanlı bir dizi
+
+        //    musteriSiparisBilgisi149Liste nin 0. index i null geliyor 
+
+        //    öncelikle siparisbilgisini daha sonra o siparişin içindeki urunleri olusturmam gerekiyordu 
+
+        //    musterisiparisbilgilerine atama yapmadan onun içindeki innertype a gittik
+
+        //    hatalı olusturma sırası asagıdaki gibi 
+
+        //     Musteri149 M1 = new Musteri149();
+        //    M1.musteriId = 1;
+        //    M1.tcKimlikNumarasi = "12345678901";
+        //    M1.isim = "Mücahit";
+        //    M1.soyIsim = "Çetinkaya";
+        //    M1.olusturmaTarihi = DateTime.Now;
+
+        //    M1.musteriAdres149Liste[0] = new MusteriAdres149()
+        //    {
+        //        Il = "Istanbul",
+        //        Ilce = "Beşiktaş",
+        //        Adres = "Adres...",
+        //        AdresTip = "İş Yeri"
+        //    };
+
+        //    M1.musteriAdres149Liste[0].MusteriAdresTest();
+
+        //    M1.musteriSiparisBilgisi149Liste[0].urunler149[0] = new Urun149()
+        //    {
+        //        urunId = 1,
+        //        Tanim = "Telefon",
+        //        fiyat = 1500
+        //    };
+
+        //    dogru olan 
+
+        //     Musteri149 M1 = new Musteri149();
+        //    M1.musteriId = 1;
+        //    M1.tcKimlikNumarasi = "12345678901";
+        //    M1.isim = "Mücahit";
+        //    M1.soyIsim = "Çetinkaya";
+        //    M1.olusturmaTarihi = DateTime.Now;
+
+        //    M1.musteriAdres149Liste[0] = new MusteriAdres149()
+        //    {
+        //        Il = "Istanbul",
+        //        Ilce = "Beşiktaş",
+        //        Adres = "Adres...",
+        //        AdresTip = "İş Yeri"
+        //    };
+
+        //    M1.musteriAdres149Liste[0].MusteriAdresTest();
+
+        //    M1.musteriSiparisBilgisi149Liste[0] = new MusteriSiparisBilgisi149()
+        //    {
+        //        siparisNumarasi = "SIP001",
+
+        //    };
+
+        //    M1.musteriSiparisBilgisi149Liste[0].urunler149[0] = new Urun149()
+        //    {
+        //        urunId = 1,
+        //        Tanim = "Telefon",
+        //        fiyat = 1500
+        //    };
+
+        //    fark sadece 
+
+        //    arada bunu da olusturduk 
+
+        //    M1.musteriSiparisBilgisi149Liste[0] = new MusteriSiparisBilgisi149()
+        //    {
+        //        siparisNumarasi = "SIP001",
+
+        //    };
+
+        //    tekrar kodu calısıtırınca musteriSiparisbilgileri null olarak geliyor 
+        //    ilgili index e bir sipariş numarası atamam gerekiyor ki onun uzerınden işlem yapalım
+
+        //    onun yapıcı metotu calısacak ve yapıcısında da innertype calısmıs olacak 
+
+        //    yapıcısında da urunleri new lemıstık o calısmıs oldu 
+
+        //    innertype lar dagınık bir yapıda sql veya database tarafında ilişkisel veri tabanından datayı cektıgımız de innertype ımız içerisindeki tüm nesnelerimiz dolar
+
+        //    ve biz bu nesne içerisinde datamızı ceker kullanıcımıza gösteriririz veya tam tersi 
+
+        //    datayı toplar database e gider yavas yavas ilişkisel veri tablolarına bunları yazmaya baslarız
+
+        //    */
+
+        //    Musteri149 M1 = new Musteri149();
+        //    M1.musteriId = 1;
+        //    M1.tcKimlikNumarasi = "12345678901";
+        //    M1.isim = "Mücahit";
+        //    M1.soyIsim = "Çetinkaya";
+        //    M1.olusturmaTarihi = DateTime.Now;
+
+        //    M1.musteriAdres149Liste[0] = new MusteriAdres149()
+        //    {
+        //        Il = "Istanbul",
+        //        Ilce = "Beşiktaş",
+        //        Adres = "Adres...",
+        //        AdresTip = "İş Yeri"
+        //    };
+
+        //    M1.musteriAdres149Liste[0].MusteriAdresTest();
+
+        //    M1.musteriSiparisBilgisi149Liste[0] = new MusteriSiparisBilgisi149()
+        //    {
+        //        siparisNumarasi = "SIP001",
+
+        //    };
+
+        //    M1.musteriSiparisBilgisi149Liste[0].urunler149[0] = new Urun149()
+        //    {
+        //        urunId = 1,
+        //        Tanim = "Telefon",
+        //        fiyat = 1500
+        //    };
+
+        //}
+
+        #endregion
 
     }
 }
