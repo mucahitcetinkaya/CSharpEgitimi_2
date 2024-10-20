@@ -1,0 +1,132 @@
+
+
+Bölüm 17 : OOP - Kalýtým
+Video 151 Nesne yönelimli programlama dünyasýnda kalýtým nedir ?
+
+
+        #region VÝDEO 151 Nesne yönelimli programlama dünyasýnda kalýtým nedir ?
+
+        static void Main(string[] args)
+        {
+
+            /*
+            
+            Bolum 17 OOP Kalýtým V151 Nesne yönelimli programlama dünyasýnda kalýtým nedir ? 
+             
+            */
+
+            /*
+             
+            1. not baþlangýç
+            
+            Bu bölümde oop de kalýtým konusunu inceleyeceðiz 
+            bir önceki bölümde innertype demiþtik innertype kýsmýnda standart bir nesne olusumunun icerisinde field olarak 
+            kendi yapmýs oldugumuz nesnelerimizi cagýrmaya innertype diyoduk bunu gördük
+            cok basit bir konu oldugu için cok örnek yapamadýk ama kalýtým konusu öyle degil 
+            kalýtým konusu nesne yönelimli programlamanýn tam ortasý diyebileceðimiz bir sonraki konunun habercisi olan zorlukta bir konudur 
+
+            Nesne Yönelimli Programlama - Kalýtým
+
+            Nesne yönelimli programlama içerisinde önemli bir yere sahip bir baþka konuya ulaþtýk.
+            Konumuz kalýtým veya miras alma da diyebiliriz baþka kaynaklar kullanýyorsanýz inharance olarak geçebilir
+
+            Kalýtým yolu ile oluþturmuþ oldugumuz nesnelerimiz birbirlerinden türetilebilir ve türeyen nesne türetilen nesnenin tüm özelliklerini kullanabilir
+            C# programlama diline baþlarken tip dönüþümlerinde tüm nesneleri tanýyan her türden nesneyi kabul eden
+            - hatta boxing unboxing diye özel video cektigimiz bir object tipi vardý iþte bu object tipi ----
+            object tipinden bahsetmiþtik.
+
+            Object tipi framework içerisindeki tüm nesnelerin atasý olan bir tip olduðu için ( tüm nesneler object nesnesinden kalýtýldýðý için ) türetilen tip kendisinden türeyen tüm tipleri tanýr ve tam bir uyumluluk saðlar.
+
+            Ogrenci O1 = new Ogrenci();
+
+            Yukarýda nesne örneði alýnan ögrenci nesnesi aslýnda object tipinden türetilmiþ bir nesnedir.
+
+            inceleyelim ve sunumumuza devam edelim
+
+            kod kýsmýndan devam edelim ..
+
+            Ogrenci151 adýnda bir class olusturalým 
+
+            ordan devam edelim 
+
+            1. not bitiþ
+
+            2. not bitiþ 
+
+            3. not baþlangýc
+
+            ogrenci yi new leyeceðiz 
+
+            Ogrenci151 O1 = new Ogrenci151();
+             
+            O1. dedigimiz de yazdýgýmýz field lar geldi ama ek olarak 4 tane de metot geldi 
+
+            Equals GetHashCode GetType isim ogrenciId soyisim ToString
+
+            peki bu metotlar nasý geldi ben bunlarý yazmadým 
+            demekki bir yerden ogrenilip geldi buraya 
+            beným ogrenci nesnemin bu metotlarý ögrendiði yani miras aldýgý tipimizin adý object
+
+            ben bunu nasý biliyorum belki object degil 
+
+            O1. dedigimiz de yanda tooltype cýkýyor C# programlama dilini ogrenmek istiyorsanýz bunlara dikkat etmek okumak gerek
+
+            Equals uzerýne geldimiz de bool object.Equals(object obj) yazýyor
+            bool veri tipi döner 
+            object. dediði yer object nesnesinin içinden geliyor
+
+            mesela ToString metoduna bakalým 
+
+            string object.ToString() yazýyor bunu daha sýk kullanacagýz
+            geriye string deger dönerim diyor 
+            object nesnesinin bir metodu olan metot oldugunu () lerden anlýyoruz
+            metodu olan ToString i seninle paylaþýyorum diyor 
+
+            peki bunu nasý yapýyor benim ogrenci nesnem orneklenirken .netframework un ana mantýgýndan yararlanýyor 
+            gidip object nesnesini alýyor ondan bir kopya alarak kendini türetiyor 
+            benim içerisine yazmýs oldugum field lar ogrenci nesnesi için konusuyorum field lar metotlar vb tüm iþlemler 
+            aslýnda bir þablon olarak alýnan object nesnesinin üzerinden geçip beným özel tipim haline geliyor
+
+            ve ben bu olusturmus oldugum özel tipimi de türetip farklý tipler de kullanabiliyorum 
+            þimdi slaytýmýza geri dönelim bunlarý zaten detaylý olarak inceleceðiz...
+
+            3. not bitiþ 
+
+            4. not baþlangýç - dk 8
+
+            Uygulama içerisinde gördüðünüz gibi ögrenci nesnesi aslýnda bizim olusturdugumuz özel bir tip ama içeride bizim ona yazmdýgýmýz metotlarýn oldugunu ve bunlarýn object nesnesinden kalýtýlma ile geldiðini söyledik.
+
+            Kalýtým konusunu biz aslýnda yine iliþkisel veri tabaný mantýgýnda ortak deðerlere sahip olan alanlarýmýzý nesnesel olarak modellerken kullanýrýz.
+
+            (Kalýtým konusunu biz aslýnda yine iliþkisel veri tabaný mantýgýný modellerken kendisini tekrar eden field lar metotlar vb iþlemleri kullanabilmemiz için bir merkezilik saglayabilmek için ki bunu cok biçimlilik Polymorphism konusunda biraz zor bir konudur orda biraz daha net anlayacagýz modelleme için kullanýrýz biz aslýnda class larý database içindeki datamýza eriþip o datayý c# tarafýnda kullanabilmek için modelleriz modellediðimiz olan class ý da uygulama içerisinde kullanýrýz hiç class kullanmasak cok guzel uygulamalar yapamaz mýyýz yaparýz tabiki ama cok uzun sürer neden uzun sürer herseyi defalarca yazmamýz gerekir ama nesne yönelimli programlama da ana amac zaten bir veriyi bir ana noktayý merkezileþtirmek merkezileþtirip referanslar üzerinden giderek iþlemleri alabilmek dolayýsýyla kalýtým nesne yönelimli programlanýn tam ihtiyacý olan bir konudur.)
+
+            C# programlama dilinde olusturmus oldugumuz tüm nesnelerimiz default olarak türetilmeye acýk olarak gelmektedir.
+
+            istersek olusturmus oldugumuz nesnelerimizin türetilmesini engelleyebiliriz
+            neden kapama ihtiyacý duyarýz býrakalým türesinde diyebiliriz ama 
+            kendi uygulamamýz içerisinde biz bu nesnelerimizi bir anahtar kelime ekleyerek class ýn uzerýne kapatmayabiliriz 
+            fakat uygulamayý dýs programcýlara verdigimiz de benim bir kutuphane yazdýgýmý dusunun 
+            public olarak internete dagýttýgýmý düþünün yada bir banka entegrasyonu olabilir yada bir 3. parti bir yazýlýmcý ile kutuphaneyi verip paylaþtýgým söz konusu olabilir
+            ki bunlar olabilir ama nesnemin kullanýlmasýný istemem aldýgý hatayý benim nesneme atar bir program cýksa anlamazsa iþten geri döner nesneyi onla paylaþmam ileride bende güvenlik problemleri olusturabilir cunku kalýtýyorum ve diyorum ki sen bu nesne gibi bir nesne türet bunu istemediðimiz durumlarda nesnemizi kalýtýma kapatmaya geceriz ve baska nesneler tarafýndan katýlmasýný engelleriz cok basit bir iþlemdir.
+
+            Bu bölüm içerisinde eriþim belirleyicilerinden internal eriþim belirleyecisini inceleyeceðiz
+
+            kalýtým konusu önemli bir konu detaylý bakacagýz Polymorphism konusuna geldiðimiz de iþte orda biraz kafamýz karýsacak ki kalýtým konusunu net olarak anlamamýz buna baglý Polymorphism konuna gectigimiz de bir class daki bir metot bir iþlem yaparken ayný class daki ayný isimli ayný metot farklý iþlem yapabilecek
+            çok biçimlilik olacak iþte bu nokta da karýsmamak için kalýtým konusunu yavas ve detaylý atlatmadan izleyin 
+
+
+            */
+
+            /* 3. not kod kýsmý baslangýc */
+
+            //Ogrenci151 O1 = new Ogrenci151();
+            //O1.
+
+        }
+
+        #endregion
+
+
+------------------------------
+
+
