@@ -44,17 +44,22 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Egitmen152.cs" />
+    <Compile Include="Egitmen153.cs" />
     <Compile Include="Ogrenci151.cs" />
     <Compile Include="Ogrenci152.cs" />
+    <Compile Include="Ogrenci153.cs" />
     <Compile Include="Personel152.cs" />
+    <Compile Include="Personel153.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TemelTip152.cs" />
+    <Compile Include="TemelTip153.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Not\Bolum_17_OOP_Kalitim-V153.txt" />
     <Content Include="Not\Bolum_17_OOP_Kalitim-V152.txt" />
     <Content Include="Not\Bolum_17_OOP_Kalitim-V151.txt" />
   </ItemGroup>

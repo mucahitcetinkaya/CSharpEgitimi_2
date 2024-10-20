@@ -1,0 +1,339 @@
+
+
+Bölüm 17 : OOP - Kalýtým
+Video 153 Kalýtým ile nesne modelleme - Yapýcý metot davranýþlarý
+
+
+        #region VÝDEO 153 Kalýtým ile nesne modelleme - Yapýcý metot davranýþlarý
+
+        static void Main(string[] args)
+        {
+
+            /*
+            
+                Bolum 17 OOP Kalýtým V153 Kalýtým ile nesne modelleme - Yapýcý metot davranýþlarý
+             
+            */
+
+            /*
+            
+            1. not baslangýc
+
+            video 152 de nesnemizi modelledik ama calýstýrýp davranýslarýna bakmadýk
+            Video 153 için 152 de yazdýgýmýz nesneler üzerinde calýsmalar yapacagýz
+            kendimize bir nesne belirleyip bu nesne ile temeltip arasýndaki etkileþime bakalým
+            152 deki yaptýgýmýz class larý 153 olarak yeniden olusturalým
+            
+            153 adýnda Egitmen Personel Ogrenci TemelTip class larýný olusturduk burdan devam edecegýz
+
+            ornek alacagýmýz nesne Egitmen olsun temeltip ile arasýndaki baglantýyý anlatmak istiyorum
+
+            bunu daha net anlamak için class larýn bazý davranýslarýný ön plana cýkartmak gerekli 
+
+            nesnemizi ornekledýgýmýz de yapýcý metot calýsacak bunu tekrardan yazýp mudahale edelim ki ne calýsýyor görelim
+
+            yapýcý metot da egitmen için egitmen class ýnýn yapýcý metodu calýstý
+            yapýcý metot da temeltip için temeltip metodunun yapýcý metodu calýstý yazdýralým
+
+            daha sonra nesnemizi ornekleyip yapýcý metotlarýn hangisinin daha once calýstýgýna bakalým 
+
+            temeltip153 e gidelim
+
+            1. not bitiþ
+
+            3. not bitiþ
+
+            4. not baslangýc
+
+            Egitmen153 ü ornekleyip hangisinin once calýstýgýna bakalým 
+
+            Egitmen153 E1 = new Egitmen153();
+            buraya breakpoint koyalým
+
+            davranýsý inceleceðiz class lar kendý davranýsýnýn dýsýna cýkmayacak 
+            bu class larýn davranýs sýralarý degisecek
+
+            diger class larýnda yapýcý metotlarýna breakpoint koyalým
+            ilk olarak egitmen nesnesine gidiyor orneklemeye calýsýyor ama
+            beni hemen temeltipe atýyor sonra nedeni baska nesneden türediðini görüyor oncelik ona geçiyor
+            ilk once base in calýsmasý lazým ki framework olarak hata almayalým oradaki field lara ulasmak isteyecegýmýz için
+            ilk once base in ayaga kalkmasý sonra digerlerinin calýsmasý gerekiyor
+            temeltipin ctor u calýstý
+            
+            konsolda yazýsý yazdý yani bu demek ki temeltip içindeki bütün field lar ram uzerýnde acýldý demek default degerlerýný aldý 
+
+            sonra egitmene geri dondu ctor calýstý
+            program.cs e geldi calýstý kodu bitirdi.
+
+            konsolda cýkan sonuc 
+
+            TemelTip153 nesnesinin yapýcý metodu çalýþtý.
+            Egitmen153 metodunun yapýcý metodu çalýþtý.
+
+            Egitmenin içine gitti once miras aldýgý class ý calýstýrdý sonra kendýsine donup onu calýstýrdý
+
+            aklýmýzda daha da kalýcý olmasý için ram ý tekrar tasarlayalým 
+            
+            Ram tarafýný konusalým 
+
+            bir dikdörtgen çizelim 
+            -------------------------------------
+            I    Stack       I       Heap       I
+            I                I                  I
+            I                I                  I
+            -------------------------------------
+            I              Static               I
+            I                                   I
+            -------------------------------------
+
+            ben en basta egitmen nesnesi olusturmak istiyorum dedým 
+            E1 adýndaki egitmen nesnem stack bolgede olusurken 
+            içeride e1 ýn temeltipten kalýtýldýgýný gördüm
+            e1 in içinde tt nesnesi orneklendi 
+            tt nin ctor calýstý içerisindeki field lar heap bolgeye atýldý
+            daha sonra uygulama geri dondu 
+            e1 i ornekledi 
+            acmýs oldugu referans ýn uzerýne ornekledý 
+            tek bir tip gibi davranmasýný sagladý 
+
+            calýsýrken E1 in üzerine gittiðimiz de degerlerim default degerlerini aldý
+            peki ben temeltip nesnesindeki bir field ýma default deger vermek istersem 
+            mesela id e bir metot ile random deger atamak istiyorum 
+            bunu nerde yapabilirim 2 farklý yer olabilir 
+            nerde yapmalýyým daha mantýklý bir soru ben bunu temeltip içerisinde yapmalýyým 
+            sebebi eger ben bu nesneyi temeltip içerisine eklediysem ve temeltip içerisinde deger almasýný istiyorsam 
+            bunu temeltip içerisinde bir metot olarak eklemeliyim ki bu nesnemden türeyen her yerde bunu kullanabileyim
+            2. soru ben egitmene özel id nin calýsmasýný istiyorum 
+            egitmen orneklendýgýn de 200 ile 300 arasýnda degerler ile id alsýn 
+            personel de 400 500 ile arasýnda degerler alsýn
+            ogrenci de 500 ile 1000 arasý alsýn gibi farklý cesitlilik isteyebilirsiniz
+            iþte o zaman ben bunu türeyen nesne yani egitmen uzerýnden bir metot ile cozebilirim gibi dusunebilirsiniz ama
+            ben yine de bunu söylerim 
+            bunun olmasý gereken yer en temelde yine temeltip dir
+            olusturmus oldugumuz metodu sanal metot yaparýz 
+            istediðimiz metodu da class la override edebiliriz
+            iþte n katmanlý mimari bastan sona bu sekýlde 
+            herseyi kuralýna göre yazarsanýz istediðiniz þeyi de kuralýna göre degistirebilirsiniz
+            dolasýyla id degerini tek bir noktada atamak istiyorsak farklý tiplere göre id mizin aralýgý degismeyecekse 
+            o zaman bizim bu id degerimizin atanmasý gereken yer standart olarak temeltip olmalý
+
+            temeltip nesnesine gidip metot yazalým 
+
+            4. not bitiþ
+            
+            5. not bitiþ
+
+            6. not baslangýc
+
+            bakalým atama yapacak mý breakpoint koyup da izleme yapabilirsin E1 de breakpoint var id atayacak mý ona bakacagýz
+            calýsýtýnca e1 null gecinde atamalar yapýyor ornekleniyor 
+            id e atama yapmýs random olarak sistem calýstý 
+
+            peki ben temeltip içindeki bu metodu egitmen içerisinde görebilir miydim ????
+
+            metot private
+
+            Egitmen nesnesine gidelim
+
+            6. not bitiþ
+
+            */
+
+            Egitmen153 E1 = new Egitmen153();
+            Console.WriteLine("Egitmen nesnesi orneklendi.");
+
+        }
+
+        #endregion
+
+
+---------------------------------------------------------------------
+
+
+
+using System;
+
+namespace Bolum_17_OOP_Kalitim
+{
+    public class TemelTip153
+    {
+        public TemelTip153()
+        {
+            Console.WriteLine("TemelTip153 nesnesinin yapýcý metodu çalýþtý.");
+            IdAtamaIslemi();
+        }
+
+        private void IdAtamaIslemi()
+        {
+            Random rnd = new Random();
+            this.Id = rnd.Next(1000,9000);
+        }
+
+        public int Id { get; set; }
+        public string ReferansKod { get; set; }
+        public string TcKimlikNumarasi { get; set; }
+        public string Isim { get; set; }
+        public string SoyIsim { get; set; }
+        public int Cinsiyet { get; set; }
+        public DateTime KayitTarihi { get; set; }
+        public int KayitKullanici { get; set; }
+        public DateTime GuncellemeTarihi { get; set; }
+        public int GuncellemeKullanici { get; set; }
+        public bool Silindi { get; set; }
+
+
+
+    }
+}
+
+
+/*
+ 
+1. not bitiþ
+
+2. not baslangýc
+
+ctor yapýcý metot yazdýk 
+ 
+ public TemelTip153()
+        {
+            Console.WriteLine("TemelTip153 nesnesinin yapýcý metodu çalýþtý.");
+        }
+
+egitmen153 e gidelim
+
+2. not bitiþ 
+
+4. not bitiþ 
+
+5. not baslangýc
+
+private olarak metot yazalým 
+
+private void IdAtamaIslemi()
+        {
+            Random rnd = new Random();
+            this.Id = rnd.Next(1000,9000);
+        }
+
+void olacak bir þey döndürmeyecek
+random olarak sayý üretecek id e atama yapacak 1000 ile 9000 arasýnda
+bunu cagýrmak lazým cagrýlmamýs metot yazýlmamýs metotdur
+
+yapýcý metot da bunu cagýralým ki ilk calýstýgýnda random sayý uretip atama yapsýn 
+
+tekrar dan calýstýrýp id e bakalým ne oldu
+
+program.cs e gidelim
+
+5. not bitiþ 
+ 
+ 
+*/
+
+
+----------------------------------------------------
+
+
+
+using System;
+using System.Threading;
+
+namespace Bolum_17_OOP_Kalitim
+{
+    public class Egitmen153 : TemelTip153
+    {
+
+        public Egitmen153()
+        {
+            Console.WriteLine("Egitmen153 metodunun yapýcý metodu çalýþtý.");
+
+            //IdAtamaIslemi();
+
+        }
+
+        public string Brans { get; set; }
+        public int BransSeviye { get; set; }
+
+        public DateTime IsBaslangicTarihi { get; set; }
+        public DateTime IsBitisTarihi { get; set; }
+        public int IzýnGunSayisi { get; set; }
+
+
+
+
+    }
+
+}
+
+
+/*
+ 
+2. not bitiþ 
+
+3. not baslangýc
+
+ctor yapýcý metot yazdýk 
+ 
+        public Egitmen153()
+        {
+            Console.WriteLine("Egitmen153 metodunun yapýcý metodu çalýþtý.");
+        }
+
+program.cs e gidelim ve nesnelerimizi ornekleyelim
+
+3. not bitiþ 
+
+6. not bitiþ
+
+7. not baslangýc
+
+temeltip içindeki metot u burda görebilir miyiz 
+cagýralým IdAtamaIslemi() gelmiyor neden
+
+private kendi davranýsýný korudu 
+
+bu video bu kadar 
+
+kalýtým konusunda yapýcý metotlarýn davrasýný gördük 
+içeride hangi deger alýnmak isteniyorsa nerde atanmalý bunu biraz acýkladýk
+detaylar devam edecek diger video a gecelim 
+ 
+*/
+
+
+-------------------------------------------------------------------------------------
+
+
+
+namespace Bolum_17_OOP_Kalitim
+{
+    public class Ogrenci153 : TemelTip153
+    {
+        public string Bolum { get; set; }
+        public int Seviye { get; set; }
+    }
+}
+
+
+-------------------------------------------------------------------------
+
+
+
+
+using System;
+
+namespace Bolum_17_OOP_Kalitim
+{
+    public class Personel153 : TemelTip153
+    {
+
+        public DateTime IsBaslangicTarihi { get; set; }
+        public DateTime IsBitisTarihi { get; set; }
+        public int IzýnGunSayisi { get; set; }
+
+    }
+}
+
+
+------------------------------------------------------------------

@@ -270,7 +270,147 @@ namespace Bolum_17_OOP_Kalitim
 
         #endregion
 
+        #region VİDEO 153 Kalıtım ile nesne modelleme - Yapıcı metot davranışları
 
+        //static void Main(string[] args)
+        //{
+
+        //    /*
+
+        //        Bolum 17 OOP Kalıtım V153 Kalıtım ile nesne modelleme - Yapıcı metot davranışları
+
+        //    */
+
+        //    /*
+
+        //    1. not baslangıc
+
+        //    video 152 de nesnemizi modelledik ama calıstırıp davranıslarına bakmadık
+        //    Video 153 için 152 de yazdıgımız nesneler üzerinde calısmalar yapacagız
+        //    kendimize bir nesne belirleyip bu nesne ile temeltip arasındaki etkileşime bakalım
+        //    152 deki yaptıgımız class ları 153 olarak yeniden olusturalım
+
+        //    153 adında Egitmen Personel Ogrenci TemelTip class larını olusturduk burdan devam edecegız
+
+        //    ornek alacagımız nesne Egitmen olsun temeltip ile arasındaki baglantıyı anlatmak istiyorum
+
+        //    bunu daha net anlamak için class ların bazı davranıslarını ön plana cıkartmak gerekli 
+
+        //    nesnemizi ornekledıgımız de yapıcı metot calısacak bunu tekrardan yazıp mudahale edelim ki ne calısıyor görelim
+
+        //    yapıcı metot da egitmen için egitmen class ının yapıcı metodu calıstı
+        //    yapıcı metot da temeltip için temeltip metodunun yapıcı metodu calıstı yazdıralım
+
+        //    daha sonra nesnemizi ornekleyip yapıcı metotların hangisinin daha once calıstıgına bakalım 
+
+        //    temeltip153 e gidelim
+
+        //    1. not bitiş
+
+        //    3. not bitiş
+
+        //    4. not baslangıc
+
+        //    Egitmen153 ü ornekleyip hangisinin once calıstıgına bakalım 
+
+        //    Egitmen153 E1 = new Egitmen153();
+        //    buraya breakpoint koyalım
+
+        //    davranısı inceleceğiz class lar kendı davranısının dısına cıkmayacak 
+        //    bu class ların davranıs sıraları degisecek
+
+        //    diger class larında yapıcı metotlarına breakpoint koyalım
+        //    ilk olarak egitmen nesnesine gidiyor orneklemeye calısıyor ama
+        //    beni hemen temeltipe atıyor sonra nedeni baska nesneden türediğini görüyor oncelik ona geçiyor
+        //    ilk once base in calısması lazım ki framework olarak hata almayalım oradaki field lara ulasmak isteyecegımız için
+        //    ilk once base in ayaga kalkması sonra digerlerinin calısması gerekiyor
+        //    temeltipin ctor u calıstı
+
+        //    konsolda yazısı yazdı yani bu demek ki temeltip içindeki bütün field lar ram uzerınde acıldı demek default degerlerını aldı 
+
+        //    sonra egitmene geri dondu ctor calıstı
+        //    program.cs e geldi calıstı kodu bitirdi.
+
+        //    konsolda cıkan sonuc 
+
+        //    TemelTip153 nesnesinin yapıcı metodu çalıştı.
+        //    Egitmen153 metodunun yapıcı metodu çalıştı.
+
+        //    Egitmenin içine gitti once miras aldıgı class ı calıstırdı sonra kendısine donup onu calıstırdı
+
+        //    aklımızda daha da kalıcı olması için ram ı tekrar tasarlayalım 
+
+        //    Ram tarafını konusalım 
+
+        //    bir dikdörtgen çizelim 
+        //    -------------------------------------
+        //    I    Stack       I       Heap       I
+        //    I                I                  I
+        //    I                I                  I
+        //    -------------------------------------
+        //    I              Static               I
+        //    I                                   I
+        //    -------------------------------------
+
+        //    ben en basta egitmen nesnesi olusturmak istiyorum dedım 
+        //    E1 adındaki egitmen nesnem stack bolgede olusurken 
+        //    içeride e1 ın temeltipten kalıtıldıgını gördüm
+        //    e1 in içinde tt nesnesi orneklendi 
+        //    tt nin ctor calıstı içerisindeki field lar heap bolgeye atıldı
+        //    daha sonra uygulama geri dondu 
+        //    e1 i ornekledi 
+        //    acmıs oldugu referans ın uzerıne ornekledı 
+        //    tek bir tip gibi davranmasını sagladı 
+
+        //    calısırken E1 in üzerine gittiğimiz de degerlerim default degerlerini aldı
+        //    peki ben temeltip nesnesindeki bir field ıma default deger vermek istersem 
+        //    mesela id e bir metot ile random deger atamak istiyorum 
+        //    bunu nerde yapabilirim 2 farklı yer olabilir 
+        //    nerde yapmalıyım daha mantıklı bir soru ben bunu temeltip içerisinde yapmalıyım 
+        //    sebebi eger ben bu nesneyi temeltip içerisine eklediysem ve temeltip içerisinde deger almasını istiyorsam 
+        //    bunu temeltip içerisinde bir metot olarak eklemeliyim ki bu nesnemden türeyen her yerde bunu kullanabileyim
+        //    2. soru ben egitmene özel id nin calısmasını istiyorum 
+        //    egitmen orneklendıgın de 200 ile 300 arasında degerler ile id alsın 
+        //    personel de 400 500 ile arasında degerler alsın
+        //    ogrenci de 500 ile 1000 arası alsın gibi farklı cesitlilik isteyebilirsiniz
+        //    işte o zaman ben bunu türeyen nesne yani egitmen uzerınden bir metot ile cozebilirim gibi dusunebilirsiniz ama
+        //    ben yine de bunu söylerim 
+        //    bunun olması gereken yer en temelde yine temeltip dir
+        //    olusturmus oldugumuz metodu sanal metot yaparız 
+        //    istediğimiz metodu da class la override edebiliriz
+        //    işte n katmanlı mimari bastan sona bu sekılde 
+        //    herseyi kuralına göre yazarsanız istediğiniz şeyi de kuralına göre degistirebilirsiniz
+        //    dolasıyla id degerini tek bir noktada atamak istiyorsak farklı tiplere göre id mizin aralıgı degismeyecekse 
+        //    o zaman bizim bu id degerimizin atanması gereken yer standart olarak temeltip olmalı
+
+        //    temeltip nesnesine gidip metot yazalım 
+
+        //    4. not bitiş
+
+        //    5. not bitiş
+
+        //    6. not baslangıc
+
+        //    bakalım atama yapacak mı breakpoint koyup da izleme yapabilirsin E1 de breakpoint var id atayacak mı ona bakacagız
+        //    calısıtınca e1 null gecinde atamalar yapıyor ornekleniyor 
+        //    id e atama yapmıs random olarak sistem calıstı 
+
+        //    peki ben temeltip içindeki bu metodu egitmen içerisinde görebilir miydim ????
+
+        //    metot private
+
+        //    Egitmen nesnesine gidelim
+
+        //    6. not bitiş
+
+        //    */
+
+        //    Egitmen153 E1 = new Egitmen153();
+        //    Console.WriteLine("Egitmen nesnesi orneklendi.");
+
+        //}
+
+        #endregion
 
 
 
