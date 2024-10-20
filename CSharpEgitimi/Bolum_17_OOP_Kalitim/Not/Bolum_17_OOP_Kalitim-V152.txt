@@ -1,0 +1,418 @@
+
+
+Bölüm 17 : OOP - Kalýtým
+Video 152 Kalýtým ile nesne modelleme
+
+
+        #region VÝDEO 152 Kalýtým ile nesne modelleme
+
+        static void Main(string[] args)
+        {
+            /*
+             
+                Bolum 17 OOP Kalýtým V152 Kalýtým ile nesne modelleme
+             
+            */
+
+            /*
+            
+            1. not baþlangýc
+
+            bir önceki bölümde kalýtýlým ne oldugunu inceleyip slaytlar ile konusmustuk 
+            ogrenci adýnda nesne tasarlayýp bunun içerisine bir kaç tane field ekleyip bunu daha da acacagýmýzý guzellestireceðimizi söylemiþtik
+
+            Uygulamalarýmýzýn veri tabanlarýný olusturacagýmýz zaman bazen uygulama seviyesindeki bazý ayarlarýn kayýt bazýnda tutulmasýnýn istenmesinden veya 
+            uygulamamýzýn içerisindeki tanýmlarýn birbirinin bazý alanlarýnýn ayný olmasý nedeni ile tablolar ayný kolonlarý içerebilirler
+
+            yazmýs oldugumuz kodlarýmýz ise veri tabanlarýmýzdan data alma veya data gönderme temel görevlerini yerine getirebilmek için þemasal olarak database tiplerinin modelleri olarak olusurlar 
+
+            OOP'da kalýtým tam bu noktada bize yardýmcý olur ve sýnýflarýmýzý tanýmlarken merkezi bir mimari ile daha az ve daha merkezli kod yazmamýzý saðlar 
+
+                                            Personel                        Egitmen                         Ogrenci
+                                            Id                              Id                              Id
+                                            ReferansKod                     ReferansKod                     ReferansKod
+                                            TcKimlikNo                      TcKimlikNo                      TcKimlikNo
+                                            Isim                            Isim                            Isim
+                                            SoyIsim                         SoyIsim                         SoyIsim
+                                            Cinsiyet                        Cinsiyet                        Cinsiyet
+                                            IsBaslangicTarih                IsBaslangicTarih                Bolum
+                                            IsBitisTarih                    IsBitisTarih                    Seviye
+                                            IzinGun                         IzinGun                         KayitTarih
+                                            KayitTarih                      Brans                           KayitKullanici
+                                            KayitKullanici                  Seviye                          GuncellemeTarih
+                                            GuncellemeTarih                 KayitTarih                      GuncellemeKullanici
+                                            GuncellemeKullanici             KayitKullanici                  Silindi
+                                            Silindi                         GuncellemeTarih                 
+                                                                            GuncellemeKullanici             
+                                                                            Silindi                         
+            
+            yukarýda bulunan tablo uzerýnden gideceðiz Personel Egitmen ve Ogrenci
+            kendi field leri oldugu gibi ortak olan field lerý var
+            kalýtým nesnelerimizi database modellerimizi .netframework tarafýnda modellerken bizim bu ortak özellikleri aldýgýmýz kýsýmlarda iþimize yarýyor 
+
+            þu sekilde bir islevsellik olacak birazdan 
+            Solutions içerisine eklemiþ oldugumun console uygulamasýnda ki ogrenci nesnesinin içerisindeki field larý bosaltýp daha sonra diger entityleri de olusturup
+            personel ve egitmen class larýný da olusturup burada ki modeli .netframework ortamýna tasýyacagýz
+
+            peki biz neden bu sekýlde tablo yapýlarý kullanýrýz 
+
+            personel egitmen ogrenci adýnda 3 farklý tablom var bunlarýn 3 nun de kendý ortaklarýnda kesismiþ oldugu field lar var 
+            uygulamarýmýz veri tabanlarýný olusturacagýmýz zaman bazen uygulama seviyesinde bazen de kayýt bazýnda biz bu datalarýn tutulmasýný isteriz
+
+            burda kayýt bazýnda tutulma söz konusu uygulama bazýnda olsaydý buraya bir tablo tipi ve tablonun referansid ve kodunu alarakta bu iþlemi çözebilirdim 
+            ama o zaman daha bir iliþkiselliðe dogru gidiyor 
+            bu tamamiyle database tasarýmcýsýnýn tasarýmcý sizseniz sizin o uygulamanýn içerisine adam bolu maliyete göre degisebiliyor 
+
+            ama her halukarda ne kadar iliþkisel tablolarý kucultup kucultup kullansakta .netframework içerisinde biz onu bir nesne olarak cekmek istediðimiz de kalýtým konusunu kullanýyoruz 
+
+            yazmýs oldugumuz kodlarýmýz veritabanýn dan data alýným veya data gönderme en temel gorevlerý bunlarý yerine getirebilmek için semasal olarak database tiplerinin modellerini olustururlar bizde bu dersimiz de bu modelleri olusturup daha sonraki derslerimiz de de kalýtýmýn detaylarýna iniyor olacagýz 
+
+            Ogrenci152 Personel152 Egitmen152 class larýný olusturalým 
+
+            hepsini olusturup hepsini public yaptýk ve olusturmus oldugumuz class larýmýz kendi içerisinde bir baska class a ihtiyac duyacaklar
+            benim en temel anlamda bir tip olusturmam ve olusturmus oldugum tipin içerisinde de ortak seviyede denk gelen field larý kullanabilmem lazým
+
+            3 nesnemizinden türemesini istediðimiz ortak class ýmýzý olusturup ortak olanlarý bu class içine yazalým 
+            TemelTip adýnda baska bir class olusturalým normalde bu BaseType BaseClass olarak gecer egitim anlasýlsýn diye boyle isimlendirdik
+
+            TemelTip içerine gidip ortak field larýmýzý olusturalým
+
+            1. not bitiþ
+
+            3. not bitiþ
+
+            4. not baslangýc
+
+            Egitmen class ýný new leyerek bakalým TemelTip class ýný almýs mý 
+            Egitmen152 E1 = new Egitmen152();
+            E1. dedigimiz de temeltip içindeki bütün field lar gelmýs görüyoruz
+
+            eger ben bunu innertype olarak yapmýs olsaydým E1.TemelTip. gibi gitmem gerekirdi
+
+            Egitmen class ýna gidip oradaki field larý olusturalým
+
+            4. not bitiþ
+            
+            5. not bitiþ
+
+            6. not baslangýc
+            
+            program.cs de 
+            E1. dedigimiz de artýk Egitmen içerisine yazdýgýmýz 2 field da cýkýyor karsýmýza 
+            tooltype okumanýn onemýnden bahsetmiþtik
+            E1. dedigimiz de Brans ýn uzerýne gelince 
+            string tipinde Egitmen152.Brans olarak gozukuyor
+            Cinsiyet e baktýgýmýz da temeltip içerisinden geldiðini yani kalýtýmdan gelmiþ
+            int deger aldýgýný get ve set bloklarýný okunabilir ve yazýlabilir oldugunu anlýyoruz
+
+            personel nesnesine gidelim
+
+            6. not bitiþ
+
+            8. not bitiþ
+
+            9. not baslangýc
+
+            egitmen den geldik
+
+            ben burda egitmen E1. diyip temeltipe ulasabildiðim gibi
+            personel uzerýnden de p1. diyip temeltipe ulasabiliyorum
+
+            ogrenci class ýna gidelim
+
+            9. not bitiþ 
+             
+            */
+
+            Egitmen152 E1 = new Egitmen152();
+            //E1.
+
+            Personel152 P1 = new Personel152();
+            //P1.
+
+        }
+
+        #endregion
+
+------------------------------------------------------------------------------------------
+
+
+
+using System;
+
+namespace Bolum_17_OOP_Kalitim
+{
+    public class TemelTip152
+    {
+
+        public int Id { get; set; }
+        public string ReferansKod { get; set; }
+        public string TcKimlikNumarasi { get; set; }
+        public string Isim { get; set; }
+        public string SoyIsim { get; set; }
+        public int Cinsiyet { get; set; }
+        public DateTime KayitTarihi { get; set; }
+        public int KayitKullanici { get; set; }
+        public DateTime GuncellemeTarihi { get; set; }
+        public int GuncellemeKullanici { get; set; }
+        public bool Silindi { get; set; }
+
+
+    }
+}
+
+
+/*
+ 
+1. not bitiþ 
+
+2. not baslangýc
+
+temel olan ortak field larýmýzý buraya yazalým
+ 
+ public class TemelTip152
+    {
+
+        public int Id { get; set; }
+        public string ReferansKod { get; set; }
+        public string TcKimlikNumarasi { get; set; }
+        public string Isim { get; set; }
+        public string SoyIsim { get; set; }
+        public int Cinsiyet { get; set; }
+        public DateTime KayitTarihi { get; set; }
+        public int KayitKullanici { get; set; }
+        public DateTime GuncellemeTarihi { get; set; }
+        public int GuncellemeKullanici { get; set; }
+        public bool Silindi { get; set; }
+
+
+    }
+
+3 tabloda da olan ortak alanlarý buraya yazdýk ortak olanlarý tel bir class içinde toplamýs olduk
+þimdi beným bu temeltipimi diger 3 class a da entegre etmem lazým
+ilk olarak su yontem gelebilir aklýmýza 
+bir innertype kullanýrým diger nesnelerimin içerisine field olarak tanýmlarým ve kullanabilirim bunu ornekleyelim
+Egitmen class ýna gidelim
+
+2. not bitiþ
+
+*/
+
+
+-----------------------------------------------------------------
+
+
+
+using System;
+
+namespace Bolum_17_OOP_Kalitim
+{
+    public class Personel152 : TemelTip152
+    {
+
+        public DateTime IsBaslangicTarihi { get; set; }
+        public DateTime IsBitisTarihi { get; set; }
+        public int IzýnGunSayisi { get; set; }
+
+    }
+}
+
+
+/*
+
+6. not bitiþ
+
+7. not baslangýc
+
+temeltipi miras verelim ve farklý alanlarý yazalým
+
+personel tarafýndaki farklý alanlarýmýz neler
+
+IsBaslangicTarihi IsBitisTarihi IzýnGunSayisi diye 3 farklý field i var bu field lar ayný zaman da egitmenýn de ortak ozelligi
+burda sizin algýnýzý farklý bir noktaya cekmek istiyorum 
+önce uzun olan yoldan yapacagým anlattýktan sonra bunu da kýsaltacagým
+
+    public class Personel152 : TemelTip152
+    {
+
+        public DateTime IsBaslangicTarihi { get; set; }
+        public DateTime IsBitisTarihi { get; set; }
+        public int IzýnGunSayisi { get; set; }
+
+    }
+
+bu 3 farklý field beným egitmen nesnemde de olmasý lazým bunlarý oraya da ekleyelim 
+su anlýk uzun yolu tercih ediyorum sonra bunu da kýsaltacagým
+
+Egitmen nesnesine gidelim
+
+7. not bitiþ
+ 
+*/
+
+
+---------------------------------------------------
+
+
+
+using System;
+
+namespace Bolum_17_OOP_Kalitim
+{
+    //public class Egitmen152
+    //{
+    //    public TemelTip152 _TemelTip152 { get; set; }
+    //}
+
+    public class Egitmen152 : TemelTip152
+    {
+
+        public string Brans { get; set; }
+        public int BransSeviye { get; set; }
+
+        public DateTime IsBaslangicTarihi { get; set; }
+        public DateTime IsBitisTarihi { get; set; }
+        public int IzýnGunSayisi { get; set; }
+
+    }
+
+
+}
+
+/*
+ 
+2. not bitiþ
+
+3. not baslangýc 
+
+innertype olusturup kullanmak için ornekleme yapacagýz
+
+ public class Egitmen152
+    {
+        public TemelTip152 _TemelTip152 { get; set; }
+    }
+
+boyle yapmak aklýnýza gelebilir ama kalýtýmýn ana maksadý bu degýl arkadaslar 
+kalýtýmýn maksadý
+egitimin içerisinde temeltipi gösterebilmek 
+ben egitmen. dedigimde id field ýna ulasmak istiyorum 
+egitmen.temeltip.id demek istemiyorum
+
+kalýtým konusunda tamamen bir miras alma var field i o nesnenin field i olarak görmemýz gerekiyor 
+dolayýsýyla bu kullaným tamemen yanlýs kalýtým için
+
+peki kalýtýmý nasý kullanabiliriz 
+
+kalýtýmý kullanabilmek için ana class ýmýzýn adýnýn yanýna : ekleyip istediðimiz class ý türemek istediðimiz class ý cagýrýyoruz
+
+    public class Egitmen152 : TemelTip152
+    {
+
+    }
+
+bu demek ki 
+
+TemelTip152 içinde var olan field lar metotlar tamamiyle Egitmen class ý tarafýndan miras alýnabilsin ve kullanýlabilsin
+
+program.cs e gidip bakalým olmus mu 
+
+3. not bitiþ
+
+4. not bitiþ 
+
+5. not baslangýc
+
+bizim egitmenimize ozel olan 2 farklý field ýmýz var cunku isebaslangýc isbitis tarihi gibi degerler personel class ýmýz ile de birleþiyor
+
+onu farklý bir modelleme sekli ile cozmeye calýsacagýz 
+
+burda 2 tane field yazdýk 
+
+    public class Egitmen152 : TemelTip152
+    {
+
+        public string Brans { get; set; }
+        public int Seviye { get; set; }
+
+    }
+
+program.cs de E1. dedigimiz de artýk bu 2 field da cýkýyor karsýmýza 
+
+program.cs e gidelim
+
+5. not bitiþ
+
+7. not bitiþ
+
+8. not baslangýc
+
+Personelden geldik 
+
+        public DateTime IsBaslangicTarihi { get; set; }
+        public DateTime IsBitisTarihi { get; set; }
+        public int IzýnGunSayisi { get; set; }
+
+bunlarý eklemek için
+
+program.cs e gidelim 
+
+8. not bitiþ
+
+10. not bitiþ
+
+11. not baslangýc
+
+Seviye field ý ogrenci ile karýsmasýn diye BransSeviye yaptýk 
+
+evet temel olarak : operatöründen sonra türetmek istediðimiz class ý cagýrarak aslýnda bir türemeyi elde etmiþ olduk
+kalýtýmý field bazýnda görmüþ olduk
+bu kalýtýmýn yuzelsel anlatýmý bir sonraki video da derinlere inip kalýtýmdaki class ýn calýsma mantýgýna bakacagýz
+ 
+*/
+
+
+--------------------------------------------------------------------
+
+
+
+namespace Bolum_17_OOP_Kalitim
+{
+    public class Ogrenci152 : TemelTip152
+    {
+        public string Bolum { get; set; }
+        public int Seviye { get; set; }
+    }
+}
+
+
+/*
+ 
+9. not bitiþ
+
+10. not baslangýc
+
+miras verip alanlarý yazalým 
+
+  public class Ogrenci152 : TemelTip152
+    {
+        public string Bolum { get; set; }
+        public int Seviye { get; set; }
+    }
+
+burda da seviye var ama egitmen de de var 
+buradaki seviye oradaki seviyeden farklý egitmendeki seviyi o konudaki uzmanlýgý uzmanlýk olarak degistirebiliriz
+ogrencideki seviye ise almýs oldugu bolumun seviyesi 
+
+mesela programcýlýk okuyor programcýlýk 2. 3. seviye gibi egitmendeki seviye o konudaki bilgisini gösteriyor
+
+Egitmendeki Seviye yi BransSeviye yapalým egitmen class ýna gidelim
+
+10. not bitiþ
+
+11. not bitiþ
+
+
+*/
+
+
+--------------------------------------------------------------------------

@@ -130,3 +130,40 @@ Video 151 Nesne yönelimli programlama dünyasýnda kalýtým nedir ?
 ------------------------------
 
 
+
+namespace Bolum_17_OOP_Kalitim
+{
+    public class Ogrenci151
+    {
+        public int ogrenciId { get; set; }
+        public string isim { get; set; }
+        public string soyisim { get; set; }
+    }
+}
+
+
+/*
+
+1. not bitiþ 
+
+2. not baþlangýc
+
+Ogrenci nesnesini olusturup public yaptýk
+içerisine field lar yazdýk 
+
+        public int ogrenciId { get; set; }
+        public string isim { get; set; }
+        public string soyisim { get; set; }
+
+benim su anda ogrenci class i ve 3 tane de field ým var 
+yani ben bu nesneyi ornekledýgým de 3 tane field gelmeli
+
+hiç bir metot yada farklý birþey görmemeliyim 
+cunku beným ogrenci class ýmýn içerisinde 3 tane field var 
+
+program.cs e dönelim 
+
+2. not bitiþ
+ 
+ 
+*/

@@ -140,6 +140,140 @@ namespace Bolum_17_OOP_Kalitim
 
         #endregion
 
+        #region VİDEO 152 Kalıtım ile nesne modelleme
+
+        //static void Main(string[] args)
+        //{
+        //    /*
+
+        //        Bolum 17 OOP Kalıtım V152 Kalıtım ile nesne modelleme
+
+        //    */
+
+        //    /*
+
+        //    1. not başlangıc
+
+        //    bir önceki bölümde kalıtılım ne oldugunu inceleyip slaytlar ile konusmustuk 
+        //    ogrenci adında nesne tasarlayıp bunun içerisine bir kaç tane field ekleyip bunu daha da acacagımızı guzellestireceğimizi söylemiştik
+
+        //    Uygulamalarımızın veri tabanlarını olusturacagımız zaman bazen uygulama seviyesindeki bazı ayarların kayıt bazında tutulmasının istenmesinden veya 
+        //    uygulamamızın içerisindeki tanımların birbirinin bazı alanlarının aynı olması nedeni ile tablolar aynı kolonları içerebilirler
+
+        //    yazmıs oldugumuz kodlarımız ise veri tabanlarımızdan data alma veya data gönderme temel görevlerini yerine getirebilmek için şemasal olarak database tiplerinin modelleri olarak olusurlar 
+
+        //    OOP'da kalıtım tam bu noktada bize yardımcı olur ve sınıflarımızı tanımlarken merkezi bir mimari ile daha az ve daha merkezli kod yazmamızı sağlar 
+
+        //                                    Personel                        Egitmen                         Ogrenci
+        //                                    Id                              Id                              Id
+        //                                    ReferansKod                     ReferansKod                     ReferansKod
+        //                                    TcKimlikNo                      TcKimlikNo                      TcKimlikNo
+        //                                    Isim                            Isim                            Isim
+        //                                    SoyIsim                         SoyIsim                         SoyIsim
+        //                                    Cinsiyet                        Cinsiyet                        Cinsiyet
+        //                                    IsBaslangicTarih                IsBaslangicTarih                Bolum
+        //                                    IsBitisTarih                    IsBitisTarih                    Seviye
+        //                                    IzinGun                         IzinGun                         KayitTarih
+        //                                    KayitTarih                      Brans                           KayitKullanici
+        //                                    KayitKullanici                  Seviye                          GuncellemeTarih
+        //                                    GuncellemeTarih                 KayitTarih                      GuncellemeKullanici
+        //                                    GuncellemeKullanici             KayitKullanici                  Silindi
+        //                                    Silindi                         GuncellemeTarih                 
+        //                                                                    GuncellemeKullanici             
+        //                                                                    Silindi                         
+
+        //    yukarıda bulunan tablo uzerınden gideceğiz Personel Egitmen ve Ogrenci
+        //    kendi field leri oldugu gibi ortak olan field lerı var
+        //    kalıtım nesnelerimizi database modellerimizi .netframework tarafında modellerken bizim bu ortak özellikleri aldıgımız kısımlarda işimize yarıyor 
+
+        //    şu sekilde bir islevsellik olacak birazdan 
+        //    Solutions içerisine eklemiş oldugumun console uygulamasında ki ogrenci nesnesinin içerisindeki field ları bosaltıp daha sonra diger entityleri de olusturup
+        //    personel ve egitmen class larını da olusturup burada ki modeli .netframework ortamına tasıyacagız
+
+        //    peki biz neden bu sekılde tablo yapıları kullanırız 
+
+        //    personel egitmen ogrenci adında 3 farklı tablom var bunların 3 nun de kendı ortaklarında kesismiş oldugu field lar var 
+        //    uygulamarımız veri tabanlarını olusturacagımız zaman bazen uygulama seviyesinde bazen de kayıt bazında biz bu dataların tutulmasını isteriz
+
+        //    burda kayıt bazında tutulma söz konusu uygulama bazında olsaydı buraya bir tablo tipi ve tablonun referansid ve kodunu alarakta bu işlemi çözebilirdim 
+        //    ama o zaman daha bir ilişkiselliğe dogru gidiyor 
+        //    bu tamamiyle database tasarımcısının tasarımcı sizseniz sizin o uygulamanın içerisine adam bolu maliyete göre degisebiliyor 
+
+        //    ama her halukarda ne kadar ilişkisel tabloları kucultup kucultup kullansakta .netframework içerisinde biz onu bir nesne olarak cekmek istediğimiz de kalıtım konusunu kullanıyoruz 
+
+        //    yazmıs oldugumuz kodlarımız veritabanın dan data alınım veya data gönderme en temel gorevlerı bunları yerine getirebilmek için semasal olarak database tiplerinin modellerini olustururlar bizde bu dersimiz de bu modelleri olusturup daha sonraki derslerimiz de de kalıtımın detaylarına iniyor olacagız 
+
+        //    Ogrenci152 Personel152 Egitmen152 class larını olusturalım 
+
+        //    hepsini olusturup hepsini public yaptık ve olusturmus oldugumuz class larımız kendi içerisinde bir baska class a ihtiyac duyacaklar
+        //    benim en temel anlamda bir tip olusturmam ve olusturmus oldugum tipin içerisinde de ortak seviyede denk gelen field ları kullanabilmem lazım
+
+        //    3 nesnemizinden türemesini istediğimiz ortak class ımızı olusturup ortak olanları bu class içine yazalım 
+        //    TemelTip adında baska bir class olusturalım normalde bu BaseType BaseClass olarak gecer egitim anlasılsın diye boyle isimlendirdik
+
+        //    TemelTip içerine gidip ortak field larımızı olusturalım
+
+        //    1. not bitiş
+
+        //    3. not bitiş
+
+        //    4. not baslangıc
+
+        //    Egitmen class ını new leyerek bakalım TemelTip class ını almıs mı 
+        //    Egitmen152 E1 = new Egitmen152();
+        //    E1. dedigimiz de temeltip içindeki bütün field lar gelmıs görüyoruz
+
+        //    eger ben bunu innertype olarak yapmıs olsaydım E1.TemelTip. gibi gitmem gerekirdi
+
+        //    Egitmen class ına gidip oradaki field ları olusturalım
+
+        //    4. not bitiş
+
+        //    5. not bitiş
+
+        //    6. not baslangıc
+
+        //    program.cs de 
+        //    E1. dedigimiz de artık Egitmen içerisine yazdıgımız 2 field da cıkıyor karsımıza 
+        //    tooltype okumanın onemınden bahsetmiştik
+        //    E1. dedigimiz de Brans ın uzerıne gelince 
+        //    string tipinde Egitmen152.Brans olarak gozukuyor
+        //    Cinsiyet e baktıgımız da temeltip içerisinden geldiğini yani kalıtımdan gelmiş
+        //    int deger aldıgını get ve set bloklarını okunabilir ve yazılabilir oldugunu anlıyoruz
+
+        //    personel nesnesine gidelim
+
+        //    6. not bitiş
+
+        //    8. not bitiş
+
+        //    9. not baslangıc
+
+        //    egitmen den geldik
+
+        //    ben burda egitmen E1. diyip temeltipe ulasabildiğim gibi
+        //    personel uzerınden de p1. diyip temeltipe ulasabiliyorum
+
+        //    ogrenci class ına gidelim
+
+        //    9. not bitiş 
+
+        //    */
+
+        //    Egitmen152 E1 = new Egitmen152();
+        //    //E1.
+
+        //    Personel152 P1 = new Personel152();
+        //    //P1.
+
+        //}
+
+        #endregion
+
+
+
+
+
 
     }
 }
