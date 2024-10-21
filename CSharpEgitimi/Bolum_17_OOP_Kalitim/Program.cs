@@ -498,6 +498,98 @@ namespace Bolum_17_OOP_Kalitim
 
         #endregion
 
+        #region VİDEO 155 Kalıtım ile nesne modelleme - Boxing | Unboxing işlemleri
+
+        //static void Main(string[] args)
+        //{
+
+        //    /*
+
+        //          Bolum 17 OOP Kalıtım V155 Kalıtım ile nesne modelleme - Boxing | Unboxing işlemleri
+
+        //    */
+
+        //    /*
+
+        //    1. not baslangıc 
+
+        //    boxing ve unboxing işlemlerini olusturmus oldugumuz temel sınıflar içerisinde nası yapıyoruz görelim
+        //    aslında object te oldugu gibi bir tür dönüşümünü burda da yapıyor olacagız
+
+        //    özel tipler de boxing unboxing
+
+        //    burda bizim ilk sorumuz bizim objemiz nedir ?
+        //    yani bizim en temel nesnemiz nedir ?
+
+        //    bizim custom nesnemiz TemelTip o zaman TemelTip benim Objem oluyor
+
+        //    TemelTip155 T2; diyip bıraktım
+
+        //    hangi nesnelerde temeltip object görevi görür ? 
+
+        //    Personel Egitmen Ogrenci
+
+        //    neden
+
+        //    TemelTip nesnesinden türedikleri için TemelTip nesnesi bu nesneler de object gibi davranır
+
+        //    T2 = E1;
+        //    dedik egitmen nesnesini temeltip nesnesine atadık herhangi bir hata vermedi
+
+        //    Personel nesnesini ornekleyelim onun üzerinden gidelim
+
+        //    Personel155 P1 = new Personel155();
+
+        //    T2 = P1;
+        //    Personel nesnesini TemelTip nesnesine atadık dedigimiz de yine herhangi bir hata almadık
+
+        //    bunları kendi nesnelerine cevirmek için
+
+        //    Yani T2 yi egitmen yapmak için bunun egitmen oldugunu belirtmem gerek
+
+        //    E1 = (Egitmen155)T2;
+        //    P1 = (Personel155)T2;
+
+        //    burda da unboxing işlemi oluyor
+
+        //    peki böyle bişey yapsak ne olurdu
+        //                object O3 = T2;
+
+        //    hiç bir sorunla karsılasmıyoruz
+        //    object tipi herseyın baslangıc noktasıdır
+        //    nesne türet ondan cık baska üret ona aktar cık gir farketmez
+        //    en bas herseyin baslangıcı objecttir kabul eder
+
+        //    */
+
+        //    TemelTip155 T1 = new TemelTip155();
+        //    T1.TemelTipMetot1();
+
+        //    Egitmen155 E1 = new Egitmen155();
+        //    E1.TemelTipMetot1();
+
+        //    /* Boxing - Unboxing */
+
+        //    TemelTip155 T2;
+        //    T2 = E1;
+        //    E1 = (Egitmen155)T2;
+
+        //    Personel155 P1 = new Personel155();
+        //    T2 = P1;
+        //    P1 = (Personel155)T2;
+
+        //    Ogrenci155 O1 = new Ogrenci155();
+        //    T2 = O1;
+        //    O1 = (Ogrenci155)T2;
+
+        //    //object O3 = T2;
+
+        //}
+
+        #endregion
+
+
+
 
     }
 }

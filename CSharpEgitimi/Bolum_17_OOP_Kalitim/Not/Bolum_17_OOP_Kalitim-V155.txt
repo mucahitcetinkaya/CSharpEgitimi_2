@@ -1,0 +1,193 @@
+
+
+Bölüm 17 : OOP - Kalýtým
+Video 155 Kalýtým ile nesne modelleme - Boxing | Unboxing iþlemleri
+
+
+#region VÝDEO 155 Kalýtým ile nesne modelleme - Boxing | Unboxing iþlemleri
+
+        static void Main(string[] args)
+        {
+
+            /*
+             
+                  Bolum 17 OOP Kalýtým V155 Kalýtým ile nesne modelleme - Boxing | Unboxing iþlemleri
+             
+            */
+
+            /*
+             
+            1. not baslangýc 
+
+            boxing ve unboxing iþlemlerini olusturmus oldugumuz temel sýnýflar içerisinde nasý yapýyoruz görelim
+            aslýnda object te oldugu gibi bir tür dönüþümünü burda da yapýyor olacagýz
+
+            özel tipler de boxing unboxing
+
+            burda bizim ilk sorumuz bizim objemiz nedir ?
+            yani bizim en temel nesnemiz nedir ?
+
+            bizim custom nesnemiz TemelTip o zaman TemelTip benim Objem oluyor
+
+            TemelTip155 T2; diyip býraktým
+
+            hangi nesnelerde temeltip object görevi görür ? 
+
+            Personel Egitmen Ogrenci
+
+            neden
+
+            TemelTip nesnesinden türedikleri için TemelTip nesnesi bu nesneler de object gibi davranýr
+
+            T2 = E1;
+            dedik egitmen nesnesini temeltip nesnesine atadýk herhangi bir hata vermedi
+            
+            Personel nesnesini ornekleyelim onun üzerinden gidelim
+
+            Personel155 P1 = new Personel155();
+
+            T2 = P1;
+            Personel nesnesini TemelTip nesnesine atadýk dedigimiz de yine herhangi bir hata almadýk
+
+            bunlarý kendi nesnelerine cevirmek için
+
+            Yani T2 yi egitmen yapmak için bunun egitmen oldugunu belirtmem gerek
+
+            E1 = (Egitmen155)T2;
+            P1 = (Personel155)T2;
+
+            burda da unboxing iþlemi oluyor
+
+            peki böyle biþey yapsak ne olurdu
+                        object O3 = T2;
+
+            hiç bir sorunla karsýlasmýyoruz
+            object tipi herseyýn baslangýc noktasýdýr
+            nesne türet ondan cýk baska üret ona aktar cýk gir farketmez
+            en bas herseyin baslangýcý objecttir kabul eder
+
+            */
+
+            TemelTip155 T1 = new TemelTip155();
+            T1.TemelTipMetot1();
+
+            Egitmen155 E1 = new Egitmen155();
+            E1.TemelTipMetot1();
+            
+            /* Boxing - Unboxing */
+            
+            TemelTip155 T2;
+            T2 = E1;
+            E1 = (Egitmen155)T2;
+
+            Personel155 P1 = new Personel155();
+            T2 = P1;
+            P1 = (Personel155)T2;
+
+            Ogrenci155 O1 = new Ogrenci155();
+            T2 = O1;
+            O1 = (Ogrenci155)T2;
+
+            //object O3 = T2;
+
+        }
+
+-------------------------------------------
+
+
+using System;
+
+namespace Bolum_17_OOP_Kalitim
+{
+    public class TemelTip155
+    {
+        public TemelTip155()
+        {
+            Console.WriteLine("TemelTip155 nesnesinin yapýcý metodu çalýþtý.");
+            IdAtamaIslemi();
+        }
+
+        private void IdAtamaIslemi()
+        {
+            Random rnd = new Random();
+            this.Id = rnd.Next(1000, 9000);
+        }
+
+        public int Id { get; set; }
+        public string ReferansKod { get; set; }
+        public string TcKimlikNumarasi { get; set; }
+        public string Isim { get; set; }
+        public string SoyIsim { get; set; }
+        public int Cinsiyet { get; set; }
+        public DateTime KayitTarihi { get; set; }
+        public int KayitKullanici { get; set; }
+        public DateTime GuncellemeTarihi { get; set; }
+        public int GuncellemeKullanici { get; set; }
+        public bool Silindi { get; set; }
+
+        public void TemelTipMetot1()
+        {
+            Console.WriteLine("Temel Tip => Metot 1");
+        }
+
+    }
+}
+
+-------------------------------------------------
+
+
+using System;
+
+namespace Bolum_17_OOP_Kalitim
+{
+    public class Personel155 : TemelTip155
+    {
+
+        public DateTime IsBaslangicTarihi { get; set; }
+        public DateTime IsBitisTarihi { get; set; }
+        public int IzýnGunSayisi { get; set; }
+
+    }
+}
+
+-------------------------------------------------
+
+
+
+namespace Bolum_17_OOP_Kalitim
+{
+    public class Ogrenci155 : TemelTip155
+    {
+        public string Bolum { get; set; }
+        public int Seviye { get; set; }
+    }
+}
+
+---------------------------------------------------
+
+
+using System;
+
+namespace Bolum_17_OOP_Kalitim
+{
+    public class Egitmen155 : TemelTip155
+    {
+
+        public Egitmen155()
+        {
+            Console.WriteLine("Egitmen154 metodunun yapýcý metodu çalýþtý.");
+
+        }
+
+        public string Brans { get; set; }
+        public int BransSeviye { get; set; }
+
+        public DateTime IsBaslangicTarihi { get; set; }
+        public DateTime IsBitisTarihi { get; set; }
+        public int IzýnGunSayisi { get; set; }
+
+    }
+}
+
+
+----------------------------------------------
