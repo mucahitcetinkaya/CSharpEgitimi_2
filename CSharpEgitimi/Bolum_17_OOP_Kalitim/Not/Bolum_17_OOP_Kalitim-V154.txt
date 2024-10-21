@@ -1,0 +1,216 @@
+
+
+Bölüm 17 : OOP - Kalýtým
+Video 154 Kalýtým ile nesne modelleme - Temel Sýnýf metotlarýna eriþim
+
+
+        #region VÝDEO 154 Kalýtým ile nesne modelleme - Temel Sýnýf metotlarýna eriþim
+
+        static void Main(string[] args)
+        {
+
+            /*
+             
+                   Bolum 17 OOP Kalýtým V154 Kalýtým ile nesne modelleme - Temel Sýnýf metotlarýna eriþim
+             
+            */
+
+            /*
+             
+            1. not baþlangýç
+
+            þimdi class larýmýzýn içerisine bir kaç farklý metot ekleyelim
+            153 den alýp kodlarý 154 uzerýnden devam edeceðiz
+            153 lerin hepsini 154 olarak olusturalým
+
+            ve temeltip te olusturmus oldugumuz metotumuzu aslýnda egitmen nesnemizi cagýrdýgýmýz da nasý kullanabileceðimizi inceleyelim
+            bunun için TemelTip154 e gidelim
+
+            1. not bitiþ
+
+            2. not bitiþ
+
+            3. not baslangýc
+
+            TemelTip üzerinden TemelTipMetot a eriþelim oluyo mu
+
+            TemelTip154 T1 = new TemelTip154();
+            T1.TemelTipMetot1();
+
+            egitmen nesnesi uzerýnden eriþebiliyor muyuz ona bakalým
+             
+            Egitmen154 E1 = new Egitmen154();
+            E1.TemelTipMetot1();
+
+            eriþim oluyor tooltype içinde ben TemelTip içindeki metotum diyor
+
+            uygulamayý build ederek davranýslarýný inceleyelim
+
+            TemelTip calýstý içindeki metot calýstý 
+            egitmen calýstý temeltip içindeki metot calýstý
+
+            peki bunun tam tersi olur mu 
+            yani
+            temeltip içinden egitmen içindeki metot a eriþim olur mu 
+            hayýr bu mumkun degil
+            bu yön tek yönlüdür
+            türemiþ oldugu nesneye gider bakar
+
+            bizim bir boxing unboxing iþlemimiz vardý 
+            bunu hatýrlayalým diger video için hatýrlatma olsun 
+
+            ben bir tane object nesnesi olusturdugum da object nesnesi bütün nesnelerin ana temeltip olarak görmüþ oldugu bir nesne 
+            mesela
+
+            object O1 = E1;
+            dedigimiz de sorun cýkartmýyor kendisinden baska tiptekileri de alabiliyor 
+            ana tip her seyi kabul eder buna biz kutulama iþlemi diyoruz boxing oluyor
+
+            O1 nesnesini içinde object var tekrar E1 e cevirmek için
+            E1 = (Egitmen154)O1;
+            yapmamýz lazým buna da unboxing iþlemi denir
+
+            bu iþlemleri de kendi özel tiplerimiz de nasýl yaparýz birlikte bunu inceleyeceðiz
+            sonra kalýtým konusundan devam edeceðiz
+
+            154. video burda bitti 
+
+            */
+
+            TemelTip154 T1 = new TemelTip154();
+            T1.TemelTipMetot1();
+
+            Egitmen154 E1 = new Egitmen154();
+            E1.TemelTipMetot1();
+
+            object O1 = E1;
+            E1 = (Egitmen154)O1;
+
+        }
+
+        #endregion
+
+---------------------------------------------------------
+
+
+
+using System;
+
+namespace Bolum_17_OOP_Kalitim
+{
+    public class TemelTip154
+    {
+        public TemelTip154()
+        {
+            Console.WriteLine("TemelTip153 nesnesinin yapýcý metodu çalýþtý.");
+            IdAtamaIslemi();
+        }
+
+        private void IdAtamaIslemi()
+        {
+            Random rnd = new Random();
+            this.Id = rnd.Next(1000, 9000);
+        }
+
+        public int Id { get; set; }
+        public string ReferansKod { get; set; }
+        public string TcKimlikNumarasi { get; set; }
+        public string Isim { get; set; }
+        public string SoyIsim { get; set; }
+        public int Cinsiyet { get; set; }
+        public DateTime KayitTarihi { get; set; }
+        public int KayitKullanici { get; set; }
+        public DateTime GuncellemeTarihi { get; set; }
+        public int GuncellemeKullanici { get; set; }
+        public bool Silindi { get; set; }
+
+        public void TemelTipMetot1()
+        {
+            Console.WriteLine("Temel Tip => Metot 1");
+        }
+
+    }
+}
+
+/*
+ 
+1. not bitiþ
+
+2. not baslangýc
+
+public bir metot olusturacagýz
+ 
+  public void TemelTipMetot1()
+        {
+            Console.WriteLine("Temel Tip => Metot 1");
+        }
+
+herhangi bir geri dönus olmayacak void
+public olacak her yerden cagýrabilelim
+konsole yazý yazsýn
+
+temeltip üzerinden zaten eriþebiliyorum egitmen nesnesi üzerinden eriþmeyi görmek istiyorum
+
+program.cs e gidelim
+
+2. not bitiþ 
+ 
+*/
+
+----------------------------------------------
+
+
+using System;
+
+namespace Bolum_17_OOP_Kalitim
+{
+    public class Egitmen154 : TemelTip154
+    {
+
+        public Egitmen154()
+        {
+            Console.WriteLine("Egitmen154 metodunun yapýcý metodu çalýþtý.");
+
+            //IdAtamaIslemi();
+
+        }
+
+        public string Brans { get; set; }
+        public int BransSeviye { get; set; }
+
+        public DateTime IsBaslangicTarihi { get; set; }
+        public DateTime IsBitisTarihi { get; set; }
+        public int IzýnGunSayisi { get; set; }
+
+    }
+}
+
+
+-----------------------------------------------
+
+
+
+using System;
+
+namespace Bolum_17_OOP_Kalitim
+{
+    public class Personel154 : TemelTip154
+    {
+
+        public DateTime IsBaslangicTarihi { get; set; }
+        public DateTime IsBitisTarihi { get; set; }
+        public int IzýnGunSayisi { get; set; }
+
+    }
+}
+
+-----------------------------------------------
+
+namespace Bolum_17_OOP_Kalitim
+{
+    public class Ogrenci154 : TemelTip154
+    {
+        public string Bolum { get; set; }
+        public int Seviye { get; set; }
+    }
+}

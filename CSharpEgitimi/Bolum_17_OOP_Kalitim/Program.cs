@@ -412,7 +412,91 @@ namespace Bolum_17_OOP_Kalitim
 
         #endregion
 
+        #region VİDEO 154 Kalıtım ile nesne modelleme - Temel Sınıf metotlarına erişim
 
+        //static void Main(string[] args)
+        //{
+
+        //    /*
+
+        //           Bolum 17 OOP Kalıtım V154 Kalıtım ile nesne modelleme - Temel Sınıf metotlarına erişim
+
+        //    */
+
+        //    /*
+
+        //    1. not başlangıç
+
+        //    şimdi class larımızın içerisine bir kaç farklı metot ekleyelim
+        //    153 den alıp kodları 154 uzerınden devam edeceğiz
+        //    153 lerin hepsini 154 olarak olusturalım
+
+        //    ve temeltip te olusturmus oldugumuz metotumuzu aslında egitmen nesnemizi cagırdıgımız da nası kullanabileceğimizi inceleyelim
+        //    bunun için TemelTip154 e gidelim
+
+        //    1. not bitiş
+
+        //    2. not bitiş
+
+        //    3. not baslangıc
+
+        //    TemelTip üzerinden TemelTipMetot a erişelim oluyo mu
+
+        //    TemelTip154 T1 = new TemelTip154();
+        //    T1.TemelTipMetot1();
+
+        //    egitmen nesnesi uzerınden erişebiliyor muyuz ona bakalım
+
+        //    Egitmen154 E1 = new Egitmen154();
+        //    E1.TemelTipMetot1();
+
+        //    erişim oluyor tooltype içinde ben TemelTip içindeki metotum diyor
+
+        //    uygulamayı build ederek davranıslarını inceleyelim
+
+        //    TemelTip calıstı içindeki metot calıstı 
+        //    egitmen calıstı temeltip içindeki metot calıstı
+
+        //    peki bunun tam tersi olur mu 
+        //    yani
+        //    temeltip içinden egitmen içindeki metot a erişim olur mu 
+        //    hayır bu mumkun degil
+        //    bu yön tek yönlüdür
+        //    türemiş oldugu nesneye gider bakar
+
+        //    bizim bir boxing unboxing işlemimiz vardı 
+        //    bunu hatırlayalım diger video için hatırlatma olsun 
+
+        //    ben bir tane object nesnesi olusturdugum da object nesnesi bütün nesnelerin ana temeltip olarak görmüş oldugu bir nesne 
+        //    mesela
+
+        //    object O1 = E1;
+        //    dedigimiz de sorun cıkartmıyor kendisinden baska tiptekileri de alabiliyor 
+        //    ana tip her seyi kabul eder buna biz kutulama işlemi diyoruz boxing oluyor
+
+        //    O1 nesnesini içinde object var tekrar E1 e cevirmek için
+        //    E1 = (Egitmen154)O1;
+        //    yapmamız lazım buna da unboxing işlemi denir
+
+        //    bu işlemleri de kendi özel tiplerimiz de nasıl yaparız birlikte bunu inceleyeceğiz
+        //    sonra kalıtım konusundan devam edeceğiz
+
+        //    154. video burda bitti 
+
+        //    */
+
+        //    TemelTip154 T1 = new TemelTip154();
+        //    T1.TemelTipMetot1();
+
+        //    Egitmen154 E1 = new Egitmen154();
+        //    E1.TemelTipMetot1();
+
+        //    object O1 = E1;
+        //    E1 = (Egitmen154)O1;
+
+        //}
+
+        #endregion
 
 
     }
