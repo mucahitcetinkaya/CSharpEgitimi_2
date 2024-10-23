@@ -47,12 +47,14 @@
     <Compile Include="Egitmen153.cs" />
     <Compile Include="Egitmen154.cs" />
     <Compile Include="Egitmen155.cs" />
+    <Compile Include="Egitmen157.cs" />
     <Compile Include="Ogrenci151.cs" />
     <Compile Include="Ogrenci152.cs" />
     <Compile Include="Ogrenci153.cs" />
     <Compile Include="Ogrenci154.cs" />
     <Compile Include="Ogrenci155.cs" />
     <Compile Include="Ogrenci156.cs" />
+    <Compile Include="Ogrenci157.cs" />
     <Compile Include="Personel152.cs" />
     <Compile Include="Personel153.cs" />
     <Compile Include="Personel154.cs" />
@@ -65,11 +67,14 @@
     <Compile Include="TemelTip154.cs" />
     <Compile Include="TemelTip155.cs" />
     <Compile Include="TemelTip156.cs" />
+    <Compile Include="TemelTip157.cs" />
+    <Compile Include="Test157.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Not\Bolum_17_OOP_Kalitim-V157.txt" />
     <Content Include="Not\Bolum_17_OOP_Kalitim-V156.txt" />
     <Content Include="Not\Bolum_17_OOP_Kalitim-V155.txt" />
     <Content Include="Not\Bolum_17_OOP_Kalitim-V154.txt" />

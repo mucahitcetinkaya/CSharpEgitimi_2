@@ -656,6 +656,80 @@ namespace Bolum_17_OOP_Kalitim
 
         #endregion
 
+        #region VİDEO 157 Sealed anahtar kelimesi ile kalıtımı sonlandırmak
+
+        //static void Main(string[] args)
+        //{
+
+        //    /*
+
+        //    Bolum 17 OOP Kalıtım V157 Sealed anahtar kelimesi ile kalıtımı sonlandırmak
+
+        //    */
+
+        //    /*
+
+        //    1. not baslangıc
+
+        //    şimdi yapmıs oldugumuz nesnelerimizi yani Ogrenci ve Egitmen nesnemizi öncelikle bir ana tip gibi belirleyelim 
+        //    onlardan bir nesne örneği alalım kalıtalım yani kalıttıktan sonra bunu nası yapamayacagımızı görelim 
+
+        //    yeni bir nesne olusturalım 
+
+        //    Test157 ve Egitmen den miras alalım 
+
+        //    Test157 T1 = new Test157();
+        //    T1. dedigimiz de 
+
+        //    Egitmen nesnesini ve egitmenin de miras aldıgı bütün metot ları kullanabildiğimi görüyorum 
+
+        //    bir yerde yapmıs oldugumuz nesnelerin bu sekilde türetilmesini istemeyiz 
+        //    eger diger yazılımcının bizle herhangi bir bagı yoksa benimle ortak yerlerde birleşmiyorsa 
+        //    benim nesnelerimi cok kendi içinde kullanmıyorsa yada dıs bir firma ise 
+        //    nesnemin bu sekılde kalıtılmasını istemem ve özel olarak gercek hayatta da bu işlemi yaparım nesnemi mühürlerim 
+
+        //    benim nesnemden nesne orneği alamasın eger cok lazımsa içeride innertype olarak kullansın 
+        //    bunu nası yapacagız 
+
+        //    biz hangi nesnemizin kalıtılmasını istemiyoruz 
+        //    egitmen nesnemizin kalıtılmasını istemiyoruz o zaman egitmen nesnemizi sealed olarak işaretlememiz gerekiyor
+
+        //    sealed anahtar kelimesi nesnenin içerisine verildiğinde netframework e sunu söylüyor
+
+        //    bu nesnenin kalıtımı yapılamaz kalıtım sonlandı 
+        //    egitmen nesnesine gidelim
+
+        //    1. not sonu
+
+        //    2. not sonu
+
+        //    4. not bitiş
+
+        //    5. not baslangıc
+
+        //    diger video da neler yapacagız giriş yapalım
+
+        //    bizim Personel ve Egitmen nesnelerimizin içinde kendilerini tekrar eden field lar vardı 
+        //    benim temel olarak görmem gereken 
+
+        //    Personel nesnesinin ana field ları Egitmen nesnesinin içerisinde tekrarlanmıs 
+        //    benim egitmen nesnem temeltipten türemiş personel nesnem de temeltipten türemiş 
+        //    öyle bir işlem yapmalıyım ki 
+
+        //    egitmen nesnem hem personel nesnesini görebilmeli hem personel nesnesinin içerisindeki temeltipi görebilmeli 
+        //    bir sonraki video da bu sistemin mantıgı hakkında konusacagız 
+        //    yapacagımız işlem basit ama mantıgını anlamaya calısacagız 
+
+        //    mantıgını anladıktan sonra neden personel nesnesini sealed olarak işaretlemedik onun da cevabını almıs olacaksınız 
+
+
+        //    */
+
+        //    Test157 T1 = new Test157();
+
+        //}
+
+        #endregion
 
 
 

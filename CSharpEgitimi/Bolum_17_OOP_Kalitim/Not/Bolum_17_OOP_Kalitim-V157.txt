@@ -1,0 +1,243 @@
+
+
+Bölüm 17 : OOP - Kalýtým
+Video 157 Sealed anahtar kelimesi ile kalýtýmý sonlandýrmak
+
+
+        #region VÝDEO 157 Sealed anahtar kelimesi ile kalýtýmý sonlandýrmak
+
+        static void Main(string[] args)
+        {
+
+            /*
+
+            Bolum 17 OOP Kalýtým V157 Sealed anahtar kelimesi ile kalýtýmý sonlandýrmak
+
+            */
+
+            /*
+
+            1. not baslangýc
+
+            þimdi yapmýs oldugumuz nesnelerimizi yani Ogrenci ve Egitmen nesnemizi öncelikle bir ana tip gibi belirleyelim 
+            onlardan bir nesne örneði alalým kalýtalým yani kalýttýktan sonra bunu nasý yapamayacagýmýzý görelim 
+
+            yeni bir nesne olusturalým 
+
+            Test157 ve Egitmen den miras alalým 
+
+            Test157 T1 = new Test157();
+            T1. dedigimiz de 
+
+            Egitmen nesnesini ve egitmenin de miras aldýgý bütün metot larý kullanabildiðimi görüyorum 
+
+            bir yerde yapmýs oldugumuz nesnelerin bu sekilde türetilmesini istemeyiz 
+            eger diger yazýlýmcýnýn bizle herhangi bir bagý yoksa benimle ortak yerlerde birleþmiyorsa 
+            benim nesnelerimi cok kendi içinde kullanmýyorsa yada dýs bir firma ise 
+            nesnemin bu sekýlde kalýtýlmasýný istemem ve özel olarak gercek hayatta da bu iþlemi yaparým nesnemi mühürlerim 
+
+            benim nesnemden nesne orneði alamasýn eger cok lazýmsa içeride innertype olarak kullansýn 
+            bunu nasý yapacagýz 
+
+            biz hangi nesnemizin kalýtýlmasýný istemiyoruz 
+            egitmen nesnemizin kalýtýlmasýný istemiyoruz o zaman egitmen nesnemizi sealed olarak iþaretlememiz gerekiyor
+
+            sealed anahtar kelimesi nesnenin içerisine verildiðinde netframework e sunu söylüyor
+
+            bu nesnenin kalýtýmý yapýlamaz kalýtým sonlandý 
+            egitmen nesnesine gidelim
+
+            1. not sonu
+
+            2. not sonu
+
+            4. not bitiþ
+
+            5. not baslangýc
+
+            diger video da neler yapacagýz giriþ yapalým
+
+            bizim Personel ve Egitmen nesnelerimizin içinde kendilerini tekrar eden field lar vardý 
+            benim temel olarak görmem gereken 
+
+            Personel nesnesinin ana field larý Egitmen nesnesinin içerisinde tekrarlanmýs 
+            benim egitmen nesnem temeltipten türemiþ personel nesnem de temeltipten türemiþ 
+            öyle bir iþlem yapmalýyým ki 
+
+            egitmen nesnem hem personel nesnesini görebilmeli hem personel nesnesinin içerisindeki temeltipi görebilmeli 
+            bir sonraki video da bu sistemin mantýgý hakkýnda konusacagýz 
+            yapacagýmýz iþlem basit ama mantýgýný anlamaya calýsacagýz 
+
+            mantýgýný anladýktan sonra neden personel nesnesini sealed olarak iþaretlemedik onun da cevabýný almýs olacaksýnýz 
+
+
+            */
+
+            Test157 T1 = new Test157();
+
+        }
+
+        #endregion
+
+
+------------------------------------------------------------
+
+
+using System;
+
+namespace Bolum_17_OOP_Kalitim
+{
+    public class TemelTip157
+    {
+        public TemelTip157()
+        {
+            Console.WriteLine("TemelTip155 nesnesinin yapýcý metodu çalýþtý.");
+            IdAtamaIslemi();
+        }
+
+        private void IdAtamaIslemi()
+        {
+            Random rnd = new Random();
+            this.Id = rnd.Next(1000, 9000);
+        }
+
+        public int Id { get; set; }
+        public string ReferansKod { get; set; }
+        public string TcKimlikNumarasi { get; set; }
+        public string Isim { get; set; }
+        public string SoyIsim { get; set; }
+        public int Cinsiyet { get; set; }
+        public DateTime KayitTarihi { get; set; }
+        public int KayitKullanici { get; set; }
+        public DateTime GuncellemeTarihi { get; set; }
+        public int GuncellemeKullanici { get; set; }
+        public bool Silindi { get; set; }
+
+        public void TemelTipMetot1()
+        {
+            Console.WriteLine("Temel Tip => Metot 1");
+        }
+
+    }
+}
+
+
+-----------------------------------------------------------
+
+
+using System;
+
+namespace Bolum_17_OOP_Kalitim
+{
+    public sealed class Ogrenci157 : TemelTip157
+    {
+        public Ogrenci157()
+        {
+            Console.WriteLine("Ogrenci156 nesnesi çalýþtý.");
+        }
+        public string Bolum { get; set; }
+        public int Seviye { get; set; }
+    }
+}
+
+/*
+ 
+3. not son
+
+4. not baslangýc
+ 
+sealed ekledik artýk ogrenci nesnemiz de kapandý kalýtýmsal olarak bir örnek alýnamaz
+
+en fazla bu nesne basla bir nesne içerisinde innertype olarak kullanýlabilir
+
+orada cagýrýrken bunun adýný yazmak gerek nerden geldiðini bilirsin sorun olmaz
+
+program.cs e gidelim
+
+4. not bitiþ
+ 
+*/
+
+
+------------------------------------------------------------
+
+
+using System;
+
+namespace Bolum_17_OOP_Kalitim
+{
+    public sealed class Egitmen157 : TemelTip157
+    {
+
+        public Egitmen157()
+        {
+            Console.WriteLine("Egitmen154 metodunun yapýcý metodu çalýþtý.");
+
+        }
+
+        public string Brans { get; set; }
+        public int BransSeviye { get; set; }
+
+        public DateTime IsBaslangicTarihi { get; set; }
+        public DateTime IsBitisTarihi { get; set; }
+        public int IzýnGunSayisi { get; set; }
+
+    }
+}
+
+/*
+ 
+1. not sonu 
+
+2. not baslagýc 
+
+kalýtýmýn durmasý için 
+
+public ten sonra sealed keyword u yazýlmasý lazým yazalým 
+bu nesne public tir dýsarýdan eriþebilirsin ama bu nesneyi ornekleyemezsin demiþ olduk
+
+þimdi test nesnesine gidelim ne oldu bakalým
+
+2. not son
+ 
+ 
+*/
+
+
+-----------------------------------------------------------------
+
+
+
+namespace Bolum_17_OOP_Kalitim
+{
+    public class Test157 : Egitmen157
+    {
+
+    }
+}
+
+/*
+ 
+2. not sonu
+
+3. not baslangýc
+
+Egitmen nesnesini sealed yaptýgýmýz için 
+
+miras yerin de hata veriyor 
+
+tooltpye okudugumuz da 
+'Test157': cannot derive from sealed type 'Egitmen157' diyor 
+ 
+Egitmen157 sealed olmustur Test157 e miras verilemez
+
+hiç program.cs e gitmeye gerek kalmadý direk class içinde bu hatayý veriyor
+
+nesneleri muhurlemek için sealed kullanabilirsin
+
+Ogrenci içinde ayný seyi yapalým
+
+3. not bitiþ
+
+
+*/
