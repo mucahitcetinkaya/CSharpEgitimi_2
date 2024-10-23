@@ -52,21 +52,25 @@
     <Compile Include="Ogrenci153.cs" />
     <Compile Include="Ogrenci154.cs" />
     <Compile Include="Ogrenci155.cs" />
+    <Compile Include="Ogrenci156.cs" />
     <Compile Include="Personel152.cs" />
     <Compile Include="Personel153.cs" />
     <Compile Include="Personel154.cs" />
     <Compile Include="Personel155.cs" />
+    <Compile Include="Personel156.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TemelTip152.cs" />
     <Compile Include="TemelTip153.cs" />
     <Compile Include="TemelTip154.cs" />
     <Compile Include="TemelTip155.cs" />
+    <Compile Include="TemelTip156.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Not\Bolum_17_OOP_Kalitim-V156.txt" />
     <Content Include="Not\Bolum_17_OOP_Kalitim-V155.txt" />
     <Content Include="Not\Bolum_17_OOP_Kalitim-V154.txt" />
     <Content Include="Not\Bolum_17_OOP_Kalitim-V153.txt" />

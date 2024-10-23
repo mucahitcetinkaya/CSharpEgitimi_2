@@ -1,0 +1,160 @@
+
+
+Bölüm 17 : OOP - Kalýtým
+Video 156 Kalýtým ile nesne modelleme - Personel & Öðrenci nesnesi modelleme
+
+
+ #region VÝDEO 156 Kalýtým ile nesne modelleme - Personel & Öðrenci nesnesi modelleme
+
+        //static void Main(string[] args)
+        //{
+
+        //    /*
+
+        //    Bolum 17 OOP Kalýtým V156 Kalýtým ile nesne modelleme - Personel & Öðrenci nesnesi modelleme
+
+        //    */
+
+        //    /*
+
+        //    1. not baslangýc
+
+        //    bu zamana kadar ogrendýklerýmýzi Personel ve Ogrenci nesnesi üzerinden tekrar edeceðiz
+        //    Personel ve Ogrenci metotlarýna yapýcý metot ekledýk
+        //    ornekleyip debug yapalým
+
+        //    personel nesnesine gidip temeltip e gidiyor kalýtým var diye temeltip nesnesi içindeki metot calýsýyor
+
+        //    boxing ve unboxing iþlemlerini yapalým
+
+        //    object obj1 = O1;
+        //    O1 i obj1 içine atadýgýmýz da sorun yok object tüm tiplerin ana tipi
+        //    tekrar ben O1 e obj1 in içideki nesneyi dönmek istersem
+        //    O1 = obj1 böyle olmaz 
+        //    unboxing yapmammýz lazým 
+
+        //    O1 = (Ogrenci156)obj1; yazmamýz lazým
+
+        //    kalýtýmýn ana mantýgýnda nelerin oldugunu kavradýk 
+
+        //    ben istiyorum ki türemiþ olan tiplerim türeyemesin 
+        //    nasý yani 
+        //    object ten temeltip türedi 
+        //    temeltipten personel ogrenci egitmen türedi 
+        //    ben istiyorum ki personel ogrenci egitmen türeyemesin
+
+        //    yani ben bir yerde kalýtýmý kesmek istiyorum buraya kadar burdan sonra hiç bir nesnem türeyemecek baska nesne bunu kendisine temeltip olarak alamayacak demek istiyorum 
+
+        //    bunu ogrenci ve egitmen için yapmak personel için yapmamak istiyorum 
+
+        //    birazdan personelden egitmeni türeteceðim orda bir kýrýlým yasacagýz nedenini size acýklama yapacagým 
+        //    önce bir keyword görelim 
+        //    o keyword ile türeme iþlemini engellemeyi göreceðiz 
+        //    sonra da temel bir mantýk degiþikliði var ona deginip konuyu bitireceðiz
+
+        //    diger video a gecelim 
+
+        //    */
+
+        //    Personel156 P1 = new Personel156();
+        //    P1.TemelTipMetot1();
+
+        //    Ogrenci156 O1 = new Ogrenci156();
+        //    O1.TemelTipMetot1();
+
+        //    object obj1 = O1;
+        //    O1 = (Ogrenci156)obj1;
+
+        //    obj1 = P1;
+        //    P1 = (Personel156)obj1;
+
+        //}
+
+        #endregion
+
+
+---------------------------------------------------
+
+
+
+using System;
+
+namespace Bolum_17_OOP_Kalitim
+{
+    public class Ogrenci156 : TemelTip156
+    {
+        public Ogrenci156()
+        {
+            Console.WriteLine("Ogrenci156 nesnesi çalýþtý.");
+        }
+        public string Bolum { get; set; }
+        public int Seviye { get; set; }
+    }
+}
+
+
+----------------------------------------------------
+
+
+
+using System;
+
+namespace Bolum_17_OOP_Kalitim
+{
+    public class Personel156 : TemelTip156
+    {
+        public Personel156()
+        {
+            Console.WriteLine("Personel156 nesnesi çalýþtý.");
+        }
+
+        public DateTime IsBaslangicTarihi { get; set; }
+        public DateTime IsBitisTarihi { get; set; }
+        public int IzýnGunSayisi { get; set; }
+
+    }
+}
+
+
+---------------------------------------------------
+
+
+
+using System;
+
+namespace Bolum_17_OOP_Kalitim
+{
+    public class TemelTip156
+    {
+        public TemelTip156()
+        {
+            Console.WriteLine("TemelTip155 nesnesinin yapýcý metodu çalýþtý.");
+            IdAtamaIslemi();
+        }
+
+        private void IdAtamaIslemi()
+        {
+            Random rnd = new Random();
+            this.Id = rnd.Next(1000, 9000);
+        }
+
+        public int Id { get; set; }
+        public string ReferansKod { get; set; }
+        public string TcKimlikNumarasi { get; set; }
+        public string Isim { get; set; }
+        public string SoyIsim { get; set; }
+        public int Cinsiyet { get; set; }
+        public DateTime KayitTarihi { get; set; }
+        public int KayitKullanici { get; set; }
+        public DateTime GuncellemeTarihi { get; set; }
+        public int GuncellemeKullanici { get; set; }
+        public bool Silindi { get; set; }
+
+        public void TemelTipMetot1()
+        {
+            Console.WriteLine("Temel Tip => Metot 1");
+        }
+
+    }
+}
+

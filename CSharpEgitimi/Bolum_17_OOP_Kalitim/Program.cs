@@ -588,6 +588,74 @@ namespace Bolum_17_OOP_Kalitim
 
         #endregion
 
+        #region VİDEO 156 Kalıtım ile nesne modelleme - Personel & Öğrenci nesnesi modelleme
+
+        //static void Main(string[] args)
+        //{
+
+        //    /*
+
+        //    Bolum 17 OOP Kalıtım V156 Kalıtım ile nesne modelleme - Personel & Öğrenci nesnesi modelleme
+
+        //    */
+
+        //    /*
+
+        //    1. not baslangıc
+
+        //    bu zamana kadar ogrendıklerımızi Personel ve Ogrenci nesnesi üzerinden tekrar edeceğiz
+        //    Personel ve Ogrenci metotlarına yapıcı metot ekledık
+        //    ornekleyip debug yapalım
+
+        //    personel nesnesine gidip temeltip e gidiyor kalıtım var diye temeltip nesnesi içindeki metot calısıyor
+
+        //    boxing ve unboxing işlemlerini yapalım
+
+        //    object obj1 = O1;
+        //    O1 i obj1 içine atadıgımız da sorun yok object tüm tiplerin ana tipi
+        //    tekrar ben O1 e obj1 in içideki nesneyi dönmek istersem
+        //    O1 = obj1 böyle olmaz 
+        //    unboxing yapmammız lazım 
+
+        //    O1 = (Ogrenci156)obj1; yazmamız lazım
+
+        //    kalıtımın ana mantıgında nelerin oldugunu kavradık 
+
+        //    ben istiyorum ki türemiş olan tiplerim türeyemesin 
+        //    nası yani 
+        //    object ten temeltip türedi 
+        //    temeltipten personel ogrenci egitmen türedi 
+        //    ben istiyorum ki personel ogrenci egitmen türeyemesin
+
+        //    yani ben bir yerde kalıtımı kesmek istiyorum buraya kadar burdan sonra hiç bir nesnem türeyemecek baska nesne bunu kendisine temeltip olarak alamayacak demek istiyorum 
+
+        //    bunu ogrenci ve egitmen için yapmak personel için yapmamak istiyorum 
+
+        //    birazdan personelden egitmeni türeteceğim orda bir kırılım yasacagız nedenini size acıklama yapacagım 
+        //    önce bir keyword görelim 
+        //    o keyword ile türeme işlemini engellemeyi göreceğiz 
+        //    sonra da temel bir mantık degişikliği var ona deginip konuyu bitireceğiz
+
+        //    diger video a gecelim 
+
+        //    */
+
+        //    Personel156 P1 = new Personel156();
+        //    P1.TemelTipMetot1();
+
+        //    Ogrenci156 O1 = new Ogrenci156();
+        //    O1.TemelTipMetot1();
+
+        //    object obj1 = O1;
+        //    O1 = (Ogrenci156)obj1;
+
+        //    obj1 = P1;
+        //    P1 = (Personel156)obj1;
+
+        //}
+
+        #endregion
+
 
 
 
