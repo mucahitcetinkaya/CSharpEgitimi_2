@@ -800,6 +800,79 @@ namespace Bolum_17_OOP_Kalitim
 
         #endregion
 
+        #region VİDEO 159 Kalıtım ile protected kullanımı
+
+        //static void Main(string[] args)
+        //{
+
+        //    /*
+
+        //    Bolum 17 OOP Kalıtım V159 Kalıtım ile protected kullanımı
+
+        //    */
+
+        //    /*
+
+        //    1. not baslangıc
+
+        //    bu bolume kadar erişim belirleyicilerinde sadece public ve private kullandık
+
+        //    kalıtım konusunun kendisine özel bir erişim belirleyicisi bulunmakta
+
+        //    bu erişim beliryecisi ise 
+
+        //    Protected
+
+        //    Protected Nedir ? 
+        //    Kalıtım konusunda bize sagladıgı avantajlar nedir ?
+        //    biraz bunlardan bahsedelim
+
+        //    önce işlemiş oldugumuz erişim belirleyicilerini biraz tanıyalım
+
+        //    Public : Uygulamamızın içerisinde veya dısarısında ulaşabilir anlamına gelir.
+        //    Private : Sadece tanımlandıgı class içerisinde erişebilir olur.
+        //    Protected : Normal kullanımda private olarak davranır. Kalıtım yolu ile baska bir class içerisinde public olarak kullanılır.
+
+        //    TemelTip e gidelim ve protected bir metot olusturup bakalım
+
+        //    1. not bitiş
+
+        //    2. not bitiş
+
+        //    3. not başlangıç
+
+        //    Benim TemelTip metodumu örnekledıgım de TemelTipMetot2 metodunu görememem lazım metot protected dısarıya kapalı
+        //    TemelTip159 T1 = new TemelTip159();
+        //    T1.
+        //    dedigimiz de TemelTipMetot2 cıkmıyor protected oldugu için class dısından cagıramıyorum
+
+        //    private olarak nası davranıyor ona bakalım
+
+        //    TemelTip159 a gidelim
+
+        //    3. not bitiş
+
+        //    5. not bitiş
+
+        //    peki ben ogrenci nesnesini ornekleyerek protected olan metot veya field a ulalabilir miyim
+        //    cevap hayır
+
+        //    Ogrenci159 O1 = new Ogrenci159();
+        //    O1. dedigimiz de TemelTipMetot2 gelmiyor
+
+        //    protected oldugundan ulasamıyorum
+
+        //    ya kendi class içinde olmalı veya kalıtım yapıldıgı yer olmalı
+
+        //    */
+
+        //    TemelTip159 T1 = new TemelTip159();
+
+        //    Ogrenci159 O1 = new Ogrenci159();
+
+        //}
+
+        #endregion
 
 
     }

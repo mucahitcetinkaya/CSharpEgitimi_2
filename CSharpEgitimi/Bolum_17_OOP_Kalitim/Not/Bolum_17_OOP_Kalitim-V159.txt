@@ -1,0 +1,229 @@
+
+
+Bölüm 17 : OOP - Kalýtým
+Video 159 Kalýtým ile protected kullanýmý
+
+
+   #region VÝDEO 159 Kalýtým ile protected kullanýmý
+
+        static void Main(string[] args)
+        {
+
+            /*
+
+            Bolum 17 OOP Kalýtým V159 Kalýtým ile protected kullanýmý
+
+            */
+
+            /*
+
+            1. not baslangýc
+
+            bu bolume kadar eriþim belirleyicilerinde sadece public ve private kullandýk
+
+            kalýtým konusunun kendisine özel bir eriþim belirleyicisi bulunmakta
+
+            bu eriþim beliryecisi ise 
+
+            Protected
+
+            Protected Nedir ? 
+            Kalýtým konusunda bize sagladýgý avantajlar nedir ?
+            biraz bunlardan bahsedelim
+
+            önce iþlemiþ oldugumuz eriþim belirleyicilerini biraz tanýyalým
+
+            Public : Uygulamamýzýn içerisinde veya dýsarýsýnda ulaþabilir anlamýna gelir.
+            Private : Sadece tanýmlandýgý class içerisinde eriþebilir olur.
+            Protected : Normal kullanýmda private olarak davranýr. Kalýtým yolu ile baska bir class içerisinde public olarak kullanýlýr.
+
+            TemelTip e gidelim ve protected bir metot olusturup bakalým
+
+            1. not bitiþ
+            
+            2. not bitiþ
+
+            3. not baþlangýç
+
+            Benim TemelTip metodumu örnekledýgým de TemelTipMetot2 metodunu görememem lazým metot protected dýsarýya kapalý
+            TemelTip159 T1 = new TemelTip159();
+            T1.
+            dedigimiz de TemelTipMetot2 cýkmýyor protected oldugu için class dýsýndan cagýramýyorum
+
+            private olarak nasý davranýyor ona bakalým
+
+            TemelTip159 a gidelim
+
+            3. not bitiþ
+
+            5. not bitiþ
+
+            peki ben ogrenci nesnesini ornekleyerek protected olan metot veya field a ulalabilir miyim
+            cevap hayýr
+
+            Ogrenci159 O1 = new Ogrenci159();
+            O1. dedigimiz de TemelTipMetot2 gelmiyor
+
+            protected oldugundan ulasamýyorum
+
+            ya kendi class içinde olmalý veya kalýtým yapýldýgý yer olmalý
+
+            */
+
+            TemelTip159 T1 = new TemelTip159();
+            
+            Ogrenci159 O1 = new Ogrenci159();
+
+        }
+
+        #endregion
+
+
+-----------------------------------------------------------------------
+
+
+
+using System;
+
+namespace Bolum_17_OOP_Kalitim
+{
+    public sealed class Ogrenci159 : TemelTip159
+    {
+        public Ogrenci159()
+        {
+            Console.WriteLine("Ogrenci159 nesnesi çalýþtý.");
+
+            TemelTipMetot1();
+            TemelTipMetot2();
+
+        }
+        public string Bolum { get; set; }
+        public int Seviye { get; set; }
+    }
+}
+
+/*
+
+4. not bitiþ
+
+5. not baþlangýc
+
+ctor un içine metot cagýralým 
+
+ public Ogrenci159()
+        {
+            Console.WriteLine("Ogrenci159 nesnesi çalýþtý.");
+
+            TemelTipMetot1();
+            TemelTipMetot2();
+
+        }
+
+            TemelTipMetot1();
+            TemelTipMetot2();
+
+2 metot da geldi
+
+TemelTip içinde Protected olan bir metodu
+farklý bir nesne olan Ogrenci içinde 
+TemelTip ten miras aldýgý için
+TemelTip içinde Protected olan metodu kullanabiliyoruz public olarak davrandý.
+program.cs e gidelim
+
+5. not bitiþ
+
+*/
+
+
+----------------------------------------------------------------------------
+
+
+
+using System;
+
+namespace Bolum_17_OOP_Kalitim
+{
+    public class TemelTip159
+    {
+        public TemelTip159()
+        {
+            Console.WriteLine("TemelTip155 nesnesinin yapýcý metodu çalýþtý.");
+            IdAtamaIslemi();
+        }
+
+        private void IdAtamaIslemi()
+        {
+            Random rnd = new Random();
+            this.Id = rnd.Next(1000, 9000);
+        }
+
+        public int Id { get; set; }
+        public string ReferansKod { get; set; }
+        public string TcKimlikNumarasi { get; set; }
+        public string Isim { get; set; }
+        public string SoyIsim { get; set; }
+        public int Cinsiyet { get; set; }
+        public DateTime KayitTarihi { get; set; }
+        public int KayitKullanici { get; set; }
+        public DateTime GuncellemeTarihi { get; set; }
+        public int GuncellemeKullanici { get; set; }
+        public bool Silindi { get; set; }
+
+        public void TemelTipMetot1()
+        {
+            Console.WriteLine("Temel Tip => Metot 1");
+            TemelTipMetot2();
+        }
+
+        protected void TemelTipMetot2() 
+        {
+            Console.WriteLine("Protected metot çalýþtý.");
+        }
+
+    }
+}
+
+
+/*
+ 
+1. not bitiþ
+
+2. not baslangýc
+
+protected bir metot olusturalým 
+
+ protected void TemelTipMetot2() 
+        {
+            Console.WriteLine("Protected metot çalýþtý.");
+        }
+ 
+ 
+Program.cs e gidelim
+
+2. not bitiþ
+3. not bitiþ
+
+4. not baslangýc
+
+            TemelTipMetot2(); yi 
+            TemelTipMetot1(); in içinde cagýralým
+
+public void TemelTipMetot1()
+        {
+            Console.WriteLine("Temel Tip => Metot 1");
+            TemelTipMetot2();
+        }
+
+calýsýyor sorun yok private gibi davranýyor
+
+2. olarak protected kendisini kalýtmýs olan nesneye public olarak gözükebiliyordu
+
+Benim TemelTipim den türemiþ nesnem örnek olarak Ogrenci nesnesi 
+
+Ogrenci159 a gidelim
+
+4. not bitiþ
+
+
+ 
+*/

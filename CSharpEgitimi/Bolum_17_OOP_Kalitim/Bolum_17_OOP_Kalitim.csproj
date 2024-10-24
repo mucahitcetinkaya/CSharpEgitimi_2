@@ -56,6 +56,7 @@
     <Compile Include="Ogrenci155.cs" />
     <Compile Include="Ogrenci156.cs" />
     <Compile Include="Ogrenci157.cs" />
+    <Compile Include="Ogrenci159.cs" />
     <Compile Include="Personel152.cs" />
     <Compile Include="Personel153.cs" />
     <Compile Include="Personel154.cs" />
@@ -71,12 +72,14 @@
     <Compile Include="TemelTip156.cs" />
     <Compile Include="TemelTip157.cs" />
     <Compile Include="TemelTip158.cs" />
+    <Compile Include="TemelTip159.cs" />
     <Compile Include="Test157.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Not\Bolum_17_OOP_Kalitim-V159.txt" />
     <Content Include="Not\Bolum_17_OOP_Kalitim-V158.txt" />
     <Content Include="Not\Bolum_17_OOP_Kalitim-V157.txt" />
     <Content Include="Not\Bolum_17_OOP_Kalitim-V156.txt" />
