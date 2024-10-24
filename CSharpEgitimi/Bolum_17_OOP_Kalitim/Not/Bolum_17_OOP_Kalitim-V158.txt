@@ -1,0 +1,189 @@
+
+
+Bölüm 17 : OOP - Kalýtým
+Video 158 Kalýtýlan nesne içerisinde kalýtým yapmak ( Detaylý inceleme )
+
+
+        #region VÝDEO 158 Kalýtýlan nesne içerisinde kalýtým yapmak ( Detaylý inceleme )
+
+        static void Main(string[] args)
+        {
+
+            /*
+
+            Bolum 17 OOP Kalýtým V158 Kalýtýlan nesne içerisinde kalýtým yapmak ( Detaylý inceleme )
+
+            */
+
+            /*
+
+            1. not baslangýc
+
+            neden Personel nesnesini sealed olarak iþaretlemedik bundan bahsedelim 
+
+            ana temel olarak bizim modellemelerimiz de su kural gecerlidir 
+
+            Personel nesnesinin içerisinde olan
+             public DateTime IsBaslangicTarihi { get; set; }
+             public DateTime IsBitisTarihi { get; set; }
+             public int IzýnGunSayisi { get; set; }
+            aslýnda Personele özel olan alanlarýmýz 
+
+            Egitmen class ýna baktýgým da 
+
+            public string Brans { get; set; }
+            public int BransSeviye { get; set; }
+
+            Egitmene ozel olan alanlarýmýz 
+
+            Benim Egitmen nesnemi Personel nesnemden kalýtmam gerekiyor
+
+            Personel nesnem de TemelTip nesnesiniden kalýtýldýgý için ben yine hiç bir þey kaybetmeyecegim
+
+            aslýnda bakarsanýz daha bir esneklik kazandýrmýs olacagým 
+
+            Egitmen158 Personel158 ve TemelTip158 class larýný acalým ve 157 den kod larý alalým
+
+            Egitmen158 e gidelim
+
+            1. not bitiþ
+
+            2. not bitiþ
+
+            3. not baslangýc
+
+            Egitmeni örnekleyip gerekli yerlere breakpoint koyup bakalým neler yapýyor
+
+            Egitmen e giriyor nerden miras almýþ Personel de 
+            Personele gidiyor nerden miras almýþ TemelTip
+            TemelTip teyken de object ten bir örnek alýyor
+
+            sonra sýrayla geri geliyor
+
+            Ýlk TemelTip calýsýyor sonra
+            Personel ctor calýsýyor
+            sonra Egitmen ctor calýsýyor
+
+
+            */
+
+            //Egitmen158 E1 = new Egitmen158();
+
+        }
+
+        #endregion
+
+--------------------------------------------------------------
+
+
+
+using System;
+
+namespace Bolum_17_OOP_Kalitim
+{
+    public class TemelTip158
+    {
+        public TemelTip158()
+        {
+            Console.WriteLine("TemelTip155 nesnesinin yapýcý metodu çalýþtý.");
+            IdAtamaIslemi();
+        }
+
+        private void IdAtamaIslemi()
+        {
+            Random rnd = new Random();
+            this.Id = rnd.Next(1000, 9000);
+        }
+
+        public int Id { get; set; }
+        public string ReferansKod { get; set; }
+        public string TcKimlikNumarasi { get; set; }
+        public string Isim { get; set; }
+        public string SoyIsim { get; set; }
+        public int Cinsiyet { get; set; }
+        public DateTime KayitTarihi { get; set; }
+        public int KayitKullanici { get; set; }
+        public DateTime GuncellemeTarihi { get; set; }
+        public int GuncellemeKullanici { get; set; }
+        public bool Silindi { get; set; }
+
+        public void TemelTipMetot1()
+        {
+            Console.WriteLine("Temel Tip => Metot 1");
+        }
+
+    }
+}
+
+
+----------------------------------------------------------------------------
+
+
+
+using System;
+
+namespace Bolum_17_OOP_Kalitim
+{
+    public class Personel158 : TemelTip158
+    {
+        public Personel158()
+        {
+            Console.WriteLine("Personel156 nesnesi çalýþtý.");
+        }
+
+        public DateTime IsBaslangicTarihi { get; set; }
+        public DateTime IsBitisTarihi { get; set; }
+        public int IzýnGunSayisi { get; set; }
+
+    }
+}
+
+
+---------------------------------------------------------------------------------
+
+
+using System;
+
+namespace Bolum_17_OOP_Kalitim
+{
+    public sealed class Egitmen158 : Personel158
+    {
+
+        public Egitmen158()
+        {
+            Console.WriteLine("Egitmen154 metodunun yapýcý metodu çalýþtý.");
+
+        }
+
+        public string Brans { get; set; }
+        public int BransSeviye { get; set; }
+
+    }
+}
+
+/*
+ 
+1. not bitiþ
+
+2. not baslangýc
+
+ Egitmen158 içindeki 
+ 
+ 
+       public DateTime IsBaslangicTarihi { get; set; }
+        public DateTime IsBitisTarihi { get; set; }
+        public int IzýnGunSayisi { get; set; }
+
+prop larý siliyorum 
+ 
+ Egitmen158 i Personel158 den kalýtýyorum 
+ 
+    public sealed class Egitmen158 : Personel158
+ 
+böylece ben Egitmen içinden Personele Personel içinden de TemelTip e gidebilecek olacagým
+
+Program.cs e gidelim
+
+2. not bitiþ
+ 
+*/

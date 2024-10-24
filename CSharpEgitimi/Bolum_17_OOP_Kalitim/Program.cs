@@ -731,6 +731,75 @@ namespace Bolum_17_OOP_Kalitim
 
         #endregion
 
+        #region VİDEO 158 Kalıtılan nesne içerisinde kalıtım yapmak ( Detaylı inceleme )
+
+        //static void Main(string[] args)
+        //{
+
+        //    /*
+
+        //    Bolum 17 OOP Kalıtım V158 Kalıtılan nesne içerisinde kalıtım yapmak ( Detaylı inceleme )
+
+        //    */
+
+        //    /*
+
+        //    1. not baslangıc
+
+        //    neden Personel nesnesini sealed olarak işaretlemedik bundan bahsedelim 
+
+        //    ana temel olarak bizim modellemelerimiz de su kural gecerlidir 
+
+        //    Personel nesnesinin içerisinde olan
+        //     public DateTime IsBaslangicTarihi { get; set; }
+        //     public DateTime IsBitisTarihi { get; set; }
+        //     public int IzınGunSayisi { get; set; }
+        //    aslında Personele özel olan alanlarımız 
+
+        //    Egitmen class ına baktıgım da 
+
+        //    public string Brans { get; set; }
+        //    public int BransSeviye { get; set; }
+
+        //    Egitmene ozel olan alanlarımız 
+
+        //    Benim Egitmen nesnemi Personel nesnemden kalıtmam gerekiyor
+
+        //    Personel nesnem de TemelTip nesnesiniden kalıtıldıgı için ben yine hiç bir şey kaybetmeyecegim
+
+        //    aslında bakarsanız daha bir esneklik kazandırmıs olacagım 
+
+        //    Egitmen158 Personel158 ve TemelTip158 class larını acalım ve 157 den kod ları alalım
+
+        //    Egitmen158 e gidelim
+
+        //    1. not bitiş
+
+        //    2. not bitiş
+
+        //    3. not baslangıc
+
+        //    Egitmeni örnekleyip gerekli yerlere breakpoint koyup bakalım neler yapıyor
+
+        //    Egitmen e giriyor nerden miras almış Personel de 
+        //    Personele gidiyor nerden miras almış TemelTip
+        //    TemelTip teyken de object ten bir örnek alıyor
+
+        //    sonra sırayla geri geliyor
+
+        //    İlk TemelTip calısıyor sonra
+        //    Personel ctor calısıyor
+        //    sonra Egitmen ctor calısıyor
+
+
+        //    */
+
+        //    //Egitmen158 E1 = new Egitmen158();
+
+        //}
+
+        #endregion
+
 
 
     }
