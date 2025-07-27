@@ -874,6 +874,264 @@ namespace Bolum_17_OOP_Kalitim
 
         #endregion
 
+        #region VİDEO 160 Uygulama Ödev
+
+        //static void Main(string[] args)
+        //{
+
+        //    /*
+
+        //    Bolum 17 OOP Kalıtım V160 Kalıtım ile protected kullanımı
+
+        //    */
+
+        //    /*
+
+        //    1. not baslangıc
+
+        //    öncelikle bir BaseClass olusturalım ve problarını yazalım
+
+        //    BaseClass a gidelim
+
+        //    1. not bitiş
+
+        //    ---------------------------------------------------------
+        //    5. not baslangıc Televizyon nesnesine denk geldi soru 
+            
+        //    Ödev uygulamasındaki
+
+        //    1.soru
+
+        //    ben televizyon ve bilgisayar nesnelerimi urun nesnesinden kalıtmak istiyorum kalıttıgım zaman aslında genel olarak kalıtım seması nası olur
+
+        //    program.cs calısır 
+        //    hangisi new lendiyse ona göre işlenir 
+        //    mesela urun new lendiyse
+        //    urunden base e gider sonra urune gider
+
+        //    televizyon new lendiyse miras urunse
+        //    televizyondan urune urunden base e base den urune urunden televizyona sonra program.cs e 
+
+        //    yukarıdaki sema bilgisayar içinde gecerli
+
+        //    5. not bitiş
+        //    ---------------------------------------------------------
+
+        //    6. not baslangıc
+
+        //    bilgisayar nesnesini olusturalım
+
+        //    ---------------------------------------------------------
+        //    Ödev uygulamasındaki ikinci soru 
+
+        //    2. soru
+
+        //    Ben Bilgisayar veya Televizyondan bir nesne örneği aldııgımda id degerini girmek istemiyorum aynı zamanda uygulamanın bana bu alanı set edilebilir şekilde bırakmasınıda istemiyorum bunun için ne yapmak gerekir
+
+        //    öyle bir işlem yapmak istiyorum ki B1.Id = 1; yazdıgımda hata versin ama hiç bişey yapmadıgımda da içerideki id degerini takip edip sıradaki id degerini de alabilsin
+
+        //    ---------------------------------------------------------
+
+        //    id degeri atanamasın için 
+
+        //    baseclass daki id degerini encapsulation olarak ayarlamak ve private olarak baska bir field olusturmak gerekiyor
+
+        //    baseclass a gidelim
+
+        //    6. not bitiş
+
+        //    7. not bitiş
+
+        //    8. not baslangıc
+
+        //    B1.Id = 1;
+        //    da hata veriyor set private oldu cunku
+
+        //    debug yapıp kontrol edelim
+
+        //    Bilgisayar160 B1 = new Bilgisayar160(); break point koyduk
+
+        //    ilk girince null örneklendıgın de null ve 0 
+
+        //    atamalarını yapınca degerler yine 0 geliyor 
+
+        //    biz baseclass da ilgili işlemleri yaptıgımız halde neden id degerimiz artmadı ????
+
+        //    bunun notları için baseclass a gidelim
+
+        //    8. not bitiş
+            
+        //    9. not bitiş
+
+        //    10. not baslangıc
+
+        //    şimdi bilgisayar nesnesi orneklenirken
+        //    bilgisayar nesnesine gidecek
+        //    urunden miras almıs urune gidecek
+        //    oda baseclass dan miras almıs oraya gidecek
+        //    baseclass da da yapıcı metot var her turlu orası calısacak
+
+        //    tekrar debug yapınca id 1 olarak geldi
+
+        //    2. ödev de bitmiş oldu böylece
+        //    id dısarıdan verilemiyor otomatik olarak atıyor
+
+        //    ---------------------------------------------------------
+        //    2. İSTEK 
+        //    ALIS FİYATI 0 DAN KUCUK OLAMAZ 
+        //    KAMPANYA 0 DAN KUCUK OLAMAZ
+        //    SATIS FİYAT ALIS FİYATTAN KUCUK OLAMAZ
+        //    ---------------------------------------------------------
+
+        //    bu problar nerde ona bakmak lazım once bakınca hepsinin Urun160.cs de oldugunu görduk o zaman işlemlere orda devam etmemiz gerek
+
+        //    10. not bitiş
+            
+        //    11. not bitiş
+
+        //    12. not başlangıc
+
+        //    olmayacak degerleri verip kontrol edelim hata verecek mi
+
+        //    hataları aldık kod calısıyor şimdi de barkod kısmından devam edelim
+        //    // dk 35
+        //    şimdi bir data base olusturalım ve içerisine ürün ekleyelim daha sonrada barkoda geçip ilgili barkodları da o sistem üzerinden kontrol edebiliriz
+
+        //    ben uygulama içerisinde bir database olusturmak istiyorum bir liste olusturmak istiyorum olusturmus oldugum o listenin uygulamada tekil olmasını istiyorum 
+        //    ve içerisine devamlı olarak data aktarmak isteyeceğim
+
+        //    bunun için ArrayList kullanacagım ama bunu nası kullanmalıyım 
+
+        //    bir nesne örneklendıgınde oda bir kere örneklensin içerisine her deger atadıgımda atamıs oldugum deger onun içerisinde saklansın benim sanal bir database im olsun 
+
+        //    sanal database ler için static leri kullanmaya devam edeceğiz 
+
+        //    sanaldatabase160 class ını acalım ve static yapalım 
+
+        //    12. not bitiş
+            
+        //    13. not bitiş
+            
+        //    14. not başlangıc
+
+        //    SanalDataBase.YeniUrunEkle(B1);
+
+        //    breakpoint koyup kontrol edelim
+
+        //    calıstırırken hata aldık arraylist orneklenmedi bundan dolayı add metotuda calısmadı
+        //    sanaldatabase e gidelim
+        //    14. not bitiş
+        //    15. not bitiş
+
+        //    16. not başlangıc
+
+        //    sanaldatabase de db i new leyip tekrar calıstırınca sorun kalmadı
+
+        //    16. not bitiş
+
+        //    17. not başlangıc
+            
+        //    ----------------------------------------
+
+        //    3. soru
+
+        //    baseclass içinde barkod field i var
+        //    buraya girmiş oldugum değer benım sanal database im de olmaması lazım
+        //    eğer sanaldatabase im de olursa bir uyarı cıksın yoksa barkodu ben kabul edebileyim
+        //    burada yine get ve set leri modifiye edeceğiz 
+        //    yine bir ek private metot yazıp kullanabiliriz
+
+        //    olusturmus oldugumuz static içerisinde arraylist imiz vardı onun içerisindeki elemanlarda dönüp barkodu kontrol ettireceğiz barkodu bulursak işlem yapmayacagız bulamazsak işlem yapacagız
+
+        //    BaseClass160 a gidelim barkod prob unu guncelleyelim
+            
+        //    17. not bitiş
+
+        //    20. not bitiş baseclassdan geldik
+
+        //    21. not başlangıç
+            
+        //    SanalDataBase.YeniUrunEkle(B1); yeni urun ekledik aynı üründen bir tane daha alalım
+
+        //    b1 deki barkod 1234567890
+
+        //    Bilgisayar160 B2 = new Bilgisayar160();
+        //    B2.Marka = "Lenovo";
+        //    B2.Model = "Z50";
+        //    B2.Islemci = "I5";
+        //    B2.AlisFiyat = 1000;
+        //    B2.SatisFiyat = 1500;
+        //    B2.KampanyaFiyat = 1000;
+        //    B2.Barkod = "1234567890";
+
+        //    SanalDataBase.YeniUrunEkle(B2);
+
+        //    b2 deki barkod da 1234567890
+
+        //    hata almak için aynısından olusturduk 
+
+        //    21. not bitiş
+
+        //    22. not başlangıç
+
+        //    televizyon ve bilgisayar nesneleri katılamasın diye bir ödev vardı bunun içinde bir keyword vardı
+        //    sealed bunu kullanmamız lazım
+
+        //    televizyon ve bilgisayar nesnelerine public ten sonra sealed ekleyelim
+
+        //    22. not bitiş
+
+        //    24. not bitiş bilgisayardan geldik
+
+        //    25. not baslangıc
+
+        //    bolum gitti
+
+        //    */
+
+        //    //Bilgisayar160 B1 = new Bilgisayar160();
+        //    ////B1.Id = 1;
+        //    //B1.Marka = "Lenovo";
+        //    //B1.Model = "Z50";
+        //    //B1.Islemci = "I5";
+        //    //B1.AlisFiyat = 1500;
+        //    //B1.SatisFiyat = 2000;
+        //    //B1.KampanyaFiyat = 1600;
+        //    //B1.Barkod = "1234567890";
+
+        //    Bilgisayar160 B1 = new Bilgisayar160();
+        //    //B1.Id = 1;
+        //    B1.Marka = "Lenovo";
+        //    B1.Model = "Z50";
+        //    B1.Islemci = "I5";
+        //    B1.AlisFiyat = 1000;
+        //    B1.SatisFiyat = 1500;
+        //    B1.KampanyaFiyat = 1000;
+        //    B1.Barkod = "1234567890";
+
+        //    // dk 35 devam
+
+        //    // dk 40 devam
+
+        //    SanalDataBase.YeniUrunEkle(B1);
+
+        //    Bilgisayar160 B2 = new Bilgisayar160();
+        //    B2.Marka = "Lenovo";
+        //    B2.Model = "Z50";
+        //    B2.Islemci = "I5";
+        //    B2.AlisFiyat = 1000;
+        //    B2.SatisFiyat = 1500;
+        //    B2.KampanyaFiyat = 1000;
+        //    B2.Barkod = "1234567890";
+
+        //    SanalDataBase.YeniUrunEkle(B2);
+
+
+        //}
+
+        #endregion
+
+
 
     }
 }

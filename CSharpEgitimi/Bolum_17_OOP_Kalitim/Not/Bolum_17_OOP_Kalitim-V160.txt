@@ -1,0 +1,1304 @@
+
+
+Bölüm 17 : OOP - Kalýtým
+Video 160 Uygulama Ödev
+
+
+        #region VÝDEO 160 Uygulama Ödev
+
+        //static void Main(string[] args)
+        //{
+
+        //    /*
+
+        //    Bolum 17 OOP Kalýtým V160 Kalýtým ile protected kullanýmý
+
+        //    */
+
+        //    /*
+
+        //    1. not baslangýc
+
+        //    öncelikle bir BaseClass olusturalým ve problarýný yazalým
+
+        //    BaseClass a gidelim
+
+        //    1. not bitiþ
+
+        //    ---------------------------------------------------------
+        //    5. not baslangýc Televizyon nesnesine denk geldi soru 
+            
+        //    Ödev uygulamasýndaki
+
+        //    1.soru
+
+        //    ben televizyon ve bilgisayar nesnelerimi urun nesnesinden kalýtmak istiyorum kalýttýgým zaman aslýnda genel olarak kalýtým semasý nasý olur
+
+        //    program.cs calýsýr 
+        //    hangisi new lendiyse ona göre iþlenir 
+        //    mesela urun new lendiyse
+        //    urunden base e gider sonra urune gider
+
+        //    televizyon new lendiyse miras urunse
+        //    televizyondan urune urunden base e base den urune urunden televizyona sonra program.cs e 
+
+        //    yukarýdaki sema bilgisayar içinde gecerli
+
+        //    5. not bitiþ
+        //    ---------------------------------------------------------
+
+        //    6. not baslangýc
+
+        //    bilgisayar nesnesini olusturalým
+
+        //    ---------------------------------------------------------
+        //    Ödev uygulamasýndaki ikinci soru 
+
+        //    2. soru
+
+        //    Ben Bilgisayar veya Televizyondan bir nesne örneði aldýýgýmda id degerini girmek istemiyorum ayný zamanda uygulamanýn bana bu alaný set edilebilir þekilde býrakmasýnýda istemiyorum bunun için ne yapmak gerekir
+
+        //    öyle bir iþlem yapmak istiyorum ki B1.Id = 1; yazdýgýmda hata versin ama hiç biþey yapmadýgýmda da içerideki id degerini takip edip sýradaki id degerini de alabilsin
+
+        //    ---------------------------------------------------------
+
+        //    id degeri atanamasýn için 
+
+        //    baseclass daki id degerini encapsulation olarak ayarlamak ve private olarak baska bir field olusturmak gerekiyor
+
+        //    baseclass a gidelim
+
+        //    6. not bitiþ
+
+        //    7. not bitiþ
+
+        //    8. not baslangýc
+
+        //    B1.Id = 1;
+        //    da hata veriyor set private oldu cunku
+
+        //    debug yapýp kontrol edelim
+
+        //    Bilgisayar160 B1 = new Bilgisayar160(); break point koyduk
+
+        //    ilk girince null örneklendýgýn de null ve 0 
+
+        //    atamalarýný yapýnca degerler yine 0 geliyor 
+
+        //    biz baseclass da ilgili iþlemleri yaptýgýmýz halde neden id degerimiz artmadý ????
+
+        //    bunun notlarý için baseclass a gidelim
+
+        //    8. not bitiþ
+            
+        //    9. not bitiþ
+
+        //    10. not baslangýc
+
+        //    þimdi bilgisayar nesnesi orneklenirken
+        //    bilgisayar nesnesine gidecek
+        //    urunden miras almýs urune gidecek
+        //    oda baseclass dan miras almýs oraya gidecek
+        //    baseclass da da yapýcý metot var her turlu orasý calýsacak
+
+        //    tekrar debug yapýnca id 1 olarak geldi
+
+        //    2. ödev de bitmiþ oldu böylece
+        //    id dýsarýdan verilemiyor otomatik olarak atýyor
+
+        //    ---------------------------------------------------------
+        //    2. ÝSTEK 
+        //    ALIS FÝYATI 0 DAN KUCUK OLAMAZ 
+        //    KAMPANYA 0 DAN KUCUK OLAMAZ
+        //    SATIS FÝYAT ALIS FÝYATTAN KUCUK OLAMAZ
+        //    ---------------------------------------------------------
+
+        //    bu problar nerde ona bakmak lazým once bakýnca hepsinin Urun160.cs de oldugunu görduk o zaman iþlemlere orda devam etmemiz gerek
+
+        //    10. not bitiþ
+            
+        //    11. not bitiþ
+
+        //    12. not baþlangýc
+
+        //    olmayacak degerleri verip kontrol edelim hata verecek mi
+
+        //    hatalarý aldýk kod calýsýyor þimdi de barkod kýsmýndan devam edelim
+        //    // dk 35
+        //    þimdi bir data base olusturalým ve içerisine ürün ekleyelim daha sonrada barkoda geçip ilgili barkodlarý da o sistem üzerinden kontrol edebiliriz
+
+        //    ben uygulama içerisinde bir database olusturmak istiyorum bir liste olusturmak istiyorum olusturmus oldugum o listenin uygulamada tekil olmasýný istiyorum 
+        //    ve içerisine devamlý olarak data aktarmak isteyeceðim
+
+        //    bunun için ArrayList kullanacagým ama bunu nasý kullanmalýyým 
+
+        //    bir nesne örneklendýgýnde oda bir kere örneklensin içerisine her deger atadýgýmda atamýs oldugum deger onun içerisinde saklansýn benim sanal bir database im olsun 
+
+        //    sanal database ler için static leri kullanmaya devam edeceðiz 
+
+        //    sanaldatabase160 class ýný acalým ve static yapalým 
+
+        //    12. not bitiþ
+            
+        //    13. not bitiþ
+            
+        //    14. not baþlangýc
+
+        //    SanalDataBase.YeniUrunEkle(B1);
+
+        //    breakpoint koyup kontrol edelim
+
+        //    calýstýrýrken hata aldýk arraylist orneklenmedi bundan dolayý add metotuda calýsmadý
+        //    sanaldatabase e gidelim
+        //    14. not bitiþ
+        //    15. not bitiþ
+
+        //    16. not baþlangýc
+
+        //    sanaldatabase de db i new leyip tekrar calýstýrýnca sorun kalmadý
+
+        //    16. not bitiþ
+
+        //    17. not baþlangýc
+            
+        //    ----------------------------------------
+
+        //    3. soru
+
+        //    baseclass içinde barkod field i var
+        //    buraya girmiþ oldugum deðer beným sanal database im de olmamasý lazým
+        //    eðer sanaldatabase im de olursa bir uyarý cýksýn yoksa barkodu ben kabul edebileyim
+        //    burada yine get ve set leri modifiye edeceðiz 
+        //    yine bir ek private metot yazýp kullanabiliriz
+
+        //    olusturmus oldugumuz static içerisinde arraylist imiz vardý onun içerisindeki elemanlarda dönüp barkodu kontrol ettireceðiz barkodu bulursak iþlem yapmayacagýz bulamazsak iþlem yapacagýz
+
+        //    BaseClass160 a gidelim barkod prob unu guncelleyelim
+            
+        //    17. not bitiþ
+
+        //    20. not bitiþ baseclassdan geldik
+
+        //    21. not baþlangýç
+            
+        //    SanalDataBase.YeniUrunEkle(B1); yeni urun ekledik ayný üründen bir tane daha alalým
+
+        //    b1 deki barkod 1234567890
+
+        //    Bilgisayar160 B2 = new Bilgisayar160();
+        //    B2.Marka = "Lenovo";
+        //    B2.Model = "Z50";
+        //    B2.Islemci = "I5";
+        //    B2.AlisFiyat = 1000;
+        //    B2.SatisFiyat = 1500;
+        //    B2.KampanyaFiyat = 1000;
+        //    B2.Barkod = "1234567890";
+
+        //    SanalDataBase.YeniUrunEkle(B2);
+
+        //    b2 deki barkod da 1234567890
+
+        //    hata almak için aynýsýndan olusturduk 
+
+        //    21. not bitiþ
+
+        //    22. not baþlangýç
+
+        //    televizyon ve bilgisayar nesneleri katýlamasýn diye bir ödev vardý bunun içinde bir keyword vardý
+        //    sealed bunu kullanmamýz lazým
+
+        //    televizyon ve bilgisayar nesnelerine public ten sonra sealed ekleyelim
+
+        //    22. not bitiþ
+
+        //    24. not bitiþ bilgisayardan geldik
+
+        //    25. not baslangýc
+
+        //    bolum gitti
+
+        //    */
+
+        //    //Bilgisayar160 B1 = new Bilgisayar160();
+        //    ////B1.Id = 1;
+        //    //B1.Marka = "Lenovo";
+        //    //B1.Model = "Z50";
+        //    //B1.Islemci = "I5";
+        //    //B1.AlisFiyat = 1500;
+        //    //B1.SatisFiyat = 2000;
+        //    //B1.KampanyaFiyat = 1600;
+        //    //B1.Barkod = "1234567890";
+
+        //    Bilgisayar160 B1 = new Bilgisayar160();
+        //    //B1.Id = 1;
+        //    B1.Marka = "Lenovo";
+        //    B1.Model = "Z50";
+        //    B1.Islemci = "I5";
+        //    B1.AlisFiyat = 1000;
+        //    B1.SatisFiyat = 1500;
+        //    B1.KampanyaFiyat = 1000;
+        //    B1.Barkod = "1234567890";
+
+        //    // dk 35 devam
+
+        //    // dk 40 devam
+
+        //    SanalDataBase.YeniUrunEkle(B1);
+
+        //    Bilgisayar160 B2 = new Bilgisayar160();
+        //    B2.Marka = "Lenovo";
+        //    B2.Model = "Z50";
+        //    B2.Islemci = "I5";
+        //    B2.AlisFiyat = 1000;
+        //    B2.SatisFiyat = 1500;
+        //    B2.KampanyaFiyat = 1000;
+        //    B2.Barkod = "1234567890";
+
+        //    SanalDataBase.YeniUrunEkle(B2);
+
+
+        //}
+
+        #endregion
+
+
+
+        -----------------------------------
+
+
+        
+//using System;
+
+//namespace Bolum_17_OOP_Kalitim
+//{
+//    public class BaseClass160
+//    {
+
+//        public static int sayac = 1;
+
+//        public BaseClass160()
+//        {
+//            _id = sayac;
+//            sayac = sayac + 1;
+//        }
+
+//        private int _id;
+//        public int Id
+//        {
+//            get
+//            {
+//                return _id;
+//            }
+//            private set
+//            {
+//                //_id = sayac;
+//                //sayac = sayac + 1;
+//            }
+//        }
+
+
+//        private string _barkod;
+//        public string Barkod
+//        {
+//            get
+//            {
+//                return _barkod;
+//            }
+//            set
+//            {
+//                bool kontrolIslemi = SanalDataBase.DbBarkodKontrol(value);
+//                if (!kontrolIslemi) // false ise deðeri sanaldatabase içinde bulamadým
+//                {
+//                    _barkod = value;
+//                }
+//                else
+//                {
+//                    Console.WriteLine("Sanal database içerisinde bu barkod daha önce girilmiþtir.");
+//                }
+
+//            }
+//        }
+//        public DateTime OlusturmaTarihi { get; set; }
+//        public int OlusturanKullanici { get; set; }
+//        public DateTime GuncellemeTarihi { get; set; }
+//        public int GuncelleyenKullanici { get; set; }
+//        public bool SilindiMi { get; set; }
+
+
+//    }
+//}
+
+
+
+///*
+ 
+//1. not bitiþ
+
+//2. not baslangýc
+
+//BaseClass ý olusturduk ve problarýný yazacagýz
+//id alaný eklemýs oldugumuz nesnelerin id lerini temsil edecek tüm nesnelerimizin id degeri olacagý için bunu BaseClass a yazdýk
+//id kýsmýnda bir kontrol yapacagýz
+//baseclass dan türemiþ olan nesnelerin id lerini biz vermeyeceðiz
+//arka tarafta bir yapý entegre edecegiz ve her olusturdugumuz nesne gidip o yapýdan yeni degeri ögrenip kendisine uniq bir id degeri alacak
+
+//barkod alaný her ürünün barkodunun uniq olmasý lazým burada bir kontrol yapacagýz
+//barkod degerini biz verecegýz ama eklemýs oldugumuz barkod degerýný ise bir sanal database içerisinde
+//aratýp daha once ekleyip eklemedýgýmýz kontrolunu birlikte yapacagýz
+
+//prob larý yazdýk Urun classýný olusturup ordan devam edelim
+
+//2. not bitiþ
+
+//6. not bitiþ
+
+//7. not baslangýc
+
+//2. soru için gerekli duzenlemeleri yapacagýz önceki hali asagýdaki gibi
+
+//        public int Id { get; set; }
+//        public string Barkod { get; set; }
+//        public DateTime OlusturmaTarihi { get; set; }
+//        public int OlusturanKullanici { get; set; }
+//        public DateTime GuncellemeTarihi { get; set; }
+//        public int GuncelleyenKullanici { get; set; }
+//        public bool SilindiMi { get; set; }
+
+//önce private olarak bir field yazdýk 
+//        private int _id;
+//sonrada Id degerinin get set alanlarýný acýp guncelleyeceðiz
+
+//get dedigimiz de aklýmýza gelmesi gereken degeri içeriden dýsarýya gönderme olmalý biz içeriden dýsarýda gönderme için herhangi bir sart koþmadýk bundan dolayý 
+//return _id dememiz yeterli.
+
+//set kýsmýna gelince burda bir iþlem yapacagýz 
+
+//bir sayac içerisindeki degerden faydalanmak istiyoruz 
+
+//sayac degerini hep bir arttýrýp artan degeri takip edip sýradaki id yi almak istiyoruz
+
+//birde dýsarýdan bu iþlem yapýlamasýn istiyoruz
+
+//bunun içinde set kýsmýný private olarak iþaretmemiz yeterli
+
+//set kýsmýný private yapýnca program.cs e bakarsanýz B1.Id = 1; kýsmýnda hata veriyor ve bu kýsýmda set kýsmýnýn private oldugunu söylüyor
+
+//içeride kendisini takip eden bir deger istiyoruz 
+
+//bir nesne orneklendýgýnde sadece bir kere calýsan yapýnýn adý neydi ?? static 
+//bundan dolayý ben int static bir sayac prob eklersem ilgili prob uzerýnde iþlem yapýp sayac degerýmý kontrol edebilirim 
+
+//public static int sayac = 1;
+
+//ilk olustugunda otomatik olarak 1 degerýný alacak
+
+//private set kýsmýnda bunlarý iþleyebiliriz
+
+//_id = sayac;
+//sayac = sayac + 1;
+//dedigimiz de bunlarý içeriden set edebiliriz 
+//_id = sayac; dedigimiz de 1 degerini _id e atamýs olduk 
+//sayac = sayac + 1; dediðimiz de de static tarafta olan degerýmýzý de guncelleriz
+
+//son durum bu 
+
+// public class BaseClass160
+//    {
+
+//        public static int sayac = 1;
+
+//        private int _id;
+//        public int Id 
+//        { 
+//            get 
+//            {
+//                return _id;
+//            } 
+//            private set
+//            { 
+//                _id = sayac;
+//                sayac = sayac + 1;
+//            }
+//        }
+//        public string Barkod { get; set; }
+//        public DateTime OlusturmaTarihi { get; set; }
+//        public int OlusturanKullanici { get; set; }
+//        public DateTime GuncellemeTarihi { get; set; }
+//        public int GuncelleyenKullanici { get; set; }
+//        public bool SilindiMi { get; set; }
+
+
+//    }
+
+//program.cs e gidelim
+
+//7. not bitiþ
+
+//8. not bitiþ
+
+//9. not baslangýc
+
+//biz baseclass da ilgili iþlemleri yaptýgýmýz halde neden id degerimiz artmadý ????
+//bunun notlarý için baseclass a gidelim
+
+//_id degerimiz içeride private olarak duruyor          private int _id;
+//bunun dýsarýda deger alma ve gönderme problarý da 
+//public int Id 
+//        { 
+//            get 
+//            {
+//                return _id;
+//            } 
+//            private set
+//            { 
+//                _id = sayac;
+//                sayac = sayac + 1;
+//            }
+//        }
+//burda duruyor 
+
+//get dedigimiz de içeride private olarak sakladýgýmýz degeri dönuyoruz buraya bakmak gerekmýyor 
+//set kýsmýnda baktýgýmýz da bizim field ýmýza bir deger GELMEYE calýstýgýnda 
+//içeride saklamýs oldugumuz _id degerimizi statik olarak verdiðimiz sayac degerimize atýyoruz ve sayac degerimizi de 1 guncelliyoruz
+
+//ama biz bu prob a bir deger gelmesini engelledik private yaptýk bundan dolayý deger gelemez
+
+//biz bunu nerde yapacagýz nesneler orneklendýgýn de yani baseclass içinde bir yapýcý metot içinde bu iþlemi yapsam basarýlý olurum
+
+//bir ctor olusturalým
+
+//ctor oncesi
+
+// public class BaseClass160
+//    {
+
+//        public static int sayac = 1;
+
+//        private int _id;
+//        public int Id 
+//        { 
+//            get 
+//            {
+//                return _id;
+//            } 
+//            private set
+//            { 
+//                _id = sayac;
+//                sayac = sayac + 1;
+//            }
+//        }
+//        public string Barkod { get; set; }
+//        public DateTime OlusturmaTarihi { get; set; }
+//        public int OlusturanKullanici { get; set; }
+//        public DateTime GuncellemeTarihi { get; set; }
+//        public int GuncelleyenKullanici { get; set; }
+//        public bool SilindiMi { get; set; }
+
+
+//    }
+
+//son durum 
+
+//public class BaseClass160
+//    {
+
+//        public static int sayac = 1;
+
+//        public BaseClass160()
+//        {
+//            _id = sayac;
+//            sayac = sayac + 1;
+//        }
+
+//        private int _id;
+//        public int Id 
+//        { 
+//            get 
+//            {
+//                return _id;
+//            } 
+//            private set
+//            { 
+//                //_id = sayac;
+//                //sayac = sayac + 1;
+//            }
+//        }
+//        public string Barkod { get; set; }
+//        public DateTime OlusturmaTarihi { get; set; }
+//        public int OlusturanKullanici { get; set; }
+//        public DateTime GuncellemeTarihi { get; set; }
+//        public int GuncelleyenKullanici { get; set; }
+//        public bool SilindiMi { get; set; }
+
+
+//    }
+
+//program.cs e gidelim
+
+//9. not bitiþ
+
+
+//18. not baþlangýc program.cs den geldik
+
+//barkod field i guncellenecek
+
+//önceki kodlar
+
+
+//using System;
+
+//namespace Bolum_17_OOP_Kalitim
+//{
+//    public class BaseClass160
+//    {
+
+//        public static int sayac = 1;
+
+//        public BaseClass160()
+//        {
+//            _id = sayac;
+//            sayac = sayac + 1;
+//        }
+
+//        private int _id;
+//        public int Id
+//        {
+//            get
+//            {
+//                return _id;
+//            }
+//            private set
+//            {
+//                //_id = sayac;
+//                //sayac = sayac + 1;
+//            }
+//        }
+//        public string Barkod { get; set; }
+//        public DateTime OlusturmaTarihi { get; set; }
+//        public int OlusturanKullanici { get; set; }
+//        public DateTime GuncellemeTarihi { get; set; }
+//        public int GuncelleyenKullanici { get; set; }
+//        public bool SilindiMi { get; set; }
+
+
+//    }
+//}
+
+//guncellemeden sonrasý 
+
+//private bir alan olusturmamýz lazým ve onu get blogunda geriye return yapacagýz
+
+// private string _barkod;
+//        public string Barkod 
+//        { 
+//            get 
+//            { 
+//                return _barkod; 
+//            }
+//            set
+//            {
+
+//            } 
+//        }
+
+//set kýsmý burada önemli bana deger value ile geliyor 
+//benim içeride bir iþlem yapmam gerekiyor bunu dilersem bir metot ile yapabilirim dilersem setin içerisinde yapabilirim
+//metot ile yapmak daha cok iþime geliyor daha merkezi olacak
+//set içine yazarsan eðer ayný kodu baska bir yerde kullanmak için kopyala yapýþtýr yapmak gerekecek metot olursa sadece cagýrman yeterli olur 
+//peki ben bu metodu nereye yazmalýyým bu iþlem ne yapacak
+//db de iþlem yapacak arama yapacak varsa var yoksa yok diyecek
+//peki ben bunu bu class ýn içerisinde yaparsam dogru bir iþlem mi yapmýs olurum => hayýr
+//sanaldatabase class ýnýn içerisinde yaparsam dogru bir iþlem mi yapmýs olurum => evet 
+//neden sanaldatabase içinde yapmalýyým 
+//sanaldatabase benim artýk o database e özel metotlarýmý barýndýrýyor zaten ve genele acýk olmalý
+
+//sanaldatabe e gidip bir metot tasarlamamýz lazým
+
+//18. not bitiþ
+
+//19. not bitiþ sanaldatabse den geldik
+
+//20. not baþlangýc
+
+//barkod set alanýný guncelleyecegýz öncesi
+
+//    private string _barkod;
+//        public string Barkod 
+//        { 
+//            get 
+//            { 
+//                return _barkod; 
+//            }
+//            set
+//            {
+
+//            } 
+//        }
+
+//sonrasý
+
+
+//  private string _barkod;
+//        public string Barkod
+//        {
+//            get
+//            {
+//                return _barkod;
+//            }
+//            set
+//            {
+//                bool kontrolIslemi = SanalDataBase.DbBarkodKontrol(value);
+//                if (!kontrolIslemi) // false ise deðeri sanaldatabase içinde bulamadým
+//                {
+//                    _barkod = value;
+//                }
+//                else
+//                {
+//                    Console.WriteLine("Sanal database içerisinde bu barkod daha önce girilmiþtir.");
+//                }
+
+//            }
+//        }
+
+//program.cs e gidelim
+
+//20. not bitiþ
+
+
+
+//*/
+
+
+----------------------------------
+
+
+
+//namespace Bolum_17_OOP_Kalitim
+//{
+//    public sealed class Bilgisayar160 : Urun160
+//    {
+
+//        public string Islemci { get; set; }
+//        public string Ram { get; set; }
+//        public string EkranKarti { get; set; }
+
+//    }
+//}
+
+
+///*
+ 
+//3. not bitiþ
+
+//4. not baslangýc
+
+//classi public yaptýk
+
+//bilgisayar urunu için prob yazalým
+
+//Urun class ýný miras verelim
+
+//Televizyon class ýna gidelim
+
+//4. not bitiþ
+
+//23. not bitiþ televizyondan geldik
+
+//24. not baþlangýc
+
+//öncesi
+ 
+ 
+//namespace Bolum_17_OOP_Kalitim
+//{
+//    public class Bilgisayar160 : Urun160
+//    {
+
+//        public string Islemci { get; set; }
+//        public string Ram { get; set; }
+//        public string EkranKarti { get; set; }
+
+//    }
+//}
+
+
+//sealed ekleyelim
+// sonrasý
+
+
+//namespace Bolum_17_OOP_Kalitim
+//{
+//    public sealed class Bilgisayar160 : Urun160
+//    {
+
+//        public string Islemci { get; set; }
+//        public string Ram { get; set; }
+//        public string EkranKarti { get; set; }
+
+//    }
+//}
+ 
+
+//program.cs e gidelim
+
+//24. not bitiþ
+
+
+ 
+//*/
+
+
+-----------------------------
+
+
+
+//using System.Collections;
+
+//namespace Bolum_17_OOP_Kalitim
+//{
+//    public static class SanalDataBase
+//    {
+
+//        //public static ArrayList db;
+
+//        //private static ArrayList db;
+        
+//        private static ArrayList db = new ArrayList();
+
+//        public static void YeniUrunEkle(BaseClass160 data)
+//        {
+//            if (data != null && !string.IsNullOrEmpty(data.Barkod))
+//            {
+//                db.Add(data);
+//            }
+//        }
+
+//        public static bool DbBarkodKontrol(string barkod)
+//        {
+
+//            bool kontrolIslemi = false;
+
+//            if(db != null && db.Count > 0)
+//            {
+//                for (int i = 0; i < db.Count; i++)
+//                {
+//                    BaseClass160 bc = (BaseClass160)db[i];
+//                    if (bc.Barkod == barkod)
+//                    {
+//                        kontrolIslemi = true;
+//                    }
+//                }
+//            }
+//            return kontrolIslemi;
+//        }
+
+
+//    }
+//}
+
+
+
+///*
+ 
+
+//12. not bitiþ
+
+//13. not baþlangýc
+ 
+//        public static ArrayList db;
+
+//böyle yaparak her yerden ulasýlabilen bir arraylis yaptýk
+
+//dýsarýdan eriþilsin ama set edilsin istemiyorum bunun için private yapmamýz lazým ve bir metot ile önce metota ulasýrýz sonrada ordan db e gideriz
+        
+//private static ArrayList db;
+ 
+ 
+//bir tane de metot olusturduk ve bunun içinde yapacagýmýz kontrol 
+//public dýsarýdan eriþilebilir olacak
+//static . ile nesne üzerinden eriþilebilir olacak
+//void geriye herhangi bir þey dönmeyeceðim
+//ismi de YeniUrunEkle olacak
+//YeniUrunEkle metodu sadece televizyon bilgisayar gibi ürün nesnesinden yada baseclass dan türemiþ nesneleri alsýn istiyorsam 
+//parametre olarak baseclass dersem bütün mimariyi kabul etmesini saðlarým ürün dersem üründen sonra türeyenleri kabul etmesini saðlarým
+//parametre olarak da (BaseClass160 data) alsýn
+
+//son durum
+
+//public static void YeniUrunEkle(BaseClass160 data)
+//        {
+
+//        }
+
+
+
+
+//eger db içerisinde benim eklemek istediðim barkod var ise ben arraylist in içerisine bunu eklemeyeceðim
+
+//bunuda bir encapsulation ile yapmak istiyorum 
+
+//barkodu emcapsulation da datamý filtreleyeceðim 
+
+//datanýn nul olup olmadýgýný kontrol edelim once ve datanýn içerisindeli barkod alaný null veya bos mu diye kontrol edelim
+
+//sonrada db.Add(data); ile db ye datayý ekleyelim.
+ 
+//  if (data != null && !string.IsNullOrEmpty(data.Barkod))
+//            {
+//                db.Add(data);
+//            }
+ 
+// program.cs e gidelim
+
+//13. not bitiþ
+
+//14. not bitiþ
+
+//son durum
+
+
+//using System.Collections;
+
+//namespace Bolum_17_OOP_Kalitim
+//{
+//    public static class SanalDataBase
+//    {
+
+//        //public static ArrayList db;
+//        private static ArrayList db;
+
+//        public static void YeniUrunEkle(BaseClass160 data)
+//        {
+//            if (data != null && !string.IsNullOrEmpty(data.Barkod))
+//            {
+//                db.Add(data);
+//            }
+//        }
+
+
+//    }
+//}
+
+
+//15. not baþlangýc
+
+//son durum 
+
+
+//using System.Collections;
+
+//namespace Bolum_17_OOP_Kalitim
+//{
+//    public static class SanalDataBase
+//    {
+
+//        //public static ArrayList db;
+
+//        //private static ArrayList db;
+        
+//        private static ArrayList db = new ArrayList();
+
+//        public static void YeniUrunEkle(BaseClass160 data)
+//        {
+//            if (data != null && !string.IsNullOrEmpty(data.Barkod))
+//            {
+//                db.Add(data);
+//            }
+//        }
+
+
+//    }
+//}
+
+//arraylist i new arraylist yaptýk sadece
+ 
+//program.cs e gidelim
+
+//15. not bitiþ
+
+//18. not bitiþ baseclass dan geldik
+
+//19. not baþlanýgýç
+
+//bir metot olusturmamýz lazým guncelleme olmadan ki kodlar
+
+
+//using System.Collections;
+
+//namespace Bolum_17_OOP_Kalitim
+//{
+//    public static class SanalDataBase
+//    {
+
+//        //public static ArrayList db;
+
+//        //private static ArrayList db;
+        
+//        private static ArrayList db = new ArrayList();
+
+//        public static void YeniUrunEkle(BaseClass160 data)
+//        {
+//            if (data != null && !string.IsNullOrEmpty(data.Barkod))
+//            {
+//                db.Add(data);
+//            }
+//        }
+
+
+//    }
+//}
+
+//--------------------------------
+
+//güncelleme sonrasý
+
+//public static bool DbBarkodKontrol(string barkod)
+//        {
+//            if(db != null && db.Count > 0)
+//            {
+//                for (int i = 0; i < db.Count; i++)
+//                {
+//                    if (db[i].)
+//                    {
+
+//                    }
+//                }
+//            }
+//        }
+
+//yukarýdaki gibi yazýnca i. yazýnca içine ulasamadýk cunku birisi object arraylist object alýr digeri baseclass tipleri tutmadý
+//bundana dolayý once tiplerini eþitlemek lazým unboxing yapacagýz
+
+
+//public static bool DbBarkodKontrol(string barkod)
+//        {
+
+//            bool kontrolIslemi = false;
+
+//            if(db != null && db.Count > 0)
+//            {
+//                for (int i = 0; i < db.Count; i++)
+//                {
+//                    BaseClass160 bc = (BaseClass160)db[i];
+//                    if (bc.Barkod == barkod)
+//                    {
+//                        kontrolIslemi = true;
+//                    }
+//                }
+//            }
+//            return kontrolIslemi;
+//        }
+
+//baseclass a gidelim
+
+//19. not bitiþ
+
+ 
+//*/
+
+
+-------------------------------------
+
+
+
+//namespace Bolum_17_OOP_Kalitim
+//{
+//    public sealed class Televizyon160 : Urun160
+//    {
+
+//        public bool SmartTvMi { get; set; }
+//        public bool HDMIVarMi { get; set; }
+//        public string EkranBoyutu { get; set; }
+
+//    }
+//}
+
+
+
+///*
+ 
+//4. not bitiþ
+ 
+//5. not baslangýc
+
+//gerekli problarý ekleyelim
+
+//Urun class ýný miras verelim
+ 
+//Ödev uygulamasýndaki ilk soru 
+
+//ben televizyon ve bilgisayar nesnelerimi urun nesnesinden kalýtmak istiyorum kalýttýgým zaman aslýnda genel olarak kalýtým semasý nasý olur
+
+//program.cs calýsýr 
+//hangisi new lendiyse ona göre iþlenir 
+//mesela urun new lendiyse
+//urunden base e gider sonra urune gider
+
+//televizyon new lendiyse miras urunse
+//televizyondan urune urunden base e base den urune urunden televizyona sonra program.cs e 
+
+//yukarýdaki sema bilgisayar içinde gecerli
+
+//Program.cs e gidelim
+
+//5. not bitiþ 
+
+//22. not bitiþ program.cs den geldik
+
+//23. not baslangýç
+
+//öncesi
+
+
+//namespace Bolum_17_OOP_Kalitim
+//{
+//    public class Televizyon160 : Urun160
+//    {
+
+//        public bool SmartTvMi { get; set; }
+//        public bool HDMIVarMi { get; set; }
+//        public string EkranBoyutu { get; set; }
+
+//    }
+//}
+
+
+//sealed ekleyelim sonrasý
+
+
+//namespace Bolum_17_OOP_Kalitim
+//{
+//    public sealed class Televizyon160 : Urun160
+//    {
+
+//        public bool SmartTvMi { get; set; }
+//        public bool HDMIVarMi { get; set; }
+//        public string EkranBoyutu { get; set; }
+
+//    }
+//}
+
+//bilgisayar classýna gidelim
+
+//23. not bitiþ 
+
+ 
+ 
+//*/
+
+
+-------------------------------------------------------
+
+
+
+//using System;
+
+//namespace Bolum_17_OOP_Kalitim
+//{
+//    public class Urun160 : BaseClass160
+//    {
+
+//        private decimal _alisFiyat;
+//        private decimal _satisFiyat;
+//        private decimal _kampanyaFiyat;
+
+//        public string Marka { get; set; }
+//        public string Model { get; set; }
+
+//        public decimal AlisFiyat
+//        {
+//            get
+//            {
+//                return _alisFiyat;
+//            }
+//            set
+//            {
+//                if (value <= 0)
+//                {
+//                    Console.WriteLine("Alýþ Fiyatý sýfýrdan küçük veya eþit olamaz.");
+//                }
+//                else
+//                {
+//                    _alisFiyat = value;
+//                }
+
+//            }
+//        }
+//        public decimal SatisFiyat
+//        {
+//            get
+//            {
+//                return _satisFiyat;
+//            }
+//            set
+//            {
+//                if (value < _alisFiyat)
+//                {
+//                    Console.WriteLine("Satýþ Fiyatý Alýþ Fiyatýndan küçük olamaz.");
+//                }
+//                else
+//                {
+//                    _satisFiyat = value;
+//                }
+//            }
+//        }
+//        public decimal KampanyaFiyat
+//        {
+//            get
+//            {
+//                return _kampanyaFiyat;
+//            }
+//            set
+//            {
+//                if (value <= 0)
+//                {
+//                    Console.WriteLine("Kampanya Fiyatý sýfýrdan küçük veya eþit olamaz.");
+//                }
+//                else
+//                {
+//                    _kampanyaFiyat = value;
+//                }
+//            }
+//        }
+
+
+//    }
+//}
+
+
+///*
+ 
+//2. not bitiþ
+ 
+//3. not baslangýc
+
+//BaseClass dan miras alacak
+ 
+//gerekli problarý yazdýk
+
+//Marka kýsmýnda bir kontrol olacak
+//bir liste içerisinde marka kontrolu yapacagýz
+//belirtiðimiz markalarýn dýsýnda bir ürün satamayacak
+//buradan encapsulation dogru ilerliyoruz
+
+//AlisFiyat 0 dan kucuk olmamalý
+//SatisFiyat AlisFiyat dan kucuk olmamalý
+//KampanyaFiyat 0 dan kucuk olamaz
+ 
+//Televizyon ve bilgisayar adýnda class lar acalým
+
+//3. not bitiþ
+
+//10. not bitiþ
+
+//11. not baslangýc
+
+//---------------------------------------------------------
+//2. ÝSTEK 
+//ALIS FÝYATI 0 DAN KUCUK OLAMAZ 
+//KAMPANYA 0 DAN KUCUK OLAMAZ
+//SATIS FÝYAT ALIS FÝYATTAN KUCUK OLAMAZ
+//---------------------------------------------------------
+
+//önceki hali 
+
+//public class Urun160 : BaseClass160
+//    {
+
+//        public string Marka { get; set; }
+//        public string Model { get; set; }
+
+//        public decimal AlisFiyat { get; set; }
+//        public decimal SatisFiyat { get; set; }
+//        public decimal KampanyaFiyat { get; set; }
+
+
+//    }
+
+//buradaki kapsullemeyi yapmamýz gerek
+
+//önce hepsinin private field alanlarýný olusturmamýz lazým
+//sonra problarda 
+//get bloklarýnda sadece veriyi return edeceðiz
+//set bloklarýnda istediklerimizi kodlayalým
+
+//son durum
+ 
+//public class Urun160 : BaseClass160
+//    {
+
+//        private decimal _alisFiyat;
+//        private decimal _satisFiyat;
+//        private decimal _kampanyaFiyat;
+
+//        public string Marka { get; set; }
+//        public string Model { get; set; }
+
+//        public decimal AlisFiyat
+//        {
+//            get
+//            {
+//                return _alisFiyat;
+//            }
+//            set
+//            {
+//                if (value <= 0)
+//                {
+//                    Console.WriteLine("Alýþ Fiyatý sýfýrdan küçük veya eþit olamaz.");
+//                }
+//                else
+//                {
+//                    _alisFiyat = value;
+//                }
+
+//            }
+//        }
+//        public decimal SatisFiyat
+//        {
+//            get
+//            {
+//                return _satisFiyat;
+//            }
+//            set
+//            {
+//                if (value < _alisFiyat)
+//                {
+//                    Console.WriteLine("Satýþ Fiyatý Alýþ Fiyatýndan küçük olamaz.");
+//                }
+//                else
+//                {
+//                    _satisFiyat = value;
+//                }
+//            }
+//        }
+//        public decimal KampanyaFiyat
+//        {
+//            get
+//            {
+//                return _kampanyaFiyat;
+//            }
+//            set
+//            {
+//                if (value <= 0)
+//                {
+//                    Console.WriteLine("Kampanya Fiyatý sýfýrdan küçük veya eþit olamaz.");
+//                }
+//                else
+//                {
+//                    _kampanyaFiyat = value;
+//                }
+//            }
+//        }
+
+
+//    }
+
+// program.cs e gidelim
+
+//11. not bitiþ
+
+//*/
+
+
+
+
