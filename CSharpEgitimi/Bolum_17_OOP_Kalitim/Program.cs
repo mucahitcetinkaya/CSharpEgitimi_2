@@ -1138,8 +1138,7 @@ namespace Bolum_17_OOP_Kalitim
 
                 /*
                  
-                 burdan önce hoca videolar da güncellemeye gitmiş videoların sırası kaymıs karısıklık olabilir fakat yeni sıraya göre gitme kararı aldım.
-                 ne yazıyorsa ona göre gitmek daha mantıklı sonra daha da karısma ihtimali var
+                 burdan önce hoca videolar da güncellemeye gitmiş videoların sırası kaymıs karısıklık olabilir bendeki sıraya göre gitme kararı aldım.
                  
                  */
                 
