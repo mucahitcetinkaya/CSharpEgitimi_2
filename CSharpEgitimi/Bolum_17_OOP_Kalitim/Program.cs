@@ -897,7 +897,7 @@ namespace Bolum_17_OOP_Kalitim
 
         //    ---------------------------------------------------------
         //    5. not baslangıc Televizyon nesnesine denk geldi soru 
-            
+
         //    Ödev uygulamasındaki
 
         //    1.soru
@@ -960,7 +960,7 @@ namespace Bolum_17_OOP_Kalitim
         //    bunun notları için baseclass a gidelim
 
         //    8. not bitiş
-            
+
         //    9. not bitiş
 
         //    10. not baslangıc
@@ -986,7 +986,7 @@ namespace Bolum_17_OOP_Kalitim
         //    bu problar nerde ona bakmak lazım once bakınca hepsinin Urun160.cs de oldugunu görduk o zaman işlemlere orda devam etmemiz gerek
 
         //    10. not bitiş
-            
+
         //    11. not bitiş
 
         //    12. not başlangıc
@@ -1009,9 +1009,9 @@ namespace Bolum_17_OOP_Kalitim
         //    sanaldatabase160 class ını acalım ve static yapalım 
 
         //    12. not bitiş
-            
+
         //    13. not bitiş
-            
+
         //    14. not başlangıc
 
         //    SanalDataBase.YeniUrunEkle(B1);
@@ -1030,7 +1030,7 @@ namespace Bolum_17_OOP_Kalitim
         //    16. not bitiş
 
         //    17. not başlangıc
-            
+
         //    ----------------------------------------
 
         //    3. soru
@@ -1044,13 +1044,13 @@ namespace Bolum_17_OOP_Kalitim
         //    olusturmus oldugumuz static içerisinde arraylist imiz vardı onun içerisindeki elemanlarda dönüp barkodu kontrol ettireceğiz barkodu bulursak işlem yapmayacagız bulamazsak işlem yapacagız
 
         //    BaseClass160 a gidelim barkod prob unu guncelleyelim
-            
+
         //    17. not bitiş
 
         //    20. not bitiş baseclassdan geldik
 
         //    21. not başlangıç
-            
+
         //    SanalDataBase.YeniUrunEkle(B1); yeni urun ekledik aynı üründen bir tane daha alalım
 
         //    b1 deki barkod 1234567890
@@ -1127,6 +1127,22 @@ namespace Bolum_17_OOP_Kalitim
         //    SanalDataBase.YeniUrunEkle(B2);
 
 
+        //}
+
+        #endregion
+
+        #region VİDEO SIRALARIN DEĞİŞME NOKTASI
+
+        //static void Main(string[] args)
+        //{
+
+                /*
+                 
+                 burdan önce hoca videolar da güncellemeye gitmiş videoların sırası kaymıs karısıklık olabilir fakat yeni sıraya göre gitme kararı aldım.
+                 ne yazıyorsa ona göre gitmek daha mantıklı sonra daha da karısma ihtimali var
+                 
+                 */
+                
         //}
 
         #endregion
