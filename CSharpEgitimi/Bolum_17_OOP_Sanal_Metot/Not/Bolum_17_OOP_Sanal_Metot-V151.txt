@@ -1,0 +1,41 @@
+
+
+Bölüm 17 : OOP - Sanal Metot
+Video 151 Nesne yönelimli programlama dünyasýnda sanal metot nedir ?
+
+        #region VÝDEO 151 Nesne yönelimli programlama dünyasýnda sanal metot nedir ?
+
+        static void Main(string[] args)
+        {
+            /*
+
+            Bolum 17 OOP Sanal Metot V151 Nesne yönelimli programlama dünyasýnda sanal metot nedir ?
+            Çok Biçimlilik Sanal Metot Kullanýmý
+
+            Bir önceki bölümde kalýtým konusunu inceledik bunla alakalý aslýnda diðer bolumleri de kapsayan bir uygulama yapmýþtýk.
+
+            Þimdi çok biçimlilik konusunda sanal metot nedir ve polimorphszm içerisinde sanal metot nasý kullanýlýr kýsmýný incelemeye çalýþacagýz
+
+            Sanal Metotlar
+
+            Bir önceki bölüm içerisinde kalýtým konusunu inceledik. Hatýrlarsanýz kalýtým içerisinde kalýtýlan sýnýf kendisini kalýtan sýnýfa içerisindeki private metotlar haricinde bulunan tüm metotlarý kullaným izni sunmaktaydý.
+
+            Örnek olarak baseClass adýnda bulunan sýnýfýmýzý urun sýnýfý kalýttýðý zaman baseClass içerisinde bulunan metotlara ve özelliklere eriþebiliyor baseClass içerisindeki tanýmlarý gibi kullanabiliyordu.
+
+            BaseClass içerisinde ekrana yaz adýnda bir metot olsa urun sýnýfý içerisinde ekrana yaz metotu çaðrýldýðý zaman baseClass içerisinde bulunan þekli ile çalýþýp metot iþlemini tamamlayabiliyordu.
+
+            Sanal metot dediðimiz bu bölümümüz de baseclass içerisinde bulunan bir metotun istenilirse türeyen sýnýf içerisinde nasýl yeniden þekillenebileceðini inceleyeceðiz.
+
+            Kalýtým konusunda tüm nesnelerin object nesnesinden kalýtýldýðýný ve bazý metotlarýn object nesnesinden bize geldiðini söylemiþtik.
+
+            Birazdan sanal metot anlatýmýna object içerisinde bize standart olarak gelen tostring metotunu inceleyerek baþlayacagýz
+
+            Sanal metotlarý X-men filminde bulunan mystique karakterine benzetebilirsiniz.
+
+            Ortama göre kendi þeklini deðiþtirebilen bir karakter olmasý buna örnek olabilir.
+
+            */
+
+        }
+
+        #endregion
