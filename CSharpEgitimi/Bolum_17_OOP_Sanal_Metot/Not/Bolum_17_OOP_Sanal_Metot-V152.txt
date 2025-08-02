@@ -1,0 +1,228 @@
+
+
+Bölüm 17 : OOP - Sanal Metot
+Video 152 object nesnesinden gelen ToString metotunu inceleyelim.
+
+#region VÝDEO 152 object nesnesinden gelen ToString metotunu inceleyelim.
+
+        static void Main(string[] args)
+        {
+            /*
+
+            Bolum 17 OOP Sanal Metot V152 object nesnesinden gelen ToString metotunu inceleyelim.
+
+            */
+
+            /*
+            
+            1. not baþlangýç
+
+            þimdi tostring metotu ile sanal metotlarý tanýmaya baslayalým
+
+            kalýtým da bütün nesnelerin object ten türediðini söylemiþtik
+
+            object ten gelen de bazý metotlarýn oldugunu soylemýstýk mesela ToString() gibi
+            calýsmasýndan bahsedelim sonrada debug edecegýz
+
+            nesnelerimizi ornekledýgýmýz zaman yaný
+            Musteri M = new Musteri();
+            beným musteri nesnem object nesnesýnden kalýtýyor ve olusuyor
+            nesne olustugunda da object ile birlikte bazý metotlar ile birlikte geliyordu
+            hiç biþey olusturmadan sadece new ledýgýmýzde 
+            M. dedýgýmýzde karsýmýza cýkan metotlar bunlar
+            M.ToString(); gibi yaný musteri nesnesinde olmayan bir metoda erýsmýs oluyordum objectin içerisinden bana kalýtým yoluyla geliyordu
+
+            tostring metotunun kendýne ozgu bir calýsma seklý var
+            cagýrdýgýmýz da cagrýlan class ýn namespace ve adýný geriye döner 
+            Bolum_17_OOP_Sanal_Metot.Musteri gibi
+            bu .net framework içerisinde standart kullaným þekli
+            m.tostring dedýgýmde namespace ve class adýný geriye doner
+            string olarak doner konsola yazdýrabiliriz
+
+            object nesnesine gelen bu tostring metodu sanal bir metot yaný ben bu metodun body sini degistirebilirim
+            namespace.musteri olarak gelme de beným yazdýgým koda göre gel diyebiliriz
+
+            buda tam olarak sanal metotun acýklamasý oluyor
+
+            musteri nesnesi olusturalým nesnemizi ornekleyip cagýralým namespace.class adýný geldýgýný gorelým ve nasý degistiririz onu görelým
+
+            Musteri classýna gidelim
+
+            1. not bitiþ
+            
+            2. not bitiþ
+
+            3. not baþlangýç
+
+            3 adet prob ekledik musteriye þimdi new leyelim
+            V152Musteri M1 = new V152Musteri();
+            M1. dedigimiz de içeriye eklediðimiz 3 adet prob ve ek olarak farklý sýnýf lar geldi bunlar object metotunun içerisinden geldi
+            //M1.Equals
+            //M1.GetHashCode
+            //M1.GetType
+            //M1.ToString
+            //M1.musteriID
+            //M1.isim
+            //M1.soyisim
+
+            tostring için bakalým
+
+            m1.tostring dedik bunu string üzerine aldýk => string toStringMesaj = M1.ToString();
+
+            sonrada cýkan degeri konsola yazdýrdýk => Console.WriteLine("toStringMesaj : " + toStringMesaj);
+
+            kosola ne gelmesi lazým ? namespace.class adý gelmesi lazým
+
+            console.writeline a breakpoint koy calýstýr
+
+            çýktýsý
+
+            toStringMesaj : Bolum_17_OOP_Sanal_Metot.V152Musteri
+
+            bu sanal metotlarýn ana davrasýný oluyor bunlarýn body sini degistirmekten bahsettik
+
+            musteri class ýna gidip tostring metotunu degistirelim
+
+            3. not bitiþ
+
+            4. not bitiþ
+
+            5. not baslangýc
+
+            override etmeden once debug yaparken tostring in içine f11 ile gidemedik sanal metot cunku
+            musteri class ýnýn ýcýnde bunu guncelledýk buraya geldik tekrar debug yapalým bakalým ne olacak
+            isim soyisim yaptýgýmýz için birde atama yapalým bos gelmesin
+            calýstýrýnca f11 ile devam edince musteri class ýna gönderiyor ve override ettýgýmýz yere dusuyor kod 
+            
+            override ettýgým gibi calýsýyor kendý calýsma mantýgý olarak calýsmýyor 
+
+            ders bitti diger derste kendýmýz sanal metot olusturalým kalýtmýs oldugumuz nesnemizin içerisinde nasý kullanýrýz bunlara bakalým
+             
+            */
+
+            // 3. not
+
+            V152Musteri M1 = new V152Musteri();
+            M1.isim = "Mücahit";
+            M1.soyisim = "Çetinkaya";
+            string toStringMesaj = M1.ToString();
+
+
+            Console.WriteLine("toStringMesaj : " + toStringMesaj);
+
+
+        }
+
+        #endregion
+
+
+
+        -------------------------------
+
+
+
+        
+namespace Bolum_17_OOP_Sanal_Metot
+{
+    public class V152Musteri
+    {
+        public int musteriID { get; set; }
+        public string isim { get; set; }
+        public string soyisim { get; set; }
+
+
+        //public override string ToString()
+        //{
+        //    return base.ToString();
+        //}
+
+        public override string ToString()
+        {
+            return isim + " " + soyisim;
+        }
+
+
+    }
+}
+
+
+/*
+ 
+1.not bitiþ program.cs den geldik
+
+2. not baslangýc
+
+public yapcaz
+ 
+normal sartlarda kalýtým yaparken : yazýp ne kalýtým yapacaksak onu yazýyorduk
+:Object yazmaya gerek yok zaten Framework tüm nesneleri object ten türetiyor
+zaten eðitimin basýnda boxing ve unboxing konularýný hatýrlarsanýz eðer
+biz bütün nesnelerimizi object in içerisine sýgdýrabiliyorduk buna boxing diyoduk
+object ten geri almaya da unboxing diyoduk
+
+yani ben musteri nesnesini ornekledýgýmde arka tarafta 
+object ten musterýyi alýp sunuyorum
+
+prob ekleyelim
+
+3 adet prob ekledik
+
+ public int musteriID { get; set; }
+        public string isim { get; set; }
+        public string soyisim { get; set; }
+
+baska bir þey yok class da 
+
+program.cs e geri donelim ve new leyelim
+
+2. not bitiþ
+
+3. not bitiþ
+
+4. not baþlangýc program.cs den geldik
+
+tostring metodununu guncellememýz lazým
+
+override adýnda bir anahtar kelimem var     
+
+bu anahtar kelimesini kullandýgýnýz da kullandýgýmýz class türemiþ oldugu class ýn içerisindeki tüm sanal metotlarý karsýmýza getirir
+
+beným bu class ým object nesnesinden türediði için object nesnesinin sanal metotlarýný getiriyor
+
+yani musteri içinde override yazarsan eðer tooltype olarak musteri nesnesi de objectten türediðinden object nesnesinin sanal metotlarýný getiriyor
+
+override diyip duzeltmek istediðiniz metodu secinde imzasý olarak gelir
+
+ public override string ToString()
+        {
+            return base.ToString();
+        }
+
+publicmis heryere acýk override zaten anahtar kelime
+geriye string donuyor adý da tostring
+
+return base. dedýgý kýsým base object i gösteriyor
+
+nerede cagrýldýgýysa bu bir onceki kalýtýldýgý class ý gösterir
+musteri object ten geldýgý için object i gösteriyor
+
+mesela return kýsmýný degistirelim
+
+ public override string ToString()
+        {
+            return isim + " " + soyisim;
+        }
+
+ne zaman tostring i cagýrýrsam bana isim soyisim dönsun dedim
+
+en basta debug ederken f11 ile gitmeye calýsýgýmýz da gitmiyordu 
+þimdi override ettýgýmýz için f11 e basýnca object içindeki tostring calýsmaz da musteri içindeki tostring calýsýr
+
+sanal metota mudahale edýnce mudahale ettýgýmýz kýsým calýsýyor
+
+program.cs e gidelim debug edelim
+
+4. not bitiþ
+
+
+*/
