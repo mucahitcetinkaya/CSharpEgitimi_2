@@ -175,7 +175,7 @@ namespace Bolum_17_OOP_Sanal_Metot
         //    */
 
         //    /*
-             
+
         //    1. not başlangıç
 
         //    baseClass adında bir class olusturalım
@@ -192,7 +192,7 @@ namespace Bolum_17_OOP_Sanal_Metot
 
         //    V153Urun U1 = new V153Urun();
         //    U1.EkranaYaz("urun nesnesınden bu metot cagrıldı");
-            
+
         //    urun de baseclass ı miras verdik
         //    urunden baseclass daki metotu cagırdık
 
@@ -204,7 +204,7 @@ namespace Bolum_17_OOP_Sanal_Metot
         //    V153Urun U1 = new V153Urun(); e breakpoint koyalım ve debug yapalım sırayla urunden baseclass a gittiğimizi gorelim baseclass dan cagırınca da aynı metot calıstı
 
         //    bu benim kalıtımın standart calısma seklı biz ozellık kazandırmak istiyoruz 
-            
+
         //    biz baseclass içindeki metodu ellemezsek oldugu gibi calıssın ama modifiye edersek hiç base class a gitmesin ururn nesnesınden modifiye ettıgımız sekılde calıssın
 
         //    baseclass daki metotu sanal metot olarak olusturalım
@@ -243,6 +243,72 @@ namespace Bolum_17_OOP_Sanal_Metot
 
         #endregion
 
+        #region VİDEO 154 Sanal metot oluşturmak ve kullanmak - 2
+
+        //static void Main(string[] args)
+        //{
+        //    /*
+
+        //    Bolum 17 OOP Sanal Metot V154 Sanal metot oluşturmak ve kullanmak - 2
+
+        //    */
+
+        //    /*
+
+        //    1. not başlangıç
+
+        //    V154Urun U1 = new V154Urun(); e breakpoint koyarak debug yapacagız
+
+        //    kalıtım içerisinde urun nesnesı orneklenırken baseclass ı ornekleyecek ve urun nesnesınden bır ornek almıs oldugumuz ıcın overrıde edılen ekranayaz metotu urunun altındakı ekranayaz metotu calısacak
+
+        //    baseclass hiç bir yerden standart bir ornek alamadıgı ıcın dırek olarak obkect nesnesınden orneklendıgı ıcın baseclass ın ıcındekı halı gıbı calısmaya devam edecek 
+
+        //    ----------------------
+        //    kendı notum
+        //    yani türkçesi diyorki 
+        //    U1 calısırken urune gidecek urun basecalss ı miras almıs ama override oldugu için içinde urunun altındaki metot calısır baseclass ı ezer
+        //    B1 calısırken zaten baseclass a gidecek herhangi bir override yok kendısı oldugu gibi calısır 
+
+        //    aynı metot ama override ve virtual ile farklı yerlerden cagırıp farklı ıslemler yaptırıyorsun
+        //    ----------------------
+
+        //    breakpoint koyarak debug yapalım 
+
+        //    u1 deyız u1 in ustune gelince tostring den namespace adını gösterir
+        //    u1 baseclass dan miras aldı ama override oldugu için urunun altındaki ekranayaz calıstı
+        //    b1 e gidince de baseclass a gider virtual var orda zaten kendınden turetilmiş ana class zaten direk o calısır
+
+        //    bir ust class daha olusturalım bakalım ne olacak
+
+        //    televizyon class ını olusturalım 
+
+        //    1. not bititş
+
+        //    2. not bitiş televizyondan geldik
+
+        //    3. not baslangıc
+
+        //    televizyonu ornekleyıp bakalım hangisi calısacak
+
+
+
+        //    */
+
+
+        //    V154Televizyon T1 = new V154Televizyon();
+        //    T1.EkranaYaz("HANGİSİ");
+
+        //    V154Urun U1 = new V154Urun();
+        //    U1.EkranaYaz("merhaba");
+
+
+        //    V154BaseClass B1 = new V154BaseClass();
+        //    B1.EkranaYaz("merhaba");
+
+
+        //}
+
+        #endregion
 
     }
 }

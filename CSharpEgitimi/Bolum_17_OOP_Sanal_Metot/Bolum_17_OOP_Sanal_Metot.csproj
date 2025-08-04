@@ -48,11 +48,15 @@
     <Compile Include="V152Musteri.cs" />
     <Compile Include="V153BaseClass.cs" />
     <Compile Include="V153Urun.cs" />
+    <Compile Include="V154BaseClass.cs" />
+    <Compile Include="V154Televizyon.cs" />
+    <Compile Include="V154Urun.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Not\Bolum_17_OOP_Sanal_Metot-V154.txt" />
     <Content Include="Not\Bolum_17_OOP_Sanal_Metot-V153.txt" />
     <Content Include="Not\Bolum_17_OOP_Sanal_Metot-V152.txt" />
     <Content Include="Not\Bolum_17_OOP_Sanal_Metot-V151.txt" />

@@ -1,0 +1,153 @@
+
+
+Bölüm 17 : OOP - Sanal Metot
+Video 154 Sanal metot oluþturmak ve kullanmak - 2
+
+        #region VÝDEO 154 Sanal metot oluþturmak ve kullanmak - 2
+
+        static void Main(string[] args)
+        {
+            /*
+
+            Bolum 17 OOP Sanal Metot V154 Sanal metot oluþturmak ve kullanmak - 2
+
+            */
+
+            /*
+
+            1. not baþlangýç
+
+            V154Urun U1 = new V154Urun(); e breakpoint koyarak debug yapacagýz
+
+            kalýtým içerisinde urun nesnesý orneklenýrken baseclass ý ornekleyecek ve urun nesnesýnden býr ornek almýs oldugumuz ýcýn overrýde edýlen ekranayaz metotu urunun altýndaký ekranayaz metotu calýsacak
+
+            baseclass hiç bir yerden standart bir ornek alamadýgý ýcýn dýrek olarak obkect nesnesýnden orneklendýgý ýcýn baseclass ýn ýcýndeký halý gýbý calýsmaya devam edecek 
+
+            ----------------------
+            kendý notum
+            yani türkçesi diyorki 
+            U1 calýsýrken urune gidecek urun basecalss ý miras almýs ama override oldugu için içinde urunun altýndaki metot calýsýr baseclass ý ezer
+            B1 calýsýrken zaten baseclass a gidecek herhangi bir override yok kendýsý oldugu gibi calýsýr 
+
+            ayný metot ama override ve virtual ile farklý yerlerden cagýrýp farklý ýslemler yaptýrýyorsun
+            ----------------------
+
+            breakpoint koyarak debug yapalým 
+
+            u1 deyýz u1 in ustune gelince tostring den namespace adýný gösterir
+            u1 baseclass dan miras aldý ama override oldugu için urunun altýndaki ekranayaz calýstý
+            b1 e gidince de baseclass a gider virtual var orda zaten kendýnden turetilmiþ ana class zaten direk o calýsýr
+
+            bir ust class daha olusturalým bakalým ne olacak
+
+            televizyon class ýný olusturalým 
+
+            1. not bititþ
+
+            2. not bitiþ televizyondan geldik
+
+            3. not baslangýc
+
+            televizyonu ornekleyýp bakalým hangisi calýsacak
+
+
+
+            */
+
+
+            V154Televizyon T1 = new V154Televizyon();
+            T1.EkranaYaz("HANGÝSÝ");
+
+            V154Urun U1 = new V154Urun();
+            U1.EkranaYaz("merhaba");
+
+
+            V154BaseClass B1 = new V154BaseClass();
+            B1.EkranaYaz("merhaba");
+
+
+        }
+
+        #endregion
+
+
+        ----------------------------------------------------------------
+namespace Bolum_17_OOP_Sanal_Metot
+{
+    public class V154Televizyon : V154Urun
+    {
+
+    }
+}
+
+/*
+ 
+
+1.not bitiþ program.cs den geldik
+
+2. not baslangýc
+
+class ý actým ve urunu miras verdim
+
+program.cs e gidelim
+
+2. not bitiþ
+
+ 
+ */
+        ----------------------------------------------------------------
+using System;
+
+namespace Bolum_17_OOP_Sanal_Metot
+{
+    public class V154Urun : V154BaseClass
+    {
+
+        //public override void EkranaYaz(string data)
+        //{
+        //    base.EkranaYaz(data);
+        //}
+
+        public override void EkranaYaz(string data)
+        {
+            Console.WriteLine("urun => " + data);
+        }
+
+
+
+    }
+}
+
+/*
+
+
+
+
+*/
+        ----------------------------------------------------------------
+using System;
+
+namespace Bolum_17_OOP_Sanal_Metot
+{
+    public class V154BaseClass
+    {
+        //public void EkranaYaz(string data)
+        //{
+        //    Console.WriteLine(data);
+        //}
+
+        public virtual void EkranaYaz(string data)
+        {
+            Console.WriteLine(data);
+        }
+
+
+    }
+}
+
+/*
+ 
+ 
+ 
+ 
+*/
