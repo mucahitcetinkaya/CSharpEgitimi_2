@@ -1,0 +1,254 @@
+
+
+Bölüm 17 : OOP - Sanal Metot
+Video 153 Sanal metot oluþturmak ve kullanmak - 1
+
+
+  #region VÝDEO 153 Sanal metot oluþturmak ve kullanmak - 1
+
+        static void Main(string[] args)
+        {
+            /*
+
+            Bolum 17 OOP Sanal Metot V153 Sanal metot oluþturmak ve kullanmak - 1
+
+            */
+
+            /*
+             
+            1. not baþlangýç
+
+            baseClass adýnda bir class olusturalým
+
+            BaseClass a gidelim
+
+            1. not bitiþ
+
+            3. not bitiþ urun class ýndan geldik
+
+            4. not baslangýc
+
+            oncelýkle urun nesnesini new leyelým
+
+            V153Urun U1 = new V153Urun();
+            U1.EkranaYaz("urun nesnesýnden bu metot cagrýldý");
+            
+            urun de baseclass ý miras verdik
+            urunden baseclass daki metotu cagýrdýk
+
+            birde ayný metodu baseclass dan cagýralým
+
+            V153BaseClass B1 = new V153BaseClass();
+            U1.EkranaYaz("BaseClass nesnesýnden bu metot cagrýldý");
+
+            V153Urun U1 = new V153Urun(); e breakpoint koyalým ve debug yapalým sýrayla urunden baseclass a gittiðimizi gorelim baseclass dan cagýrýnca da ayný metot calýstý
+
+            bu benim kalýtýmýn standart calýsma seklý biz ozellýk kazandýrmak istiyoruz 
+            
+            biz baseclass içindeki metodu ellemezsek oldugu gibi calýssýn ama modifiye edersek hiç base class a gitmesin ururn nesnesýnden modifiye ettýgýmýz sekýlde calýssýn
+
+            baseclass daki metotu sanal metot olarak olusturalým
+
+            baseclass a gidelim
+
+            4. not bitiþ
+
+            6. not bitiþ baseclass dan geldik
+
+            7. not baslangýc
+
+            V153Urun U1 = new V153Urun(); e breakpoint koyalým debug yapalým
+
+
+
+
+             
+            */
+
+
+            //V153Urun U1 = new V153Urun();
+            //U1.EkranaYaz("urun nesnesýnden bu metot cagrýldý");
+
+
+            //V153BaseClass B1 = new V153BaseClass();
+            //U1.EkranaYaz("BaseClass nesnesýnden bu metot cagrýldý");
+
+            // 7. not
+            V153Urun U1 = new V153Urun();
+            U1.EkranaYaz("merhaba");
+
+
+            V153BaseClass B1 = new V153BaseClass();
+            U1.EkranaYaz("merhaba");
+
+
+        }
+
+        #endregion
+
+        ------------------------------------------------------------
+        
+
+using System;
+
+namespace Bolum_17_OOP_Sanal_Metot
+{
+    public class V153BaseClass
+    {
+        //public void EkranaYaz(string data)
+        //{
+        //    Console.WriteLine(data);
+        //}
+
+        public virtual void EkranaYaz(string data)
+        {
+            Console.WriteLine(data);
+        }
+
+
+    }
+}
+
+/*
+ 
+1.not bitiþ program.cs den geldik
+
+2. not baslangýç
+
+public yap class ý
+
+sanal olmayan bir metot olusturalým EkranaYaz()
+public void EkranaYaz(string data)
+        {
+            Console.WriteLine(data);
+        }
+
+dýsa acýk public
+geriye deger donmeyen void
+parametreli string data
+ekrana aldýgý datayý yazdýracak console.writeline(data)
+class ý ornekleyýp kullanabileceksin
+
+yeni bir class olusturalým Urun
+
+2. not bitiþ
+
+4. not bitiþ program.cs den geldik
+
+5. not baslangýc
+
+sanal metodu guncellemek için eriþim belirleyicisinden sonra publicten sonra virtual yapmamýz lazým
+ilk hali
+
+public void EkranaYaz(string data) => metodun imzasý burasý
+        {
+            Console.WriteLine(data); => metotun body si burasý scop arasý
+        }
+
+sonraki hali
+
+
+public virtual void EkranaYaz(string data) => metodun imzasý burasý
+        {
+            Console.WriteLine(data); => metotun body si burasý scop arasý
+        }
+
+virtual kullandýktan sonra metot sanal bir metot olur 
+
+sanal metotu hiç ellemezsen baseclass için de oldugu gibi calýsýr override ile türemiþ sýnýfýn türetilmiþ sýnýfýn metotlarýna dokunursak 
+türemiþ olan sýnýf türetilmiþ olan sýnýfýn sanal metodunu ezer ve kendi içindeki metodu kullanýr
+
+urun class ýna gidelim
+
+5. not bitiþ
+ 
+*/
+        ------------------------------------------------------------  
+
+        
+using System;
+
+namespace Bolum_17_OOP_Sanal_Metot
+{
+    public class V153Urun : V153BaseClass
+    {
+
+        //public override void EkranaYaz(string data)
+        //{
+        //    base.EkranaYaz(data);
+        //}
+
+        public override void EkranaYaz(string data)
+        {
+            Console.WriteLine("urun => " + data);
+        }
+
+
+
+    }
+}
+
+/*
+ 
+2. not bitiþ BaseClass dan geldik
+
+3. not baþlangýc
+
+public yap
+ 
+bunu baseclass dan kalýtým yapacagýz içeride herhangi bir iþlem yapmamýza gerek yok
+
+urun uzerýnden baseclass daki ekrana yaz metoduna ulasabilecegýz
+
+program.cs e gidelim
+
+3. not bitiþ
+
+5. not bitiþ baseclass dan geldik
+
+6. not baslangýc
+
+baseclass da virtual olarak degistirdik metodu orda virtual yaptýgýn metodu cagýrmak için burda override ile cagýrmak lazým
+
+override yazýnca tooltype de ekrana yaz metotunun da sanal metotlara eklenmýs oldugunu görüyorum
+
+ben urunden baseclass ý baseclassdan da object nesnesini kalýttýgýmý görüyorum burada 
+
+ekranayaz baseclass ýn sanal metotu diger cýkanlar object in sanal metotu 
+
+içeriðini degistirmek istiyorsan override ile yapabilirsin
+
+override diyip ekrana yazý cagýrýnca 
+
+public override void EkranaYaz(string data)
+        {
+            base.EkranaYaz(data);
+        }
+
+cýkýyor 
+
+baseclass ýcýndeký kýsým geliyor 
+
+        
+metot imzasý ayný geldi  => public override void EkranaYaz(string data)
+farklý gelen yer metotun body si => base.EkranaYaz(data);
+
+base üstüne gelince V153BaseClass i iþaret ediyor 
+
+base.EkranaYaz(data); kýsmýný degistirebilirsin diyor
+
+public override void EkranaYaz(string data)
+        {
+            Console.WriteLine("urun => " + data);
+        }
+
+
+baseclass içinde sanal metot olusturduk virtual ile
+onu urun class ýnýn içinde override ile cagýrdýk ve degistirdik
+
+program.cs e gidelim
+
+6. not bitiþ
+
+ 
+*/

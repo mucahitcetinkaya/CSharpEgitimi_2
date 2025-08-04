@@ -63,7 +63,7 @@ namespace Bolum_17_OOP_Sanal_Metot
         //    */
 
         //    /*
-            
+
         //    1. not başlangıç
 
         //    şimdi tostring metotu ile sanal metotları tanımaya baslayalım
@@ -98,7 +98,7 @@ namespace Bolum_17_OOP_Sanal_Metot
         //    Musteri classına gidelim
 
         //    1. not bitiş
-            
+
         //    2. not bitiş
 
         //    3. not başlangıç
@@ -142,11 +142,11 @@ namespace Bolum_17_OOP_Sanal_Metot
         //    musteri class ının ıcınde bunu guncelledık buraya geldik tekrar debug yapalım bakalım ne olacak
         //    isim soyisim yaptıgımız için birde atama yapalım bos gelmesin
         //    calıstırınca f11 ile devam edince musteri class ına gönderiyor ve override ettıgımız yere dusuyor kod 
-            
+
         //    override ettıgım gibi calısıyor kendı calısma mantıgı olarak calısmıyor 
 
         //    ders bitti diger derste kendımız sanal metot olusturalım kalıtmıs oldugumuz nesnemizin içerisinde nası kullanırız bunlara bakalım
-             
+
         //    */
 
         //    // 3. not
@@ -158,6 +158,85 @@ namespace Bolum_17_OOP_Sanal_Metot
 
 
         //    Console.WriteLine("toStringMesaj : " + toStringMesaj);
+
+
+        //}
+
+        #endregion
+
+        #region VİDEO 153 Sanal metot oluşturmak ve kullanmak - 1
+
+        //static void Main(string[] args)
+        //{
+        //    /*
+
+        //    Bolum 17 OOP Sanal Metot V153 Sanal metot oluşturmak ve kullanmak - 1
+
+        //    */
+
+        //    /*
+             
+        //    1. not başlangıç
+
+        //    baseClass adında bir class olusturalım
+
+        //    BaseClass a gidelim
+
+        //    1. not bitiş
+
+        //    3. not bitiş urun class ından geldik
+
+        //    4. not baslangıc
+
+        //    oncelıkle urun nesnesini new leyelım
+
+        //    V153Urun U1 = new V153Urun();
+        //    U1.EkranaYaz("urun nesnesınden bu metot cagrıldı");
+            
+        //    urun de baseclass ı miras verdik
+        //    urunden baseclass daki metotu cagırdık
+
+        //    birde aynı metodu baseclass dan cagıralım
+
+        //    V153BaseClass B1 = new V153BaseClass();
+        //    U1.EkranaYaz("BaseClass nesnesınden bu metot cagrıldı");
+
+        //    V153Urun U1 = new V153Urun(); e breakpoint koyalım ve debug yapalım sırayla urunden baseclass a gittiğimizi gorelim baseclass dan cagırınca da aynı metot calıstı
+
+        //    bu benim kalıtımın standart calısma seklı biz ozellık kazandırmak istiyoruz 
+            
+        //    biz baseclass içindeki metodu ellemezsek oldugu gibi calıssın ama modifiye edersek hiç base class a gitmesin ururn nesnesınden modifiye ettıgımız sekılde calıssın
+
+        //    baseclass daki metotu sanal metot olarak olusturalım
+
+        //    baseclass a gidelim
+
+        //    4. not bitiş
+
+        //    6. not bitiş baseclass dan geldik
+
+        //    7. not baslangıc
+
+        //    V153Urun U1 = new V153Urun(); e breakpoint koyalım debug yapalım
+
+
+        //    */
+
+
+        //    //V153Urun U1 = new V153Urun();
+        //    //U1.EkranaYaz("urun nesnesınden bu metot cagrıldı");
+
+
+        //    //V153BaseClass B1 = new V153BaseClass();
+        //    //U1.EkranaYaz("BaseClass nesnesınden bu metot cagrıldı");
+
+        //    // 7. not
+        //    V153Urun U1 = new V153Urun();
+        //    U1.EkranaYaz("merhaba");
+
+
+        //    V153BaseClass B1 = new V153BaseClass();
+        //    U1.EkranaYaz("merhaba");
 
 
         //}
