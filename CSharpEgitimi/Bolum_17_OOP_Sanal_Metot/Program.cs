@@ -310,5 +310,55 @@ namespace Bolum_17_OOP_Sanal_Metot
 
         #endregion
 
+        #region VİDEO 155 Sanal metot oluşturmak ve kullanmak - 3
+
+        //static void Main(string[] args)
+        //{
+        //    /*
+
+        //    Bolum 17 OOP Sanal Metot V155 Sanal metot oluşturmak ve kullanmak - 3
+
+        //    */
+
+        //    /*
+
+        //    1. not başlangıç
+
+        //    televizyonu ornekleyıp bakalım hangisi calısacak
+
+        //    155 CLASS larının hepsine ctor ekleyelim ve sırasına bakalım nereye gidiyor nası calısıyor görelim
+
+        //    t1 e breakpoint koyunca ctorların calısma sırası
+            
+        //    baseclass ctor
+        //    urun ctor
+        //    televizyon ctor
+
+        //    hepsini tarıyor ve nerde ne var biliyor
+
+        //    t1.ekranayaz da f11 ile gidince urun ıcındeki ekranayaz calısır
+        //    override oldugundan orada tıkanır digerlerini ezer
+
+        //    urun class ı hep kendi karsılar override oldugundan digerlerine aktarmaz
+
+        //    */
+
+
+        //    V155Televizyon T1 = new V155Televizyon();
+        //    T1.EkranaYaz("HANGİSİ");
+
+        //    V155Urun U1 = new V155Urun();
+        //    U1.EkranaYaz("merhaba");
+
+
+        //    V155BaseClass B1 = new V155BaseClass();
+        //    B1.EkranaYaz("merhaba");
+
+
+        //}
+
+        #endregion
+
+
     }
 }

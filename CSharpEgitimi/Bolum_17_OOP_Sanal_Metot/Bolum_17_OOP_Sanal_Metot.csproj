@@ -51,11 +51,15 @@
     <Compile Include="V154BaseClass.cs" />
     <Compile Include="V154Televizyon.cs" />
     <Compile Include="V154Urun.cs" />
+    <Compile Include="V155BaseClass.cs" />
+    <Compile Include="V155Televizyon.cs" />
+    <Compile Include="V155Urun.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Not\Bolum_17_OOP_Sanal_Metot-V155.txt" />
     <Content Include="Not\Bolum_17_OOP_Sanal_Metot-V154.txt" />
     <Content Include="Not\Bolum_17_OOP_Sanal_Metot-V153.txt" />
     <Content Include="Not\Bolum_17_OOP_Sanal_Metot-V152.txt" />
