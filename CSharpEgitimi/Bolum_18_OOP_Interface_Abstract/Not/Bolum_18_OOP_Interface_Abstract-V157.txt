@@ -1,0 +1,57 @@
+
+
+Bölüm 18 : OOP - Interface ve Abstract
+Video 157 Interface ve Abstract genel olarak nedir ?
+
+ #region VÝDEO 157 Interface ve Abstract genel olarak nedir ?
+
+        static void Main(string[] args)
+        {
+
+            /*
+             
+            Bolum 18 OOP Interface ve Abstract V157 Interface ve Abstract genel olarak nedir ?
+                         
+             */
+
+            /*
+             
+            1. not baþlangýç
+
+            Bu bölümde abstract ve interface nedir bunlar üzerinde biraz konuþuyor olacaðýz
+
+            Object orientent  konusunun artýk sonlarýna geldik
+
+            Bu bölümden sonra nesne yönelimli programlama kýsmýnda bir çok þeyi anlamýþ ve kullanmýþ oluyoruz bunun sonrasýnda ise farklý bölümler ile aslýnda nesne konularý tekrar bizim karþýmýza cýkacak
+
+            Bu bölüm ve bu bölümden sonra anlatýlanlar artýk ileri C# olarak size sunulacaktýr
+
+            -------------
+
+            Abstract & Interface
+
+            C# nedir, neden kullanýrýz avantajlarý nelerdir.
+
+            Abstract & Interface
+
+            C# programlama dilinde aslýnda VIP dediðimiz alana geldik bu bölümde öðreneceðiniz konularýn örnek kullanýmlarý ve açýklamalarý uygulama yaptýðýmýz zaman net olarak anlaþýlacaktýr.
+            Bölüme baþlamadan önce neden bu bölümden VIP olarak bahsetmiþ olduðumu anlatayým.
+            Interface veya abstract ( Interface daha sýk kullanýlýr ) aslýnda bizim uygulama içerisinde kullanmayacaðýmýz ama her noktada varlýðýndan faydalanacaðýmýz tanýmlardýr.
+            Kurumsal projelerde kodlama yapacaðýmýz zaman çok sýk göreceðimiz bu kavramlarý kendi baþýmýza proje yaptýðýmýz zaman ( tasarým deseni zorunlu deðilse ) kullanmayýz.
+            Fakat kurumsal projelerde bir ekibin kodlamasýnda görev alýyorsak sýk kullandýðýmýz tanýmlardýr.
+
+            Hatýrlarsanýz nesne yönelimli programlama konusunda girdiðimiz bölümlerden bu yana devamlý olarak nesnelerimizi oluþturduk farklý kullanýmlar olsa bile bir þekilde nesnemizi örnekledik kullandýk.
+            Nesnelerimizin içerisinde ise birçok taným oluþturduk ve bu tanýmlarý çaðýrýp kullandýk.
+            Abstract ve Interface tanýmlarýnda bir örnekleme söz konusu deðildir.
+            Kendimize iþe yapacak bir rol model çýkartýrýz. Nasýl olacaðýnýn kurallarýný hazýrlar ve nesnelerimiz de kurallarmýzý kullanýrýz.
+            Bu bölümde oluþturmuþ olduðumuz nesnelerimizi nasýl kurallar ile þartlayabileceðimizi konuþacaðýz.
+            Not : Bu bölümde anlatýlan konular biraz havada kalabilir bu konularýn sizin pratiðinizde oturabilmesi için bizim biraz ilerlememiz gerekir.
+
+
+             
+             
+             */
+
+        }
+
+        #endregion
