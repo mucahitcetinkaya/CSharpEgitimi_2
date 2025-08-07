@@ -1,0 +1,309 @@
+
+
+Bölüm 18 : OOP - Interface ve Abstract
+Video 158 Abstract Nedir - Abstract class kullanýmý
+
+
+
+        #region VÝDEO 158 Abstract Nedir - Abstract class kullanýmý
+
+        static void Main(string[] args)
+        {
+
+            /*
+             
+                    Bolum 18 OOP Interface ve Abstract V158 Abstract Nedir - Abstract class kullanýmý
+             
+            */
+
+            /*
+             
+            1. not baþlangýç
+
+            Nesne yönelimli programlama da herþeyin baþýnda bir nesne oluþturup bunlarýn içinde field metot atadýk kalýttýk static leri gördük bir çok iþlem yaptýk
+            Bu iþlemlerim ortasýnda yaptýðýmýz iþlemlerimizi daha da profesyonelleþtirmek için kullanýlan bu iki tanýmýda bu oluþturmuþ olduðumuz class larýmýzýn içerisinde kullanacagýz
+            Sýnýf olusturup bildigimiz þekilde inceleyelim daha sonra bu sýnýfýn hayatýna bir abstract gelirse ne olur bundan bahsedelim.
+            yeni bir class olusturalým
+
+            temelSýnýf a gidelim
+
+            1. not bitiþ
+
+            2. not bitiþ temelSiniftan geldik
+
+            3. not baslangýc
+
+            temelSinif i newleyelim
+
+            V158temelSinif T1 = new V158temelSinif();
+
+            temelsýnýf orneklenirken bir yerden kalýtýlmýs mý diye bakar katýlmamýssa obje den kalýtýr kendýný
+
+            sýmdý bunu abstract yapalým
+
+            3. not bitiþ temelSýnýf a gidelim
+
+            4. not bitiþ temelsýnýftan geldik
+
+            5. not baslangýc
+            
+            temelSinif i abstract yapýnca V158temelSinif T1 = new V158temelSinif(); hata verdi
+
+            new kýsmýnda hata veriyor yani diyoki bunu ornekleyemezsin diyo abstract ve interface oldugunda orneklenemez
+
+            temelSýnýfý þablon olarak ayarladýk nerde kullanacagýz
+
+            bir baska sýnýfta kullanacagýz 
+            nasýl kullanacagýz bakalým
+
+            yeni bir sýnýf olusturalým musteri oraya gidelim
+
+            5. not bitiþ
+            
+            6. not bitiþ musteriden geldik
+
+            7. not baslangýc
+
+            musteri nesnesini ornekleyelim m1. dediðimiz de temelsýnýftaki prop larda bana geliyor
+
+            m1 e breakpoint koyalým ve bakalým 
+            musteri nesnesine gidecek musteride temelsiniftan kalýtýlmýs temelsýnýfa gitmeliyim diyor ama temelsýnýfa giderken uygulama bunun abstract sýnýf oldugunu biliyor
+            temel sýnýfa gidiyor ve ctor calýsýyor
+
+            yani abstract olunca abstract olan nesne orneklenemiyor ama kalýtým yoluyla orneklenebiliyor
+            ayrýca miras aldýgý problarý da görüyor ve kullanabiliyor 
+
+            temelsýnýfa gidelim
+
+            7. not bitiþ
+            
+            8. not bitiþ temelsýnýftan geldik
+
+            9. not baslangýc
+
+            temelsýnýf içinde metot olusturduk bunu musteri yaný m1. diye cagýralým
+            m1.test();
+            calýsýyor sorun cýkartmadý
+
+            ben bir sýnýfýn içindeki bir metotu böyle kullanýyorsam 
+            kalýtýlan nesne kalýtan nesneyi orneklemek zorunda yoksa class ýn mimarisi bozulur
+
+            orneklenmemiþ bir class ýn içindeki bu sekýlde yazýlmýs static olmayan bir metotu ben kullanamam 
+            kullanabilmem için o nesnenin diger nesneyi ben ornekleyemesem de ornekleyip bana sunmasý gerekiyor
+            
+            ben class a direk mudahale ile ornekleyememem problem degil 
+            problem su beným orneklemýs oldugum nesne temelsýnýf nesnesini orneklemek zorunda cunku kalýtým kurallarý var 
+            ben diyo base olarak gormus oldugum sýnýfýn içindeki field larý metotlarý public duzeydeyse internal duzeydeyse private degilse yani sana kullanýma acarým diyo 
+            bana kullanýma acman için bu metodun bellekte ayaga kalkmasý lazým 
+            demekki bu abstract class kavramýnda ornekleyememe sadece ilk cagýrýmlarda gecerlý oluyor kalýtým konusunda gecerlý degýl 
+
+            abstract keyword unu alýp bir metotun içine yerleþtirsem sen abstract bir class ýn ve içinde de abstract bir metot olsun o zaman ne olacak
+
+            temelsýnýf a gidelim abstract metot olusturalým
+
+            9. not bitiþ
+            
+            10. not bitiþ diger derse geç temel sýnýf içinde bitti ders
+
+            
+
+            */
+
+            //5. notta abstract yapýnca hata verdi
+            //158temelSinif T1 = new V158temelSinif();
+
+            // 7. not baslangýc
+
+            V158Musteri m1 = new V158Musteri();
+            m1.test();
+
+        }
+
+        #endregion
+
+
+        ----------------------------------------------
+
+        
+using System;
+
+namespace Bolum_18_OOP_Interface_Abstract
+{
+    public abstract class V158temelSinif
+    {
+
+        public DateTime kayitTarih { get; set; }
+        public DateTime guncellemeTarih { get; set; }
+
+        public V158temelSinif()
+        {
+            kayitTarih = DateTime.Now;
+            guncellemeTarih = DateTime.Now;
+        }
+
+        public void test()
+        {
+            Console.WriteLine("temelsýnýfiçindekitestmetoducalýstý");
+        }
+
+        public abstract void testAbstract()
+        {
+
+        }
+
+    }
+}
+
+
+/*
+ 
+1. not bitiþ program.cs den geldik
+
+2. not baslangýc
+
+public yaptýk 
+2 tane field ekleyelim
+
+public class V158temelSinif
+    {
+
+        public DateTime kayitTarih { get; set; }
+        public DateTime guncellemeTarih { get; set; }
+
+        public V158temelSinif()
+        {
+            kayitTarih = DateTime.Now;
+            guncellemeTarih = DateTime.Now;
+        }
+
+
+    }
+
+birde ctor ekledik
+
+program.cs e gidelim
+
+2. not bitiþ
+
+3. not bitiþ program.cs den geldik
+
+4. not baslangýc
+
+ilk durum 
+
+ using System;
+
+namespace Bolum_18_OOP_Interface_Abstract
+{
+    public class V158temelSinif
+    {
+
+        public DateTime kayitTarih { get; set; }
+        public DateTime guncellemeTarih { get; set; }
+
+        public V158temelSinif()
+        {
+            kayitTarih = DateTime.Now;
+            guncellemeTarih = DateTime.Now;
+        }
+
+
+    }
+}
+
+temelSinifi abstract yapalým
+
+    public abstract class V158temelSinif
+
+abstract keyword u geldiginde temelsýnýfýmýn calýsma mantýgý degisiyor
+abstract yaparak uygulamaya diyosun ki temelSinif artýk þablon olarak kullanacagým bir sýnýf diyosun
+bir kural kutuphanesi gibi görmek istiyorum bundan kalýtýlan sýnýflar burada yazýlan kurallara uysunlar istiyorum
+
+program.cs e gidelim
+
+4. not bitiþ
+
+7. not bitiþ program.cs den geldik
+
+8. not baslangýc
+
+test adýnda metot olusturalým
+
+  public void test()
+        {
+            Console.WriteLine("temelsýnýfiçindekitestmetoducalýstý");
+        }
+ 
+
+program.cs e gidelim metodu cagýralým
+
+8. not bitiþ
+
+9. not bitiþ program.cs den geldik
+
+10. not baslangýc
+
+abstract metot olusturalým
+
+ public abstract void testAbstract()
+        {
+
+        }
+
+böyle yazdýk ve hata verdi diger dersimiz de
+abstract class tanýdýk abstract metot nedir 
+neden hata verdi
+hata almayacagýmýz sekýlde yazdýgýmýz da bizim basýmýza ne gelir bunlarý inceleyecegiz 
+bu þablon tip bir þey þablon ise içeriði olmayabilir ufak bir ip ucu vereyim 
+
+10. not bitiþ diger derse geç
+ 
+*/
+
+-------------------------------------------------
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Bolum_18_OOP_Interface_Abstract
+{
+    public class V158Musteri :V158temelSinif
+    {
+        public int musteriID { get; set; }
+
+        public V158Musteri()
+        {
+            musteriID = 1;
+        }
+
+
+    }
+}
+
+
+
+/*
+ 
+ 5. not bitiþ program.cs den geldik
+
+6. not baslangýc 
+
+temelSiniftan kalýtalým
+
+bir tane prop yazýp ctor yazalým musteriID e 1 atamasý yaptýk
+
+temel kalýtým mimarisinden bahsedersek musteri nesnesi orneklenirken temelsýnýfý orneklemeye calýsacak program.cs de temelsýnýf ý ornekleyemediði için kalýtýmda da orneklenemiyor olmasý lazým
+temelsýnýfýn ýcýndeký ctor calýsmamasý lazým new yapamadýk cunku 
+
+program.cs e gidelim
+
+6. not bitiþ
+ 
+ 
+ */
+
+
