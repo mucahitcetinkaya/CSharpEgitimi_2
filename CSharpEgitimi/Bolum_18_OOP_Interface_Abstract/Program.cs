@@ -366,7 +366,7 @@ namespace Bolum_18_OOP_Interface_Abstract
         //     */
 
         //    /*
-             
+
         //     1. not baslangıc
 
         //    interface den biraz bahsedelim
@@ -399,7 +399,35 @@ namespace Bolum_18_OOP_Interface_Abstract
 
         #endregion
 
-    
+        #region VİDEO 162 Interface kullanımı
+
+        //static void Main(string[] args)
+        //{
+
+        //    /*
+
+        //        Bolum 18 OOP Interface ve Abstract V162 Interface kullanımı
+            
+            
+        //    */
+
+        //    /*
+             
+        //    1. not baslangıc
+
+        //    V161 de kalandan devam IV162Musteri olusturduk field metot vs olusturalım
+
+        //    1. not bitiş
+
+        //    3. not bitiş V162Musteriden geldik 18 konu bitti diger konuya gecelim
+             
+        //    */
+
+
+        //}
+
+        #endregion
+
 
     }
 }

@@ -1,0 +1,401 @@
+
+
+Bölüm 18 : OOP - Interface ve Abstract
+Video 162 Interface kullanýmý
+
+        #region VÝDEO 162 Interface kullanýmý
+
+        static void Main(string[] args)
+        {
+
+            /*
+
+                Bolum 18 OOP Interface ve Abstract V162 Interface kullanýmý
+            
+            
+            */
+
+            /*
+             
+            1. not baslangýc
+
+            V161 de kalandan devam IV162Musteri olusturduk field metot vs olusturalým
+
+            1. not bitiþ
+
+            3. not bitiþ V162Musteriden geldik 18 konu bitti diger konuya gecelim
+             
+            */
+
+
+        }
+
+        #endregion
+
+        -------------------------------------------------------------
+
+        
+namespace Bolum_18_OOP_Interface_Abstract
+{
+    public interface IV162Musteri
+    {
+        //public int Id { get; set; }
+        int Id { get; set; }
+        //string isim;
+        string isim { get; set; }
+        string soyisim { get; set; }
+
+        // metot
+
+        int yeniKayit(string isim, string soyisim);
+        int kayitDuzenle(int id, string isim, string soyisim);
+        int kayitSil(int id);
+
+    }
+}
+
+/*
+ 
+1. not bitiþ program.cs den geldik
+
+2. not baslangýc
+
+field metot ekleyelim
+
+ilk hali
+
+
+namespace Bolum_18_OOP_Interface_Abstract
+{
+    public interface IV162Musteri
+    {
+
+    }
+}
+
+sonra field ekledik hata verdi
+
+namespace Bolum_18_OOP_Interface_Abstract
+{
+    public interface IV162Musteri
+    {
+        public int Id { get; set; }
+    }
+}
+
+The modifier 'public' is not valid for this item in C# 7.3. Please use language version '8.0' or greater.
+
+bu zaten interface public yazmana gerek yok diyor 
+ 
+ namespace Bolum_18_OOP_Interface_Abstract
+{
+    public interface IV162Musteri
+    {
+        //public int Id { get; set; }
+        int Id { get; set; }
+    }
+}
+
+get ve set eklemek zorundayýz prob olmasý için get set olmazsa bunlar prob olmaz degisken olur interface içinde degisken tanýmý yapýlamaz.
+
+namespace Bolum_18_OOP_Interface_Abstract
+{
+    public interface IV162Musteri
+    {
+        //public int Id { get; set; }
+        int Id { get; set; }
+        string isim;
+
+    }
+}
+ 
+Interfaces cannot contain instance fields
+
+prob eklediðinde arka tarafta bir degiskene baglý kaldýklarý için prob tanýmý kabul ediyor 
+
+field da ekledik
+
+metot eklemeye gecelim
+
+namespace Bolum_18_OOP_Interface_Abstract
+{
+    public interface IV162Musteri
+    {
+        //public int Id { get; set; }
+        int Id { get; set; }
+        //string isim;
+        string isim { get; set; }
+        string soyisim { get; set; }
+
+        // metot
+
+        int yeniKayit(string isim, string soyisim);
+
+    }
+}
+
+metotlarda body almaz parametre alabilir
+
+interface de hiç bir tanýmýn body si olmaz buraya yazýlan hersey þablon 
+
+metotlarda tamam interface imiz tamam
+
+
+namespace Bolum_18_OOP_Interface_Abstract
+{
+    public interface IV162Musteri
+    {
+        //public int Id { get; set; }
+        int Id { get; set; }
+        //string isim;
+        string isim { get; set; }
+        string soyisim { get; set; }
+
+        // metot
+
+        int yeniKayit(string isim, string soyisim);
+        int kayitDuzenle(int id, string isim, string soyisim);
+        int kayitSil(int id);
+
+    }
+}
+
+biz bu interface i musteri class ýnda kalýttýgýmýz da bu þablon degerlerini bize sart kosacak 
+
+Musteri class ýný olusturalým ve IMusteri interface ini miras verelim
+
+2. not bitiþ
+
+ 
+ 
+*/
+
+        -------------------------------------------------------------
+
+
+using System;
+
+namespace Bolum_18_OOP_Interface_Abstract
+{
+    public class V162Musteri : IV162Musteri
+    {
+        int _id;
+        string _isim;
+        string _soyisim;
+
+        public int Id 
+        {
+            get { return _id; }
+            set { _id = value; }
+        }
+        public string isim
+        {
+            get { return _isim; }
+            set { _isim = value; }
+        }
+        public string soyisim
+        {
+            get { return _soyisim; }
+            set { _soyisim = value; }
+        }
+
+        public int kayitDuzenle(int id, string isim, string soyisim)
+        {
+            Console.WriteLine("kayýt kayitDuzenle");
+            return 1;
+        }
+
+        public int kayitSil(int id)
+        {
+            Console.WriteLine("kayýt kayitSil");
+            return 1;
+        }
+
+        public int yeniKayit(string isim, string soyisim)
+        {
+            Console.WriteLine("kayýt yeniKayit");
+            return 1;
+        }
+    }
+}
+
+/*
+ 
+2. not bitiþ IMusteri den geldik
+
+3. not baslangýc
+
+ilk durum
+
+namespace Bolum_18_OOP_Interface_Abstract
+{
+    public class V162Musteri
+    {
+
+
+    }
+}
+ 
+IMusteri i miras verince hata veriyor 
+
+namespace Bolum_18_OOP_Interface_Abstract
+{
+    public class V162Musteri : IV162Musteri
+    {
+
+
+    }
+}
+ 
+'V162Musteri' does not implement interface member 'IV162Musteri.Id'
+'V162Musteri' does not implement interface member 'IV162Musteri.isim'
+'V162Musteri' does not implement interface member 'IV162Musteri.soyisim'
+'V162Musteri' does not implement interface member 'IV162Musteri.yeniKayit(string, string)'
+'V162Musteri' does not implement interface member 'IV162Musteri.kayitDuzenle(int, string, string)'
+'V162Musteri' does not implement interface member 'IV162Musteri.kayitSil(int)'
+
+sen interface den kalýtým yaptýn ben onun içinde taným görüyorum bu tanýmlarýn bende olmasý lazým diyor implement et aktar diyor diyor 
+
+IV162Musteri de hata veriyor kýzýyor üstüne okla gelince implement interface e basýnca otomatik aktarýr 
+
+son durum
+
+
+namespace Bolum_18_OOP_Interface_Abstract
+{
+    public class V162Musteri : IV162Musteri
+    {
+        public int Id { get => throw new System.NotImplementedException(); set => throw new System.NotImplementedException(); }
+        public string isim { get => throw new System.NotImplementedException(); set => throw new System.NotImplementedException(); }
+        public string soyisim { get => throw new System.NotImplementedException(); set => throw new System.NotImplementedException(); }
+
+        public int kayitDuzenle(int id, string isim, string soyisim)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public int kayitSil(int id)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public int yeniKayit(string isim, string soyisim)
+        {
+            throw new System.NotImplementedException();
+        }
+    }
+}
+ 
+id isim soyisim bunlar problar bunlar bir degiskene ihtiyac duyarlar get ve set bloklarý ondan böyle uzun uzun geldi 
+field ekleyelim ve problara verelim
+
+problar son durum
+
+
+namespace Bolum_18_OOP_Interface_Abstract
+{
+    public class V162Musteri : IV162Musteri
+    {
+        int _id;
+        string _isim;
+        string _soyisim;
+
+        public int Id 
+        {
+            get { return _id; }
+            set { _id = value; }
+        }
+        public string isim
+        {
+            get { return _isim; }
+            set { _isim = value; }
+        }
+        public string soyisim
+        {
+            get { return _soyisim; }
+            set { _soyisim = value; }
+        }
+
+        public int kayitDuzenle(int id, string isim, string soyisim)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public int kayitSil(int id)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public int yeniKayit(string isim, string soyisim)
+        {
+            throw new System.NotImplementedException();
+        }
+    }
+}
+
+metotlar da IMusteri de imzalarý vardý body leri yoktu body leri buraya geldi
+metotlarý guncelleyelim
+
+
+using System;
+
+namespace Bolum_18_OOP_Interface_Abstract
+{
+    public class V162Musteri : IV162Musteri
+    {
+        int _id;
+        string _isim;
+        string _soyisim;
+
+        public int Id 
+        {
+            get { return _id; }
+            set { _id = value; }
+        }
+        public string isim
+        {
+            get { return _isim; }
+            set { _isim = value; }
+        }
+        public string soyisim
+        {
+            get { return _soyisim; }
+            set { _soyisim = value; }
+        }
+
+        public int kayitDuzenle(int id, string isim, string soyisim)
+        {
+            Console.WriteLine("kayýt kayitDuzenle");
+            return 1;
+        }
+
+        public int kayitSil(int id)
+        {
+            Console.WriteLine("kayýt kayitSil");
+            return 1;
+        }
+
+        public int yeniKayit(string isim, string soyisim)
+        {
+            Console.WriteLine("kayýt yeniKayit");
+            return 1;
+        }
+    }
+}
+
+su anlýk sadece console yazdýrdýk sql i gorunce id isim soyisim degerlerine gore kayýt olustur duzenle sil standart yapmamýz gereken iþlemleri zaten yapacagýz
+return 1 dememizin nedeni int döndürdük metotlarý ondan öylesine bir return yaptýk hata vermesýn diye
+
+gercek hayat olarak not
+
+bir program yazýmýna dahil oluyorsunuz ve ekipce class larý duzenliyorsunuz ve burada bir standarta oturmasý gerekiyor 
+bir interface paylaþýmý yapýlýr ve ilgili interface i uzerimize aldýktan sonra zaten yazacagýmýz kodu direk burada gorebiliyor oluruz 
+gormus oldugumuz kodlar doldurduktan sonra ilgili sunucuya ekleriz kontrolü yapýlýr iþlemlere devam edilir
+
+kendý basýnýza uygulama yaptýgýnýz da geliþtirdiginiz de bir zorunluluk degil olmazsa olmaz interface i bilmezsenýz olmaz degil bu iþi profesyonel bir þekilde bir firmada yapacaksanýz 
+o zaman interface leri bilmek zorundasýnýz 
+
+3. not bitiþ program.cs e gidelim dersi bitirelim
+ 
+ 
+*/

@@ -1,7 +1,7 @@
 
 
 Bölüm 18 : OOP - Interface ve Abstract
-Video 61 Interface nedir ?
+Video 161 Interface nedir ?
 
 
 #region VÝDEO 161 Interface nedir ?
