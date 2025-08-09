@@ -1,4 +1,6 @@
 ﻿
+using System;
+
 namespace Bolum_18_OOP_Interface_Abstract
 {
     internal class Program
@@ -188,13 +190,13 @@ namespace Bolum_18_OOP_Interface_Abstract
         //static void Main(string[] args)
         //{
         //    /*
-             
+
         //    Bolum 18 OOP Interface ve Abstract V159 Abstract metot nedir , kullanımı
 
         //    */
 
         //    /*
-             
+
         //    1. not baslangıc
 
         //    V158 in sonu temel sınıf içinde bitiyor V159temelsınıf olusturalım ve aynı senaryoyu olusturalım Musteri sınıfını olusturalım
@@ -207,11 +209,11 @@ namespace Bolum_18_OOP_Interface_Abstract
 
         //    musteri class ını new leyelim
 
-            
+
         //    V159Musteri M1 = new V159Musteri();
         //    M1.test(); // temel sınıf içindeki test
         //    M1.testAbstract(); // musteri içindeki testAbstract
-        
+
         //    debug yapalım 
 
         //    M1.testAbstract(); e breakpoint koyalım
@@ -252,6 +254,105 @@ namespace Bolum_18_OOP_Interface_Abstract
 
         #endregion
 
+        #region VİDEO 160 Abstract ile sealed kullanılır mı ?
+
+        //static void Main(string[] args)
+        //{
+
+        //    /*
+              
+        //        Bolum 18 OOP Interface ve Abstract V160 Abstract ile sealed kullanılır mı ?
+             
+        //     */
+
+        //    /*
+            
+        //    1. not baslangıc
+
+        //    V160-temelSinif-Musteri class larını olusturalım V159 dan alabiliiriz notlarını
+
+        //    abstract metot olusturup temelSinif içinde Musteri de temelSinifi miras verdik
+        //    temelSinif içinde abstract metot oldugundan imzasını attık sadece body si yok
+        //    Musteri de bunu implement yapıp cagırdık ve kullandık kullanmak zorunda bırakıldık şablon oldu
+
+        //    Musteri nesnesini de kalıtırsak temelSinifa ulasacagım bu sürecte testAbstract kısmını gorurmuyuz gorursek bunun tooltype in de ne yazar nerde oldugunu gorurum 
+        //    temelSınıf içinde olan prob ları musteriden kalıtmıs oldugum nesne de gorur muyum 
+
+        //    Musteri yi baseClass yapalım
+        //    SuperMusteri adında bir class olusturalım
+
+        //    SuperMusteriye gidelim
+
+        //    1. not bitiş
+
+        //    2. not bitiş supermusteriden geldik
+
+        //    3. not baslangıc
+
+        //    supermusteriyi newleyelim bakalım diger metot veya prob lara erişim var mı 
+
+        //    V160SuperMusteri S1 = new V160SuperMusteri();
+        //    S1. diyince metot veya prob lara erişebiliyoruz 
+
+        //    problar neredeyse ordan gelmiş 
+        //    metot musteriden gelmiş temelsınıf içinde olusturuldu ama orada abstract body si yok kullanılan yer musteri ondan dolayı orayı kullanıyor
+
+        //    V160SuperMusteri S1 = new V160SuperMusteri();
+
+        //    S1.guncellemeTarih = Convert.ToDateTime("2025-08-09"); // temelsınıf içindeki
+        //    S1.kayitTarih = Convert.ToDateTime("2025-08-09"); // temelsınıf içindeki
+        //    S1.musteriID = 1; // musteri içindeki
+        //    S1.test(); // temelsınıf içindeki
+        //    S1.testAbstract(); // musteri içindeki
+
+        //    temelsinifa gidelim
+
+        //    3. not bitiş
+
+        //    4. not bitiş temelsınıftan geldik
+
+        //    5. not baslangıc
+
+        //    genel notlar
+
+        //    abstract sınıflar türetilmez direk ulasıp kullanılmaz
+        //    abstract sınıflar abstract metotlar içerir sadece imzası olur body si olmaz 
+        //    abstract sınıflar standart metotlar içerir imza ve body si de olabilir
+
+        //    istersek standart metot yazarız istersek abstract metot yazar türetilen sınıf uzerınden body sını yazabiliriz
+
+        //    abstract sınıflar içinde static metotlar yazılabilir ornek olusmadan cagrılabilir
+            
+        //    V160temelSinif.testAbstract2(); // static metot new lemeden cagırdık
+
+        //    metotlar static ve abstract aynı anda olamaz 
+
+        //    abstract metot virtual olamaz body si olması lazım body si yok zaten abstract oldugunda miras aldıgı yerde override olacak mecbur 
+
+        //    diger ders interface birden fazla sınıfı kalıtamadıgımızı gormedık onu görecegız ordan da interface e gececegiz
+
+        //    5. not bitiş
+
+        //    */
+
+        //    // 3. not baslangıc
+
+        //    V160SuperMusteri S1 = new V160SuperMusteri();
+
+        //    S1.guncellemeTarih = Convert.ToDateTime("2025-08-09"); // temelsınıf içindeki
+        //    S1.kayitTarih = Convert.ToDateTime("2025-08-09"); // temelsınıf içindeki
+        //    S1.musteriID = 1; // musteri içindeki
+        //    S1.test(); // temelsınıf içindeki
+        //    S1.testAbstract(); // musteri içindeki
+
+        //    // 5. not baslangıc
+
+        //    V160temelSinif.testAbstract2(); // static metot new lemeden cagırdık
+
+
+        //}
+
+        #endregion
 
 
     }

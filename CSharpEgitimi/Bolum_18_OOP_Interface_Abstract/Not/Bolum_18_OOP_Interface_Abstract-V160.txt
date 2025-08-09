@@ -1,0 +1,279 @@
+
+
+Bölüm 18 : OOP - Interface ve Abstract
+Video 160 Abstract ile sealed kullanýlýr mý ?
+
+
+  #region VÝDEO 160 Abstract ile sealed kullanýlýr mý ?
+
+        static void Main(string[] args)
+        {
+
+            /*
+              
+                Bolum 18 OOP Interface ve Abstract V160 Abstract ile sealed kullanýlýr mý ?
+             
+             */
+
+            /*
+            
+            1. not baslangýc
+
+            V160-temelSinif-Musteri class larýný olusturalým V159 dan alabiliiriz notlarýný
+
+            abstract metot olusturup temelSinif içinde Musteri de temelSinifi miras verdik
+            temelSinif içinde abstract metot oldugundan imzasýný attýk sadece body si yok
+            Musteri de bunu implement yapýp cagýrdýk ve kullandýk kullanmak zorunda býrakýldýk þablon oldu
+
+            Musteri nesnesini de kalýtýrsak temelSinifa ulasacagým bu sürecte testAbstract kýsmýný gorurmuyuz gorursek bunun tooltype in de ne yazar nerde oldugunu gorurum 
+            temelSýnýf içinde olan prob larý musteriden kalýtmýs oldugum nesne de gorur muyum 
+
+            Musteri yi baseClass yapalým
+            SuperMusteri adýnda bir class olusturalým
+
+            SuperMusteriye gidelim
+
+            1. not bitiþ
+
+            2. not bitiþ supermusteriden geldik
+
+            3. not baslangýc
+
+            supermusteriyi newleyelim bakalým diger metot veya prob lara eriþim var mý 
+
+            V160SuperMusteri S1 = new V160SuperMusteri();
+            S1. diyince metot veya prob lara eriþebiliyoruz 
+
+            problar neredeyse ordan gelmiþ 
+            metot musteriden gelmiþ temelsýnýf içinde olusturuldu ama orada abstract body si yok kullanýlan yer musteri ondan dolayý orayý kullanýyor
+
+            V160SuperMusteri S1 = new V160SuperMusteri();
+
+            S1.guncellemeTarih = Convert.ToDateTime("2025-08-09"); // temelsýnýf içindeki
+            S1.kayitTarih = Convert.ToDateTime("2025-08-09"); // temelsýnýf içindeki
+            S1.musteriID = 1; // musteri içindeki
+            S1.test(); // temelsýnýf içindeki
+            S1.testAbstract(); // musteri içindeki
+
+            temelsinifa gidelim
+
+            3. not bitiþ
+
+            4. not bitiþ temelsýnýftan geldik
+
+            5. not baslangýc
+
+            genel notlar
+
+            abstract sýnýflar türetilmez direk ulasýp kullanýlmaz
+            abstract sýnýflar abstract metotlar içerir sadece imzasý olur body si olmaz 
+            abstract sýnýflar standart metotlar içerir imza ve body si de olabilir
+
+            istersek standart metot yazarýz istersek abstract metot yazar türetilen sýnýf uzerýnden body sýný yazabiliriz
+
+            abstract sýnýflar içinde static metotlar yazýlabilir ornek olusmadan cagrýlabilir
+            
+            V160temelSinif.testAbstract2(); // static metot new lemeden cagýrdýk
+
+            metotlar static ve abstract ayný anda olamaz 
+
+            abstract metot virtual olamaz body si olmasý lazým body si yok zaten abstract oldugunda miras aldýgý yerde override olacak mecbur 
+
+            diger ders interface birden fazla sýnýfý kalýtamadýgýmýzý gormedýk onu görecegýz ordan da interface e gececegiz
+
+            5. not bitiþ
+
+            */
+
+            // 3. not baslangýc
+
+            V160SuperMusteri S1 = new V160SuperMusteri();
+
+            S1.guncellemeTarih = Convert.ToDateTime("2025-08-09"); // temelsýnýf içindeki
+            S1.kayitTarih = Convert.ToDateTime("2025-08-09"); // temelsýnýf içindeki
+            S1.musteriID = 1; // musteri içindeki
+            S1.test(); // temelsýnýf içindeki
+            S1.testAbstract(); // musteri içindeki
+
+            // 5. not baslangýc
+
+            V160temelSinif.testAbstract2(); // static metot new lemeden cagýrdýk
+
+
+        }
+
+        #endregion
+
+
+        --------------------------------------------------------------------
+
+        
+using System;
+
+namespace Bolum_18_OOP_Interface_Abstract
+{
+    //public sealed abstract class V160temelSinif
+    public abstract class V160temelSinif
+    {
+
+        public DateTime kayitTarih { get; set; }
+        public DateTime guncellemeTarih { get; set; }
+
+        public V160temelSinif()
+        {
+            kayitTarih = DateTime.Now;
+            guncellemeTarih = DateTime.Now;
+        }
+
+        public void test()
+        {
+            Console.WriteLine("temelsýnýfiçindekitestmetoducalýstý");
+        }
+
+        //public abstract void testAbstract()
+        //{
+
+        //}
+
+        public abstract void testAbstract();
+
+        public static void testAbstract2()
+        {
+            Console.WriteLine("temelsýnýfiçindekitestAbstract2metoducalýstý");
+        }
+
+
+
+    }
+}
+
+
+/*
+ 
+3. not bitiþ program.cs den geldik
+
+4. not baslangýc
+
+ilk hali
+ 
+
+using System;
+
+namespace Bolum_18_OOP_Interface_Abstract
+{
+    public abstract class V160temelSinif
+    {
+
+        public DateTime kayitTarih { get; set; }
+        public DateTime guncellemeTarih { get; set; }
+
+        public V160temelSinif()
+        {
+            kayitTarih = DateTime.Now;
+            guncellemeTarih = DateTime.Now;
+        }
+
+        public void test()
+        {
+            Console.WriteLine("temelsýnýfiçindekitestmetoducalýstý");
+        }
+
+        //public abstract void testAbstract()
+        //{
+
+        //}
+
+        public abstract void testAbstract();
+
+
+    }
+}
+
+temel sýnýfý sealed yapalým
+
+sonraki hali
+ 
+    public selaed abstract class V160temelSinif
+ 
+V160temelSinif hata veriyor 
+
+'V160temelSinif': an abstract type cannot be sealed or static
+
+abstract veya static oldugundan sealed olmaz diyor 
+
+sýmdý býz buna abstract dedýk yani sablon dedýk sablonsa eger bunun kalýtýlmasý lazým 
+sealed diyince de kalýtýlmasýn demýs oluyosun 
+ozaman ikisinden birisini sec diyor bize
+ikisi birden olmaz mantýga ters 
+
+sealed keyword unu kaldýralým 
+
+son durum 
+    public abstract class V160temelSinif
+
+konu bitti genel notlar için program.cs den gidelim
+
+4. not bitiþ 
+
+
+ */
+
+        --------------------------------------------------------------------
+
+        
+using System;
+
+namespace Bolum_18_OOP_Interface_Abstract
+{
+    public class V160Musteri : V160temelSinif
+    {
+        public int musteriID { get; set; }
+
+        public V160Musteri()
+        {
+            musteriID = 1;
+        }
+
+        public override void testAbstract()
+        {
+            //throw new System.NotImplementedException();
+
+            //base.testAbstract();
+
+            Console.WriteLine("musteri içindeki testAbstract");
+        }
+    }
+}
+
+
+        --------------------------------------------------------------------
+
+
+namespace Bolum_18_OOP_Interface_Abstract
+{
+    public class V160SuperMusteri : V160Musteri
+    {
+
+    }
+}
+
+
+/*
+
+1. not bitiþ program.cs den geldik
+
+2. not baslangýc
+
+public yaptýk
+Musteriyi miras verdik 
+
+Musteri sýnýfýndan kalýtýrken kendini (Musteriyi miras verince) herhangi bir þeyi kullanmak zorundasýn demiyor
+Musteri class ý standart bir class 
+Musteri kendisini abstract bir class dan türetmiþti 
+Abstract class ýn bütün ihtiyaclarýný Musteri karsýladýgý için ben SuperMusteri içinde zaten karsýlanmýs olan ihtiyaclarý alýp kullanabilirim
+
+Program.cs e gidip supermusteri uzerýnden metotlara bakalým
+
+2. not bitiþ
+ 
+*/
