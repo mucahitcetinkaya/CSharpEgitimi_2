@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IV161Musteri.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="V158Musteri.cs" />
@@ -57,6 +58,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Not\Bolum_18_OOP_Interface_Abstract-V161.txt" />
     <Content Include="Not\Bolum_18_OOP_Interface_Abstract-V160.txt" />
     <Content Include="Not\Bolum_18_OOP_Interface_Abstract-V159.txt" />
     <Content Include="Not\Bolum_18_OOP_Interface_Abstract-V158.txt" />

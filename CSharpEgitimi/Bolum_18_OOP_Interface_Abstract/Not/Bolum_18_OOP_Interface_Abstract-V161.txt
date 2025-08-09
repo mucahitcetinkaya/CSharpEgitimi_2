@@ -1,0 +1,141 @@
+
+
+Bölüm 18 : OOP - Interface ve Abstract
+Video 61 Interface nedir ?
+
+
+#region VÝDEO 161 Interface nedir ?
+
+        static void Main(string[] args)
+        {
+
+            /*
+
+                Bolum 18 OOP Interface ve Abstract V161 Interface nedir ?
+
+             */
+
+            /*
+             
+             1. not baslangýc
+
+            interface den biraz bahsedelim
+            abstract class larý gördüðümüz gibi interface leri de görelim 
+            abstract ile interface arasýndaki fark nedir bundand bahsedeceðiz 
+
+            bir nesne birden fazla class ý kalýtabiliyor mu kalýtamadýgýmýz durumdalar da ne yapmalýyýz buna da bakacagýz
+
+            abstract tarafýnda þablon bir class olusturduk
+            þablon class ýn içerisinde yapýcý metotlarýmýz ve standart metotlarýmýz vardý birde abstract olarak iþaretlediðimiz metot body leri olmayan imzasý olan metotlar vardý 
+
+            interface kýsmýnda ise bizim tamamen þablon içerisine girdiðimiz bir yapýmýz var 
+
+            bir class degýl bir interface yeni bir class eklerken class a abstract ekliyoruz yeni bir item olustururken Intercafe seceneði var 
+
+            Yeni bir intercafe ekleyelim proje sag týk Add Class kýsmýndan Interface i secelim
+
+            Bir yazým standartý vardýr Interface ler buyuk ý I harfi ile baslarlar
+
+            IV161Musteri olusturalým gidelim
+
+            1. not bitiþ
+
+            2. not bitis IV161Musteri de bitti 
+
+             */
+
+
+        }
+
+        #endregion
+
+
+
+        -----------------------------------------------
+
+        
+namespace Bolum_18_OOP_Interface_Abstract
+{
+    public interface IV161Musteri
+    {
+        //public IV161Musteri()
+        //{
+
+        //}
+
+    }
+}
+
+
+
+/*
+
+1.not bitiþ program.cs den geldik
+
+2. not baslangýc 
+
+ilk hali
+
+
+namespace Bolum_18_OOP_Interface_Abstract
+{
+    internal interface IV161Musteri
+    {
+    }
+}
+
+
+
+ 
+class yerinde interface yazýyor public yapalým 
+
+ilk soru interface de yapýcý metot kullanýlýr mý ? hayýr kullanýlamaz tamamen þablon oldu burasý
+
+
+Interfaces cannot contain instance constructors
+
+
+namespace Bolum_18_OOP_Interface_Abstract
+{
+    public interface IV161Musteri
+    {
+        public IV161Musteri()
+        {
+
+        }
+
+    }
+}
+
+interface ve abstract arasýndaki fark 
+interface tamamen þablon içeriðe sahip olmasýdýr 
+abstract tarafýnda evet nesne orneklenemiyor ama içeride ben metot olusturabiliyorum standart bir metot verebiliyorum 
+abstract dedigim de metot imzasý ile iþi kurtarabiliyorum abstract demesem standart metotumu kullandýrabiliyorum 
+
+interface de bu durum söz konusu degil 
+interface in bütün tanýmlarý þablondur bütün tanýmlarý kuraldýr 
+interface içerisinde yapýcý metot kullanýlmaz 
+o zaman nesne ornegi de alýnamaz 
+
+abstract tarafýnda nesne ornegýný direk alamazsýn ama kalýtým yoluyla alýrsýn 
+
+interface de hiç bir metotun body si bulunmaz nesne ornegi alýnmaz en sýk kullanýlan þablon tipler arasýnda interface gelir 
+gercek hayatta da interface ler kullanýlýrlar tasarým desenlerýnde yogunlukla ýntercafe leri kullanýrýz 
+arka tarafta iþlerimizi kolaylastýrýrýz
+
+interface içerisinde neler olur 
+
+field lar olur
+metot lar olur
+delegate ler olur
+
+seni implement edenler bunlar onemli bunlarý alsýn kullansýn diyebiliriz
+
+program.cs e gidip dersi bitirelim
+
+2. not bitis
+
+
+ 
+ */
+

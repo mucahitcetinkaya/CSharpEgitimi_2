@@ -260,13 +260,13 @@ namespace Bolum_18_OOP_Interface_Abstract
         //{
 
         //    /*
-              
+
         //        Bolum 18 OOP Interface ve Abstract V160 Abstract ile sealed kullanılır mı ?
-             
+
         //     */
 
         //    /*
-            
+
         //    1. not baslangıc
 
         //    V160-temelSinif-Musteri class larını olusturalım V159 dan alabiliiriz notlarını
@@ -322,7 +322,7 @@ namespace Bolum_18_OOP_Interface_Abstract
         //    istersek standart metot yazarız istersek abstract metot yazar türetilen sınıf uzerınden body sını yazabiliriz
 
         //    abstract sınıflar içinde static metotlar yazılabilir ornek olusmadan cagrılabilir
-            
+
         //    V160temelSinif.testAbstract2(); // static metot new lemeden cagırdık
 
         //    metotlar static ve abstract aynı anda olamaz 
@@ -354,6 +354,52 @@ namespace Bolum_18_OOP_Interface_Abstract
 
         #endregion
 
+        #region VİDEO 161 Interface nedir ?
+
+        //static void Main(string[] args)
+        //{
+
+        //    /*
+
+        //        Bolum 18 OOP Interface ve Abstract V161 Interface nedir ?
+
+        //     */
+
+        //    /*
+             
+        //     1. not baslangıc
+
+        //    interface den biraz bahsedelim
+        //    abstract class ları gördüğümüz gibi interface leri de görelim 
+        //    abstract ile interface arasındaki fark nedir bundand bahsedeceğiz 
+
+        //    bir nesne birden fazla class ı kalıtabiliyor mu kalıtamadıgımız durumdalar da ne yapmalıyız buna da bakacagız
+
+        //    abstract tarafında şablon bir class olusturduk
+        //    şablon class ın içerisinde yapıcı metotlarımız ve standart metotlarımız vardı birde abstract olarak işaretlediğimiz metot body leri olmayan imzası olan metotlar vardı 
+
+        //    interface kısmında ise bizim tamamen şablon içerisine girdiğimiz bir yapımız var 
+
+        //    bir class degıl bir interface yeni bir class eklerken class a abstract ekliyoruz yeni bir item olustururken Intercafe seceneği var 
+
+        //    Yeni bir intercafe ekleyelim proje sag tık Add Class kısmından Interface i secelim
+
+        //    Bir yazım standartı vardır Interface ler buyuk ı I harfi ile baslarlar
+
+        //    IV161Musteri olusturalım gidelim
+
+        //    1. not bitiş
+
+        //    2. not bitis IV161Musteri de bitti 
+
+        //     */
+
+
+        //}
+
+        #endregion
+
+    
 
     }
 }
