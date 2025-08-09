@@ -1,0 +1,307 @@
+
+
+Bölüm 18 : OOP - Interface ve Abstract
+Video 159 Abstract metot nedir , kullanýmý
+
+
+#region VÝDEO 159 Abstract metot nedir , kullanýmý
+
+        static void Main(string[] args)
+        {
+            /*
+             
+            Bolum 18 OOP Interface ve Abstract V159 Abstract metot nedir , kullanýmý
+
+            */
+
+            /*
+             
+            1. not baslangýc
+
+            V158 in sonu temel sýnýf içinde bitiyor V159temelsýnýf olusturalým ve ayný senaryoyu olusturalým Musteri sýnýfýný olusturalým
+
+            1. not bitiþ temelSinif a gidelim
+
+            3. not bitiþ musteriden geldik
+
+            4. not baslangýc
+
+            musteri class ýný new leyelim
+
+            
+            V159Musteri M1 = new V159Musteri();
+            M1.test(); // temel sýnýf içindeki test
+            M1.testAbstract(); // musteri içindeki testAbstract
+        
+            debug yapalým 
+
+            M1.testAbstract(); e breakpoint koyalým
+            buraya gelince musteri içine dustu orada calýstý temelsýnýf içindeki testAbstract calýsmadý cunku oraya gondersede calýsacak bir body si yok orada
+
+            6. dk
+
+            su ana kadar ne görduk
+
+            abstract bir class nasý yapýlýr bunu görduk
+            abstract class larýn ilk cagýrým da orneklenemedigini ama kalýtýmsal acýdan baktýgýmýz da kalýtan nesnenin abstract class ý ornekleyebildigini gorduk 
+            abstract olan bir metot olursa bunun body si olmaz bunu imza olarak ekliyoruz bunu ekledýgýmýz nesneyi kalýtan bir nesne var ise bunu orada implement yapmak zorundayýz
+
+            bunu ne zaman kullanýrýz
+
+            ekip olarak calýstýgýmýzý dusunun herkes farklý bir bölüm yazýyor database e giden bir metot seklimiz olmalý sýmdý ben musteri class ýný yazýyorum ona göre rolum var
+            arkadasým sýparýs yazýyor digeri e ticaretten login leri ayarlýyor içerisi biraz curcuna yani herkes kendýne göre bir seyler yapmak ýstýyor 
+            ben metotun adýný testabstract yazdým obur arkadasým ayný metot olsun diye herkesýn kendý class ýnda ayný metotdan ayný metot imzalarýyla bulunsun diye bir karar verdik 
+            bizden sonraki yazýlýmcýlar için de kolaylýk olsun yada birisi gelmez iþten cýkar vs biz onun kodunu devralmak istersek bizimde basýmýza farklý seyler gelmesýn diye standarta oturtmak istiyoruz
+
+            ama gel görki t sini yazmadýn klavye basmadý herhangi bir kodlama hatasý oldu herkes böyle biþey yapsa noldu ortaya acayip metotlar cýkmýs oldu 
+            herkesýn kendý standartlarýna gore yazmýs oldugu bir mimariye kavusmus olduk 
+            artýk birisi ekipten ayrýlsa izine cýksa içeride yine bir surecsel uzama olur bunu anlayýp cozeceksin ben bunu anlamayamadým arkadas cok degisik kodlamýs dedýgýnýz senaryolar olabilir 
+
+            interface ve abstract bu noktada yardýmcý olur 
+            sen sablon olustur insanlara dagýt bunu kullanmak zorunda kalsýnlar 
+            dolayýsýyla developerler metot imzasý ile ugrasmaz class alýr implement eder içini doldurur gecer bir standarta kavusmus oluruz 
+
+            */
+
+            // 4. not baslangýc
+
+            V159Musteri M1 = new V159Musteri();
+            M1.test(); // temel sýnýf içindeki test
+            M1.testAbstract(); // musteri içindeki testAbstract
+
+        }
+
+        #endregion
+
+
+        ---------------------------------------------------------
+        
+using System;
+
+namespace Bolum_18_OOP_Interface_Abstract
+{
+    public abstract class V159temelSinif
+    {
+
+        public DateTime kayitTarih { get; set; }
+        public DateTime guncellemeTarih { get; set; }
+
+        public V159temelSinif()
+        {
+            kayitTarih = DateTime.Now;
+            guncellemeTarih = DateTime.Now;
+        }
+
+        public void test()
+        {
+            Console.WriteLine("temelsýnýfiçindekitestmetoducalýstý");
+        }
+
+        //public abstract void testAbstract()
+        //{
+
+        //}
+
+        public abstract void testAbstract();
+
+
+    }
+}
+
+/*
+ 
+ V158 notlarý 
+---------------------------------------------------------------------------------------------------------------
+
+10. not baslangýc
+
+abstract metot olusturalým
+
+ public abstract void testAbstract()
+        {
+
+        }
+
+böyle yazdýk ve hata verdi diger dersimiz de
+abstract class tanýdýk abstract metot nedir 
+neden hata verdi
+hata almayacagýmýz sekýlde yazdýgýmýz da bizim basýmýza ne gelir bunlarý inceleyecegiz 
+bu þablon tip bir þey þablon ise içeriði olmayabilir ufak bir ip ucu vereyim 
+
+10. not bitiþ diger derse geç
+
+V158 notlarý 
+---------------------------------------------------------------------------------------------------------------
+ 
+ */
+
+/*
+
+1. not bitiþ program.cs den geldik
+
+2. not baslangýc
+
+v158 temelsýnýf içinde en son metot olusturduk ordan devam ediyoruz 159 için
+
+abstract iþaretli metotlarýn body leri olmaz 
+neden olmaz
+biz þunu söylüyoruz abstract yaparak 
+þablon sýnýf yapacagým abstract þablona denk geliyor bu sablon sýnýf içinde bazý metotlarýnda þablon olarak durmasýný istiyorum
+ve bu sýnýfý kalýtan diger nesne beným içeride þablon olarak hazýrlamýs oldugum metotlarý kullanmak zorunda kalsýn 
+
+ana temelim beným nesne ornegi alýnamayan bir baska programcý tarafýndan eriþilebiliyor olsa bile new ile orneklenemeyen içerisinde beným hazýrlamýs oldugum metotlarý ve field larý 
+karsý tarafa verdýgým zaman kullanmasýný zorunlu kýldýgým bir þablon olusturmak dolayýsýyla test abstract metotu zaten sablon bir metot olacagý ýcýn zaten bunu cagýran nesne bunu ezmek zorunda kalacagý için
+metotun body sýne ýhtýyac yoktur 
+
+sadece metot imzasý vardýr.
+
+ilk hali hata veren kýsmý 
+
+ public abstract void testAbstract()
+        {
+
+        }
+
+sonraki hali
+
+ public abstract void testAbstract();
+
+metot imzasý nedir acýklamasýdýr yani metotu kullanacak kiþiye bilgi veriyoruz
+
+public herkese acýk
+void geriye biþey döndürmez
+testAbstract adýnda bir metot var 
+() parametre almaz
+
+kullanacak kiþiye yani temelSinif metotu nu kullanacak kiþiye diyoruz ki
+sen bu nesneyi kalýtýyosan eðer bu þekilde bir metot olustur ve bununda body sini yaz diyoruz 
+kime diyoruz bunu bunu kullanan yere yani buradaki senaryoda musteri sýnýfýna 
+musterý sýnýfý temelSinifi kalýttýgý için oraya demýs oluyoruz
+
+Musteri sýnýfýna gittiðim de hata verecek diyor ki ben abstract bir sýnýfý miras aldým içinde bir metot var bunu burada kullanmak zorundayým 
+
+Musteri sýnýfýna gidelim
+
+2. not bitiþ
+
+
+*/
+        ---------------------------------------------------------
+        
+using System;
+
+namespace Bolum_18_OOP_Interface_Abstract
+{
+    public class V159Musteri : V159temelSinif
+    {
+        public int musteriID { get; set; }
+
+        public V159Musteri()
+        {
+            musteriID = 1;
+        }
+
+        public override void testAbstract()
+        {
+            //throw new System.NotImplementedException();
+
+            //base.testAbstract();
+
+            Console.WriteLine("musteri içindeki testAbstract");
+        }
+    }
+}
+
+
+
+/*
+
+2. not bitiþ temelsýnýftan geldik
+
+3. not baslangýc
+
+V159Musteri hata veriyor
+
+'V159Musteri' does not implement inherited abstract member 'V159temelSinif.testAbstract()'
+
+does not implement diyo yani bir þeyi burada acmadýn diyor hata veriyor
+
+temelsýnýf içindeki testAbstract metotunu bende kullanmadýn diyor 
+
+zorundayým kullan bunu diyor 
+
+V159Musteri nin uzerýne gelince implement yazar ona basýnca gereklileri burada kullanýr
+
+oncesi
+
+
+namespace Bolum_18_OOP_Interface_Abstract
+{
+    public class V159Musteri : V159temelSinif
+    {
+        public int musteriID { get; set; }
+
+        public V159Musteri()
+        {
+            musteriID = 1;
+        }
+
+
+    }
+}
+
+sonrasý
+
+
+namespace Bolum_18_OOP_Interface_Abstract
+{
+    public class V159Musteri : V159temelSinif
+    {
+        public int musteriID { get; set; }
+
+        public V159Musteri()
+        {
+            musteriID = 1;
+        }
+
+        public override void testAbstract()
+        {
+            throw new System.NotImplementedException();
+        }
+    }
+}
+
+
+public override olarak geliyor oranýn body sini bana getiriyor 
+
+virtual olarak iþaretlendiðin de override ediyorduk birde bu metotun base i oluyor du 
+
+            throw new System.NotImplementedException(); bunun yerine base. olarak base.testAbstract i cagýralým
+
+
+ public override void testAbstract()
+        {
+            //throw new System.NotImplementedException();
+
+            base.testAbstract();
+        }
+
+testAbstract(); metotunun içi yok abstract cunku içeride virtual olmasýna gerek yok abstract kalýtan bunun body sini kendisi yazacak
+
+son hali 
+
+public override void testAbstract()
+        {
+            //throw new System.NotImplementedException();
+
+            //base.testAbstract();
+
+            Console.WriteLine("musteri içindeki testAbstract");
+        }
+
+program.cs e gidelim
+
+3. not bitiþ
+
+
+ */

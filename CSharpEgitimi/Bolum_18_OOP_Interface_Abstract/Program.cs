@@ -73,13 +73,13 @@ namespace Bolum_18_OOP_Interface_Abstract
         //{
 
         //    /*
-             
+
         //            Bolum 18 OOP Interface ve Abstract V158 Abstract Nedir - Abstract class kullanımı
-             
+
         //    */
 
         //    /*
-             
+
         //    1. not başlangıç
 
         //    Nesne yönelimli programlama da herşeyin başında bir nesne oluşturup bunların içinde field metot atadık kalıttık static leri gördük bir çok işlem yaptık
@@ -108,7 +108,7 @@ namespace Bolum_18_OOP_Interface_Abstract
         //    4. not bitiş temelsınıftan geldik
 
         //    5. not baslangıc
-            
+
         //    temelSinif i abstract yapınca V158temelSinif T1 = new V158temelSinif(); hata verdi
 
         //    new kısmında hata veriyor yani diyoki bunu ornekleyemezsin diyo abstract ve interface oldugunda orneklenemez
@@ -121,7 +121,7 @@ namespace Bolum_18_OOP_Interface_Abstract
         //    yeni bir sınıf olusturalım musteri oraya gidelim
 
         //    5. not bitiş
-            
+
         //    6. not bitiş musteriden geldik
 
         //    7. not baslangıc
@@ -138,7 +138,7 @@ namespace Bolum_18_OOP_Interface_Abstract
         //    temelsınıfa gidelim
 
         //    7. not bitiş
-            
+
         //    8. not bitiş temelsınıftan geldik
 
         //    9. not baslangıc
@@ -152,7 +152,7 @@ namespace Bolum_18_OOP_Interface_Abstract
 
         //    orneklenmemiş bir class ın içindeki bu sekılde yazılmıs static olmayan bir metotu ben kullanamam 
         //    kullanabilmem için o nesnenin diger nesneyi ben ornekleyemesem de ornekleyip bana sunması gerekiyor
-            
+
         //    ben class a direk mudahale ile ornekleyememem problem degil 
         //    problem su benım orneklemıs oldugum nesne temelsınıf nesnesini orneklemek zorunda cunku kalıtım kuralları var 
         //    ben diyo base olarak gormus oldugum sınıfın içindeki field ları metotları public duzeydeyse internal duzeydeyse private degilse yani sana kullanıma acarım diyo 
@@ -164,10 +164,10 @@ namespace Bolum_18_OOP_Interface_Abstract
         //    temelsınıf a gidelim abstract metot olusturalım
 
         //    9. not bitiş
-            
+
         //    10. not bitiş diger derse geç temel sınıf içinde bitti ders
 
-            
+
 
         //    */
 
@@ -183,6 +183,74 @@ namespace Bolum_18_OOP_Interface_Abstract
 
         #endregion
 
+        #region VİDEO 159 Abstract metot nedir , kullanımı
+
+        //static void Main(string[] args)
+        //{
+        //    /*
+             
+        //    Bolum 18 OOP Interface ve Abstract V159 Abstract metot nedir , kullanımı
+
+        //    */
+
+        //    /*
+             
+        //    1. not baslangıc
+
+        //    V158 in sonu temel sınıf içinde bitiyor V159temelsınıf olusturalım ve aynı senaryoyu olusturalım Musteri sınıfını olusturalım
+
+        //    1. not bitiş temelSinif a gidelim
+
+        //    3. not bitiş musteriden geldik
+
+        //    4. not baslangıc
+
+        //    musteri class ını new leyelim
+
+            
+        //    V159Musteri M1 = new V159Musteri();
+        //    M1.test(); // temel sınıf içindeki test
+        //    M1.testAbstract(); // musteri içindeki testAbstract
+        
+        //    debug yapalım 
+
+        //    M1.testAbstract(); e breakpoint koyalım
+        //    buraya gelince musteri içine dustu orada calıstı temelsınıf içindeki testAbstract calısmadı cunku oraya gondersede calısacak bir body si yok orada
+
+        //    6. dk
+
+        //    su ana kadar ne görduk
+
+        //    abstract bir class nası yapılır bunu görduk
+        //    abstract class ların ilk cagırım da orneklenemedigini ama kalıtımsal acıdan baktıgımız da kalıtan nesnenin abstract class ı ornekleyebildigini gorduk 
+        //    abstract olan bir metot olursa bunun body si olmaz bunu imza olarak ekliyoruz bunu ekledıgımız nesneyi kalıtan bir nesne var ise bunu orada implement yapmak zorundayız
+
+        //    bunu ne zaman kullanırız
+
+        //    ekip olarak calıstıgımızı dusunun herkes farklı bir bölüm yazıyor database e giden bir metot seklimiz olmalı sımdı ben musteri class ını yazıyorum ona göre rolum var
+        //    arkadasım sıparıs yazıyor digeri e ticaretten login leri ayarlıyor içerisi biraz curcuna yani herkes kendıne göre bir seyler yapmak ıstıyor 
+        //    ben metotun adını testabstract yazdım obur arkadasım aynı metot olsun diye herkesın kendı class ında aynı metotdan aynı metot imzalarıyla bulunsun diye bir karar verdik 
+        //    bizden sonraki yazılımcılar için de kolaylık olsun yada birisi gelmez işten cıkar vs biz onun kodunu devralmak istersek bizimde basımıza farklı seyler gelmesın diye standarta oturtmak istiyoruz
+
+        //    ama gel görki t sini yazmadın klavye basmadı herhangi bir kodlama hatası oldu herkes böyle bişey yapsa noldu ortaya acayip metotlar cıkmıs oldu 
+        //    herkesın kendı standartlarına gore yazmıs oldugu bir mimariye kavusmus olduk 
+        //    artık birisi ekipten ayrılsa izine cıksa içeride yine bir surecsel uzama olur bunu anlayıp cozeceksin ben bunu anlamayamadım arkadas cok degisik kodlamıs dedıgınız senaryolar olabilir 
+
+        //    interface ve abstract bu noktada yardımcı olur 
+        //    sen sablon olustur insanlara dagıt bunu kullanmak zorunda kalsınlar 
+        //    dolayısıyla developerler metot imzası ile ugrasmaz class alır implement eder içini doldurur gecer bir standarta kavusmus oluruz 
+
+        //    */
+
+        //    // 4. not baslangıc
+
+        //    V159Musteri M1 = new V159Musteri();
+        //    M1.test(); // temel sınıf içindeki test
+        //    M1.testAbstract(); // musteri içindeki testAbstract
+
+        //}
+
+        #endregion
 
 
 
