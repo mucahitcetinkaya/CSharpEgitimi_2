@@ -1,0 +1,38 @@
+
+
+Bölüm 20: OOP Enum Kavramý
+Video 166 Bilgilendirme
+
+ #region VÝDEO 166 Bilgilendirme
+
+        static void Main(string[] args)
+        {
+
+            /*
+
+                Bolum 20 OOP Enum Kavrami V166 Bilgilendirme
+
+
+            */
+
+            /*
+            
+            1. not baslangýc
+
+            uygulamalarýmýzý yazarken bize avantaj saglayacak
+            onceki ve sonraki yazýlýmcýya da avantaj saglayacak dua ettirecek bir konudan bahsedeceðiz enum lar 
+
+            okuma kolaylýgý acýsýndan karsýsýna cýkacaktýr ilgili kod satýrýný daha kolay yorumlayabilecektir
+
+            enum lara neden ihtiyac duyarýz
+            enum nedir
+            ne gibi avantaj saglar
+            yazdýgýmýz uygulamaya avantaj saglar mý 
+            olmasada bu iþ olur mu 
+            olmasý ne kazandýrýr
+                         
+            */
+          
+        }
+
+        #endregion
