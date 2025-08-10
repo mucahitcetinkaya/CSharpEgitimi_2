@@ -1,0 +1,149 @@
+
+
+Bölüm 20: OOP Enum Kavramý
+Video 167 Enum Nedir
+
+
+        #region VÝDEO 167 Enum Nedir
+
+        static void Main(string[] args)
+        {
+
+            /*
+
+                Bolum 20 OOP Enum Kavrami V167 Enum Nedir
+
+
+            */
+
+            /*
+             
+            1. not baslangýc
+
+            eski kodumuz da olabilir baska birinden de kod almýs olabiliriz
+
+            katmanlý mimari uygulanmýyorsa if else bloklarý gelecektir
+
+            ogrenci nesnesini bolum 19 dan ogrenci nesnesinden aldýk hoca burada anlatmadý eski kod veya baskasýndan kod aldýgýmýz için kendý yazmýs anlatmak için boyle olusturmus akýllý adam
+
+            Ogrenci nesnesi olusturalým
+
+            1. not bitiþ
+
+            2. not bitiþ ogrenciden geldik
+
+            3. not baslangýc
+
+            ogrenci nesnesini bolum 19 dan ogrenci nesnesinden aldýk hoca burada anlatmadý
+
+            V167Ogrenci O1 = new V167Ogrenci();
+            O1.id = 1;
+            int ogrenciKayitSonuc = O1.yeniKayit(O1);
+
+            new ledik ve prop ve metot larýný kullandýk
+
+            if else lerini yazalým
+
+            ogrenci tipinden bir deger aktarýmý yapýlmýs ogrenciyi sisteme kayýt yapýyorum 
+            kayýt etmeye calýsýrken ilgili metot bana bir sekýlde bir metot donuyor 
+            donmus oldugu deger ogrenciKayitSonuc degeri 
+            bana burdan bir int deger dondu bu degeri beným yönlendirmem lazým 
+            kayýt oldu mu
+            parametresi dogru mu 
+            runtime da hata mý aldým
+            bütün sorularýn cevabýnda 71777700x ile donen bir deger var 0 a dogru kayýt 1 de parametresi dogru yanlýs vs gibi
+
+            bunlarýn acýklamasýný kim biliyor kim yazdýysa o biliyor 
+            uygulamayý kodlarken biz biliyoduk 
+            ama þimdi hangisi ne bilmiyoruz 
+
+            bunu anlamak için yenikayýtmetot içine gidip yazdýgýmýz veya yazýlmýs kod bloklarýný tek tek yenýden debug ederek uzerlerýnden gecip hata kodlarýnýn acýklamasýný hatýrlayacagýz veya ogrenecegýz
+            iþte bu karmasadan bizi kurtaran bir yapýdýr enum 
+
+            nesne yonelýmlý kod yazma veya yazarken içerisindeki bütün degerleri dogru yerlerde kullanabilme eger firmanýzýn bir kuralý olduysa hiç bir kodu devir almaktan korkmayýn 
+            ama herkesýn kafasýna göre kod yazmýs oldugu yerlerde ise giden arkadasý biraz yorunki karsýnýza boyle biþey cýktýgýnda onlarý olmasý gereken yapýya cok kolay cevirebilirsiniz
+
+            þimdý böyle bir karýsýk yapýyý daha okunaklý nasýl yaparýz bunu birlikte ogrenelim
+
+            */
+
+            V167Ogrenci O1 = new V167Ogrenci();
+            O1.id = 1;
+            int ogrenciKayitSonuc = O1.yeniKayit(O1);
+
+            if (ogrenciKayitSonuc == 717777000)
+            {
+                
+            }
+            else if (ogrenciKayitSonuc == 717777001)
+            {
+                
+            }
+            else if (ogrenciKayitSonuc == 717777002)
+            {
+
+            }
+            else if (ogrenciKayitSonuc == 717777003)
+            {
+
+            }
+            else if (ogrenciKayitSonuc == 717777004)
+            {
+
+            }
+            else
+            {
+
+            }
+
+        }
+
+        #endregion
+
+        --------------------------------
+
+        
+using System;
+
+namespace Bolum_20_OOP_Enum_Kavrami
+{
+    public class V167Ogrenci
+    {
+        public int id { get; set; }
+        public string isim { get; set; }
+        public string soyisim { get; set; }
+        public string ogrenciNumarasi { get; set; }
+
+        public int yeniKayit(V167Ogrenci m)
+        {
+            Console.WriteLine("musteri yeniKayit");
+            return 1;
+        }
+
+        public int kayitGuncelle(V167Ogrenci m)
+        {
+            Console.WriteLine("musteri kayitGuncelle");
+            return 1;
+        }
+
+        public int kayitSil(int id)
+        {
+            Console.WriteLine("musteri kayitSil");
+            return 1;
+        }
+
+
+    }
+}
+
+/*
+ 
+1. not bitiþ program.cs den geldik
+
+2. not baslangýc
+
+hoca bunlarý anlatmýyor bolum 19 dan aldým ogrenci nesnesinden
+ 
+2. not bitiþ program.cs e gidelim
+ 
+*/
