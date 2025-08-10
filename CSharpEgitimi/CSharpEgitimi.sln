@@ -35,6 +35,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bolum_17_OOP_Sanal_Metot", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bolum_18_OOP_Interface_Abstract", "Bolum_18_OOP_Interface_Abstract\Bolum_18_OOP_Interface_Abstract.csproj", "{5B3EC84C-D1A4-4C2A-BF15-A8138062A7DC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bolum_19_Partial_Class", "Bolum_19_Partial_Class\Bolum_19_Partial_Class.csproj", "{5A48BE54-AFAC-46A5-A783-D41A40EBD4DD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -105,6 +107,10 @@ Global
 		{5B3EC84C-D1A4-4C2A-BF15-A8138062A7DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5B3EC84C-D1A4-4C2A-BF15-A8138062A7DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5B3EC84C-D1A4-4C2A-BF15-A8138062A7DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A48BE54-AFAC-46A5-A783-D41A40EBD4DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A48BE54-AFAC-46A5-A783-D41A40EBD4DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A48BE54-AFAC-46A5-A783-D41A40EBD4DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A48BE54-AFAC-46A5-A783-D41A40EBD4DD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

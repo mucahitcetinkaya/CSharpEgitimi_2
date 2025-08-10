@@ -1,0 +1,50 @@
+
+
+Bölüm 19 : Partial Class
+Video 163 Bilgilendirme
+
+        #region VÝDEO 163 Bilgilendirme
+
+        static void Main(string[] args)
+        {
+
+            /*
+
+                Bolum 19 Partial Class V163 Bilgilendirme
+
+
+            */
+
+            /*
+
+            1. not baslangýc
+
+            bu bölümde bilmemizin iyi olacagý bilmesekte calýsmamýza engel olmayacagý bir kavram olan partial class larý görecegýz 
+
+            class larý biz class musteri vs gibi yazýyorduk bu class ýn içinde de problar fiel lar metotlar vs oluyordu 
+
+            bunu uzun süreçte düþündüðünüz de bir uygulama yazarken birden fazla baglantý kuracagýmýz için bir sürü kod blogumuz olur 
+
+            be ilgili metotu aratmak zorunda kalýrýz ctrl + f yani bu kodda bir duzensizliðe de yol acmakta 
+
+            þöyle bir þey istersek ne olur
+
+            beným öyle bir mantýgým olsun ki 
+            ben musteri class ýmýn field larýný bir yerde toplayayým 
+            ben musteri class ýmýn metot larýný bir yerde toplayayým 
+
+            eger field larýna bakmak istersem ilgili bölümdeki alana bakýp field larýný arayabileyim yada ekleyebileyim 
+            metotlarýna bakmak istersem de farklý bir alandan gideyim metotlarýný göreyim 
+            fakat uygulama calýstýgý zaman 2 farklý parcayý tek bir parca olarak elde edebileyim 
+
+            n katmanli mimari repostory disagne pattern vb database iliþkilerin de kullandýgýmýz business servisler de partial class larýn onemini daha net anlayacagýz 
+
+            diger derse gecelim.
+
+
+            */
+
+
+        }
+
+        #endregion
