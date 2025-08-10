@@ -1,0 +1,481 @@
+
+
+Bölüm 19 : Partial Class
+Video 164 Partial class nedir - 1
+
+        #region VÝDEO 164 Partial class nedir - 1
+
+        static void Main(string[] args)
+        {
+
+            /*
+
+                Bolum 19 Partial Class V164-V165 Partial class nedir - 1
+
+
+            */
+
+            /*
+
+            1. not baslangýc
+
+            once bir class olusturalým ve bu class ýn içinde field prob metot larýmýzý yazalým inceleyelim sonrada bunu partial olarak guncelleyelim
+
+            Musteri class ýný olusturalým
+
+            1. not bitiþ
+
+            2. not bitiþ musteriden geldik
+
+            3. not baslangýc
+
+            musteri nesnesini new leyelim
+
+            new ledýk ve m1. dedigimiz de butun prob ve metotlarýný görebiliyoruz son durum
+
+            V164Musteri M1 = new V164Musteri();
+            M1.id = 1;
+            M1.isim = "mücahit";
+            M1.soyisim = "çetinkaya";
+            M1.email = "abc@hotmail.com";
+
+            int sonuc = M1.yeniKayit(M1);
+
+            if (sonuc > 0) 
+            {
+                Console.WriteLine("database e yeni kayýt eklendi.");
+            }
+
+
+            musteriye gecelim
+
+            3. not bitiþ
+
+            4. not bitiþ musteriden geldik
+
+            5. not baslangýc
+
+            yeni class olusturalým V164OgrenciField
+
+            V164OgrenciField e gidelim
+
+            5. not bitiþ
+
+            6. not bitiþ ogrencifield dan geldik
+
+            7. not baslangýc
+
+            ogrenciMetot.cs adýnda bir class olusturalým oraya gidelim
+
+            7. not bitis
+
+            8. not bitis V164OgrenciMetot
+
+            9. not baslangýc
+
+            V164OgrenciMetot içindeki ders bitti diger derse geç
+
+            9. not bitiþ
+
+
+
+            */
+
+            // 3. not baslangýc
+
+            V164Musteri M1 = new V164Musteri();
+            M1.id = 1;
+            M1.isim = "mücahit";
+            M1.soyisim = "çetinkaya";
+            M1.email = "abc@hotmail.com";
+
+            int sonuc = M1.yeniKayit(M1);
+
+            if (sonuc > 0)
+            {
+                Console.WriteLine("database e yeni kayýt eklendi.");
+            }
+
+
+        }
+
+        #endregion
+
+
+        -------------------------
+
+        
+using System;
+
+namespace Bolum_19_Partial_Class
+{
+    public class V164Musteri
+    {
+
+        #region Fields
+
+        public int id { get; set; }
+        public string isim { get; set; }
+        public string soyisim { get; set; }
+        public string email { get; set; }
+
+        #endregion
+
+        #region metot
+
+        public int yeniKayit(V164Musteri m)
+        {
+            Console.WriteLine("musteri yeniKayit");
+            return 1;
+        }
+
+        public int kayitGuncelle(V164Musteri m)
+        {
+            Console.WriteLine("musteri kayitGuncelle");
+            return 1;
+        }
+
+        public int kayitSil(int id)
+        {
+            Console.WriteLine("musteri kayitSil");
+            return 1;
+        }
+
+        #endregion
+    }
+}
+
+/*
+ 
+1. not bitiþ program.cs den geldik
+
+2. not baslangýc
+
+field ve metotlarý yazdýk 
+
+son durum 
+
+
+using System;
+
+namespace Bolum_19_Partial_Class
+{
+    public class V164Musteri
+    {
+        public int id { get; set; }
+        public string isim { get; set; }
+        public string soyisim { get; set; }
+        public string email { get; set; }
+
+        public int yeniKayit(V164Musteri m)
+        {
+            Console.WriteLine("musteri yeniKayit");
+            return 1;
+        }
+
+        public int kayitGuncelle(V164Musteri m)
+        {
+            Console.WriteLine("musteri kayitGuncelle");
+            return 1;
+        }
+
+        public int kayitSil(int id)
+        {
+            Console.WriteLine("musteri kayitSil");
+            return 1;
+        }
+
+    }
+}
+
+
+program.cs e gidelim
+
+2. not bitiþ
+
+3. not bitiþ program.cs den geldik
+
+4. not baslangýc
+
+musteride olusturduklarýmýzý program.cs de kullandýk 
+þöyle düþünün mesela örnek olarak diyelim ki 
+kalýtým kullandýk 
+get ve setleri ayýrdýk 
+bir çok iþlem yaptýgýmýzý düþünün
+
+burasý bir kod yýgýný haline gelecek 
+
+region iþlemleri bizi kurtabilir mesela 
+
+ilk durum
+
+using System;
+
+namespace Bolum_19_Partial_Class
+{
+    public class V164Musteri
+    {
+        public int id { get; set; }
+        public string isim { get; set; }
+        public string soyisim { get; set; }
+        public string email { get; set; }
+
+        public int yeniKayit(V164Musteri m)
+        {
+            Console.WriteLine("musteri yeniKayit");
+            return 1;
+        }
+
+        public int kayitGuncelle(V164Musteri m)
+        {
+            Console.WriteLine("musteri kayitGuncelle");
+            return 1;
+        }
+
+        public int kayitSil(int id)
+        {
+            Console.WriteLine("musteri kayitSil");
+            return 1;
+        }
+
+    }
+}
+
+region sonrasý
+
+
+using System;
+
+namespace Bolum_19_Partial_Class
+{
+    public class V164Musteri
+    {
+
+        #region Fields
+
+        public int id { get; set; }
+        public string isim { get; set; }
+        public string soyisim { get; set; }
+        public string email { get; set; }
+
+        #endregion
+
+        #region metot
+
+        public int yeniKayit(V164Musteri m)
+        {
+            Console.WriteLine("musteri yeniKayit");
+            return 1;
+        }
+
+        public int kayitGuncelle(V164Musteri m)
+        {
+            Console.WriteLine("musteri kayitGuncelle");
+            return 1;
+        }
+
+        public int kayitSil(int id)
+        {
+            Console.WriteLine("musteri kayitSil");
+            return 1;
+        }
+
+        #endregion
+    }
+}
+
+böyle region lar her zaman bizim iþimizi görmez disagne pattern ler konusunda daha net anlayacaksýnýz
+
+bazý class içindeki field larý ve metotlarý fiziksel olarak da bölmemiz gerekiyor 
+
+mesela V164Musteri.cs adýnda bir dosya var fiziksel bir dosya bu ben bu cs dosyasýný cogaltmak ve musteri nesnesini parcalamak istiyorum 
+
+iþlemlere baslayalým
+
+program.cs de gidelim
+ 
+4. not bitiþ
+
+*/
+
+
+---------------------------------------------------------------
+
+
+
+namespace Bolum_19_Partial_Class
+{
+    public class V164Ogrenci
+    {
+        public int id { get; set; }
+        public string isim { get; set; }
+        public string soyisim { get; set; }
+        public string ogrenciNumarasi { get; set; }
+    }
+}
+
+/*
+
+5. not bitiþ program.cs den geldik
+
+6. not baslangýc
+
+fiziksel olarak bu class ýn adý V164OgrenciField.cs
+
+ilk durum
+
+
+namespace Bolum_19_Partial_Class
+{
+    public class V164OgrenciField
+    {
+    }
+}
+
+bunun adýný degistirelim field kýsmýný class içinden silelim .cs adý ayný kalacak
+
+son durum
+
+
+namespace Bolum_19_Partial_Class
+{
+    public class V164Ogrenci
+    {
+    }
+}
+
+prob lar ekleyelim
+
+ 
+namespace Bolum_19_Partial_Class
+{
+    public class V164Ogrenci
+    {
+        public int id { get; set; }
+        public string isim { get; set; }
+        public string soyisim { get; set; }
+        public string ogrenciNumarasi { get; set; }
+    }
+}
+
+program.cs e gidelim
+
+6. not bitiþ
+ 
+*/
+
+
+------------------------------------------------------------------
+
+
+
+using System;
+
+namespace Bolum_19_Partial_Class
+{
+    public class V164Ogrenci
+    {
+
+        public int yeniKayit(V164Ogrenci m)
+        {
+            Console.WriteLine("musteri yeniKayit");
+            return 1;
+        }
+
+        public int kayitGuncelle(V164Ogrenci m)
+        {
+            Console.WriteLine("musteri kayitGuncelle");
+            return 1;
+        }
+
+        public int kayitSil(int id)
+        {
+            Console.WriteLine("musteri kayitSil");
+            return 1;
+        }
+
+    }
+}
+
+/*
+ 
+7. not bitiþ program.cs den geldik
+
+8. not baslangýc
+ 
+ilk durum
+ 
+
+namespace Bolum_19_Partial_Class
+{
+    public class V164OgrenciMetot
+    {
+
+    }
+}
+
+V164OgrenciMetot ismini V164Ogrenci yapalým digeri ile ayný olacak
+
+son durum 
+
+
+namespace Bolum_19_Partial_Class
+{
+    public class V164Ogrenci
+    {
+
+    }
+}
+
+The namespace 'Bolum_19_Partial_Class' already contains a definition for 'V164Ogrenci'
+
+V164Ogrenci de bir hata verdi fakat önce metotlarýmýzý yazalým 
+
+son durum
+
+using System;
+
+namespace Bolum_19_Partial_Class
+{
+    public class V164Ogrenci
+    {
+
+        public int yeniKayit(V164Ogrenci m)
+        {
+            Console.WriteLine("musteri yeniKayit");
+            return 1;
+        }
+
+        public int kayitGuncelle(V164Ogrenci m)
+        {
+            Console.WriteLine("musteri kayitGuncelle");
+            return 1;
+        }
+
+        public int kayitSil(int id)
+        {
+            Console.WriteLine("musteri kayitSil");
+            return 1;
+        }
+
+    }
+}
+
+benim þimdi son durumda V164OgrenciField ve V164OgrenciMetot adýnda 2 farklý cs dosyam var 
+bunlarýn içinde girince ikisininde isimleri V164Ogrenci yazýyor
+
+hataya gelince 2 tane V164Ogrenci var diyor ben bunlarý tek bir class olarak bunlarý algýlatmam lazým 
+
+field larýna gidince field larýný 
+metotlarýna gidince metotlarýný görebiliyoruz 
+
+2 V164Ogrenci class ýný da tek bir V164Ogrenci gibi orneklemek kullanmak istiyorum
+
+bir sonraki dersimiz de tek bir taným ile bu iþlemi yapacagýz
+
+program.cs e gidelim
+
+8. not bitis
+
+ 
+*/
