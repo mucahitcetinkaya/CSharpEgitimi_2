@@ -159,8 +159,84 @@ namespace Bolum_19_Partial_Class
 
         #endregion
 
+        #region VİDEO 165 Partial class nedir - 2
+
+        //static void Main(string[] args)
+        //{
+
+        //    /*
+
+        //        Bolum 19 Partial Class V165 Partial class nedir - 2
 
 
+        //    */
+
+        //    /*
+
+        //    9. not bitiş V164
+
+        //    1. not baslangıc V165
+
+        //    V164 den aldık kodları V165 olusturduk
+        //    V165Musteri.cs
+        //    V165OgrenciField.cs
+        //    V165OgrenciMetot.cs
+
+        //    V165OgrenciField.cs ve V165OgrenciMetot.cs class içinde isimleri aynı V165Ogrenci
+
+        //    1. not bitiş V165OgrenciMetot.cs e gidelim
+
+        //    3. not bitiş V165OgrenciField den geldik
+
+        //    4. not baslangıc
+
+        //    metotları ve field ları ayırdık bakalım tek bir yerden kullanabilecek miyiz
+
+        //    ogrenci nesnesini new leyelim
+
+        //    V165Ogrenci O1 = new V165Ogrenci();
+        //    V165Ogrenci yazınca tek bir tane geldi
+
+        //    O1. yazınca da field ve metotlarımı da görebiliyorum
+
+        //    V165Ogrenci O1 = new V165Ogrenci();
+
+        //    O1.id = 1;
+        //    O1.yeniKayit(O1);
+
+        //    id veya yeniKayit üstünde
+        //    ctrl ve mouse ile sol yapınca
+
+        //    id e yapınca Field a yeniKayit a yapınca Metot a gönderiyor beni
+
+        //    2 veya daha fazla sekılde partial class kullanılabilir 
+
+        //    ders bitti diger konuya gecelim
+
+        //    */
+
+        //    V165Musteri M1 = new V165Musteri();
+        //    M1.id = 1;
+        //    M1.isim = "mücahit";
+        //    M1.soyisim = "çetinkaya";
+        //    M1.email = "abc@hotmail.com";
+
+        //    int sonuc = M1.yeniKayit(M1);
+
+        //    if (sonuc > 0)
+        //    {
+        //        Console.WriteLine("database e yeni kayıt eklendi.");
+        //    }
+
+        //    V165Ogrenci O1 = new V165Ogrenci();
+
+        //    O1.id = 1;
+        //    O1.yeniKayit(O1);
+
+
+        //}
+
+        #endregion
 
     }
 }

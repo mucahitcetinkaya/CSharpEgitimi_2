@@ -48,11 +48,15 @@
     <Compile Include="V164Musteri.cs" />
     <Compile Include="V164OgrenciField.cs" />
     <Compile Include="V164OgrenciMetot.cs" />
+    <Compile Include="V165Musteri.cs" />
+    <Compile Include="V165OgrenciField.cs" />
+    <Compile Include="V165OgrenciMetot.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Not\Bolum_19_Partial_Class-V165.txt" />
     <Content Include="Not\Bolum_19_Partial_Class-V164.txt" />
     <Content Include="Not\Bolum_19_Partial_Class-V163.txt" />
   </ItemGroup>

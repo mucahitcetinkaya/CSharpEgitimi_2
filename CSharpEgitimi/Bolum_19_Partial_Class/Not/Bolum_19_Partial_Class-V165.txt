@@ -1,0 +1,302 @@
+
+
+Bölüm 19 : Partial Class
+Video 165 Partial class nedir - 2
+
+
+        //#region VÝDEO 165 Partial class nedir - 2
+
+        //static void Main(string[] args)
+        //{
+
+        //    /*
+
+        //        Bolum 19 Partial Class V165 Partial class nedir - 2
+
+
+        //    */
+
+        //    /*
+
+        //    9. not bitiþ V164
+
+        //    1. not baslangýc V165
+
+        //    V164 den aldýk kodlarý V165 olusturduk
+        //    V165Musteri.cs
+        //    V165OgrenciField.cs
+        //    V165OgrenciMetot.cs
+
+        //    V165OgrenciField.cs ve V165OgrenciMetot.cs class içinde isimleri ayný V165Ogrenci
+
+        //    1. not bitiþ V165OgrenciMetot.cs e gidelim
+
+        //    3. not bitiþ V165OgrenciField den geldik
+
+        //    4. not baslangýc
+
+        //    metotlarý ve field larý ayýrdýk bakalým tek bir yerden kullanabilecek miyiz
+
+        //    ogrenci nesnesini new leyelim
+
+        //    V165Ogrenci O1 = new V165Ogrenci();
+        //    V165Ogrenci yazýnca tek bir tane geldi
+
+        //    O1. yazýnca da field ve metotlarýmý da görebiliyorum
+
+        //    V165Ogrenci O1 = new V165Ogrenci();
+
+        //    O1.id = 1;
+        //    O1.yeniKayit(O1);
+
+        //    id veya yeniKayit üstünde
+        //    ctrl ve mouse ile sol yapýnca
+
+        //    id e yapýnca Field a yeniKayit a yapýnca Metot a gönderiyor beni
+
+        //    2 veya daha fazla sekýlde partial class kullanýlabilir 
+
+        //    ders bitti diger konuya gecelim
+
+        //    */
+
+        //    V165Musteri M1 = new V165Musteri();
+        //    M1.id = 1;
+        //    M1.isim = "mücahit";
+        //    M1.soyisim = "çetinkaya";
+        //    M1.email = "abc@hotmail.com";
+
+        //    int sonuc = M1.yeniKayit(M1);
+
+        //    if (sonuc > 0)
+        //    {
+        //        Console.WriteLine("database e yeni kayýt eklendi.");
+        //    }
+
+        //    V165Ogrenci O1 = new V165Ogrenci();
+
+        //    O1.id = 1;
+        //    O1.yeniKayit(O1);
+
+
+        //}
+
+        //#endregion
+
+--------------------------------------------------------------------------------------------------------------
+        
+using System;
+
+namespace Bolum_19_Partial_Class
+{
+    public class V165Musteri
+    {
+
+        #region Fields
+
+        public int id { get; set; }
+        public string isim { get; set; }
+        public string soyisim { get; set; }
+        public string email { get; set; }
+
+        #endregion
+
+        #region metot
+
+        public int yeniKayit(V165Musteri m)
+        {
+            Console.WriteLine("musteri yeniKayit");
+            return 1;
+        }
+
+        public int kayitGuncelle(V165Musteri m)
+        {
+            Console.WriteLine("musteri kayitGuncelle");
+            return 1;
+        }
+
+        public int kayitSil(int id)
+        {
+            Console.WriteLine("musteri kayitSil");
+            return 1;
+        }
+
+        #endregion
+    }
+}
+
+/*
+
+1. not bitiþ program.cs den geldik
+
+
+*/
+
+--------------------------------------------------------------------------------------------------------------
+
+
+namespace Bolum_19_Partial_Class
+{
+    public partial class V165Ogrenci
+    {
+        public int id { get; set; }
+        public string isim { get; set; }
+        public string soyisim { get; set; }
+        public string ogrenciNumarasi { get; set; }
+    }
+}
+
+/*
+
+2. not bitis V165OgrenciMetot den geldik
+
+3. not baslangýc
+
+bu class ý da partial yapalým
+
+partial yapýnca hata ortadan kalktý
+
+uygulama biliyor ki Ogrenci class ý 2 farklý cs de bulunan bir partial class 
+
+bunu cagýrýnca tek bir parca olarak alýyor ve kullanabiliyor olmam gerekli 
+
+program .cs e gidelim
+
+3. not bitiþ
+
+
+*/
+
+
+--------------------------------------------------------------------------------------------------------------
+
+using System;
+
+namespace Bolum_19_Partial_Class
+{
+    public partial class V165Ogrenci
+    {
+
+        public int yeniKayit(V165Ogrenci m)
+        {
+            Console.WriteLine("musteri yeniKayit");
+            return 1;
+        }
+
+        public int kayitGuncelle(V165Ogrenci m)
+        {
+            Console.WriteLine("musteri kayitGuncelle");
+            return 1;
+        }
+
+        public int kayitSil(int id)
+        {
+            Console.WriteLine("musteri kayitSil");
+            return 1;
+        }
+
+    }
+}
+
+/*
+
+eski notlar
+
+benim þimdi son durumda V164OgrenciField ve V164OgrenciMetot adýnda 2 farklý cs dosyam var 
+bunlarýn içinde girince ikisininde isimleri V164Ogrenci yazýyor
+
+hataya gelince 2 tane V164Ogrenci var diyor ben bunlarý tek bir class olarak bunlarý algýlatmam lazým 
+
+field larýna gidince field larýný 
+metotlarýna gidince metotlarýný görebiliyoruz 
+
+2 V164Ogrenci class ýný da tek bir V164Ogrenci gibi orneklemek kullanmak istiyorum
+
+bir sonraki dersimiz de tek bir taným ile bu iþlemi yapacagýz
+
+program.cs e gidelim
+
+8. not bitis
+
+------------------------------------
+
+1. not bitiþ program.cs den geldik
+
+2. not baslangýc
+
+hatayý çözmenin yolu bu class larýn bir partial olmasýný belirtmek gerekiyor
+publicten sonra partial eklememiz lazým
+
+önceki
+
+
+using System;
+
+namespace Bolum_19_Partial_Class
+{
+    public class V165Ogrenci
+    {
+
+        public int yeniKayit(V165Ogrenci m)
+        {
+            Console.WriteLine("musteri yeniKayit");
+            return 1;
+        }
+
+        public int kayitGuncelle(V165Ogrenci m)
+        {
+            Console.WriteLine("musteri kayitGuncelle");
+            return 1;
+        }
+
+        public int kayitSil(int id)
+        {
+            Console.WriteLine("musteri kayitSil");
+            return 1;
+        }
+
+    }
+}
+
+sonraki
+
+using System;
+
+namespace Bolum_19_Partial_Class
+{
+    public partial class V165Ogrenci
+    {
+
+        public int yeniKayit(V165Ogrenci m)
+        {
+            Console.WriteLine("musteri yeniKayit");
+            return 1;
+        }
+
+        public int kayitGuncelle(V165Ogrenci m)
+        {
+            Console.WriteLine("musteri kayitGuncelle");
+            return 1;
+        }
+
+        public int kayitSil(int id)
+        {
+            Console.WriteLine("musteri kayitSil");
+            return 1;
+        }
+
+    }
+}
+
+
+    public partial class V165Ogrenci
+
+V165OgrenciMetot.cs dosyasý bir partial class dýr yani V165Ogrenci nin bir parcasýdýr dedik
+
+V165OgrenciField.cs e gidelim
+
+2. not bitis
+
+
+*/
+
