@@ -46,11 +46,15 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="V167Ogrenci.cs" />
+    <Compile Include="V168Musteri.cs" />
+    <Compile Include="V168MusteriReturnValue.cs" />
+    <Compile Include="V168SanalDatabase.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Not\Bolum_20_OOP_Enum_Kavrami-V168.txt" />
     <Content Include="Not\Bolum_20_OOP_Enum_Kavrami-V167.txt" />
     <Content Include="Not\Bolum_20_OOP_Enum_Kavrami-V166.txt" />
   </ItemGroup>

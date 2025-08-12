@@ -143,5 +143,145 @@ namespace Bolum_20_OOP_Enum_Kavrami
 
         #endregion
 
+        #region VİDEO 168 Enum inceleme - 1
+
+        //static void Main(string[] args)
+        //{
+
+        //    /*
+
+        //        Bolum 20 OOP Enum Kavrami V168 Enum inceleme - 1
+
+
+        //    */
+
+        //    /*
+
+        //    1. not baslangıc
+
+        //    amacımız ne amacımız enum nedir ogrenmek ama sade temiz bir kod yazabilmek dolayısıyla bir kurgumuzun olması lazım
+        //    biz musteri kayıt edelim onda biraz daha iç sürecler var 
+        //    musteri adında class acalım olusturmus oldugum class ımı da içeride bir arraylist i database gibi kullanıp
+        //    onun içerisine aktarmaya calısacagım hem generic konusunu da bir on yatırım yapmıs oluruz 
+
+        //    Musteri class ı olusturup oraya gidelim
+
+        //    1. not bitiş
+
+        //    2. not bitiş musteriden geldik
+
+        //    3. not baslangıc
+
+        //    sanalDatabase class ını acalım
+
+        //    3.not bitiş
+            
+        //    4.not bitiş sanaldatabase den geldik
+
+        //    5. not baslangıc
+
+        //    musteri nesnesini new leyelim ve deger ataması yapalım.
+
+        //    V168Musteri M1 = new V168Musteri();
+        //    M1.id = 1;
+        //    M1.musteriNumara = "MSN001";
+        //    M1.isim = "Mücahit";
+        //    M1.soyisim = "Çetinkaya";
+        //    M1.emailAdres = "mucahitcetinkaya@outlook.com";
+
+        //    new ledik ve deger ataması yaptık 
+        //    şimdi de bunu db e ekleyelim
+
+        //    V168SanalDatabase SB = new V168SanalDatabase();
+
+        //    SB. diyince metot gelmiyor private olan bir arraylist var arkada 
+        //                SB.musteriYeniKayit(M1);
+        //    dedigimiz de erişebiliyoruz direk arraylist e erişemiyoruz 
+
+        //    bu bana bir int deger donecegını söylüyor tooltype inde de yazıyor 
+
+        //    bu geri donen degeri bir degıskene alalım
+
+        //    int musteriKayitSonu = SB.musteriYeniKayit(M1);
+
+        //    kontrol yazalım
+
+        //    if (musteriKayitSonu == 717770001)
+        //    {
+
+        //    }
+
+        //    bunu okunabilir bir sekle getirelim
+
+        //    class olusturalım MusteriReturnValue
+
+        //    5. not bitiş
+
+        //    6. not bitiş V168MusteriReturnValue den geldik
+
+        //    7. not baslangıc
+
+        //    int musteriKayitSonu = SB.musteriYeniKayit(M1);
+
+        //    buradaki int karsılıgını enum olarak almak istiyorum
+
+        //    bunun için sanaldatabase e gitmemiz lazım
+
+        //    7. not bitiş
+
+        //    8. not bitiş sanaldatabase den geldik
+
+        //    int musteriKayitSonu = SB.musteriYeniKayit(M1); ken artık int donmuyor hata veriyor donus tipini degistirdik
+
+        //    V168MusteriReturnValue musteriKayitSonu = SB.musteriYeniKayit(M1);
+
+        //    if sartını da guncelleyelim
+
+        //    if (musteriKayitSonu == V168MusteriReturnValue.kayitBasarili)
+        //    {
+
+        //    }
+
+        //    boyle yazarak okuma olarak kolaylık saglar
+            
+        //    ordaki kodun ne oldugunu anlamak için tekrar debug yapmak gerekmiyor
+        //    build edelim debug yapalım enum ın davranısı uzerıne konusalım
+        //    enum lar ile işimiz bitmedi ama temel mantıgı bu 
+
+        //    uygulamada musterıye sundugu herhangi extra herhangi bir özellik yok 
+        //    uygulamanın hızını etkileyecek bir özelliği yok 
+        //    uygulamanın development süresini etkileyecek özellikleri bulunmaktadır
+
+        //    sonraki video da debug edelim
+
+        //    */
+
+        //    V168Musteri M1 = new V168Musteri();
+        //    M1.id = 1;
+        //    M1.musteriNumara = "MSN001";
+        //    M1.isim = "Mücahit";
+        //    M1.soyisim = "Çetinkaya";
+        //    M1.emailAdres = "mucahitcetinkaya@outlook.com";
+
+        //    V168SanalDatabase SB = new V168SanalDatabase();
+        //    //int musteriKayitSonu = SB.musteriYeniKayit(M1);
+        //    V168MusteriReturnValue musteriKayitSonu = SB.musteriYeniKayit(M1);
+
+        //    //if (musteriKayitSonu == 717770001)
+        //    //{
+
+        //    //}
+
+        //    if (musteriKayitSonu == V168MusteriReturnValue.kayitBasarili)
+        //    {
+
+        //    }
+
+
+        //}
+
+        #endregion
+
+
     }
 }

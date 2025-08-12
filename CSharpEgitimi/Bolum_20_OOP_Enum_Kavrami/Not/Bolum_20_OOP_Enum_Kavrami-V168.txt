@@ -1,0 +1,411 @@
+
+
+Bölüm 20: OOP Enum Kavramý
+Video 168 Enum inceleme - 1
+
+        #region VÝDEO 168 Enum inceleme - 1
+
+        static void Main(string[] args)
+        {
+
+            /*
+
+                Bolum 20 OOP Enum Kavrami V168 Enum inceleme - 1
+
+
+            */
+
+            /*
+
+            1. not baslangýc
+
+            amacýmýz ne amacýmýz enum nedir ogrenmek ama sade temiz bir kod yazabilmek dolayýsýyla bir kurgumuzun olmasý lazým
+            biz musteri kayýt edelim onda biraz daha iç sürecler var 
+            musteri adýnda class acalým olusturmus oldugum class ýmý da içeride bir arraylist i database gibi kullanýp
+            onun içerisine aktarmaya calýsacagým hem generic konusunu da bir on yatýrým yapmýs oluruz 
+
+            Musteri class ý olusturup oraya gidelim
+
+            1. not bitiþ
+
+            2. not bitiþ musteriden geldik
+
+            3. not baslangýc
+
+            sanalDatabase class ýný acalým
+
+            3.not bitiþ
+            
+            4.not bitiþ sanaldatabase den geldik
+
+            5. not baslangýc
+
+            musteri nesnesini new leyelim ve deger atamasý yapalým.
+
+            V168Musteri M1 = new V168Musteri();
+            M1.id = 1;
+            M1.musteriNumara = "MSN001";
+            M1.isim = "Mücahit";
+            M1.soyisim = "Çetinkaya";
+            M1.emailAdres = "mucahitcetinkaya@outlook.com";
+
+            new ledik ve deger atamasý yaptýk 
+            þimdi de bunu db e ekleyelim
+
+            V168SanalDatabase SB = new V168SanalDatabase();
+
+            SB. diyince metot gelmiyor private olan bir arraylist var arkada 
+                        SB.musteriYeniKayit(M1);
+            dedigimiz de eriþebiliyoruz direk arraylist e eriþemiyoruz 
+
+            bu bana bir int deger donecegýný söylüyor tooltype inde de yazýyor 
+
+            bu geri donen degeri bir degýskene alalým
+
+            int musteriKayitSonu = SB.musteriYeniKayit(M1);
+
+            kontrol yazalým
+
+            if (musteriKayitSonu == 717770001)
+            {
+
+            }
+
+            bunu okunabilir bir sekle getirelim
+
+            class olusturalým MusteriReturnValue
+
+            5. not bitiþ
+
+            6. not bitiþ V168MusteriReturnValue den geldik
+
+            7. not baslangýc
+
+            int musteriKayitSonu = SB.musteriYeniKayit(M1);
+
+            buradaki int karsýlýgýný enum olarak almak istiyorum
+
+            bunun için sanaldatabase e gitmemiz lazým
+
+            7. not bitiþ
+
+            8. not bitiþ sanaldatabase den geldik
+
+            int musteriKayitSonu = SB.musteriYeniKayit(M1); ken artýk int donmuyor hata veriyor donus tipini degistirdik
+
+            V168MusteriReturnValue musteriKayitSonu = SB.musteriYeniKayit(M1);
+
+            if sartýný da guncelleyelim
+
+            if (musteriKayitSonu == V168MusteriReturnValue.kayitBasarili)
+            {
+
+            }
+
+            boyle yazarak okuma olarak kolaylýk saglar
+            
+            ordaki kodun ne oldugunu anlamak için tekrar debug yapmak gerekmiyor
+            build edelim debug yapalým enum ýn davranýsý uzerýne konusalým
+            enum lar ile iþimiz bitmedi ama temel mantýgý bu 
+
+            uygulamada musterýye sundugu herhangi extra herhangi bir özellik yok 
+            uygulamanýn hýzýný etkileyecek bir özelliði yok 
+            uygulamanýn development süresini etkileyecek özellikleri bulunmaktadýr
+
+            sonraki video da debug edelim
+
+            */
+
+            V168Musteri M1 = new V168Musteri();
+            M1.id = 1;
+            M1.musteriNumara = "MSN001";
+            M1.isim = "Mücahit";
+            M1.soyisim = "Çetinkaya";
+            M1.emailAdres = "mucahitcetinkaya@outlook.com";
+
+            V168SanalDatabase SB = new V168SanalDatabase();
+            //int musteriKayitSonu = SB.musteriYeniKayit(M1);
+            V168MusteriReturnValue musteriKayitSonu = SB.musteriYeniKayit(M1);
+
+            //if (musteriKayitSonu == 717770001)
+            //{
+
+            //}
+
+            if (musteriKayitSonu == V168MusteriReturnValue.kayitBasarili)
+            {
+
+            }
+
+
+        }
+
+        #endregion
+
+
+-----------------------------------------------------------------------
+
+
+namespace Bolum_20_OOP_Enum_Kavrami
+{
+    public class V168Musteri
+    {
+        public int id { get; set; }
+        public string musteriNumara { get; set; }
+        public string isim { get; set; }
+        public string soyisim { get; set; }
+        public string emailAdres { get; set; }
+    }
+}
+
+/*
+ 
+1. not bitiþ program.cs den geldik
+
+2. not baslangýc
+
+public yapýp prop larý ekledik
+
+son durum
+
+namespace Bolum_20_OOP_Enum_Kavrami
+{
+    public class V168Musteri
+    {
+        public int id { get; set; }
+        public string musteriNumara { get; set; }
+        public string isim { get; set; }
+        public string soyisim { get; set; }
+        public string emailAdres { get; set; }
+    }
+}
+ 
+program.cs e gidelim
+
+2. not bitiþ
+ 
+ 
+*/
+
+-----------------------------------------------------------------------
+
+
+
+using System.Collections;
+
+namespace Bolum_20_OOP_Enum_Kavrami
+{
+    public class V168SanalDatabase
+    {
+        ArrayList sanalDB = new ArrayList();
+
+        //public int musteriYeniKayit(V168Musteri M)
+        //{
+        //    sanalDB.Add(M);
+        //    return 717770001;
+        //}
+
+        public V168MusteriReturnValue musteriYeniKayit(V168Musteri M)
+        {
+            sanalDB.Add(M);
+            return V168MusteriReturnValue.kayitBasarili;
+        }
+
+
+    }
+
+}
+
+/*
+ 
+3. not bitiþ program.cs den geldik
+
+4. not baslangýc 
+ 
+public yaptýk
+
+benim içeride private olarak saklamýs oldugum arraylist imi metotlardan faydalanarak doldurdugum bir yapý olacak
+
+arraylist olusturalým
+ 
+        ArrayList sanalDB = new ArrayList();
+
+boyle yapýnca kendýsi private oluyor private olunca da sanaldatabase nesnemi örnekledigim de sanaldb e eriþemiyor olacagým metotlar ile eriþebiliyor olmak istiyorum
+
+metot olusturalým 
+
+son durum
+
+namespace Bolum_20_OOP_Enum_Kavrami
+{
+    public class V168SanalDatabase
+    {
+        ArrayList sanalDB = new ArrayList();
+    
+        public int musteriYeniKayit(V168Musteri M)
+        {
+            sanalDB.Add(M);
+            return 717770001;
+        }
+
+
+    }
+
+}
+
+metot olusturduk int donuyor musteri tipinde deger alýyor
+aldýgý degeri add ile sanaldb e ekliyor
+geriye de deger donuyor eklerse
+717770001 bu rakam tamamen kendi isteðim böyle biþey ifade etmiyor yani bana ediyor genel bir anlamý yok 
+baska birisi için bir anlam ifade etmez zaman geçerse bende unuturum ileride 
+
+bu dersin ana konusu boyle degerleri nasý okunabilir hale geririz odur 
+
+program.cs e gidelim
+
+4. not bitiþ
+
+7. not bitiþ program.cs den geldik
+
+8. not baslangýc
+
+ilk durum
+
+
+using System.Collections;
+
+namespace Bolum_20_OOP_Enum_Kavrami
+{
+    public class V168SanalDatabase
+    {
+        ArrayList sanalDB = new ArrayList();
+    
+        public int musteriYeniKayit(V168Musteri M)
+        {
+            sanalDB.Add(M);
+            return 717770001;
+        }
+
+
+    }
+
+}
+
+sonraki
+
+metot int donuyor diyor bunu enum a cevirelim
+enum yazdýgýmýz class adýný buraya verecegýz int yerine
+V168MusteriReturnValue
+
+
+using System.Collections;
+
+namespace Bolum_20_OOP_Enum_Kavrami
+{
+    public class V168SanalDatabase
+    {
+        ArrayList sanalDB = new ArrayList();
+
+        //public int musteriYeniKayit(V168Musteri M)
+        //{
+        //    sanalDB.Add(M);
+        //    return 717770001;
+        //}
+
+        public V168MusteriReturnValue musteriYeniKayit(V168Musteri M)
+        {
+            sanalDB.Add(M);
+            return V168MusteriReturnValue.kayitBasarili;
+        }
+
+
+    }
+
+}
+
+V168MusteriReturnValue.kayitBasarili olarak return yaptýk
+burada digerlerini de kullanabilirdik
+
+program.cs e gidelim
+
+8. not bitiþ 
+
+ 
+ 
+*/
+
+-----------------------------------------------------------------------
+
+
+
+namespace Bolum_20_OOP_Enum_Kavrami
+{
+    public enum V168MusteriReturnValue
+    {
+
+        kayitBasarili,
+        kayitBasarisiz,
+        varolanMusteri,
+        parametreHatasi,
+        calismaZamaniHatasi
+
+    }
+}
+
+/*
+
+5. not bitiþ program.cs den geldik
+
+6. not baslangýc
+
+ilk hali
+
+
+namespace Bolum_20_OOP_Enum_Kavrami
+{
+    public class V168MusteriReturnValue
+    {
+    }
+}
+
+sonraki hali
+ 
+
+namespace Bolum_20_OOP_Enum_Kavrami
+{
+    public enum V168MusteriReturnValue
+    {
+    }
+}
+
+class yerine enum kullanýlýyor
+class gibi buda eriþim belirleyicisi vs var
+
+enumlar kendi içinde int deger alýrlar 
+deger vermezsek sýfýrdan baslarlar 
+enum kadar devam ederler
+
+son durum
+
+
+namespace Bolum_20_OOP_Enum_Kavrami
+{
+    public enum V168MusteriReturnValue
+    {
+
+        kayitBasarili,
+        kayitBasarisiz,
+        varolanMusteri,
+        parametreHatasi,
+        calismaZamaniHatasi
+
+    }
+}
+
+program.cs e gidelim
+
+6. not bitiþ
+
+
+ 
+*/
