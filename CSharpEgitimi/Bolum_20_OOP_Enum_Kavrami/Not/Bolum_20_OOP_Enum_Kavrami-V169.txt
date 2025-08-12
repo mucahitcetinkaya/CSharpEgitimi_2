@@ -1,0 +1,237 @@
+
+
+Bölüm 20: OOP Enum Kavramý
+Video 169 Enum inceleme - 2
+
+        #region VÝDEO 169 Enum inceleme - 2
+
+        static void Main(string[] args)
+        {
+
+            /*
+
+                Bolum 20 OOP Enum Kavrami V169 Enum inceleme - 2
+
+
+            */
+
+            /*
+
+            1. not baslangýc
+
+            V169Musteri M1 = new V169Musteri();
+            breakpoint koyalým ve debug yapalým
+
+            nesne olusuyor zaten buralarý gördük içini doldurduk
+
+            musteriYeniKayit metoduna gitti add ile ekledi return olarak musteriKayitSonu içine kayitbasarili dondu 
+            
+            if içinde bakarken de 
+
+            musteriKayitSonu ile V169MusteriReturnValue.kayitBasarili eþit mi diye kontrol ediyoruz
+
+            burada programa ek ozellik katan bir olay söz konusu degil kod okunaklýgý ve kolaylýgýný saglýyor
+
+            bir sonraki bölümde generic mimariyi iþlerken generic mimari içinde yazmýs oldugumuz custom class larý ve içerisinde bulunan metot larýn return value larýný 
+            enum olarak kullanýp enum bölümüne alýsmaya calýsacagýz enum gorduk geri donuslerýmýz return int cok nadir olacaktýr
+
+            enum içinde int deger tutar 
+
+            bir int degiskene atayalým V169MusteriReturnValue yu
+
+            int enumInt = V169MusteriReturnValue. yazýnca cýkan tooltype da yazdýgýmýz enumlar cýkýyor 
+
+            
+            kayitBasarili, => 0
+            kayitBasarisiz, => 1
+            varolanMusteri, => 2
+            parametreHatasi, => 3
+            calismaZamaniHatasi => 4
+
+            gibi degerler veriyor arka tarafta bir int degere denk geliyorlar
+
+            
+            int enumInt = (int)V169MusteriReturnValue.kayitBasarisiz;
+            Console.WriteLine(enumInt);
+
+            yaptýgýmýz da kayitBasarisiz degerini int e zorla cevir diyoruz int bu diyoruz 
+            konsola yazdýrýnca 1 olarak yazar
+            
+            ben bu degerleri db e kayýt ederken log tablosu olur iþlemin sonucu vs olur 
+
+            musteri içindeki innertype i enum olarak belirlemiþken db de kayitBasarisiz yazmaz onun karsýlýgý olarak int degerini yazar bu gibi degerleri nasýl degistiririz bundan bahsedelim
+
+            V169MusteriReturnValue a gidelim guncelleme yapalým
+
+            1. not bitiþ 
+
+            2. not bitiþ V169MusteriReturnValue den geldik
+
+            3. not baslangýc
+
+            enum da atamasýný yaptýk artýk direk 0 dan baslamayacakta ne verdiysek o gelecek
+
+            int enumInt = (int)V169MusteriReturnValue.kayitBasarisiz;
+
+            kayitBasarisiz in üstüne geldiðinde atamýs oldugumuz enum degerinin geldiðini görürüz
+
+            bunu db e ekledigimiz de veya json olarak gönderdýgýmýz de böyle gider 
+
+            enum konusunu tamamladýk diger konuya gecelim
+
+            */
+
+            V169Musteri M1 = new V169Musteri();
+            M1.id = 1;
+            M1.musteriNumara = "MSN001";
+            M1.isim = "Mücahit";
+            M1.soyisim = "Çetinkaya";
+            M1.emailAdres = "mucahitcetinkaya@outlook.com";
+
+            V169SanalDatabase SB = new V169SanalDatabase();
+
+            V169MusteriReturnValue musteriKayitSonu = SB.musteriYeniKayit(M1);
+
+            int enumInt = (int)V169MusteriReturnValue.kayitBasarisiz;
+            Console.WriteLine(enumInt);
+
+            if (musteriKayitSonu == V169MusteriReturnValue.kayitBasarili)
+            {
+
+            }
+
+
+        }
+
+        #endregion
+
+
+-------------------------------------------------------------------------------------------------------
+
+
+
+namespace Bolum_20_OOP_Enum_Kavrami
+{
+    public class V169Musteri
+    {
+        public int id { get; set; }
+        public string musteriNumara { get; set; }
+        public string isim { get; set; }
+        public string soyisim { get; set; }
+        public string emailAdres { get; set; }
+    }
+}
+
+
+-------------------------------------------------------------------------------------------------------
+
+
+
+using System.Collections;
+
+namespace Bolum_20_OOP_Enum_Kavrami
+{
+    public class V169SanalDatabase
+    {
+        ArrayList sanalDB = new ArrayList();
+
+        public V169MusteriReturnValue musteriYeniKayit(V169Musteri M)
+        {
+            sanalDB.Add(M);
+            return V169MusteriReturnValue.kayitBasarili;
+        }
+
+
+    }
+
+}
+
+
+-------------------------------------------------------------------------------------------------------
+
+
+
+namespace Bolum_20_OOP_Enum_Kavrami
+{
+    //public enum V169MusteriReturnValue
+    //{
+
+    //    kayitBasarili,
+    //    kayitBasarisiz,
+    //    varolanMusteri,
+    //    parametreHatasi,
+    //    calismaZamaniHatasi
+
+    //}
+
+    public enum V169MusteriReturnValue
+    {
+
+        kayitBasarili = 717770001,
+        kayitBasarisiz = 717770002,
+        varolanMusteri = 717770003,
+        parametreHatasi = 717770004,
+        calismaZamaniHatasi = 717770005,
+
+    }
+}
+
+/*
+
+1. not bitiþ program.cs 
+
+2. not baslangýc
+
+ilk durum
+
+
+namespace Bolum_20_OOP_Enum_Kavrami
+{
+    public enum V169MusteriReturnValue
+    {
+
+        kayitBasarili,
+        kayitBasarisiz,
+        varolanMusteri,
+        parametreHatasi,
+        calismaZamaniHatasi
+
+    }
+}
+
+sonraki
+
+
+namespace Bolum_20_OOP_Enum_Kavrami
+{
+    //public enum V169MusteriReturnValue
+    //{
+
+    //    kayitBasarili,
+    //    kayitBasarisiz,
+    //    varolanMusteri,
+    //    parametreHatasi,
+    //    calismaZamaniHatasi
+
+    //}
+
+    public enum V169MusteriReturnValue
+    {
+
+        kayitBasarili = 717770001,
+        kayitBasarisiz = 717770002,
+        varolanMusteri = 717770003,
+        parametreHatasi = 717770004,
+        calismaZamaniHatasi = 717770005,
+
+    }
+}
+
+olarak yazdýk bunun karsýlýgýný o olarak algýlayacak bundan sonra 
+
+program.cs e gidelim
+
+2. not bitiþ
+
+
+*/

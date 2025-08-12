@@ -1,4 +1,6 @@
 ﻿
+using System;
+
 namespace Bolum_20_OOP_Enum_Kavrami
 {
     internal class Program
@@ -175,7 +177,7 @@ namespace Bolum_20_OOP_Enum_Kavrami
         //    sanalDatabase class ını acalım
 
         //    3.not bitiş
-            
+
         //    4.not bitiş sanaldatabase den geldik
 
         //    5. not baslangıc
@@ -243,7 +245,7 @@ namespace Bolum_20_OOP_Enum_Kavrami
         //    }
 
         //    boyle yazarak okuma olarak kolaylık saglar
-            
+
         //    ordaki kodun ne oldugunu anlamak için tekrar debug yapmak gerekmiyor
         //    build edelim debug yapalım enum ın davranısı uzerıne konusalım
         //    enum lar ile işimiz bitmedi ama temel mantıgı bu 
@@ -273,6 +275,108 @@ namespace Bolum_20_OOP_Enum_Kavrami
         //    //}
 
         //    if (musteriKayitSonu == V168MusteriReturnValue.kayitBasarili)
+        //    {
+
+        //    }
+
+
+        //}
+
+        #endregion
+
+        #region VİDEO 169 Enum inceleme - 2
+
+        //static void Main(string[] args)
+        //{
+
+        //    /*
+
+        //        Bolum 20 OOP Enum Kavrami V169 Enum inceleme - 2
+
+
+        //    */
+
+        //    /*
+
+        //    1. not baslangıc
+
+        //    V169Musteri M1 = new V169Musteri();
+        //    breakpoint koyalım ve debug yapalım
+
+        //    nesne olusuyor zaten buraları gördük içini doldurduk
+
+        //    musteriYeniKayit metoduna gitti add ile ekledi return olarak musteriKayitSonu içine kayitbasarili dondu 
+            
+        //    if içinde bakarken de 
+
+        //    musteriKayitSonu ile V169MusteriReturnValue.kayitBasarili eşit mi diye kontrol ediyoruz
+
+        //    burada programa ek ozellik katan bir olay söz konusu degil kod okunaklıgı ve kolaylıgını saglıyor
+
+        //    bir sonraki bölümde generic mimariyi işlerken generic mimari içinde yazmıs oldugumuz custom class ları ve içerisinde bulunan metot ların return value larını 
+        //    enum olarak kullanıp enum bölümüne alısmaya calısacagız enum gorduk geri donuslerımız return int cok nadir olacaktır
+
+        //    enum içinde int deger tutar 
+
+        //    bir int degiskene atayalım V169MusteriReturnValue yu
+
+        //    int enumInt = V169MusteriReturnValue. yazınca cıkan tooltype da yazdıgımız enumlar cıkıyor 
+
+            
+        //    kayitBasarili, => 0
+        //    kayitBasarisiz, => 1
+        //    varolanMusteri, => 2
+        //    parametreHatasi, => 3
+        //    calismaZamaniHatasi => 4
+
+        //    gibi degerler veriyor arka tarafta bir int degere denk geliyorlar
+
+            
+        //    int enumInt = (int)V169MusteriReturnValue.kayitBasarisiz;
+        //    Console.WriteLine(enumInt);
+
+        //    yaptıgımız da kayitBasarisiz degerini int e zorla cevir diyoruz int bu diyoruz 
+        //    konsola yazdırınca 1 olarak yazar
+            
+        //    ben bu degerleri db e kayıt ederken log tablosu olur işlemin sonucu vs olur 
+
+        //    musteri içindeki innertype i enum olarak belirlemişken db de kayitBasarisiz yazmaz onun karsılıgı olarak int degerini yazar bu gibi degerleri nasıl degistiririz bundan bahsedelim
+
+        //    V169MusteriReturnValue a gidelim guncelleme yapalım
+
+        //    1. not bitiş 
+
+        //    2. not bitiş V169MusteriReturnValue den geldik
+
+        //    3. not baslangıc
+
+        //    enum da atamasını yaptık artık direk 0 dan baslamayacakta ne verdiysek o gelecek
+
+        //    int enumInt = (int)V169MusteriReturnValue.kayitBasarisiz;
+
+        //    kayitBasarisiz in üstüne geldiğinde atamıs oldugumuz enum degerinin geldiğini görürüz
+
+        //    bunu db e ekledigimiz de veya json olarak gönderdıgımız de böyle gider 
+
+        //    enum konusunu tamamladık diger konuya gecelim
+
+        //    */
+
+        //    V169Musteri M1 = new V169Musteri();
+        //    M1.id = 1;
+        //    M1.musteriNumara = "MSN001";
+        //    M1.isim = "Mücahit";
+        //    M1.soyisim = "Çetinkaya";
+        //    M1.emailAdres = "mucahitcetinkaya@outlook.com";
+
+        //    V169SanalDatabase SB = new V169SanalDatabase();
+
+        //    V169MusteriReturnValue musteriKayitSonu = SB.musteriYeniKayit(M1);
+
+        //    int enumInt = (int)V169MusteriReturnValue.kayitBasarisiz;
+        //    Console.WriteLine(enumInt);
+
+        //    if (musteriKayitSonu == V169MusteriReturnValue.kayitBasarili)
         //    {
 
         //    }
