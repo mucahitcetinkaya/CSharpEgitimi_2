@@ -1,0 +1,192 @@
+
+
+Bölüm 21: Generic Koleksiyonlar
+Video 172 Generic Koleksiyonlar - List<T> kullanýmý - 2
+
+        #region VÝDEO 172 Generic Koleksiyonlar - List<T> kullanýmý - 2
+
+        static void Main(string[] args)
+        {
+
+            /*
+
+                Bolum 21 Generic Koleksiyonlar V172 Generic Koleksiyonlar - List<T> kullanýmý - 2
+
+            */
+
+            /*
+
+             1. not baslangýc
+
+            olusturulan bir nesneyi koleksiyon olarak kullanmayý görecegýz
+            Musteri nesnesi olusturalým
+
+            Musteri nesnesine gidelim
+
+            1. not bitiþ
+
+            2. not bitiþ musteri den geldik
+
+            3. not baslangýc
+
+            musteri nesnesini koleksiyon olarak kullanalým
+
+            List<> : <> içinde yazmamýz lazým 
+            List<> yazýnca benden T tipi istiyor yaný .net framework içinde gelen veya bizim olusturdugumuz herhangi bir nesne
+
+             List<V172Musteri> musteriListe = new List<V172Musteri>();
+            musteriListe.Add(new V172Musteri()
+            {
+                id = 1,
+                isim = "Mücahit",
+                soyisim = "çetinkaya"
+            });
+
+            tek tek add yazmak yerine içine yazdýk prob larý 
+
+            List<V172Musteri> musteriListe = new List<V172Musteri>(); breakpoint koyalým
+
+            musteriListe kýsmýna sonra gelecegiz su anda baslangýc
+
+            Add ile kendi olusturmus oldugum nesnemi koleksiyonuma eklemiþ oldum.
+
+            3. not bitiþ
+
+            4. not baslangýc dk 2.45
+
+            olusturulan nesne içinde nasý donecegýz
+
+            for ve foreach ile içerisinde donup ekrana yazdýrabiliriz
+
+            for ornek
+
+            int ve string tipinde olusturdugumuz generic list ler diger derste kaldý onlarý da buraya yazalým
+
+             List<int> listeGeneric = new List<int>();
+            listeGeneric.Add(1);
+            listeGeneric.Add(2);
+
+            for (int i = 0; i < listeGeneric.Count; i++) 
+            {
+                Console.WriteLine(listeGeneric[i]);
+            }
+
+            List<string> isimler = new List<string>();
+            isimler.Add("mücahit");
+            isimler.Add("çetinkaya");
+
+            for (int i = 0; i < isimler.Count; i++)
+            {
+                Console.WriteLine(isimler[i]);
+            }
+
+            foreach (V172Musteri item in musteriListe) 
+            {
+                Console.WriteLine(item.id);
+                Console.WriteLine(item.isim);
+                Console.WriteLine(item.soyisim);
+            }
+
+            foreach de
+
+            V172Musteri tipinde list içinde doneceksin musteriListe de dön
+            her birine item de
+            item. yazarak da cagýrman lazým
+
+            her gelen yenilin bir oncesinin üzerine geliyor 
+
+            arraylist te object ten alýp cevirip öyle iþlem yapýyorduk
+            genericte verdigimiz tipe göre iþlem yapýyor 
+
+            boxing unboxing iþlemi olmuyor zaten yazarken tipini belirtiyoruz
+
+            list generic in diger metotlarýný görelim diger derse gecelim
+
+            */
+
+            /**/
+
+            /*3. not*/
+
+            List<V172Musteri> musteriListe = new List<V172Musteri>();
+            musteriListe.Add(new V172Musteri()
+            {
+                id = 1,
+                isim = "Mücahit",
+                soyisim = "çetinkaya"
+            });
+
+            /*4. not*/
+
+            List<int> listeGeneric = new List<int>();
+            listeGeneric.Add(1);
+            listeGeneric.Add(2);
+
+            for (int i = 0; i < listeGeneric.Count; i++) 
+            {
+                Console.WriteLine(listeGeneric[i]);
+            }
+
+            List<string> isimler = new List<string>();
+            isimler.Add("mücahit");
+            isimler.Add("çetinkaya");
+
+            for (int i = 0; i < isimler.Count; i++)
+            {
+                Console.WriteLine(isimler[i]);
+            }
+
+            foreach (V172Musteri item in musteriListe) 
+            {
+                Console.WriteLine(item.id);
+                Console.WriteLine(item.isim);
+                Console.WriteLine(item.soyisim);
+            }
+
+        }
+
+        #endregion
+
+
+        -------------------------------------------------------------------
+
+
+        
+namespace Bolum_21_Generic_Koleksiyonlar
+{
+    public class V172Musteri
+    {
+        public int id { get; set; }
+        public string isim { get; set; }
+        public string soyisim { get; set; }
+    }
+}
+
+/*
+ 
+1. not bitiþ program.cs den geldik
+
+2. not baslangýc
+
+nesne olusturup prop verdik
+
+son durum
+
+
+namespace Bolum_21_Generic_Koleksiyonlar
+{
+    public class V172Musteri
+    {
+        public int id { get; set; }
+        public string isim { get; set; }
+        public string soyisim { get; set; }
+    }
+}
+
+program.cs e gidelim
+
+2. not bitiþ
+ 
+ 
+ 
+*/
