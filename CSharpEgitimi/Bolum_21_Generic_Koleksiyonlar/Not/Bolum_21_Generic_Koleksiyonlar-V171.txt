@@ -1,0 +1,140 @@
+
+
+Bölüm 21: Generic Koleksiyonlar
+Video 171 Generic Koleksiyonlar - List<T> kullanýmý - 1
+
+
+        #region VÝDEO 171 Generic Koleksiyonlar - List<T> kullanýmý - 1
+
+        static void Main(string[] args)
+        {
+
+            /*
+
+                Bolum 21 Generic Koleksiyonlar V171 Generic Koleksiyonlar - List<T> kullanýmý - 1
+
+            */
+
+            /*
+             
+            1. not baslangýc
+
+            LIST GENERIC
+
+            generic koleksiyonlarda list generic koleksiyonu ile baslayalým 
+            list generic koleksiyonu arraylist koleksiyonunun generic hali gibidir
+
+            günlük programlamada cok sýk kullanýrýz
+
+            bir datayý liste içerisinde tutacaksan eger generic liste içinde tutmak isteriz list gecericleri yogun olarak kullanýrýz
+
+            arraylist ornegi yazalým
+            
+            ArrayList list = new ArrayList();
+            list.Add(1);
+            list.Add("bir");
+
+            list.add dediðimiz de object veri tipinden data kabul eden bir yapýsý var 
+            
+            1. not bitiþ
+
+            2. not baslangýc
+
+            list generic nedir 
+
+            generic dedigimiz de bilmemiz gereken bir kavran var mesela T tipi diyecegiz T tipi demek herhangi bir tip demek
+
+            genericleri <T> olarak küçüktür büyüktür iþaretlerinin arasýna yazarýz
+
+            <T> T tipi demek .ner framework içerisinde olan veya bizim olusturdugumuz herhangi bir tip demek 
+
+            genel yazýmýna bakalým
+
+            List yazýnca tooltype acýlýyor List<> yazýyor
+            system.collection.Generic.List<T> yazýyor
+
+            system.collection.generic kutuphanesi ile geliyor bunu tanýyor
+
+            yukarýdaki using kýsmýný silip tekrar bakalým
+
+            List<int> list = new List<int>();
+
+            yazýnca kýrmýzý yere geldiðinde using.system.collection.generic cýkýyor bunu ekleyelim
+
+            arraylist i nasý olusturuyorsam geceric list i de oyle olusturuyorum
+
+            List<int> listeGeneric = new List<int>();
+            yazdýk ornekledik yukarý using eklendi
+
+            listeGeneric.Add( yazýnca tooltype acýlýyor ve diyorki void List<int>.Add(int item) ben int item kabul ederim diyor
+            arraylist in add metotunda ise object item yazýyor
+            arraylist object ten herhangi bir deger kabul ederim diyor
+            ben tip guvenlý olsun istiyorum koleksiyon sadece int deger kabul etsin istiyorum
+            arraylist acarsam eger class acýp arraylist i private olarak saklayýp metot ile ona int göndermem gerekiyordu tip guvenlýgý için
+
+            bu generic ile gerek kalmýyor buna direk <> içine yazýnca guvenlý tipe almýs alýyorsun
+            <T> tipi yazdýgýnda herhangi bir tip kabul eder hale geliyor
+
+            deger atamasý yapalým
+
+            
+            listeGeneric.Add(1);
+            listeGeneric.Add(2);
+            listeGeneric.Add("üç");
+
+            "üç" yazýnca hata veriyor 
+            Argument 1: cannot convert from 'string' to 'int'
+
+            int olan tipe string yazmýssýn diyor
+
+            string tipinde bir list olusturalým
+
+            
+            List<string> isimler = new List<string>();
+            isimler.Add("mücahit");
+
+            sadece string veri tipinde degerler kabul eder
+
+            isimler.Add(123); gibi bir deger kabul etmez
+
+            2. nota breakponit koyalým debug yapalým
+
+            list int sadece int deger kabul
+            list string sadece string deger kabul
+
+            f10 ile edevam edelim sadece belirtmiþ oldugum veri tipinden degerler içinde bulunuyor
+
+            diger derse gecelim
+            diger derste kendi olusturdugumuz bir tipimizi bir koleksiyon olarak nasý kullanýrýz buna bakalým
+
+            */
+
+            //// 1. not 
+            //ArrayList list = new ArrayList();
+            //list.Add(1);
+            //list.Add("bir");
+
+            //// 2.not baslangýc
+            //List<int> list = new List<int>();
+
+            List<int> listeGeneric = new List<int>();
+            //listeGeneric.Add(
+
+            listeGeneric.Add(1);
+            listeGeneric.Add(2);
+            //listeGeneric.Add("üç");
+
+            List<string> isimler = new List<string>();
+            isimler.Add("mücahit");
+            //isimler.Add(123);
+
+
+        }
+
+        #endregion
+
+
+
+        ------------------------------------------------------------
+
+

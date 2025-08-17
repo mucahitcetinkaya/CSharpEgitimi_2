@@ -51,6 +51,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Not\Bolum_21_Generic_Koleksiyonlar-V171.txt" />
     <Content Include="Not\Bolum_21_Generic_Koleksiyonlar-V170.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
