@@ -1,0 +1,215 @@
+
+
+Bölüm 21: Generic Koleksiyonlar
+Video 173 Generic Koleksiyonlar - List<T> kullanýmý - 3
+
+
+        #region VÝDEO 173 Generic Koleksiyonlar - List<T> kullanýmý - 3
+
+        static void Main(string[] args)
+        {
+
+            /*
+
+                Bolum 21 Generic Koleksiyonlar V173 Generic Koleksiyonlar - List<T> kullanýmý - 3
+
+            */
+
+            /*
+             
+             1. not baslangýc
+
+            Add metotu harici farklý yardýmcý metotlara bakalým
+
+            int sayilarým adýnda list generic olusturalým
+
+            List<int> sayilarim = new List<int>();
+            sayilarim.Add(1);
+
+            tek bir kayýt için add ile ekleyebiliriz
+            birden fazla eklemek için ne yapmamýz lazým
+
+            örnek bir dizi olusturalým db gibi kullanmak için
+            
+            int[] eklenecekData = new int[3];
+            eklenecekData[0] = 2;
+            eklenecekData[1] = 3;
+            eklenecekData[2] = 4;
+            
+            sayilarim ýn içine degerleri eklemek için 
+            for ile uzunlugu kadar kadar dönüp her bir i degerini ekleyebiliriz 1. yol olur ama uzun yol
+
+            for (int i = 0; i < eklenecekData.Length; i++)
+            {
+                sayilarim.Add(eklenecekData[i]);
+            }
+
+            2. yol AddRange metotu
+
+            sayilarim.AddRange(eklenecekData);
+
+            AddRange kendi veri tipine uygun koleksiyonlarý kabul ediyor
+
+            AddRange(eklenecekData) dedigimiz de içindeki bütün verileri kendi veri tipine uyuyorsa eger direk yazýyor
+            kendi veri tipine uyuyorsa kýsmý 
+            sayilarim int bir generic koleksiyon
+            addrange ile eklediðimiz de sadece int olanlarý ekliyor 
+
+            eklenecek data int dizi oldugundan hepsini kabul ediyor debug yaptýk gördük
+
+            5.35
+            -------------------------------------------------
+
+            içeride Add ile eklenen 1 degeri var diger degerler diziden ekleniyor
+
+            capacity ve count kavramlarýna bakalým
+
+            dizinin boyutunu yukseltelim 3 elemanlý bir dizi 4 elemanlý olsun capacity count farkýný anlamak için yapýyoruz bunu
+
+            int[] eklenecekData = new int[4];
+            eklenecekData[0] = 2;
+            eklenecekData[1] = 3;
+            eklenecekData[2] = 4;
+            eklenecekData[3] = 5;
+
+            int capacity = sayilarim.Capacity;
+            int count = sayilarim.Count;
+
+            capacity e breakpoint koyalým ve debug yapalým
+
+            3 elamanlý oldugunda capacity e geldiðinde içinde 4 tane deger var index olarak bakýldýgýnda 0 dan baslýyor index e kadar gidiyor 
+            capacity count eþit cýkýyor 
+
+            4 elemanlý olunca 
+
+            diziler artmaya 4 erli seviyeden devam ederler 
+            list generic ilk olustugunda count capacity sýfýr olarak olusturur
+            ilk degeri atadýgýmýz da 
+            count 1 capacity si 4 olarak bellekte yer tutar
+            list geceric ilk degeri aldýgýnda 4 degerlik bos yer olusturur diger 3 degeri alabilecegý sekilde revize eder
+            biz içerisine deger atamaya devam edince bos olan yerleri doldurmaya devam eder 
+            demin ki ornekte tam 4 e 4 geldiði için esit gibi oldu
+            4 elamanlý yapýnca 1 deger daha var add ile gelen
+            count 5 
+            capacity deger 8 olur
+            4 ü geçince 8 olur 
+            8 i gecince 16 olur
+            2 üzeri þeklinde artmaya devam eder capacity
+
+            kontrol için .Add kýsmýný cogaltman lazým en basta add ile eklediðinde 4 8 16 seklinde gidiyor 
+
+            capacity ve count u eþitlemek istiyorsan eger TrimExcess i kullanabilirsin
+
+            // soru sayilarým koleksiyonu içerisinde bulunan datayý ekrana yazdýrmak istiyorum
+
+            1. yol
+
+            foreach (var item in sayilarim)
+            {
+                Console.WriteLine(item);
+            }
+
+
+             2. yol list generic içindeki ForEach() metotu
+
+            sayilarim.ForEach();
+
+            ForEach(); bizden cok farklý parametreler istiyor 
+
+            delegeleri görmediðiniz için anlatmayacagým ama ufak bir giriþ yapabiliriz
+
+            ForEach(); cagýrdýktan sonra Action ve delege istiyor 
+
+            delege iþ yapan bir parca istiyor
+
+            sayilarim.ForEach(i => Console.WriteLine(i));
+
+            i benim yazmýs oldugum bir karakter ne oldugu onemli degil standart olarak i kullanýlýyor genelde 
+
+            koleksiyoni içindeki her bir degere ulasýrken i örnegi ile ulas 
+
+            => iþareti lamda iþareti öyleki diyosun 
+
+            ilgili koleksiyon içinde arama yap 
+
+            arama yaptýn ve bunu Console.WriteLine ile konsola yaz
+
+            tek satýrda foreach dongusu tanýmlamýs olduk
+
+            => lamda ifadesi linq konusunda geçiyor 
+
+
+            */
+
+
+
+            List<int> sayilarim = new List<int>();
+            sayilarim.Add(1);
+            sayilarim.Add(1);
+            sayilarim.Add(1);
+            sayilarim.Add(1);
+            sayilarim.Add(1);
+
+            //int[] eklenecekData = new int[3];
+            //eklenecekData[0] = 2;
+            //eklenecekData[1] = 3;
+            //eklenecekData[2] = 4;
+
+            //1. yol
+
+            //for (int i = 0; i < eklenecekData.Length; i++) 
+            //{
+            //    sayilarim.Add(eklenecekData[i]);
+            //}
+
+            //2. yol AddRange metotu
+
+            int[] eklenecekData = new int[4];
+            eklenecekData[0] = 1;
+            eklenecekData[1] = 2;
+            eklenecekData[2] = 3;
+            eklenecekData[3] = 4;
+            //eklenecekData[4] = 5;
+            //eklenecekData[5] = 6;
+            //eklenecekData[6] = 7;
+            //eklenecekData[7] = 8;
+            //eklenecekData[8] = 9;
+            //eklenecekData[9] = 10;
+            //eklenecekData[10] = 11;
+            //eklenecekData[11] = 12;
+            //eklenecekData[12] = 13;
+            //eklenecekData[13] = 14;
+            //eklenecekData[14] = 15;
+            //eklenecekData[15] = 16;
+            //eklenecekData[16] = 17;
+
+            sayilarim.AddRange(eklenecekData);
+
+            // capacity ve count kavramlarý
+
+            int capacity = sayilarim.Capacity;
+            int count = sayilarim.Count;
+
+            sayilarim.TrimExcess();
+
+            capacity = sayilarim.Capacity;
+            count = sayilarim.Count;
+
+
+            // soru sayilarým koleksiyonu içerisinde bulunan datayý ekrana yazdýrmak istiyorum
+
+            foreach (var item in sayilarim)
+            {
+                Console.WriteLine(item);
+            }
+
+            // 2. yol list generic içindeki ForEach() metotu
+
+            sayilarim.ForEach(i => Console.WriteLine(i));
+
+
+
+        }
+
+        #endregion
+
