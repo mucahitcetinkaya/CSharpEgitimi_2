@@ -1,0 +1,70 @@
+
+
+Bölüm 21: Generic Koleksiyonlar
+Video 175 Generic Koleksiyonlar - List<T> kullanýmý - 5
+
+
+        #region VÝDEO 175 Generic Koleksiyonlar - List<T> kullanýmý - 5
+
+        static void Main(string[] args)
+        {
+
+            /*
+
+                Bolum 21 Generic Koleksiyonlar V175 Generic Koleksiyonlar - List<T> kullanýmý - 5
+
+            */
+
+            /*
+
+            1. not baslangýc
+
+            ------------------------------------------------------------
+
+            sayilarim.Max()
+            liste içindekiler de en büyük deðeri alýr
+            geriye int döner
+            linq ile farklý overload larý var 2 den büyük olanlarýn en yuksegi 15 den kucuk olanlarýn en yuksegi kac gibi sartlar da koyabiliriz
+
+            ------------------------------------------------------------
+
+            sayilarim.Min()
+            liste içindekiler de en küçük deðeri alýr
+            geriye int döner
+            linq ile farklý overload larý var
+
+            ------------------------------------------------------------
+
+            sayilarim.Sum()
+            liste içindekileri toplar
+            geriye int döner
+            linq ile farklý overload larý var
+
+            ------------------------------------------------------------
+
+
+            */
+
+            List<int> sayilarim = new List<int>();
+            sayilarim.Add(1);
+
+            int[] eklenecekData = new int[6];
+            eklenecekData[0] = 1;
+            eklenecekData[1] = 2;
+            eklenecekData[2] = 3;
+            eklenecekData[3] = 4;
+            eklenecekData[4] = 45;
+            eklenecekData[5] = 55;
+
+            sayilarim.AddRange(eklenecekData);
+
+
+            // yukarýsý bir önceki dersten alýndý
+
+            int enYuksekDeger = sayilarim.Max();
+            int enDusukDeger = sayilarim.Min();
+            int toplamDeger = sayilarim.Sum();
+
+        }
+
+        #endregion

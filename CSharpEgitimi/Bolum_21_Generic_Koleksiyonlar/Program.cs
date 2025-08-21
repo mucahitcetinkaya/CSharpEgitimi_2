@@ -611,9 +611,9 @@ namespace Bolum_21_Generic_Koleksiyonlar
         //    */
 
         //    /*
-             
+
         //    1. not baslangıc
-            
+
         //    bir list generic koleksiyonu içerisinde belirtmiş oldugumuz index in işaret etmiş oldugu degeri nasıl alabiliriz
 
         //    bu degere nası ulasabiliriz 
@@ -652,7 +652,7 @@ namespace Bolum_21_Generic_Koleksiyonlar
         //    -----------------------------------------------------------------------
 
         //    sayilarim.Insert(3,100);
-             
+
         //    3. index e 100 degerini ekler digerlerini bir asagıya kaydırma yapar
 
         //    normalde 3. index de 4 degeri var şimdi 100 degeri olur 4. index 3 olur
@@ -751,6 +751,71 @@ namespace Bolum_21_Generic_Koleksiyonlar
         //    //------------------------
 
         //    sayilarim.Clear();
+
+        //}
+
+        #endregion
+
+        #region VİDEO 175 Generic Koleksiyonlar - List<T> kullanımı - 5
+
+        //static void Main(string[] args)
+        //{
+
+        //    /*
+
+        //        Bolum 21 Generic Koleksiyonlar V175 Generic Koleksiyonlar - List<T> kullanımı - 5
+
+        //    */
+
+        //    /*
+
+        //    1. not baslangıc
+
+        //    ------------------------------------------------------------
+
+        //    sayilarim.Max()
+        //    liste içindekiler de en büyük değeri alır
+        //    geriye int döner
+        //    linq ile farklı overload ları var 2 den büyük olanların en yuksegi 15 den kucuk olanların en yuksegi kac gibi sartlar da koyabiliriz
+
+        //    ------------------------------------------------------------
+
+        //    sayilarim.Min()
+        //    liste içindekiler de en küçük değeri alır
+        //    geriye int döner
+        //    linq ile farklı overload ları var
+
+        //    ------------------------------------------------------------
+
+        //    sayilarim.Sum()
+        //    liste içindekileri toplar
+        //    geriye int döner
+        //    linq ile farklı overload ları var
+
+        //    ------------------------------------------------------------
+
+
+        //    */
+
+        //    List<int> sayilarim = new List<int>();
+        //    sayilarim.Add(1);
+
+        //    int[] eklenecekData = new int[6];
+        //    eklenecekData[0] = 1;
+        //    eklenecekData[1] = 2;
+        //    eklenecekData[2] = 3;
+        //    eklenecekData[3] = 4;
+        //    eklenecekData[4] = 45;
+        //    eklenecekData[5] = 55;
+
+        //    sayilarim.AddRange(eklenecekData);
+
+
+        //    // yukarısı bir önceki dersten alındı
+
+        //    int enYuksekDeger = sayilarim.Max();
+        //    int enDusukDeger = sayilarim.Min();
+        //    int toplamDeger = sayilarim.Sum();
 
         //}
 
