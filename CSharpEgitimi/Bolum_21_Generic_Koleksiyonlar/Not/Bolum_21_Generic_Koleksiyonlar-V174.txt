@@ -1,0 +1,161 @@
+
+
+Bölüm 21: Generic Koleksiyonlar
+Video 174 Generic Koleksiyonlar - List<T> kullanýmý - 4
+
+        #region VÝDEO 174 Generic Koleksiyonlar - List<T> kullanýmý - 4
+
+        static void Main(string[] args)
+        {
+
+            /*
+
+                Bolum 21 Generic Koleksiyonlar V174 Generic Koleksiyonlar - List<T> kullanýmý - 4
+
+            */
+
+            /*
+             
+            1. not baslangýc
+            
+            bir list generic koleksiyonu içerisinde belirtmiþ oldugumuz index in iþaret etmiþ oldugu degeri nasýl alabiliriz
+
+            bu degere nasý ulasabiliriz 
+
+            bir onceki list gibi int bir list generic yazalým
+
+            List<int> sayilarim = new List<int>();
+            sayilarim.Add(1);
+
+            int[] eklenecekData = new int[4];
+            eklenecekData[0] = 1;
+            eklenecekData[1] = 2;
+            eklenecekData[2] = 3;
+            eklenecekData[3] = 4;
+
+            sayilarim.AddRange(eklenecekData);
+
+
+            // yukarýsý bir önceki dersten alýndý
+            //------------------------
+
+            int bulunanDeger = sayilarim[3];
+
+            Console.WriteLine("List<T> koleksiyonu içerisinde 3. index de bulunan deger : {0}", bulunanDeger);
+
+            bulunanDeger adýnda bir degiskene sayilarim list generic koleksiyonunun 3. index ini atadýk
+
+            3. index i aldýk bunu cw ile konsole yazdýrabiliriz
+
+            3. index 4 ekrandada 4 yazýyor
+
+            ----------------------------------------------------------------------
+
+            diger bir yardýmcý metot insert() 2 farklý deger ister index ve item
+
+            -----------------------------------------------------------------------
+
+            sayilarim.Insert(3,100);
+             
+            3. index e 100 degerini ekler digerlerini bir asagýya kaydýrma yapar
+
+            normalde 3. index de 4 degeri var þimdi 100 degeri olur 4. index 3 olur
+
+            ----------------------------------------------------------------------
+
+            diger bir yardýmcý metot Any()
+
+            ----------------------------------------------------------------------
+
+            2 tane kullanýmý var su anlýk sonra guncelleme gelebilir
+
+            1. kullanýmý 
+
+            belirtmiþ oldugumuz bir þart yoksa herhangi bir data var mý diye bakar
+
+            varsa true yoksa false döner
+
+            bool kontrol1 = sayilarim.Any();
+
+            2. kullanýmý 
+
+            linq ile kullanýlabilir
+
+            bool kontrol2 = sayilarim.Any(i => i > 5);
+
+            sayilarim içindeki degerlere bak 5 den büyük var mý true olarak döner 100 ü gördü true dedi
+            500 olarak bakalým false döndü
+
+            ----------------------------------------------------------------------
+
+            koleksiyon içindeki degerleri sýralama yapalým büyükten kucuk veya kucukten büyük
+            Sort() kucukten buyuk a dan z ye -- 1 den n e dogru
+            Reverse() buyukten kucuk z den a ya -- n den 1 dogru
+            sýralama anlasýlsýn diye 44 55 degerlerini ekledim db e 
+
+            ----------------------------------------------------------------------
+
+            dizi içinden bir elemaný kaldýrma yani silme
+            Remove(100); vermiþ oldugun degeri arar bulur siler geriye bool döner
+            RemoveAll(i => i > 3); 3 ten büyük olanlarý sil diyoruz int döner geriye
+
+            ----------------------------------------------------------------------
+
+            RemoveAt(); belirtmiþ oldugumuz index i siler geriye biþey dönmem diyor
+
+            ----------------------------------------------------------------------
+
+            Clear() dediginiz de siler temizler
+
+
+            */
+
+            List<int> sayilarim = new List<int>();
+            sayilarim.Add(1);
+
+            int[] eklenecekData = new int[6];
+            eklenecekData[0] = 1;
+            eklenecekData[1] = 2;
+            eklenecekData[2] = 3;
+            eklenecekData[3] = 4;
+            eklenecekData[4] = 45;
+            eklenecekData[5] = 55;
+
+            sayilarim.AddRange(eklenecekData);
+
+
+            // yukarýsý bir önceki dersten alýndý
+            //------------------------
+
+            int bulunanDeger = sayilarim[3];
+
+            Console.WriteLine("List<T> koleksiyonu içerisinde 3. index de bulunan deger : {0}", bulunanDeger);
+
+            sayilarim.Insert(3,100);
+
+            //------------------------
+
+            bool kontrol1 = sayilarim.Any();
+
+            bool kontrol2 = sayilarim.Any(i => i > 5);
+
+            bool kontrol3 = sayilarim.Any(i => i > 500);
+
+            //------------------------
+
+            sayilarim.Sort();
+            sayilarim.Reverse();
+
+            //------------------------
+
+            bool silme1 = sayilarim.Remove(100);
+            int silme2 = sayilarim.RemoveAll(i => i > 3);
+            sayilarim.RemoveAt(2);
+
+            //------------------------
+
+            sayilarim.Clear();
+
+        }
+
+        #endregion

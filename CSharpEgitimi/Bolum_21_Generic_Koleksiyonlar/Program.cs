@@ -3,6 +3,7 @@ using System;
 using System.Collections;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Bolum_21_Generic_Koleksiyonlar
 {
@@ -401,7 +402,7 @@ namespace Bolum_21_Generic_Koleksiyonlar
         //    */
 
         //    /*
-             
+
         //     1. not baslangıc
 
         //    Add metotu harici farklı yardımcı metotlara bakalım
@@ -415,12 +416,12 @@ namespace Bolum_21_Generic_Koleksiyonlar
         //    birden fazla eklemek için ne yapmamız lazım
 
         //    örnek bir dizi olusturalım db gibi kullanmak için
-            
+
         //    int[] eklenecekData = new int[3];
         //    eklenecekData[0] = 2;
         //    eklenecekData[1] = 3;
         //    eklenecekData[2] = 4;
-            
+
         //    sayilarim ın içine degerleri eklemek için 
         //    for ile uzunlugu kadar kadar dönüp her bir i degerini ekleyebiliriz 1. yol olur ama uzun yol
 
@@ -598,6 +599,162 @@ namespace Bolum_21_Generic_Koleksiyonlar
 
         #endregion
 
+        #region VİDEO 174 Generic Koleksiyonlar - List<T> kullanımı - 4
+
+        //static void Main(string[] args)
+        //{
+
+        //    /*
+
+        //        Bolum 21 Generic Koleksiyonlar V174 Generic Koleksiyonlar - List<T> kullanımı - 4
+
+        //    */
+
+        //    /*
+             
+        //    1. not baslangıc
+            
+        //    bir list generic koleksiyonu içerisinde belirtmiş oldugumuz index in işaret etmiş oldugu degeri nasıl alabiliriz
+
+        //    bu degere nası ulasabiliriz 
+
+        //    bir onceki list gibi int bir list generic yazalım
+
+        //    List<int> sayilarim = new List<int>();
+        //    sayilarim.Add(1);
+
+        //    int[] eklenecekData = new int[4];
+        //    eklenecekData[0] = 1;
+        //    eklenecekData[1] = 2;
+        //    eklenecekData[2] = 3;
+        //    eklenecekData[3] = 4;
+
+        //    sayilarim.AddRange(eklenecekData);
+
+
+        //    // yukarısı bir önceki dersten alındı
+        //    //------------------------
+
+        //    int bulunanDeger = sayilarim[3];
+
+        //    Console.WriteLine("List<T> koleksiyonu içerisinde 3. index de bulunan deger : {0}", bulunanDeger);
+
+        //    bulunanDeger adında bir degiskene sayilarim list generic koleksiyonunun 3. index ini atadık
+
+        //    3. index i aldık bunu cw ile konsole yazdırabiliriz
+
+        //    3. index 4 ekrandada 4 yazıyor
+
+        //    ----------------------------------------------------------------------
+
+        //    diger bir yardımcı metot insert() 2 farklı deger ister index ve item
+
+        //    -----------------------------------------------------------------------
+
+        //    sayilarim.Insert(3,100);
+             
+        //    3. index e 100 degerini ekler digerlerini bir asagıya kaydırma yapar
+
+        //    normalde 3. index de 4 degeri var şimdi 100 degeri olur 4. index 3 olur
+
+        //    ----------------------------------------------------------------------
+
+        //    diger bir yardımcı metot Any()
+
+        //    ----------------------------------------------------------------------
+
+        //    2 tane kullanımı var su anlık sonra guncelleme gelebilir
+
+        //    1. kullanımı 
+
+        //    belirtmiş oldugumuz bir şart yoksa herhangi bir data var mı diye bakar
+
+        //    varsa true yoksa false döner
+
+        //    bool kontrol1 = sayilarim.Any();
+
+        //    2. kullanımı 
+
+        //    linq ile kullanılabilir
+
+        //    bool kontrol2 = sayilarim.Any(i => i > 5);
+
+        //    sayilarim içindeki degerlere bak 5 den büyük var mı true olarak döner 100 ü gördü true dedi
+        //    500 olarak bakalım false döndü
+
+        //    ----------------------------------------------------------------------
+
+        //    koleksiyon içindeki degerleri sıralama yapalım büyükten kucuk veya kucukten büyük
+        //    Sort() kucukten buyuk a dan z ye -- 1 den n e dogru
+        //    Reverse() buyukten kucuk z den a ya -- n den 1 dogru
+        //    sıralama anlasılsın diye 44 55 degerlerini ekledim db e 
+
+        //    ----------------------------------------------------------------------
+
+        //    dizi içinden bir elemanı kaldırma yani silme
+        //    Remove(100); vermiş oldugun degeri arar bulur siler geriye bool döner
+        //    RemoveAll(i => i > 3); 3 ten büyük olanları sil diyoruz int döner geriye
+
+        //    ----------------------------------------------------------------------
+
+        //    RemoveAt(); belirtmiş oldugumuz index i siler geriye bişey dönmem diyor
+
+        //    ----------------------------------------------------------------------
+
+        //    Clear() dediginiz de siler temizler
+
+
+        //    */
+
+        //    List<int> sayilarim = new List<int>();
+        //    sayilarim.Add(1);
+
+        //    int[] eklenecekData = new int[6];
+        //    eklenecekData[0] = 1;
+        //    eklenecekData[1] = 2;
+        //    eklenecekData[2] = 3;
+        //    eklenecekData[3] = 4;
+        //    eklenecekData[4] = 45;
+        //    eklenecekData[5] = 55;
+
+        //    sayilarim.AddRange(eklenecekData);
+
+
+        //    // yukarısı bir önceki dersten alındı
+        //    //------------------------
+
+        //    int bulunanDeger = sayilarim[3];
+
+        //    Console.WriteLine("List<T> koleksiyonu içerisinde 3. index de bulunan deger : {0}", bulunanDeger);
+
+        //    sayilarim.Insert(3,100);
+
+        //    //------------------------
+
+        //    bool kontrol1 = sayilarim.Any();
+
+        //    bool kontrol2 = sayilarim.Any(i => i > 5);
+
+        //    bool kontrol3 = sayilarim.Any(i => i > 500);
+
+        //    //------------------------
+
+        //    sayilarim.Sort();
+        //    sayilarim.Reverse();
+
+        //    //------------------------
+
+        //    bool silme1 = sayilarim.Remove(100);
+        //    int silme2 = sayilarim.RemoveAll(i => i > 3);
+        //    sayilarim.RemoveAt(2);
+
+        //    //------------------------
+
+        //    sayilarim.Clear();
+
+        //}
+
+        #endregion
 
 
     }
