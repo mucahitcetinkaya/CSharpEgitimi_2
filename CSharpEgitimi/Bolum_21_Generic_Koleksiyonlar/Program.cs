@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
+using System.Xml;
 
 namespace Bolum_21_Generic_Koleksiyonlar
 {
@@ -816,6 +817,336 @@ namespace Bolum_21_Generic_Koleksiyonlar
         //    int enYuksekDeger = sayilarim.Max();
         //    int enDusukDeger = sayilarim.Min();
         //    int toplamDeger = sayilarim.Sum();
+
+        //}
+
+        #endregion
+
+        #region VİDEO 176 Dictionary<TKey, TValue> - SortedList<TKey,TValue> Koleksiyonları
+
+        //static void Main(string[] args)
+        //{
+
+        //    /*
+
+        //        Bolum 21 Generic Koleksiyonlar V176 Dictionary<TKey, TValue> - SortedList<TKey,TValue> Koleksiyonları
+
+        //    */
+
+        //    /*
+
+        //    1. not baslangıc
+
+        //    dictionary ve sortedlist 2 farklı koleksiyonları mevcut bunlardan bahsedelim 
+        //    ikisi aynı mantıkta degerleri saklayan aynı degerleri gören koleksiyonlar oldugu gibi ince bir farklılıkları da bulunmakta 
+
+        //    generic olmayan ifade de neye karsılık geliyor buna da bakacagız
+
+        //    list generic in karsılıgı için arraylist demiştik
+
+        //    generic olmayan tarafta hashtable koleksiyonu ile aynıdır
+
+        //    hastable ornekleyelim ve hatırlayalım
+
+        //    Hashtable htList = new Hashtable();
+        //    htList.Add();
+
+        //    .Add yazınca tooltype in de ben objeden bir key ve value degeri alırım diyor
+
+        //    key değeri uniq deger olması lazım
+        //    value degeri tekrar eden olmazsa da olur
+
+        //    ht için ornek olusturalım
+
+        //    // generic olmayan koleksiyon davranısı
+
+        //    Hashtable htList = new Hashtable();
+        //    htList.Add(1,"Bir");
+        //    htList.Add(2,"İki");
+        //    htList.Add(3,true);
+
+        //    objeden deger aldıgı için bütün veri tiplerini kabul ediyor
+
+        //    htList.Add(1, "test");
+
+        //    yazınca key degeri 2 kere kullanıldıgından hata verecektir
+
+        //    System.ArgumentException: 'Öğe zaten eklenmiş. Sözlükteki anahtar: '1' Eklenen anahtar: '1''
+
+        //    zaten var 1 degeri diyor
+
+        //    şimdi işleyecek olacagımız koleksiyonlarda key value ile data saklamaktalar
+        //    ama generic olarak
+
+        //    bizim verdigimiz tiplerden deger saklarlar
+
+
+        //    // generic olan
+        //    // Dictionary<TKey,Tvalue>
+
+        //    T tipinden key ve value isterler
+        //    T tipi obje de olabilir bizim yazmıs oldugumuz tiplerden de nesne de olabilir
+
+        //    Dictionary system collection generic kutuphanesinde yer alır
+
+        //    olustururken tipini yazman lazım key value bunları bilmek zorundayım diyor
+
+        //    Dictionary<int,string> DictionaryList = new Dictionary<int,string>();
+
+        //    hashtable de koleksiyonların yardımcı metotları bulunuyor Add Remove gibi direk obje den deger istiyor
+
+        //    generic olanda da remove metotu var ama bu benim içeride vermiş oldugum T tipine göre remove edilecek key istiyor
+
+        //    mesela deger eklemeye calısalım
+        //    DictionaryList.Add() int key string value istiyor 
+        //    DictionaryList.Add(1, "Bir");
+        //    DictionaryList.Add(2, "İki");
+        //    DictionaryList.Add(3, "Üç");
+        //    DictionaryList.Add(1, "test");
+
+        //    yukarıdaki ornegin aynısını yapalım aynı degeri ekleyelim ve hata almaya calısalım 
+
+        //    //htList.Add(1, "test"); i kapatalım hata almamak için
+
+        //    new yerine break point koyalım ve debug yapalım
+
+        //    calıstıgında tipini bilmiyor okuyunca anlıyor ne tipi oldugunu
+
+        //    1 2 3 ü ekliyor tekrar 1 gelince hata veriyor
+
+        //    System.ArgumentException: 'Aynı anahtara sahip öğe zaten eklenmiş.'
+
+        //    dictionary ve sortedlist koleksiyonlarının kuralı key degeri tekil olmak zorunda id si onun aynı id 2 kere olamaz
+
+        //    yardımcı metotlarına bakalım
+
+        //    ---------------------------------------------------
+
+        //    Remove
+        //    DictionaryList.Remove()
+
+        //    bool Dictionary<int,string>Remove(int key)
+
+        //    int key istiyorum geriye bool dönerim diyor yani silme basarılı ise true dönüyor
+
+
+        //    bool silmeSonuc = DictionaryList.Remove(2);
+
+        //    if (silmeSonuc)
+        //    {
+        //        Console.WriteLine("Silindi.");
+        //    }
+        //    else
+        //    {
+        //        Console.WriteLine("Aranan değer liste içerisinde bulunamadı silme işlemi başarısız.");
+        //    }
+
+        //    2 yi siliyor true geliyor 2 yerine olmayan bir deger girildiğinde false geliyor
+
+        //    ---------------------------------------------------
+
+        //    içerideki degeri degistirmek için
+
+        //    koleksiyon içindeki key degerini bir degiskene alıp bu degiskeni guncellemen lazım key i 1 olanın value degerini guncelleyecek
+
+
+        //    string gelenDeger = DictionaryList[1];
+        //    gelenDeger = "Yenilenen Deger";
+
+        //    DictionaryList[1] = gelenDeger;
+
+        //    string gelenDeger = DictionaryList[1]; breakpoint koyalım debug yapalım
+
+        //    3 tane deger var içinde 
+
+        //    1 i degistirmek istiyorum ve bunun elamınına ulasıyorum gelendeger de Bir yazıyor value degeri 
+        //    eşittir ile gelendeger i verdiğim için Bir yerine Yenilenen Değer yazacak
+        //    DictionaryList[1] = gelenDeger; gelendegeri de list in 1 in index i ne atamıs olduk
+
+        //    ---------------------------------------------------
+
+        //    1 silip 1 in value suna ekleme yapmaya calıssak ne olurdu
+
+        //    bool silmeSonuc = DictionaryList.Remove(1);
+
+        //    1 i siler 1 e işlem yapmaya gelince hata verir
+
+        //    string gelenDeger = DictionaryList[1]; buraya debug yaparak kontrol edebilirsin
+
+        //    System.Collections.Generic.KeyNotFoundException: 'Verilen anahtar sözlükte yoktu.'
+
+        //    ---------------------------------------------------
+        //    ---------------------------------------------------
+        //    hata almayacagımız kontrol metotlarını nasıl yazarız ?
+        //    ---------------------------------------------------
+        //    ---------------------------------------------------
+
+        //    DictionaryList içinde ContainsKey ve ContainsValue adında yardımcı metotlar bulunur
+        //    adından da anlasılacagı gibi arama yapar parametre olarak verdiğimiz key veya value u arar
+        //    varsa true yoksa false döner 
+
+        //    bool silmeSonuc = DictionaryList.Remove(1); e gidip debug yapalım
+
+        //    siler ve kontrol e düşer false döner else girer cw yazdırır
+
+        //    aynı işlemler de ContainsValue da da var 
+
+        //    bool arananDegerSonuc2 = DictionaryList.ContainsValue("Üç");
+
+        //    if e girer true döner ve cw yazdırır
+
+        //    ---------------------------------------------------
+
+        //    DictionaryList.Clear(); hepsini siler
+
+        //    ---------------------------------------------------
+
+        //    DictionaryList içinde nası döneriz
+
+        //    ---------------------------------------------------
+
+        //    standart foreach
+
+        //    foreach (var item in collection)
+        //    {
+
+        //    }
+
+        //    foreach (KeyValuePair<int, string> item in DictionaryList)
+        //    {
+
+        //    }
+
+        //    DictionaryList içinde dön
+        //    KeyValuePair<int,string> her biri key degeri int value degerleri string
+        //    bunu DictionaryList acarken belirtmiştik Dictionary<int, string> DictionaryList = new Dictionary<int, string>();
+
+        //    ---------------------------------------------------
+        //    ---------------------------------------------------
+        //    SortedList
+        //    ---------------------------------------------------
+        //    ---------------------------------------------------
+
+        //    SortedList koleksiyonuna gecelim
+        //    SortedList Dictionary koleksiyonunun yaptıgı herseyi yapar
+        //    ufak bir farklılık var
+
+        //    new leyelim ve kontrol edelim
+
+        //    SortedList<int, string> SortedList = new SortedList<int, string>();
+
+        //    SortedList.Add(100,"Yüz");
+        //    SortedList.Add(50,"Elli");
+        //    SortedList.Add(1,"Bir");
+        //    SortedList.Add(1000, "Bin");
+
+        //    kendine atanan key e göre bir sıralama yapar 
+
+        //    kucukten buyuge dogru otomatik sıralar
+
+        //    en bastan listeye eklemeye baslar eklendikce hepsini kontrol eder sıralama yapar
+
+        //    ilk deger 100 0. index sonra 50 geliyor
+        //    50 0. index 100 1. index oluyor
+
+        //    vs vs gibi
+
+        //    */
+
+        //    // generic olmayan koleksiyon davranısı
+
+        //    Hashtable htList = new Hashtable();
+        //    htList.Add(1, "Bir");
+        //    htList.Add(2, "İki");
+        //    htList.Add(3, true);
+        //    //htList.Add(1, "test");
+
+
+        //    // generic olan
+        //    // Dictionary<TKey,Tvalue>
+
+        //    Dictionary<int, string> DictionaryList = new Dictionary<int, string>();
+        //    DictionaryList.Add(1, "Bir");
+        //    DictionaryList.Add(2, "İki");
+        //    DictionaryList.Add(3, "Üç");
+        //    //DictionaryList.Add(1, "test");
+
+        //    //---------------------------------------------------------------------------------------------------------
+
+        //    //bool silmeSonuc = DictionaryList.Remove(2);
+        //    //bool silmeSonuc = DictionaryList.Remove(1);
+
+        //    //if (silmeSonuc)
+        //    //{
+        //    //    Console.WriteLine("Silindi.");
+        //    //}
+        //    //else
+        //    //{
+        //    //    Console.WriteLine("Aranan değer liste içerisinde bulunamadı silme işlemi başarısız.");
+        //    //}
+
+        //    //---------------------------------------------------------------------------------------------------------
+
+        //    //string gelenDeger = DictionaryList[1];
+        //    //gelenDeger = "Yenilenen Deger";
+
+        //    //DictionaryList[1] = gelenDeger;
+
+
+        //    //------------------------------------hata almayacagımız kontrol metotlarını nasıl yazarız ?---------------------------------------------------------------------
+
+        //    bool silmeSonuc = DictionaryList.Remove(1);
+
+        //    bool arananDegerSonuc = DictionaryList.ContainsKey(1);
+
+        //    if (arananDegerSonuc)
+        //    {
+        //        string gelenDeger = DictionaryList[1];
+        //        gelenDeger = "Yenilenen Deger";
+        //        DictionaryList[1] = gelenDeger;
+        //    }
+        //    else
+        //    {
+        //        Console.WriteLine("Aranan deger koleksiyon içerisinde bulunamadı.");
+        //    }
+
+        //    bool arananDegerSonuc2 = DictionaryList.ContainsValue("Üç");
+
+        //    if (arananDegerSonuc2)
+        //    {
+        //        Console.WriteLine("Aranan Değer bulundu.");
+        //    }
+        //    else 
+        //    {
+        //        Console.WriteLine("Aranan Değer bulunamadı.");
+        //    }
+
+        //    //---------------------------DictionaryList içinde nası döneriz------------------------
+
+        //    foreach (KeyValuePair<int, string> item in DictionaryList)
+        //    {
+
+        //        // iki yazımda dogru 
+
+        //        Console.WriteLine("Anahtar : {0} || Değer : {1}", item.Key, item.Value);
+
+        //        Console.WriteLine("Anahtar : " + item.Key + " || " + "Değer : " + item.Value);
+
+        //    }
+
+
+        //    //---------------------------SortedList------------------------
+
+        //    SortedList<int, string> SortedList = new SortedList<int, string>();
+
+        //    SortedList.Add(100,"Yüz");
+        //    SortedList.Add(50,"Elli");
+        //    SortedList.Add(1,"Bir");
+        //    SortedList.Add(1000, "Bin");
+
+
+        //    //DictionaryList.Clear();
+
 
         //}
 

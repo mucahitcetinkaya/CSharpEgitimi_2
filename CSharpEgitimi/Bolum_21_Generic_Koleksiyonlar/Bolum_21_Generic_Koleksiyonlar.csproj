@@ -52,6 +52,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Not\Bolum_21_Generic_Koleksiyonlar-V176.txt" />
     <Content Include="Not\Bolum_21_Generic_Koleksiyonlar-V175.txt" />
     <Content Include="Not\Bolum_21_Generic_Koleksiyonlar-V174.txt" />
     <Content Include="Not\Bolum_21_Generic_Koleksiyonlar-V173.txt" />
