@@ -41,6 +41,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bolum_20_OOP_Enum_Kavrami",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bolum_21_Generic_Koleksiyonlar", "Bolum_21_Generic_Koleksiyonlar\Bolum_21_Generic_Koleksiyonlar.csproj", "{0FB0A8DF-0A06-460B-AB5C-66B11F179101}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bolum_22_Generic", "Bolum_22_Generic\Bolum_22_Generic.csproj", "{5214FB94-1B36-4677-898C-2EEC4F1DF363}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -123,6 +125,10 @@ Global
 		{0FB0A8DF-0A06-460B-AB5C-66B11F179101}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0FB0A8DF-0A06-460B-AB5C-66B11F179101}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0FB0A8DF-0A06-460B-AB5C-66B11F179101}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5214FB94-1B36-4677-898C-2EEC4F1DF363}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5214FB94-1B36-4677-898C-2EEC4F1DF363}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5214FB94-1B36-4677-898C-2EEC4F1DF363}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5214FB94-1B36-4677-898C-2EEC4F1DF363}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

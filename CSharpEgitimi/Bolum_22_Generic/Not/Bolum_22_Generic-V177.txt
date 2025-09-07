@@ -1,0 +1,467 @@
+
+
+Bölüm 22: Generic
+Video 177 Generic sýnýflar ne degildir
+
+
+        #region VÝDEO 177 Generic sýnýflar ne degildir
+
+        static void Main(string[] args)
+        {
+
+            /*
+
+                Bolum 22 Generic V177 Generic sýnýflar ne degildir
+
+            */
+
+            /*
+            
+            1. not baslangýc
+
+            generic olmayan ve olan olarak 2 farklý sekýlde bir anlatým yapacagýz farklarýna bakacagýz
+
+            Musteri class ý acalým 
+
+            1. not bitiþ
+
+            2. not bitiþ musteri den geldik
+
+            3. not baslangýc
+
+            Musteri i new leyelim ve problarýný dolduralým
+
+            //3. not baslangýc
+
+            V177Musteri M1 = new V177Musteri();
+            M1.ID = 1;
+            M1.TcKimlikNo = "12254401254";
+            M1.MusteriNo = "MS123";
+            M1.Isim = "Mücahit";
+            M1.SoyIsim = "Çetinkaya";
+            M1.DogumTarihi = DateTime.Parse("13-06-1994");
+
+            gerekli alanlarýný doldurduk
+
+            generic olmayan bir class tanýmý yaptýk generic class lar kýsmýný size anlatabilmem için bir senaryodan bahsetmem gerekiyor
+            standart anlatýmda su sekýlde bahsedilir
+
+            bir Musteri class ý olusturduk id degeri int ben bunu GUID olarak runtime da almak istersem þöyle yapmalýyým
+            MusteriNo string ama biz bunu generic yapalým Runtime a göre deðiþsin her an musteri no tipi deðiþebilir gibi 
+
+            orneklerle de generic class lar anlatýlabiliyor gercek hatayý tam olarak yansýtmýyor
+
+            oncelýkle yansýtmayan halini inceleyelim once onu anlayalým ki gercek hayattaki konularýna sizi cekebileyim
+
+            þimdi de MusteriGeneric class ýný olusturalým ve bakalým
+
+            3. not bitiþ
+            
+            4. not bitiþ musterigeneric ten geldik
+
+            5. not baslangýc
+
+            MusteriGeneric i newleyelim ve bakalým duruma
+
+                        //5. not baslangýc
+
+            V177MusteriGeneric<int> M2 = new V177MusteriGeneric<int>();
+            M2.ID = 1;
+
+            new lerken ne veri tipi verirsek prob lara verdiðimiz T tipi de o tipi alýyor
+            int verdik id de T tipi id int oldu
+
+            V177MusteriGeneric<Guid> M3 = new V177MusteriGeneric<Guid>();
+            M3.ID = Guid.NewGuid();
+
+            guid verdik id t tipinden guid oldu
+
+            MusteriGeneric e gidip bir metot olusturalým
+
+            5. not bitiþ
+
+            6. not bitiþ musterigeneric ten geldik
+             
+            7. not baslangýc
+
+            metot için bir newleme yapalým
+
+            V177MusteriGeneric<Guid> M4 = new V177MusteriGeneric<Guid>();
+            M3.MusteriNumarasiAl();
+
+            parametre almam ve geriye guid dönerim diyor generic ve t tipinden guid verdik onu alýyor
+
+            int için bu metodu cagýrýnca int dönerim diyor
+
+            M2.MusteriNumarasiAl();
+
+            yanlýs anlasýlan kýsýmý anlatmak için musterigeneric e gidelim
+
+            7. not bitiþ
+            
+            8. not bitiþ musterigeneric ten geldik
+
+            9. not baslangýc
+
+            bu derste generic class larýn mantýgný gorduk fakat kullanma yontemi bu degil diger derste katmanlý mimari ile ogrenecegýz
+
+             
+            */
+
+            //3. not baslangýc
+
+            V177Musteri M1 = new V177Musteri();
+            M1.ID = 1;
+            M1.TcKimlikNo = "12254401254";
+            M1.MusteriNo = "MS123";
+            M1.Isim = "Mücahit";
+            M1.SoyIsim = "Çetinkaya";
+            M1.DogumTarihi = DateTime.Parse("13-06-1994");
+
+            //5. not baslangýc
+
+            V177MusteriGeneric<int> M2 = new V177MusteriGeneric<int>();
+            M2.ID = 1;
+
+            V177MusteriGeneric<Guid> M3 = new V177MusteriGeneric<Guid>();
+            M3.ID = Guid.NewGuid();
+
+            //7. not baslangýc
+
+            V177MusteriGeneric<Guid> M4 = new V177MusteriGeneric<Guid>();
+            M3.MusteriNumarasiAl();
+
+            M2.MusteriNumarasiAl();
+
+        }
+
+        #endregion
+
+
+
+--------------------------------------------------------------------------------------------------
+
+
+        
+using System;
+
+namespace Bolum_22_Generic
+{
+    public class V177Musteri
+    {
+
+        public int ID { get; set; }
+        public string MusteriNo { get; set; }
+        public string TcKimlikNo { get; set; }
+        public string Isim { get; set; }
+        public string SoyIsim { get; set; }
+        public DateTime DogumTarihi { get; set; }
+
+    }
+}
+
+
+/*
+
+1. not bitis program cs den geldik
+
+2. not baslangýc
+
+public yapýp problarý ekleyelim
+
+son durum
+
+
+using System;
+
+namespace Bolum_22_Generic
+{
+    public class V177Musteri
+    {
+
+        public int ID { get; set; }
+        public string MusteriNo { get; set; }
+        public string TcKimlikNo { get; set; }
+        public string Isim { get; set; }
+        public string SoyIsim { get; set; }
+        public DateTime DogumTarihi { get; set; }
+
+    }
+}
+
+2. not bitiþ program.cs e gidelim
+ 
+ 
+ */
+
+
+
+ --------------------------------------------------------------------------------------------------
+
+
+ 
+#region 3. not baslangýc
+
+//using System;
+
+//namespace Bolum_22_Generic
+//{
+//    public class V177MusteriGeneric
+//    {
+//        public int ID { get; set; }
+//        public string MusteriNo { get; set; }
+//        public string TcKimlikNo { get; set; }
+//        public string Isim { get; set; }
+//        public string SoyIsim { get; set; }
+//        public DateTime DogumTarihi { get; set; }
+
+//    }
+//}
+
+#endregion
+
+#region 4. not generic class larý anlatmak için ornek
+
+
+//using System;
+
+//namespace Bolum_22_Generic
+//{
+//    public class V177MusteriGeneric<T>
+//    {
+
+//        public T ID { get; set; }
+//        public T MusteriNo { get; set; }
+//        public string TcKimlikNo { get; set; }
+//        public string Isim { get; set; }
+//        public string SoyIsim { get; set; }
+//        public DateTime DogumTarihi { get; set; }
+
+//    }
+//}
+
+#endregion
+
+#region 6. not generic metot
+
+//using System;
+
+//namespace Bolum_22_Generic
+//{
+//    public class V177MusteriGeneric<T>
+//    {
+//        public T ID { get; set; }
+//        public T MusteriNo { get; set; }
+//        public string TcKimlikNo { get; set; }
+//        public string Isim { get; set; }
+//        public string SoyIsim { get; set; }
+//        public DateTime DogumTarihi { get; set; }
+
+//        public T MusteriNumarasiAl()
+//        {
+//            return MusteriNo;
+//        }
+
+//    }
+//}
+
+#endregion
+
+#region 8 NOT YANLIS KULLANIM HAKKINDA
+
+//using System;
+
+//namespace Bolum_22_Generic
+//{
+//    public class V177MusteriGeneric<T, K>
+//    {
+//        public T ID { get; set; }
+//        public T MusteriNo { get; set; }
+//        public K TcKimlikNo { get; set; }
+//        public K Isim { get; set; }
+//        public K SoyIsim { get; set; }
+//        public DateTime DogumTarihi { get; set; }
+
+
+//        public T MusteriNumarasiAl()
+//        {
+//            return MusteriNo;
+//        }
+
+
+
+//    }
+//}
+
+#endregion
+
+#region 8 NOT YANLIS KULLANIMI DUZENLE
+
+using System;
+
+namespace Bolum_22_Generic
+{
+    public class V177MusteriGeneric<T>
+    {
+        public T ID { get; set; }
+        public T MusteriNo { get; set; }
+        public string TcKimlikNo { get; set; }
+        public string Isim { get; set; }
+        public string SoyIsim { get; set; }
+        public DateTime DogumTarihi { get; set; }
+
+
+        public T MusteriNumarasiAl()
+        {
+            return MusteriNo;
+        }
+
+
+    }
+}
+
+#endregion
+
+
+
+
+
+/*
+ 
+3. not bitiþ program.cs den geldik
+
+4. not baslangýc
+
+Musterinin problarýný buraya da yazalým 
+
+using System;
+
+namespace Bolum_22_Generic
+{
+    public class V177MusteriGeneric
+    {
+        public int ID { get; set; }
+        public string MusteriNo { get; set; }
+        public string TcKimlikNo { get; set; }
+        public string Isim { get; set; }
+        public string SoyIsim { get; set; }
+        public DateTime DogumTarihi { get; set; }
+
+    }
+}
+
+ve MusteriGeneric class ýný generic hale getirecek son dokunusu yapalým <T>
+
+ilk hali 
+    public class V177MusteriGeneric
+generic hali
+    public class V177MusteriGeneric<T>
+
+<T> iþaretler içindeki harf T herhangi  bir þey olabilir default olarak T kullanýlýr abc vs hersey olabilir
+
+<T> yazarak generic hale getirdik
+
+<T> yazarak MusteriGeneric class ýna sunu söylemiþ oluyorsun
+sen orneklenirken karsý tarafa bir soru sor 
+beni orneklemek istiyorsun ama içeri de bir T tipi var bu tipi doldur cunku kendi class ým içerisinde kullanma ihtimalim var 
+generic class ým bu bana yazýlmýs beni orneklemek istiyorsan bený belirtmek zorundasýn
+
+daha once string int olan tipleri T tipi yapabiliriz
+
+Mesela MusteriNo string idi
+
+oncesi
+        public string MusteriNo { get; set; }
+sonrasý
+        public T MusteriNo { get; set; }
+
+orneklenirken bir <> tip verilecek buradaki T tipi de onu sahiplenecek
+
+aynýsýný id alaný içinde yapalým
+
+        public int ID { get; set; }
+        public T ID { get; set; }
+
+son durum 4. not region
+
+
+4. not bitiþ program.cs e gidelim
+
+5. not bitiþ
+
+6. not baslangýc
+
+generic bir metot olusturup bakalým nasý oluyor
+
+6. not bitiþ program.cs e gidelim
+
+7. not bitiþ program.cs den geldik
+
+
+8. not baslangýc
+
+yanlýs kullanýmý anlatmak için
+
+t tipinin yanýna farklý bir tip verelim
+2 tane generic tipimiz olur
+
+ilk durum
+    public class V177MusteriGeneric<T>
+        public string TcKimlikNo { get; set; }
+        public string Isim { get; set; }
+        public string SoyIsim { get; set; }
+sonraki durum
+    public class V177MusteriGeneric<T,K>
+        public K TcKimlikNo { get; set; }
+        public K Isim { get; set; }
+        public K SoyIsim { get; set; }
+
+T tipinin yanýna K tipi verdik 2 tane generic parametremiz oldu
+string olanlarý da K tipine degistirdik
+
+musterigeneric girdiðinde T olarak int ve musterino deðerine K tipi girdiðinde TcKimlikNo Isim SoyIsim degerlerine atama yapacak boylece her yerde kullanabilirim
+
+GÝBÝ BÝR KULLANIM YOK BIZIM OLUSTURDUGUMUZ TIPLERIMIZ SQL TABLOLARIMIZIN BÝR KOPYASI OLARAK PROGRAMLARIMIZIN ÝÇERÝSÝNDE DURUR 
+BIZ TABLO ICERISINDEN OKUYACAGIMIZ DATANIN ZATEN TIPINI BILIYOR OLURUZ ONA GORE CLASS IMIZI MODELLERIZ 
+BOYLE BÝR KULLANIM SOZ KONUSU DEGILDIR 
+
+TEKRAR string TIPINE GERI DONELIM
+
+benim zaten sql tablomda bu alanlar string bunlarý ben farklý bir deger tutamam ki neden generic tutayým 
+o zaman generic class neden var 
+
+id ve musterino içinde bu durum ayný standart bir degerdir
+
+id int veya guid dir
+
+musterino int veya string olur runtime da degisir mi degismez 
+
+database uniq dir 
+uygulama database e bakar içerisindeki tabloyu okur 
+class ý modeller programý sunar 
+programcý datayý row olarak alýr iþler karsý tarafa gönderir 
+
+iþte generic class lar nerde kullanýlýyor 
+
+generic class larý biz gercek hayatta bu sekýlde kullanmýyoruz ornegi bu sekýlde býrakýyorum fakat boyle kullanmýyoruz
+
+id ne musterino ya t tipi veriyorum ki hata vermesin program.cs de kullandýk diye sýrf
+
+bu yukarýda anlatýlan ornek ýnternette kitaplar da generic mimarinýn anlatýmý oluyor ben boyle anlatýlmasýný yanlýs buluyorum 
+bakýldýgýnda bazý arkadaslar bir class olusturup ilgili veri tiplerini vermiþ oldugu generic ifadelerle donatýp bunu kullanmak istiyolar 
+bu sizi bir hataya sevkeder bizim class larýmýz sql tablolarýmýzýn bir kopyasýdýr 
+biz o class larýmýzý içerisinde sql datalarýmý barýndrýr iþler ve database tekrar gönderiririz
+
+bir sonraki derste generic class lar hangi amacla kullanýlýr 
+kullanmamýzýn bize etki eden avantajlarý nelerdir 
+
+generic class olusturup nediri tekrar konusacagýz
+
+generic class ne degildir bunu anlatmak istemiþtik tanýmý budur <T> gibi tanýmlanýr new lerken verdiðin tipe bürünür vs ama bu yöntemle kullanýlmaz 
+
+gelecek derste n katmanli mimari kýsmýna ufak bir giriþ yapýp generic class lara bakacagýz 
+
+8. not bitiþ program.cs e gidelim
+
+ 
+*/
