@@ -47,11 +47,15 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="V177Musteri.cs" />
     <Compile Include="V177MusteriGeneric.cs" />
+    <Compile Include="V178GenericRepository.cs" />
+    <Compile Include="V178Musteri.cs" />
+    <Compile Include="V178Urun.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Not\Bolum_22_Generic-V178.txt" />
     <Content Include="Not\Bolum_22_Generic-V177.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

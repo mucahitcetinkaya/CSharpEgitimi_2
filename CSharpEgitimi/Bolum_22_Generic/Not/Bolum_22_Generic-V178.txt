@@ -1,0 +1,510 @@
+
+
+Bölüm 22: Generic
+Video 178 Generic Class Nedir
+
+        #region VÝDEO 178 Generic Class Nedir
+
+        static void Main(string[] args)
+        {
+
+            /*
+            
+                Bolum 22 Generic V178 Generic Class Nedir
+             
+            */
+
+            /*
+             
+            1. not baslangýc
+            
+            generic class lar nedir bunlardan bahsedelim
+
+            once ufak bir çizim yapýp bazý mimarilerden bahsedeceðim
+            bazý iletiþim kurallarýndan bahsedeceðim
+
+            biz datamýzý nasýl oluyorda database den cekýyoruz 
+            cekmýs oldugumuz data uzerýnde ne gibi iþlemler yapabiliyoruz
+            bunlarý alýrken de generic class lar bize nasýl yardýmcý oluyor 
+
+            generic mimariyi inceleyeceðiz gercek hayatta da karsýmýza bu sekýlde gelirler
+
+            bizim oncelýkle datayý okudugumuz bir database miz var 
+            bu database miz de þimdilik MSSQL olsun 
+
+            burada datalarýmýzý saklýyoruz
+            musterý urun ve benzerý uygulamanýn calýsacagý veya calýsmasý ýcýn gereklý olan tum datalarýmýzý database mýz da saklýyoruz
+
+            bir de elimiz de uygulamamýz var bu uygulamadan da database mizi yonetiyoruz
+
+            musteri buraya veri getiriyor deger girisi yapýyor deger sorguluyor yada operasyonel bir surec baslatýyor
+            býz de bunu C# ile yazýyoruz 
+            burda web mobil masaustu platformdan bahsetmýyoruz 
+            uygulama dilinden bahsediyoruz
+
+            mssql içinde var olan bir tablo uzerýnden gidelim bir onceki dersimiz de ornegýmýz musteri idi 
+
+            bizim tblMusteri adýnda bir tablomuz olsun 
+
+            tablo ýcýndeký field larýn isimleri ve veri tiplerini yazalým 
+
+            adý                 sql veri tipi                   c# veri tipi
+            id                  int                             int
+            musteriNumarasi     uniqueidentify                  (Guid)
+            isim                nvarchar(50)                    string
+            soyisim             nvarchar(50)                    string
+            dogumTarih          datetime                        datetime
+
+            bu nesnenin c# tarafýnda nesne ornegýný almaya calýsýrken bir onceki derste yapmýs oldugum gibi bunlarý K L T tipi gibi ayrýstýrýp daha sonra ilgili nesnenin içindeki field lara aktarmam mantýksýz
+
+            id zaten int ilerlerde guid olmayacak olursa da id olarak tutmus oldugum int larýmý guid e cevirmem gerek olmayacak bir surec bu 
+
+            yada dogumTarihi datetime dý ben bunu string tutmam string tutmak bunu K tipi yapmak nesneyi orneklerken datetime demek bunlar cok utopik ornekler 
+
+            gercek hayat orneklerýne bakarsan ben dogumtarihini c# da da datetime olarak tutarým 
+
+            burda generýc mimariyi kullanmak aslýnda uygulamanýn tasarým desenlerýne giriyor 
+
+            mesela biz tasarým deseni olarak
+
+            UnitOfWorks u kullanýyorsak => Generic Class || Generic Interface || DBFirst veya CodeFirst yaklasýmlarýndan bir tanesini kullanacagýz iþte generic class lar bize bu nokta da yardým edecek 
+
+            bizim iþ katmanlarýmýzý biz bunlarý Repository olarak adlandýracagýz 
+
+            Repository lerimizi daha dinamik yazabilmemizi bir kere yazýp birden fazla kere farklý farklý entity lerimiz için kullanmamýzý saglayan yapýlardýr generic class lar 
+
+            sýmdý generic bir repo ornegi yazalým ve generic class ý anlatmaya calýsalým 
+
+            Musteri nesnesi olusturalým 
+
+            1. not bitiþ
+
+            2. not bitiþ Musteri den geldik
+
+            3. not baslangýc
+
+            genericRepository adýnda bir class acalým
+
+            generic repository leri biz enttity frame work yaklasýmlarýmýz da yogun olarak kullanacagýz 
+
+            UnitOfWorks tasarým deseni yaklasýmýný kullanýp generic mimariyi de bu egitim seti içerisinde goreceksýnýz
+
+            generic konusu oyle bir konudur ki þimdi anlatýcam bir kac bolum sonra gercek orneklerý de kullanmaya baslayacagýz 
+
+            bu nedenle generýc nedir nasýl tanýmlanýr class field içerisinde tanýmlayabilmeniz yeterli ama generic koleksiyonlarý anlamanýz gerekiyor 
+
+            generic koleksiyonlarý bilmeniz gerekiyor ogrenmenýz gerekiyor 
+            generic class lar için henuz erken 
+
+            generic class larý da burda gosterýyorum konu butunlugu bozulmamasý ýcýn 
+
+            GenericRepository class ýna gidelim
+
+            3. not bitiþ
+            
+            4. not bitiþ GenericRepository den geldik
+
+            5. not baslangýc
+
+            GenericRepository i ornekleyelim
+
+            V178GenericRepository<V178Musteri> M1 = new V178GenericRepository<V178Musteri>();
+
+            olsturmus oldugum Musteri class ýný genericrepository e veri tipi olarak verdim
+
+            bu ne demek
+
+            git database e musterileri getir dicem bana 
+
+            M1. diyerek devam edelim
+
+            M1.Getir(); dedigimiz de diyorki ben herhangi bir parametre almam sana list generic koleksiyonundan musteri nesnesi donerim
+            List<V178Musteri> V178GenericRepository<V178Musteri>.Getir()
+
+            gorevi nedir
+
+            gidecek database e Musteri tablosundaki kayýtlarý entityframework dbfirst codefirst yaklasýmlarýndan herhangi birini alarak getirecek
+            bunu list generic musteriye cevirecek ve bana iletecek
+
+            cagýrdýgýmýzý bir degiskene atalým List generic musteri donuyor 
+
+            List<V178Musteri> musterilerim = M1.Getir();
+
+            generic class ý gercek hayatta kullanabilecegýmýz bir ornekle sýzýn karsýnýza getirmiþ oldum
+
+            ne yapmýyoruz ozel olarak olusturmus oldugumuz tablo class larýmýzý biz bunlara entity diyoruz varlýklarýmýzý generic olarak olusturmuyoruz 
+            uygulama içerisinde yazmýs oldugumuz operasyonel sureclerýmýzý bir kere yazabilmek için generic koleksiyonlar olusturup 
+            ekranda gordugunuz sekýlde kullanýyoruz en basiti olarak
+
+            genericrepository mizi olusturduk
+            ýcerýsýne musterý nesnemýzý attýk 
+            ve kullanacagýmýz butun metotlar ne oldu musterý tablosunu goren ve musterý tablosu uzerýnde ýslem yapabilen bir class yýgýný haline geldi veya class içerisinde metot yýgýný haline geldi 
+
+            yeni bir class olusturalým 
+
+            Urun oraya gidelim
+
+            5. not bitiþ
+
+            6. not bitiþ Urun den geldik
+
+            7. not baslangýc
+
+            urun class ýný tip olarak kullanalým repo da 
+
+            V178GenericRepository<V178Urun> repoUrun = new V178GenericRepository<V178Urun>();
+
+            sen dedým urunle ilgili iþlem yapacaksýn 
+
+            getir ile cagýrýnca da 
+
+            List<V178Urun> V178GenericRepository<V178Urun>.Getir()
+
+            list generic urun donerým diyor 
+
+            ne yapmýs oldum database git urun tablosundan urunlerý list generic olarak getir demýs olduk
+
+            renericrepository mi bir kere yazdým ve olusturmus oldugum varlýklarýmý kullanarak database den kayýt okumus olduk 
+            tek bir metot yazdýk içeride getir adlý bir metot var 
+
+            geriye T tipi donecek sekýlde bana datayý getiriyor 
+
+            V178GenericRepository e gidelim yeni bir metot yazalým kayýt eklemek için
+
+            7. not bitiþ
+
+            8. not bitiþ V178GenericRepository den geldik
+
+            9. not baslangýc
+
+            kayýt ekleme olayýna bakalým
+
+            repoMusteri.yeniKayitEkle(null); yazýnca tooltype in de asagýdaki yazýyor
+
+            void V178GenericRepository<V178Musteri>.yeniKayitEkle(V178Musteri data)
+
+            repoMusteri V178Musteriden aldýgý için yeniKayitEkle nin tipi musteri oldu t tipinden bana musteri ver onu kayýt edeyim diyor
+
+            repo urun olarak yenikayýtekle yi cagýrýnca t tipinden V178Urun olur bana urun ver gidip onu kayýt edeyim diyor
+
+            tooltype in de yazan
+
+            void V178GenericRepository<V178Urun>.yeniKayitEkle(V178Urun data)
+
+            yani ben bir class a birden fazla entity için iþlem yapabilme imkaný sunmus oluyorum generic class larý kullanarak
+
+            generic class larý tasarým desenlerýn de daha net gorecegýz 
+
+            bir kac kuraldan daha bahsedeyým veya kullaným sekýllerý
+
+            V178GenericRepository e gidelim
+
+            9. not bitiþ
+
+            10. not bitiþ V178GenericRepository geldik
+
+            11. not baslangýc
+
+            dersi tamamladýk diger konuya gecelim
+
+
+            */
+
+            V178GenericRepository<V178Musteri> repoMusteri = new V178GenericRepository<V178Musteri>();
+            List<V178Musteri> musterilerim = repoMusteri.Getir();
+
+
+            V178GenericRepository<V178Urun> repoUrun = new V178GenericRepository<V178Urun>();
+            List<V178Urun> urunlerim = repoUrun.Getir();
+
+            repoMusteri.yeniKayitEkle(null);
+            repoUrun.yeniKayitEkle(null);
+
+
+
+        }
+
+        #endregion
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+using System;
+
+namespace Bolum_22_Generic
+{
+    public class V178Musteri
+    {
+        public int id { get; set; }
+        public Guid musteriNumara { get; set; }
+        public string isim { get; set; }
+        public string soyisim { get; set; }
+        public DateTime dogumTarihi { get; set; }
+
+    }
+}
+
+
+/*
+ 
+1. not bitiþ program.cs den geldik
+
+2. not baslangýc
+
+public yapýp problarý yazalým
+
+son durum
+
+
+using System;
+
+namespace Bolum_22_Generic
+{
+    public class V178Musteri
+    {
+        public int id { get; set; }
+        public Guid musteriNumara { get; set; }
+        public string isim { get; set; }
+        public string soyisim { get; set; }
+        public DateTime dogumTarihi { get; set; }
+
+    }
+}
+
+class ýn içerisinde herhangi generic bir field eklemedik generic bir kullaným gerceklestýrmedýk
+bu bizim sql tablomuzun bir kopyasý 
+
+2. not bitiþ program.cs e gidelim
+
+ 
+*/
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+using System.Collections.Generic;
+
+namespace Bolum_22_Generic
+{
+    public class V178GenericRepository<T>
+    //public class V178GenericRepository<T,K,L,M,N>
+    //public class V178GenericRepository<T> where T : class
+    {
+
+        public V178GenericRepository()
+        {
+            // context : EF DBFirst
+        }
+
+        //public virtual IEnumerable<T> Getir() 
+        //{
+        //    return null;
+        //}
+
+        public virtual List<T> Getir()
+        {
+            return null;
+        }
+
+        public virtual void yeniKayitEkle(T data)
+        {
+
+        }
+
+    }
+}
+
+/*
+ 
+3. not bitiþ program.cs den geldik
+
+4. not baslangýc
+ 
+ ilk hali
+
+
+namespace Bolum_22_Generic
+{
+    public class V178GenericRepository
+    {
+    }
+}
+
+sonraki hali
+
+
+namespace Bolum_22_Generic
+{
+    public class V178GenericRepository<T>
+    {
+    }
+}
+
+sen V178GenericRepository olarak bir T tipi alacaksýn dedik
+
+bunun içinde bir yapýcý metot acalým ctor 
+
+namespace Bolum_22_Generic
+{
+    public class V178GenericRepository<T>
+    {
+
+        public V178GenericRepository()
+        {
+            // context : EF DBFirst
+        }
+
+    }
+}
+
+beným V178GenericRepository class ým bir yapýcý metotla içeri de context dedýgým EF (entityframework) yaklasýmýn da mesela DBFirst olsun 
+
+DBFirst in context ini ornekleyecek yani ben bu nesneyi ornekledýgým de yapýcý metot database ile bir baglantý kuracak 
+kurmus oldugu baglantý da haberleþir halde bekleyecek
+
+farklý bir metot yazýp bunu ýnceleyelim
+
+výrtual metot kullanalým 
+geriye IEnumrable ýnterface inden generic olarak data donen <T> t don bana
+bu metodun adý da Getir olsun
+
+son durum
+
+using System.Collections.Generic;
+
+namespace Bolum_22_Generic
+{
+    public class V178GenericRepository<T>
+    {
+
+        public V178GenericRepository()
+        {
+            // context : EF DBFirst
+        }
+
+        public virtual IEnumerable<T> Getir() 
+        {
+            return null;
+        }
+
+    }
+}
+
+ekledýgýmýz metot 
+
+        public virtual IEnumerable<T> Getir() 
+        {
+            return null;
+        }
+
+bu metodu ýnceleyelim amac generic metot kullanýmýný anlatmak
+generic class ýn nasýl kullanýldýgýný gosterebilmek
+
+
+V178GenericRepository adýnda bir class olusturdum ve dedým ki sen orneklendýgýn de T tipini sor 
+sený ornekleyen kiþi bu T tipi uzerýnde iþlem yapabilsin 
+
+getir adýna bir metot var metot ýnterface donuyor genel olarak list generic olarak da isimlendirilir
+interface in de generic ini gorun diye boyle kullandýk 
+
+getir metodu parametre almýyor 
+geriye ne getiriyor T tipinde bir liste getiriyor 
+
+IEnumerable yerine List de yazýlabilir 
+
+son durum
+
+        public virtual List<T> Getir()
+        {
+            return null;
+        }
+
+
+bir list generic geriye dondurecek ama dondurecegý generic ifadenin ne oldugunu daha soylemedýk 
+
+list generic int de olabilir List<int> boyle yazýlýr List<string> de olabilir List<Musteri> de döndürebilir
+
+buradaki amac ne 
+
+Gelen T tipini database üzerinde sorgulamak ve elde etmiþ oldugum kayýtlarý generic koleksiyon olarak bir üst katmana dönmek
+
+birlikte genericrepository i ornekleyelim 
+
+4. not bitiþ program.cs e gidelim
+
+7. not bitiþ program.cs den geldik
+
+8. not baslangýc
+
+yeni kayýt eklemek için 
+yeni bir metot yazalým
+public olsun
+virtual bazý ozel sebebleri var sonra anlatacagýz bunu
+geriye bisey donmesin void
+T tipi deger alacak parametresi T data
+
+public virtual void yeniKayitEkle(T data)
+{
+
+}
+
+bize gelen T tipi içerisindeki bilgiyi T tipinin iþaret etmiþ oldugu tabloya ekliyoruz
+
+8. not bitiþ program.cs e gidelim
+
+9. not bitiþ program.cs den geldik
+
+10. not baslangýc
+
+generic ler birden fazla ifade alabilirler
+
+<T,K,L,M,N> VS VS VS GÝBÝ nesne orneklenýrken de bu kadar generic ifadenin karsýlýgýný
+bizi cagýran programcýya sorabiliriz fakat gercek hayatta bu en fazla 2 dir
+
+genelde tek tip uzerýnde iþlemlerimizi yaparýz
+
+diger bir kural where sartý ile T tipinin tipini belirleyebiliriz
+
+mesela
+
+T:class dedigimiz de T tipimiz bir class olmak zorunda kalýr 
+
+int mesela class degildir struct olarak gecer T:class dedýgýn de int veremezsin
+
+            V178GenericRepository<int> repoMusteri = new V178GenericRepository<int>();
+
+ 10. not bitiþ program.cs e gidelim
+ 
+*/
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+namespace Bolum_22_Generic
+{
+    public class V178Urun
+    {
+        public int id { get; set; }
+        public string tanim { get; set; }
+    }
+}
+
+
+/*
+ 
+5. not bitiþ
+
+6. not baslangýc
+
+public yapalým
+prop ekleyelim
+ 
+6. not bitiþ program .cs e gidelim
+ 
+ 
+*/
+
